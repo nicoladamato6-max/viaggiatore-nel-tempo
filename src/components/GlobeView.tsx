@@ -248,6 +248,9 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
 
     if (flyTo.kind === 'geo') {
       if (isCosmicView) return;
+      // cancelFlight prima di ogni flyTo geografico: ferma l'animazione iniziale
+      // di Cesium (o qualsiasi altra animazione in corso) prima di partire.
+      viewer.camera.cancelFlight();
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(flyTo.lng, flyTo.lat, 2_500_000),
         duration: 2,
