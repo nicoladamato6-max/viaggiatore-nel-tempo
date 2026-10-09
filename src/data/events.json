@@ -6,7 +6,26 @@
     "category": "cosmo",
     "description": "L'origine dell'universo: da un punto di energia infinitamente denso si espande tutto lo spazio, il tempo, la materia e l'energia.",
     "wikipediaSlug": "Big_Bang",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/CMB_Timeline300_no_WMAP.jpg/320px-CMB_Timeline300_no_WMAP.jpg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/CMB_Timeline300_no_WMAP.jpg",
+    "isCosmic": true
+  },
+  {
+    "id": "prime-stelle",
+    "title": "Formazione delle prime stelle",
+    "year": -13200000000,
+    "category": "cosmo",
+    "description": "Circa 600 milioni di anni dopo il Big Bang, si formano le prime stelle dell'universo, giganti azzurre che bruciano idrogeno ed elio.",
+    "wikipediaSlug": "Stellar_evolution",
+    "isCosmic": true
+  },
+  {
+    "id": "via-lattea",
+    "title": "Formazione della Via Lattea",
+    "year": -13000000000,
+    "category": "cosmo",
+    "description": "La nostra galassia inizia a formarsi dall'aggregazione di gas, polvere e le prime stelle. Conterrà infine oltre 200 miliardi di stelle.",
+    "wikipediaSlug": "Milky_Way",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/ESO-VLT-Laser-phot-0a-99.jpg/320px-ESO-VLT-Laser-phot-0a-99.jpg",
     "isCosmic": true
   },
   {
@@ -16,6 +35,17 @@
     "category": "cosmo",
     "description": "Una nube di gas e polvere inizia a collassare per gravità, formando il Sole e i pianeti del Sistema Solare.",
     "wikipediaSlug": "Solar_System",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Planets2013.svg/320px-Planets2013.svg.png",
+    "isCosmic": true
+  },
+  {
+    "id": "formazione-luna",
+    "title": "Formazione della Luna",
+    "year": -4500000000,
+    "category": "cosmo",
+    "description": "Un corpo delle dimensioni di Marte (Theia) colpisce la giovane Terra. I detriti si aggregano in orbita formando la Luna.",
+    "wikipediaSlug": "Giant-impact_hypothesis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/240px-FullMoon2010.jpg",
     "isCosmic": true
   },
   {
@@ -27,6 +57,28 @@
     "category": "geologia",
     "description": "Appaiono i primi organismi unicellulari negli oceani primordiali della Terra.",
     "wikipediaSlug": "Earliest_known_life_forms",
+    "isCosmic": false
+  },
+  {
+    "id": "esplosione-cambriana",
+    "title": "Esplosione Cambriana",
+    "year": -541000000,
+    "lat": 51.4,
+    "lng": -116.5,
+    "category": "geologia",
+    "description": "In pochi milioni di anni compaiono quasi tutti i principali phyla animali. La vita multicellulare complessa esplode in forme mai viste prima.",
+    "wikipediaSlug": "Cambrian_explosion",
+    "isCosmic": false
+  },
+  {
+    "id": "estinzione-dinosauri",
+    "title": "Estinzione dei Dinosauri",
+    "year": -66000000,
+    "lat": 21.4,
+    "lng": -89.5,
+    "category": "geologia",
+    "description": "Un asteroide di 10 km colpisce lo Yucatan. L'impatto causa l'estinzione del 75% delle specie terrestri, inclusi i dinosauri.",
+    "wikipediaSlug": "Cretaceous–Paleogene_extinction_event",
     "isCosmic": false
   },
   {
@@ -72,7 +124,6 @@
     "category": "storia",
     "description": "Cesare attraversa il Rubicone con il suo esercito pronunciando 'Alea iacta est', dando inizio alla guerra civile romana.",
     "wikipediaSlug": "Crossing_the_Rubicon",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Gaius_Iulius_Caesar_%28100-44_BC%29.jpg/240px-Gaius_Iulius_Caesar_%28100-44_BC%29.jpg",
     "isCosmic": false
   },
   {
@@ -82,7 +133,7 @@
     "lat": 38.7169,
     "lng": -9.1399,
     "category": "storia",
-    "description": "Cristoforo Colombo salpa da Palos de la Frontera (Spagna) con le tre caravelle Nina, Pinta e Santa Maria verso le Americhe.",
+    "description": "Cristoforo Colombo salpa da Palos de la Frontera con le tre caravelle Nina, Pinta e Santa Maria verso le Americhe.",
     "wikipediaSlug": "Christopher_Columbus",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Crystallography_Colombo.jpg/240px-Crystallography_Colombo.jpg",
     "isCosmic": false
@@ -112,6 +163,18 @@
     "isCosmic": false
   },
   {
+    "id": "galileo-telescopio",
+    "title": "Galileo Galilei — Il telescopio",
+    "year": 1609,
+    "lat": 45.4064,
+    "lng": 11.8768,
+    "category": "scienza",
+    "description": "Galileo punta il telescopio verso il cielo da Padova e scopre i satelliti di Giove, le fasi di Venere e i crateri lunari.",
+    "wikipediaSlug": "Galileo_Galilei",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Galileo_Galilei_%281564-1642%29_-_Hammer_%26_Rosin_1893.jpg/240px-Galileo_Galilei_%281564-1642%29_-_Hammer_%26_Rosin_1893.jpg",
+    "isCosmic": false
+  },
+  {
     "id": "bach-nascita",
     "title": "Johann Sebastian Bach",
     "year": 1685,
@@ -133,6 +196,18 @@
     "description": "Il 14 luglio 1789 il popolo parigino prende d'assalto la Bastiglia, dando inizio alla Rivoluzione Francese.",
     "wikipediaSlug": "French_Revolution",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Anonymous_-_Prise_de_la_Bastille.jpg/320px-Anonymous_-_Prise_de_la_Bastille.jpg",
+    "isCosmic": false
+  },
+  {
+    "id": "scoperta-nettuno",
+    "title": "Scoperta di Nettuno",
+    "year": 1846,
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "category": "cosmo",
+    "description": "Le Verrier e Adams predicono matematicamente l'esistenza di Nettuno prima di osservarlo. Primo pianeta scoperto con la matematica pura.",
+    "wikipediaSlug": "Discovery_of_Neptune",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/240px-Neptune_Full.jpg",
     "isCosmic": false
   },
   {
@@ -165,10 +240,258 @@
     "year": 1969,
     "lat": 28.5721,
     "lng": -80.648,
-    "category": "scienza",
+    "category": "cosmo",
     "description": "Neil Armstrong e Buzz Aldrin allunano sul Mare della Tranquillità. Armstrong pronuncia: 'Un piccolo passo per un uomo...'",
     "wikipediaSlug": "Apollo_11",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Aldrin_Apollo_11_original.jpg/240px-Aldrin_Apollo_11_original.jpg",
     "isCosmic": false
-  }
+  },
+  {
+    "id": "hubble-telescopio",
+    "title": "Lancio del Telescopio Spaziale Hubble",
+    "year": 1990,
+    "lat": 28.5721,
+    "lng": -80.648,
+    "category": "cosmo",
+    "description": "La NASA lancia Hubble. Per la prima volta l'umanità può osservare l'universo senza l'interferenza dell'atmosfera terrestre.",
+    "wikipediaSlug": "Hubble_Space_Telescope",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/HST-SM4.jpeg/240px-HST-SM4.jpeg",
+    "isCosmic": false
+  },
+  {
+    "id": "prima-foto-buco-nero",
+    "title": "Prima fotografia di un buco nero",
+    "year": 2019,
+    "lat": 20.7214,
+    "lng": -156.1552,
+    "category": "cosmo",
+    "description": "L'Event Horizon Telescope cattura la prima immagine di un buco nero (M87*), a 55 milioni di anni luce dalla Terra.",
+    "wikipediaSlug": "Event_Horizon_Telescope",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg/240px-Black_hole_-_Messier_87_crop_max_res.jpg",
+    "isCosmic": false
+  },
+  {
+    "id": "scoperta-urano",
+    "title": "Scoperta di Urano",
+    "year": 1781,
+    "lat": 51.3837,
+    "lng": -2.3599,
+    "category": "cosmo",
+    "description": "Il 13 marzo 1781 William Herschel scopre Urano dal giardino di casa a Bath, Inghilterra, con un telescopio da lui stesso costruito. È il primo pianeta scoperto con il telescopio nella storia dell'umanità.",
+    "wikipediaSlug": "Uranus",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/240px-Uranus2.jpg",
+    "isCosmic": false
+  },
+  {
+    "id": "scoperta-titano",
+    "title": "Scoperta di Titano",
+    "year": 1655,
+    "lat": 52.0749,
+    "lng": 4.3016,
+    "category": "cosmo",
+    "description": "Il 25 marzo 1655 Christiaan Huygens scopre Titano, la luna più grande di Saturno, dall'Aia. È la seconda luna più grande del Sistema Solare e l'unica con un'atmosfera densa, ricca di azoto e metano.",
+    "wikipediaSlug": "Titan_(moon)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Titan_in_true_color.jpg/240px-Titan_in_true_color.jpg",
+    "isCosmic": false
+  },
+  {
+    "id": "scoperta-plutone",
+    "title": "Scoperta di Plutone",
+    "year": 1930,
+    "lat": 35.1983,
+    "lng": -111.6513,
+    "category": "cosmo",
+    "description": "Il 18 febbraio 1930 il giovane astronomo Clyde Tombaugh scopre Plutone al Lowell Observatory di Flagstaff, Arizona, confrontando lastre fotografiche. Resterà il nono pianeta per 76 anni, fino alla riclassificazione come pianeta nano nel 2006.",
+    "wikipediaSlug": "Pluto",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Pluto_in_True_Color_-_High-Res.jpg/240px-Pluto_in_True_Color_-_High-Res.jpg",
+    "isCosmic": false
+  },
+  {
+    "id": "newton-principia",
+    "title": "Newton — Principia Mathematica",
+    "year": 1687,
+    "lat": 52.2053,
+    "lng": 0.1218,
+    "category": "scienza",
+    "description": "Isaac Newton pubblica 'Principia Mathematica' a Cambridge. Enuncia le tre leggi del moto e la legge di gravitazione universale: ogni oggetto nell'universo attrae ogni altro. La scienza moderna ha le sue fondamenta qui.",
+    "wikipediaSlug": "Principia_Mathematica",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Portrait_of_Sir_Isaac_Newton%2C_1689.jpg/240px-Portrait_of_Sir_Isaac_Newton%2C_1689.jpg",
+    "isCosmic": false
+  },
+  {
+    "id": "prime-olimpiadi",
+    "title": "Prime Olimpiadi della storia",
+    "year": -776,
+    "lat": 37.638,
+    "lng": 21.630,
+    "category": "storia",
+    "description": "Nel 776 a.C. si tengono i primi Giochi Olimpici ad Olimpia, in Grecia, in onore di Zeus. Atlete da tutte le città greche competono nella corsa, lotta e pentathlon. La tradizione durerà 12 secoli.",
+    "wikipediaSlug": "Ancient_Olympic_Games",
+    "isCosmic": false
+  },
+  {
+    "id": "fondazione-roma",
+    "title": "Fondazione di Roma",
+    "year": -753,
+    "lat": 41.8902,
+    "lng": 12.4922,
+    "category": "storia",
+    "description": "Secondo la tradizione, il 21 aprile del 753 a.C. Romolo fonda Roma sul Colle Palatino. Da piccolo insediamento pastorale, Roma diventerà la capitale di un impero che dominerà il Mediterraneo per secoli.",
+    "wikipediaSlug": "Founding_of_Rome",
+    "isCosmic": false
+  },
+  {
+    "id": "prima-stampa",
+    "title": "Gutenberg — La Stampa a Caratteri Mobili",
+    "year": 1450,
+    "lat": 49.9929,
+    "lng": 8.2473,
+    "category": "scienza",
+    "description": "Johannes Gutenberg inventa la stampa a caratteri mobili a Magonza, Germania. La Bibbia di Gutenberg del 1455 è il primo libro stampato in Europa. La stampa rivoluzionerà la diffusione del sapere, rendendo possibile la Rivoluzione Scientifica.",
+    "wikipediaSlug": "Johannes_Gutenberg",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg/240px-Gutenberg_Bible%2C_Lenox_Copy%2C_New_York_Public_Library%2C_2009._Pic_01.jpg",
+    "isCosmic": false
+  },
+  {
+    "id": "prima-guerra-mondiale",
+    "title": "Prima Guerra Mondiale",
+    "year": 1914,
+    "lat": 43.8563,
+    "lng": 18.4131,
+    "category": "storia",
+    "description": "Il 28 giugno 1914 l'Arciduca Francesco Ferdinando viene assassinato a Sarajevo. Nel giro di sei settimane, un sistema di alleanze trascina l'Europa in una guerra totale che costerà 20 milioni di vite.",
+    "wikipediaSlug": "World_War_I",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Cheshire_Regiment_trench_Somme_1916.jpg/320px-Cheshire_Regiment_trench_Somme_1916.jpg",
+    "isCosmic": false
+  },
+  {
+    "id": "fratelli-wright",
+    "title": "Fratelli Wright — Primo Volo a Motore",
+    "year": 1903,
+    "lat": 36.0168,
+    "lng": -75.6680,
+    "category": "scienza",
+    "description": "Il 17 dicembre 1903 a Kitty Hawk, North Carolina, Orville Wright percorre 37 metri in 12 secondi: il primo volo a motore della storia. Meno di 66 anni dopo, l'uomo camminava sulla Luna.",
+    "wikipediaSlug": "Wright_brothers",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/First_flight2.jpg/320px-First_flight2.jpg",
+    "isCosmic": false
+  },
+  {
+    "id": "internet-www",
+    "title": "Tim Berners-Lee — Il World Wide Web",
+    "year": 1991,
+    "lat": 46.2330,
+    "lng": 6.0557,
+    "category": "scienza",
+    "description": "Il 6 agosto 1991 Tim Berners-Lee pubblica al CERN di Ginevra la prima pagina web della storia. Inventa URL, HTTP e HTML: le fondamenta di Internet moderno. Il CERN la mantiene ancora online.",
+    "wikipediaSlug": "World_Wide_Web",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/WWW_logo_by_Robert_Cailliau.svg/240px-WWW_logo_by_Robert_Cailliau.svg.png",
+    "isCosmic": false
+  },
+
+  { "id": "tutankhamon", "title": "Tutankhamon — Il Faraone Bambino", "year": -1323, "lat": 25.7400, "lng": 32.6014, "category": "storia", "description": "Tutankhamon muore a soli 19 anni nella Valle dei Re, Egitto. Dimenticato per millenni, la sua tomba intatta viene scoperta da Howard Carter nel 1922: il tesoro più spettacolare mai trovato nell'archeologia moderna.", "wikipediaSlug": "Tutankhamun", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg/240px-CairoEgMuseumTaaMaskMostlyPhotographed.jpg", "isCosmic": false },
+
+  { "id": "battaglia-maratona", "title": "Battaglia di Maratona", "year": -490, "lat": 38.1500, "lng": 23.9667, "category": "storia", "description": "Il 12 settembre 490 a.C., 10.000 Ateniesi sconfiggono l'esercito persiano di Dario a Maratona, salvando la democrazia greca. Secondo la leggenda, il soldato Fidippide corse fino ad Atene per annunciare la vittoria, ispirando la corsa moderna.", "wikipediaSlug": "Battle_of_Marathon", "isCosmic": false },
+
+  { "id": "alessandro-magno", "title": "Alessandro Magno — Conquista dell'Asia", "year": -323, "lat": 32.5361, "lng": 44.4205, "category": "storia", "description": "Alessandro Magno, re di Macedonia, conquista un impero che si estende dalla Grecia all'India in meno di 12 anni. Muore a Babilonia a soli 32 anni, lasciando il più grande impero mai visto fino ad allora. Diffonde la cultura greca in tutto il Medio Oriente.", "wikipediaSlug": "Alexander_the_Great", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/MacedonEmpire.jpg/320px-MacedonEmpire.jpg", "isCosmic": false },
+
+  { "id": "grande-muraglia", "title": "Grande Muraglia Cinese — Qin Shi Huang", "year": -221, "lat": 40.4319, "lng": 116.5704, "category": "storia", "description": "L'imperatore Qin Shi Huang unifica la Cina e ordina la costruzione della Grande Muraglia, collegando mura preesistenti per oltre 6.700 km. Migliaia di operai muoiono durante la costruzione. È l'opera architettonica più lunga della storia umana.", "wikipediaSlug": "Great_Wall_of_China", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/320px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg", "isCosmic": false },
+
+  { "id": "morte-cesare", "title": "Assassinio di Giulio Cesare", "year": -44, "lat": 41.8930, "lng": 12.4824, "category": "storia", "description": "Il 15 marzo del 44 a.C. (le Idi di Marzo), Giulio Cesare viene assassinato in Senato a Roma da un gruppo di senatori guidati da Bruto e Cassio: 23 pugnalate. La sua morte scatena le guerre civili che portano alla fine della Repubblica e alla nascita dell'Impero Romano.", "wikipediaSlug": "Assassination_of_Julius_Caesar", "isCosmic": false },
+
+  { "id": "egira", "title": "Egira — Nascita dell'Islam", "year": 622, "lat": 24.4672, "lng": 39.6109, "category": "storia", "description": "Nel 622 d.C. il profeta Maometto migra da La Mecca a Medina: l'Egira. Questo evento segna l'anno 1 del calendario islamico e l'inizio dell'Islam come comunità organizzata. In un secolo, l'Islam si espande dall'Arabia alla Spagna e all'India.", "wikipediaSlug": "Hijra", "isCosmic": false },
+
+  { "id": "carlo-magno", "title": "Incoronazione di Carlo Magno", "year": 800, "lat": 41.9029, "lng": 12.4534, "category": "storia", "description": "Il 25 dicembre dell'800 d.C. Papa Leone III incorona Carlo Magno 'Imperatore dei Romani' nella Basilica di San Pietro a Roma. È la prima volta che un re franco diventa imperatore d'Occidente: un evento che segna la nascita dell'Europa medievale.", "wikipediaSlug": "Charlemagne", "isCosmic": false },
+
+  { "id": "magna-carta", "title": "Magna Carta — I Diritti del Re", "year": 1215, "lat": 51.4424, "lng": -0.5656, "category": "storia", "description": "Il 15 giugno 1215, Re Giovanni d'Inghilterra firma la Magna Carta a Runnymede, limitando per la prima volta il potere assoluto del re. Il documento stabilisce che anche il sovrano è soggetto alla legge: il seme della democrazia moderna e dei diritti civili.", "wikipediaSlug": "Magna_Carta", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Magna_Carta_%28British_Library_Cotton_MS_Augustus_II.106%29.jpg/240px-Magna_Carta_%28British_Library_Cotton_MS_Augustus_II.106%29.jpg", "isCosmic": false },
+
+  { "id": "marco-polo", "title": "Marco Polo — Viaggio in Cina", "year": 1271, "lat": 45.4408, "lng": 12.3155, "category": "storia", "description": "Il giovane veneziano Marco Polo parte nel 1271 con il padre e lo zio verso la Cina, raggiungendo la corte del Gran Khan Kublai Khan. Trascorre 17 anni in Asia e al ritorno detta 'Il Milione', che rivela all'Europa la civiltà cinese e apre la via commerciale verso Oriente.", "wikipediaSlug": "Marco_Polo", "isCosmic": false },
+
+  { "id": "morte-nera", "title": "La Morte Nera — La Peste in Europa", "year": 1347, "lat": 38.1936, "lng": 15.5542, "category": "storia", "description": "Nel 1347 una nave proveniente dalla Crimea approda a Messina portando la peste bubbonica. In cinque anni la malattia uccide tra un terzo e la metà della popolazione europea, trasformando radicalmente l'economia, la società e la religione del continente.", "wikipediaSlug": "Black_Death", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Danse_macabre_by_Michael_Wolgemut.jpg/320px-Danse_macabre_by_Michael_Wolgemut.jpg", "isCosmic": false },
+
+  { "id": "caduta-costantinopoli", "title": "Caduta di Costantinopoli", "year": 1453, "lat": 41.0082, "lng": 28.9784, "category": "storia", "description": "Il 29 maggio 1453 l'esercito ottomano del Sultano Maometto II conquista Costantinopoli dopo 53 giorni di assedio. Termina l'Impero Romano d'Oriente (Bisanzio), durato 1.000 anni. Molti intellettuali greci fuggono in Italia, contribuendo al Rinascimento.", "wikipediaSlug": "Fall_of_Constantinople", "isCosmic": false },
+
+  { "id": "martin-lutero", "title": "Martin Lutero — Le 95 Tesi", "year": 1517, "lat": 51.8659, "lng": 12.6473, "category": "storia", "description": "Il 31 ottobre 1517 il monaco agostiniano Martin Lutero affigge le sue 95 Tesi sulla porta della chiesa di Wittenberg, contestando la vendita delle indulgenze da parte della Chiesa cattolica. L'invenzione della stampa diffonde le sue idee in tutta Europa: nasce la Riforma Protestante.", "wikipediaSlug": "Reformation", "isCosmic": false },
+
+  { "id": "cortes-messico", "title": "Cortés — Conquista del Messico", "year": 1521, "lat": 19.4326, "lng": -99.1332, "category": "storia", "description": "Hernán Cortés, con soli 500 soldati spagnoli e alleati indigeni, conquista Tenochtitlan, la capitale azteca, nel 1521. La città viene distrutta e sulla sua posizione viene costruita Città del Messico. La conquista causa il collasso dell'impero azteca e la morte di milioni di indigeni.", "wikipediaSlug": "Hernán_Cortés", "isCosmic": false },
+
+  { "id": "rivoluzione-americana", "title": "Dichiarazione d'Indipendenza USA", "year": 1776, "lat": 39.9526, "lng": -75.1652, "category": "storia", "description": "Il 4 luglio 1776 i delegati delle 13 colonie americane firmano la Dichiarazione d'Indipendenza a Philadelphia. Redatta principalmente da Thomas Jefferson, proclama che tutti gli uomini sono creati uguali. Nasce la prima repubblica democratica moderna.", "wikipediaSlug": "United_States_Declaration_of_Independence", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/United_States_Declaration_of_Independence.jpg/240px-United_States_Declaration_of_Independence.jpg", "isCosmic": false },
+
+  { "id": "waterloo", "title": "Battaglia di Waterloo — Fine di Napoleone", "year": 1815, "lat": 50.6958, "lng": 4.4117, "category": "storia", "description": "Il 18 giugno 1815 Napoleone Bonaparte viene sconfitto definitivamente dal Duca di Wellington e dai Prussiani a Waterloo, Belgio. L'esilio all'isola di Sant'Elena chiude 20 anni di guerre napoleoniche che hanno ridisegnato la carta d'Europa. Il suo nome diventa sinonimo di sconfitta definitiva.", "wikipediaSlug": "Battle_of_Waterloo", "isCosmic": false },
+
+  { "id": "abolizione-schiavitu", "title": "Abolizione della Schiavitù negli USA", "year": 1865, "lat": 38.9072, "lng": -77.0369, "category": "storia", "description": "Il 6 dicembre 1865 il XIII emendamento della Costituzione americana abolisce ufficialmente la schiavitù negli Stati Uniti, dopo la Guerra Civile che ha causato 620.000 morti. Quattro milioni di schiavi vengono liberati. La lotta per la vera uguaglianza continuerà per un secolo ancora.", "wikipediaSlug": "Thirteenth_Amendment_to_the_United_States_Constitution", "isCosmic": false },
+
+  { "id": "rivoluzione-russa", "title": "Rivoluzione Russa — Cade lo Zar", "year": 1917, "lat": 59.9343, "lng": 30.3351, "category": "storia", "description": "Nel 1917 due rivoluzioni in rapida successione abbattono lo Zar Nicola II e portano al potere i bolscevichi di Lenin a Pietrogrado. Nasce l'Unione Sovietica, il primo stato comunista della storia. La Rivoluzione Russa cambierà la geopolitica mondiale per 70 anni.", "wikipediaSlug": "Russian_Revolution", "isCosmic": false },
+
+  { "id": "hiroshima", "title": "Bomba Atomica su Hiroshima", "year": 1945, "lat": 34.3916, "lng": 132.4536, "category": "storia", "description": "Il 6 agosto 1945 gli Stati Uniti sganciano la bomba atomica 'Little Boy' su Hiroshima, Giappone: 70.000 persone muoiono istantaneamente, 200.000 entro la fine dell'anno. È la prima volta nella storia che un'arma nucleare viene usata in guerra, aprendo l'era atomica.", "wikipediaSlug": "Atomic_bombings_of_Hiroshima_and_Nagasaki", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Atomic_bombing_of_Japan.jpg/240px-Atomic_bombing_of_Japan.jpg", "isCosmic": false },
+
+  { "id": "indipendenza-india", "title": "Indipendenza dell'India — Fine del Raj Britannico", "year": 1947, "lat": 28.6139, "lng": 77.2090, "category": "storia", "description": "Il 15 agosto 1947 l'India conquista l'indipendenza dal dominio britannico dopo decenni di lotta nonviolenta guidata da Mahatma Gandhi. Nasce la più grande democrazia del mondo. La partizione dal Pakistan provoca però uno dei maggiori esodi nella storia: 10-15 milioni di sfollati.", "wikipediaSlug": "Indian_independence_movement", "isCosmic": false },
+
+  { "id": "muro-berlino", "title": "Caduta del Muro di Berlino", "year": 1989, "lat": 52.5163, "lng": 13.3777, "category": "storia", "description": "Il 9 novembre 1989 migliaia di berlinesi abbattono il muro che divideva la città dal 1961. Il simbolo della Guerra Fredda crolla in diretta televisiva mondiale. Nei mesi successivi si dissolve l'Unione Sovietica, trasformando radicalmente l'ordine mondiale.", "wikipediaSlug": "Fall_of_the_Berlin_Wall", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/BerlinWall-BrandenburgerTor.jpg/320px-BerlinWall-BrandenburgerTor.jpg", "isCosmic": false },
+
+  { "id": "mandela", "title": "Nelson Mandela — Primo Presidente Nero del Sudafrica", "year": 1994, "lat": -25.7479, "lng": 28.2293, "category": "storia", "description": "Il 10 maggio 1994 Nelson Mandela viene eletto Presidente del Sudafrica, dopo 27 anni di carcere per la sua lotta all'apartheid. La sua presidenza guida il paese verso la riconciliazione senza spargimenti di sangue. Diventa il simbolo globale della resistenza nonviolenta e della dignità umana.", "wikipediaSlug": "Nelson_Mandela", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Nelson_Mandela_1994.jpg/240px-Nelson_Mandela_1994.jpg", "isCosmic": false },
+
+  { "id": "dante-commedia", "title": "Dante Alighieri — La Divina Commedia", "year": 1321, "lat": 44.4184, "lng": 12.2035, "category": "arte", "description": "Dante Alighieri completa la Divina Commedia a Ravenna, dove morirà nello stesso anno. Il poema descrive un viaggio allegorico attraverso Inferno, Purgatorio e Paradiso. Considerato la più grande opera della letteratura italiana e uno dei capolavori assoluti della letteratura mondiale.", "wikipediaSlug": "Divine_Comedy", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Dante_Alighieri_-_Portrait_by_Giotto_-_Bargello_Chapel.jpg/240px-Dante_Alighieri_-_Portrait_by_Giotto_-_Bargello_Chapel.jpg", "isCosmic": false },
+
+  { "id": "botticelli-venere", "title": "Botticelli — La Nascita di Venere", "year": 1486, "lat": 43.7696, "lng": 11.2558, "category": "arte", "description": "Sandro Botticelli dipinge la Nascita di Venere a Firenze per la famiglia Medici. È la prima grande opera d'arte rinascimentale a raffigurare la nudità femminile su grande scala, ispirata alla mitologia classica. Oggi è uno dei dipinti più famosi al mondo agli Uffizi.", "wikipediaSlug": "The_Birth_of_Venus", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Sandro_Botticelli_046.jpg/240px-Sandro_Botticelli_046.jpg", "isCosmic": false },
+
+  { "id": "cappella-sistina", "title": "Michelangelo — La Cappella Sistina", "year": 1512, "lat": 41.9029, "lng": 12.4534, "category": "arte", "description": "Michelangelo completa il soffitto della Cappella Sistina in Vaticano dopo quattro anni di lavoro, dal 1508 al 1512. 500 metri quadri di affreschi rappresentano scene del Genesi, tra cui la celebre Creazione di Adamo. Considerato il più grande affresco mai realizzato.", "wikipediaSlug": "Sistine_Chapel_ceiling", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/320px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg", "isCosmic": false },
+
+  { "id": "shakespeare-amleto", "title": "Shakespeare — Amleto", "year": 1601, "lat": 51.5074, "lng": -0.1278, "category": "arte", "description": "William Shakespeare scrive Amleto a Londra, considerata la più grande tragedia della letteratura inglese. 'Essere o non essere, questo è il problema' rimane la citazione letteraria più famosa della storia. Shakespeare inventa o codifica oltre 1.700 parole inglesi tuttora in uso.", "wikipediaSlug": "Hamlet", "isCosmic": false },
+
+  { "id": "rembrandt-ronda", "title": "Rembrandt — La Ronda di Notte", "year": 1642, "lat": 52.3676, "lng": 4.9041, "category": "arte", "description": "Rembrandt van Rijn dipinge La Ronda di Notte ad Amsterdam, rivoluzionando la pittura con la sua tecnica di luce drammatica. È il più grande dipinto del Rijksmuseum e uno dei più famosi al mondo. La sua dimensione (3,6 × 4,4 m) e la composizione dinamica erano senza precedenti.", "wikipediaSlug": "The_Night_Watch", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/The_Night_Watch_-_HD.jpg/320px-The_Night_Watch_-_HD.jpg", "isCosmic": false },
+
+  { "id": "van-gogh-notte", "title": "Van Gogh — La Notte Stellata", "year": 1889, "lat": 43.7893, "lng": 4.8301, "category": "arte", "description": "Vincent van Gogh dipinge La Notte Stellata dal manicomio di Saint-Rémy-de-Provence, in Francia, dove si era ricoverato volontariamente. I vortici di cielo e stelle esprimono la sua visione tormentata ma luminosa del mondo. Muore l'anno dopo a soli 37 anni.", "wikipediaSlug": "The_Starry_Night", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/320px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg", "isCosmic": false },
+
+  { "id": "picasso-guernica", "title": "Picasso — Guernica", "year": 1937, "lat": 40.4168, "lng": -3.7038, "category": "arte", "description": "Pablo Picasso dipinge Guernica a Parigi in risposta al bombardamento nazista della città basca di Guernica durante la Guerra Civile Spagnola. Il grande dipinto cubista (3,5 × 7,8 m) diventa il manifesto artistico più potente contro la guerra. Oggi si trova al Museo Reina Sofía di Madrid.", "wikipediaSlug": "Guernica_(Picasso)", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/7/74/PicassoGuernica.jpg", "isCosmic": false },
+
+  { "id": "mozart-nascita", "title": "Wolfgang Amadeus Mozart", "year": 1756, "lat": 47.8095, "lng": 13.0550, "category": "musica", "description": "Wolfgang Amadeus Mozart nasce a Salisburgo il 27 gennaio 1756. Bambino prodigio, compone la sua prima sinfonia a 8 anni. In soli 35 anni di vita produce oltre 600 opere: sinfonie, concerti, opere liriche, musica da camera. Considerato il più grande genio musicale della storia.", "wikipediaSlug": "Wolfgang_Amadeus_Mozart", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Mozart_Portrait_Croce.jpg/240px-Mozart_Portrait_Croce.jpg", "isCosmic": false },
+
+  { "id": "beethoven-nona", "title": "Beethoven — Nona Sinfonia", "year": 1824, "lat": 48.2082, "lng": 16.3738, "category": "musica", "description": "Ludwig van Beethoven dirige la prima della Nona Sinfonia a Vienna nel 1824, completamente sordo. L'Inno alla Gioia del quarto movimento, su testo di Schiller, diventa il simbolo dell'unità europea e viene adottato come inno dell'Unione Europea. Una delle opere più influenti nella storia della musica.", "wikipediaSlug": "Symphony_No._9_(Beethoven)", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beethoven.jpg/240px-Beethoven.jpg", "isCosmic": false },
+
+  { "id": "verdi-traviata", "title": "Verdi — La Traviata", "year": 1853, "lat": 45.4408, "lng": 12.3155, "category": "musica", "description": "Giuseppe Verdi debutta La Traviata alla Fenice di Venezia nel 1853. L'opera, ispirata alla Signora delle Camelie di Dumas figlio, rivoluziona il melodramma italiano portando in scena una protagonista considerata immorale dalla società dell'epoca. È oggi l'opera più rappresentata al mondo.", "wikipediaSlug": "La_traviata", "isCosmic": false },
+
+  { "id": "stradivari", "title": "Stradivari — I Violini Perfetti", "year": 1700, "lat": 45.1328, "lng": 10.0236, "category": "musica", "description": "Antonio Stradivari, liutaio di Cremona, raggiunge il vertice della sua arte intorno al 1700. I suoi violini sono ancora oggi considerati i migliori mai costruiti: i musicisti più famosi del mondo li cercano e li pagano milioni. Il segreto del loro suono resta in parte misterioso.", "wikipediaSlug": "Antonio_Stradivari", "isCosmic": false },
+
+  { "id": "elvis-rock", "title": "Elvis Presley — Nasce il Rock'n'Roll", "year": 1956, "lat": 35.1495, "lng": -90.0490, "category": "musica", "description": "Nel 1956 Elvis Presley esplode con 'Heartbreak Hotel' e diventa la prima superstar globale della musica pop. Registrato negli studi di Sam Phillips a Memphis, Tennessee, mescola blues nero e country bianco: nasce il rock'n'roll e con esso la cultura giovanile moderna.", "wikipediaSlug": "Elvis_Presley", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Elvis_Presley_promoting_Jailhouse_Rock.jpg/240px-Elvis_Presley_promoting_Jailhouse_Rock.jpg", "isCosmic": false },
+
+  { "id": "beatles-abbey-road", "title": "Beatles — Abbey Road", "year": 1969, "lat": 51.5317, "lng": -0.1785, "category": "musica", "description": "I Beatles registrano l'album Abbey Road negli studi di Abbey Road a Londra nel 1969, l'ultimo inciso insieme prima dello scioglimento. La copertina con i Fab Four che attraversano le strisce pedonali diventa una delle immagini più iconiche del XX secolo. L'album vende oltre 31 milioni di copie.", "wikipediaSlug": "Abbey_Road", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Abbey_Road_at_crossing_-_geograph.org.uk_-_2124441.jpg/240px-Abbey_Road_at_crossing_-_geograph.org.uk_-_2124441.jpg", "isCosmic": false },
+
+  { "id": "marie-curie", "title": "Marie Curie — Scoperta del Radio", "year": 1898, "lat": 48.8480, "lng": 2.3410, "category": "scienza", "description": "Marie e Pierre Curie scoprono il polonio e il radio nel loro laboratorio di Parigi. Marie Curie è la prima donna a vincere il Nobel e l'unica persona nella storia a vincerlo in due discipline diverse: fisica (1903) e chimica (1911). La sua ricerca sulla radioattività apre la strada alla medicina nucleare.", "wikipediaSlug": "Marie_Curie", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Marie_Curie_c1920.jpg/240px-Marie_Curie_c1920.jpg", "isCosmic": false },
+
+  { "id": "hubble-galassie", "title": "Hubble — L'Universo in Espansione", "year": 1929, "lat": 34.2258, "lng": -118.0589, "category": "scienza", "description": "Edwin Hubble dimostra dall'Osservatorio Mount Wilson in California che le galassie si allontanano da noi a velocità proporzionale alla loro distanza. Questa legge prova che l'universo è in espansione, confermando indirettamente la teoria del Big Bang. Stravolge la visione di un universo statico.", "wikipediaSlug": "Hubble's_law", "isCosmic": false },
+
+  { "id": "fleming-penicillina", "title": "Fleming — Scoperta della Penicillina", "year": 1928, "lat": 51.5074, "lng": -0.1278, "category": "scienza", "description": "Alexander Fleming scopre la penicillina per caso nel suo laboratorio di Londra: una muffa (Penicillium notatum) ha ucciso i batteri nella piastra. L'antibiotico sviluppato negli anni '40 da Chain e Florey salverà centinaia di milioni di vite. È la scoperta medica più importante del XX secolo.", "wikipediaSlug": "Penicillin", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/SEM_Penicillin_Bacteria_01.jpg/240px-SEM_Penicillin_Bacteria_01.jpg", "isCosmic": false },
+
+  { "id": "eniac", "title": "ENIAC — Il Primo Computer Elettronico", "year": 1945, "lat": 39.9526, "lng": -75.1652, "category": "scienza", "description": "L'ENIAC (Electronic Numerical Integrator and Computer) viene completato all'Università della Pennsylvania a Philadelphia. Pesa 27 tonnellate, occupa 167 metri quadrati e compie 5.000 addizioni al secondo. La potenza di calcolo di un moderno smartphone equivale a miliardi di ENIAC.", "wikipediaSlug": "ENIAC", "isCosmic": false },
+
+  { "id": "transistor", "title": "Transistor — La Rivoluzione dell'Elettronica", "year": 1947, "lat": 40.6788, "lng": -74.3994, "category": "scienza", "description": "William Shockley, John Bardeen e Walter Brattain inventano il transistor nei Laboratori Bell nel New Jersey. Questa minuscola valvola di silicio sostituirà i ingombranti tubi a vuoto e renderà possibili computer, smartphone e internet. I tre vincono il Nobel per la Fisica nel 1956.", "wikipediaSlug": "Transistor", "isCosmic": false },
+
+  { "id": "dna", "title": "Watson & Crick — La Doppia Elica del DNA", "year": 1953, "lat": 52.2053, "lng": 0.1218, "category": "scienza", "description": "Il 28 febbraio 1953 James Watson e Francis Crick annunciano a Cambridge di aver scoperto la struttura a doppia elica del DNA. La scoperta, basata anche sui dati cristallografici di Rosalind Franklin, rivela il meccanismo della trasmissione genetica. È la scoperta biologica più importante della storia.", "wikipediaSlug": "Discovery_of_the_structure_of_DNA", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png/240px-DNA_Structure%2BKey%2BLabelled.pn_NoBB.png", "isCosmic": false },
+
+  { "id": "salk-vaccino", "title": "Salk — Vaccino contro la Poliomielite", "year": 1955, "lat": 40.4406, "lng": -79.9959, "category": "scienza", "description": "Jonas Salk annuncia il vaccino antipolio a Pittsburgh nel 1955, dopo anni di ricerca. La polio paralizzava o uccideva migliaia di bambini ogni anno, compreso il Presidente Roosevelt. Il vaccino di Salk, reso disponibile gratuitamente, elimina praticamente la malattia nei paesi sviluppati.", "wikipediaSlug": "Jonas_Salk", "isCosmic": false },
+
+  { "id": "iphone", "title": "iPhone — La Rivoluzione degli Smartphone", "year": 2007, "lat": 37.7749, "lng": -122.4194, "category": "scienza", "description": "Il 9 gennaio 2007 Steve Jobs presenta il primo iPhone a San Francisco: telefono, lettore musicale e computer in tasca. L'iPhone ridefinisce l'industria dei telefoni cellulari, il commercio digitale, i social media e il modo in cui l'umanità accede all'informazione. 2 miliardi di iPhone venduti.", "wikipediaSlug": "iPhone", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Steve_Jobs_and_iPhone.jpg/240px-Steve_Jobs_and_iPhone.jpg", "isCosmic": false },
+
+  { "id": "dinosauri-comparsa", "title": "Comparsa dei Dinosauri", "year": -240000000, "lat": -23.5505, "lng": -46.6333, "category": "geologia", "description": "Circa 240 milioni di anni fa, in Sud America, compaiono i primi dinosauri dall'ordine degli Arcosauri. In pochi milioni di anni dominano tutti i continenti. I dinosauri regneranno sulla Terra per 175 milioni di anni, finché un asteroide li sterminerà 66 milioni di anni fa.", "wikipediaSlug": "Dinosaur", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Eoraptor_01.jpg/240px-Eoraptor_01.jpg", "isCosmic": false },
+
+  { "id": "vesuvio-pompei", "title": "Eruzione del Vesuvio — Pompei", "year": 79, "lat": 40.8215, "lng": 14.4260, "category": "geologia", "description": "Il 24 agosto del 79 d.C. il Vesuvio erutta con violenza catastrofica, seppellendo Pompei, Ercolano e Stabia sotto metri di cenere e lapilli. Circa 2.000 persone muoiono istantaneamente. La loro morte preserva intatta la vita quotidiana romana, regalando agli archeologi moderni un museo senza eguali.", "wikipediaSlug": "Eruption_of_Mount_Vesuvius_in_79_AD", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Victors_from_Pompeii.jpg/240px-Victors_from_Pompeii.jpg", "isCosmic": false },
+
+  { "id": "krakatoa", "title": "Eruzione del Krakatoa", "year": 1883, "lat": -6.1033, "lng": 105.4230, "category": "geologia", "description": "Il 27 agosto 1883 il vulcano Krakatoa, in Indonesia, esplode con una delle eruzioni più potenti nella storia moderna. L'esplosione si sente fino a 4.800 km di distanza. Lo tsunami che segue uccide 36.000 persone. Le ceneri in atmosfera abbassano la temperatura globale per due anni.", "wikipediaSlug": "1883_eruption_of_Krakatoa", "isCosmic": false },
+
+  { "id": "deriva-continenti", "title": "Wegener — Teoria della Deriva dei Continenti", "year": 1912, "lat": 52.5200, "lng": 13.4050, "category": "scienza", "description": "Il meteorologo Alfred Wegener presenta la teoria della deriva dei continenti a Berlino nel 1912: i continenti si sono spostati nel corso di milioni di anni. Deriso per decenni dalla comunità scientifica, viene confermato solo negli anni '60 con la scoperta della tettonica delle placche.", "wikipediaSlug": "Continental_drift", "isCosmic": false },
+
+  { "id": "sputnik", "title": "Sputnik — Primo Satellite Artificiale", "year": 1957, "lat": 45.9650, "lng": 63.3050, "category": "cosmo", "description": "Il 4 ottobre 1957 l'Unione Sovietica lancia Sputnik 1, il primo satellite artificiale nella storia umana. Il piccolo oggetto metallico di 83 kg orbita la Terra ogni 96 minuti, mandando segnali radio. La sua trasmissione 'bip-bip' sconvolge l'Occidente e dà inizio alla corsa allo spazio.", "wikipediaSlug": "Sputnik_1", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sputnik_asm.jpg/240px-Sputnik_asm.jpg", "isCosmic": false },
+
+  { "id": "gagarin", "title": "Yuri Gagarin — Primo Uomo nello Spazio", "year": 1961, "lat": 45.9650, "lng": 63.3050, "category": "cosmo", "description": "Il 12 aprile 1961 il cosmonauta sovietico Yuri Gagarin diventa il primo essere umano nello spazio, compiendo un'orbita completa attorno alla Terra sulla navicella Vostok 1 in 108 minuti. Alla discesa pronuncia le parole: 'La Terra è blu... com'è meravigliosa'. Muore in un incidente aereo nel 1968.", "wikipediaSlug": "Yuri_Gagarin", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Yuri_Gagarin_%281961%29_-_Restoration.jpg/240px-Yuri_Gagarin_%281961%29_-_Restoration.jpg", "isCosmic": false },
+
+  { "id": "passeggiata-spaziale", "title": "Leonov — Prima Passeggiata Spaziale", "year": 1965, "lat": 45.9650, "lng": 63.3050, "category": "cosmo", "description": "Il 18 marzo 1965 il cosmonauta sovietico Alexei Leonov esce dalla navicella Voskhod 2 e fluttua nello spazio per 12 minuti: prima EVA (attività extra-veicolare) della storia. La tuta si gonfia così tanto che ha difficoltà a rientrare. La sua impresa apre la strada alle riparazioni spaziali e alla costruzione della ISS.", "wikipediaSlug": "Alexei_Leonov", "isCosmic": false },
+
+  { "id": "pale-blue-dot", "title": "Voyager 1 — Pale Blue Dot", "year": 1990, "lat": 34.2014, "lng": -118.1719, "category": "cosmo", "description": "Il 14 febbraio 1990, su richiesta di Carl Sagan, la sonda Voyager 1 si volta e fotografa la Terra da 6 miliardi di km: un puntino blu pallido in un raggio di luce. Sagan scrive: 'Su questo punto sospeso in un raggio di sole è vissuto ogni essere umano che abbia mai vissuto.' La foto più filosofica della storia.", "wikipediaSlug": "Pale_Blue_Dot", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/PaleBlueDot.jpg/240px-PaleBlueDot.jpg", "isCosmic": false },
+
+  { "id": "hubble-deep-field", "title": "Hubble Deep Field — Miliardi di Galassie", "year": 1995, "lat": 39.2904, "lng": -76.6122, "category": "cosmo", "description": "Il telescopio Hubble punta per 10 giorni verso una piccola zona di cielo apparentemente vuota vicino all'Orsa Maggiore. La foto rivela 3.000 galassie: l'universo è così grande che anche nel 'nulla' esistono miliardi di stelle. L'immagine più profonda mai ottenuta fino ad allora, gestita dal centro a Baltimora.", "wikipediaSlug": "Hubble_Deep_Field", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/HubbleDeepField.800px.jpg/240px-HubbleDeepField.800px.jpg", "isCosmic": false },
+
+  { "id": "curiosity", "title": "Curiosity — Rover su Marte", "year": 2012, "lat": 28.5721, "lng": -80.6480, "category": "cosmo", "description": "Il 6 agosto 2012 il rover Curiosity della NASA atterra nel cratere Gale su Marte con la tecnica della 'sky crane'. Pesa quasi 900 kg e porta 10 strumenti scientifici. Curiosity scopre prove che Marte aveva acqua liquida in passato e condizioni potenzialmente adatte alla vita.", "wikipediaSlug": "Curiosity_(rover)", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Curiosity_Self-Portrait_at_%27Big_Sky%27_Drilling_Site.jpg/240px-Curiosity_Self-Portrait_at_%27Big_Sky%27_Drilling_Site.jpg", "isCosmic": false },
+
+  { "id": "james-webb", "title": "James Webb Space Telescope", "year": 2021, "lat": 5.2367, "lng": -52.7697, "category": "cosmo", "description": "Il 25 dicembre 2021 il telescopio spaziale James Webb viene lanciato da Kourou, Guyana Francese. Il suo specchio da 6,5 m (tre volte Hubble) e la capacità di vedere nell'infrarosso gli permettono di osservare le prime galassie dell'universo, nate 300 milioni di anni dopo il Big Bang.", "wikipediaSlug": "James_Webb_Space_Telescope", "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Webb_Webb%27s_First_Deep_Field_%28crop%29.jpg/240px-Webb_Webb%27s_First_Deep_Field_%28crop%29.jpg", "isCosmic": false }
 ]

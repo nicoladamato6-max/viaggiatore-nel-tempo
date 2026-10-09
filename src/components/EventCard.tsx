@@ -1,4 +1,4 @@
-import { HistoricalEvent, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
+import { type HistoricalEvent, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
 
 interface Props {
   event: HistoricalEvent;

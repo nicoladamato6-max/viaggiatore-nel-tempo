@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { HistoricalEvent } from '../types';
+import { type HistoricalEvent } from '../types';
 
 interface Props {
   events: HistoricalEvent[];

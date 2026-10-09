@@ -42,11 +42,18 @@ body {
   color: #ffd166;
 }
 
-/* ── Area globo ── */
+/* ── Area globo + pannello laterale ── */
 .globe-container {
   flex: 1;
-  position: relative;
+  display: flex;
+  flex-direction: row;
   min-height: 0;
+}
+
+.globe-wrapper {
+  flex: 1;
+  position: relative;
+  min-width: 0;
 }
 
 /* ── Pannello controlli (basso) ── */
@@ -56,6 +63,27 @@ body {
   padding: 12px 16px;
   z-index: 10;
   flex-shrink: 0;
+}
+
+/* ── Badge categoria evento ── */
+.category-badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 10px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+/* ── Badge era storica ── */
+.era-badge {
+  font-size: 0.65rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 1px solid;
+  letter-spacing: 0.03em;
 }
 
 /* ── Slider del tempo ── */
@@ -142,96 +170,202 @@ body {
   border-color: #a8c8ff;
 }
 
-/* ── Card evento ── */
-.event-card {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 280px;
-  max-height: calc(100% - 24px);
-  overflow-y: auto;
-  background: rgba(15, 15, 35, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  padding: 14px;
-  z-index: 20;
-  backdrop-filter: blur(8px);
+/* ── Info Panel (sidebar destra) ── */
+.info-panel {
+  /* la larghezza è gestita via style={{ width }} in React */
+  flex-shrink: 0;
+  background: rgba(8, 8, 22, 0.98);
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;   /* necessario per l'handle assoluto */
 }
 
-.event-card .close-btn {
+/* ── Resize handle (bordo sinistro trascinabile) ── */
+.info-panel__resize-handle {
   position: absolute;
-  top: 8px;
-  right: 10px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: col-resize;
+  z-index: 20;
+  background: transparent;
+  transition: background 0.15s;
+}
+
+.info-panel__resize-handle:hover {
+  background: rgba(168, 200, 255, 0.35);
+}
+
+/* linea visibile al centro dell'handle */
+.info-panel__resize-handle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 40px;
+  border-radius: 1px;
+  background: rgba(168, 200, 255, 0.4);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.info-panel__resize-handle:hover::after {
+  opacity: 1;
+}
+
+.info-panel--empty {
+  justify-content: center;
+  align-items: center;
+}
+
+.info-panel__placeholder {
+  text-align: center;
+  color: #3a3a55;
+  padding: 28px 20px;
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+/* intestazione: badge + pulsanti */
+.info-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 12px 8px;
+  flex-shrink: 0;
+}
+
+.info-panel__icon-btn {
   background: none;
   border: none;
-  color: #888;
-  font-size: 1.2rem;
+  color: #666;
+  font-size: 1.15rem;
   cursor: pointer;
+  padding: 2px 7px;
+  border-radius: 4px;
   line-height: 1;
+  transition: color 0.15s, background 0.15s;
 }
 
-.event-card .close-btn:hover {
+.info-panel__icon-btn:hover {
   color: #fff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.event-card .category-badge {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 10px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 8px;
+/* dati evento: titolo, anno, descrizione */
+.info-panel__meta {
+  flex-shrink: 0;
+  padding: 0 14px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.event-card h2 {
-  font-size: 0.95rem;
-  font-weight: 600;
+.info-panel__title {
+  font-size: 0.98rem;
+  font-weight: 700;
   line-height: 1.3;
-  margin-bottom: 6px;
-  padding-right: 20px;
   color: #e8e8f0;
+  margin-bottom: 4px;
 }
 
-.event-card .year-tag {
-  font-size: 0.75rem;
+.info-panel__year {
+  font-size: 0.72rem;
   color: #ffd166;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  letter-spacing: 0.03em;
 }
 
-.event-card img {
+.info-panel__desc {
+  font-size: 0.76rem;
+  line-height: 1.6;
+  color: #9999bb;
+  margin: 0;
+}
+
+/* separatore "Wikipedia" */
+.info-panel__divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  flex-shrink: 0;
+  color: #33334a;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* area iframe — si espande per occupare tutto lo spazio disponibile */
+.info-panel__frame-wrap {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  background: #fff;
+}
+
+.info-panel__wiki-frame {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  object-fit: cover;
-  max-height: 160px;
+  height: 100%;
+  border: none;
 }
 
-.event-card p {
-  font-size: 0.78rem;
-  line-height: 1.5;
-  color: #aaa;
-  margin-bottom: 12px;
+.info-panel__loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.73rem;
+  color: #44445a;
+  padding: 16px 14px;
+  background: rgba(8, 8, 22, 0.98);
 }
 
-.event-card .wiki-link {
+.info-panel__spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #33334a;
+  border-top-color: #a8c8ff;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* footer: link apri in nuova scheda */
+.info-panel__footer {
+  flex-shrink: 0;
+  padding: 10px 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(8, 8, 22, 0.98);
+}
+
+.info-panel__wiki-btn {
   display: block;
   text-align: center;
   padding: 7px 12px;
-  background: rgba(168, 200, 255, 0.12);
-  border: 1px solid rgba(168, 200, 255, 0.3);
+  background: rgba(168, 200, 255, 0.08);
+  border: 1px solid rgba(168, 200, 255, 0.22);
   border-radius: 8px;
   color: #a8c8ff;
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 500;
   transition: background 0.15s;
 }
 
-.event-card .wiki-link:hover {
-  background: rgba(168, 200, 255, 0.2);
+.info-panel__wiki-btn:hover {
+  background: rgba(168, 200, 255, 0.18);
 }
 
 /* ── Tooltip sul globo ── */
@@ -293,11 +427,14 @@ body {
     width: 120px;
   }
 
-  .event-card {
-    width: calc(100% - 24px);
-    top: auto;
-    bottom: 160px;
-    right: 12px;
-    max-height: 50vh;
+  .globe-container {
+    flex-direction: column;
+  }
+
+  .info-panel {
+    width: 100% !important;
+    height: 45vh;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
   }
 }
