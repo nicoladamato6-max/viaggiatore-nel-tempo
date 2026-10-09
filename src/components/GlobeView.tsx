@@ -77,21 +77,26 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       }
     });
 
-    // Posiziona la camera al primo frame renderizzato da Cesium.
-    // Usare postRender (anziché setView nel useEffect) garantisce che qualsiasi
-    // animazione interna di Cesium sia già finita prima che noi la sovrascriviamo.
-    const removePostRender = viewer.scene.postRender.addEventListener(() => {
-      removePostRender(); // one-shot: rimuove se stesso dopo il primo frame
-      if (viewer.isDestroyed()) return;
+    // Centra la camera sulla Terra: prima chiamata sincrona (immediata) + multi-frame
+    // postRender per sovrascrivere qualsiasi animazione interna di Cesium.
+    // lookAt+lookAtTransform(IDENTITY) è più affidabile di setView/flyTo perché
+    // calcola la posizione partendo dal target (superficie) anziché dall'orientamento ENU.
+    const earthCenter = Cesium.Cartesian3.fromDegrees(10, 20);
+    const earthHPR    = new Cesium.HeadingPitchRange(0, -Math.PI / 2, 12_000_000);
+
+    // 1) Posizionamento sincrono: prima che Cesium parta con qualsiasi animazione
+    viewer.camera.lookAt(earthCenter, earthHPR);
+    viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
+
+    // 2) Snap multi-frame: mantiene Earth centrata per i primi 15 frame,
+    //    sovrascrivendo eventuale animazione interna di Cesium (terrain load, home, ecc.)
+    let   snapFrames  = 15;
+    const removeSnap  = viewer.scene.postRender.addEventListener(() => {
+      if (viewer.isDestroyed()) { removeSnap(); return; }
       viewer.camera.cancelFlight();
-      viewer.camera.setView({
-        destination: Cesium.Cartesian3.fromDegrees(10, 20, 12_000_000),
-        orientation: {
-          heading: 0.0,
-          pitch: -Cesium.Math.PI_OVER_TWO,
-          roll: 0.0,
-        },
-      });
+      viewer.camera.lookAt(earthCenter, earthHPR);
+      viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
+      if (--snapFrames <= 0) removeSnap();
     });
 
     // Tessellazione ridotta per i corpi celesti (default è 64×64 = ~8K tri; qui 16×16 = ~512 tri)
