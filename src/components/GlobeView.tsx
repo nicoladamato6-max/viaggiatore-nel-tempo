@@ -190,25 +190,52 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
 
     viewerRef.current = viewer;
 
-    // Al cambio di orientamento (portrait↔landscape) il browser emette touch event
-    // durante la rotazione fisica che Cesium interpreta come pinch-zoom continuo.
-    // touchcancel è il segnale standard per annullare qualsiasi gesture touch in corso:
-    // Cesium's CameraEventAggregator lo ascolta e resetta lo stato interno.
+    // Al cambio orientamento (portrait↔landscape) Cesium subisce due effetti
+    // concomitanti: (1) touch event fisici durante la rotazione vengono letti
+    // come pinch-zoom; (2) la canvas ridimensionata forza un aggiustamento del
+    // frustum che può sembrare zoom-in. Soluzione: salva la posizione esatta
+    // della camera prima del cambio, poi la ripristina con setView() dopo che
+    // il layout si è stabilizzato. setView() bypassa l'inertia e sovrascrive
+    // qualsiasi movimento accumulato.
     let prevLandscape = window.innerWidth > window.innerHeight;
+    let orientationRestoreTimer: ReturnType<typeof setTimeout> | null = null;
     function onResize() {
       const isLandscape = window.innerWidth > window.innerHeight;
       if (isLandscape === prevLandscape) return;
       prevLandscape = isLandscape;
       if (viewer.isDestroyed()) return;
-      viewer.scene.canvas.dispatchEvent(
-        new TouchEvent('touchcancel', { bubbles: true, cancelable: true })
-      );
+
+      // Salva posizione attuale prima che il layout cambi
+      const savedPos     = Cesium.Cartesian3.clone(viewer.camera.positionWC);
+      const savedHeading = viewer.camera.heading;
+      const savedPitch   = viewer.camera.pitch;
+      const savedRoll    = viewer.camera.roll;
+
       viewer.camera.cancelFlight();
+      try {
+        viewer.scene.canvas.dispatchEvent(
+          new TouchEvent('touchcancel', { bubbles: true, cancelable: true })
+        );
+      } catch { /* browser senza TouchEvent constructor */ }
+
+      // Dopo che il layout e il ResizeObserver di Cesium si sono stabilizzati,
+      // ripristina la camera alla posizione pre-rotazione
+      if (orientationRestoreTimer !== null) clearTimeout(orientationRestoreTimer);
+      orientationRestoreTimer = setTimeout(() => {
+        orientationRestoreTimer = null;
+        if (viewer.isDestroyed()) return;
+        viewer.camera.cancelFlight();
+        viewer.camera.setView({
+          destination: savedPos,
+          orientation: { heading: savedHeading, pitch: savedPitch, roll: savedRoll },
+        });
+      }, 500);
     }
     window.addEventListener('resize', onResize);
 
     return () => {
       window.removeEventListener('resize', onResize);
+      if (orientationRestoreTimer !== null) clearTimeout(orientationRestoreTimer);
       handler.destroy();
       viewer.destroy();
       viewerRef.current = null;
