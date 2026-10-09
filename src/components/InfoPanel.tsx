@@ -188,7 +188,7 @@ export function InfoPanel({ event, onClose }: Props) {
         />
         <div className="info-panel__placeholder">
           <div style={{ fontSize: '2.5rem', marginBottom: 12 }}>🌍</div>
-          <p>Clicca su un evento o un corpo celeste per esplorarlo</p>
+          <p>Tocca un evento sul globo per esplorarlo</p>
         </div>
       </div>
     );
@@ -197,15 +197,22 @@ export function InfoPanel({ event, onClose }: Props) {
   const color = CATEGORY_COLORS[event.category];
 
   return (
-    <div ref={panelRef} className="info-panel" style={{ width }}>
+    <>
+      {/* overlay mobile: tap fuori dal pannello per chiuderlo */}
+      <div className="info-panel__overlay" onClick={onClose} />
 
-      {/* ── resize handle (bordo sinistro trascinabile) ── */}
-      <div
-        className="info-panel__resize-handle"
-        onMouseDown={onHandleMouseDown}
-        onDoubleClick={onHandleDblClick}
-        title="Trascina per ridimensionare · doppio clic per resettare"
-      />
+      <div ref={panelRef} className="info-panel" style={{ width }}>
+
+        {/* grip bar (mobile) */}
+        <div className="info-panel__grip" />
+
+        {/* ── resize handle (bordo sinistro trascinabile, desktop) ── */}
+        <div
+          className="info-panel__resize-handle"
+          onMouseDown={onHandleMouseDown}
+          onDoubleClick={onHandleDblClick}
+          title="Trascina per ridimensionare · doppio clic per resettare"
+        />
 
       {/* ── intestazione ── */}
       <div className="info-panel__header">
@@ -262,5 +269,6 @@ export function InfoPanel({ event, onClose }: Props) {
         </a>
       </div>
     </div>
+    </>
   );
 }

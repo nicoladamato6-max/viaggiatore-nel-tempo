@@ -417,24 +417,121 @@ body {
   color: #ffd166;
 }
 
+/* ── Grip bar (mobile bottom sheet) ── */
+.info-panel__grip {
+  display: none; /* visibile solo su mobile via media query */
+  width: 36px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  margin: 8px auto 4px;
+  flex-shrink: 0;
+}
+
+/* ── Overlay mobile (sfondo scuro dietro il pannello) ── */
+.info-panel__overlay {
+  display: none; /* visibile solo su mobile */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 199;
+}
+
 /* ── Responsive mobile ── */
 @media (max-width: 600px) {
+  /* Header più compatto */
+  .header {
+    padding: 7px 10px;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
   .header h1 {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
   }
 
+  /* Cerca: occupa tutto lo spazio disponibile in header */
+  .search-bar {
+    margin-left: 0;
+    flex: 1;
+    min-width: 0;
+  }
   .search-bar input {
-    width: 120px;
+    width: 100%;
+    min-width: 0;
+    font-size: 0.75rem;
   }
 
+  /* Risultati ricerca a larghezza piena */
+  .search-results {
+    right: 0;
+    left: 0;
+    width: auto;
+    border-radius: 0 0 10px 10px;
+  }
+
+  /* Globe container: colonna, il globo prende tutto lo spazio rimanente */
   .globe-container {
     flex-direction: column;
   }
 
+  /* Pannello vuoto nascosto su mobile → il globo occupa tutto */
+  .info-panel--empty {
+    display: none !important;
+  }
+
+  /* Pannello con evento → bottom sheet fisso che sale dal basso */
   .info-panel {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100% !important;
-    height: 45vh;
+    height: 62vh;
     border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-top: 2px solid rgba(168, 200, 255, 0.25);
+    border-radius: 14px 14px 0 0;
+    z-index: 200;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Handle resize nascosto su mobile (inutile su touch) */
+  .info-panel__resize-handle {
+    display: none;
+  }
+
+  /* Grip bar e overlay attivati su mobile */
+  .info-panel__grip {
+    display: block;
+  }
+  .info-panel__overlay {
+    display: block;
+  }
+
+  /* Bottone chiudi più grande (target touch 44px) */
+  .info-panel__icon-btn {
+    font-size: 1.4rem;
+    padding: 6px 10px;
+  }
+
+  /* Controls più compatto */
+  .controls {
+    padding: 8px 12px;
+  }
+
+  /* Filtri: scorrimento orizzontale su una sola riga */
+  .filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+    /* nascondi scrollbar visivamente */
+    scrollbar-width: none;
+  }
+  .filters::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-btn {
+    flex-shrink: 0;
   }
 }
