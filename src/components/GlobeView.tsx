@@ -190,21 +190,20 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
 
     viewerRef.current = viewer;
 
-    // Quando il dispositivo ruota, i touch durante la rotazione fisica vengono
-    // interpretati da Cesium come pinch-zoom, bloccando i controlli touch.
-    // Reset del controller all'orientamento change risolve lo stato bloccato.
+    // Al cambio di orientamento (portrait↔landscape) il browser emette touch event
+    // durante la rotazione fisica che Cesium interpreta come pinch-zoom continuo.
+    // touchcancel è il segnale standard per annullare qualsiasi gesture touch in corso:
+    // Cesium's CameraEventAggregator lo ascolta e resetta lo stato interno.
     let prevLandscape = window.innerWidth > window.innerHeight;
     function onResize() {
       const isLandscape = window.innerWidth > window.innerHeight;
       if (isLandscape === prevLandscape) return;
       prevLandscape = isLandscape;
       if (viewer.isDestroyed()) return;
+      viewer.scene.canvas.dispatchEvent(
+        new TouchEvent('touchcancel', { bubbles: true, cancelable: true })
+      );
       viewer.camera.cancelFlight();
-      viewer.scene.screenSpaceCameraController.enableInputs = false;
-      setTimeout(() => {
-        if (!viewer.isDestroyed())
-          viewer.scene.screenSpaceCameraController.enableInputs = true;
-      }, 400);
     }
     window.addEventListener('resize', onResize);
 
