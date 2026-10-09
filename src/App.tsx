@@ -90,13 +90,13 @@ export function getEra(year: number): { label: string; color: string } {
   if (year < -10_000)        return { label: '🦴 Preistoria umana',     color: '#e74c3c' };
   if (year < 0)              return { label: '📜 Antichità',            color: '#9b59b6' };
   if (year < 500)            return { label: '⚔️ Alto Medioevo',        color: '#3498db' };
-  if (year < 1500)           return { label: '🏰 Basso Medioevo',       color: '#2980b9' };
+  if (year < 1492)           return { label: '🏰 Basso Medioevo',       color: '#2980b9' };
   if (year < 1800)           return { label: '🎨 Età Moderna',          color: '#8e44ad' };
   return                            { label: '⚙️ Età Contemporanea',    color: '#a8c8ff' };
 }
 
 export default function App() {
-  const [sliderValue, setSliderValue]     = useState(yearToSlider(1500));
+  const [sliderValue, setSliderValue]     = useState(yearToSlider(-753));
   const [selectedEvent, setSelectedEvent] = useState<HistoricalEvent | null>(null);
   const [mobileGlobeH, setMobileGlobeH] = useState(40); // vh
   const splitDragRef = useRef<{ startY: number; startH: number } | null>(null);

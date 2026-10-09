@@ -190,7 +190,26 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
 
     viewerRef.current = viewer;
 
+    // Quando il dispositivo ruota, i touch durante la rotazione fisica vengono
+    // interpretati da Cesium come pinch-zoom, bloccando i controlli touch.
+    // Reset del controller all'orientamento change risolve lo stato bloccato.
+    let prevLandscape = window.innerWidth > window.innerHeight;
+    function onResize() {
+      const isLandscape = window.innerWidth > window.innerHeight;
+      if (isLandscape === prevLandscape) return;
+      prevLandscape = isLandscape;
+      if (viewer.isDestroyed()) return;
+      viewer.camera.cancelFlight();
+      viewer.scene.screenSpaceCameraController.enableInputs = false;
+      setTimeout(() => {
+        if (!viewer.isDestroyed())
+          viewer.scene.screenSpaceCameraController.enableInputs = true;
+      }, 400);
+    }
+    window.addEventListener('resize', onResize);
+
     return () => {
+      window.removeEventListener('resize', onResize);
       handler.destroy();
       viewer.destroy();
       viewerRef.current = null;
