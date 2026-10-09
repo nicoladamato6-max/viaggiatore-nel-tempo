@@ -191,64 +191,29 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     viewerRef.current = viewer;
 
     // ── Gestione rotazione dispositivo (portrait↔landscape) ─────────────────
-    // Il problema: durante la rotazione fisica, il browser genera touch event
-    // mentre il sistema di coordinate dello schermo cambia. Cesium li interpreta
-    // come pinch-zoom e accumula velocità interna (inertia). Disabilitare gli
-    // input o inviare touchcancel non azzera l'inertia — la sospende solo.
+    // Su Android i touch event arrivano PRIMA del resize, quindi quando
+    // il resize scatta la posizione camera può già essere corrotta dall'inertia.
+    // setView() in postRender NON basta perché il frame zoom viene già renderizzato
+    // prima che il setView() corregga.
     //
-    // Soluzione: sovrascrivere la posizione camera ogni frame (via postRender)
-    // per 600ms dopo la rotazione. setView() scrive direttamente la matrice
-    // camera e bypassa completamente l'inertia accumulata. L'orientationchange
-    // salva la posizione PRIMA che i touch event la corrompano.
+    // Soluzione: usare i vincoli di zoom di Cesium (minimumZoomDistance /
+    // maximumZoomDistance). Cesium li applica DURANTE il camera update, prima del
+    // rendering. Blocchiamo l'altitudine all'altitudine pre-rotazione per 1s.
+    //
+    // La rolling history (1.2s) ci dà l'altitudine di 600ms fa — prima che
+    // l'utente iniziasse a ruotare il telefono, anche su Android dove i touch
+    // event anticipano il resize di 300-500ms.
+
+    const camHistAlt: { ts: number; alt: number }[] = [];
+    const camHistUnsub = viewer.scene.postRender.addEventListener(() => {
+      const now = Date.now();
+      const alt = viewer.camera.positionCartographic.height;
+      camHistAlt.push({ ts: now, alt });
+      while (camHistAlt.length > 0 && now - camHistAlt[0].ts > 1200) camHistAlt.shift();
+    });
 
     let prevLandscape = window.innerWidth > window.innerHeight;
-    let snapOrientation: {
-      pos: Cesium.Cartesian3; heading: number; pitch: number; roll: number;
-    } | null = null;
-    let stabilizeEndTime = 0;
-    let stabilizeUnsub: (() => void) | null = null;
-    let orientationTimer: ReturnType<typeof setTimeout> | null = null;
-
-    function startStabilize() {
-      if (!snapOrientation || viewer.isDestroyed()) return;
-      const snap = snapOrientation;
-      const ctrl = viewer.scene.screenSpaceCameraController;
-
-      if (stabilizeUnsub) { stabilizeUnsub(); stabilizeUnsub = null; }
-
-      viewer.camera.cancelFlight();
-      ctrl.enableZoom = false;
-      viewer.camera.setView({
-        destination: snap.pos,
-        orientation: { heading: snap.heading, pitch: snap.pitch, roll: snap.roll },
-      });
-
-      stabilizeEndTime = Date.now() + 600;
-      stabilizeUnsub = viewer.scene.postRender.addEventListener(() => {
-        if (viewer.isDestroyed() || Date.now() > stabilizeEndTime) {
-          if (stabilizeUnsub) { stabilizeUnsub(); stabilizeUnsub = null; }
-          if (!viewer.isDestroyed()) ctrl.enableZoom = true;
-          return;
-        }
-        viewer.camera.setView({
-          destination: snap.pos,
-          orientation: { heading: snap.heading, pitch: snap.pitch, roll: snap.roll },
-        });
-      });
-    }
-
-    function onOrientationChange() {
-      if (viewer.isDestroyed()) return;
-      // Salva la posizione PRIMA che i touch event inizino a spostarla
-      snapOrientation = {
-        pos: Cesium.Cartesian3.clone(viewer.camera.positionWC),
-        heading: viewer.camera.heading,
-        pitch: viewer.camera.pitch,
-        roll: viewer.camera.roll,
-      };
-      viewer.camera.cancelFlight();
-      viewer.scene.screenSpaceCameraController.enableZoom = false;
-    }
+    let zoomRestoreTimer: ReturnType<typeof setTimeout> | null = null;
 
     function onResize() {
       const isLandscape = window.innerWidth > window.innerHeight;
@@ -256,7 +221,15 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       prevLandscape = isLandscape;
       if (viewer.isDestroyed()) return;
 
-      if (!snapOrientation) onOrientationChange(); // fallback se orientationchange non è scattato
+      // Altitudine di 600ms fa (pre-rotazione, prima dei touch event Android)
+      const target = Date.now() - 600;
+      const snapAlt = camHistAlt.length === 0
+        ? viewer.camera.positionCartographic.height
+        : camHistAlt.reduce((best, e) =>
+            Math.abs(e.ts - target) < Math.abs(best.ts - target) ? e : best
+          ).alt;
+
+      viewer.camera.cancelFlight();
 
       try {
         viewer.scene.canvas.dispatchEvent(
@@ -264,23 +237,27 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
         );
       } catch { /* browser senza TouchEvent constructor */ }
 
-      // Breve attesa per il resize del DOM, poi avvia la stabilizzazione
-      if (orientationTimer !== null) clearTimeout(orientationTimer);
-      orientationTimer = setTimeout(() => {
-        orientationTimer = null;
-        startStabilize();
-        snapOrientation = null;
-      }, 150);
+      // Blocca lo zoom all'altitudine pre-rotazione per 1s.
+      // Cesium applica minimumZoomDistance PRIMA del rendering — nessun frame zoom visibile.
+      const ctrl = viewer.scene.screenSpaceCameraController;
+      ctrl.minimumZoomDistance = snapAlt * 0.95;
+      ctrl.maximumZoomDistance = snapAlt * 1.05;
+
+      if (zoomRestoreTimer !== null) clearTimeout(zoomRestoreTimer);
+      zoomRestoreTimer = setTimeout(() => {
+        zoomRestoreTimer = null;
+        if (viewer.isDestroyed()) return;
+        ctrl.minimumZoomDistance = 1.0;
+        ctrl.maximumZoomDistance = 1e14;
+      }, 1000);
     }
 
-    window.addEventListener('orientationchange', onOrientationChange);
     window.addEventListener('resize', onResize);
 
     return () => {
-      window.removeEventListener('orientationchange', onOrientationChange);
       window.removeEventListener('resize', onResize);
-      if (orientationTimer !== null) clearTimeout(orientationTimer);
-      if (stabilizeUnsub) { stabilizeUnsub(); stabilizeUnsub = null; }
+      camHistUnsub();
+      if (zoomRestoreTimer !== null) clearTimeout(zoomRestoreTimer);
       handler.destroy();
       viewer.destroy();
       viewerRef.current = null;
