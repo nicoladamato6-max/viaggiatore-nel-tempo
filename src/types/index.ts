@@ -27,7 +27,7 @@ export type FlyTarget =
   | { kind: 'geo';    lat: number; lng: number; ts: number }
   | { kind: 'body';   entityId: string; ts: number }
   | { kind: 'cosmic'; ts: number }
-  | { kind: 'earth';  ts: number };
+  | { kind: 'earth';  ts: number; duration?: number };
 
 export const CATEGORY_LABELS: Record<EventCategory, string> = {
   storia:   'Storia',

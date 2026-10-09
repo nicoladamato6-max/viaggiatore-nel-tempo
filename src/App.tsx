@@ -142,6 +142,12 @@ export default function App() {
     }
   }, []);
 
+  // Posiziona Earth al primo frame — usa flyTo duration:0 (istantaneo)
+  // che cancella qualsiasi animazione interna di Cesium
+  useEffect(() => {
+    setFlyTo({ kind: 'earth', ts: Date.now(), duration: 0 });
+  }, []);
+
   // Transizione cosmo↔Terra gestita qui (non in GlobeView) per controllare
   // il primo mount e garantire che non parta alcuna animazione all'avvio
   const prevIsCosmicRef = useRef<boolean | null>(null);

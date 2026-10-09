@@ -248,7 +248,7 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(10, 20, 12_000_000),
         orientation: { heading: 0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0 },
-        duration: 2.5,
+        duration: flyTo.duration ?? 2.5,
         easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });
       return;
