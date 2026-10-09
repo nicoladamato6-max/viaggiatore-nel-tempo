@@ -69,8 +69,9 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
     });
 
+    // 10 000 km: la Terra occupa ~75% del FOV → ben visibile sin dall'apertura
     viewer.camera.setView({
-      destination: Cesium.Cartesian3.fromDegrees(10, 30, 18_000_000),
+      destination: Cesium.Cartesian3.fromDegrees(10, 30, 10_000_000),
     });
 
     // Tessellazione ridotta per i corpi celesti (default è 64×64 = ~8K tri; qui 16×16 = ~512 tri)
@@ -222,7 +223,7 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       });
     } else {
       viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(10, 30, 18_000_000),
+        destination: Cesium.Cartesian3.fromDegrees(10, 30, 10_000_000),
         duration: 2.5,
         easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });

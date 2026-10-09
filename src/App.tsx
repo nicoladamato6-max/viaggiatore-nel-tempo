@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useRef } from 'react';
 import './App.css';
 import { GlobeView } from './components/GlobeView';
 import { InfoPanel } from './components/InfoPanel';
@@ -98,6 +98,8 @@ export function getEra(year: number): { label: string; color: string } {
 export default function App() {
   const [sliderValue, setSliderValue]     = useState(yearToSlider(1500));
   const [selectedEvent, setSelectedEvent] = useState<HistoricalEvent | null>(null);
+  const [mobileGlobeH, setMobileGlobeH] = useState(40); // vh
+  const splitDragRef = useRef<{ startY: number; startH: number } | null>(null);
   const [flyTo, setFlyTo]                 = useState<FlyTarget | null>(null);
   const [activeCategories, setActiveCategories] = useState<Set<EventCategory>>(
     new Set(['storia', 'arte', 'musica', 'scienza', 'geologia', 'cosmo'])
@@ -140,6 +142,29 @@ export default function App() {
     }
   }, []);
 
+  const onSplitDown = useCallback((e: React.TouchEvent | React.MouseEvent) => {
+    const startY = 'touches' in e ? e.touches[0].clientY : (e as React.MouseEvent).clientY;
+    splitDragRef.current = { startY, startH: mobileGlobeH };
+
+    function move(ev: TouchEvent | MouseEvent) {
+      if (!splitDragRef.current) return;
+      const cy = 'touches' in ev ? (ev as TouchEvent).touches[0].clientY : (ev as MouseEvent).clientY;
+      const deltaVh = ((cy - splitDragRef.current.startY) / window.innerHeight) * 100;
+      setMobileGlobeH(Math.max(15, Math.min(70, splitDragRef.current.startH + deltaVh)));
+    }
+    function up() {
+      splitDragRef.current = null;
+      document.removeEventListener('touchmove', move);
+      document.removeEventListener('touchend', up);
+      document.removeEventListener('mousemove', move);
+      document.removeEventListener('mouseup', up);
+    }
+    document.addEventListener('touchmove', move, { passive: true });
+    document.addEventListener('touchend', up);
+    document.addEventListener('mousemove', move);
+    document.addEventListener('mouseup', up);
+  }, [mobileGlobeH]);
+
   // Click diretto su un'entità nel globo (La telecamera si muove già dentro GlobeView)
   const handleEventClick = useCallback((event: HistoricalEvent) => {
     setSelectedEvent(event);
@@ -157,7 +182,10 @@ export default function App() {
       </header>
 
       <div className={`globe-container${selectedEvent ? ' has-panel' : ''}`}>
-        <div className="globe-wrapper">
+        <div
+          className="globe-wrapper"
+          style={selectedEvent ? { '--mobile-globe-h': `${mobileGlobeH}vh` } as React.CSSProperties : undefined}
+        >
           <GlobeView
             events={visibleEvents}
             isCosmicView={isCosmicView}
@@ -165,6 +193,13 @@ export default function App() {
             onEventClick={handleEventClick}
           />
         </div>
+        {selectedEvent && (
+          <div
+            className="mobile-split-handle"
+            onTouchStart={onSplitDown}
+            onMouseDown={onSplitDown}
+          />
+        )}
         <InfoPanel event={selectedEvent} onClose={() => setSelectedEvent(null)} />
       </div>
 

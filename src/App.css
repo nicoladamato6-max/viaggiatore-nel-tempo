@@ -527,9 +527,9 @@ body {
     display: none !important;
   }
 
-  /* Pannello con evento → split screen: globo 40% in alto, pannello 55% in basso */
+  /* Pannello con evento → split screen: altezza globo controllata da drag handle */
   .globe-container.has-panel .globe-wrapper {
-    flex: 0 0 40vh;
+    flex: 0 0 var(--mobile-globe-h, 40vh);
     min-height: 0;
   }
 
@@ -584,5 +584,33 @@ body {
   }
   .filter-btn {
     flex-shrink: 0;
+  }
+}
+
+/* ── Drag handle per split mobile ── */
+.mobile-split-handle {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-split-handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    flex-shrink: 0;
+    cursor: row-resize;
+    background: rgba(10, 10, 26, 0.97);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    touch-action: none;
+  }
+
+  .mobile-split-handle::after {
+    content: '';
+    width: 36px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 2px;
   }
 }
