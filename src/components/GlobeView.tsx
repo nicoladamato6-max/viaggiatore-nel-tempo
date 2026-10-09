@@ -37,8 +37,9 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
   const viewerRef     = useRef<Cesium.Viewer | null>(null);
   // PointPrimitiveCollection per i pin degli eventi storici — molto più veloce delle Entity
   const pinsRef       = useRef<Cesium.PointPrimitiveCollection | null>(null);
-  const eventsRef     = useRef(events);
-  const onClickRef    = useRef(onEventClick);
+  const eventsRef       = useRef(events);
+  const onClickRef      = useRef(onEventClick);
+  const isFirstMount    = useRef(true);
 
   eventsRef.current  = events;
   onClickRef.current = onEventClick;
@@ -58,6 +59,10 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     // Zoom illimitato: permette di allontanarsi fino al Sistema Solare e oltre
     viewer.scene.screenSpaceCameraController.maximumZoomDistance = 1e14;
 
+    // Illuminazione sempre uniforme — disabilita il ciclo giorno/notte realistico
+    // che renderebbe la Terra nera sul lato notturno all'avvio
+    viewer.scene.globe.enableLighting = false;
+
     // PointPrimitiveCollection per i pin degli eventi storici
     // — removeAll() è O(1) rispetto a N chiamate a removeById() su Entity
     const pins = new Cesium.PointPrimitiveCollection();
@@ -69,9 +74,10 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
     });
 
-    // 10 000 km: la Terra occupa ~75% del FOV → ben visibile sin dall'apertura
+    // Vista iniziale: inquadra Europa/Mediterraneo con Rectangle → Cesium calcola
+    // automaticamente la quota corretta per contenere l'intera area nel FOV
     viewer.camera.setView({
-      destination: Cesium.Cartesian3.fromDegrees(10, 30, 10_000_000),
+      destination: Cesium.Rectangle.fromDegrees(-30, -15, 60, 70),
     });
 
     // Tessellazione ridotta per i corpi celesti (default è 64×64 = ~8K tri; qui 16×16 = ~512 tri)
@@ -214,6 +220,12 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
   useEffect(() => {
     const viewer = viewerRef.current;
     if (!viewer || viewer.isDestroyed()) return;
+
+    // Al primo mount la camera è già posizionata da setView — non animare
+    if (isFirstMount.current) {
+      isFirstMount.current = false;
+      return;
+    }
 
     if (isCosmicView) {
       viewer.camera.flyTo({
