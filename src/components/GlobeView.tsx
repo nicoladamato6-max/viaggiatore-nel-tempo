@@ -37,9 +37,9 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
   const viewerRef     = useRef<Cesium.Viewer | null>(null);
   // PointPrimitiveCollection per i pin degli eventi storici — molto più veloce delle Entity
   const pinsRef       = useRef<Cesium.PointPrimitiveCollection | null>(null);
-  const eventsRef       = useRef(events);
-  const onClickRef      = useRef(onEventClick);
-  const isFirstMount    = useRef(true);
+  const eventsRef           = useRef(events);
+  const onClickRef          = useRef(onEventClick);
+  const prevIsCosmicViewRef = useRef<boolean | null>(null);
 
   eventsRef.current  = events;
   onClickRef.current = onEventClick;
@@ -190,8 +190,9 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     return () => {
       handler.destroy();
       viewer.destroy();
-      viewerRef.current  = null;
-      pinsRef.current    = null;
+      viewerRef.current       = null;
+      pinsRef.current         = null;
+      prevIsCosmicViewRef.current = null; // reset per StrictMode remount
     };
   }, []);
 
@@ -226,11 +227,11 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     const viewer = viewerRef.current;
     if (!viewer || viewer.isDestroyed()) return;
 
-    // Al primo mount la camera è già posizionata da setView — non animare
-    if (isFirstMount.current) {
-      isFirstMount.current = false;
-      return;
-    }
+    const prev = prevIsCosmicViewRef.current;
+    prevIsCosmicViewRef.current = isCosmicView;
+
+    // Al mount (prev === null) o se il valore non è cambiato (StrictMode) non animare
+    if (prev === null || prev === isCosmicView) return;
 
     if (isCosmicView) {
       viewer.camera.flyTo({
