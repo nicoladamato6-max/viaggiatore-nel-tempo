@@ -74,9 +74,7 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
     });
 
-    // Vista iniziale: stessa logica della ricerca geografica (che funziona).
-    // Partiamo dalla prima frame renderizzata così il viewer è stabile,
-    // cancelliamo qualsiasi volo Cesium in corso e partiamo per l'Italia.
+    // Vista iniziale: al primo frame, centra sull'Italia (stesso meccanismo della ricerca).
     viewer.camera.cancelFlight();
     const removeSnap = viewer.scene.postRender.addEventListener(() => {
       removeSnap();
@@ -244,7 +242,7 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(10, 20, 12_000_000),
         orientation: { heading: 0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0 },
-        duration: flyTo.duration ?? 2.5,
+        duration: 2.5,
         easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });
       return;
@@ -252,9 +250,6 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
 
     if (flyTo.kind === 'geo') {
       if (isCosmicView) return;
-      // cancelFlight prima di ogni flyTo geografico: ferma l'animazione iniziale
-      // di Cesium (o qualsiasi altra animazione in corso) prima di partire.
-      viewer.camera.cancelFlight();
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(flyTo.lng, flyTo.lat, 2_500_000),
         duration: 2,

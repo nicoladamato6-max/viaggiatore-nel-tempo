@@ -1,5 +1,4 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
-declare const __BUILD_TIME__: string;
 import './App.css';
 import { GlobeView } from './components/GlobeView';
 import { InfoPanel } from './components/InfoPanel';
@@ -190,9 +189,6 @@ export default function App() {
       <header className="header">
         <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
         <SearchBar events={ALL_SEARCHABLE} onSelect={handleSearchSelect} />
-        <span style={{ fontSize: '0.55rem', color: '#ffffff44', position: 'absolute', top: 4, right: 8 }}>
-          build {__BUILD_TIME__}
-        </span>
       </header>
 
       <div className={`globe-container${selectedEvent ? ' has-panel' : ''}`}>
