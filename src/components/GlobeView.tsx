@@ -24,8 +24,6 @@ const SUN_CARD: HistoricalEvent = {
   imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg/240px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg',
 };
 
-// ID fissi dei corpi celesti (non vengono rimossi quando cambiano gli eventi storici)
-const CELESTIAL_IDS = new Set(['luna', 'sole', ...PLANETS.map(p => `planet-${p.id}`)]);
 
 interface Props {
   events: HistoricalEvent[];
