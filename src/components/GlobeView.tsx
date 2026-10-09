@@ -74,16 +74,22 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
     });
 
-    // Vista iniziale: al primo frame, centra sull'Italia (stesso meccanismo della ricerca).
+    // Vista iniziale: posiziona istantaneamente la camera sull'Italia a quota media,
+    // poi anima un breve avvicinamento. In questo modo la rolling history della camera
+    // non contiene il lungo flyTo dalla posizione default Cesium (29.000km), che
+    // causerebbe vincoli zoom errati se l'utente ruotasse durante quella animazione.
     viewer.camera.cancelFlight();
     const removeSnap = viewer.scene.postRender.addEventListener(() => {
       removeSnap();
       if (viewer.isDestroyed()) return;
-      viewer.camera.cancelFlight();
+      viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(12.5, 41.9, 5_000_000),
+        orientation: { heading: 0.0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0.0 },
+      });
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(12.5, 41.9, 2_500_000),
         orientation: { heading: 0.0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0.0 },
-        duration: 1.5,
+        duration: 0.8,
         easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });
     });
@@ -191,26 +197,16 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     viewerRef.current = viewer;
 
     // ── Gestione rotazione dispositivo (portrait↔landscape) ─────────────────
-    // Su Android i touch event arrivano PRIMA del resize, quindi quando
-    // il resize scatta la posizione camera può già essere corrotta dall'inertia.
-    // setView() in postRender NON basta perché il frame zoom viene già renderizzato
-    // prima che il setView() corregga.
-    //
     // Soluzione: usare i vincoli di zoom di Cesium (minimumZoomDistance /
     // maximumZoomDistance). Cesium li applica DURANTE il camera update, prima del
-    // rendering. Blocchiamo l'altitudine all'altitudine pre-rotazione per 1s.
+    // rendering. Blocchiamo l'altitudine corrente per 1s dopo la rotazione.
     //
-    // La rolling history (1.2s) ci dà l'altitudine di 600ms fa — prima che
-    // l'utente iniziasse a ruotare il telefono, anche su Android dove i touch
-    // event anticipano il resize di 300-500ms.
-
-    const camHistAlt: { ts: number; alt: number }[] = [];
-    const camHistUnsub = viewer.scene.postRender.addEventListener(() => {
-      const now = Date.now();
-      const alt = viewer.camera.positionCartographic.height;
-      camHistAlt.push({ ts: now, alt });
-      while (camHistAlt.length > 0 && now - camHistAlt[0].ts > 1200) camHistAlt.shift();
-    });
+    // NOTA: non usiamo un lookback temporale sull'altitudine perché durante il
+    // flyTo di startup la storia conterrebbe altitudini molto alte (da 5.000km
+    // verso 2.500km), causando vincoli errati se l'utente ruota durante quei 0.8s.
+    // Usiamo invece l'altitudine attuale al momento del resize: se il flyTo è ancora
+    // in corso cancelFlight() lo ferma e l'altitudine corrente è ragionevole;
+    // se il flyTo è già finito l'altitudine è 2.500km.
 
     let prevLandscape = window.innerWidth > window.innerHeight;
     let zoomRestoreTimer: ReturnType<typeof setTimeout> | null = null;
@@ -221,15 +217,10 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       prevLandscape = isLandscape;
       if (viewer.isDestroyed()) return;
 
-      // Altitudine di 600ms fa (pre-rotazione, prima dei touch event Android)
-      const target = Date.now() - 600;
-      const snapAlt = camHistAlt.length === 0
-        ? viewer.camera.positionCartographic.height
-        : camHistAlt.reduce((best, e) =>
-            Math.abs(e.ts - target) < Math.abs(best.ts - target) ? e : best
-          ).alt;
-
+      // Ferma eventuale flyTo in corso (incluso quello di startup), poi legge
+      // l'altitudine corrente — che ora è stabile e non influenzata dal flyTo.
       viewer.camera.cancelFlight();
+      const snapAlt = viewer.camera.positionCartographic.height;
 
       try {
         viewer.scene.canvas.dispatchEvent(
@@ -256,7 +247,6 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
 
     return () => {
       window.removeEventListener('resize', onResize);
-      camHistUnsub();
       if (zoomRestoreTimer !== null) clearTimeout(zoomRestoreTimer);
       handler.destroy();
       viewer.destroy();
