@@ -68,13 +68,10 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     viewer.scene.primitives.add(pins);
     pinsRef.current = pins;
 
-    // Terreno 3D mondiale
+    // Terreno 3D mondiale — NON cancelliamo il volo qui: il terrain load non
+    // genera animazioni camera proprie, ma il cancelFlight spezzerebbe il flyTo iniziale.
     Cesium.createWorldTerrainAsync().then(t => {
-      if (!viewer.isDestroyed()) {
-        viewer.scene.terrainProvider = t;
-        // il terrain load può innescare animazioni interne — le cancelliamo
-        viewer.camera.cancelFlight();
-      }
+      if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
     });
 
     // Vista iniziale: stessa logica della ricerca geografica (che funziona).
@@ -87,6 +84,7 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       viewer.camera.cancelFlight();
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(12.5, 41.9, 2_500_000),
+        orientation: { heading: 0.0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0.0 },
         duration: 1.5,
         easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });
