@@ -13,4 +13,9 @@ const base      = repoName ? `/${repoName}/` : '/';
 export default defineConfig({
   base,
   plugins: [react(), cesium()],
+  // vite-plugin-cesium imposta CESIUM_BASE_URL='/cesium/' (senza il prefisso base).
+  // Lo sovrascriviamo per GitHub Pages dove i file si trovano a /<repo>/cesium/.
+  define: {
+    CESIUM_BASE_URL: JSON.stringify(`${base}cesium/`),
+  },
 });
