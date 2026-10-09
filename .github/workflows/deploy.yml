@@ -40,6 +40,13 @@ jobs:
           # Aggiungi VITE_CESIUM_TOKEN nelle Repository Secrets di GitHub
           VITE_CESIUM_TOKEN: ${{ secrets.VITE_CESIUM_TOKEN }}
 
+      # vite-plugin-cesium non copia i file statici con Vite 8: copiamo manualmente.
+      # Questo garantisce che dist/cesium/Cesium.js esista sempre nel deploy.
+      - name: Copy Cesium static assets to dist
+        run: |
+          mkdir -p dist/cesium
+          cp -r node_modules/cesium/Build/Cesium/. dist/cesium/
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
