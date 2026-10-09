@@ -77,26 +77,13 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       }
     });
 
-    // Centra la camera sulla Terra: prima chiamata sincrona (immediata) + multi-frame
-    // postRender per sovrascrivere qualsiasi animazione interna di Cesium.
-    // lookAt+lookAtTransform(IDENTITY) è più affidabile di setView/flyTo perché
-    // calcola la posizione partendo dal target (superficie) anziché dall'orientamento ENU.
-    const earthCenter = Cesium.Cartesian3.fromDegrees(10, 20);
-    const earthHPR    = new Cesium.HeadingPitchRange(0, -Math.PI / 2, 12_000_000);
-
-    // 1) Posizionamento sincrono: prima che Cesium parta con qualsiasi animazione
-    viewer.camera.lookAt(earthCenter, earthHPR);
-    viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
-
-    // 2) Snap multi-frame: mantiene Earth centrata per i primi 15 frame,
-    //    sovrascrivendo eventuale animazione interna di Cesium (terrain load, home, ecc.)
-    let   snapFrames  = 15;
-    const removeSnap  = viewer.scene.postRender.addEventListener(() => {
-      if (viewer.isDestroyed()) { removeSnap(); return; }
+    // Cesium posiziona già la camera in vista globale sulla Terra di default.
+    // Cancelliamo solo eventuali animazioni interne al primo frame (terrain load, home, ecc.)
+    // senza riposizionare la camera: evita di sovrascrivere la posizione di default corretta.
+    const removeSnap = viewer.scene.postRender.addEventListener(() => {
+      removeSnap();
+      if (viewer.isDestroyed()) return;
       viewer.camera.cancelFlight();
-      viewer.camera.lookAt(earthCenter, earthHPR);
-      viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
-      if (--snapFrames <= 0) removeSnap();
     });
 
     // Tessellazione ridotta per i corpi celesti (default è 64×64 = ~8K tri; qui 16×16 = ~512 tri)
