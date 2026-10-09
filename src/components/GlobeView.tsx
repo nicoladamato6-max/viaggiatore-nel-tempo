@@ -77,13 +77,25 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       }
     });
 
-    // Cesium posiziona già la camera in vista globale sulla Terra di default.
-    // Cancelliamo solo eventuali animazioni interne al primo frame (terrain load, home, ecc.)
-    // senza riposizionare la camera: evita di sovrascrivere la posizione di default corretta.
+    // Vista iniziale: Italia/Mediterraneo a 12 Mm di altitudine, camera puntata verso il basso.
+    // setView usa la convenzione "orientamento della vista" (pitch negativo = guarda in giù),
+    // diversa da HeadingPitchRange di lookAt (pitch positivo = sopra il target).
+    const italyView = {
+      destination: Cesium.Cartesian3.fromDegrees(12.5, 41.9, 12_000_000),
+      orientation: { heading: 0.0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0.0 },
+    };
+
+    // 1) Sincrono: prima di qualsiasi frame renderizzato
+    viewer.camera.setView(italyView);
+
+    // 2) Multi-frame: mantieni la posizione e cancella voli per 10 frame
+    //    in modo da sovrascrivere qualsiasi animazione interna di Cesium.
+    let lockFrames = 10;
     const removeSnap = viewer.scene.postRender.addEventListener(() => {
-      removeSnap();
-      if (viewer.isDestroyed()) return;
+      if (viewer.isDestroyed()) { removeSnap(); return; }
       viewer.camera.cancelFlight();
+      viewer.camera.setView(italyView);
+      if (--lockFrames <= 0) removeSnap();
     });
 
     // Tessellazione ridotta per i corpi celesti (default è 64×64 = ~8K tri; qui 16×16 = ~512 tri)

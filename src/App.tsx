@@ -142,13 +142,6 @@ export default function App() {
     }
   }, []);
 
-  // Vista iniziale: centra la mappa sull'Europa mediterranea usando lo stesso
-  // meccanismo geo flyTo che funziona per la ricerca normale.
-  // Il ts: Date.now() viene usato da GlobeView per rilevare che è un nuovo flyTo.
-  useEffect(() => {
-    setFlyTo({ kind: 'geo', lat: 41.9, lng: 12.5, ts: Date.now() });
-  }, []);
-
   // Transizione cosmo↔Terra gestita qui (non in GlobeView) per controllare
   // il primo mount e garantire che non parta alcuna animazione all'avvio
   const prevIsCosmicRef = useRef<boolean | null>(null);
