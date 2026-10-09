@@ -74,10 +74,15 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
     });
 
-    // Vista iniziale: inquadra Europa/Mediterraneo con Rectangle → Cesium calcola
-    // automaticamente la quota corretta per contenere l'intera area nel FOV
+    // Vista iniziale: camera sopra il globo, puntata verso il basso (pitch -90°)
+    // a 12 000 km → la Terra occupa ~90% del FOV sia in portrait che in landscape
     viewer.camera.setView({
-      destination: Cesium.Rectangle.fromDegrees(-30, -15, 60, 70),
+      destination: Cesium.Cartesian3.fromDegrees(10, 20, 12_000_000),
+      orientation: {
+        heading: 0.0,
+        pitch: -Cesium.Math.PI_OVER_TWO,
+        roll: 0.0,
+      },
     });
 
     // Tessellazione ridotta per i corpi celesti (default è 64×64 = ~8K tri; qui 16×16 = ~512 tri)
@@ -235,7 +240,12 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       });
     } else {
       viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(10, 30, 10_000_000),
+        destination: Cesium.Cartesian3.fromDegrees(10, 20, 12_000_000),
+        orientation: {
+          heading: 0.0,
+          pitch: -Cesium.Math.PI_OVER_TWO,
+          roll: 0.0,
+        },
         duration: 2.5,
         easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });
