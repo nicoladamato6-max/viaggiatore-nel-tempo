@@ -190,52 +190,97 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
 
     viewerRef.current = viewer;
 
-    // Al cambio orientamento (portrait↔landscape) Cesium subisce due effetti
-    // concomitanti: (1) touch event fisici durante la rotazione vengono letti
-    // come pinch-zoom; (2) la canvas ridimensionata forza un aggiustamento del
-    // frustum che può sembrare zoom-in. Soluzione: salva la posizione esatta
-    // della camera prima del cambio, poi la ripristina con setView() dopo che
-    // il layout si è stabilizzato. setView() bypassa l'inertia e sovrascrive
-    // qualsiasi movimento accumulato.
+    // ── Gestione rotazione dispositivo (portrait↔landscape) ─────────────────
+    // Il problema: durante la rotazione fisica, il browser genera touch event
+    // mentre il sistema di coordinate dello schermo cambia. Cesium li interpreta
+    // come pinch-zoom e accumula velocità interna (inertia). Disabilitare gli
+    // input o inviare touchcancel non azzera l'inertia — la sospende solo.
+    //
+    // Soluzione: sovrascrivere la posizione camera ogni frame (via postRender)
+    // per 600ms dopo la rotazione. setView() scrive direttamente la matrice
+    // camera e bypassa completamente l'inertia accumulata. L'orientationchange
+    // salva la posizione PRIMA che i touch event la corrompano.
+
     let prevLandscape = window.innerWidth > window.innerHeight;
-    let orientationRestoreTimer: ReturnType<typeof setTimeout> | null = null;
+    let snapOrientation: {
+      pos: Cesium.Cartesian3; heading: number; pitch: number; roll: number;
+    } | null = null;
+    let stabilizeEndTime = 0;
+    let stabilizeUnsub: (() => void) | null = null;
+    let orientationTimer: ReturnType<typeof setTimeout> | null = null;
+
+    function startStabilize() {
+      if (!snapOrientation || viewer.isDestroyed()) return;
+      const snap = snapOrientation;
+      const ctrl = viewer.scene.screenSpaceCameraController;
+
+      if (stabilizeUnsub) { stabilizeUnsub(); stabilizeUnsub = null; }
+
+      viewer.camera.cancelFlight();
+      ctrl.enableZoom = false;
+      viewer.camera.setView({
+        destination: snap.pos,
+        orientation: { heading: snap.heading, pitch: snap.pitch, roll: snap.roll },
+      });
+
+      stabilizeEndTime = Date.now() + 600;
+      stabilizeUnsub = viewer.scene.postRender.addEventListener(() => {
+        if (viewer.isDestroyed() || Date.now() > stabilizeEndTime) {
+          if (stabilizeUnsub) { stabilizeUnsub(); stabilizeUnsub = null; }
+          if (!viewer.isDestroyed()) ctrl.enableZoom = true;
+          return;
+        }
+        viewer.camera.setView({
+          destination: snap.pos,
+          orientation: { heading: snap.heading, pitch: snap.pitch, roll: snap.roll },
+        });
+      });
+    }
+
+    function onOrientationChange() {
+      if (viewer.isDestroyed()) return;
+      // Salva la posizione PRIMA che i touch event inizino a spostarla
+      snapOrientation = {
+        pos: Cesium.Cartesian3.clone(viewer.camera.positionWC),
+        heading: viewer.camera.heading,
+        pitch: viewer.camera.pitch,
+        roll: viewer.camera.roll,
+      };
+      viewer.camera.cancelFlight();
+      viewer.scene.screenSpaceCameraController.enableZoom = false;
+    }
+
     function onResize() {
       const isLandscape = window.innerWidth > window.innerHeight;
       if (isLandscape === prevLandscape) return;
       prevLandscape = isLandscape;
       if (viewer.isDestroyed()) return;
 
-      // Salva posizione attuale prima che il layout cambi
-      const savedPos     = Cesium.Cartesian3.clone(viewer.camera.positionWC);
-      const savedHeading = viewer.camera.heading;
-      const savedPitch   = viewer.camera.pitch;
-      const savedRoll    = viewer.camera.roll;
+      if (!snapOrientation) onOrientationChange(); // fallback se orientationchange non è scattato
 
-      viewer.camera.cancelFlight();
       try {
         viewer.scene.canvas.dispatchEvent(
           new TouchEvent('touchcancel', { bubbles: true, cancelable: true })
         );
       } catch { /* browser senza TouchEvent constructor */ }
 
-      // Dopo che il layout e il ResizeObserver di Cesium si sono stabilizzati,
-      // ripristina la camera alla posizione pre-rotazione
-      if (orientationRestoreTimer !== null) clearTimeout(orientationRestoreTimer);
-      orientationRestoreTimer = setTimeout(() => {
-        orientationRestoreTimer = null;
-        if (viewer.isDestroyed()) return;
-        viewer.camera.cancelFlight();
-        viewer.camera.setView({
-          destination: savedPos,
-          orientation: { heading: savedHeading, pitch: savedPitch, roll: savedRoll },
-        });
-      }, 500);
+      // Breve attesa per il resize del DOM, poi avvia la stabilizzazione
+      if (orientationTimer !== null) clearTimeout(orientationTimer);
+      orientationTimer = setTimeout(() => {
+        orientationTimer = null;
+        startStabilize();
+        snapOrientation = null;
+      }, 150);
     }
+
+    window.addEventListener('orientationchange', onOrientationChange);
     window.addEventListener('resize', onResize);
 
     return () => {
+      window.removeEventListener('orientationchange', onOrientationChange);
       window.removeEventListener('resize', onResize);
-      if (orientationRestoreTimer !== null) clearTimeout(orientationRestoreTimer);
+      if (orientationTimer !== null) clearTimeout(orientationTimer);
+      if (stabilizeUnsub) { stabilizeUnsub(); stabilizeUnsub = null; }
       handler.destroy();
       viewer.destroy();
       viewerRef.current = null;
