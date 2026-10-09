@@ -475,37 +475,42 @@ body {
     flex-direction: column;
   }
 
-  /* Pannello vuoto nascosto su mobile → il globo occupa tutto */
+  /* Pannello vuoto nascosto su mobile → il globo occupa tutto lo schermo */
   .info-panel--empty {
     display: none !important;
   }
 
-  /* Pannello con evento → bottom sheet fisso che sale dal basso */
-  .info-panel {
-    position: fixed !important;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100% !important;
-    height: 62vh;
-    border-left: none;
-    border-top: 2px solid rgba(168, 200, 255, 0.25);
-    border-radius: 14px 14px 0 0;
-    z-index: 200;
-    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.6);
+  /* Pannello con evento → split screen: globo 40% in alto, pannello 55% in basso */
+  .globe-container.has-panel .globe-wrapper {
+    flex: 0 0 40vh;
+    min-height: 0;
   }
 
-  /* Handle resize nascosto su mobile (inutile su touch) */
+  .info-panel {
+    /* posizione nel normale flusso del documento (non fixed) */
+    position: relative !important;
+    width: 100% !important;
+    height: auto;
+    flex: 1;
+    min-height: 0;
+    border-left: none;
+    border-top: 2px solid rgba(168, 200, 255, 0.2);
+    border-radius: 0;
+    box-shadow: none;
+    z-index: auto;
+  }
+
+  /* Overlay e grip non necessari nello split screen */
+  .info-panel__overlay {
+    display: none !important;
+  }
+  .info-panel__grip {
+    display: none !important;
+  }
+
+  /* Handle resize nascosto su mobile (mouse-only) */
   .info-panel__resize-handle {
     display: none;
-  }
-
-  /* Grip bar e overlay attivati su mobile */
-  .info-panel__grip {
-    display: block;
-  }
-  .info-panel__overlay {
-    display: block;
   }
 
   /* Bottone chiudi più grande (target touch 44px) */
@@ -525,7 +530,6 @@ body {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 2px;
-    /* nascondi scrollbar visivamente */
     scrollbar-width: none;
   }
   .filters::-webkit-scrollbar {

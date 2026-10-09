@@ -156,7 +156,7 @@ export default function App() {
         <SearchBar events={ALL_SEARCHABLE} onSelect={handleSearchSelect} />
       </header>
 
-      <div className="globe-container">
+      <div className={`globe-container${selectedEvent ? ' has-panel' : ''}`}>
         <div className="globe-wrapper">
           <GlobeView
             events={visibleEvents}
