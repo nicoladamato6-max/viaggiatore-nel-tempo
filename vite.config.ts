@@ -17,5 +17,6 @@ export default defineConfig({
   // Lo sovrascriviamo per GitHub Pages dove i file si trovano a /<repo>/cesium/.
   define: {
     CESIUM_BASE_URL: JSON.stringify(`${base}cesium/`),
+    __BUILD_TIME__:  JSON.stringify(new Date().toISOString().slice(0, 16).replace('T', ' ')),
   },
 });
