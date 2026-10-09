@@ -74,23 +74,19 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
     });
 
-    // Vista iniziale: posiziona istantaneamente la camera sull'Italia a quota media,
-    // poi anima un breve avvicinamento. In questo modo la rolling history della camera
-    // non contiene il lungo flyTo dalla posizione default Cesium (29.000km), che
-    // causerebbe vincoli zoom errati se l'utente ruotasse durante quella animazione.
+    // Vista iniziale: posiziona istantaneamente la camera sull'Italia.
+    // NON usare flyTo: se l'utente ruota il telefono prima che il primo postRender
+    // scatti, onResize chiama cancelFlight() ma non c'è nulla da cancellare; poi
+    // postRender parte e avvia il flyTo già in modalità portrait → zoom-in visibile.
+    // Con solo setView non c'è animazione e quindi nessuna race condition possibile.
     viewer.camera.cancelFlight();
     const removeSnap = viewer.scene.postRender.addEventListener(() => {
       removeSnap();
       if (viewer.isDestroyed()) return;
+      viewer.camera.cancelFlight();
       viewer.camera.setView({
-        destination: Cesium.Cartesian3.fromDegrees(12.5, 41.9, 5_000_000),
-        orientation: { heading: 0.0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0.0 },
-      });
-      viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(12.5, 41.9, 2_500_000),
         orientation: { heading: 0.0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0.0 },
-        duration: 0.8,
-        easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });
     });
 
