@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo, useRef } from 'react';
+import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import './App.css';
 import { GlobeView } from './components/GlobeView';
 import { InfoPanel } from './components/InfoPanel';
@@ -141,6 +141,16 @@ export default function App() {
       setFlyTo({ kind: 'geo', lat: event.lat, lng: event.lng, ts: Date.now() });
     }
   }, []);
+
+  // Transizione cosmo↔Terra gestita qui (non in GlobeView) per controllare
+  // il primo mount e garantire che non parta alcuna animazione all'avvio
+  const prevIsCosmicRef = useRef<boolean | null>(null);
+  useEffect(() => {
+    const prev = prevIsCosmicRef.current;
+    prevIsCosmicRef.current = isCosmicView;
+    if (prev === null || prev === isCosmicView) return; // mount iniziale o StrictMode
+    setFlyTo({ kind: isCosmicView ? 'cosmic' : 'earth', ts: Date.now() });
+  }, [isCosmicView]);
 
   const onSplitDown = useCallback((e: React.TouchEvent | React.MouseEvent) => {
     const startY = 'touches' in e ? e.touches[0].clientY : (e as React.MouseEvent).clientY;

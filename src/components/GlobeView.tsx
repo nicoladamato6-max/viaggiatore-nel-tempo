@@ -37,9 +37,8 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
   const viewerRef     = useRef<Cesium.Viewer | null>(null);
   // PointPrimitiveCollection per i pin degli eventi storici — molto più veloce delle Entity
   const pinsRef       = useRef<Cesium.PointPrimitiveCollection | null>(null);
-  const eventsRef           = useRef(events);
-  const onClickRef          = useRef(onEventClick);
-  const prevIsCosmicViewRef = useRef<boolean | null>(null);
+  const eventsRef  = useRef(events);
+  const onClickRef = useRef(onEventClick);
 
   eventsRef.current  = events;
   onClickRef.current = onEventClick;
@@ -200,9 +199,8 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     return () => {
       handler.destroy();
       viewer.destroy();
-      viewerRef.current       = null;
-      pinsRef.current         = null;
-      prevIsCosmicViewRef.current = null; // reset per StrictMode remount
+      viewerRef.current = null;
+      pinsRef.current   = null;
     };
   }, []);
 
@@ -232,44 +230,29 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     }
   }, [events, isCosmicView]);
 
-  // ── Transizione cosmo ↔ Terra ────────────────────────────────────────────
+  // ── FlyTo da ricerca o selezione ─────────────────────────────────────────
   useEffect(() => {
     const viewer = viewerRef.current;
-    if (!viewer || viewer.isDestroyed()) return;
+    if (!flyTo || !viewer || viewer.isDestroyed()) return;
 
-    const prev = prevIsCosmicViewRef.current;
-    prevIsCosmicViewRef.current = isCosmicView;
-
-    // Al mount (prev === null) o se il valore non è cambiato (StrictMode) non animare
-    if (prev === null || prev === isCosmicView) {
-      viewer.camera.cancelFlight();
-      return;
-    }
-
-    if (isCosmicView) {
+    if (flyTo.kind === 'cosmic') {
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(0, 0, 8_000_000_000),
         duration: 3,
         easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });
-    } else {
+      return;
+    }
+
+    if (flyTo.kind === 'earth') {
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(10, 20, 12_000_000),
-        orientation: {
-          heading: 0.0,
-          pitch: -Cesium.Math.PI_OVER_TWO,
-          roll: 0.0,
-        },
+        orientation: { heading: 0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0 },
         duration: 2.5,
         easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });
+      return;
     }
-  }, [isCosmicView]);
-
-  // ── FlyTo da ricerca o selezione ─────────────────────────────────────────
-  useEffect(() => {
-    const viewer = viewerRef.current;
-    if (!flyTo || !viewer || viewer.isDestroyed()) return;
 
     if (flyTo.kind === 'geo') {
       if (isCosmicView) return;

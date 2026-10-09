@@ -22,10 +22,12 @@ export const CATEGORY_COLORS: Record<EventCategory, string> = {
   cosmo:    '#1abc9c',
 };
 
-/** Target per la telecamera: coordinata geografica o corpo celeste. */
+/** Target per la telecamera: coordinata geografica, corpo celeste, o transizione cosmo↔Terra. */
 export type FlyTarget =
-  | { kind: 'geo';  lat: number; lng: number; ts: number }
-  | { kind: 'body'; entityId: string; ts: number };   // entityId = 'luna' | 'sole' | 'planet-{id}'
+  | { kind: 'geo';    lat: number; lng: number; ts: number }
+  | { kind: 'body';   entityId: string; ts: number }
+  | { kind: 'cosmic'; ts: number }
+  | { kind: 'earth';  ts: number };
 
 export const CATEGORY_LABELS: Record<EventCategory, string> = {
   storia:   'Storia',
