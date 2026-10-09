@@ -199,20 +199,20 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     if (import.meta.env.DEV) (window as unknown as Record<string, unknown>).__cesiumViewer = viewer;
 
     // ── Gestione rotazione dispositivo (portrait↔landscape) ─────────────────
-    // Causa del bug: quando il canvas diventa più alto (landscape→portrait senza
-    // pannello info), la Terra sembra più grande a causa del FOV verticale fisso
-    // di Cesium — non è la camera che si avvicina, è l'aspect ratio che cambia.
-    // Con pannello info visible (dopo una ricerca), il canvas è limitato a 40vh
-    // quindi il cambio è piccolo e l'effetto impercettibile: per questo il bug
-    // si manifesta solo all'avvio (senza pannello = canvas molto più alto).
+    // Causa del bug: durante la rotazione fisica, le dita/palmo toccano il
+    // touchscreen e Cesium accumula velocità di zoom nel ScreenSpaceCameraController
+    // (SSCC). Quando la rotazione finisce, l'inerzia continua ad avvicinare la
+    // camera per 1-2 secondi ("continuo e lento").
     //
-    // Soluzione: compensare il cambio di altezza del canvas regolando l'altitudine
-    // camera proporzionalmente. Se il canvas diventa 2.75× più alto, la camera
-    // arretra di 2.75×: la Terra appare della stessa dimensione visiva.
-    // I vincoli zoom bloccano poi l'inerzia del controller per 1.5s.
+    // Fix principale: impostare temporaneamente ctrl.inertiaZoom = 0, che forza
+    // la velocità accumulata a decadere a zero al frame successivo.
+    //
+    // Fix secondario: compensare il cambio di aspect ratio del canvas. Il canvas
+    // diventa 2-3× più alto in portrait senza pannello info (effetto FOV fisso
+    // di Cesium → Terra appare più grande). Con pannello info (dopo ricerca) il
+    // canvas è limitato a 40vh e l'effetto è quasi impercettibile.
 
-    // Altezza canvas al momento dell'ultimo cambio di orientamento (o all'avvio)
-    let prevCanvasH = viewer.scene.canvas.clientHeight;
+    let prevContainerH = containerRef.current!.clientHeight || window.innerHeight;
     let prevLandscape = window.innerWidth > window.innerHeight;
     let zoomRestoreTimer: ReturnType<typeof setTimeout> | null = null;
 
@@ -222,58 +222,53 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       prevLandscape = isLandscape;
       if (viewer.isDestroyed()) return;
 
-      // Ferma il flyTo (incluso quello di startup) e acquisisce stato camera
-      // PRIMA che l'inerzia del controller possa spostare ulteriormente la camera.
       viewer.camera.cancelFlight();
-      const oldH  = prevCanvasH;
-      const snapLng = Cesium.Math.toDegrees(viewer.camera.positionCartographic.longitude);
-      const snapLat = Cesium.Math.toDegrees(viewer.camera.positionCartographic.latitude);
-      const snapAlt = viewer.camera.positionCartographic.height;
-      const snapH   = viewer.camera.heading;
-      const snapP   = viewer.camera.pitch;
-      const snapR   = viewer.camera.roll;
 
-      // Attendi 50ms: il browser completa il reflow CSS prima che leggiamo
-      // clientHeight del canvas (che riflette la nuova altezza in portrait/landscape).
-      setTimeout(() => {
+      // Azzera i gesti touch in corso
+      try {
+        viewer.scene.canvas.dispatchEvent(
+          new TouchEvent('touchcancel', { bubbles: true, cancelable: true })
+        );
+      } catch { /* browser senza TouchEvent constructor */ }
+
+      // FIX PRINCIPALE: inertiaZoom = 0 costringe la velocità di zoom
+      // accumulata durante la rotazione fisica a decadere a zero nel frame
+      // successivo, eliminando lo zoom-in "continuo e lento".
+      const ctrl = viewer.scene.screenSpaceCameraController;
+      const origInertiaZoom = ctrl.inertiaZoom;
+      ctrl.inertiaZoom = 0;
+
+      // FIX SECONDARIO: compensazione aspect ratio canvas.
+      // accessing clientHeight forza un reflow CSS sincrono → valore aggiornato.
+      const oldH = prevContainerH;
+      const newH = containerRef.current?.clientHeight ?? 0;
+      if (newH > 0) prevContainerH = newH;
+
+      const cart  = viewer.camera.positionCartographic;
+      const ratio = oldH > 0 && newH > 0 ? newH / oldH : 1;
+      const correctedAlt = Math.max(1_000, cart.height * ratio);
+
+      viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(
+          Cesium.Math.toDegrees(cart.longitude),
+          Cesium.Math.toDegrees(cart.latitude),
+          correctedAlt
+        ),
+        orientation: { heading: viewer.camera.heading, pitch: viewer.camera.pitch, roll: viewer.camera.roll },
+      });
+
+      // Blocca lo zoom per 800ms mentre l'inerzia finisce di decadere a zero
+      ctrl.minimumZoomDistance = correctedAlt * 0.95;
+      ctrl.maximumZoomDistance = correctedAlt * 1.05;
+
+      if (zoomRestoreTimer !== null) clearTimeout(zoomRestoreTimer);
+      zoomRestoreTimer = setTimeout(() => {
+        zoomRestoreTimer = null;
         if (viewer.isDestroyed()) return;
-
-        const newH = viewer.scene.canvas.clientHeight;
-        prevCanvasH = newH;
-
-        // Il canvas è diventato più alto (landscape→portrait) o più basso (portrait→landscape).
-        // Aggiustiamo l'altitudine camera in proporzione: così la Terra mantiene
-        // la stessa dimensione apparente sullo schermo dopo la rotazione.
-        const ratio = oldH > 0 && newH > 0 ? newH / oldH : 1;
-        const correctedAlt = Math.max(1_000, snapAlt * ratio);
-
-        // Azzera gli eventuali gesti touch accumulati durante la rotazione fisica
-        try {
-          viewer.scene.canvas.dispatchEvent(
-            new TouchEvent('touchcancel', { bubbles: true, cancelable: true })
-          );
-        } catch { /* browser senza TouchEvent constructor */ }
-
-        // Sposta la camera all'altitudine compensata (istantaneo, preserva lat/lng/orientamento)
-        viewer.camera.setView({
-          destination: Cesium.Cartesian3.fromDegrees(snapLng, snapLat, correctedAlt),
-          orientation: { heading: snapH, pitch: snapP, roll: snapR },
-        });
-
-        // Vincola lo zoom all'altitudine corretta per 1.5s per smorzare
-        // l'inerzia residua del ScreenSpaceCameraController.
-        const ctrl = viewer.scene.screenSpaceCameraController;
-        ctrl.minimumZoomDistance = correctedAlt * 0.9;
-        ctrl.maximumZoomDistance = correctedAlt * 1.1;
-
-        if (zoomRestoreTimer !== null) clearTimeout(zoomRestoreTimer);
-        zoomRestoreTimer = setTimeout(() => {
-          zoomRestoreTimer = null;
-          if (viewer.isDestroyed()) return;
-          ctrl.minimumZoomDistance = 1.0;
-          ctrl.maximumZoomDistance = 1e14;
-        }, 1500);
-      }, 50);
+        ctrl.minimumZoomDistance = 1.0;
+        ctrl.maximumZoomDistance = 1e14;
+        ctrl.inertiaZoom = origInertiaZoom; // ripristina inerzia normale
+      }, 800);
     }
 
     window.addEventListener('resize', onResize);
