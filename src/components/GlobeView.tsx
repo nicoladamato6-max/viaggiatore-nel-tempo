@@ -71,18 +71,28 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
 
     // Terreno 3D mondiale
     Cesium.createWorldTerrainAsync().then(t => {
-      if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
+      if (!viewer.isDestroyed()) {
+        viewer.scene.terrainProvider = t;
+        // il terrain load può innescare animazioni interne — le cancelliamo
+        viewer.camera.cancelFlight();
+      }
     });
 
-    // Vista iniziale: camera sopra il globo, puntata verso il basso (pitch -90°)
-    // a 12 000 km → la Terra occupa ~90% del FOV sia in portrait che in landscape
-    viewer.camera.setView({
-      destination: Cesium.Cartesian3.fromDegrees(10, 20, 12_000_000),
-      orientation: {
-        heading: 0.0,
-        pitch: -Cesium.Math.PI_OVER_TWO,
-        roll: 0.0,
-      },
+    // Posiziona la camera al primo frame renderizzato da Cesium.
+    // Usare postRender (anziché setView nel useEffect) garantisce che qualsiasi
+    // animazione interna di Cesium sia già finita prima che noi la sovrascriviamo.
+    const removePostRender = viewer.scene.postRender.addEventListener(() => {
+      removePostRender(); // one-shot: rimuove se stesso dopo il primo frame
+      if (viewer.isDestroyed()) return;
+      viewer.camera.cancelFlight();
+      viewer.camera.setView({
+        destination: Cesium.Cartesian3.fromDegrees(10, 20, 12_000_000),
+        orientation: {
+          heading: 0.0,
+          pitch: -Cesium.Math.PI_OVER_TWO,
+          roll: 0.0,
+        },
+      });
     });
 
     // Tessellazione ridotta per i corpi celesti (default è 64×64 = ~8K tri; qui 16×16 = ~512 tri)
@@ -231,7 +241,10 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     prevIsCosmicViewRef.current = isCosmicView;
 
     // Al mount (prev === null) o se il valore non è cambiato (StrictMode) non animare
-    if (prev === null || prev === isCosmicView) return;
+    if (prev === null || prev === isCosmicView) {
+      viewer.camera.cancelFlight();
+      return;
+    }
 
     if (isCosmicView) {
       viewer.camera.flyTo({
