@@ -303,21 +303,67 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-/* area iframe — si espande per occupare tutto lo spazio disponibile */
-.info-panel__frame-wrap {
+/* ── contenitore scrollabile (meta + Wikipedia + footer) ── */
+.info-panel__scroll {
   flex: 1;
   min-height: 0;
-  position: relative;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* wrapper del corpo Wikipedia inline */
+.info-panel__wiki-wrap {
   background: #fff;
 }
 
-.info-panel__wiki-frame {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+/* ── Corpo Wikipedia (inline, no iframe) ── */
+.wiki-body {
+  font-family: -apple-system, 'Linux Libertine', Georgia, serif;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #202122;
+  padding: 10px 14px 24px;
+  background: #fff;
 }
+.wiki-body h1 { font-size: 1.7em; font-weight: normal; border-bottom: 1px solid #a2a9b1; padding-bottom: .2em; margin: .5em 0 .4em; }
+.wiki-body h2 { font-size: 1.2em; font-weight: normal; border-bottom: 1px solid #a2a9b1; padding-bottom: .1em; margin: 1.4em 0 .4em; }
+.wiki-body h3 { font-size: 1em; margin: 1em 0 .3em; }
+.wiki-body p  { margin: .5em 0; }
+.wiki-body a  { color: #3366cc; text-decoration: none; }
+.wiki-body a:hover { text-decoration: underline; }
+.wiki-body img { max-width: 100%; height: auto; display: block; }
+.wiki-body .thumb {
+  float: right; clear: right; margin: 0 0 10px 12px;
+  background: #f8f9fa; border: 1px solid #a2a9b1; padding: 3px;
+  max-width: 45%;
+}
+.wiki-body .thumb img { display: block; max-width: 100%; }
+.wiki-body .thumbcaption { font-size: .78em; color: #54595d; margin-top: 3px; }
+.wiki-body .infobox {
+  float: right; clear: right; margin: 0 0 10px 14px;
+  background: #f8f9fa; border: 1px solid #a2a9b1; font-size: .83em;
+  padding: 4px; max-width: 260px;
+}
+.wiki-body .infobox td, .wiki-body .infobox th { padding: 2px 5px; vertical-align: top; }
+.wiki-body .infobox-title, .wiki-body .infobox-header { background: #cee0f2; text-align: center; font-weight: bold; padding: 4px; }
+.wiki-body table { border-collapse: collapse; margin: .8em 0; font-size: .88em; max-width: 100%; }
+.wiki-body td, .wiki-body th { padding: 3px 7px; border: 1px solid #a2a9b1; vertical-align: top; }
+.wiki-body th { background: #eaecf0; font-weight: 600; }
+.wiki-body #toc, .wiki-body .toc {
+  background: #f8f9fa; border: 1px solid #a2a9b1;
+  padding: 7px 12px 9px; display: table;
+  margin: 0 0 16px; font-size: .88em; min-width: 160px;
+}
+.wiki-body .toctitle h2 { font-size: 1em; border: none; margin: 0 0 4px; padding: 0; font-weight: bold; }
+.wiki-body .toctogglespan { display: none; }
+.wiki-body #toc ul, .wiki-body .toc ul { margin: 0; padding-left: 18px; list-style: decimal; }
+.wiki-body #toc li, .wiki-body .toc li { margin: 2px 0; }
+.wiki-body .mw-editsection, .wiki-body .mw-jump-link,
+.wiki-body .navbox, .wiki-body .ambox, .wiki-body .sistersitebox,
+.wiki-body .noprint, .wiki-body .mw-cite-backlink { display: none !important; }
+.wiki-body sup.reference { font-size: .72em; }
+.wiki-body ol.references { font-size: .83em; color: #555; }
 
 .info-panel__loading {
   display: flex;
@@ -342,12 +388,13 @@ body {
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* footer: link apri in nuova scheda */
+/* footer: link apri in nuova scheda (dentro lo scroll) */
 .info-panel__footer {
-  flex-shrink: 0;
   padding: 10px 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   background: rgba(8, 8, 22, 0.98);
+  position: sticky;
+  bottom: 0;
 }
 
 .info-panel__wiki-btn {

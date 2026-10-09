@@ -3,11 +3,9 @@ import { type HistoricalEvent, CATEGORY_COLORS, CATEGORY_LABELS } from '../types
 
 const MIN_W     = 280;
 const DEFAULT_W = 340;
-const maxWidth  = () => window.innerWidth - 80;  // lascia almeno 80 px al globo
+const maxWidth  = () => window.innerWidth - 80;
 
 // ── Fetch pagina Wikipedia completa via Action API (include TOC) ─────────────
-// Usa /w/api.php?action=parse che restituisce HTML identico a Wikipedia.org,
-// incluso il sommario (TOC) generato da MediaWiki.
 async function fetchWikiPage(slug: string, lang: string) {
   const params = new URLSearchParams({
     action: 'parse', page: slug, prop: 'text',
@@ -21,18 +19,20 @@ async function fetchWikiPage(slug: string, lang: string) {
     html:  data.parse.text['*'] as string,
     title: data.parse.title    as string,
     url:   `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(data.parse.title as string)}`,
+    base:  `https://${lang}.wikipedia.org`,
   };
 }
 
-function useWikiHtml(slug: string | undefined) {
-  const [srcdoc,  setSrcdoc]  = useState<string | null>(null);
+function useWikiContent(slug: string | undefined) {
+  const [body,    setBody]    = useState<string | null>(null);
   const [wikiUrl, setWikiUrl] = useState<string>('');
+  const [wikiBase, setWikiBase] = useState<string>('https://it.wikipedia.org');
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (!slug) { setSrcdoc(null); setWikiUrl(''); return; }
+    if (!slug) { setBody(null); setWikiUrl(''); return; }
     let cancelled = false;
-    setSrcdoc(null);
+    setBody(null);
     setLoading(true);
 
     (async () => {
@@ -40,7 +40,8 @@ function useWikiHtml(slug: string | undefined) {
         const page = await fetchWikiPage(slug, lang);
         if (page && !cancelled) {
           setWikiUrl(page.url);
-          setSrcdoc(buildDoc(page.html, `https://${lang}.wikipedia.org`));
+          setWikiBase(page.base);
+          setBody(page.html);
           break;
         }
       }
@@ -50,78 +51,29 @@ function useWikiHtml(slug: string | undefined) {
     return () => { cancelled = true; };
   }, [slug]);
 
-  return { srcdoc, wikiUrl, loading };
+  return { body, wikiUrl, wikiBase, loading };
 }
 
-function buildDoc(body: string, base: string): string {
-  return `<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<base href="${base}/">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<style>
-  html,body{margin:0;padding:0;background:#fff;
-    font-family:-apple-system,'Linux Libertine',Georgia,serif;
-    font-size:13.5px;line-height:1.7;color:#202122;}
-  body{padding:12px 18px 32px;}
+// Fix percorsi relativi di immagini e link dopo il render inline
+function fixWikiPaths(root: HTMLElement, base: string) {
+  root.querySelectorAll<HTMLImageElement>('img[src]').forEach(img => {
+    const src = img.getAttribute('src') ?? '';
+    if (src.startsWith('//'))  img.src = `https:${src}`;
+    else if (src.startsWith('/')) img.src = `${base}${src}`;
 
-  /* Tipografia */
-  h1{font-size:1.9em;font-weight:normal;border-bottom:1px solid #a2a9b1;
-    padding-bottom:.2em;margin:.6em 0 .4em;}
-  h2{font-size:1.3em;font-weight:normal;border-bottom:1px solid #a2a9b1;
-    padding-bottom:.1em;margin:1.5em 0 .5em;}
-  h3{font-size:1.07em;margin:1.2em 0 .4em;}
-  h4,h5{font-size:1em;margin:.9em 0 .3em;}
-  p{margin:.5em 0;}
-  a{color:#3366cc;text-decoration:none;}
-  a:hover{text-decoration:underline;}
+    const ss = img.getAttribute('srcset') ?? '';
+    if (ss) img.setAttribute('srcset', ss.replace(/\/\//g, 'https://'));
+  });
 
-  /* Immagini e figure */
-  img{max-width:100%;height:auto;}
-  .thumb{float:right;clear:right;margin:0 0 12px 14px;
-    background:#f8f9fa;border:1px solid #a2a9b1;padding:4px;}
-  .thumb img{display:block;}
-  .thumbcaption{font-size:.8em;color:#54595d;margin-top:4px;text-align:center;}
-  .thumbinner{font-size:.9em;}
-
-  /* Infobox */
-  .infobox{float:right;clear:right;margin:0 0 12px 16px;
-    background:#f8f9fa;border:1px solid #a2a9b1;font-size:.85em;
-    padding:4px;max-width:280px;}
-  .infobox td,.infobox th{padding:3px 6px;vertical-align:top;}
-  .infobox-title,.infobox-header{background:#cee0f2;text-align:center;
-    font-weight:bold;padding:5px;}
-
-  /* Tabelle */
-  table{border-collapse:collapse;margin:1em 0;font-size:.9em;max-width:100%;}
-  td,th{padding:4px 8px;border:1px solid #a2a9b1;vertical-align:top;}
-  th{background:#eaecf0;font-weight:600;}
-  tr:nth-child(even) td{background:#f8f9fa;}
-
-  /* Sommario (TOC) */
-  #toc,.toc{
-    background:#f8f9fa;border:1px solid #a2a9b1;
-    padding:8px 14px 10px;display:table;
-    margin:0 0 18px 0;font-size:.9em;min-width:180px;}
-  .toctitle h2{font-size:1em;border:none;margin:0 0 5px;padding:0;font-weight:bold;}
-  .toctogglespan{display:none;}
-  #toc ul,.toc ul{margin:0;padding-left:20px;list-style:decimal;}
-  #toc li,.toc li{margin:2px 0;}
-  #toc a,.toc a{color:#3366cc;}
-
-  /* Nascondi elementi non utili */
-  .mw-editsection,.mw-jump-link,.mw-references-wrap .reflist,
-  .navbox,.ambox,.sistersitebox,.noprint,
-  .mw-cite-backlink{display:none!important;}
-
-  /* Note e riferimenti */
-  sup.reference{font-size:.75em;}
-  ol.references{font-size:.85em;color:#555;}
-</style>
-</head>
-<body>${body}</body>
-</html>`;
+  root.querySelectorAll<HTMLAnchorElement>('a[href]').forEach(a => {
+    const href = a.getAttribute('href') ?? '';
+    if (href.startsWith('//'))       a.href = `https:${href}`;
+    else if (href.startsWith('/'))   a.href = `${base}${href}`;
+    if (!href.startsWith('#')) {
+      a.target = '_blank';
+      a.rel    = 'noopener noreferrer';
+    }
+  });
 }
 
 function formatYear(year: number): string {
@@ -139,30 +91,35 @@ interface Props {
 
 export function InfoPanel({ event, onClose }: Props) {
   const [width, setWidth] = useState(DEFAULT_W);
-  const panelRef  = useRef<HTMLDivElement>(null);
-  const dragging  = useRef(false);
-  const startX    = useRef(0);
-  const startW    = useRef(0);
+  const panelRef   = useRef<HTMLDivElement>(null);
+  const wikiBodyRef = useRef<HTMLDivElement>(null);
+  const dragging   = useRef(false);
+  const startX     = useRef(0);
+  const startW     = useRef(0);
 
-  const { srcdoc, wikiUrl, loading } = useWikiHtml(event?.wikipediaSlug);
+  const { body, wikiUrl, wikiBase, loading } = useWikiContent(event?.wikipediaSlug);
 
-  // ── resize handle ────────────────────────────────────────────────────────
+  // Fix percorsi Wikipedia dopo ogni render del corpo
+  useEffect(() => {
+    if (body && wikiBodyRef.current) {
+      fixWikiPaths(wikiBodyRef.current, wikiBase);
+    }
+  }, [body, wikiBase]);
+
+  // ── resize handle (desktop) ──────────────────────────────────────────────
   function onHandleMouseDown(e: React.MouseEvent) {
     e.preventDefault();
     dragging.current = true;
     startX.current   = e.clientX;
     startW.current   = panelRef.current?.offsetWidth ?? width;
-
-    document.body.style.cursor    = 'col-resize';
+    document.body.style.cursor     = 'col-resize';
     document.body.style.userSelect = 'none';
 
     function onMove(ev: MouseEvent) {
       if (!dragging.current) return;
-      // trascinando a sinistra → pannello cresce
       const delta = startX.current - ev.clientX;
       setWidth(Math.min(maxWidth(), Math.max(MIN_W, startW.current + delta)));
     }
-
     function onUp() {
       dragging.current = false;
       document.body.style.cursor     = '';
@@ -170,12 +127,10 @@ export function InfoPanel({ event, onClose }: Props) {
       document.removeEventListener('mousemove', onMove);
       document.removeEventListener('mouseup',   onUp);
     }
-
     document.addEventListener('mousemove', onMove);
     document.addEventListener('mouseup',   onUp);
   }
 
-  // Doppio clic sul handle → torna alla larghezza di default
   function onHandleDblClick() { setWidth(DEFAULT_W); }
 
   // ── placeholder quando nessun evento ────────────────────────────────────
@@ -197,24 +152,17 @@ export function InfoPanel({ event, onClose }: Props) {
   const color = CATEGORY_COLORS[event.category];
 
   return (
-    <>
-      {/* overlay mobile: tap fuori dal pannello per chiuderlo */}
-      <div className="info-panel__overlay" onClick={onClose} />
+    <div ref={panelRef} className="info-panel" style={{ width }}>
 
-      <div ref={panelRef} className="info-panel" style={{ width }}>
+      {/* resize handle (desktop) */}
+      <div
+        className="info-panel__resize-handle"
+        onMouseDown={onHandleMouseDown}
+        onDoubleClick={onHandleDblClick}
+        title="Trascina per ridimensionare"
+      />
 
-        {/* grip bar (mobile) */}
-        <div className="info-panel__grip" />
-
-        {/* ── resize handle (bordo sinistro trascinabile, desktop) ── */}
-        <div
-          className="info-panel__resize-handle"
-          onMouseDown={onHandleMouseDown}
-          onDoubleClick={onHandleDblClick}
-          title="Trascina per ridimensionare · doppio clic per resettare"
-        />
-
-      {/* ── intestazione ── */}
+      {/* intestazione */}
       <div className="info-panel__header">
         <span
           className="category-badge"
@@ -222,53 +170,56 @@ export function InfoPanel({ event, onClose }: Props) {
         >
           {CATEGORY_LABELS[event.category]}
         </span>
-        <button className="info-panel__icon-btn" onClick={onClose} aria-label="Chiudi" title="Chiudi">×</button>
+        <button className="info-panel__icon-btn" onClick={onClose} aria-label="Chiudi">×</button>
       </div>
 
-      {/* ── dati evento ── */}
-      <div className="info-panel__meta">
-        <h2 className="info-panel__title">{event.title}</h2>
-        <div className="info-panel__year">{formatYear(event.year)}</div>
-        <p className="info-panel__desc">{event.description}</p>
-      </div>
+      {/* dati evento + Wikipedia — tutto in un unico contenitore scrollabile */}
+      <div className="info-panel__scroll">
 
-      {/* ── separatore ── */}
-      <div className="info-panel__divider"><span>Wikipedia</span></div>
+        {/* meta */}
+        <div className="info-panel__meta">
+          <h2 className="info-panel__title">{event.title}</h2>
+          <div className="info-panel__year">{formatYear(event.year)}</div>
+          <p className="info-panel__desc">{event.description}</p>
+        </div>
 
-      {/* ── iframe Wikipedia ── */}
-      <div className="info-panel__frame-wrap">
-        {loading && (
-          <div className="info-panel__loading">
-            <span className="info-panel__spinner" /> Caricamento Wikipedia…
-          </div>
-        )}
-        {!loading && srcdoc && (
-          <iframe
-            srcDoc={srcdoc}
-            className="info-panel__wiki-frame"
-            title={`Wikipedia: ${event.title}`}
-            sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-          />
-        )}
-        {!loading && !srcdoc && (
-          <p style={{ fontSize: '0.72rem', color: '#44445a', padding: '12px 14px' }}>
-            Articolo Wikipedia non disponibile.
-          </p>
-        )}
-      </div>
+        {/* separatore */}
+        <div className="info-panel__divider"><span>Wikipedia</span></div>
 
-      {/* ── footer ── */}
-      <div className="info-panel__footer">
-        <a
-          href={wikiUrl || `https://it.wikipedia.org/wiki/${event.wikipediaSlug}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="info-panel__wiki-btn"
-        >
-          📖 Apri Wikipedia in una nuova scheda →
-        </a>
-      </div>
+        {/* corpo Wikipedia inline (no iframe) */}
+        <div className="info-panel__wiki-wrap">
+          {loading && (
+            <div className="info-panel__loading">
+              <span className="info-panel__spinner" /> Caricamento Wikipedia…
+            </div>
+          )}
+          {!loading && body && (
+            <div
+              ref={wikiBodyRef}
+              className="wiki-body"
+              dangerouslySetInnerHTML={{ __html: body }}
+            />
+          )}
+          {!loading && !body && (
+            <p style={{ fontSize: '0.72rem', color: '#888', padding: '12px 14px' }}>
+              Articolo Wikipedia non disponibile.
+            </p>
+          )}
+        </div>
+
+        {/* footer */}
+        <div className="info-panel__footer">
+          <a
+            href={wikiUrl || `https://it.wikipedia.org/wiki/${event.wikipediaSlug}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="info-panel__wiki-btn"
+          >
+            Apri Wikipedia in una nuova scheda
+          </a>
+        </div>
+
+      </div>{/* fine info-panel__scroll */}
     </div>
-    </>
   );
 }
