@@ -31,16 +31,23 @@ const BODY_IDS = new Set(['luna', 'sole', ...PLANETS.map(p => `planet-${p.id}`)]
 // Tutto ciò che è cercabile nella SearchBar
 const ALL_SEARCHABLE = [...ALL_EVENTS, MOON_SEARCH, SUN_SEARCH, ...PLANET_SEARCH_ITEMS];
 
-// ── Scala piecewise: 38% dello slider = 5000 anni di storia scritta ──────────
+// ── Scala piecewise ridistribuita per densità informativa ────────────────────
+// Ogni macro-era storica ottiene spazio proporzionale ai suoi eventi, non alla durata.
+// Età Moderna (297 anni) = 8%, Età Contemporanea (236 anni) = 20% (era prima 2.2%/1.8%).
+// I breakpoint coincidono con i confini delle macro-ere per allineare track CSS e Gantt.
 const BP = [
   { s: 0,    y: -13_800_000_000 },  // Big Bang
-  { s: 150,  y: -4_600_000_000 },   // Formazione Sistema Solare
-  { s: 350,  y: -541_000_000 },     // Esplosione Cambriana
-  { s: 450,  y: -66_000_000 },      // Fine dei dinosauri
-  { s: 500,  y: -300_000 },         // Homo Sapiens
-  { s: 560,  y: -10_000 },          // Prime civiltà
-  { s: 620,  y: -3_000 },           // Storia scritta
-  { s: 1000, y: 2025 },             // Oggi
+  { s: 100,  y:  -4_600_000_000 },  // Formazione Sistema Solare
+  { s: 250,  y:    -541_000_000 },  // Esplosione Cambriana
+  { s: 330,  y:     -66_000_000 },  // Fine dei dinosauri
+  { s: 400,  y:      -2_500_000 },  // Preistoria (Homo)
+  { s: 480,  y:        -300_000 },  // Homo Sapiens
+  { s: 520,  y:         -10_000 },  // Prime civiltà
+  { s: 560,  y:          -3_500 },  // Età Antica
+  { s: 640,  y:             476 },  // Medioevo
+  { s: 720,  y:            1492 },  // Età Moderna
+  { s: 800,  y:            1789 },  // Età Contemporanea
+  { s: 1000, y:            2025 },  // Oggi
 ] as const;
 
 function sliderToYear(v: number): number {

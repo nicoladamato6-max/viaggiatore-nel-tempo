@@ -120,9 +120,10 @@ body {
 }
 
 /*
-  Gradient stops calcolati con la scala piecewise del progetto (slider 0-1000):
-  0%=Big Bang  15%=-4.6B  35%=-541M  41.1%=-252M  45%=-66M
-  49.8%=-2.5M  61.6%=-3500  88.3%=476  96%=1492  98.2%=1789  100%=oggi
+  Gradient stops calcolati sui nuovi BP (slider 0-1000, scala ridistribuita):
+  0%=Big Bang  10%=-4.6B  25%=-541M  ~30%=-252M  33%=-66M
+  40%=-2.5M  56%=-3500  64%=476  72%=1492  80%=1789  100%=oggi
+  -252M (Era Mesozoica): tra s:250 e s:330, t=0.608 → s≈298.7 → 29.9%
 */
 .slider-track-bg {
   position: absolute;
@@ -133,16 +134,16 @@ body {
   border-radius: 3px;
   pointer-events: none;
   background: linear-gradient(to right,
-    #1abc9c 0%    15%,
-    #27ae60 15%   35%,
-    #2ecc71 35%   41.1%,
-    #f39c12 41.1% 45%,
-    #e67e22 45%   49.8%,
-    #e74c3c 49.8% 61.6%,
-    #9b59b6 61.6% 88.3%,
-    #2980b9 88.3% 96%,
-    #8e44ad 96%   98.2%,
-    #a8c8ff 98.2% 100%
+    #1abc9c 0%    10%,
+    #27ae60 10%   25%,
+    #2ecc71 25%   29.9%,
+    #f39c12 29.9% 33%,
+    #e67e22 33%   40%,
+    #e74c3c 40%   56%,
+    #9b59b6 56%   64%,
+    #2980b9 64%   72%,
+    #8e44ad 72%   80%,
+    #a8c8ff 80%  100%
   );
 }
 
