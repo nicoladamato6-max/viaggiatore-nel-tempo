@@ -6,6 +6,11 @@ const DEFAULT_W = 340;
 const maxWidth  = () => window.innerWidth - 80;
 
 // ── Fetch pagina Wikipedia completa via Action API (include TOC) ─────────────
+// Le chiamate partono dal browser dell'utente (non da un proxy server):
+// ogni utente usa il suo IP → limite 5 req/sec per utente (non condiviso).
+// Un proxy server condividerebbe un solo IP per tutti gli utenti → rate limit
+// immediato con traffico reale, più costi Wikimedia Enterprise (>$0).
+// Mantenere browser-side è gratis e scalabile senza limiti di MAU.
 async function fetchWikiPage(slug: string, lang: string) {
   const params = new URLSearchParams({
     action: 'parse', page: slug, prop: 'text',
@@ -217,6 +222,12 @@ export function InfoPanel({ event, onClose }: Props) {
           >
             Apri Wikipedia in una nuova scheda
           </a>
+          <span className="info-panel__license">
+            Testo da{' '}
+            <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+            {', '}licenza{' '}
+            <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>
+          </span>
         </div>
 
       </div>{/* fine info-panel__scroll */}

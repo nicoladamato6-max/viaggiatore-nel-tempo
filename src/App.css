@@ -592,6 +592,21 @@ body {
   background: rgba(168, 200, 255, 0.18);
 }
 
+.info-panel__license {
+  display: block;
+  text-align: center;
+  margin-top: 6px;
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+.info-panel__license a {
+  color: rgba(168, 200, 255, 0.55);
+  text-decoration: underline;
+}
+.info-panel__license a:hover {
+  color: rgba(168, 200, 255, 0.85);
+}
+
 /* ── Tooltip sul globo ── */
 .globe-tooltip {
   background: rgba(10, 10, 30, 0.92);

@@ -3,7 +3,9 @@ import * as Cesium from 'cesium';
 import { type HistoricalEvent, type FlyTarget, CATEGORY_COLORS } from '../types';
 import { PLANETS, getMoonPosition, getPlanetPosition, toPlanetCard } from '../utils/celestialMechanics';
 
-Cesium.Ion.defaultAccessToken = import.meta.env.VITE_CESIUM_TOKEN;
+// MapTiler fornisce terrain quantized-mesh e imagery satellite compatibili con Cesium.
+// Nessun token Ion richiesto: zero costi di licenza Cesium Ion per uso commerciale.
+const MAPTILER_KEY: string = import.meta.env.VITE_MAPTILER_KEY ?? '';
 
 const SUN_RADIUS = 696_000_000;
 const SUN_DIST   = 149_600_000_000;
@@ -68,11 +70,22 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     viewer.scene.primitives.add(pins);
     pinsRef.current = pins;
 
-    // Terreno 3D mondiale — NON cancelliamo il volo qui: il terrain load non
-    // genera animazioni camera proprie, ma il cancelFlight spezzerebbe il flyTo iniziale.
-    Cesium.createWorldTerrainAsync().then(t => {
+    // Imagery satellite MapTiler — sostituisce il layer Ion di default
+    viewer.imageryLayers.removeAll();
+    viewer.imageryLayers.addImageryProvider(
+      new Cesium.UrlTemplateImageryProvider({
+        url: `https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=${MAPTILER_KEY}`,
+        credit: '© MapTiler © OpenStreetMap contributors',
+        maximumLevel: 20,
+      })
+    );
+
+    // Terreno 3D MapTiler quantized-mesh (formato Cesium-compatibile)
+    Cesium.CesiumTerrainProvider.fromUrl(
+      `https://api.maptiler.com/tiles/terrain-quantized-mesh-v2/?key=${MAPTILER_KEY}`
+    ).then(t => {
       if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
-    });
+    }).catch(() => { /* terrain opzionale: fallback all'ellissoide */ });
 
     // Vista iniziale: posiziona istantaneamente la camera sull'Italia.
     // NON usare flyTo: se l'utente ruota il telefono prima che il primo postRender

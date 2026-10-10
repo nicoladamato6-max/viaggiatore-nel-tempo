@@ -1,25 +1,13 @@
-name: Deploy to GitHub Pages
+name: Deploy to Cloudflare Pages
 
 on:
   push:
     branches: [main]
   workflow_dispatch:          # permette lancio manuale dalla UI di GitHub
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
@@ -37,8 +25,8 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Aggiungi VITE_CESIUM_TOKEN nelle Repository Secrets di GitHub
-          VITE_CESIUM_TOKEN: ${{ secrets.VITE_CESIUM_TOKEN }}
+          # Aggiungi VITE_MAPTILER_KEY nelle Repository Secrets di GitHub
+          VITE_MAPTILER_KEY: ${{ secrets.VITE_MAPTILER_KEY }}
 
       # vite-plugin-cesium non copia i file statici con Vite 8: copiamo manualmente.
       # Questo garantisce che dist/cesium/Cesium.js esista sempre nel deploy.
@@ -47,11 +35,11 @@ jobs:
           mkdir -p dist/cesium
           cp -r node_modules/cesium/Build/Cesium/. dist/cesium/
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
         with:
-          path: dist
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: viaggiatore-nel-tempo
+          directory: dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
