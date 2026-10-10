@@ -83,15 +83,15 @@ export function formatYear(year: number): string {
 }
 
 export function getEra(year: number): { label: string; color: string } {
-  if (year < -4_500_000_000) return { label: '🌌 Universo primordiale', color: '#1abc9c' };
-  if (year < -500_000_000)   return { label: '🌍 Terra preistorica',    color: '#27ae60' };
-  if (year < -66_000_000)    return { label: '🦕 Era dei dinosauri',    color: '#f39c12' };
-  if (year < -300_000)       return { label: '🦎 Era dei mammiferi',    color: '#e67e22' };
-  if (year < -10_000)        return { label: '🦴 Preistoria umana',     color: '#e74c3c' };
-  if (year < 0)              return { label: '📜 Antichità',            color: '#9b59b6' };
-  if (year < 500)            return { label: '⚔️ Alto Medioevo',        color: '#3498db' };
-  if (year < 1492)           return { label: '🏰 Basso Medioevo',       color: '#2980b9' };
-  if (year < 1800)           return { label: '🎨 Età Moderna',          color: '#8e44ad' };
+  if (year < -4_600_000_000) return { label: '🌌 Universo primordiale', color: '#1abc9c' };
+  if (year < -541_000_000)   return { label: '🌍 Terra primordiale',    color: '#27ae60' };
+  if (year < -252_000_000)   return { label: '🐟 Era Paleozoica',       color: '#2ecc71' };
+  if (year < -66_000_000)    return { label: '🦕 Era Mesozoica',        color: '#f39c12' };
+  if (year < -2_500_000)     return { label: '🦎 Era Cenozoica',        color: '#e67e22' };
+  if (year < -3_500)         return { label: '🦴 Preistoria',           color: '#e74c3c' };
+  if (year < 476)            return { label: '📜 Età Antica',           color: '#9b59b6' };
+  if (year < 1492)           return { label: '🏰 Medioevo',             color: '#2980b9' };
+  if (year < 1789)           return { label: '🎨 Età Moderna',          color: '#8e44ad' };
   return                            { label: '⚙️ Età Contemporanea',    color: '#a8c8ff' };
 }
 

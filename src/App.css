@@ -59,6 +59,7 @@ body {
 
 /* ── Pannello controlli (basso) ── */
 .controls {
+  position: relative; /* necessario per il Gantt assoluto che fuoriesce in alto */
   background: rgba(10, 10, 26, 0.92);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 12px 16px;
@@ -89,6 +90,7 @@ body {
 
 /* ── Slider del tempo ── */
 .time-slider {
+  position: relative; /* necessario per il Gantt in posizione assoluta */
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -97,7 +99,7 @@ body {
 .time-label {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   font-size: 0.75rem;
   color: #8888aa;
 }
@@ -109,11 +111,184 @@ body {
   letter-spacing: 0.05em;
 }
 
+/* ── Track colorato (era bands) ── */
+.slider-track-wrap {
+  position: relative;
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/*
+  Gradient stops calcolati con la scala piecewise del progetto (slider 0-1000):
+  0%=Big Bang  15%=-4.6B  35%=-541M  41.1%=-252M  45%=-66M
+  49.8%=-2.5M  61.6%=-3500  88.3%=476  96%=1492  98.2%=1789  100%=oggi
+*/
+.slider-track-bg {
+  position: absolute;
+  inset: 0;
+  height: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 3px;
+  pointer-events: none;
+  background: linear-gradient(to right,
+    #1abc9c 0%    15%,
+    #27ae60 15%   35%,
+    #2ecc71 35%   41.1%,
+    #f39c12 41.1% 45%,
+    #e67e22 45%   49.8%,
+    #e74c3c 49.8% 61.6%,
+    #9b59b6 61.6% 88.3%,
+    #2980b9 88.3% 96%,
+    #8e44ad 96%   98.2%,
+    #a8c8ff 98.2% 100%
+  );
+}
+
 .slider-input {
+  -webkit-appearance: none;
+  appearance: none;
   width: 100%;
-  accent-color: #ffd166;
+  height: 20px;
+  background: transparent;
   cursor: pointer;
-  height: 4px;
+  position: relative;
+  margin: 0;
+}
+
+.slider-input::-webkit-slider-runnable-track {
+  height: 6px;
+  background: transparent;
+  border-radius: 3px;
+}
+
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffd166;
+  cursor: pointer;
+  margin-top: -7px;
+  box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.25);
+}
+
+.slider-input::-moz-range-track {
+  height: 6px;
+  background: transparent;
+  border-radius: 3px;
+}
+
+.slider-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffd166;
+  border: none;
+  cursor: pointer;
+}
+
+/* ── Tag sottocategorie storiche (sempre visibili) ── */
+.subera-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 260px;
+  margin-top: 1px;
+}
+
+.subera-tag {
+  font-size: 0.58rem;
+  font-weight: 500;
+  padding: 1px 6px;
+  border-radius: 8px;
+  border: 1px solid;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.subera-tag--more {
+  color: #44445a !important;
+  border-color: #33334a !important;
+}
+
+/* ── Gantt tooltip (compare durante lo scroll) ── */
+.epoch-gantt {
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: -16px;
+  right: -16px;
+  z-index: 20;
+  background: rgba(6, 6, 18, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.05);
+  padding: 8px 16px 10px;
+  border-radius: 10px 10px 0 0;
+  backdrop-filter: blur(10px);
+}
+
+.epoch-gantt__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  gap: 8px;
+}
+
+.epoch-gantt__era-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.epoch-gantt__axis-ends {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  font-size: 0.58rem;
+  color: #44445a;
+}
+
+.epoch-gantt__bars {
+  position: relative;
+  width: 100%;
+}
+
+.epoch-gantt__bar {
+  position: absolute;
+  height: 14px;
+  border-radius: 3px;
+  font-size: 7.5px;
+  line-height: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0 4px;
+  min-width: 2px;
+  transition: opacity 0.15s;
+}
+
+.epoch-gantt__bar--active {
+  outline: 1px solid rgba(255, 255, 255, 0.55);
+  outline-offset: 0px;
+  z-index: 1;
+}
+
+.epoch-gantt__cursor {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  width: 2px;
+  background: #ffd166;
+  transform: translateX(-50%);
+  z-index: 2;
+  border-radius: 1px;
+  box-shadow: 0 0 4px rgba(255, 209, 102, 0.6);
 }
 
 /* ── Filtri categoria ── */
@@ -570,6 +745,13 @@ body {
   /* Controls più compatto */
   .controls {
     padding: 8px 12px;
+  }
+
+  /* Gantt: compensazione padding mobile */
+  .epoch-gantt {
+    left: -12px;
+    right: -12px;
+    padding: 7px 12px 8px;
   }
 
   /* Filtri: scorrimento orizzontale su una sola riga */
