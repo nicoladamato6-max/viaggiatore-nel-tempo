@@ -35,9 +35,17 @@ jobs:
           mkdir -p dist/cesium
           cp -r node_modules/cesium/Build/Cesium/. dist/cesium/
 
+      - name: Create Cloudflare Pages project (prima esecuzione)
+        uses: cloudflare/wrangler-action@v3
+        continue-on-error: true
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create viaggiatore-nel-tempo --production-branch main
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name viaggiatore-nel-tempo
+          command: pages deploy dist --project-name viaggiatore-nel-tempo --commit-dirty=true
