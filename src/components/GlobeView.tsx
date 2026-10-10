@@ -79,6 +79,11 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     // scatti, onResize chiama cancelFlight() ma non c'è nulla da cancellare; poi
     // postRender parte e avvia il flyTo già in modalità portrait → zoom-in visibile.
     // Con solo setView non c'è animazione e quindi nessuna race condition possibile.
+    //
+    // prevCanvasH viene impostato DENTRO il postRender (dopo il primo render di Cesium),
+    // così è garantito avere il valore corretto prima che l'utente possa ruotare il
+    // telefono (il display richiede almeno un frame per essere visibile).
+    let prevCanvasH = 0;
     viewer.camera.cancelFlight();
     const removeSnap = viewer.scene.postRender.addEventListener(() => {
       removeSnap();
@@ -88,6 +93,7 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
         destination: Cesium.Cartesian3.fromDegrees(12.5, 41.9, 2_500_000),
         orientation: { heading: 0.0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0.0 },
       });
+      prevCanvasH = viewer.scene.canvas.clientHeight; // altezza canvas nel primo orientamento
     });
 
     // Tessellazione ridotta per i corpi celesti (default è 64×64 = ~8K tri; qui 16×16 = ~512 tri)
@@ -195,22 +201,19 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     if (import.meta.env.DEV) (window as unknown as Record<string, unknown>).__cesiumViewer = viewer;
 
     // ── Gestione rotazione dispositivo (portrait↔landscape) ─────────────────
-    // Causa del bug: durante la rotazione fisica, le dita/palmo toccano il
-    // touchscreen e Cesium accumula velocità di zoom nel ScreenSpaceCameraController
-    // (SSCC). Quando la rotazione finisce, l'inerzia continua ad avvicinare la
-    // camera per 1-2 secondi ("continuo e lento").
+    // ── Gestione rotazione dispositivo (portrait↔landscape) ─────────────────
+    // Il canvas Cesium diventa 2-3× più alto in portrait senza pannello info.
+    // Il FOV verticale di Cesium è fisso → la Terra appare molto più grande.
+    // Compensazione: spostiamo la camera proporzionalmente più lontano in modo
+    // che la Terra mantenga la stessa dimensione apparente.
     //
-    // Fix principale: impostare temporaneamente ctrl.inertiaZoom = 0, che forza
-    // la velocità accumulata a decadere a zero al frame successivo.
-    //
-    // Fix secondario: compensare il cambio di aspect ratio del canvas. Il canvas
-    // diventa 2-3× più alto in portrait senza pannello info (effetto FOV fisso
-    // di Cesium → Terra appare più grande). Con pannello info (dopo ricerca) il
-    // canvas è limitato a 40vh e l'effetto è quasi impercettibile.
+    // prevCanvasH è impostato nel postRender (garanzia: Cesium ha già renderizzato,
+    // valore corretto). newH è letto in requestAnimationFrame dopo il resize, per
+    // attendere il reflow CSS (necessario su iOS dove il resize può precedere il reflow).
 
-    let prevContainerH = containerRef.current!.clientHeight || window.innerHeight;
     let prevLandscape = window.innerWidth > window.innerHeight;
     let zoomRestoreTimer: ReturnType<typeof setTimeout> | null = null;
+    const origInertiaZoom = viewer.scene.screenSpaceCameraController.inertiaZoom;
 
     function onResize() {
       const isLandscape = window.innerWidth > window.innerHeight;
@@ -220,51 +223,45 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
 
       viewer.camera.cancelFlight();
 
-      // Azzera i gesti touch in corso
-      try {
-        viewer.scene.canvas.dispatchEvent(
-          new TouchEvent('touchcancel', { bubbles: true, cancelable: true })
-        );
-      } catch { /* browser senza TouchEvent constructor */ }
-
-      // FIX PRINCIPALE: inertiaZoom = 0 costringe la velocità di zoom
-      // accumulata durante la rotazione fisica a decadere a zero nel frame
-      // successivo, eliminando lo zoom-in "continuo e lento".
       const ctrl = viewer.scene.screenSpaceCameraController;
-      const origInertiaZoom = ctrl.inertiaZoom;
-      ctrl.inertiaZoom = 0;
+      ctrl.inertiaZoom = 0; // cancella qualsiasi inerzia residua
 
-      // FIX SECONDARIO: compensazione aspect ratio canvas.
-      // accessing clientHeight forza un reflow CSS sincrono → valore aggiornato.
-      const oldH = prevContainerH;
-      const newH = containerRef.current?.clientHeight ?? 0;
-      if (newH > 0) prevContainerH = newH;
+      // Snapshot camera PRIMA del requestAnimationFrame (valori stabili nel closure)
+      const oldH    = prevCanvasH;
+      const snapAlt = viewer.camera.positionCartographic.height;
+      const snapLng = Cesium.Math.toDegrees(viewer.camera.positionCartographic.longitude);
+      const snapLat = Cesium.Math.toDegrees(viewer.camera.positionCartographic.latitude);
+      const snapH   = viewer.camera.heading;
+      const snapP   = viewer.camera.pitch;
+      const snapR   = viewer.camera.roll;
 
-      const cart  = viewer.camera.positionCartographic;
-      const ratio = oldH > 0 && newH > 0 ? newH / oldH : 1;
-      const correctedAlt = Math.max(1_000, cart.height * ratio);
-
-      viewer.camera.setView({
-        destination: Cesium.Cartesian3.fromDegrees(
-          Cesium.Math.toDegrees(cart.longitude),
-          Cesium.Math.toDegrees(cart.latitude),
-          correctedAlt
-        ),
-        orientation: { heading: viewer.camera.heading, pitch: viewer.camera.pitch, roll: viewer.camera.roll },
-      });
-
-      // Blocca lo zoom per 800ms mentre l'inerzia finisce di decadere a zero
-      ctrl.minimumZoomDistance = correctedAlt * 0.95;
-      ctrl.maximumZoomDistance = correctedAlt * 1.05;
-
-      if (zoomRestoreTimer !== null) clearTimeout(zoomRestoreTimer);
-      zoomRestoreTimer = setTimeout(() => {
-        zoomRestoreTimer = null;
+      // rAF: il browser ha completato il reflow CSS, canvas.clientHeight è aggiornato
+      requestAnimationFrame(() => {
         if (viewer.isDestroyed()) return;
-        ctrl.minimumZoomDistance = 1.0;
-        ctrl.maximumZoomDistance = 1e14;
-        ctrl.inertiaZoom = origInertiaZoom; // ripristina inerzia normale
-      }, 800);
+        const newH = viewer.scene.canvas.clientHeight;
+        if (newH > 0) prevCanvasH = newH;
+
+        if (oldH <= 0 || newH <= 0) return;
+        const ratio = newH / oldH;
+        const correctedAlt = Math.max(1_000, snapAlt * ratio);
+
+        viewer.camera.setView({
+          destination: Cesium.Cartesian3.fromDegrees(snapLng, snapLat, correctedAlt),
+          orientation: { heading: snapH, pitch: snapP, roll: snapR },
+        });
+
+        ctrl.minimumZoomDistance = correctedAlt * 0.95;
+        ctrl.maximumZoomDistance = correctedAlt * 1.05;
+
+        if (zoomRestoreTimer !== null) clearTimeout(zoomRestoreTimer);
+        zoomRestoreTimer = setTimeout(() => {
+          zoomRestoreTimer = null;
+          if (viewer.isDestroyed()) return;
+          ctrl.minimumZoomDistance = 1.0;
+          ctrl.maximumZoomDistance = 1e14;
+          ctrl.inertiaZoom = origInertiaZoom;
+        }, 800);
+      });
     }
 
     window.addEventListener('resize', onResize);

@@ -54,6 +54,7 @@ body {
   flex: 1;
   position: relative;
   min-width: 0;
+  min-height: 0; /* impedisce al canvas Cesium di espandere il flex container oltre l'altezza disponibile */
 }
 
 /* ── Pannello controlli (basso) ── */
