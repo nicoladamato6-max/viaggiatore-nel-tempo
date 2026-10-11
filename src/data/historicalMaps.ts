@@ -1,7 +1,7 @@
 // Mappe politiche storiche da dataset accademici open-source:
-// - aourednik/historical-basemaps (GeoJSON validati per 3000 a.C.–1994)
+// - aourednik/historical-basemaps (GeoJSON validati, ~54 snapshot da 123.000 a.C. al 2010)
 // - datasets/geo-countries (Natural Earth, confini attuali)
-// Geometrie reali ricercate — molto più accurate dei poligoni a mano.
+// Nomi file verificati sull'API GitHub: world_bc<N>.geojson e world_<N>.geojson
 
 export interface HistoricalMap {
   year: number;   // anno di riferimento della mappa (negativo = a.C.)
@@ -12,34 +12,70 @@ export interface HistoricalMap {
 const GH = 'https://raw.githubusercontent.com/aourednik/historical-basemaps/master/geojson/';
 
 export const HISTORICAL_MAPS: HistoricalMap[] = [
-  { year: -3000, label: '3000 a.C.', url: `${GH}world_3000bc.geojson` },
-  { year: -2000, label: '2000 a.C.', url: `${GH}world_2000bc.geojson` },
-  { year: -1500, label: '1500 a.C.', url: `${GH}world_1500bc.geojson` },
-  { year: -1000, label: '1000 a.C.', url: `${GH}world_1000bc.geojson` },
-  { year:  -500, label:  '500 a.C.', url: `${GH}world_500bc.geojson`  },
-  { year:     1, label:    '1 d.C.', url: `${GH}world_1ad.geojson`    },
-  { year:   500, label:  '500 d.C.', url: `${GH}world_500ad.geojson`  },
-  { year:  1000, label: '1000 d.C.', url: `${GH}world_1000ad.geojson` },
-  { year:  1279, label: '1279 d.C.', url: `${GH}world_1279ad.geojson` },
-  { year:  1492, label: '1492 d.C.', url: `${GH}world_1492ad.geojson` },
-  { year:  1530, label: '1530 d.C.', url: `${GH}world_1530ad.geojson` },
-  { year:  1650, label: '1650 d.C.', url: `${GH}world_1650ad.geojson` },
-  { year:  1783, label: '1783 d.C.', url: `${GH}world_1783ad.geojson` },
-  { year:  1815, label: '1815 d.C.', url: `${GH}world_1815ad.geojson` },
-  { year:  1880, label: '1880 d.C.', url: `${GH}world_1880ad.geojson` },
-  { year:  1914, label: '1914 d.C.', url: `${GH}world_1914ad.geojson` },
-  { year:  1920, label: '1920 d.C.', url: `${GH}world_1920ad.geojson` },
-  { year:  1938, label: '1938 d.C.', url: `${GH}world_1938ad.geojson` },
-  { year:  1945, label: '1945 d.C.', url: `${GH}world_1945ad.geojson` },
-  { year:  1960, label: '1960 d.C.', url: `${GH}world_1960ad.geojson` },
-  { year:  1994, label: '1994 d.C.', url: `${GH}world_1994ad.geojson` },
+  // Preistoria / Prima della scrittura
+  { year: -123000, label: '123.000 a.C.', url: `${GH}world_bc123000.geojson` },
+  { year:  -10000, label:  '10.000 a.C.', url: `${GH}world_bc10000.geojson`  },
+  { year:   -8000, label:   '8.000 a.C.', url: `${GH}world_bc8000.geojson`   },
+  { year:   -5000, label:   '5.000 a.C.', url: `${GH}world_bc5000.geojson`   },
+  { year:   -4000, label:   '4.000 a.C.', url: `${GH}world_bc4000.geojson`   },
+  // Antichità
+  { year:   -3000, label:   '3.000 a.C.', url: `${GH}world_bc3000.geojson`   },
+  { year:   -2000, label:   '2.000 a.C.', url: `${GH}world_bc2000.geojson`   },
+  { year:   -1500, label:   '1.500 a.C.', url: `${GH}world_bc1500.geojson`   },
+  { year:   -1000, label:   '1.000 a.C.', url: `${GH}world_bc1000.geojson`   },
+  { year:    -700, label:     '700 a.C.', url: `${GH}world_bc700.geojson`    },
+  { year:    -500, label:     '500 a.C.', url: `${GH}world_bc500.geojson`    },
+  { year:    -400, label:     '400 a.C.', url: `${GH}world_bc400.geojson`    },
+  { year:    -323, label:     '323 a.C.', url: `${GH}world_bc323.geojson`    },
+  { year:    -300, label:     '300 a.C.', url: `${GH}world_bc300.geojson`    },
+  { year:    -200, label:     '200 a.C.', url: `${GH}world_bc200.geojson`    },
+  { year:    -100, label:     '100 a.C.', url: `${GH}world_bc100.geojson`    },
+  { year:      -1, label:       '1 a.C.', url: `${GH}world_bc1.geojson`      },
+  // Epoca imperiale e medievale
+  { year:     100, label:     '100 d.C.', url: `${GH}world_100.geojson`      },
+  { year:     200, label:     '200 d.C.', url: `${GH}world_200.geojson`      },
+  { year:     300, label:     '300 d.C.', url: `${GH}world_300.geojson`      },
+  { year:     400, label:     '400 d.C.', url: `${GH}world_400.geojson`      },
+  { year:     500, label:     '500 d.C.', url: `${GH}world_500.geojson`      },
+  { year:     600, label:     '600 d.C.', url: `${GH}world_600.geojson`      },
+  { year:     700, label:     '700 d.C.', url: `${GH}world_700.geojson`      },
+  { year:     800, label:     '800 d.C.', url: `${GH}world_800.geojson`      },
+  { year:     900, label:     '900 d.C.', url: `${GH}world_900.geojson`      },
+  { year:    1000, label:   '1.000 d.C.', url: `${GH}world_1000.geojson`     },
+  { year:    1100, label:   '1.100 d.C.', url: `${GH}world_1100.geojson`     },
+  { year:    1200, label:   '1.200 d.C.', url: `${GH}world_1200.geojson`     },
+  { year:    1279, label:   '1.279 d.C.', url: `${GH}world_1279.geojson`     },
+  { year:    1300, label:   '1.300 d.C.', url: `${GH}world_1300.geojson`     },
+  { year:    1400, label:   '1.400 d.C.', url: `${GH}world_1400.geojson`     },
+  { year:    1492, label:   '1.492 d.C.', url: `${GH}world_1492.geojson`     },
+  { year:    1500, label:   '1.500 d.C.', url: `${GH}world_1500.geojson`     },
+  { year:    1530, label:   '1.530 d.C.', url: `${GH}world_1530.geojson`     },
+  { year:    1600, label:   '1.600 d.C.', url: `${GH}world_1600.geojson`     },
+  { year:    1650, label:   '1.650 d.C.', url: `${GH}world_1650.geojson`     },
+  { year:    1700, label:   '1.700 d.C.', url: `${GH}world_1700.geojson`     },
+  { year:    1715, label:   '1.715 d.C.', url: `${GH}world_1715.geojson`     },
+  { year:    1783, label:   '1.783 d.C.', url: `${GH}world_1783.geojson`     },
+  { year:    1800, label:   '1.800 d.C.', url: `${GH}world_1800.geojson`     },
+  { year:    1815, label:   '1.815 d.C.', url: `${GH}world_1815.geojson`     },
+  { year:    1878, label:   '1.878 d.C.', url: `${GH}world_1878.geojson`     },
+  { year:    1880, label:   '1.880 d.C.', url: `${GH}world_1880.geojson`     },
+  { year:    1900, label:   '1.900 d.C.', url: `${GH}world_1900.geojson`     },
+  { year:    1914, label:   '1.914 d.C.', url: `${GH}world_1914.geojson`     },
+  { year:    1920, label:   '1.920 d.C.', url: `${GH}world_1920.geojson`     },
+  { year:    1930, label:   '1.930 d.C.', url: `${GH}world_1930.geojson`     },
+  { year:    1938, label:   '1.938 d.C.', url: `${GH}world_1938.geojson`     },
+  { year:    1945, label:   '1.945 d.C.', url: `${GH}world_1945.geojson`     },
+  { year:    1960, label:   '1.960 d.C.', url: `${GH}world_1960.geojson`     },
+  { year:    1994, label:   '1.994 d.C.', url: `${GH}world_1994.geojson`     },
+  { year:    2000, label:   '2.000 d.C.', url: `${GH}world_2000.geojson`     },
+  { year:    2010, label:   '2.010 d.C.', url: `${GH}world_2010.geojson`     },
   // Mappa attuale: Natural Earth via datasets/geo-countries (public domain)
-  { year:  1995, label: 'Mondo attuale', url: 'https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson' },
+  { year:    2011, label: 'Mondo attuale', url: 'https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson' },
 ];
 
 /**
  * Restituisce lo snapshot più recente disponibile per l'anno dato.
- * Torna null se l'anno è antecedente al 3000 a.C. (nessuna mappa disponibile).
+ * Torna null se l'anno è antecedente al 123.000 a.C. (nessuna mappa disponibile).
  */
 export function getBestMap(year: number): HistoricalMap | null {
   if (year < HISTORICAL_MAPS[0].year) return null;
@@ -67,8 +103,7 @@ export function colorForTerritory(name: string): [number, number, number, number
   for (let i = 0; i < name.length; i++) {
     h = Math.imul(31, h) + name.charCodeAt(i) | 0;
   }
-  const hue = ((h >>> 0) % 360) / 360;  // 0..1
-  // HSL(hue, 58%, 50%) → RGB (simplified, good enough for globe overlay)
+  const hue = ((h >>> 0) % 360) / 360;
   const s = 0.58, l = 0.50;
   const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
   const p = 2 * l - q;
@@ -97,7 +132,6 @@ export function getCentroid(geometry: Geometry): [number, number] | null {
     return ring ? avgRing(ring) : null;
   }
   if (geometry.type === 'MultiPolygon') {
-    // Usa il poligono più grande (più vertici)
     const polys = geometry.coordinates as Ring[][];
     let best: Ring | null = null;
     for (const poly of polys) {
