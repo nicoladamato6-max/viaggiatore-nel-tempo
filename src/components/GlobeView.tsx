@@ -76,7 +76,7 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       new Cesium.UrlTemplateImageryProvider({
         url: `https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=${MAPTILER_KEY}`,
         credit: '© MapTiler © OpenStreetMap contributors',
-        maximumLevel: 20,
+        maximumLevel: 17,
       })
     );
 
