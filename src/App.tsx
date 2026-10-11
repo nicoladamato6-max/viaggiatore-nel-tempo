@@ -89,17 +89,17 @@ export function formatYear(year: number): string {
   return `${year} d.C.`;
 }
 
-export function getEra(year: number): { label: string; color: string } {
-  if (year < -4_600_000_000) return { label: '🌌 Universo primordiale', color: '#1abc9c' };
-  if (year < -541_000_000)   return { label: '🌍 Terra primordiale',    color: '#27ae60' };
-  if (year < -252_000_000)   return { label: '🐟 Era Paleozoica',       color: '#2ecc71' };
-  if (year < -66_000_000)    return { label: '🦕 Era Mesozoica',        color: '#f39c12' };
-  if (year < -2_500_000)     return { label: '🦎 Era Cenozoica',        color: '#e67e22' };
-  if (year < -3_500)         return { label: '🦴 Preistoria',           color: '#e74c3c' };
-  if (year < 476)            return { label: '📜 Età Antica',           color: '#9b59b6' };
-  if (year < 1492)           return { label: '🏰 Medioevo',             color: '#2980b9' };
-  if (year < 1789)           return { label: '🎨 Età Moderna',          color: '#8e44ad' };
-  return                            { label: '⚙️ Età Contemporanea',    color: '#a8c8ff' };
+export function getEra(year: number): { label: string; color: string; wikipediaSlug?: string } {
+  if (year < -4_600_000_000) return { label: '🌌 Universo primordiale', color: '#1abc9c', wikipediaSlug: 'Observable_universe' };
+  if (year < -541_000_000)   return { label: '🌍 Terra primordiale',    color: '#27ae60', wikipediaSlug: 'History_of_Earth' };
+  if (year < -252_000_000)   return { label: '🐟 Era Paleozoica',       color: '#2ecc71', wikipediaSlug: 'Paleozoic' };
+  if (year < -66_000_000)    return { label: '🦕 Era Mesozoica',        color: '#f39c12', wikipediaSlug: 'Mesozoic' };
+  if (year < -2_500_000)     return { label: '🦎 Era Cenozoica',        color: '#e67e22', wikipediaSlug: 'Cenozoic' };
+  if (year < -3_500)         return { label: '🦴 Preistoria',           color: '#e74c3c', wikipediaSlug: 'Prehistory' };
+  if (year < 476)            return { label: '📜 Età Antica',           color: '#9b59b6', wikipediaSlug: 'Ancient_history' };
+  if (year < 1492)           return { label: '🏰 Medioevo',             color: '#2980b9', wikipediaSlug: 'Middle_Ages' };
+  if (year < 1789)           return { label: '🎨 Età Moderna',          color: '#8e44ad', wikipediaSlug: 'Early_modern_period' };
+  return                            { label: '⚙️ Età Contemporanea',    color: '#a8c8ff', wikipediaSlug: 'Modern_history' };
 }
 
 export default function App() {
@@ -108,6 +108,7 @@ export default function App() {
   const [mobileGlobeH, setMobileGlobeH] = useState(40); // vh
   const splitDragRef = useRef<{ startY: number; startH: number } | null>(null);
   const [flyTo, setFlyTo]                 = useState<FlyTarget | null>(null);
+  const [showTerritories, setShowTerritories] = useState(false);
   const [activeCategories, setActiveCategories] = useState<Set<EventCategory>>(
     new Set(['storia', 'arte', 'musica', 'scienza', 'geologia', 'cosmo'])
   );
@@ -191,6 +192,19 @@ export default function App() {
     }
   }, []);
 
+  // Click su badge era/sottocategoria → apre Wikipedia dell'era nell'InfoPanel
+  const handleEraClick = useCallback((slug: string, label: string) => {
+    setSelectedEvent({
+      id: `era-${slug}`,
+      title: label,
+      year: 0,
+      category: 'storia',
+      description: '',
+      wikipediaSlug: slug,
+      isCosmic: false,
+    });
+  }, []);
+
   return (
     <div className="app">
       <header className="header">
@@ -207,8 +221,17 @@ export default function App() {
             events={visibleEvents}
             isCosmicView={isCosmicView}
             flyTo={flyTo}
+            currentYear={currentYear}
+            showTerritories={showTerritories}
             onEventClick={handleEventClick}
           />
+          <button
+            className={`territory-toggle-btn${showTerritories ? ' active' : ''}`}
+            onClick={() => setShowTerritories(v => !v)}
+            title="Mostra/nascondi mappe politiche storiche"
+          >
+            🗺️ Mappe storiche
+          </button>
         </div>
         {selectedEvent && (
           <div
@@ -229,6 +252,7 @@ export default function App() {
           onSliderChange={setSliderValue}
           activeCategories={activeCategories}
           onToggleCategory={toggleCategory}
+          onEraClick={handleEraClick}
         />
       </div>
     </div>

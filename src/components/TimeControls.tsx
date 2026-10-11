@@ -13,10 +13,11 @@ interface Props {
   sliderValue: number;
   currentYear: number;
   formatYear: (year: number) => string;
-  getEra: (year: number) => { label: string; color: string };
+  getEra: (year: number) => { label: string; color: string; wikipediaSlug?: string };
   onSliderChange: (value: number) => void;
   activeCategories: Set<EventCategory>;
   onToggleCategory: (cat: EventCategory) => void;
+  onEraClick?: (slug: string, label: string) => void;
 }
 
 function formatYearShort(year: number): string {
@@ -30,7 +31,7 @@ function formatYearShort(year: number): string {
 
 export function TimeControls({
   sliderValue, currentYear, formatYear, getEra,
-  onSliderChange, activeCategories, onToggleCategory,
+  onSliderChange, activeCategories, onToggleCategory, onEraClick,
 }: Props) {
   const era = getEra(currentYear);
   const [isDragging, setIsDragging] = useState(false);
@@ -121,23 +122,25 @@ export function TimeControls({
         <span>Big Bang</span>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}>
           <span className="current-year">{formatYear(currentYear)}</span>
-          <span className="era-badge" style={{ color: era.color, borderColor: `${era.color}50` }}>
+          <span
+            className={`era-badge${era.wikipediaSlug && onEraClick ? ' era-badge--clickable' : ''}`}
+            style={{ color: era.color, borderColor: `${era.color}50` }}
+            onClick={era.wikipediaSlug && onEraClick ? () => onEraClick(era.wikipediaSlug!, era.label) : undefined}
+          >
             {era.label}
           </span>
           {activeSubs.length > 0 && (
             <div className="subera-tags">
-              {activeSubs.slice(0, 3).map(p => (
+              {activeSubs.map(p => (
                 <span
                   key={p.name}
-                  className="subera-tag"
+                  className={`subera-tag${p.wikipediaSlug && onEraClick ? ' subera-tag--clickable' : ''}`}
                   style={{ color: p.color, borderColor: `${p.color}55` }}
+                  onClick={p.wikipediaSlug && onEraClick ? () => onEraClick(p.wikipediaSlug!, p.name) : undefined}
                 >
                   {p.name}
                 </span>
               ))}
-              {activeSubs.length > 3 && (
-                <span className="subera-tag subera-tag--more">+{activeSubs.length - 3}</span>
-              )}
             </div>
           )}
         </div>

@@ -195,11 +195,14 @@ body {
 .subera-tags {
   display: flex;
   gap: 4px;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 260px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: 380px;
   margin-top: 1px;
+  padding-bottom: 1px;
 }
+.subera-tags::-webkit-scrollbar { display: none; }
 
 .subera-tag {
   font-size: 0.58rem;
@@ -209,12 +212,20 @@ body {
   border: 1px solid;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.subera-tag--more {
-  color: #44445a !important;
-  border-color: #33334a !important;
+.subera-tag--clickable {
+  cursor: pointer;
+  transition: opacity 0.15s, background 0.15s;
 }
+.subera-tag--clickable:hover { opacity: 0.75; background: rgba(255,255,255,0.08); }
+
+.era-badge--clickable {
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.era-badge--clickable:hover { opacity: 0.75; }
 
 /* ── Gantt tooltip (compare durante lo scroll) ── */
 .epoch-gantt {
@@ -605,6 +616,33 @@ body {
 }
 .info-panel__license a:hover {
   color: rgba(168, 200, 255, 0.85);
+}
+
+/* ── Toggle mappe storiche ── */
+.territory-toggle-btn {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  z-index: 10;
+  padding: 5px 11px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(10, 10, 26, 0.82);
+  color: #aaa;
+  font-size: 0.7rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.territory-toggle-btn.active {
+  background: rgba(168, 200, 255, 0.14);
+  border-color: rgba(168, 200, 255, 0.45);
+  color: #a8c8ff;
+}
+.territory-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e8e8f0;
 }
 
 /* ── Tooltip sul globo ── */

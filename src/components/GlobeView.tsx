@@ -2,6 +2,7 @@ import { useEffect, useRef, useCallback } from 'react';
 import * as Cesium from 'cesium';
 import { type HistoricalEvent, type FlyTarget, CATEGORY_COLORS } from '../types';
 import { PLANETS, getMoonPosition, getPlanetPosition, toPlanetCard } from '../utils/celestialMechanics';
+import { TERRITORIES, TERRITORY_BY_ID } from '../data/historicalTerritories';
 
 // MapTiler fornisce terrain quantized-mesh e imagery satellite compatibili con Cesium.
 // Nessun token Ion richiesto: zero costi di licenza Cesium Ion per uso commerciale.
@@ -31,14 +32,18 @@ interface Props {
   events: HistoricalEvent[];
   isCosmicView: boolean;
   flyTo: FlyTarget | null;
+  currentYear: number;
+  showTerritories: boolean;
   onEventClick: (event: HistoricalEvent) => void;
 }
 
-export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) {
+export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerritories, onEventClick }: Props) {
   const containerRef  = useRef<HTMLDivElement>(null);
   const viewerRef     = useRef<Cesium.Viewer | null>(null);
   // PointPrimitiveCollection per i pin degli eventi storici — molto più veloce delle Entity
   const pinsRef       = useRef<Cesium.PointPrimitiveCollection | null>(null);
+  // Map territorio id → Entity Cesium (create all'init, visibilità aggiornata al cambio anno)
+  const territoriesRef = useRef<Map<string, Cesium.Entity>>(new Map());
   const eventsRef  = useRef(events);
   const onClickRef = useRef(onEventClick);
 
@@ -86,6 +91,39 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
     ).then(t => {
       if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
     }).catch(() => { /* terrain opzionale: fallback all'ellissoide */ });
+
+    // Territories storici: create tutte le entity con show=false.
+    // La visibilità viene aggiornata dall'useEffect dedicato (currentYear/showTerritories).
+    const tMap = new Map<string, Cesium.Entity>();
+    for (const t of TERRITORIES) {
+      const entity = viewer.entities.add({
+        id: `territory-${t.id}`,
+        show: false,
+        position: Cesium.Cartesian3.fromDegrees(t.labelLon, t.labelLat, 0),
+        polygon: new Cesium.PolygonGraphics({
+          hierarchy: new Cesium.PolygonHierarchy(
+            Cesium.Cartesian3.fromDegreesArray(t.positions)
+          ),
+          material: Cesium.Color.fromCssColorString(t.color).withAlpha(0.18),
+          outline: false,
+          arcType: Cesium.ArcType.GEODESIC,
+        }),
+        label: new Cesium.LabelGraphics({
+          text: t.name,
+          font: 'bold 12px system-ui',
+          fillColor: Cesium.Color.WHITE,
+          style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+          outlineWidth: 2,
+          outlineColor: Cesium.Color.BLACK,
+          disableDepthTestDistance: Number.POSITIVE_INFINITY,
+          distanceDisplayCondition: new Cesium.DistanceDisplayCondition(0, 20_000_000),
+          verticalOrigin: Cesium.VerticalOrigin.CENTER,
+          horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
+        }),
+      });
+      tMap.set(t.id, entity);
+    }
+    territoriesRef.current = tMap;
 
     // Vista iniziale: posiziona istantaneamente la camera sull'Italia.
     // NON usare flyTo: se l'utente ruota il telefono prima che il primo postRender
@@ -314,6 +352,18 @@ export function GlobeView({ events, isCosmicView, flyTo, onEventClick }: Props) 
       });
     }
   }, [events, isCosmicView]);
+
+  // ── Visibilità territori storici ────────────────────────────────────────────
+  useEffect(() => {
+    const viewer = viewerRef.current;
+    const tMap   = territoriesRef.current;
+    if (!viewer || viewer.isDestroyed() || tMap.size === 0) return;
+
+    for (const [id, entity] of tMap) {
+      const t = TERRITORY_BY_ID.get(id)!;
+      entity.show = showTerritories && !isCosmicView && currentYear >= t.start && currentYear <= t.end;
+    }
+  }, [currentYear, showTerritories, isCosmicView]);
 
   // ── FlyTo da ricerca o selezione ─────────────────────────────────────────
   useEffect(() => {
