@@ -5,6 +5,7 @@ import { InfoPanel } from './components/InfoPanel';
 import { TimeControls } from './components/TimeControls';
 import { SearchBar } from './components/SearchBar';
 import eventsData from './data/events.json';
+import { getBestMap } from './data/historicalMaps';
 import { type HistoricalEvent, type EventCategory, type FlyTarget } from './types';
 import { PLANETS, toPlanetSearchItem } from './utils/celestialMechanics';
 
@@ -230,7 +231,9 @@ export default function App() {
             onClick={() => setShowTerritories(v => !v)}
             title="Mostra/nascondi mappe politiche storiche"
           >
-            🗺️ Mappe storiche
+            {showTerritories
+              ? `🗺️ ${getBestMap(currentYear)?.label ?? 'Mappe storiche'}`
+              : '🗺️ Mappe storiche'}
           </button>
         </div>
         {selectedEvent && (

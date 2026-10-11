@@ -2,7 +2,7 @@ import { useEffect, useRef, useCallback } from 'react';
 import * as Cesium from 'cesium';
 import { type HistoricalEvent, type FlyTarget, CATEGORY_COLORS } from '../types';
 import { PLANETS, getMoonPosition, getPlanetPosition, toPlanetCard } from '../utils/celestialMechanics';
-import { TERRITORIES, TERRITORY_BY_ID } from '../data/historicalTerritories';
+import { getBestMap, featureName, colorForTerritory, getCentroid } from '../data/historicalMaps';
 
 // MapTiler fornisce terrain quantized-mesh e imagery satellite compatibili con Cesium.
 // Nessun token Ion richiesto: zero costi di licenza Cesium Ion per uso commerciale.
@@ -42,13 +42,19 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
   const viewerRef     = useRef<Cesium.Viewer | null>(null);
   // PointPrimitiveCollection per i pin degli eventi storici — molto più veloce delle Entity
   const pinsRef       = useRef<Cesium.PointPrimitiveCollection | null>(null);
-  // Map territorio id → Entity Cesium (create all'init, visibilità aggiornata al cambio anno)
-  const territoriesRef = useRef<Map<string, Cesium.Entity>>(new Map());
+  // GeoJsonDataSource corrente con le mappe politiche storiche
+  const territoryDSRef   = useRef<Cesium.GeoJsonDataSource | null>(null);
+  const labelDSRef       = useRef<Cesium.CustomDataSource | null>(null);
+  const geoCacheRef      = useRef<Map<string, object>>(new Map());
+  const loadedUrlRef     = useRef<string | null>(null);
+  const loadAbortRef     = useRef<AbortController | null>(null);
+  const currentYearRef   = useRef(currentYear);
   const eventsRef  = useRef(events);
   const onClickRef = useRef(onEventClick);
 
-  eventsRef.current  = events;
-  onClickRef.current = onEventClick;
+  eventsRef.current      = events;
+  onClickRef.current     = onEventClick;
+  currentYearRef.current = currentYear;
 
   // ── Inizializzazione viewer (una volta sola) ──────────────────────────────
   useEffect(() => {
@@ -91,39 +97,6 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
     ).then(t => {
       if (!viewer.isDestroyed()) viewer.scene.terrainProvider = t;
     }).catch(() => { /* terrain opzionale: fallback all'ellissoide */ });
-
-    // Territories storici: create tutte le entity con show=false.
-    // La visibilità viene aggiornata dall'useEffect dedicato (currentYear/showTerritories).
-    const tMap = new Map<string, Cesium.Entity>();
-    for (const t of TERRITORIES) {
-      const entity = viewer.entities.add({
-        id: `territory-${t.id}`,
-        show: false,
-        position: Cesium.Cartesian3.fromDegrees(t.labelLon, t.labelLat, 0),
-        polygon: new Cesium.PolygonGraphics({
-          hierarchy: new Cesium.PolygonHierarchy(
-            Cesium.Cartesian3.fromDegreesArray(t.positions)
-          ),
-          material: Cesium.Color.fromCssColorString(t.color).withAlpha(0.18),
-          outline: false,
-          arcType: Cesium.ArcType.GEODESIC,
-        }),
-        label: new Cesium.LabelGraphics({
-          text: t.name,
-          font: 'bold 12px system-ui',
-          fillColor: Cesium.Color.WHITE,
-          style: Cesium.LabelStyle.FILL_AND_OUTLINE,
-          outlineWidth: 2,
-          outlineColor: Cesium.Color.BLACK,
-          disableDepthTestDistance: Number.POSITIVE_INFINITY,
-          distanceDisplayCondition: new Cesium.DistanceDisplayCondition(0, 20_000_000),
-          verticalOrigin: Cesium.VerticalOrigin.CENTER,
-          horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
-        }),
-      });
-      tMap.set(t.id, entity);
-    }
-    territoriesRef.current = tMap;
 
     // Vista iniziale: posiziona istantaneamente la camera sull'Italia.
     // NON usare flyTo: se l'utente ruota il telefono prima che il primo postRender
@@ -244,6 +217,23 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
       if (typeof picked.id === 'string') {
         const event = eventsRef.current.find(e => e.id === picked.id);
         if (event) onClickRef.current(event);
+        return;
+      }
+
+      // Polygon da GeoJsonDataSource (mappe politiche storiche) — apre Wikipedia del territorio
+      if (picked.id instanceof Cesium.Entity && picked.id.polygon) {
+        const name = picked.id.name ?? '';
+        if (name) {
+          onClickRef.current({
+            id: `geo-territory-${name}`,
+            title: name,
+            year: currentYearRef.current,
+            category: 'storia',
+            description: '',
+            wikipediaSlug: name.replace(/\s+/g, '_'),
+            isCosmic: false,
+          });
+        }
       }
     }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
 
@@ -353,16 +343,123 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
     }
   }, [events, isCosmicView]);
 
-  // ── Visibilità territori storici ────────────────────────────────────────────
+  // ── Mappe politiche storiche (GeoJsonDataSource) ────────────────────────────
   useEffect(() => {
     const viewer = viewerRef.current;
-    const tMap   = territoriesRef.current;
-    if (!viewer || viewer.isDestroyed() || tMap.size === 0) return;
+    if (!viewer || viewer.isDestroyed()) return;
 
-    for (const [id, entity] of tMap) {
-      const t = TERRITORY_BY_ID.get(id)!;
-      entity.show = showTerritories && !isCosmicView && currentYear >= t.start && currentYear <= t.end;
+    const hide = () => {
+      if (territoryDSRef.current)  territoryDSRef.current.show  = false;
+      if (labelDSRef.current)      labelDSRef.current.show      = false;
+    };
+
+    if (!showTerritories || isCosmicView) { hide(); return; }
+
+    const mapEntry = getBestMap(currentYear);
+    if (!mapEntry) { hide(); return; }
+
+    // Stessa URL già caricata → rendi solo visibile
+    if (loadedUrlRef.current === mapEntry.url) {
+      if (territoryDSRef.current) territoryDSRef.current.show = true;
+      if (labelDSRef.current)     labelDSRef.current.show     = true;
+      return;
     }
+
+    // Annulla caricamento precedente
+    loadAbortRef.current?.abort();
+    const abort = new AbortController();
+    loadAbortRef.current = abort;
+
+    async function load() {
+      if (!viewer || viewer.isDestroyed()) return;
+      // ── Fetch GeoJSON (con cache in memoria) ──
+      let geojson: { features?: Array<{ geometry: { type: string; coordinates: unknown }; properties: Record<string, unknown> | null }> };
+      const cached = geoCacheRef.current.get(mapEntry!.url);
+      if (cached) {
+        geojson = cached as typeof geojson;
+      } else {
+        try {
+          const resp = await fetch(mapEntry!.url, { signal: abort.signal });
+          geojson = await resp.json();
+          geoCacheRef.current.set(mapEntry!.url, geojson as object);
+        } catch {
+          if (!abort.signal.aborted) console.warn('storical map fetch failed');
+          return;
+        }
+      }
+
+      if (abort.signal.aborted || viewer.isDestroyed()) return;
+
+      // ── Rimuovi layer precedente ──
+      if (territoryDSRef.current) { viewer.dataSources.remove(territoryDSRef.current, true); territoryDSRef.current = null; }
+      if (labelDSRef.current)     { viewer.dataSources.remove(labelDSRef.current, true);     labelDSRef.current     = null; }
+
+      // ── Carica poligoni con GeoJsonDataSource ──
+      let ds: Cesium.GeoJsonDataSource;
+      try {
+        ds = await Cesium.GeoJsonDataSource.load(geojson as object, {
+          stroke: Cesium.Color.WHITE.withAlpha(0.45),
+          strokeWidth: 1,
+          fill: Cesium.Color.TRANSPARENT,
+        });
+      } catch {
+        if (!abort.signal.aborted) console.warn('GeoJsonDataSource.load failed');
+        return;
+      }
+
+      if (abort.signal.aborted || viewer.isDestroyed()) return;
+
+      // ── Colora ogni poligono con un colore deterministico dal nome ──
+      for (const entity of ds.entities.values) {
+        if (!entity.polygon) continue;
+        const name = entity.name ?? '';
+        const [r, g, b, a] = colorForTerritory(name);
+        (entity.polygon.material as unknown) = new Cesium.ColorMaterialProperty(
+          new Cesium.Color(r, g, b, a)
+        );
+        (entity.polygon.outline as unknown) = new Cesium.ConstantProperty(false);
+      }
+
+      await viewer.dataSources.add(ds);
+      territoryDSRef.current = ds;
+      loadedUrlRef.current   = mapEntry!.url;
+
+      // ── Layer etichette (CustomDataSource) ──
+      const labelDS = new Cesium.CustomDataSource('territory-labels');
+      const seen    = new Set<string>();
+
+      for (const feature of (geojson.features ?? [])) {
+        if (!feature.geometry) continue;
+        const name = featureName(feature.properties);
+        if (!name || seen.has(name)) continue;
+        seen.add(name);
+
+        const c = getCentroid(feature.geometry);
+        if (!c) continue;
+
+        labelDS.entities.add({
+          position: Cesium.Cartesian3.fromDegrees(c[0], c[1], 5000),
+          label: new Cesium.LabelGraphics({
+            text: name,
+            font: 'bold 10px system-ui',
+            fillColor: Cesium.Color.WHITE,
+            style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+            outlineWidth: 2,
+            outlineColor: Cesium.Color.BLACK,
+            disableDepthTestDistance: Number.POSITIVE_INFINITY,
+            distanceDisplayCondition: new Cesium.DistanceDisplayCondition(0, 12_000_000),
+            verticalOrigin: Cesium.VerticalOrigin.CENTER,
+            horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
+          }),
+        });
+      }
+
+      await viewer.dataSources.add(labelDS);
+      labelDSRef.current = labelDS;
+    }
+
+    load();
+    return () => { abort.abort(); };
   }, [currentYear, showTerritories, isCosmicView]);
 
   // ── FlyTo da ricerca o selezione ─────────────────────────────────────────
