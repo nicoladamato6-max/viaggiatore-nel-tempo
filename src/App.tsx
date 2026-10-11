@@ -6,7 +6,7 @@ import { TimeControls } from './components/TimeControls';
 import { SearchBar } from './components/SearchBar';
 import eventsData from './data/events.json';
 import { getBestMap } from './data/historicalMaps';
-import { type HistoricalEvent, type EventCategory, type FlyTarget } from './types';
+import { type HistoricalEvent, type EventCategory, type FlyTarget, type Locale } from './types';
 import { PLANETS, toPlanetSearchItem } from './utils/celestialMechanics';
 
 const ALL_EVENTS = eventsData as HistoricalEvent[];
@@ -110,6 +110,7 @@ export default function App() {
   const splitDragRef = useRef<{ startY: number; startH: number } | null>(null);
   const [flyTo, setFlyTo]                 = useState<FlyTarget | null>(null);
   const [showTerritories, setShowTerritories] = useState(false);
+  const [locale, setLocale]               = useState<Locale>('it');
   const [activeCategories, setActiveCategories] = useState<Set<EventCategory>>(
     new Set(['storia', 'arte', 'musica', 'scienza', 'geologia', 'cosmo'])
   );
@@ -211,6 +212,13 @@ export default function App() {
       <header className="header">
         <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
         <SearchBar events={ALL_SEARCHABLE} onSelect={handleSearchSelect} />
+        <button
+          className="locale-toggle-btn"
+          onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
+          title={locale === 'it' ? 'Switch to English' : 'Passa all\'italiano'}
+        >
+          {locale === 'it' ? '🇬🇧 EN' : '🇮🇹 IT'}
+        </button>
       </header>
 
       <div className={`globe-container${selectedEvent ? ' has-panel' : ''}`}>
@@ -224,6 +232,7 @@ export default function App() {
             flyTo={flyTo}
             currentYear={currentYear}
             showTerritories={showTerritories}
+            locale={locale}
             onEventClick={handleEventClick}
           />
           <button
@@ -243,7 +252,7 @@ export default function App() {
             onMouseDown={onSplitDown}
           />
         )}
-        <InfoPanel event={selectedEvent} onClose={() => setSelectedEvent(null)} />
+        <InfoPanel event={selectedEvent} locale={locale} onClose={() => setSelectedEvent(null)} />
       </div>
 
       <div className="controls">

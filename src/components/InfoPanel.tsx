@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { type HistoricalEvent, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
+import { type HistoricalEvent, type Locale, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
 
 const MIN_W     = 280;
 const DEFAULT_W = 340;
@@ -28,10 +28,10 @@ async function fetchWikiPage(slug: string, lang: string) {
   };
 }
 
-function useWikiContent(slug: string | undefined) {
+function useWikiContent(slug: string | undefined, locale: Locale) {
   const [body,    setBody]    = useState<string | null>(null);
   const [wikiUrl, setWikiUrl] = useState<string>('');
-  const [wikiBase, setWikiBase] = useState<string>('https://it.wikipedia.org');
+  const [wikiBase, setWikiBase] = useState<string>(`https://${locale}.wikipedia.org`);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -40,8 +40,11 @@ function useWikiContent(slug: string | undefined) {
     setBody(null);
     setLoading(true);
 
+    // Lingua del sito prima, poi fallback inglese
+    const langs = locale === 'en' ? ['en'] : [locale, 'en'];
+
     (async () => {
-      for (const lang of ['it', 'en']) {
+      for (const lang of langs) {
         const page = await fetchWikiPage(slug, lang);
         if (page && !cancelled) {
           setWikiUrl(page.url);
@@ -54,7 +57,7 @@ function useWikiContent(slug: string | undefined) {
     })();
 
     return () => { cancelled = true; };
-  }, [slug]);
+  }, [slug, locale]);
 
   return { body, wikiUrl, wikiBase, loading };
 }
@@ -91,10 +94,11 @@ function formatYear(year: number): string {
 // ── Componente ────────────────────────────────────────────────────────────
 interface Props {
   event:   HistoricalEvent | null;
+  locale:  Locale;
   onClose: () => void;
 }
 
-export function InfoPanel({ event, onClose }: Props) {
+export function InfoPanel({ event, locale, onClose }: Props) {
   const [width, setWidth] = useState(DEFAULT_W);
   const panelRef   = useRef<HTMLDivElement>(null);
   const wikiBodyRef = useRef<HTMLDivElement>(null);
@@ -102,7 +106,7 @@ export function InfoPanel({ event, onClose }: Props) {
   const startX     = useRef(0);
   const startW     = useRef(0);
 
-  const { body, wikiUrl, wikiBase, loading } = useWikiContent(event?.wikipediaSlug);
+  const { body, wikiUrl, wikiBase, loading } = useWikiContent(event?.wikipediaSlug, locale);
 
   // Fix percorsi Wikipedia dopo ogni render del corpo
   useEffect(() => {

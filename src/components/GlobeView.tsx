@@ -3,6 +3,8 @@ import * as Cesium from 'cesium';
 import { type HistoricalEvent, type FlyTarget, CATEGORY_COLORS } from '../types';
 import { PLANETS, getMoonPosition, getPlanetPosition, toPlanetCard } from '../utils/celestialMechanics';
 import { getBestMap, featureName, colorForTerritory, getCentroid } from '../data/historicalMaps';
+import { translateTerritoryNames } from '../data/wikiTranslate';
+import { type Locale } from '../types';
 
 // MapTiler fornisce terrain quantized-mesh e imagery satellite compatibili con Cesium.
 // Nessun token Ion richiesto: zero costi di licenza Cesium Ion per uso commerciale.
@@ -34,10 +36,11 @@ interface Props {
   flyTo: FlyTarget | null;
   currentYear: number;
   showTerritories: boolean;
+  locale: Locale;
   onEventClick: (event: HistoricalEvent) => void;
 }
 
-export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerritories, onEventClick }: Props) {
+export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerritories, locale, onEventClick }: Props) {
   const containerRef  = useRef<HTMLDivElement>(null);
   const viewerRef     = useRef<Cesium.Viewer | null>(null);
   // PointPrimitiveCollection per i pin degli eventi storici — molto più veloce delle Entity
@@ -358,8 +361,9 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
     const mapEntry = getBestMap(currentYear);
     if (!mapEntry) { hide(); return; }
 
-    // Stessa URL già caricata → rendi solo visibile
-    if (loadedUrlRef.current === mapEntry.url) {
+    // Stessa URL + stesso locale già caricati → rendi solo visibile
+    const cacheKey = `${mapEntry.url}:${locale}`;
+    if (loadedUrlRef.current === cacheKey) {
       if (territoryDSRef.current) territoryDSRef.current.show = true;
       if (labelDSRef.current)     labelDSRef.current.show     = true;
       return;
@@ -422,11 +426,13 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
 
       await viewer.dataSources.add(ds);
       territoryDSRef.current = ds;
-      loadedUrlRef.current   = mapEntry!.url;
+      loadedUrlRef.current   = `${mapEntry!.url}:${locale}`;
 
       // ── Layer etichette (CustomDataSource) ──
       const labelDS = new Cesium.CustomDataSource('territory-labels');
       const seen    = new Set<string>();
+      // entityName: mappa entity → nome inglese (per aggiornamento post-traduzione)
+      const entityName = new Map<Cesium.Entity, string>();
 
       for (const feature of (geojson.features ?? [])) {
         if (!feature.geometry) continue;
@@ -437,7 +443,7 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
         const c = getCentroid(feature.geometry);
         if (!c) continue;
 
-        labelDS.entities.add({
+        const entity = labelDS.entities.add({
           position: Cesium.Cartesian3.fromDegrees(c[0], c[1], 5000),
           label: new Cesium.LabelGraphics({
             text: name,
@@ -452,15 +458,32 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
             horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
           }),
         });
+        entityName.set(entity, name);
       }
 
       await viewer.dataSources.add(labelDS);
       labelDSRef.current = labelDS;
+
+      // ── Traduzione etichette (async, aggiorna dopo il render iniziale in inglese) ──
+      if (locale !== 'en' && !abort.signal.aborted) {
+        const uniqueNames = [...new Set(entityName.values())];
+        const translations = await translateTerritoryNames(uniqueNames, locale, abort.signal);
+
+        if (!abort.signal.aborted && labelDSRef.current === labelDS) {
+          for (const [entity, engName] of entityName) {
+            const translated = translations.get(engName);
+            if (translated && translated !== engName && entity.label) {
+              (entity.label as Cesium.LabelGraphics).text =
+                new Cesium.ConstantProperty(translated);
+            }
+          }
+        }
+      }
     }
 
     load();
     return () => { abort.abort(); };
-  }, [currentYear, showTerritories, isCosmicView]);
+  }, [currentYear, showTerritories, isCosmicView, locale]);
 
   // ── FlyTo da ricerca o selezione ─────────────────────────────────────────
   useEffect(() => {

@@ -1,5 +1,7 @@
 export type EventCategory = 'storia' | 'arte' | 'musica' | 'scienza' | 'geologia' | 'cosmo';
 
+export type Locale = 'it' | 'en';
+
 export interface HistoricalEvent {
   id: string;
   title: string;

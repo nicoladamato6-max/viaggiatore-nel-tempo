@@ -645,6 +645,25 @@ body {
   color: #e8e8f0;
 }
 
+/* ── Toggle lingua (header) ── */
+.locale-toggle-btn {
+  margin-left: auto;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+  color: #c0c0d8;
+  font-size: 0.78rem;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+.locale-toggle-btn:hover {
+  background: rgba(168, 200, 255, 0.12);
+  color: #a8c8ff;
+}
+
 /* ── Tooltip sul globo ── */
 .globe-tooltip {
   background: rgba(10, 10, 30, 0.92);
