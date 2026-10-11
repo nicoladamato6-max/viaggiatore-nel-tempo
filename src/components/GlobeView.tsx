@@ -428,25 +428,34 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
       territoryDSRef.current = ds;
       loadedUrlRef.current   = `${mapEntry!.url}:${locale}`;
 
-      // ── Layer etichette (CustomDataSource) ──
+      // ── Traduzione nomi territorio (prima di creare le label) ──
+      const features = geojson.features ?? [];
+      const uniqueNames = [...new Set(
+        features.map(f => featureName(f.properties)).filter(Boolean)
+      )];
+      const translations = await translateTerritoryNames(uniqueNames, locale, abort.signal);
+
+      if (abort.signal.aborted || viewer.isDestroyed()) return;
+
+      // ── Layer etichette con nomi già localizzati ──
       const labelDS = new Cesium.CustomDataSource('territory-labels');
       const seen    = new Set<string>();
-      // entityName: mappa entity → nome inglese (per aggiornamento post-traduzione)
-      const entityName = new Map<Cesium.Entity, string>();
 
-      for (const feature of (geojson.features ?? [])) {
+      for (const feature of features) {
         if (!feature.geometry) continue;
-        const name = featureName(feature.properties);
-        if (!name || seen.has(name)) continue;
-        seen.add(name);
+        const engName = featureName(feature.properties);
+        if (!engName || seen.has(engName)) continue;
+        seen.add(engName);
 
         const c = getCentroid(feature.geometry);
         if (!c) continue;
 
-        const entity = labelDS.entities.add({
+        const displayName = translations.get(engName) ?? engName;
+
+        labelDS.entities.add({
           position: Cesium.Cartesian3.fromDegrees(c[0], c[1], 5000),
           label: new Cesium.LabelGraphics({
-            text: name,
+            text: displayName,
             font: 'bold 10px system-ui',
             fillColor: Cesium.Color.WHITE,
             style: Cesium.LabelStyle.FILL_AND_OUTLINE,
@@ -458,27 +467,10 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
             horizontalOrigin: Cesium.HorizontalOrigin.CENTER,
           }),
         });
-        entityName.set(entity, name);
       }
 
       await viewer.dataSources.add(labelDS);
       labelDSRef.current = labelDS;
-
-      // ── Traduzione etichette (async, aggiorna dopo il render iniziale in inglese) ──
-      if (locale !== 'en' && !abort.signal.aborted) {
-        const uniqueNames = [...new Set(entityName.values())];
-        const translations = await translateTerritoryNames(uniqueNames, locale, abort.signal);
-
-        if (!abort.signal.aborted && labelDSRef.current === labelDS) {
-          for (const [entity, engName] of entityName) {
-            const translated = translations.get(engName);
-            if (translated && translated !== engName && entity.label) {
-              (entity.label as Cesium.LabelGraphics).text =
-                new Cesium.ConstantProperty(translated);
-            }
-          }
-        }
-      }
     }
 
     load();
