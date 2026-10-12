@@ -84,7 +84,11 @@ function getTimeWindow(year: number): { from: number; to: number } {
   if (year < -66_000_000)    return { from: year - 10_000_000,  to: year + 10_000_000  };
   if (year < -300_000)       return { from: year - 1_500_000,   to: year + 1_500_000   };
   if (year < -10_000)        return { from: year - 10_000,      to: year + 10_000      };
-  return { from: year - 100, to: year + 100 };
+  if (year < -3_000)         return { from: year - 1_000,       to: year + 1_000       };
+  if (year < -500)           return { from: year - 400,         to: year + 400         };
+  if (year < 500)            return { from: year - 300,         to: year + 300         };
+  if (year < 1400)           return { from: year - 200,         to: year + 200         };
+  return                            { from: year - 100,         to: year + 100         };
 }
 
 export function formatYear(year: number): string {
