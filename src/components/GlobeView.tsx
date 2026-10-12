@@ -67,15 +67,14 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
     // che generano errori "Failed to obtain image tile" in console
     Cesium.Ion.defaultAccessToken = '';
 
+    // Esri World Imagery: globale, gratuito, nessun API key richiesto.
+    // Copertura fino a zoom 19 per aree popolate (MapTiler free si fermava a 14-15
+    // per molte regioni non europee come Medio Oriente, Africa, Asia centrale).
     const satelliteProvider = new Cesium.UrlTemplateImageryProvider({
-      url: `https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=${MAPTILER_KEY}`,
-      credit: '© MapTiler © OpenStreetMap contributors',
-      maximumLevel: 17,
+      url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+      credit: '© Esri, Maxar, Earthstar Geographics, and the GIS User Community',
+      maximumLevel: 19,
     });
-    // Cesium chiama console.error solo se numberOfListeners === 0 su errorEvent.
-    // Un listener vuoto sopprime il rumore da tile falliti — il rendering usa
-    // i tile adiacenti come fallback, quindi nessun impatto visivo.
-    satelliteProvider.errorEvent.addEventListener(() => {});
 
     const viewer = new Cesium.Viewer(containerRef.current, {
       // baseLayer (Cesium ≥ 1.104) imposta MapTiler come unico layer base senza
