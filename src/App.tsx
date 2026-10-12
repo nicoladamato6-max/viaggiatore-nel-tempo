@@ -9,7 +9,6 @@ import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { AuthProvider, useAuth } from './hooks/useAuth';
 import eventsData from './data/events.json';
-import { getBestMap } from './data/historicalMaps';
 import { type HistoricalEvent, type EventCategory, type FlyTarget, type Locale } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 
