@@ -5,12 +5,15 @@ import { InfoPanel } from './components/InfoPanel';
 import { TimeControls } from './components/TimeControls';
 import { SearchBar } from './components/SearchBar';
 import { TimeMachine } from './components/TimeMachine';
+import { AuthModal } from './components/AuthModal';
+import { AdminPanel } from './components/AdminPanel';
+import { AuthProvider, useAuth } from './hooks/useAuth';
 import eventsData from './data/events.json';
 import { getBestMap } from './data/historicalMaps';
 import { type HistoricalEvent, type EventCategory, type FlyTarget, type Locale } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 
-const ALL_EVENTS = eventsData as HistoricalEvent[];
+const STATIC_EVENTS = eventsData as HistoricalEvent[];
 
 // Voci cercabili per Luna, Sole e tutti i pianeti
 const MOON_SEARCH: HistoricalEvent = {
@@ -34,12 +37,6 @@ const BODY_IDS = new Set([
   ...PLANETS.map(p => `planet-${p.id}`),
   ...MOONS.map(m => `moon-${m.id}`),
 ]);
-
-// Tutto ciò che è cercabile nella SearchBar
-const ALL_SEARCHABLE = [
-  ...ALL_EVENTS, MOON_SEARCH, SUN_SEARCH,
-  ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS,
-];
 
 // ── Scala piecewise ridistribuita per densità informativa ────────────────────
 // Ogni macro-era storica ottiene spazio proporzionale ai suoi eventi, non alla durata.
@@ -112,7 +109,36 @@ export function getEra(year: number): { label: string; color: string; wikipediaS
   return                            { label: '⚙️ Età Contemporanea',    color: '#a8c8ff', wikipediaSlug: 'Modern_history' };
 }
 
+// ── Wrapper con provider (necessario per useAuth dentro App) ──────────────────
 export default function App() {
+  return <AuthProvider><AppInner /></AuthProvider>;
+}
+
+function AppInner() {
+  const { user } = useAuth();
+  const [authOpen, setAuthOpen] = useState(false);
+
+  // Dynamic events: static baseline + Wikidata enrichment
+  const [wikidataEvents, setWikidataEvents] = useState<HistoricalEvent[]>([]);
+
+  useEffect(() => {
+    fetch('/api/events')
+      .then(r => r.json())
+      .then((d: { events?: HistoricalEvent[] }) => {
+        if (d.events && d.events.length > 0) {
+          const staticIds = new Set(STATIC_EVENTS.map(e => e.id));
+          setWikidataEvents(d.events.filter(e => !staticIds.has(e.id)));
+        }
+      })
+      .catch(() => { /* API not available, static only */ });
+  }, []);
+
+  const ALL_EVENTS     = useMemo(() => [...STATIC_EVENTS, ...wikidataEvents], [wikidataEvents]);
+  const ALL_SEARCHABLE = useMemo(() => [
+    ...ALL_EVENTS, MOON_SEARCH, SUN_SEARCH,
+    ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS,
+  ], [ALL_EVENTS]);
+
   const [sliderValue, setSliderValue]     = useState(yearToSlider(-753));
   const [selectedEvent, setSelectedEvent] = useState<HistoricalEvent | null>(null);
   const [mobileGlobeH, setMobileGlobeH] = useState(40); // vh
@@ -135,7 +161,7 @@ export default function App() {
       e.year <= timeWindow.to &&
       e.isCosmic === isCosmicView
     ),
-    [timeWindow, activeCategories, isCosmicView]
+    [ALL_EVENTS, timeWindow, activeCategories, isCosmicView]
   );
 
   const toggleCategory = useCallback((cat: EventCategory) => {
@@ -236,6 +262,13 @@ export default function App() {
         >
           {locale === 'it' ? '🇬🇧 EN' : '🇮🇹 IT'}
         </button>
+        <button
+          className="auth-header-btn"
+          onClick={() => setAuthOpen(true)}
+          title={user ? user.email : (locale === 'it' ? 'Accedi' : 'Sign in')}
+        >
+          {user ? '👤' : '🔑'}
+        </button>
       </header>
 
       <div className={`globe-container${selectedEvent ? ' has-panel' : ''}`}>
@@ -257,6 +290,15 @@ export default function App() {
             onNavigate={({ year, flyTo: ft }) => {
               if (year !== undefined) setSliderValue(yearToSlider(year));
               if (ft) setFlyTo(ft);
+            }}
+          />
+          <AdminPanel
+            locale={locale}
+            staticCount={STATIC_EVENTS.length}
+            wikidataCount={wikidataEvents.length}
+            onEventsRefreshed={(evs) => {
+              const staticIds = new Set(STATIC_EVENTS.map(e => e.id));
+              setWikidataEvents((evs as HistoricalEvent[]).filter(e => !staticIds.has(e.id)));
             }}
           />
           <button
@@ -291,6 +333,8 @@ export default function App() {
           onEraClick={handleEraClick}
         />
       </div>
+
+      {authOpen && <AuthModal locale={locale} onClose={() => setAuthOpen(false)} />}
     </div>
   );
 }
