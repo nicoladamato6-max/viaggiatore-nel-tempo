@@ -91,6 +91,34 @@ function formatYear(year: number): string {
   return `${year} d.C.`;
 }
 
+// ── Text-to-Speech ────────────────────────────────────────────────────────
+function useTTS() {
+  const [speaking, setSpeaking] = useState(false);
+
+  function speak(text: string, lang: string) {
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    if (speaking) { setSpeaking(false); return; }
+    const utt = new SpeechSynthesisUtterance(text);
+    utt.lang  = lang === 'it' ? 'it-IT' : 'en-US';
+    utt.rate  = 0.95;
+    utt.onend = () => setSpeaking(false);
+    utt.onerror = () => setSpeaking(false);
+    window.speechSynthesis.speak(utt);
+    setSpeaking(true);
+  }
+
+  function stop() {
+    window.speechSynthesis?.cancel();
+    setSpeaking(false);
+  }
+
+  // Ferma automaticamente quando il componente si smonta
+  useEffect(() => () => { window.speechSynthesis?.cancel(); }, []);
+
+  return { speaking, speak, stop };
+}
+
 // ── Componente ────────────────────────────────────────────────────────────
 interface Props {
   event:   HistoricalEvent | null;
@@ -107,6 +135,7 @@ export function InfoPanel({ event, locale, onClose }: Props) {
   const startW     = useRef(0);
 
   const { body, wikiUrl, wikiBase, loading } = useWikiContent(event?.wikipediaSlug, locale);
+  const { speaking, speak, stop } = useTTS();
 
   // Fix percorsi Wikipedia dopo ogni render del corpo
   useEffect(() => {
@@ -143,6 +172,9 @@ export function InfoPanel({ event, locale, onClose }: Props) {
   function onHandleDblClick() { setWidth(DEFAULT_W); }
 
   // ── placeholder quando nessun evento ────────────────────────────────────
+  // Ferma TTS quando cambia evento
+  useEffect(() => { stop(); }, [event?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+
   if (!event) {
     return (
       <div ref={panelRef} className="info-panel info-panel--empty" style={{ width }}>
@@ -179,7 +211,19 @@ export function InfoPanel({ event, locale, onClose }: Props) {
         >
           {CATEGORY_LABELS[event.category]}
         </span>
-        <button className="info-panel__icon-btn" onClick={onClose} aria-label="Chiudi">×</button>
+        <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
+          {window.speechSynthesis && (
+            <button
+              className={`info-panel__icon-btn${speaking ? ' tts-active' : ''}`}
+              onClick={() => speak(`${event.title}. ${event.description}`, locale)}
+              title={speaking ? 'Ferma lettura' : 'Leggi ad alta voce'}
+              aria-label="Text-to-speech"
+            >
+              {speaking ? '⏹' : '🔊'}
+            </button>
+          )}
+          <button className="info-panel__icon-btn" onClick={onClose} aria-label="Chiudi">×</button>
+        </div>
       </div>
 
       {/* dati evento + Wikipedia — tutto in un unico contenitore scrollabile */}

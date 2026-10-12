@@ -4,10 +4,11 @@ import { GlobeView } from './components/GlobeView';
 import { InfoPanel } from './components/InfoPanel';
 import { TimeControls } from './components/TimeControls';
 import { SearchBar } from './components/SearchBar';
+import { TimeMachine } from './components/TimeMachine';
 import eventsData from './data/events.json';
 import { getBestMap } from './data/historicalMaps';
 import { type HistoricalEvent, type EventCategory, type FlyTarget, type Locale } from './types';
-import { PLANETS, toPlanetSearchItem } from './utils/celestialMechanics';
+import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 
 const ALL_EVENTS = eventsData as HistoricalEvent[];
 
@@ -25,12 +26,20 @@ const SUN_SEARCH: HistoricalEvent = {
   wikipediaSlug: 'Sun',
 };
 const PLANET_SEARCH_ITEMS = PLANETS.map(toPlanetSearchItem);
+const MOON_SEARCH_ITEMS   = MOONS.map(toMoonSearchItem);
 
-// ID dei corpi celesti (matchano gli ID entità CesiumJS)
-const BODY_IDS = new Set(['luna', 'sole', ...PLANETS.map(p => `planet-${p.id}`)]);
+// ID dei corpi celesti (matchano gli ID entità CesiumJS o lune che volano verso il genitore)
+const BODY_IDS = new Set([
+  'luna', 'sole',
+  ...PLANETS.map(p => `planet-${p.id}`),
+  ...MOONS.map(m => `moon-${m.id}`),
+]);
 
 // Tutto ciò che è cercabile nella SearchBar
-const ALL_SEARCHABLE = [...ALL_EVENTS, MOON_SEARCH, SUN_SEARCH, ...PLANET_SEARCH_ITEMS];
+const ALL_SEARCHABLE = [
+  ...ALL_EVENTS, MOON_SEARCH, SUN_SEARCH,
+  ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS,
+];
 
 // ── Scala piecewise ridistribuita per densità informativa ────────────────────
 // Ogni macro-era storica ottiene spazio proporzionale ai suoi eventi, non alla durata.
@@ -137,9 +146,17 @@ export default function App() {
     });
   }, []);
 
-  // Ricerca: corpi celesti → flyTo 'body'; eventi storici → flyTo 'geo' + sposta slider
+  // Ricerca: corpi celesti → flyTo 'body'; lune → flyTo verso il pianeta genitore; eventi storici → geo + slider
   const handleSearchSelect = useCallback((event: HistoricalEvent) => {
     setSelectedEvent(event);
+
+    if (event.id.startsWith('moon-')) {
+      // Luna selezionata: vola verso il pianeta genitore
+      const moonId = event.id.replace('moon-', '');
+      const moon   = MOONS.find(m => m.id === moonId);
+      if (moon) setFlyTo({ kind: 'body', entityId: `planet-${moon.parentPlanetId}`, ts: Date.now() });
+      return;
+    }
 
     if (BODY_IDS.has(event.id)) {
       setFlyTo({ kind: 'body', entityId: event.id, ts: Date.now() });
@@ -211,7 +228,7 @@ export default function App() {
     <div className="app">
       <header className="header">
         <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
-        <SearchBar events={ALL_SEARCHABLE} onSelect={handleSearchSelect} />
+        <SearchBar events={ALL_SEARCHABLE} onSelect={handleSearchSelect} locale={locale} />
         <button
           className="locale-toggle-btn"
           onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
@@ -234,6 +251,13 @@ export default function App() {
             showTerritories={showTerritories}
             locale={locale}
             onEventClick={handleEventClick}
+          />
+          <TimeMachine
+            locale={locale}
+            onNavigate={({ year, flyTo: ft }) => {
+              if (year !== undefined) setSliderValue(yearToSlider(year));
+              if (ft) setFlyTo(ft);
+            }}
           />
           <button
             className={`territory-toggle-btn${showTerritories ? ' active' : ''}`}

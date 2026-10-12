@@ -79,7 +79,7 @@ export interface PlanetData {
   description: string;
 }
 
-// ── Catlogo pianeti ─────────────────────────────────────────────────────────
+// ── Catalogo pianeti + pianeti nani + comete ────────────────────────────────
 export const PLANETS: PlanetData[] = [
   {
     id: 'mercurio', name: 'Mercurio', radius: 2_439_700, color: '#b8b8b8',
@@ -128,6 +128,31 @@ export const PLANETS: PlanetData[] = [
     el: { a: 39.482, e: 0.2488, i: 17.14, O: 110.30,  w: 113.83,  L0: 238.93,  T: 90560    },
     discoveryYear: 1930, discoverer: 'Clyde Tombaugh', wikipediaSlug: 'Pluto',
     description: 'Scoperto il 18 febbraio 1930 da Clyde Tombaugh al Lowell Observatory di Flagstaff, Arizona. Pianeta nano dal 2006. La sonda New Horizons nel 2015 ha rivelato montagne di ghiaccio e un cuore rosato.',
+  },
+  // ── Pianeti nani ─────────────────────────────────────────────────────────
+  {
+    id: 'cerere', name: 'Cerere', radius: 476_200, color: '#a89880',
+    el: { a: 2.7692, e: 0.0760, i: 10.594, O: 80.305, w: 73.597, L0: 95.989, T: 1681.63 },
+    discoveryYear: 1801, discoverer: 'Giuseppe Piazzi', wikipediaSlug: 'Ceres_(dwarf_planet)',
+    description: 'Scoperto il 1° gennaio 1801 dall\'astronomo siciliano Giuseppe Piazzi. È il corpo più grande della fascia degli asteroidi e l\'unico pianeta nano della fascia interna. La sonda Dawn (2015) ha rivelato macchie luminose di sali nei crateri.',
+  },
+  {
+    id: 'eris', name: 'Eris', radius: 1_163_000, color: '#d8d0c8',
+    el: { a: 67.868, e: 0.4418, i: 44.040, O: 35.951, w: 151.087, L0: 204.16, T: 204_196 },
+    discoveryYear: 2005, discoverer: 'Brown, Trujillo, Rabinowitz', wikipediaSlug: 'Eris_(dwarf_planet)',
+    description: 'Scoperta nel 2005 da Mike Brown et al. al Palomar Observatory. Con massa leggermente superiore a Plutone, la sua scoperta ha innescato il dibattito che ha portato alla reclassificazione dei pianeti nani nel 2006. Ha una luna, Disnomia.',
+  },
+  {
+    id: 'makemake', name: 'Makemake', radius: 715_000, color: '#c47c5a',
+    el: { a: 45.791, e: 0.1613, i: 29.006, O: 79.620, w: 294.83, L0: 81.26, T: 112_885 },
+    discoveryYear: 2005, discoverer: 'Brown, Trujillo, Rabinowitz', wikipediaSlug: 'Makemake',
+    description: 'Scoperto nel 2005 dallo stesso team che scoprì Eris. Il terzo pianeta nano per dimensioni nel Sistema Solare esterno, prende il nome dal dio creatore della mitologia Rapa Nui (Isola di Pasqua). Ha una piccola luna scoperta nel 2016.',
+  },
+  {
+    id: 'haumea', name: 'Haumea', radius: 780_000, color: '#e0d4c0',
+    el: { a: 43.218, e: 0.1964, i: 28.213, O: 122.167, w: 239.508, L0: 218.21, T: 103_774 },
+    discoveryYear: 2004, discoverer: 'Brown / Ortiz', wikipediaSlug: 'Haumea',
+    description: 'Pianeta nano dalla forma elissoidale elongata: ruota così velocemente (3,9 ore) da essere "schiacciato" agli equatori. Ha un sistema di anelli e due lune: Hi\'iaka e Namaka. Prende il nome dalla dea hawaiiana della fertilità.',
   },
 ];
 
@@ -195,5 +220,85 @@ export function toPlanetSearchItem(planet: PlanetData): HistoricalEvent {
     isCosmic: false,
     description: planet.description,
     wikipediaSlug: planet.wikipediaSlug,
+  };
+}
+
+// ── Lune principali ──────────────────────────────────────────────────────────
+
+export interface MoonData {
+  id: string;
+  name: string;
+  parentPlanetId: string;   // id del pianeta in PLANETS (es. 'giove')
+  radius: number;
+  color: string;
+  discoveryYear: number;
+  discoverer: string;
+  wikipediaSlug: string;
+  description: string;
+}
+
+export const MOONS: MoonData[] = [
+  {
+    id: 'io', name: 'Io', parentPlanetId: 'giove', radius: 1_821_600, color: '#f0d060',
+    discoveryYear: 1610, discoverer: 'Galileo Galilei', wikipediaSlug: 'Io_(moon)',
+    description: 'La luna più interna e la più vulcanicamente attiva del Sistema Solare. Scoperta da Galileo nel 1610, ha oltre 400 vulcani attivi. Le eruzioni di Io possono proiettare materiale a centinaia di km di quota.',
+  },
+  {
+    id: 'europa', name: 'Europa', parentPlanetId: 'giove', radius: 1_560_800, color: '#b8c8e8',
+    discoveryYear: 1610, discoverer: 'Galileo Galilei', wikipediaSlug: 'Europa_(moon)',
+    description: 'Coperta da uno strato di ghiaccio sotto cui si cela un oceano d\'acqua liquida profondo circa 100 km. Scoperta da Galileo nel 1610, è uno dei luoghi più promettenti per la ricerca di vita extraterrestre nel Sistema Solare.',
+  },
+  {
+    id: 'ganimede', name: 'Ganimede', parentPlanetId: 'giove', radius: 2_634_100, color: '#a0a0a0',
+    discoveryYear: 1610, discoverer: 'Galileo Galilei', wikipediaSlug: 'Ganymede_(moon)',
+    description: 'La luna più grande del Sistema Solare: più grande del pianeta Mercurio. Scoperta da Galileo nel 1610, è l\'unica luna con un campo magnetico proprio. Possiede un oceano salato sotto la crosta ghiacciata.',
+  },
+  {
+    id: 'callisto', name: 'Callisto', parentPlanetId: 'giove', radius: 2_410_300, color: '#706050',
+    discoveryYear: 1610, discoverer: 'Galileo Galilei', wikipediaSlug: 'Callisto_(moon)',
+    description: 'La luna più esterna delle quattro galileiane. Scoperta da Galileo nel 1610, ha la superficie più craterizzata del Sistema Solare — un record di bombardamenti risalente a 4 miliardi di anni fa. Possibile candidata per future basi umane.',
+  },
+  {
+    id: 'titano', name: 'Titano', parentPlanetId: 'saturno', radius: 2_574_700, color: '#d4a840',
+    discoveryYear: 1655, discoverer: 'Christiaan Huygens', wikipediaSlug: 'Titan_(moon)',
+    description: 'La più grande luna di Saturno, scoperta da Huygens nel 1655. È l\'unico corpo del Sistema Solare oltre la Terra con liquidi stabili in superficie: laghi e fiumi di metano. La sonda Cassini-Huygens l\'ha esplorata tra il 2004 e il 2017.',
+  },
+  {
+    id: 'encelado', name: 'Encelado', parentPlanetId: 'saturno', radius: 252_100, color: '#f0f8ff',
+    discoveryYear: 1789, discoverer: 'William Herschel', wikipediaSlug: 'Enceladus',
+    description: 'Scoperto da William Herschel nel 1789. La sua superficie ghiacciata riflette il 99% della luce solare — la più alta albedo del Sistema Solare. Cassini ha scoperto geyser di vapore acqueo e molecole organiche che scaturiscono da un oceano sotterraneo.',
+  },
+  {
+    id: 'tritone', name: 'Tritone', parentPlanetId: 'nettuno', radius: 1_353_400, color: '#c0d8d0',
+    discoveryYear: 1846, discoverer: 'William Lassell', wikipediaSlug: 'Triton_(moon)',
+    description: 'Scoperto appena 17 giorni dopo Nettuno da William Lassell nel 1846. Orbita in senso retrogrado (opposto alla rotazione del pianeta), suggerendo una cattura dall\'esterno. Ha geyser di azoto e si avvicina lentamente a Nettuno — tra ~3,6 miliardi di anni si disintegrerà.',
+  },
+  {
+    id: 'caronte', name: 'Caronte', parentPlanetId: 'plutone', radius: 606_000, color: '#908888',
+    discoveryYear: 1978, discoverer: 'James Christy', wikipediaSlug: 'Charon_(moon)',
+    description: 'Scoperto nel 1978 da James Christy all\'US Naval Observatory. È così grande rispetto a Plutone (metà del diametro) che i due sono considerati un sistema binario. New Horizons nel 2015 ha rivelato canyon profondi e una regione rossastra al polo nord.',
+  },
+  {
+    id: 'miranda', name: 'Miranda', parentPlanetId: 'urano', radius: 235_800, color: '#d0c8b8',
+    discoveryYear: 1948, discoverer: 'Gerard Kuiper', wikipediaSlug: 'Miranda_(moon)',
+    description: 'Scoperta da Gerard Kuiper nel 1948. Ha le scogliere più alte del Sistema Solare: Verona Rupes è alta fino a 20 km — dieci volte l\'Everest. La superficie caotica suggerisce che Miranda potrebbe essersi frantumata e riassemblata nel passato.',
+  },
+  {
+    id: 'titania', name: 'Titania', parentPlanetId: 'urano', radius: 788_400, color: '#b8c0c8',
+    discoveryYear: 1787, discoverer: 'William Herschel', wikipediaSlug: 'Titania_(moon)',
+    description: 'La più grande luna di Urano, scoperta da William Herschel nel 1787. Prende il nome dalla regina delle fate nell\'opera di Shakespeare "Sogno di una notte di mezza estate". Ha graben (valli da faglia) che suggeriscono antiche espansioni tettoniche.',
+  },
+];
+
+/** Item cercabile nella SearchBar per una luna — vola verso il pianeta genitore in vista cosmica. */
+export function toMoonSearchItem(moon: MoonData): HistoricalEvent {
+  return {
+    id: `moon-${moon.id}`,
+    title: moon.name,
+    year: moon.discoveryYear,
+    category: 'cosmo' as EventCategory,
+    isCosmic: false,
+    description: moon.description,
+    wikipediaSlug: moon.wikipediaSlug,
   };
 }
