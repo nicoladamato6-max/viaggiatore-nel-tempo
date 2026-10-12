@@ -84,11 +84,16 @@ function getTimeWindow(year: number): { from: number; to: number } {
   if (year < -66_000_000)    return { from: year - 10_000_000,  to: year + 10_000_000  };
   if (year < -300_000)       return { from: year - 1_500_000,   to: year + 1_500_000   };
   if (year < -10_000)        return { from: year - 10_000,      to: year + 10_000      };
-  if (year < -3_000)         return { from: year - 1_000,       to: year + 1_000       };
-  if (year < -500)           return { from: year - 400,         to: year + 400         };
-  if (year < 500)            return { from: year - 300,         to: year + 300         };
-  if (year < 1400)           return { from: year - 200,         to: year + 200         };
-  return                            { from: year - 100,         to: year + 100         };
+  if (year <= -3_001)        return { from: year - 3_500,       to: year + 3_500       }; // Preistoria: 100ev/7000y
+  if (year <= -501)          return { from: year - 1_250,       to: year + 1_250       }; // Antico Oriente: 200ev/2499y
+  if (year <= 476)           return { from: year - 300,         to: year + 300         }; // Classico/Antico: ~500ev totali
+  if (year <= 1_000)         return { from: year - 260,         to: year + 260         }; // Alto Medioevo: 200ev/523y
+  if (year <= 1_350)         return { from: year - 140,         to: year + 140         }; // Basso Medioevo: 250ev/349y
+  if (year <= 1_599)         return { from: year - 83,          to: year + 83          }; // Rinascimento: 300ev/248y
+  if (year <= 1_799)         return { from: year - 50,          to: year + 50          }; // Eta Moderna: 400ev/199y
+  if (year <= 1_913)         return { from: year - 23,          to: year + 23          }; // Ottocento: 500ev/113y
+  if (year <= 1_945)         return { from: year - 5,           to: year + 5           }; // Novecento: 600ev/31y
+  return                            { from: year - 10,          to: year + 10          }; // Contemporaneo: 800ev/78y
 }
 
 export function formatYear(year: number): string {
