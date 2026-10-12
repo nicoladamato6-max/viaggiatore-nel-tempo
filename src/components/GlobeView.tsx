@@ -63,7 +63,20 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
   useEffect(() => {
     if (!containerRef.current || viewerRef.current) return;
 
+    // Disabilita il token Ion prima di creare il viewer per evitare richieste Ion
+    // che generano errori "Failed to obtain image tile" in console
+    Cesium.Ion.defaultAccessToken = '';
+
+    const satelliteProvider = new Cesium.UrlTemplateImageryProvider({
+      url: `https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=${MAPTILER_KEY}`,
+      credit: '© MapTiler © OpenStreetMap contributors',
+      maximumLevel: 17,
+    });
+
     const viewer = new Cesium.Viewer(containerRef.current, {
+      // baseLayer (Cesium ≥ 1.104) imposta MapTiler come unico layer base senza
+      // mai caricare il layer Ion di default — nessuna race condition con removeAll()
+      baseLayer: new Cesium.ImageryLayer(satelliteProvider),
       animation: false, timeline: false, geocoder: false, homeButton: false,
       sceneModePicker: false, baseLayerPicker: false, navigationHelpButton: false,
       infoBox: false, selectionIndicator: false, fullscreenButton: false,
@@ -83,16 +96,6 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
     const pins = new Cesium.PointPrimitiveCollection();
     viewer.scene.primitives.add(pins);
     pinsRef.current = pins;
-
-    // Imagery satellite MapTiler — sostituisce il layer Ion di default
-    viewer.imageryLayers.removeAll();
-    viewer.imageryLayers.addImageryProvider(
-      new Cesium.UrlTemplateImageryProvider({
-        url: `https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=${MAPTILER_KEY}`,
-        credit: '© MapTiler © OpenStreetMap contributors',
-        maximumLevel: 17,
-      })
-    );
 
     // Terreno 3D MapTiler quantized-mesh (formato Cesium-compatibile)
     Cesium.CesiumTerrainProvider.fromUrl(
