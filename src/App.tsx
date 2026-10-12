@@ -140,6 +140,7 @@ function AppInner() {
   ], [ALL_EVENTS]);
 
   const [sliderValue, setSliderValue]     = useState(yearToSlider(-753));
+  const [overrideYear, setOverrideYear]   = useState<number | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<HistoricalEvent | null>(null);
   const [mobileGlobeH, setMobileGlobeH] = useState(40); // vh
   const splitDragRef = useRef<{ startY: number; startH: number } | null>(null);
@@ -150,7 +151,7 @@ function AppInner() {
     new Set(['storia', 'arte', 'musica', 'scienza', 'geologia', 'cosmo'])
   );
 
-  const currentYear  = sliderToYear(sliderValue);
+  const currentYear  = overrideYear !== null ? overrideYear : sliderToYear(sliderValue);
   const isCosmicView = currentYear < -4_500_000_000;
   const timeWindow   = useMemo(() => getTimeWindow(currentYear), [currentYear]);
 
@@ -288,7 +289,10 @@ function AppInner() {
           <TimeMachine
             locale={locale}
             onNavigate={({ year, flyTo: ft }) => {
-              if (year !== undefined) setSliderValue(yearToSlider(year));
+              if (year !== undefined) {
+                setSliderValue(yearToSlider(year));
+                setOverrideYear(year);
+              }
               if (ft) setFlyTo(ft);
             }}
           />
@@ -327,7 +331,7 @@ function AppInner() {
           currentYear={currentYear}
           formatYear={formatYear}
           getEra={getEra}
-          onSliderChange={setSliderValue}
+          onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
           activeCategories={activeCategories}
           onToggleCategory={toggleCategory}
           onEraClick={handleEraClick}
