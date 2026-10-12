@@ -17,8 +17,8 @@ function objToB64url(obj: object): string {
 
 function b64urlToObj(s: string): Record<string, unknown> {
   const pad = s.replace(/-/g, '+').replace(/_/g, '/');
-  const padded = pad + '==='.slice((4 - pad.length % 4) % 4);
-  const bin = atob(padded);
+  const padding = (4 - pad.length % 4) % 4;
+  const bin = atob(pad + '='.repeat(padding));
   const bytes = new Uint8Array(bin.length);
   for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
   return JSON.parse(new TextDecoder().decode(bytes));
