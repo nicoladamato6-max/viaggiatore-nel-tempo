@@ -72,6 +72,10 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
       credit: '© MapTiler © OpenStreetMap contributors',
       maximumLevel: 17,
     });
+    // Cesium chiama console.error solo se numberOfListeners === 0 su errorEvent.
+    // Un listener vuoto sopprime il rumore da tile falliti — il rendering usa
+    // i tile adiacenti come fallback, quindi nessun impatto visivo.
+    satelliteProvider.errorEvent.addEventListener(() => {});
 
     const viewer = new Cesium.Viewer(containerRef.current, {
       // baseLayer (Cesium ≥ 1.104) imposta MapTiler come unico layer base senza
