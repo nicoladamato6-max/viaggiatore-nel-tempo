@@ -20,6 +20,10 @@ export function parseYear(raw: string): number | null {
   if (!s) return null;
   const lower = s.toLowerCase();
 
+  // "anno X ..." → togli prefisso e riprova ricorsivamente
+  const annoMatch = lower.match(/^(?:anno|year|l'anno|nell'anno)\s+(.+)/i);
+  if (annoMatch) return parseYear(annoMatch[1]);
+
   // Grandi scale temporali: "65 milioni di anni fa", "3.8 miliardi"
   const mldMatch = lower.match(/(\d[\d.,]*)\s*miliard[io]/);
   if (mldMatch) return -Math.round(parseFloat(mldMatch[1].replace(',', '.')) * 1e9);
@@ -172,8 +176,8 @@ export function TimeMachine({ locale, onNavigate }: Props) {
       try {
         const geo = await geocode(place.trim(), ctrl.signal);
         if (geo) {
-          // Quota ~2000m = massimo zoom con MapTiler livello 17 (1.2m/px) senza sgranare
-          flyTo = { kind: 'geo', lat: geo.lat, lng: geo.lng, ts: Date.now(), range: 2_000 };
+          // 8000m = zoom livello 15-16, affidabile globalmente incluse aree a copertura ridotta
+          flyTo = { kind: 'geo', lat: geo.lat, lng: geo.lng, ts: Date.now(), range: 8_000 };
           const shortName = geo.name.split(',')[0];
           addLog(`▸ ${it ? 'Destinazione confermata' : 'Destination confirmed'}: ${shortName}`);
         } else {
