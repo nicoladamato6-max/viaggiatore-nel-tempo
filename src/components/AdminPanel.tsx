@@ -1,38 +1,63 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { type Locale } from '../types';
 
 interface Props {
   locale:           Locale;
+  open:             boolean;
+  setOpen:          (v: boolean) => void;
   wikidataCount:    number;
   staticCount:      number;
+  staticBreakdown:  Record<string, number>;
   onEventsRefreshed: (events: unknown[]) => void;
 }
 
 interface ApiStatus {
-  count:       number;
-  lastRefresh: number | null;
+  count:             number;
+  lastRefresh:       number | null;
+  categoryBreakdown: Record<string, number>;
 }
 
-export function AdminPanel({ locale, wikidataCount, staticCount, onEventsRefreshed }: Props) {
+const CAT_ICONS: Record<string, string> = {
+  storia: '⚔️', arte: '🎨', scienza: '🔬',
+  musica: '🎵', geologia: '🌋', cosmo: '🌌',
+};
+const CAT_IT: Record<string, string> = {
+  storia: 'Storia', arte: 'Arte', scienza: 'Scienza',
+  musica: 'Musica', geologia: 'Geologia', cosmo: 'Cosmo',
+};
+const CAT_EN: Record<string, string> = {
+  storia: 'History', arte: 'Art', scienza: 'Science',
+  musica: 'Music', geologia: 'Geology', cosmo: 'Cosmos',
+};
+
+export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, staticBreakdown, onEventsRefreshed }: Props) {
   const { token, user, logout } = useAuth();
-  const [open,     setOpen]     = useState(false);
   const [status,   setStatus]   = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [msg,      setMsg]      = useState('');
   const [apiInfo,  setApiInfo]  = useState<ApiStatus | null>(null);
 
   const it = locale === 'it';
+  const catLabel = it ? CAT_IT : CAT_EN;
 
-  // Load current API cache info
   useEffect(() => {
     if (!open) return;
     fetch('/api/events')
       .then(r => r.json())
-      .then((d: { count?: number; lastRefresh?: number }) => {
-        setApiInfo({ count: d.count ?? 0, lastRefresh: d.lastRefresh ?? null });
+      .then((d: { count?: number; lastRefresh?: number; events?: Array<{ category?: string }> }) => {
+        const breakdown: Record<string, number> = {};
+        for (const e of d.events ?? []) {
+          if (e.category) breakdown[e.category] = (breakdown[e.category] ?? 0) + 1;
+        }
+        setApiInfo({ count: d.count ?? 0, lastRefresh: d.lastRefresh ?? null, categoryBreakdown: breakdown });
       })
       .catch(() => setApiInfo(null));
   }, [open]);
+
+  // Recompute wikidata breakdown from apiInfo when available; fall back to wikidataCount
+  const wdBreakdown = useMemo(() => apiInfo?.categoryBreakdown ?? {}, [apiInfo]);
+  const wdTotal     = apiInfo?.count ?? wikidataCount;
+  const total       = staticCount + wdTotal;
 
   async function handleRefresh() {
     if (!token) return;
@@ -57,14 +82,17 @@ export function AdminPanel({ locale, wikidataCount, staticCount, onEventsRefresh
         ? '⚡ Refresh avviato — gli eventi Wikidata saranno disponibili tra circa 30 secondi'
         : '⚡ Refresh started — Wikidata events will be available in ~30 seconds');
 
-      // After 35 seconds, poll for new events
       setTimeout(async () => {
         try {
           const r = await fetch('/api/events');
-          const d = await r.json() as { events?: unknown[]; count?: number; lastRefresh?: number };
+          const d = await r.json() as { events?: unknown[]; count?: number; lastRefresh?: number; events_typed?: Array<{ category?: string }> };
           if (d.events && d.events.length > 0) {
             onEventsRefreshed(d.events);
-            setApiInfo({ count: d.count ?? d.events.length, lastRefresh: d.lastRefresh ?? null });
+            const breakdown: Record<string, number> = {};
+            for (const e of (d.events as Array<{ category?: string }>)) {
+              if (e.category) breakdown[e.category] = (breakdown[e.category] ?? 0) + 1;
+            }
+            setApiInfo({ count: d.count ?? d.events.length, lastRefresh: d.lastRefresh ?? null, categoryBreakdown: breakdown });
             setMsg(it
               ? `✦ ${d.events.length} eventi da Wikidata caricati sulla mappa`
               : `✦ ${d.events.length} Wikidata events loaded on the map`);
@@ -84,81 +112,109 @@ export function AdminPanel({ locale, wikidataCount, staticCount, onEventsRefresh
   }
 
   if (!user || user.role !== 'admin') return null;
+  if (!open) return null;
+
+  const STATIC_CATS = ['storia', 'arte', 'scienza', 'musica', 'geologia', 'cosmo'];
 
   return (
-    <>
-      {/* Floating trigger */}
-      <button
-        className="admin-trigger"
-        onClick={() => setOpen(v => !v)}
-        title={it ? 'Pannello Amministratore' : 'Admin Panel'}
-      >
-        ⚙️
-      </button>
+    <div className="admin-overlay" onClick={e => { if (e.target === e.currentTarget) setOpen(false); }}>
+      <div className="admin-console">
 
-      {/* Overlay */}
-      {open && (
-        <div className="admin-overlay" onClick={e => { if (e.target === e.currentTarget) setOpen(false); }}>
-          <div className="admin-console">
+        <div className="admin-header">
+          <div className="admin-title">
+            {it ? 'PANNELLO AMMINISTRATORE' : 'ADMINISTRATOR PANEL'}
+          </div>
+          <button className="admin-close" onClick={() => setOpen(false)}>✕</button>
+        </div>
+        <div className="admin-subtitle">— {user.email} · ADMIN —</div>
 
-            <div className="admin-header">
-              <div className="admin-title">
-                {it ? 'PANNELLO AMMINISTRATORE' : 'ADMINISTRATOR PANEL'}
-              </div>
-              <button className="admin-close" onClick={() => setOpen(false)}>✕</button>
+        <div className="admin-body">
+
+          {/* ── Sezione eventi statici ── */}
+          <div className="admin-stats-section">
+            <div className="admin-stats-section__header">
+              <span className="admin-stats-section__title">
+                {it ? 'EVENTI STATICI' : 'STATIC EVENTS'}
+              </span>
+              <span className="admin-stats-section__count">{staticCount}</span>
             </div>
-            <div className="admin-subtitle">— {user.email} · ADMIN —</div>
-
-            <div className="admin-body">
-
-              {/* Stats */}
-              <div className="admin-stats">
-                <div className="admin-stat">
-                  <span className="admin-stat__label">{it ? 'EVENTI BASE' : 'BASE EVENTS'}</span>
-                  <span className="admin-stat__value">{staticCount}</span>
-                </div>
-                <div className="admin-stat">
-                  <span className="admin-stat__label">{it ? 'DA WIKIDATA' : 'FROM WIKIDATA'}</span>
-                  <span className="admin-stat__value">{wikidataCount > 0 ? wikidataCount : (apiInfo?.count ?? 0)}</span>
-                </div>
-                <div className="admin-stat admin-stat--wide">
-                  <span className="admin-stat__label">{it ? 'ULTIMO REFRESH' : 'LAST REFRESH'}</span>
-                  <span className="admin-stat__value admin-stat__value--small">
-                    {fmtDate(apiInfo?.lastRefresh ?? null)}
-                  </span>
-                </div>
-              </div>
-
-              {/* Log */}
-              {msg && (
-                <div className={`admin-msg admin-msg--${status}`}>{msg}</div>
-              )}
-
-              {/* Refresh button */}
-              <button
-                className={`admin-refresh-btn${status === 'loading' ? ' admin-refresh-btn--loading' : ''}${status === 'success' ? ' admin-refresh-btn--done' : ''}`}
-                onClick={handleRefresh}
-                disabled={status === 'loading'}
-              >
-                {status === 'loading'
-                  ? (it ? '◌ PIPELINE IN ESECUZIONE…' : '◌ PIPELINE RUNNING…')
-                  : (it ? '⟳ AGGIORNA DA WIKIDATA' : '⟳ REFRESH FROM WIKIDATA')}
-              </button>
-
-              <div className="admin-note">
-                {it
-                  ? 'Recupera battaglie, disastri e scoperte scientifiche geocodificate da Wikidata e li aggiunge alla mappa.'
-                  : 'Fetches geocoded battles, disasters and scientific discoveries from Wikidata and adds them to the map.'}
-              </div>
-
-              {/* Logout */}
-              <button className="admin-logout" onClick={() => { logout(); setOpen(false); }}>
-                {it ? '⏏ Esci dall\'account' : '⏏ Sign out'}
-              </button>
+            <div className="admin-stats-section__ts">
+              {it ? 'Incorporati nella build' : 'Bundled in build'}
+            </div>
+            <div className="admin-category-pills">
+              {STATIC_CATS.map(cat => (
+                <span key={cat} className="admin-category-pill">
+                  {CAT_ICONS[cat]} {catLabel[cat]}: {staticBreakdown[cat] ?? 0}
+                </span>
+              ))}
             </div>
           </div>
+
+          {/* ── Sezione eventi Wikidata ── */}
+          <div className="admin-stats-section">
+            <div className="admin-stats-section__header">
+              <span className="admin-stats-section__title">
+                {it ? 'EVENTI WIKIDATA' : 'WIKIDATA EVENTS'}
+              </span>
+              <span className="admin-stats-section__count">{wdTotal}</span>
+            </div>
+            <div className="admin-stats-section__ts">
+              {it ? 'Ultimo aggiornamento: ' : 'Last refresh: '}
+              <strong>{fmtDate(apiInfo?.lastRefresh ?? null)}</strong>
+            </div>
+            {wdTotal > 0 && (
+              <div className="admin-category-pills">
+                {['storia', 'geologia', 'scienza'].map(cat => (
+                  wdBreakdown[cat] ? (
+                    <span key={cat} className="admin-category-pill">
+                      {CAT_ICONS[cat]} {catLabel[cat]}: {wdBreakdown[cat]}
+                    </span>
+                  ) : null
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* ── Totale ── */}
+          <div className="admin-stats-section admin-stats-section--total">
+            <div className="admin-stats-section__header">
+              <span className="admin-stats-section__title">
+                {it ? 'TOTALE SULLA MAPPA' : 'TOTAL ON MAP'}
+              </span>
+              <span className="admin-stats-section__count admin-stats-section__count--total">
+                {total}
+              </span>
+            </div>
+          </div>
+
+          {/* Log */}
+          {msg && (
+            <div className={`admin-msg admin-msg--${status}`}>{msg}</div>
+          )}
+
+          {/* Refresh button */}
+          <button
+            className={`admin-refresh-btn${status === 'loading' ? ' admin-refresh-btn--loading' : ''}${status === 'success' ? ' admin-refresh-btn--done' : ''}`}
+            onClick={handleRefresh}
+            disabled={status === 'loading'}
+          >
+            {status === 'loading'
+              ? (it ? '◌ PIPELINE IN ESECUZIONE…' : '◌ PIPELINE RUNNING…')
+              : (it ? '⟳ AGGIORNA DA WIKIDATA' : '⟳ REFRESH FROM WIKIDATA')}
+          </button>
+
+          <div className="admin-note">
+            {it
+              ? 'Recupera battaglie, disastri e scoperte scientifiche geocodificate da Wikidata e li aggiunge alla mappa.'
+              : 'Fetches geocoded battles, disasters and scientific discoveries from Wikidata and adds them to the map.'}
+          </div>
+
+          {/* Logout */}
+          <button className="admin-logout" onClick={() => { logout(); setOpen(false); }}>
+            {it ? '⏏ Esci dall\'account' : '⏏ Sign out'}
+          </button>
         </div>
-      )}
-    </>
+      </div>
+    </div>
   );
 }

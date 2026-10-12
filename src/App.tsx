@@ -115,8 +115,10 @@ export default function App() {
 }
 
 function AppInner() {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
   const [authOpen, setAuthOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const [adminOpen, setAdminOpen] = useState(false);
 
   // Dynamic events: static baseline + Wikidata enrichment
   const [wikidataEvents, setWikidataEvents] = useState<HistoricalEvent[]>([]);
@@ -131,6 +133,12 @@ function AppInner() {
         }
       })
       .catch(() => { /* API not available, static only */ });
+  }, []);
+
+  const staticBreakdown = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const e of STATIC_EVENTS) counts[e.category] = (counts[e.category] ?? 0) + 1;
+    return counts;
   }, []);
 
   const ALL_EVENTS     = useMemo(() => [...STATIC_EVENTS, ...wikidataEvents], [wikidataEvents]);
@@ -255,21 +263,51 @@ function AppInner() {
     <div className="app">
       <header className="header">
         <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
+        <button
+          className={`header-maps-btn${showTerritories ? ' active' : ''}`}
+          onClick={() => setShowTerritories(v => !v)}
+          title={locale === 'it' ? (showTerritories ? 'Nascondi mappe storiche' : 'Mostra mappe storiche') : (showTerritories ? 'Hide historical maps' : 'Show historical maps')}
+        >
+          🌐
+        </button>
         <SearchBar events={ALL_SEARCHABLE} onSelect={handleSearchSelect} locale={locale} />
         <button
           className="locale-toggle-btn"
           onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
           title={locale === 'it' ? 'Switch to English' : 'Passa all\'italiano'}
         >
-          {locale === 'it' ? '🇬🇧 EN' : '🇮🇹 IT'}
+          {locale === 'it' ? '🇮🇹 IT' : '🇬🇧 EN'} ⇄
         </button>
-        <button
-          className="auth-header-btn"
-          onClick={() => setAuthOpen(true)}
-          title={user ? user.email : (locale === 'it' ? 'Accedi' : 'Sign in')}
-        >
-          {user ? '👤' : '🔑'}
-        </button>
+        <div className="header-auth-wrap">
+          <button
+            className="auth-header-btn"
+            onClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
+            title={user ? user.email : (locale === 'it' ? 'Accedi' : 'Sign in')}
+          >
+            {user ? '👤' : '🔑'}
+          </button>
+          {userMenuOpen && user && (
+            <>
+              <div className="user-menu-backdrop" onClick={() => setUserMenuOpen(false)} />
+              <div className="user-menu">
+                <div className="user-menu__email">{user.email}</div>
+                {user.role === 'admin' && <div className="user-menu__role">ADMIN</div>}
+                <button className="user-menu__logout" onClick={() => { logout(); setUserMenuOpen(false); }}>
+                  {locale === 'it' ? '⏏ Esci dall\'account' : '⏏ Sign out'}
+                </button>
+              </div>
+            </>
+          )}
+        </div>
+        {user?.role === 'admin' && (
+          <button
+            className="admin-header-btn"
+            onClick={() => setAdminOpen(true)}
+            title={locale === 'it' ? 'Pannello Amministratore' : 'Admin Panel'}
+          >
+            ⚙️
+          </button>
+        )}
       </header>
 
       <div className={`globe-container${selectedEvent ? ' has-panel' : ''}`}>
@@ -298,22 +336,16 @@ function AppInner() {
           />
           <AdminPanel
             locale={locale}
+            open={adminOpen}
+            setOpen={setAdminOpen}
             staticCount={STATIC_EVENTS.length}
+            staticBreakdown={staticBreakdown}
             wikidataCount={wikidataEvents.length}
             onEventsRefreshed={(evs) => {
               const staticIds = new Set(STATIC_EVENTS.map(e => e.id));
               setWikidataEvents((evs as HistoricalEvent[]).filter(e => !staticIds.has(e.id)));
             }}
           />
-          <button
-            className={`territory-toggle-btn${showTerritories ? ' active' : ''}`}
-            onClick={() => setShowTerritories(v => !v)}
-            title="Mostra/nascondi mappe politiche storiche"
-          >
-            {showTerritories
-              ? `🗺️ ${getBestMap(currentYear)?.label ?? 'Mappe storiche'}`
-              : '🗺️ Mappe storiche'}
-          </button>
         </div>
         {selectedEvent && (
           <div
