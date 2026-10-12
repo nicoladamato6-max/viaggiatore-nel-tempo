@@ -220,7 +220,8 @@ export function TimeMachine({ locale, onNavigate }: Props) {
         title={it ? 'Macchina del Tempo' : 'Time Machine'}
         aria-label="Time Machine"
       >
-        <span className="tm-trigger__icon">⏳</span>
+        <span className="tm-trigger__icon">🛸</span>
+        <span className="tm-trigger__text">{it ? 'Macchina del Tempo' : 'Time Machine'}</span>
       </button>
 
       {/* Overlay */}
@@ -299,18 +300,25 @@ export function TimeMachine({ locale, onNavigate }: Props) {
                 </div>
               )}
 
-              {/* Pulsante lancio */}
-              <button
-                className={`tm-launch${loading ? ' tm-launch--loading' : ''}${launched ? ' tm-launch--done' : ''}`}
-                onClick={launched ? handleReset : handleLaunch}
-                disabled={loading}
-              >
-                {launched
-                  ? (it ? '🔄 NUOVO SALTO TEMPORALE' : '🔄 NEW TEMPORAL JUMP')
-                  : loading
-                    ? (it ? '◌ CALIBRAZIONE…' : '◌ CALIBRATING…')
-                    : (it ? '⚡ ATTIVA PROPULSIONE' : '⚡ ACTIVATE PROPULSION')}
-              </button>
+              {/* Pulsante lancio + atterraggio */}
+              <div className={launched ? 'tm-launch-row' : undefined}>
+                <button
+                  className={`tm-launch${loading ? ' tm-launch--loading' : ''}${launched ? ' tm-launch--done' : ''}`}
+                  onClick={launched ? handleReset : handleLaunch}
+                  disabled={loading}
+                >
+                  {launched
+                    ? (it ? '🔄 NUOVO SALTO TEMPORALE' : '🔄 NEW TEMPORAL JUMP')
+                    : loading
+                      ? (it ? '◌ CALIBRAZIONE…' : '◌ CALIBRATING…')
+                      : (it ? '⚡ ATTIVA PROPULSIONE' : '⚡ ACTIVATE PROPULSION')}
+                </button>
+                {launched && (
+                  <button className="tm-land" onClick={() => setOpen(false)}>
+                    {it ? '▼ ATTERRAGGIO' : '▼ LAND'}
+                  </button>
+                )}
+              </div>
             </div>
 
             {/* Footer */}

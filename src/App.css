@@ -921,15 +921,15 @@ body {
   bottom: 56px;
   right: 14px;
   z-index: 20;
-  width: 48px;
+  padding: 0 16px;
   height: 48px;
-  border-radius: 50%;
+  border-radius: 24px;
   border: 2px solid rgba(0, 220, 255, 0.5);
   background: radial-gradient(circle at 40% 35%, #001828, #000c14);
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
   box-shadow:
     0 0 12px rgba(0, 200, 255, 0.35),
     0 0 28px rgba(0, 100, 200, 0.2),
@@ -943,11 +943,55 @@ body {
     0 0 20px rgba(0, 255, 255, 0.6),
     0 0 50px rgba(0, 180, 255, 0.3),
     inset 0 0 18px rgba(0, 220, 255, 0.2);
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 .tm-trigger__icon {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   filter: drop-shadow(0 0 6px rgba(0,220,255,0.8));
+  flex-shrink: 0;
+}
+.tm-trigger__text {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #7de8ff;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0,220,255,0.7);
+  white-space: nowrap;
+}
+
+/* ── Riga bottoni post-lancio ── */
+.tm-launch-row {
+  display: flex;
+  gap: 8px;
+}
+.tm-launch-row .tm-launch {
+  flex: 1;
+}
+.tm-land {
+  flex: 0 0 auto;
+  position: relative;
+  background: linear-gradient(135deg, #002818, #001410);
+  border: 1px solid rgba(0, 230, 130, 0.45);
+  border-radius: 3px;
+  color: #00e882;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  cursor: pointer;
+  text-shadow: 0 0 12px rgba(0,230,130,0.8);
+  box-shadow: 0 0 20px rgba(0,200,100,0.15), inset 0 0 20px rgba(0,0,0,0.4);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.tm-land:hover {
+  border-color: rgba(0,255,150,0.8);
+  color: #fff;
+  box-shadow: 0 0 30px rgba(0,230,130,0.4), inset 0 0 25px rgba(0,180,100,0.1);
+  text-shadow: 0 0 16px rgba(0,255,150,1);
 }
 @keyframes tm-breathe {
   0%, 100% { box-shadow: 0 0 12px rgba(0,200,255,0.35), 0 0 28px rgba(0,100,200,0.2), inset 0 0 10px rgba(0,180,255,0.1); }
