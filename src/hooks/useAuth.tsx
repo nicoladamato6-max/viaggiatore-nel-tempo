@@ -18,9 +18,12 @@ const TOKEN_KEY = 'vnt_token';
 function parseUser(token: string): AuthUser | null {
   try {
     const [, body] = token.split('.');
-    const pad = body.replace(/-/g, '+').replace(/_/g, '/');
-    const padded = pad + '==='.slice((4 - pad.length % 4) % 4);
-    const json = JSON.parse(atob(padded));
+    const base64 = body.replace(/-/g, '+').replace(/_/g, '/');
+    const padding = (4 - base64.length % 4) % 4;
+    const bin = atob(base64 + '='.repeat(padding));
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    const json = JSON.parse(new TextDecoder().decode(bytes));
     if (!json.sub || !json.email || !json.role) return null;
     if ((json.exp as number) < Math.floor(Date.now() / 1000)) return null;
     return { id: json.sub, email: json.email, role: json.role };
