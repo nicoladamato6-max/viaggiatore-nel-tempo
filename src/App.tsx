@@ -262,13 +262,6 @@ function AppInner() {
     <div className="app">
       <header className="header">
         <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
-        <button
-          className={`header-maps-btn${showTerritories ? ' active' : ''}`}
-          onClick={() => setShowTerritories(v => !v)}
-          title={locale === 'it' ? (showTerritories ? 'Nascondi mappe storiche' : 'Mostra mappe storiche') : (showTerritories ? 'Hide historical maps' : 'Show historical maps')}
-        >
-          🌐
-        </button>
         <SearchBar events={ALL_SEARCHABLE} onSelect={handleSearchSelect} locale={locale} />
         <button
           className="locale-toggle-btn"
@@ -333,6 +326,13 @@ function AppInner() {
               if (ft) setFlyTo(ft);
             }}
           />
+          <button
+            className={`territory-toggle-btn${showTerritories ? ' active' : ''}`}
+            onClick={() => setShowTerritories(v => !v)}
+            title={locale === 'it' ? (showTerritories ? 'Nascondi mappe storiche' : 'Mostra mappe storiche') : (showTerritories ? 'Hide historical maps' : 'Show historical maps')}
+          >
+            {showTerritories ? '🌐 ON' : '🌐'}
+          </button>
           <AdminPanel
             locale={locale}
             open={adminOpen}

@@ -89,8 +89,8 @@ export function SearchBar({ events, onSelect, locale = 'it' }: Props) {
   return (
     <div ref={containerRef} className="search-bar" style={{ position: 'relative' }}>
       <input
-        type="search"
-        placeholder={locale === 'it' ? 'Cerca eventi, persone, luoghi…' : 'Search events, people, places…'}
+        type="text"
+        placeholder={locale === 'it' ? 'Cerca eventi, personaggi, luoghi…' : 'Search events, people, places…'}
         value={query}
         onChange={e => { setQuery(e.target.value); setOpen(true); }}
         onFocus={() => setOpen(true)}

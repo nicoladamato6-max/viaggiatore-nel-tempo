@@ -32,7 +32,7 @@ const CAT_EN: Record<string, string> = {
 };
 
 export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, staticBreakdown, onEventsRefreshed }: Props) {
-  const { token, user, logout } = useAuth();
+  const { token, user } = useAuth();
   const [status,   setStatus]   = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [msg,      setMsg]      = useState('');
   const [apiInfo,  setApiInfo]  = useState<ApiStatus | null>(null);
@@ -208,11 +208,6 @@ export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, 
               ? 'Recupera battaglie, disastri e scoperte scientifiche geocodificate da Wikidata e li aggiunge alla mappa.'
               : 'Fetches geocoded battles, disasters and scientific discoveries from Wikidata and adds them to the map.'}
           </div>
-
-          {/* Logout */}
-          <button className="admin-logout" onClick={() => { logout(); setOpen(false); }}>
-            {it ? '⏏ Esci dall\'account' : '⏏ Sign out'}
-          </button>
         </div>
       </div>
     </div>
