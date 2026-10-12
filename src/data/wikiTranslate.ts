@@ -157,12 +157,22 @@ type LanglinksPage = {
   langlinks?: { lang: string; '*': string }[];
 };
 
-// Cache Wikipedia: `${lang}:${english_name}` → nome tradotto
+// Reverse lookup: nome italiano (lowercase) → nome inglese (Title Case)
+// Costruito una volta sola al caricamento del modulo.
+const STATIC_EN_REVERSE: Record<string, string> = Object.fromEntries(
+  Object.entries(STATIC_IT).map(([eng, ita]) => [
+    ita.toLowerCase(),
+    eng.replace(/\b\w/g, c => c.toUpperCase()),  // Title Case
+  ])
+);
+
+// Cache Wikipedia: `${lang}:${name}` → nome tradotto
 const wikiCache = new Map<string, string>();
 
 /**
- * Traduce un array di nomi inglesi nel locale target.
- * Prima controlla il lookup statico (istantaneo), poi Wikipedia langlinks per il resto.
+ * Traduce un array di nomi territorio nel locale target.
+ * - IT: lookup statico → Wikipedia langlinks come fallback
+ * - EN: reverse lookup (per nomi GeoJSON già in italiano) → nome as-is come fallback
  */
 export async function translateTerritoryNames(
   names: string[],
@@ -172,7 +182,11 @@ export async function translateTerritoryNames(
   const results = new Map<string, string>();
 
   if (targetLang === 'en') {
-    for (const n of names) results.set(n, n);
+    // Il GeoJSON usa nomi misti — alcuni già in italiano. Reverse-lookup per normalizzare in EN.
+    for (const n of names) {
+      const eng = STATIC_EN_REVERSE[n.toLowerCase()];
+      results.set(n, eng ?? n);
+    }
     return results;
   }
 

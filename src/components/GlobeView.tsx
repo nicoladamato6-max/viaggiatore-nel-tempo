@@ -90,7 +90,7 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
       new Cesium.UrlTemplateImageryProvider({
         url: `https://api.maptiler.com/tiles/satellite/{z}/{x}/{y}.jpg?key=${MAPTILER_KEY}`,
         credit: '© MapTiler © OpenStreetMap contributors',
-        maximumLevel: 17,
+        maximumLevel: 19,
       })
     );
 
