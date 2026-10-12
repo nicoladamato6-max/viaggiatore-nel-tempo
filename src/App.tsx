@@ -314,14 +314,38 @@ function AppInner() {
         }
       }
 
-      // Coordinate geografiche (solo Terra = Q2)
+      // Coordinate: prima P625 diretto, poi risolvi luogo indiretto (P19/P20/P740/P159)
       let lat: number | undefined, lng: number | undefined;
-      const cv = claims['P625']?.[0]?.mainsnak?.datavalue?.value;
-      if (cv && typeof cv === 'object') {
-        const coords = cv as { latitude?: number; longitude?: number; globe?: string };
-        if (coords.globe?.endsWith('Q2') && typeof coords.latitude === 'number') {
-          lat = coords.latitude;
-          lng = coords.longitude;
+
+      function extractCoords(value: unknown): { lat: number; lng: number } | null {
+        if (!value || typeof value !== 'object') return null;
+        const c = value as { latitude?: number; longitude?: number; globe?: string };
+        if (c.globe === 'http://www.wikidata.org/entity/Q2' && typeof c.latitude === 'number')
+          return { lat: c.latitude, lng: c.longitude as number };
+        return null;
+      }
+
+      const directCoords = extractCoords(claims['P625']?.[0]?.mainsnak?.datavalue?.value);
+      if (directCoords) {
+        lat = directCoords.lat; lng = directCoords.lng;
+      } else {
+        // Persone: P19 = luogo di nascita. Luoghi/org: P740, P159. Fallback: P20 (morte)
+        for (const prop of ['P19', 'P740', 'P159', 'P20']) {
+          const placeQid = getQid(prop);
+          if (!placeQid) continue;
+          try {
+            const placeParams = new URLSearchParams({
+              action: 'wbgetentities', ids: placeQid,
+              format: 'json', props: 'claims', origin: '*',
+            });
+            const placeRes = await fetch(`https://www.wikidata.org/w/api.php?${placeParams}`);
+            if (!placeRes.ok) continue;
+            const placeData = await placeRes.json() as {
+              entities?: Record<string, { claims?: Record<string, Array<{ mainsnak: { datavalue?: { value: unknown } } }>> }>;
+            };
+            const pc = extractCoords(placeData.entities?.[placeQid]?.claims?.['P625']?.[0]?.mainsnak?.datavalue?.value);
+            if (pc) { lat = pc.lat; lng = pc.lng; break; }
+          } catch { continue; }
         }
       }
 
