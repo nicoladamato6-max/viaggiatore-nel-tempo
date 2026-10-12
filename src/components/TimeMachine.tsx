@@ -176,8 +176,8 @@ export function TimeMachine({ locale, onNavigate }: Props) {
       try {
         const geo = await geocode(place.trim(), ctrl.signal);
         if (geo) {
-          // 8000m = zoom livello 15-16, affidabile globalmente incluse aree a copertura ridotta
-          flyTo = { kind: 'geo', lat: geo.lat, lng: geo.lng, ts: Date.now(), range: 8_000 };
+          // 20 000m = zoom livello 12-13, affidabile ovunque su MapTiler satellite free tier
+          flyTo = { kind: 'geo', lat: geo.lat, lng: geo.lng, ts: Date.now(), range: 20_000 };
           const shortName = geo.name.split(',')[0];
           addLog(`▸ ${it ? 'Destinazione confermata' : 'Destination confirmed'}: ${shortName}`);
         } else {
