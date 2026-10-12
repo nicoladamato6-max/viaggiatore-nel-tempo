@@ -26,7 +26,7 @@ export const CATEGORY_COLORS: Record<EventCategory, string> = {
 
 /** Target per la telecamera: coordinata geografica, corpo celeste, o transizione cosmo↔Terra. */
 export type FlyTarget =
-  | { kind: 'geo';    lat: number; lng: number; ts: number }
+  | { kind: 'geo';    lat: number; lng: number; ts: number; range?: number }
   | { kind: 'body';   entityId: string; ts: number }
   | { kind: 'cosmic'; ts: number }
   | { kind: 'earth';  ts: number };

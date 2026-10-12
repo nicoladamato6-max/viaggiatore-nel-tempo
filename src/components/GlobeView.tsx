@@ -510,9 +510,12 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
 
     if (flyTo.kind === 'geo') {
       if (isCosmicView) return;
+      // range opzionale: la Time Machine passa ~2000m per il massimo zoom senza sgranare
+      // (MapTiler livello 17 ≈ 1.2m/pixel, accessibile fino a ~2000m di quota)
+      const altitude = flyTo.range ?? 2_500_000;
       viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(flyTo.lng, flyTo.lat, 2_500_000),
-        duration: 2,
+        destination: Cesium.Cartesian3.fromDegrees(flyTo.lng, flyTo.lat, altitude),
+        duration: altitude < 100_000 ? 3.5 : 2,
         easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });
       return;
