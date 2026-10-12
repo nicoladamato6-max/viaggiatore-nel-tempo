@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { type HistoricalEvent } from '../types';
+import { type HistoricalEvent, type WikiSearchResult } from '../types';
 
-// Dichiarazione minima per SpeechRecognition (non ancora nei tipi standard TS)
 declare global {
   interface Window {
     SpeechRecognition?: new () => SpeechRecognition;
@@ -31,22 +30,82 @@ const SpeechRecognitionClass =
 interface Props {
   events: HistoricalEvent[];
   onSelect: (event: HistoricalEvent) => void;
+  onWikiSelect: (result: WikiSearchResult) => void;
   locale?: string;
 }
 
-export function SearchBar({ events, onSelect, locale = 'it' }: Props) {
-  const [query,    setQuery]    = useState('');
-  const [open,     setOpen]     = useState(false);
-  const [listening, setListening] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+async function searchWikipedia(q: string, lang: string): Promise<WikiSearchResult[]> {
+  const params = new URLSearchParams({
+    action: 'query', list: 'search', srsearch: q,
+    format: 'json', origin: '*', srlimit: '6', srprop: 'snippet',
+  });
+  const res = await fetch(`https://${lang}.wikipedia.org/w/api.php?${params}`);
+  if (!res.ok) return [];
+  const data = await res.json() as {
+    query?: { search?: Array<{ pageid: number; title: string; snippet: string }> };
+  };
+  return (data.query?.search ?? []).map(r => ({
+    pageid: r.pageid,
+    title: r.title,
+    slug: r.title.replace(/\s+/g, '_'),
+    snippet: r.snippet.replace(/<[^>]+>/g, '').slice(0, 90),
+  }));
+}
 
-  const results = query.length >= 2
+export function SearchBar({ events, onSelect, onWikiSelect, locale = 'it' }: Props) {
+  const [query,       setQuery]       = useState('');
+  const [open,        setOpen]        = useState(false);
+  const [listening,   setListening]   = useState(false);
+  const [wikiResults, setWikiResults] = useState<WikiSearchResult[]>([]);
+  const [wikiLoading, setWikiLoading] = useState(false);
+  const containerRef  = useRef<HTMLDivElement>(null);
+  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const wikiTimerRef  = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const wikiAbortRef  = useRef<AbortController | null>(null);
+
+  const lang = locale === 'it' ? 'it' : 'en';
+
+  // Local results — instant, min 2 chars
+  const localResults = query.length >= 2
     ? events.filter(e =>
         e.title.toLowerCase().includes(query.toLowerCase()) ||
         e.description.toLowerCase().includes(query.toLowerCase())
-      ).slice(0, 8)
+      ).slice(0, 5)
     : [];
+
+  // Wikipedia search — debounced 400ms, min 3 chars
+  useEffect(() => {
+    if (query.length < 3) {
+      setWikiResults([]);
+      setWikiLoading(false);
+      return;
+    }
+
+    setWikiLoading(true);
+    if (wikiTimerRef.current) clearTimeout(wikiTimerRef.current);
+    wikiAbortRef.current?.abort();
+
+    wikiTimerRef.current = setTimeout(async () => {
+      const ctrl = new AbortController();
+      wikiAbortRef.current = ctrl;
+      try {
+        const results = await searchWikipedia(query, lang);
+        if (!ctrl.signal.aborted) {
+          // Exclude items already in local results to avoid duplicates
+          const localIds = new Set(localResults.map(e => e.title.toLowerCase()));
+          setWikiResults(results.filter(r => !localIds.has(r.title.toLowerCase())));
+        }
+      } catch {
+        if (!ctrl.signal.aborted) setWikiResults([]);
+      } finally {
+        if (!ctrl.signal.aborted) setWikiLoading(false);
+      }
+    }, 400);
+
+    return () => {
+      if (wikiTimerRef.current) clearTimeout(wikiTimerRef.current);
+    };
+  }, [query, lang]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
@@ -56,35 +115,39 @@ export function SearchBar({ events, onSelect, locale = 'it' }: Props) {
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
-  function handleSelect(event: HistoricalEvent) {
+  function handleSelectLocal(event: HistoricalEvent) {
     onSelect(event);
     setQuery('');
     setOpen(false);
+    setWikiResults([]);
+  }
+
+  function handleSelectWiki(result: WikiSearchResult) {
+    onWikiSelect(result);
+    setQuery('');
+    setOpen(false);
+    setWikiResults([]);
   }
 
   const startVoice = useCallback(() => {
     if (!SpeechRecognitionClass) return;
-    if (listening) {
-      recognitionRef.current?.stop();
-      return;
-    }
+    if (listening) { recognitionRef.current?.stop(); return; }
     const rec = new SpeechRecognitionClass();
     rec.lang = locale === 'it' ? 'it-IT' : 'en-US';
     rec.interimResults = false;
     rec.maxAlternatives = 1;
-
     rec.onresult = (e: SpeechRecognitionEvent) => {
-      const transcript = e.results[0][0].transcript;
-      setQuery(transcript);
+      setQuery(e.results[0][0].transcript);
       setOpen(true);
     };
     rec.onerror = () => setListening(false);
     rec.onend   = () => setListening(false);
-
     recognitionRef.current = rec;
     rec.start();
     setListening(true);
   }, [listening, locale]);
+
+  const hasResults = localResults.length > 0 || wikiResults.length > 0 || wikiLoading;
 
   return (
     <div ref={containerRef} className="search-bar" style={{ position: 'relative' }}>
@@ -109,20 +172,52 @@ export function SearchBar({ events, onSelect, locale = 'it' }: Props) {
         </button>
       )}
 
-      {open && results.length > 0 && (
+      {open && hasResults && (
         <div className="search-results">
-          {results.map(event => (
-            <div
-              key={event.id}
-              className="search-result-item"
-              onClick={() => handleSelect(event)}
-            >
-              <span className="item-title">{event.title}</span>
-              <span className="item-year">
-                {event.year < 0 ? `${Math.abs(event.year).toLocaleString()} a.C.` : `${event.year} d.C.`}
-              </span>
-            </div>
-          ))}
+
+          {/* ── Risultati locali ── */}
+          {localResults.length > 0 && (
+            <>
+              <div className="search-results__section-header">
+                📍 {locale === 'it' ? 'Sulla mappa' : 'On map'}
+              </div>
+              {localResults.map(event => (
+                <div
+                  key={event.id}
+                  className="search-result-item"
+                  onClick={() => handleSelectLocal(event)}
+                >
+                  <span className="item-title">{event.title}</span>
+                  <span className="item-year">
+                    {event.year < 0
+                      ? `${Math.abs(event.year).toLocaleString()} a.C.`
+                      : `${event.year} d.C.`}
+                  </span>
+                </div>
+              ))}
+            </>
+          )}
+
+          {/* ── Risultati Wikipedia ── */}
+          {(wikiResults.length > 0 || wikiLoading) && (
+            <>
+              <div className="search-results__section-header search-results__section-header--wiki">
+                🌐 Wikipedia
+                {wikiLoading && <span className="search-wiki-spinner" />}
+              </div>
+              {wikiResults.map(result => (
+                <div
+                  key={result.pageid}
+                  className="search-result-item search-result-item--wiki"
+                  onClick={() => handleSelectWiki(result)}
+                >
+                  <span className="item-title">{result.title}</span>
+                  <span className="item-snippet">{result.snippet}</span>
+                </div>
+              ))}
+            </>
+          )}
+
         </div>
       )}
     </div>

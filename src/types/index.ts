@@ -31,6 +31,13 @@ export type FlyTarget =
   | { kind: 'cosmic'; ts: number }
   | { kind: 'earth';  ts: number };
 
+export interface WikiSearchResult {
+  pageid: number;
+  title: string;
+  slug: string;
+  snippet: string;
+}
+
 export const CATEGORY_LABELS: Record<EventCategory, string> = {
   storia:   'Storia',
   arte:     'Arte',

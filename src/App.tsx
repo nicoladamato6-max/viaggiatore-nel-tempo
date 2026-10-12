@@ -9,7 +9,7 @@ import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { AuthProvider, useAuth } from './hooks/useAuth';
 import eventsData from './data/events.json';
-import { type HistoricalEvent, type EventCategory, type FlyTarget, type Locale } from './types';
+import { type HistoricalEvent, type EventCategory, type FlyTarget, type Locale, type WikiSearchResult } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 
 const STATIC_EVENTS = eventsData as HistoricalEvent[];
@@ -258,11 +258,101 @@ function AppInner() {
     });
   }, []);
 
+  // Selezione risultato Wikipedia: apre InfoPanel subito, poi arricchisce con Wikidata async
+  const handleWikiSelect = useCallback(async (result: WikiSearchResult) => {
+    const lang = locale === 'it' ? 'it' : 'en';
+
+    // Apri subito l'InfoPanel con i dati che abbiamo — Wikipedia inizia a caricare
+    const placeholder: HistoricalEvent = {
+      id: `wiki-${result.slug}`,
+      title: result.title,
+      year: currentYear,
+      category: 'storia',
+      description: result.snippet,
+      wikipediaSlug: result.slug,
+      isCosmic: false,
+    };
+    setSelectedEvent(placeholder);
+
+    // Fetch Wikidata per data + coordinate + categoria
+    try {
+      const params = new URLSearchParams({
+        action: 'wbgetentities', sites: `${lang}wiki`,
+        titles: result.title, format: 'json',
+        props: 'claims', origin: '*',
+      });
+      const res = await fetch(`https://www.wikidata.org/w/api.php?${params}`);
+      if (!res.ok) return;
+      const data = await res.json() as {
+        entities?: Record<string, {
+          missing?: string;
+          claims?: Record<string, Array<{ mainsnak: { datavalue?: { value: unknown } } }>>;
+        }>;
+      };
+
+      const entity = Object.values(data.entities ?? {})[0];
+      if (!entity || 'missing' in entity || !entity.claims) return;
+      const claims = entity.claims;
+
+      const getQid = (prop: string): string => {
+        const v = claims[prop]?.[0]?.mainsnak?.datavalue?.value;
+        return v && typeof v === 'object' ? (v as { id?: string }).id ?? '' : '';
+      };
+
+      // Anno: prova P569 (nascita), P571 (fondazione), P580 (inizio), P585 (data), P570 (morte)
+      let year: number | undefined;
+      for (const prop of ['P569', 'P571', 'P580', 'P585', 'P570']) {
+        const v = claims[prop]?.[0]?.mainsnak?.datavalue?.value;
+        if (v && typeof v === 'object') {
+          const tv = v as { time?: string };
+          if (tv.time) {
+            const isNeg  = tv.time.startsWith('-');
+            const yStr   = tv.time.replace(/^[+-]/, '').split('-')[0];
+            const y      = parseInt(yStr, 10);
+            if (!isNaN(y)) { year = isNeg ? -y : y; break; }
+          }
+        }
+      }
+
+      // Coordinate geografiche (solo Terra = Q2)
+      let lat: number | undefined, lng: number | undefined;
+      const cv = claims['P625']?.[0]?.mainsnak?.datavalue?.value;
+      if (cv && typeof cv === 'object') {
+        const coords = cv as { latitude?: number; longitude?: number; globe?: string };
+        if (coords.globe?.endsWith('Q2') && typeof coords.latitude === 'number') {
+          lat = coords.latitude;
+          lng = coords.longitude;
+        }
+      }
+
+      // Categoria: instance-of (P31) e occupation (P106)
+      const instanceOf = getQid('P31');
+      const occ        = getQid('P106');
+      let category: EventCategory = 'storia';
+      if (['Q207628', 'Q105543609'].includes(instanceOf) || ['Q36834', 'Q486748'].includes(occ))
+        category = 'musica';
+      else if (['Q3305213', 'Q838948', 'Q179700'].includes(instanceOf) || ['Q483501', 'Q1028181'].includes(occ))
+        category = 'arte';
+      else if (['Q757539', 'Q11190'].includes(instanceOf) || ['Q901', 'Q593644'].includes(occ))
+        category = 'scienza';
+      else if (['Q7944', 'Q7581056', 'Q8068', 'Q83296'].includes(instanceOf))
+        category = 'geologia';
+
+      const enriched: HistoricalEvent = { ...placeholder, year: year ?? placeholder.year, lat, lng, category };
+      setSelectedEvent(enriched);
+
+      if (year !== undefined) setSliderValue(yearToSlider(year));
+      if (lat !== undefined && lng !== undefined)
+        setFlyTo({ kind: 'geo', lat, lng, ts: Date.now() });
+
+    } catch { /* placeholder rimane aperto con Wikipedia */ }
+  }, [currentYear, locale]);
+
   return (
     <div className="app">
       <header className="header">
         <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
-        <SearchBar events={ALL_SEARCHABLE} onSelect={handleSearchSelect} locale={locale} />
+        <SearchBar events={ALL_SEARCHABLE} onSelect={handleSearchSelect} onWikiSelect={handleWikiSelect} locale={locale} />
         <button
           className="locale-toggle-btn"
           onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
