@@ -132,9 +132,15 @@ export function TimeMachine({ locale, onNavigate }: Props) {
   const yearRef   = useRef<HTMLInputElement>(null);
   const it = locale === 'it';
 
-  // Focus sull'input anno all'apertura
+  // Opzione B: reset completo alla riapertura della console
   useEffect(() => {
-    if (open) setTimeout(() => yearRef.current?.focus(), 50);
+    if (open) {
+      setLaunched(false);
+      setLog([]);
+      setYearText('');
+      setPlace('');
+      setTimeout(() => yearRef.current?.focus(), 50);
+    }
   }, [open]);
 
   // Chiudi con Escape
@@ -146,6 +152,12 @@ export function TimeMachine({ locale, onNavigate }: Props) {
 
   function addLog(msg: string) {
     setLog(prev => [...prev.slice(-6), msg]);
+  }
+
+  function handleReset() {
+    setLaunched(false);
+    setLog([]);
+    setTimeout(() => yearRef.current?.focus(), 50);
   }
 
   async function handleLaunch() {
@@ -195,7 +207,7 @@ export function TimeMachine({ locale, onNavigate }: Props) {
       addLog(it ? '⚡ PROPULSIONE ATTIVATA — buon viaggio.' : '⚡ PROPULSION ACTIVATED — safe travels.');
       setLaunched(true);
       onNavigate({ year: year ?? undefined, flyTo });
-      setTimeout(() => setOpen(false), 1200);
+      // Opzione A: la console rimane aperta per consentire un nuovo salto
     }
   }
 
@@ -290,11 +302,11 @@ export function TimeMachine({ locale, onNavigate }: Props) {
               {/* Pulsante lancio */}
               <button
                 className={`tm-launch${loading ? ' tm-launch--loading' : ''}${launched ? ' tm-launch--done' : ''}`}
-                onClick={handleLaunch}
+                onClick={launched ? handleReset : handleLaunch}
                 disabled={loading}
               >
                 {launched
-                  ? (it ? '⚡ LANCIO ESEGUITO' : '⚡ JUMP EXECUTED')
+                  ? (it ? '🔄 NUOVO SALTO TEMPORALE' : '🔄 NEW TEMPORAL JUMP')
                   : loading
                     ? (it ? '◌ CALIBRAZIONE…' : '◌ CALIBRATING…')
                     : (it ? '⚡ ATTIVA PROPULSIONE' : '⚡ ACTIVATE PROPULSION')}
