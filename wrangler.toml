@@ -1,0 +1,4 @@
+# Cloudflare Pages config — nessun secret qui, configurati nel dashboard Cloudflare
+# I binding (KV, JWT_SECRET) restano nel pannello Settings > Environment variables
+name = "viaggiatore-nel-tempo"
+compatibility_date = "2025-01-01"

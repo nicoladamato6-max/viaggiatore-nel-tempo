@@ -16,8 +16,7 @@ dist-ssr
 .env
 .env.*
 
-# Wrangler local dev config — i binding di produzione si configurano nel Cloudflare dashboard
-wrangler.toml
+# Wrangler state/cache — non committare
 .wrangler*
 
 # Editor directories and files
