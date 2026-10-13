@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from 'react';
 import * as Cesium from 'cesium';
-import { type HistoricalEvent, type FlyTarget, CATEGORY_COLORS } from '../types';
+import { type HistoricalEvent, type FlyTarget, type WikiMarker, CATEGORY_COLORS } from '../types';
 import { PLANETS, getMoonPosition, getPlanetPosition, toPlanetCard } from '../utils/celestialMechanics';
 import { getBestMap, featureName, colorForTerritory, getCentroid } from '../data/historicalMaps';
 import { translateTerritoryNames } from '../data/wikiTranslate';
@@ -34,17 +34,19 @@ interface Props {
   events: HistoricalEvent[];
   isCosmicView: boolean;
   flyTo: FlyTarget | null;
+  wikiMarker: WikiMarker | null;
   currentYear: number;
   showTerritories: boolean;
   locale: Locale;
   onEventClick: (event: HistoricalEvent) => void;
 }
 
-export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerritories, locale, onEventClick }: Props) {
+export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear, showTerritories, locale, onEventClick }: Props) {
   const containerRef  = useRef<HTMLDivElement>(null);
   const viewerRef     = useRef<Cesium.Viewer | null>(null);
   // PointPrimitiveCollection per i pin degli eventi storici — molto più veloce delle Entity
-  const pinsRef       = useRef<Cesium.PointPrimitiveCollection | null>(null);
+  const pinsRef           = useRef<Cesium.PointPrimitiveCollection | null>(null);
+  const wikiMarkerRef     = useRef<Cesium.Entity | null>(null);
   // GeoJsonDataSource corrente con le mappe politiche storiche
   const territoryDSRef   = useRef<Cesium.GeoJsonDataSource | null>(null);
   const labelDSRef       = useRef<Cesium.CustomDataSource | null>(null);
@@ -532,6 +534,47 @@ export function GlobeView({ events, isCosmicView, flyTo, currentYear, showTerrit
     }
     viewer.flyTo(entity, { duration: 4, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 6, radius * 5) });
   }, [flyTo, isCosmicView]);
+
+  // ── Marker temporaneo per risultati Wikipedia con coordinate ────────────────
+  useEffect(() => {
+    const viewer = viewerRef.current;
+    if (!viewer || viewer.isDestroyed()) return;
+
+    // Rimuovi marker precedente
+    if (wikiMarkerRef.current) {
+      viewer.entities.remove(wikiMarkerRef.current);
+      wikiMarkerRef.current = null;
+    }
+
+    if (!wikiMarker || isCosmicView) return;
+
+    const entity = viewer.entities.add(new Cesium.Entity({
+      id: 'wiki-marker',
+      position: Cesium.Cartesian3.fromDegrees(wikiMarker.lng, wikiMarker.lat),
+      point: new Cesium.PointGraphics({
+        color: Cesium.Color.WHITE,
+        outlineColor: Cesium.Color.fromCssColorString('#f39c12'),
+        outlineWidth: 3,
+        pixelSize: 18,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY,
+        scaleByDistance: new Cesium.NearFarScalar(500_000, 2.0, 20_000_000, 0.7),
+        translucencyByDistance: new Cesium.NearFarScalar(18_000_000, 1.0, 25_000_000, 0.0),
+      }),
+      label: new Cesium.LabelGraphics({
+        text: wikiMarker.title,
+        font: '13px system-ui, sans-serif',
+        fillColor: Cesium.Color.WHITE,
+        style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+        outlineWidth: 2,
+        outlineColor: Cesium.Color.BLACK,
+        verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+        pixelOffset: new Cesium.Cartesian2(0, -22),
+        distanceDisplayCondition: new Cesium.DistanceDisplayCondition(0, 6_000_000),
+        disableDepthTestDistance: Number.POSITIVE_INFINITY,
+      }),
+    }));
+    wikiMarkerRef.current = entity;
+  }, [wikiMarker, isCosmicView]);
 
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>

@@ -9,7 +9,7 @@ import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { AuthProvider, useAuth } from './hooks/useAuth';
 import eventsData from './data/events.json';
-import { type HistoricalEvent, type EventCategory, type FlyTarget, type Locale, type WikiSearchResult } from './types';
+import { type HistoricalEvent, type EventCategory, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 
 const STATIC_EVENTS = eventsData as HistoricalEvent[];
@@ -161,6 +161,7 @@ function AppInner() {
   const [mobileGlobeH, setMobileGlobeH] = useState(40); // vh
   const splitDragRef = useRef<{ startY: number; startH: number } | null>(null);
   const [flyTo, setFlyTo]                 = useState<FlyTarget | null>(null);
+  const [wikiMarker, setWikiMarker]       = useState<WikiMarker | null>(null);
   const [showTerritories, setShowTerritories] = useState(false);
   const [locale, setLocale]               = useState<Locale>('it');
   const [activeCategories, setActiveCategories] = useState<Set<EventCategory>>(
@@ -206,6 +207,7 @@ function AppInner() {
       return;
     }
 
+    setWikiMarker(null);
     setSliderValue(yearToSlider(event.year));
     if (!event.isCosmic && event.lat != null && event.lng != null) {
       setFlyTo({ kind: 'geo', lat: event.lat, lng: event.lng, ts: Date.now() });
@@ -375,8 +377,12 @@ function AppInner() {
       setSelectedEvent(enriched);
 
       if (year !== undefined) setSliderValue(yearToSlider(year));
-      if (lat !== undefined && lng !== undefined)
+      if (lat !== undefined && lng !== undefined) {
         setFlyTo({ kind: 'geo', lat, lng, ts: Date.now() });
+        setWikiMarker({ lat, lng, title: result.title });
+      } else {
+        setWikiMarker(null);
+      }
 
     } catch { /* placeholder rimane aperto con Wikipedia */ }
   }, [currentYear, locale]);
@@ -434,6 +440,7 @@ function AppInner() {
             events={visibleEvents}
             isCosmicView={isCosmicView}
             flyTo={flyTo}
+            wikiMarker={wikiMarker}
             currentYear={currentYear}
             showTerritories={showTerritories}
             locale={locale}

@@ -38,6 +38,13 @@ export interface WikiSearchResult {
   snippet: string;
 }
 
+/** Marker temporaneo per risultati Wikipedia con coordinate Wikidata */
+export interface WikiMarker {
+  lat: number;
+  lng: number;
+  title: string;
+}
+
 export const CATEGORY_LABELS: Record<EventCategory, string> = {
   storia:   'Storia',
   arte:     'Arte',
