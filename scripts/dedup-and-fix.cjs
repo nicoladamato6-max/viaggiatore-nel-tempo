@@ -78,7 +78,7 @@ Object.keys(slugGroups).forEach(function(slug) {
 });
 
 // ── Step 2: Reclassificazioni errori di categoria ─────────────────────────────
-var SPORT_KEYWORDS = /olimpiad|giochi olimpici|olimpiche|coppa del mondo|campionato mondiale|maratona di atene|jesse owens|muhammad ali|pelé|pele\b|usain bolt|roger bannister|formula 1|tour de france|wimbledon|nba \b|fifa \b|rugby world|calcio moderno|football association|coubertin|atletica|atletismo|sport|jimnastica|pallacanestro/i;
+var SPORT_KEYWORDS = /olimpiad|giochi olimpici|olimpiche|coppa del mondo|campionato mondiale|maratona|jesse owens|muhammad ali|pelé|pele|cassius clay|usain bolt|roger (bannister|federer)|formula 1|tour de france|wimbledon|nba\b|fifa\b|rugby|calcio (moderno|mondiale)|football (association|club)|coubertin|atleta|atletica|ciclismo|nuoto|ginnastic|pallacanestro|boxe|pugilato|lottatore|pugile|circo massimo|giochi (pitici|istmici|panellenici|nemei)|milone|leonida (di rodi|di)|teagene|diagora|abebe|bikila|maradona|senna\b|federer|serena (williams)?|michael jordan|comaneci|pelé|messi\b|bolt\b|phelps|biles|fabrizio|carl lewis|spitz|zatopek|owens/i;
 
 var reclassLog = [];
 
