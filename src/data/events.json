@@ -92,19 +92,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "bach-nascita",
-    "title": "Johann Sebastian Bach",
-    "year": 1685,
-    "lat": 50.9375,
-    "lng": 11.0299,
-    "category": "musica",
-    "description": "Nasce a Eisenach Johann Sebastian Bach, compositore barocco considerato uno dei più grandi geni musicali della storia.",
-    "wikipediaSlug": "Johann_Sebastian_Bach",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Johann_Sebastian_Bach.jpg/240px-Johann_Sebastian_Bach.jpg",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
     "id": "scoperta-nettuno",
     "title": "Scoperta di Nettuno",
     "year": 1846,
@@ -195,19 +182,6 @@
     "tipo": "evento"
   },
   {
-    "id": "grande-muraglia",
-    "title": "Grande Muraglia Cinese — Qin Shi Huang",
-    "year": -221,
-    "lat": 40.4319,
-    "lng": 116.5704,
-    "category": "storia",
-    "description": "L'imperatore Qin Shi Huang unifica la Cina e ordina la costruzione della Grande Muraglia, collegando mura preesistenti per oltre 6.700 km. Migliaia di operai muoiono durante la costruzione. È l'opera architettonica più lunga della storia umana.",
-    "wikipediaSlug": "Great_Wall_of_China",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/320px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg",
-    "isCosmic": false,
-    "tipo": "luogo"
-  },
-  {
     "id": "nascita-gesu",
     "title": "Nascita di Gesù — Betlemme",
     "year": 1,
@@ -242,19 +216,6 @@
     "wikipediaSlug": "Thirteenth_Amendment_to_the_United_States_Constitution",
     "isCosmic": false,
     "tipo": "evento"
-  },
-  {
-    "id": "mozart-nascita",
-    "title": "Wolfgang Amadeus Mozart",
-    "year": 1756,
-    "lat": 47.8095,
-    "lng": 13.055,
-    "category": "musica",
-    "description": "Wolfgang Amadeus Mozart nasce a Salisburgo il 27 gennaio 1756. Bambino prodigio, compone la sua prima sinfonia a 8 anni. In soli 35 anni di vita produce oltre 600 opere: sinfonie, concerti, opere liriche, musica da camera. Considerato il più grande genio musicale della storia.",
-    "wikipediaSlug": "Wolfgang_Amadeus_Mozart",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Mozart_Portrait_Croce.jpg/240px-Mozart_Portrait_Croce.jpg",
-    "isCosmic": false,
-    "tipo": "persona"
   },
   {
     "id": "verdi-traviata",
@@ -743,18 +704,6 @@
     "tipo": "evento"
   },
   {
-    "id": "colosseo-inaugurazione",
-    "title": "Inaugurazione del Colosseo",
-    "year": 80,
-    "lat": 41.8902,
-    "lng": 12.4922,
-    "category": "storia",
-    "description": "Nell'80 d.C. l'imperatore Tito inaugura l'Anfiteatro Flavio — il Colosseo — con 100 giorni di giochi. La struttura in travertino e calcestruzzo può contenere 50.000 spettatori. I gladiatori, le belve feroci e le naumachie (battaglie navali) vi si svolgono per quattro secoli. È il simbolo eterno di Roma e dell'ingegneria antica.",
-    "wikipediaSlug": "Colosseum",
-    "isCosmic": false,
-    "tipo": "luogo"
-  },
-  {
     "id": "traiano-dacia",
     "title": "Traiano — Conquista della Dacia",
     "year": 106,
@@ -1099,18 +1048,6 @@
     "category": "arte",
     "description": "Nel 113 d.C. viene inaugurata a Roma la Colonna Traiana, alta 38 metri, con un fregio a spirale di 200 metri che racconta in 2.662 figure le guerre daciche. È il più lungo fumetto della storia antica e il documento visivo più ricco di vita romana. Il fusto era in origine colorato. L'urna con le ceneri di Traiano è sepolta alla sua base.",
     "wikipediaSlug": "Trajan%27s_Column",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
-    "id": "pantheon-roma",
-    "title": "Il Pantheon — Duemila Anni di Storia",
-    "year": 125,
-    "lat": 41.8986,
-    "lng": 12.4769,
-    "category": "arte",
-    "description": "Il Pantheon di Roma, nella sua forma attuale, viene completato dall'imperatore Adriano intorno al 125 d.C. La cupola in calcestruzzo non armato di 43,3 metri è ancora il più grande della storia. La luce entra dall'oculus centrale (9 m) illuminando gli altari. Trasformato in chiesa nel 609, è l'edificio antico meglio conservato al mondo.",
-    "wikipediaSlug": "Pantheon,_Rome",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2207,42 +2144,6 @@
     "tipo": "movimento"
   },
   {
-    "id": "montesquieu-spirito-leggi",
-    "title": "Montesquieu — La Separazione dei Poteri",
-    "year": 1748,
-    "lat": 44.6708,
-    "lng": -0.5231,
-    "category": "filosofia",
-    "description": "Charles de Montesquieu, barone de La Brède, pubblica Lo Spirito delle Leggi (1748): i governi si dividono in monarchia, aristocrazia e democrazia; la libertà si preserva separando potere legislativo, esecutivo e giudiziario. La dottrina della separazione dei poteri — ispirata alla costituzione inglese — è il fondamento di tutte le costituzioni democratiche moderne.",
-    "wikipediaSlug": "Montesquieu",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "beethoven-bonn",
-    "title": "Ludwig van Beethoven — Il Titano della Musica",
-    "year": 1770,
-    "lat": 50.7374,
-    "lng": 7.0982,
-    "category": "arte",
-    "description": "Ludwig van Beethoven nasce a Bonn il 17 dicembre 1770. Compositore che supera i limiti dell'umano — scrive le sue più grandi sinfonie (la Nona, il Fidelio) dopo essere diventato completamente sordo. Le 9 Sinfonie, i 32 Quartetti e le 32 Sonate per pianoforte definiscono i confini della musica classica e aprono il Romanticismo.",
-    "wikipediaSlug": "Ludwig_van_Beethoven",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
-    "id": "haydn-rohrau",
-    "title": "Joseph Haydn — Il Padre della Sinfonia",
-    "year": 1732,
-    "lat": 48.0136,
-    "lng": 16.8594,
-    "category": "arte",
-    "description": "Joseph Haydn, figlio di un carraio di Rohrau (Austria), inventa praticamente la sinfonia e il quartetto d'archi come forme musicali moderne. Maestro di Beethoven e amico di Mozart, scrive 104 sinfonie, 68 quartetti e le oratori La Creazione e Le Stagioni. La sua lunga vita di servizio alla famiglia Esterházy è il modello del musicista settecentesco.",
-    "wikipediaSlug": "Joseph_Haydn",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "napoleone-ajaccio",
     "title": "Napoleone Bonaparte — Il Conquistatore della Storia",
     "year": 1769,
@@ -2433,18 +2334,6 @@
     "wikipediaSlug": "Neolithic_Revolution",
     "isCosmic": false,
     "tipo": "persona"
-  },
-  {
-    "id": "pericle-costruzione-acropoli",
-    "title": "Pericle — Costruisce l'Acropoli di Atene",
-    "year": -447,
-    "lat": 37.9715,
-    "lng": 23.7267,
-    "category": "arte",
-    "description": "Dopo le Guerre Persiane il politico Pericle avvia il grande programma edilizio dell'Acropoli: il Partenone (completato nel 432 a.C.), i Propilei, l'Eretteo e il Tempio di Nike. L'architetto Ictino, lo scultore Fidia e mille artigiani creano il complesso architettonico più ammirato dell'antichità. Il Partenone è il modello di ogni edificio neoclassico successivo.",
-    "wikipediaSlug": "Acropolis_of_Athens",
-    "isCosmic": false,
-    "tipo": "opera"
   },
   {
     "id": "senofonte-anabasi",
@@ -2757,18 +2646,6 @@
     "wikipediaSlug": "Dominic_de_Guzmán",
     "isCosmic": false,
     "tipo": "persona"
-  },
-  {
-    "id": "chopin-varsavia",
-    "title": "Frédéric Chopin — Il Poeta del Pianoforte",
-    "year": 1830,
-    "lat": 52.3069,
-    "lng": 20.5336,
-    "category": "arte",
-    "description": "Frédéric Chopin lascia definitivamente la Polonia nel 1830, due anni dopo aver composto i Notturni che lo rendono famoso. A Parigi diventa la star dei salotti romantici, amante di George Sand, consumato dalla tubercolosi. I suoi Studi, Ballate, Mazurke e Preludi ridefiniscono le possibilità espressive del pianoforte. Muore a 39 anni chiedendo di essere sepolto con della terra polacca.",
-    "wikipediaSlug": "Frédéric_Chopin",
-    "isCosmic": false,
-    "tipo": "opera"
   },
   {
     "id": "monet-giverny",
@@ -3995,18 +3872,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "mozart-opera",
-    "title": "Mozart — Don Giovanni e Le Nozze di Figaro",
-    "year": 1786,
-    "lat": 48.2082,
-    "lng": 16.3738,
-    "category": "arte",
-    "description": "Mozart compone Le Nozze di Figaro (1786) e Don Giovanni (1787) a Vienna, con i libretti di Lorenzo Da Ponte. Le Nozze — un servitore che si oppone ai privilegi nobiliari — è un'opera politica mascherata da commedia. Don Giovanni esplora il male assoluto con musica di una bellezza straziante. Le due opere più rivoluzionarie del '700.",
-    "wikipediaSlug": "Don_Giovanni",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "lavoisier-chimica",
     "title": "Lavoisier — La Rivoluzione della Chimica",
     "year": 1789,
@@ -5063,18 +4928,6 @@
     "tipo": "persona"
   },
   {
-    "id": "league-nations",
-    "title": "Società delle Nazioni — Il Sogno della Pace Perpetua",
-    "year": 1919,
-    "lat": 46.2317,
-    "lng": 6.0957,
-    "category": "storia",
-    "description": "Nel 1919, su proposta del presidente Wilson, nasce a Ginevra la Società delle Nazioni — il primo tentativo di governance internazionale. Gli USA non aderiscono (il Senato rifiuta). La SDN si rivela impotente di fronte all'aggressione giapponese in Manciuria (1931), italiana in Etiopia (1935), tedesca in Austria (1938). Viene sciolta nel 1946 lasciando il posto all'ONU.",
-    "wikipediaSlug": "League_of_Nations",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
     "id": "nuremberg-leggi-razziali",
     "title": "Leggi di Norimberga — La Legalizzazione del Razzismo",
     "year": 1935,
@@ -5733,18 +5586,6 @@
     "wikipediaSlug": "Battle_of_Curzola",
     "isCosmic": false,
     "tipo": "evento"
-  },
-  {
-    "id": "basso-medio-cattedrali-gotiche",
-    "title": "Notre-Dame di Parigi — Il Gotico come Ascensione",
-    "year": 1163,
-    "lat": 48.853,
-    "lng": 2.3499,
-    "category": "arte",
-    "description": "Nel 1163 papa Alessandro III posa la prima pietra di Notre-Dame de Paris — la cattedrale che definisce il gotico classico: archi rampanti, rosoni, guglie, luce attraverso le vetrate colorate. La costruzione dura 180 anni. Les Misérables di Hugo inizia qui. Quasi distrutta dalla Rivoluzione, restaurata da Viollet-le-Duc. Incendio nel 2019, restauro in corso.",
-    "wikipediaSlug": "Notre-Dame_de_Paris",
-    "isCosmic": false,
-    "tipo": "movimento"
   },
   {
     "id": "basso-medio-univer-oxford",
@@ -6475,18 +6316,6 @@
     "category": "arte",
     "description": "Shah Abbas I il Grande (1588-1629) trasforma Isfahan (Iran) nella sua capitale: la Piazza Naqsh-e Jahan con la Moschea Reale (1612-1630), il Palazzo Ali Qapu, il Bazar imperiale. 'Isfahan è metà del mondo' dice il proverbio persiano. La moschea con il suo minareto turchese riflesso in una vasca d'acqua è il vertice dell'architettura persiana islamica.",
     "wikipediaSlug": "Shah_Abbas_I",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
-    "id": "eta-moderna-taj-mahal-2",
-    "title": "Shah Jahan — Il Taj Mahal",
-    "year": 1632,
-    "lat": 27.1751,
-    "lng": 78.0421,
-    "category": "arte",
-    "description": "Dal 1632 al 1653 Shah Jahan, imperatore Mughal, costruisce il Taj Mahal ad Agra (India) come mausoleo per la moglie Mumtaz Mahal, morta di parto. 20.000 operai, 1.000 elefanti, 28 tipi di pietre preziose. La cupola di marmo bianco che cambia colore con la luce è la più celebrata costruzione d'amore della storia. Oggi visita 7 milioni di turisti all'anno.",
-    "wikipediaSlug": "Taj_Mahal",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -11591,18 +11420,6 @@
     "tipo": "persona"
   },
   {
-    "id": "nov-nato-fondazione-1949",
-    "title": "La NATO — L'Alleanza Atlantica contro l'Unione Sovietica",
-    "year": 1949,
-    "lat": 50.8503,
-    "lng": 4.3517,
-    "category": "storia",
-    "description": "Il 4 aprile 1949 a Washington 12 paesi (USA, Canada, UK, Francia, Italia, Belgio, Olanda, Lussemburgo, Norvegia, Danimarca, Islanda, Portogallo) fondano la NATO: 'Un attacco a uno è un attacco a tutti' (Art. 5). La NATO nasce dalla paura dell'espansionismo sovietico dopo il colpo di Praga (1948) e il blocco di Berlino (1948-49). La struttura militare permanente con il SHAPE (quartier generale) è creata nel 1951.",
-    "wikipediaSlug": "NATO",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
     "id": "nov-blocco-berlino-1948",
     "title": "Il Blocco di Berlino — Il Ponte Aereo che Salvò una Città",
     "year": 1948,
@@ -12004,7 +11821,7 @@
     "year": 1931,
     "lat": 51.4333,
     "lng": -0.2167,
-    "category": "sport",
+    "category": "storia",
     "description": "Negli anni '30 lo sport si democratizza: Wimbledon, lo US Open di tennis, i campionati mondiali di boxe (Joe Louis 'il bombardiere marrone' diventa campione nel 1937). Ma rimane anche sport per élite: golf, polo, cricket nel Commonwealth. Il calcio è già lo sport di massa globale. Le Olimpiadi di Los Angeles 1932 (prima in un paese non europeo) mostrano l'America sportiva al mondo.",
     "wikipediaSlug": "Sport_in_the_1930s",
     "isCosmic": false,
@@ -13295,18 +13112,6 @@
     "tipo": "opera"
   },
   {
-    "id": "ott-beethoven-nona-sinfonia",
-    "title": "Beethoven — La Nona Sinfonia e l'Inno alla Gioia",
-    "year": 1824,
-    "lat": 48.2082,
-    "lng": 16.3738,
-    "category": "musica",
-    "description": "Il 7 maggio 1824 a Vienna la Nona Sinfonia di Ludwig van Beethoven viene eseguita per la prima volta. Beethoven — completamente sordo — dirige (anche se in realtà non dirige davvero — Schindler lo guida). Alla fine del quarto movimento con il coro finale ('Inno alla Gioia', testi di Schiller), il pubblico applaude: Beethoven deve essere girato per vedere le ovazioni. La Nona è oggi l'inno dell'Unione Europea.",
-    "wikipediaSlug": "Symphony_No._9_(Beethoven)",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "ott-operaismo-prima-internazionale",
     "title": "La Prima Internazionale — Il Movimento Operaio Internazionale",
     "year": 1864,
@@ -13533,18 +13338,6 @@
     "wikipediaSlug": "John_Locke",
     "isCosmic": false,
     "tipo": "opera"
-  },
-  {
-    "id": "mod-illuminismo-voltaire-enciclopedia",
-    "title": "L'Illuminismo — Voltaire, Diderot e la Ragione contro il Pregiudizio",
-    "year": 1750,
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "category": "arte",
-    "description": "Tra il 1750 e il 1780 l'Illuminismo francese raggiunge il suo apice: l'Encyclopédie di Diderot e d'Alembert (1751-1772, 28 volumi) — il progetto di sistematizzare e diffondere tutto il sapere umano. Voltaire ('Schiacciare l'infame!' — la chiesa oscurantista), Montesquieu (separazione dei poteri), Rousseau, Condorcet. La Ragione come strumento contro superstizione, intolleranza, dispotismo. Il progetto della modernità.",
-    "wikipediaSlug": "Age_of_Enlightenment",
-    "isCosmic": false,
-    "tipo": "movimento"
   },
   {
     "id": "mod-controriforma-gesuiti-trento",
@@ -15431,18 +15224,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "mod-mogul-empire-india",
-    "title": "l'Impero Moghul — Shah Jahan e il Taj Mahal",
-    "year": 1631,
-    "lat": 27.1751,
-    "lng": 78.0421,
-    "category": "arte",
-    "description": "Nel 1631 Shah Jahan inizia la costruzione del Taj Mahal a Agra in memoria della moglie Mumtaz Mahal morta di parto. 20.000 artigiani lavorano per 22 anni. Il Taj Mahal e l'apice dell'architettura moghul e del mondo islamico. L'Impero Moghul sotto Aurangzeb al suo apice controlla gran parte del subcontinente indiano.",
-    "wikipediaSlug": "Taj_Mahal",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "mod-guerra-indipendenza-americana",
     "title": "la Guerra d'Indipendenza Americana — Yorktown 1781",
     "year": 1781,
@@ -15463,18 +15244,6 @@
     "category": "arte",
     "description": "Dal 1751 al 1772 Diderot e d'Alembert pubblicano l'Encyclopedie con 28 volumi e 74.000 articoli: la somma del sapere illuminista. Il progetto viene osteggiato dalla Chiesa e dal re ma continua clandestinamente. L'Encyclopedie diffonde le idee laiche e razionali in tutta Europa, preparando la Rivoluzione Francese.",
     "wikipediaSlug": "Encyclopedie",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
-    "id": "mod-mozart-don-giovanni-1787",
-    "title": "Mozart — il Don Giovanni e il Vertice dell'Opera",
-    "year": 1787,
-    "lat": 50.0755,
-    "lng": 14.4378,
-    "category": "musica",
-    "description": "Nel 1787 Wolfgang Amadeus Mozart compone il Don Giovanni, eseguito per la prima volta a Praga. Insieme alle Nozze di Figaro e al Flauto Magico e il trilogio che definisce l'opera classica viennese. Mozart a 35 anni ha composto 41 sinfonie, 27 concerti per pianoforte, 23 quartetti d'archi. Muore nel 1791 a 35 anni lasciando il Requiem incompiuto.",
-    "wikipediaSlug": "Don_Giovanni",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -15681,18 +15450,6 @@
     "wikipediaSlug": "Zoroaster",
     "isCosmic": false,
     "tipo": "persona"
-  },
-  {
-    "id": "ao-alessandria-egitto-biblioteca",
-    "title": "la Biblioteca di Alessandria — il Sapere del Mondo Antico",
-    "year": -295,
-    "lat": 31.2001,
-    "lng": 29.9187,
-    "category": "arte",
-    "description": "Intorno al 295 a.C. Tolomeo I fonda la Biblioteca di Alessandria in Egitto: 700.000 volumi di papiro, la piu grande raccolta di conoscenze del mondo antico. Il Museo di Alessandria e il primo istituto di ricerca della storia. Eratostene misura la Terra, Euclide codifica la geometria, Archimede studia i fluidi. La biblioteca brucia in circostanze ancora dibattute.",
-    "wikipediaSlug": "Library_of_Alexandria",
-    "isCosmic": false,
-    "tipo": "opera"
   },
   {
     "id": "ao-regno-meroe-africa",
@@ -17591,18 +17348,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "cont-arte-digital-nft-2021",
-    "title": "gli NFT — la Rivoluzione Digitale nell'Arte",
-    "year": 2021,
-    "lat": 37.7749,
-    "lng": -122.4194,
-    "category": "arte",
-    "description": "Nel marzo 2021 Beeple vende Everydays: The First 5000 Days da Christie's per 69 milioni di dollari come NFT: Non-Fungible Token su blockchain. La prima opera d'arte digitale certificata come unica. Gli NFT raggiungono una capitalizzazione di 40 miliardi nel 2021, poi crollano del 90% nel 2022. L'arte digitale, il metaverso, la proprieta virtuale: domande nuove sull'originalita.",
-    "wikipediaSlug": "Non-fungible_token",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "cont-nanotecnologia-feynman",
     "title": "le Nanotecnologie — Feynman e il Mondo dei Nanometri",
     "year": 1959,
@@ -18225,18 +17970,6 @@
     "wikipediaSlug": "Paracelsus",
     "isCosmic": false,
     "tipo": "scoperta"
-  },
-  {
-    "id": "rin-duomo-firenze-brunelleschi",
-    "title": "Brunelleschi — la Cupola di Santa Maria del Fiore",
-    "year": 1436,
-    "lat": 43.7731,
-    "lng": 11.256,
-    "category": "arte",
-    "description": "Il 25 marzo 1436 papa Eugenio IV consacra la Cupola di Santa Maria del Fiore a Firenze: Filippo Brunelleschi ha impiegato 14 anni, nessuna centina di legno, 4 milioni di mattoni, doppia cupola. La cupola piu grande di mattoni della storia: 91 metri di diametro, 116 di altezza. Brunelleschi riscopre la prospettiva geometrica nel 1413. La Rinascenza fiorentina comincia con lui.",
-    "wikipediaSlug": "Florence_Cathedral",
-    "isCosmic": false,
-    "tipo": "opera"
   },
   {
     "id": "rin-henry-viii-church-england",
@@ -19127,18 +18860,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "ott-kant-critica-ragion-pratica",
-    "title": "Kant — la Critica della Ragion Pratica e l'Imperativo Categorico",
-    "year": 1788,
-    "lat": 54.7104,
-    "lng": 20.4522,
-    "category": "scienza",
-    "description": "Nel 1788 Immanuel Kant pubblica la Critica della Ragion Pratica: l'imperativo categorico come fondamento dell'etica. Agisci solo secondo quella massima che puoi volere diventi una legge universale. Due cose riempiono il mio animo di ammirazione: il cielo stellato sopra di me e la legge morale in me. Kant fonda l'etica deontologica: il dovere non dipende dalle conseguenze ma dalla universalizzabilita dell'azione.",
-    "wikipediaSlug": "Critique_of_Practical_Reason",
-    "isCosmic": false,
-    "tipo": "scoperta"
-  },
-  {
     "id": "ott-taine-naturalismo-letteratura",
     "title": "Emile Zola — il Naturalismo e i Rougon-Macquart",
     "year": 1871,
@@ -19329,18 +19050,6 @@
     "wikipediaSlug": "Vitus_Bering",
     "isCosmic": false,
     "tipo": "persona"
-  },
-  {
-    "id": "mod-illuminismo-scozzese",
-    "title": "l'Illuminismo Scozzese — Adam Smith e la Ricchezza delle Nazioni",
-    "year": 1776,
-    "lat": 55.9533,
-    "lng": -3.1883,
-    "category": "scienza",
-    "description": "Nel 1776 Adam Smith pubblica La Ricchezza delle Nazioni: la divisione del lavoro, la mano invisibile del mercato, il commercio come motore della prosperita. Lo spillo di Smith che serve 20 lavoratori specializzati invece di uno solo. Adam Smith fonda l'economia moderna come disciplina scientifica. Il liberalismo economico del laissez-faire ispira il capitalismo industriale ottocentesco e il thatcherismo.",
-    "wikipediaSlug": "The_Wealth_of_Nations",
-    "isCosmic": false,
-    "tipo": "movimento"
   },
   {
     "id": "mod-handel-messia-dublino",
@@ -23495,18 +23204,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "cont-cinema-new-wave-godard",
-    "title": "la Nouvelle Vague — il Cinema che si Reinventa",
-    "year": 1959,
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "category": "arte",
-    "description": "Nel 1959 Jean-Luc Godard gira À bout de souffle (Fino all'ultimo respiro): camera a mano, luce naturale, montaggio irregolare, dialogo improvvisato. La Nouvelle Vague francese rompe tutte le convenzioni del cinema classico. Truffaut (I Quattrocento Colpi), Chabrol, Rohmer, Rivette. La teoria dell'autore: il regista come autore del film, non il produttore. La Nouvelle Vague influenza il Cinema Americano degli anni Settanta (Scorsese, Coppola, De Palma) e il cinema mondiale.",
-    "wikipediaSlug": "French_New_Wave",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "cont-iran-iraq-war-1980",
     "title": "la Guerra Iran-Iraq — 8 Anni e 500.000 Morti",
     "year": 1980,
@@ -24515,18 +24212,6 @@
     "tipo": "persona"
   },
   {
-    "id": "mod-baroque-music-handel-messiah",
-    "title": "il Messiah di Händel — il Barocco Musicale al suo Apice",
-    "year": 1741,
-    "lat": 53.3331,
-    "lng": -6.2489,
-    "category": "musica",
-    "description": "Nel settembre 1741 Georg Friedrich Händel compone il Messiah in 24 giorni a Londra: l'oratorio più eseguito della storia. Prima assoluta a Dublino il 13 aprile 1742. Il re Giorgio II si alza in piedi all'Alleluja: nasce la tradizione di alzarsi. Händel come il più internazionale dei compositori barocchi: tedesco di nascita, italiano per formazione, inglese per adozione. L'oratorio come alternativa protestante all'opera cattolica: la storia biblica in musica senza scena.",
-    "wikipediaSlug": "Messiah_(Handel)",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "mod-poland-partitions-1772",
     "title": "le Spartizioni della Polonia — la Scomparsa di uno Stato",
     "year": 1772,
@@ -25259,18 +24944,6 @@
     "tipo": "evento"
   },
   {
-    "id": "bm-medieval-university-bologna",
-    "title": "Bologna — la Prima Università e la Nascita dell'Istruzione Superiore",
-    "year": 1088,
-    "lat": 44.4949,
-    "lng": 11.3426,
-    "category": "scienza",
-    "description": "Nel 1088 a Bologna viene tradizionalmente fondata la prima università della storia: inizialmente solo diritto romano (Graziano e il Decretum). La struttura corporativa degli studenti (universitas scholarium): gli studenti come clienti che pagano i professori. Bologna come modello: Parigi (teologia), Oxford (1167), Padova (1222), Napoli (1224). L'università medievale come luogo dove la disputa intellettuale è istituzionalizzata. La disputatio come metodo: si difende una tesi contro le obiezioni. La radice del dottorato moderno.",
-    "wikipediaSlug": "University_of_Bologna",
-    "isCosmic": false,
-    "tipo": "scoperta"
-  },
-  {
     "id": "bm-marco-polo-china-kublai",
     "title": "Marco Polo — il Milione e la Cina di Kublai Khan",
     "year": 1271,
@@ -25943,18 +25616,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "mod-baroque-architecture-versailles",
-    "title": "Versailles — l'Assolutismo come Architettura",
-    "year": 1682,
-    "lat": 48.8048,
-    "lng": 2.1203,
-    "category": "arte",
-    "description": "Nel 1682 Luigi XIV trasferisce la corte a Versailles: il palazzo come strumento di potere. La Galleria degli Specchi (73 metri, 357 specchi), il giardino alla francese di Le Nôtre. 36.000 operai per costruirlo. La nobiltà costretta a vivere a corte: il re controlla così la classe potenzialmente più pericolosa. Il Roi Soleil come identità politica assoluta. L'etichetta di corte come sistema di potere codificato: chi porta la camicia al re è una questione di rango. Versailles come il modello di tutte le corti europee successive.",
-    "wikipediaSlug": "Palace_of_Versailles",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "mod-japan-meiji-restoration-1868",
     "title": "la Restaurazione Meiji — il Giappone che si Modernizza",
     "year": 1868,
@@ -26347,18 +26008,6 @@
     "category": "storia",
     "description": "Il 22 gennaio 1879 la Battle of Isandlwana: 20.000 guerrieri Zulu annientano 1.700 soldati britannici (la più grande sconfitta britannica contro un esercito africano). Il re Cetshwayo come stratega militare. La battaglia di Rorke's Drift lo stesso giorno: 150 soldati britannici resistono all'attacco di 4.000 Zulu. 11 Victoria Cross in una notte. La guerra anglo-zulu come il punto di svolta: i Britannici rafforzano e distruggono l'impero Zulu in 6 mesi. Il film Zulu (1964) come la versione cinematografica britannica.",
     "wikipediaSlug": "Anglo-Zulu_War",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "nov-un-foundation-1945",
-    "title": "le Nazioni Unite — il Tentativo di Governo Mondiale",
-    "year": 1945,
-    "lat": 37.7749,
-    "lng": -122.4194,
-    "category": "storia",
-    "description": "Il 24 ottobre 1945 entrano in vigore la Carta delle Nazioni Unite: 51 stati fondatori, oggi 193. Il Consiglio di Sicurezza con 5 permanenti con diritto di veto (USA, URSS/Russia, Cina, UK, Francia). La Dichiarazione Universale dei Diritti Umani nel 1948. Il Programma Alimentare Mondiale, l'UNICEF, l'OMS. Le operazioni di peacekeeping. Il limite: il veto paralizza ogni azione quando le grandi potenze sono coinvolte (Corea parziale eccezione). Le Nazioni Unite come il tentativo più ambizioso di governo mondiale nella storia.",
-    "wikipediaSlug": "United_Nations",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -26819,18 +26468,6 @@
     "tipo": "persona"
   },
   {
-    "id": "mod-enlightenment-encyclopedia-diderot",
-    "title": "l'Encyclopédie — Diderot e il Progetto dell'Illuminismo",
-    "year": 1751,
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "category": "scienza",
-    "description": "Dal 1751 al 1772 Denis Diderot e Jean d'Alembert pubblicano l'Encyclopédie: 28 volumi, 72.000 articoli, 3.000 illustrazioni. Il tentativo di raccogliere tutto il sapere umano in un'opera accessibile. La censura reale e religiosa che cerca di fermarla: la pubblicazione continua clandestinamente. I collaboratori: Voltaire, Rousseau, Montesquieu. L'Encyclopédie come la sintesi dell'Illuminismo: la ragione, la tolleranza, il progresso, la critica del privilegio. Il re non è sacro perché scelto da Dio ma perché utile alla società.",
-    "wikipediaSlug": "Encyclopédie",
-    "isCosmic": false,
-    "tipo": "movimento"
-  },
-  {
     "id": "mod-ottoman-empire-suleiman-arts",
     "title": "la Moschea di Solimano — l'Arte Ottomana come Sintesi Islamica",
     "year": 1557,
@@ -26889,18 +26526,6 @@
     "wikipediaSlug": "House_of_Habsburg",
     "isCosmic": false,
     "tipo": "organizzazione"
-  },
-  {
-    "id": "mod-india-mughal-arts-taj-mahal",
-    "title": "il Taj Mahal — il Capolavoro dell'Arte Mughal",
-    "year": 1653,
-    "lat": 27.1751,
-    "lng": 78.0421,
-    "category": "arte",
-    "description": "Nel 1653 Shah Jahan completa il Taj Mahal ad Agra: il mausoleo per la moglie Mumtaz Mahal morta di parto nel 1631. 22 anni di costruzione, 20.000 operai, il marmo bianco di Rajasthan intarsiato con pietre preziose. La simmetria perfetta riflessa nel canale d'acqua. Il giardino persiano (chahar bagh) come il Paradiso islamico. La calligrafia coranica come ornamento. Shah Jahan poi deposto dal figlio Aurangzeb e imprigionato a Agra con vista del Taj. Il Taj Mahal come il monumento dell'amore più famoso della storia.",
-    "wikipediaSlug": "Taj_Mahal",
-    "isCosmic": false,
-    "tipo": "opera"
   },
   {
     "id": "mod-france-louis-xiv-wars",
@@ -28221,18 +27846,6 @@
     "wikipediaSlug": "Pietism",
     "isCosmic": false,
     "tipo": "evento"
-  },
-  {
-    "id": "mod-royal-society",
-    "title": "La Royal Society e la rivoluzione scientifica",
-    "year": 1660,
-    "lat": 51.51,
-    "lng": -0.13,
-    "category": "scienza",
-    "description": "La Royal Society of London per il progresso della scienza naturale viene fondata con il motto Nullius in verba, non fidarsi delle parole ma degli esperimenti. Riunisce Newton, Boyle, Hooke e i maggiori scienziati dell'epoca. La pubblicazione delle Philosophical Transactions inaugura la comunicazione scientifica moderna.",
-    "wikipediaSlug": "Royal_Society",
-    "isCosmic": false,
-    "tipo": "scoperta"
   },
   {
     "id": "mod-mughal-aurangzeb",
@@ -29733,18 +29346,6 @@
     "wikipediaSlug": "Run-DMC",
     "isCosmic": false,
     "tipo": "persona"
-  },
-  {
-    "id": "ma-basquiat",
-    "title": "Jean-Michel Basquiat — arte dal ghetto",
-    "year": 1982,
-    "lat": 40.71,
-    "lng": -74.01,
-    "category": "arte",
-    "description": "Jean-Michel Basquiat, ex writer graffitaro di Brooklyn, viene scoperto da Andy Warhol e trasforma le sue visioni neoespressiste in opere quotate milioni di dollari. La sua arte denuncia il razzismo e la marginalizzazione afroamericana attraverso schizzi nervosi e testi frammentati. Muore a 27 anni di overdose, lasciando un corpus di oltre 2000 opere.",
-    "wikipediaSlug": "Jean-Michel_Basquiat",
-    "isCosmic": false,
-    "tipo": "opera"
   },
   {
     "id": "ma-toni-morrison",
@@ -33761,7 +33362,7 @@
     "lat": 59.3293,
     "lng": 18.0686,
     "category": "sport",
-    "tipo": "persona",
+    "tipo": "evento",
     "description": "Il Mondiale svedese del 1958 vide l'esplosione di un diciassettenne brasiliano destinato a diventare il piu' grande calciatore di tutti i tempi: Edson Arantes do Nascimento, per tutti Pele'. Nella semifinale contro la Francia segno' una tripletta; in finale contro la Svezia siglo' una doppietta nel 5-2 brasiliano, con una rete acrobatica leggendaria. Pele' pianse di gioia al fischio finale — aveva 17 anni, 7 mesi e 7 giorni, diventando il piu' giovane campione del mondo della storia. Il Brasile vinse il suo primo titolo mondiale con il rivoluzionario 4-2-4 che trasformo' il calcio mondiale. Garrincha, compagno d'attacco di Pele', fu l'altro protagonista assoluto.",
     "wikipediaSlug": "1958_FIFA_World_Cup",
     "isCosmic": false
@@ -33797,7 +33398,7 @@
     "lat": 19.4326,
     "lng": -99.1332,
     "category": "sport",
-    "tipo": "persona",
+    "tipo": "evento",
     "description": "Il Mondiale messicano del 1970 e' universalmente considerato il piu' bello della storia calcistica. Il Brasile, con Pele' alla sua ultima Coppa del Mondo, domino' con un calcio tecnico e spettacolare che ha influenzato ogni generazione successiva. La finale contro l'Italia (4-1) fu un capolavoro: il gol di Carlos Alberto Torres, con il suo portentoso inserimento dopo uno scambio millimetrico, e' ancora considerato il piu' bello della storia dei Mondiali. Il Brasile conquisto' il terzo titolo e si tenne definitivamente la Coppa Jules Rimet. La semifinale Italia-Germania — con 4 gol nei supplementari — fu soprannominata 'La partita del secolo'. Fu la prima edizione in diretta televisiva a colori.",
     "wikipediaSlug": "1970_FIFA_World_Cup",
     "isCosmic": false
@@ -34025,7 +33626,7 @@
     "lat": 35.0116,
     "lng": 135.7681,
     "category": "filosofia",
-    "tipo": "opera",
+    "tipo": "movimento",
     "description": "La Scuola di Kyoto emerge attorno al 1913 con l'insegnamento di Kitaro Nishida all'Università di Kyoto. È la prima scuola filosofica giapponese che dialoga da pari a pari con la tradizione occidentale — da Kant a Hegel a Heidegger — integrandola con il buddhismo zen e il confucianesimo. Pensatori come Tanabe Hajime e Nishitani Keiji sviluppano concetti originali come il nulla assoluto, la logica del basho (luogo) e la filosofia del vuoto. La Scuola di Kyoto rappresenta la prima vera globalizzazione del pensiero filosofico.",
     "wikipediaSlug": "Kyoto_School",
     "isCosmic": false
@@ -34037,7 +33638,7 @@
     "lat": 48.2082,
     "lng": 16.3738,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "Il Tractatus Logico-Philosophicus di Ludwig Wittgenstein viene pubblicato nel 1921 in tedesco (Logisch-Philosophische Abhandlung) e nel 1922 in inglese con prefazione di Russell. L'opera, scritta in forma aforistica e numerata, sostiene la teoria raffigurativa del linguaggio: le proposizioni significative raffigurano fatti del mondo; ciò che non può essere detto può solo essere mostrato. La metafisica, l'etica e l'estetica ricadono nel dominio dell'indicibile. Il libro è considerato il manifesto del positivismo logico e uno dei testi filosofici più influenti del XX secolo.",
     "wikipediaSlug": "Tractatus_Logico-Philosophicus",
     "isCosmic": false
@@ -34049,7 +33650,7 @@
     "lat": 50.1109,
     "lng": 8.6821,
     "category": "filosofia",
-    "tipo": "opera",
+    "tipo": "movimento",
     "description": "L'Istituto per la Ricerca Sociale (Institut für Sozialforschung) viene fondato a Francoforte nel 1923 da Felix Weil. Sotto la guida di Max Horkheimer dal 1930 diventa il centro della Teoria Critica: una revisione marxista che integra psicoanalisi freudiana, sociologia weberiana e filosofia hegeliana. I suoi pensatori — Adorno, Benjamin, Marcuse, Fromm, Habermas — analizzano le contraddizioni della modernità capitalista, la cultura di massa, l'autoritarismo e la Ragione strumentale. Con l'ascesa del nazismo emigra a Ginevra, poi New York, e torna a Francoforte nel 1951.",
     "wikipediaSlug": "Frankfurt_School",
     "isCosmic": false
@@ -34073,7 +33674,7 @@
     "lat": 48.7758,
     "lng": 9.1829,
     "category": "filosofia",
-    "tipo": "opera",
+    "tipo": "persona",
     "description": "Max Horkheimer nasce nel 1895 a Stoccarda e diventa direttore dell'Istituto per la Ricerca Sociale di Francoforte nel 1930. Con Adorno scrive la Dialettica dell'Illuminismo (1944), opera fondamentale della Teoria Critica: la ragione illuminista, invece di liberare l'umanità, si converte in strumento di dominio e oppressione — culminando nei campi di concentramento nazisti. Il concetto di Ragione Strumentale descrive come la razionalità moderna si riduca al calcolo dei mezzi per fini dati, dimenticando la critica dei fini stessi. Torna a Francoforte nel 1949 e ricostruisce l'Istituto.",
     "wikipediaSlug": "Max_Horkheimer",
     "isCosmic": false
@@ -34085,7 +33686,7 @@
     "lat": 47.999,
     "lng": 7.8421,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "Essere e Tempo (Sein und Zeit) di Martin Heidegger, pubblicato a Friburgo nel 1927, è il testo filosofico più influente del XX secolo. L'opera analizza il modo d'essere specifico dell'uomo (Dasein: essere-nel-mondo) attraverso categorie esistenziali originali: la situazione emotiva (Stimmung), il comprendere (Verstehen), la cura (Sorge), l'essere-con-gli-altri (Mit-sein), l'essere-per-la-morte (Sein-zum-Tode), l'autenticità e l'inauntenticità. Heidegger dimostra che la temporalità è la struttura fondamentale dell'esistenza umana. Il libro rimane incompiuto — la terza sezione non fu mai pubblicata — ma trasforma irreversibilmente la filosofia europea.",
     "wikipediaSlug": "Being_and_Time",
     "isCosmic": false
@@ -34097,7 +33698,7 @@
     "lat": 52.52,
     "lng": 13.405,
     "category": "filosofia",
-    "tipo": "opera",
+    "tipo": "persona",
     "description": "Walter Benjamin nasce nel 1892 a Berlino e sviluppa una filosofia originale che intreccia marxismo, misticismo ebraico ed estetica modernista. I suoi saggi fondamentali — L'opera d'arte nell'epoca della sua riproducibilità tecnica (1935) e I Passages di Parigi (incompiuto) — analizzano come la riproduzione meccanica trasformi l'aura dell'opera d'arte e come la modernità costruisca la propria mitologia nei grandi magazzini e nelle gallerie commerciali. Rifugiatosi in Francia, tenta di espatriare in Spagna nel settembre 1940 alla frontiera di Portbou ma, fermato dalle guardie franchiste, si suicida a 48 anni.",
     "wikipediaSlug": "Walter_Benjamin",
     "isCosmic": false
@@ -34109,7 +33710,7 @@
     "lat": 50.1109,
     "lng": 8.6821,
     "category": "filosofia",
-    "tipo": "opera",
+    "tipo": "persona",
     "description": "Theodor W. Adorno nasce nel 1903 a Francoforte e diventa il pensatore più rigoroso della Teoria Critica. Musicologo, sociologo e filosofo, analizza la cultura di massa come industria culturale che produce conformismo (con Horkheimer nella Dialettica dell'Illuminismo, 1944). La Dialettica Negativa (1966) è la sua risposta filosofica sistematica a Hegel: il pensiero non deve mai dissolversi nell'identità — la contraddizione è il motore del pensiero critico. Minima Moralia (1951) raccoglie aforismi sull'intellettuale in esilio. Muore nel 1969, durante le contestazioni studentesche che lo addolorano profondamente.",
     "wikipediaSlug": "Theodor_W._Adorno",
     "isCosmic": false
@@ -34145,7 +33746,7 @@
     "lat": 48.8566,
     "lng": 2.3522,
     "category": "filosofia",
-    "tipo": "movimento",
+    "tipo": "persona",
     "description": "Simone de Beauvoir nasce nel 1908 a Parigi e fonde il femminismo filosofico con Il Secondo Sesso (1949). La sua tesi — non si nasce donna, lo si diventa — dimostra che la femminilità è una costruzione culturale, non una natura biologica. Sartiana convinta, sviluppa un'etica dell'ambiguità che integra libertà individuale e responsabilità sociale. La sua autobiografia (Memorie di una ragazza per bene, La Forza dell'Età) documenta un'esistenza programmaticamente libera. Fondatrice con Sartre della rivista Les Temps Modernes, è la prima intellettuale femminista riconosciuta come filosofa a pieno titolo.",
     "wikipediaSlug": "Simone_de_Beauvoir",
     "isCosmic": false
@@ -34193,7 +33794,7 @@
     "lat": 48.8566,
     "lng": 2.3522,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "L'Essere e il Nulla (L'Être et le Néant) di Jean-Paul Sartre, pubblicato a Parigi nel 1943 durante l'occupazione nazista, è il manifesto dell'esistenzialismo ateo. Sartre distingue l'essere-in-sé (le cose) dall'essere-per-sé (la coscienza umana): la coscienza è nulla — puro progetto, pura intenzionalità — e questa mancanza di essenza è la radice della libertà assoluta. Analizza l'essere-per-altri (il conflitto con lo sguardo altrui), la cattiva fede (il rifiuto della libertà) e il desiderio come tentativo impossibile di essere-in-sé-per-sé. Opera fondamentale della filosofia continentale del Novecento.",
     "wikipediaSlug": "Being_and_Nothingness",
     "isCosmic": false
@@ -34205,7 +33806,7 @@
     "lat": -43.532,
     "lng": 172.6306,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "La Società Aperta e i suoi Nemici (The Open Society and Its Enemies) di Karl Popper viene pubblicata nel 1945, scritta durante l'esilio in Nuova Zelanda. L'opera è una critica storico-filosofica dei totalitarismi in due volumi: il primo attacca l'utopismo tribalistico di Platone, il secondo analizza il profetismo storicistico di Hegel e Marx. Popper oppone la società aperta — basata su riformismo democratico, critica razionale e istituzioni libere — alle ideologie che credono di conoscere le leggi della storia e giustificano il terrore in nome del futuro inevitabile. Opera fondamentale del liberalismo politico del dopoguerra.",
     "wikipediaSlug": "The_Open_Society_and_Its_Enemies",
     "isCosmic": false
@@ -34217,7 +33818,7 @@
     "lat": 48.8566,
     "lng": 2.3522,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "Il Secondo Sesso (Le Deuxième Sexe) di Simone de Beauvoir, pubblicato a Parigi nel 1949, è il testo fondatore del femminismo filosofico moderno. Nell'opera magistrale de Beauvoir dimostra che la donna è storicamente costruita come l'Altro dell'uomo: non si nasce donna, lo si diventa attraverso condizionamenti culturali, biologici e psicologici. Analizza la situazione femminile dalla mitologia alla psicoanalisi, dalla storia alla letteratura, dal lavoro alla sessualità. Immediatamente condannato dalla Chiesa cattolica e dal Partito Comunista Francese, diventa il testo di riferimento del movimento femminista degli anni Sessanta e Settanta.",
     "wikipediaSlug": "The_Second_Sex",
     "isCosmic": false
@@ -34229,7 +33830,7 @@
     "lat": 52.2053,
     "lng": 0.1218,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "Le Ricerche Filosofiche (Philosophische Untersuchungen) di Ludwig Wittgenstein vengono pubblicate postume nel 1953 a Cambridge, due anni dopo la sua morte. L'opera segna la rottura con il Tractatus: il linguaggio non raffigura fatti, ma compie azioni in contesti sociali — è un insieme di giochi linguistici regolati dall'uso. I significati non sono essenze private ma pratiche pubbliche. La celebre critica al linguaggio privato demolisce il dualismo cartesiano. Le Ricerche inaugurano la filosofia del linguaggio ordinario e influenzano Austin, Ryle, Searle, Kripke e tutta la filosofia analitica della seconda metà del Novecento.",
     "wikipediaSlug": "Philosophical_Investigations",
     "isCosmic": false
@@ -34301,7 +33902,7 @@
     "lat": 48.8566,
     "lng": 2.3522,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "movimento",
     "description": "Lo strutturalismo emerge a Parigi negli anni Sessanta come paradigma intellettuale dominante delle scienze umane, ispirato alla linguistica di Ferdinand de Saussure. Lévi-Strauss applica la struttura linguistica all'antropologia (miti, parentela); Lacan alla psicoanalisi (l'inconscio strutturato come linguaggio); Althusser alla teoria marxista; Barthes alla semiotica culturale. Il presupposto: i fenomeni umani (linguaggio, miti, psiche, società) sono sistemi di differenze, non insiemi di elementi isolati. Lo strutturalismo destituisce il soggetto dalla posizione centrale — anticipa il post-strutturalismo di Derrida, Foucault e Deleuze.",
     "wikipediaSlug": "Structuralism",
     "isCosmic": false
@@ -34349,7 +33950,7 @@
     "lat": 41.8781,
     "lng": -87.6298,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "La Struttura delle Rivoluzioni Scientifiche di Thomas Kuhn viene pubblicata nel 1962 dall'Università di Chicago nell'Enciclopedia dell'Unità della Scienza. L'opera introduce il concetto di paradigma scientifico e distingue la scienza normale — che risolve problemi dentro un paradigma accettato — dalla scienza rivoluzionaria che cambia il paradigma stesso. Le anomalie si accumulano finché una crisi porta a un cambio di paradigma, non attraverso confutazioni logiche ma attraverso conversioni della comunità scientifica. Il concetto di incommensurabilità tra paradigmi è il punto più controverso. Il testo è il libro accademico più citato del Novecento.",
     "wikipediaSlug": "The_Structure_of_Scientific_Revolutions",
     "isCosmic": false
@@ -34361,7 +33962,7 @@
     "lat": 48.8566,
     "lng": 2.3522,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "Sorvegliare e Punire (Surveiller et Punir) di Michel Foucault viene pubblicato a Parigi nel 1975. L'opera analizza la nascita del carcere moderno come punto di arrivo di una trasformazione più ampia: il passaggio dalla punizione spettacolare (torture pubbliche) alla disciplina invisibile dei corpi. Il modello del Panopticon di Bentham — la torre di sorveglianza da cui il guardiano vede senza essere visto — diventa la metafora del potere disciplinare moderno che penetra in scuole, ospedali, fabbriche, caserme. La sorveglianza produce corpi docili e soggetti normalizzati. Opera fondamentale per il pensiero critico sulle istituzioni.",
     "wikipediaSlug": "Discipline_and_Punish",
     "isCosmic": false
@@ -34385,7 +33986,7 @@
     "lat": 42.3601,
     "lng": -71.0589,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "Una Teoria della Giustizia (A Theory of Justice) di John Rawls viene pubblicata nel 1971 dall'Università di Harvard. L'opera propone il contrattualismo kantiano come alternativa all'utilitarismo: le istituzioni giuste sono quelle scelte da persone razionali nella posizione originaria, dietro il velo di ignoranza. I due principi di giustizia che ne derivano sono: eguale libertà per tutti e principio di differenza (le disuguaglianze economiche sono giustificate solo se migliorano la situazione dei meno avvantaggiati). Il libro rinvitalizza la filosofia politica normativa dopo decenni di positivismo e diventa il testo politico-filosofico più discusso del Novecento.",
     "wikipediaSlug": "A_Theory_of_Justice",
     "isCosmic": false
@@ -34397,7 +33998,7 @@
     "lat": -37.8136,
     "lng": 144.9631,
     "category": "filosofia",
-    "tipo": "opera",
+    "tipo": "persona",
     "description": "Peter Singer nasce nel 1946 a Melbourne (Australia) in una famiglia ebraica viennese fuggita dal nazismo e diventa il filosofo morale più influente e controverso della sua generazione. La Liberazione Animale (1975) fonda il movimento per i diritti degli animali con argomenti filosofici rigorosi: il principio di uguale considerazione degli interessi non si può fermare ai confini della specie. L'Etica Pratica (1979) affronta aborto, eutanasia, povertà globale e bioetica con approccio consequenzialista. La sua tesi — i ricchi hanno l'obbligo morale di donare fino al punto della marginalità — provoca dibattiti accesi. Singer è la figura più polarizzante della bioetica contemporanea.",
     "wikipediaSlug": "Peter_Singer",
     "isCosmic": false
@@ -34421,7 +34022,7 @@
     "lat": 42.3601,
     "lng": -71.0589,
     "category": "filosofia",
-    "tipo": "persona",
+    "tipo": "movimento",
     "description": "L'Etica della Cura emerge nel 1982 con Con una Voce Diversa di Carol Gilligan, sviluppato poi da Nel Noddings, Virginia Held e Joan Tronto. Gilligan critica la psicologia morale di Kohlberg — basata su principi universali astratti — mostrando che le donne ragionano moralmente in termini di relazioni, responsabilità concrete e cura dei particolari. L'etica della cura propone un'alternativa alle etiche deontologiche e consequenzialiste: la moralità emerge dalla rete di relazioni di dipendenza e interdipendenza che costituisce la vita umana. Fonda la feminist ethics e influenza la bioetica, il lavoro sociale e la politica del welfare.",
     "wikipediaSlug": "Ethics_of_care",
     "isCosmic": false
@@ -34445,7 +34046,7 @@
     "lat": 32.542,
     "lng": 44.421,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "I sacerdoti-astronomi babilonesi svilupparono un sistema sofisticato di osservazione celeste, catalogando le posizioni di stelle e pianeti su tavolette cuneiformi. Utilizzavano basi numeriche sessagesimali che ancora oggi sopravvivono nei nostri 360 gradi di cerchio e nei 60 minuti dell'ora. Monitoravano i movimenti di Venere, Marte, Giove e Saturno con una precisione sorprendente, e collegavano i fenomeni celesti agli eventi terrestri e alle decisioni reali, gettando le fondamenta dell'astronomia scientifica occidentale.",
     "wikipediaSlug": "Babylonian_astronomy",
     "isCosmic": false
@@ -34457,7 +34058,7 @@
     "lat": 32.542,
     "lng": 44.421,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Gli astronomi babilonesi scoprirono il ciclo di Saros, un periodo di circa 18 anni, 11 giorni e 8 ore dopo il quale le eclissi solari e lunari si ripetono con grande regolarità. Questa scoperta rivoluzionaria permise per la prima volta nella storia di prevedere le eclissi con precisione, strappandole dalla sfera del prodigio divino per inserirle in un quadro di regolarità cosmica. Il ciclo era basato sull'osservazione sistematica accumulata per secoli su tavolette astronomiche dette 'diaries'.",
     "wikipediaSlug": "Saros_(astronomy)",
     "isCosmic": false
@@ -34469,7 +34070,7 @@
     "lat": 32.542,
     "lng": 44.421,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "opera",
     "description": "MUL.APIN (che significa 'la costellazione dell'Aratro') è una serie di due tavolette cuneiformi che costituisce il più antico catalogo stellare sistematico della storia. Elenca 66 stelle e costellazioni divise in tre 'strade' celesti — di Anu, Enlil ed Ea — corrispondenti a fasce eclittiche. Include anche dati sui mesi eliaci delle stelle, sulle date dei solstizi ed equinozi, e sulle relazioni tra la luna e le stelle. È il precursore diretto dello zodiaco e della moderna astronomia di posizione.",
     "wikipediaSlug": "MUL.APIN",
     "isCosmic": false
@@ -34481,7 +34082,7 @@
     "lat": 32.542,
     "lng": 44.421,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Gli astronomi babilonesi formalizzarono il sistema zodiacale dividendo l'eclittica — il percorso apparente del Sole tra le stelle — in dodici sezioni uguali di 30 gradi ciascuna, corrispondenti alle costellazioni oggi note come segni zodiacali. Questa suddivisione standardizzava i calcoli astronomici e astrologici, permettendo previsioni più precise dei movimenti planetari. Lo zodiaco babilonese fu adottato dai Greci e poi dall'intero mondo occidentale, influenzando profondamente sia l'astronomia scientifica che la cultura popolare.",
     "wikipediaSlug": "Babylonian_zodiac",
     "isCosmic": false
@@ -34493,7 +34094,7 @@
     "lat": 32.542,
     "lng": 44.421,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Nabu-rimanni è il più antico astronomo della storia di cui conosciamo il nome personale. Astronomo babilonese attivo intorno al 490 a.C., elaborò tavole lunari di grande precisione che permettevano di calcolare le posizioni della Luna con errori inferiori a un minuto d'arco. Il suo sistema, noto come 'Sistema A', utilizzava funzioni matematiche a gradini per modellare le variazioni di velocità della Luna. La sua opera dimostrò che l'astronomia babilonese aveva raggiunto un livello di astrazione matematica paragonabile alla scienza moderna.",
     "wikipediaSlug": "Nabu-rimanni",
     "isCosmic": false
@@ -34505,7 +34106,7 @@
     "lat": 37.53,
     "lng": 27.36,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Talete di Mileto, filosofo e matematico greco del VI secolo a.C., è ricordato per aver predetto l'eclissi solare del 28 maggio 585 a.C. — un evento che secondo Erodoto interruppe la battaglia tra Lidi e Medi. Talete propose anche che la Terra fosse un disco piatto che galleggia sull'acqua, ma soprattutto cercò spiegazioni naturali ai fenomeni celesti invece di ricorrere agli dei. Fu il primo a distinguere nettamente tra astronomia come scienza e astrologia come pratica divinatoria.",
     "wikipediaSlug": "Thales_of_Miletus",
     "isCosmic": false
@@ -34517,7 +34118,7 @@
     "lat": 37.53,
     "lng": 27.36,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Anassimandro di Mileto fu il primo filosofo greco a proporre un modello cosmologico basato su principi razionali anziché mitologici. Concepì la Terra come un cilindro sospeso liberamente nello spazio senza alcun supporto — intuizione sorprendentemente moderna. Immaginò il cielo come una serie di ruote di fuoco parzialmente oscurate, e propose che gli esseri viventi si fossero evoluti dall'acqua. La sua visione di un cosmo ordinato e comprensibile dalla ragione umana aprì la strada a secoli di astronomia greca.",
     "wikipediaSlug": "Anaximander",
     "isCosmic": false
@@ -34529,7 +34130,7 @@
     "lat": 37.89,
     "lng": 20.73,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Pitagora di Samo, o la sua scuola filosofica, propose per primo che la Terra avesse forma sferica — non piatta come credevano i predecessori. L'idea nasceva da considerazioni estetiche (la sfera è la forma più perfetta) ma anche da osservazioni: la forma rotonda dell'ombra della Terra sulla Luna durante le eclissi lunari, e il fatto che stelle diverse sono visibili a diverse latitudini. La dottrina della sfericità terrestre fu poi adottata da tutta la filosofia greca classica e mai più abbandonata dalla scienza occidentale.",
     "wikipediaSlug": "Pythagoras",
     "isCosmic": false
@@ -34541,7 +34142,7 @@
     "lat": 37.75,
     "lng": 26.98,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Aristarco di Samo fu il primo astronomo nella storia ad affermare che il Sole, e non la Terra, si trova al centro dell'universo. Propose che tutti i pianeti, inclusa la Terra, orbitano attorno al Sole, e che la Terra ruota su se stessa in un giorno. Misurò anche le distanze relative e le dimensioni di Sole e Luna. La sua teoria eliocentrica anticipava di quasi 1800 anni quella di Copernico, ma fu rifiutata dai contemporanei — in parte per ragioni fisiche, in parte per l'autorità di Aristotele.",
     "wikipediaSlug": "Aristarchus_of_Samos",
     "isCosmic": false
@@ -34553,7 +34154,7 @@
     "lat": 31.2,
     "lng": 29.92,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Eratostene di Cirene, direttore della Biblioteca di Alessandria, calcolò con notevole precisione la circonferenza della Terra usando un metodo geometrico ingegnoso. Sapendo che ad Assuan il Sole era allo zenith al solstizio d'estate mentre ad Alessandria proiettava un'ombra di 7,2 gradi, e conoscendo la distanza tra le due città, calcolò la circonferenza terrestre ottenendo circa 40.000 km — straordinariamente vicino al valore reale di 40.075 km. Fu anche il primo a proporre che si potesse raggiungere l'India navigando verso occidente.",
     "wikipediaSlug": "Eratosthenes",
     "isCosmic": false
@@ -34565,7 +34166,7 @@
     "lat": 41.02,
     "lng": 28.97,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Ipparco di Nicea fu forse il più grande astronomo dell'antichità. Compilò un catalogo di circa 850 stelle con posizioni accurate, scoprì la precessione degli equinozi confrontando le proprie osservazioni con quelle più antiche, calcolò la distanza della Luna con un errore inferiore al 5%, e introdusse il sistema di magnitudini stellari ancora in uso oggi. Inventò anche la trigonometria come strumento matematico per l'astronomia. Le sue tavole lunari e solari rimasero le più accurate per secoli.",
     "wikipediaSlug": "Hipparchus",
     "isCosmic": false
@@ -34577,7 +34178,7 @@
     "lat": 30.06,
     "lng": 31.25,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Claudio Tolomeo di Alessandria fu l'astronomo che codificò e perfezionò il modello geocentrico dell'universo in forma matematicamente rigorosa. Sviluppò il sistema degli epicicli — cerchi su cerchi — per spiegare i movimenti apparentemente irregolari dei pianeti pur mantenendo la Terra al centro. Il suo sistema, pur basato su un'ipotesi sbagliata, permetteva previsioni astronomiche abbastanza precise da risultare utili per 14 secoli. Fu anche geografo e matematico di primo piano.",
     "wikipediaSlug": "Ptolemy",
     "isCosmic": false
@@ -34589,7 +34190,7 @@
     "lat": 30.06,
     "lng": 31.25,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "opera",
     "description": "L'Almagesto (dal greco 'la grande trattazione') è il trattato astronomico scritto da Claudio Tolomeo che raccolse e sistematizzò tutta la conoscenza astronomica greca. Diviso in tredici libri, contiene il catalogo di 1022 stelle di Ipparco aggiornato, la teoria matematica dei movimenti dei pianeti, del Sole e della Luna, e le tavole che permettevano di calcolare le posizioni degli astri per qualsiasi data. Rimase il testo astronomico di riferimento assoluto in Europa e nel mondo islamico per oltre 1400 anni.",
     "wikipediaSlug": "Almagest",
     "isCosmic": false
@@ -34601,7 +34202,7 @@
     "lat": 36.84,
     "lng": 39.01,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Muhammad ibn Jābir al-Battani, astronomo arabo attivo a Raqqa in Siria, migliorò significativamente le tavole astronomiche di Tolomeo attraverso osservazioni sistematiche prolungate per decenni. Calcolò con maggiore precisione l'inclinazione dell'eclittica, la lunghezza dell'anno solare e la precessione degli equinozi. Introdusse i seni trigonometrici (sinus) al posto delle corde usate dai Greci, rivoluzionando il calcolo astronomico. La sua opera principale, il Zij al-Sabi, fu tradotta in latino nel XII secolo e influenzò profondamente Copernico e Tycho Brahe.",
     "wikipediaSlug": "Al-Battani",
     "isCosmic": false
@@ -34613,7 +34214,7 @@
     "lat": 37.94,
     "lng": 58.38,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Abu Rayhan al-Biruni, poliedrico studioso persiano, calcolò il raggio della Terra con un metodo brillante e originale: misurando l'angolo di depressione dell'orizzonte dalla cima di una montagna di altezza nota, ottenne una stima di circa 6.339 km, straordinariamente vicina al valore reale di 6.371 km. Scrisse anche un'enciclopedia astronomica monumentale, compilò un trattato sulla determinazione geografica delle coordinate, e confrontò le tradizioni astronomiche greca, araba e indiana, riconoscendone i meriti relativi con notevole spirito scientifico.",
     "wikipediaSlug": "Al-Biruni",
     "isCosmic": false
@@ -34625,7 +34226,7 @@
     "lat": 32.542,
     "lng": 44.421,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Ibn al-Haytham (Alhazen), matematico e fisico iracheno operante al Cairo, scrisse il Kitāb al-Manāẓir (Libro dell'Ottica) che rivoluzionò la comprensione della luce e della visione. Le sue scoperte sull'ottica geometrica, sulla rifrazione e sulla camera oscura posero le basi teoriche per la costruzione del telescopio secoli dopo. Fu anche il primo a spiegare correttamente la rifrazione atmosferica che deforma l'aspetto del Sole vicino all'orizzonte, e propose criteri metodologici che anticipavano il metodo sperimentale moderno.",
     "wikipediaSlug": "Ibn_al-Haytham",
     "isCosmic": false
@@ -34637,7 +34238,7 @@
     "lat": 37.4,
     "lng": 46.27,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "luogo",
     "description": "L'Osservatorio di Maragha, fondato nel 1259 in Azerbaijan dall'astronomo Nasir al-Din al-Tusi sotto il patronato del Khan mongolo Hulagu, fu il primo istituto astronomico organizzato della storia. Disponeva di una grande biblioteca, di strumenti all'avanguardia tra cui un quadrante murale di 4 metri, e di un team permanente di astronomi provenienti da tutto il mondo islamico e dalla Cina. Produsse le Tavole Ilkhaniche e sviluppò modelli matematici dei movimenti planetari che influenzarono direttamente Copernico.",
     "wikipediaSlug": "Maragheh_observatory",
     "isCosmic": false
@@ -34649,7 +34250,7 @@
     "lat": 39.65,
     "lng": 66.97,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Ulugh Beg, nipote di Tamerlano e governatore di Samarcanda, fu uno dei più grandi astronomi del Medioevo. Costruì un enorme osservatorio con un sestante murale di 40 metri di raggio e compilò il Zij-i Sultani, un catalogo di 1018 stelle con posizioni misurate personalmente, più precise di quelle di Ipparco e di Tolomeo. Le sue misurazioni della durata dell'anno siderale differivano dal valore reale di soli 58 secondi. Nonostante il suo assassinio per mano del proprio figlio nel 1449, la sua opera astronomica influenzò gli astronomi europei del Rinascimento.",
     "wikipediaSlug": "Ulugh_Beg",
     "isCosmic": false
@@ -34661,7 +34262,7 @@
     "lat": 53.78,
     "lng": 20.49,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "opera",
     "description": "Il De Revolutionibus Orbium Coelestium di Nicolò Copernico, pubblicato nell'anno della sua morte nel 1543, propose il modello eliocentrico del sistema solare come alternativa matematicamente più semplice al complicato sistema tolemaico. Il Sole veniva posto al centro con la Terra e gli altri pianeti in orbita intorno ad esso. L'opera rimase inizialmente poco nota e fu inserita nell'Indice dei libri proibiti solo nel 1616, dopo il caso Galileo. Avviò la 'Rivoluzione Copernicana' che trasformò radicalmente la visione umana del cosmo.",
     "wikipediaSlug": "De_revolutionibus_orbium_coelestium",
     "isCosmic": false
@@ -34673,7 +34274,7 @@
     "lat": 55.89,
     "lng": 9.87,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Tycho Brahe, astronomo danese finanziato dalla corona reale, fu il più preciso osservatore astronomico dell'era pre-telescopica. Costruì sull'isola di Hveen due grandi osservatori — Uraniborg e Stjerneborg — dotati di strumenti di misura enormi e precisi. Le sue misurazioni sistematiche delle posizioni di stelle e pianeti, accumulate per vent'anni, raggiunsero una precisione di circa un minuto d'arco. I suoi dati, ereditati da Giovanni Keplero, permisero a quest'ultimo di formulare le tre leggi del moto planetario.",
     "wikipediaSlug": "Tycho_Brahe",
     "isCosmic": false
@@ -34685,7 +34286,7 @@
     "lat": 48.77,
     "lng": 9.17,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Giovanni Keplero, astronomo tedesco, analizzò i dati osservativi di Tycho Brahe e scoprì che le orbite dei pianeti non sono cerchi perfetti ma ellissi, con il Sole in uno dei due fuochi. Le sue tre leggi del moto planetario — pubblicate tra il 1609 e il 1619 — descrivono la forma ellittica delle orbite, la variazione di velocità dei pianeti (più veloci vicino al Sole), e la relazione matematica tra periodo orbitale e distanza dal Sole. Queste leggi costituirono la base empirica che Newton spiegò teoricamente con la gravità.",
     "wikipediaSlug": "Kepler's_laws_of_planetary_motion",
     "isCosmic": false
@@ -34709,7 +34310,7 @@
     "lat": 43.77,
     "lng": 11.26,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "opera",
     "description": "Il Sidereus Nuncius (Messaggero Celeste) di Galileo Galilei, pubblicato nel marzo 1610, fu il primo trattato scientifico basato su osservazioni telescopiche. Riportava la scoperta delle irregolarità sulla superficie lunare, di stelle invisibili a occhio nudo nella Via Lattea, e soprattutto dei quattro satelliti di Giove. L'opera fu una sensazione immediata in tutta Europa, tradotta rapidamente e letta con interesse da Keplero e dai principali intellettuali dell'epoca. Inaugurò l'astronomia osservativa moderna e dimostrò che il cielo non è immutabile come sosteneva Aristotele.",
     "wikipediaSlug": "Sidereus_Nuncius",
     "isCosmic": false
@@ -34721,7 +34322,7 @@
     "lat": 52.79,
     "lng": -0.63,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Isaac Newton, nei Philosophiae Naturalis Principia Mathematica del 1687, formulò la legge di gravitazione universale: ogni corpo nell'universo attrae ogni altro corpo con una forza proporzionale al prodotto delle masse e inversamente proporzionale al quadrato della distanza. Questa legge spiegava in un colpo solo la caduta dei gravi, le maree, e le orbite dei pianeti e della Luna, unificando la fisica terrestre e quella celeste. Dimostrò matematicamente che le leggi di Keplero sono una conseguenza della gravitazione, comprendendo l'intero meccanismo del sistema solare.",
     "wikipediaSlug": "Newton's_law_of_universal_gravitation",
     "isCosmic": false
@@ -34733,7 +34334,7 @@
     "lat": 51.48,
     "lng": 0,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "luogo",
     "description": "L'Osservatorio Reale di Greenwich fu fondato nel 1675 dal Re Carlo II d'Inghilterra con lo scopo primario di determinare le longitudine in mare tramite osservazioni astronomiche accurate. Sotto la direzione di John Flamsteed, primo Astronomo Reale, divenne il centro di riferimento dell'astronomia britannica. Nel 1884 il meridiano di Greenwich fu adottato come meridiano primo internazionale (longitudine 0°), diventando il punto di riferimento del sistema di coordinate geografiche e dei fusi orari mondiali ancora in uso oggi.",
     "wikipediaSlug": "Royal_Observatory_Greenwich",
     "isCosmic": false
@@ -34745,7 +34346,7 @@
     "lat": 51.38,
     "lng": -2.36,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Il 13 marzo 1781 l'astronomo britannico di origine tedesca William Herschel scoprì Urano con un telescopio artigianale nel giardino di casa sua a Bath. Fu il primo pianeta scoperto con il telescopio nella storia, e il primo pianeta ignoto agli antichi. Herschel inizialmente lo scambiò per una cometa, ma i calcoli orbitali dimostrarono presto che si trattava di un pianeta a distanza doppia da Saturno. La scoperta allargò improvvisamente i confini del sistema solare conosciuto e aprì la strada alla ricerca di altri pianeti.",
     "wikipediaSlug": "Discovery_of_Uranus",
     "isCosmic": false
@@ -34757,7 +34358,7 @@
     "lat": 48.86,
     "lng": 2.35,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Nel 1849 il fisico francese Hippolyte Fizeau eseguì la prima misura terrestre della velocità della luce usando una ruota dentata rotante. Un raggio di luce veniva inviato tra i denti della ruota fino a uno specchio a 8 km di distanza; variando la velocità di rotazione, Fizeau trovò la velocità alla quale la luce riusciva a tornare esattamente tra i denti. Ottenne circa 313.000 km/s — vicino al valore reale di 299.792 km/s. Questa misura puramente terresttre confermò che la luce aveva una velocità finita e misurabile, fondamentale per l'astronomia.",
     "wikipediaSlug": "Speed_of_light",
     "isCosmic": false
@@ -34781,7 +34382,7 @@
     "lat": 50.85,
     "lng": 4.35,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "Georges Lemaître, sacerdote e fisico belga, propose nel 1927 che l'universo fosse in espansione e che, risalendo indietro nel tempo, dovesse provenire da uno stato iniziale di densità e temperatura infinite — quello che lui chiamò l''atomo primordiale'. Derivò questa conclusione dalle equazioni di Einstein della relatività generale, due anni prima che Hubble fornisse la conferma osservativa. Lemaître è oggi riconosciuto come il padre della teoria del Big Bang, anche se il termine stesso fu coniato ironicamente dal fisico Fred Hoyle nel 1949.",
     "wikipediaSlug": "Big_Bang",
     "isCosmic": false
@@ -34793,7 +34394,7 @@
     "lat": 38.91,
     "lng": -77.04,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "scoperta",
     "description": "L'astronoma americana Vera Rubin, insieme al fisico Kent Ford, scoprì negli anni Settanta che le stelle nei bordi delle galassie spirali orbitano troppo velocemente rispetto a quanto previsto dalla massa visibile. Le curve di rotazione galattica erano piatte invece di decrescere verso l'esterno come richiedeva la gravità della materia visibile. L'unica spiegazione era la presenza di enormi quantità di materia non luminosa — la materia oscura — che avvolge ogni galassia in un alone. Questa scoperta rivoluzionaria indicò che il 27% dell'universo è composto da materia di natura ancora ignota.",
     "wikipediaSlug": "Vera_Rubin",
     "isCosmic": false
@@ -34805,7 +34406,7 @@
     "lat": 52.2,
     "lng": 0.12,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "opera",
     "description": "A Brief History of Time di Stephen Hawking, pubblicato nel 1988, è diventato il libro di cosmologia più venduto della storia, con oltre 10 milioni di copie in 40 lingue. Hawking vi espone in modo accessibile i concetti fondamentali della cosmologia moderna: il Big Bang, i buchi neri, la radiazione di Hawking, la freccia del tempo e la ricerca di una teoria unificata della fisica. L'opera ha trasformato la percezione pubblica della cosmologia e ha dimostrato che i grandi quesiti sull'universo possono appassionare milioni di lettori non specialisti.",
     "wikipediaSlug": "A_Brief_History_of_Time",
     "isCosmic": false
@@ -34817,7 +34418,7 @@
     "lat": 53.78,
     "lng": 20.49,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Nicolò Copernico, canonico polacco con una solida formazione matematica e astronomica acquisita in Italia, iniziò già intorno al 1510 a sviluppare il suo sistema eliocentrico circolando manoscritti tra pochi amici fidati. Motivato dall'insoddisfazione per la complessità e le incongruenze del sistema tolemaico, trascorse decenni a elaborare il modello alternativo prima di pubblicarlo. Uomo profondamente religioso, concepiva la semplicità matematica del sistema solare come espressione dell'armonia divina. La sua opera rivoluzionò la cosmologia europea e aprì la strada alla rivoluzione scientifica.",
     "wikipediaSlug": "Nicolaus_Copernicus",
     "isCosmic": false
@@ -34829,7 +34430,7 @@
     "lat": 43.77,
     "lng": 11.26,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Galileo Galilei, fisico e astronomo toscano, è considerato il padre dell'astronomia osservativa moderna e uno dei fondatori del metodo scientifico sperimentale. Con il suo telescopio rivoluzionò la conoscenza del cielo, scoprendo le lune di Giove, le fasi di Venere, le macchie solari e la struttura della Via Lattea. Difese il sistema copernicano contro la dottrina geocentrica della Chiesa, fu processato dall'Inquisizione nel 1633 e condannato agli arresti domiciliari. La sua vicenda simboleggia il conflitto tra scienza e dogma, rimasto emblematico per tutta la modernità.",
     "wikipediaSlug": "Galileo_Galilei",
     "isCosmic": false
@@ -34841,7 +34442,7 @@
     "lat": 52.79,
     "lng": -0.63,
     "category": "cosmo",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Isaac Newton è il fisico e matematico che portò a compimento la rivoluzione scientifica iniziata da Copernico e Galileo. Inventò il calcolo infinitesimale, formulò le tre leggi del moto e la legge di gravitazione universale, costruì il primo telescopio a riflessione pratico e scoprì la scomposizione della luce bianca in colori. La sua opera principale, i Principia Mathematica del 1687, rimase il testo fondamentale della meccanica classica per oltre duecento anni. La meccanica celeste newtoniana fu il paradigma dominante dell'astronomia fino all'avvento della relatività di Einstein.",
     "wikipediaSlug": "Isaac_Newton",
     "isCosmic": false
@@ -34865,7 +34466,7 @@
     "lat": 40.47,
     "lng": 25.37,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "La Nike di Samotracia è una delle sculture più celebri dell'antichità, realizzata intorno al 190 a.C. per commemorare una vittoria navale. La dea della vittoria è rappresentata in volo sulla prua di una nave, con le ali spiegate e le vesti mosse dal vento. Scoperta sull'isola di Samotracia nel 1863, la statua è oggi conservata al Museo del Louvre di Parigi. La sua straordinaria resa del movimento e della leggerezza ne fa un capolavoro assoluto dell'arte ellenistica, capace di trasmettere un senso di potenza e di trionfo che ha ispirato artisti e designer per secoli.",
     "wikipediaSlug": "Winged_Victory_of_Samothrace",
     "isCosmic": false
@@ -34877,7 +34478,7 @@
     "lat": 36.73,
     "lng": 24.42,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "La Venere di Milo è una statua in marmo pario alta circa 2 metri, scoperta nel 1820 sull'isola di Melo (Milos) nelle Cicladi. Datata tra il 130 e il 100 a.C., è attribuita allo scultore Alexandros di Antiochia. Raffigura quasi certamente la dea Afrodite, anche se alcune ipotesi la identificano con Anfitrite. La scultura è universalmente considerata un simbolo di bellezza femminile ideale: nonostante la perdita delle braccia avvenuta durante il ritrovamento, la figura emana equilibrio, eleganza e sensualità. Oggi è conservata al Museo del Louvre di Parigi, dove è una delle opere più visitate al mondo.",
     "wikipediaSlug": "Venus_de_Milo",
     "isCosmic": false
@@ -34889,7 +34490,7 @@
     "lat": 41.9,
     "lng": 12.45,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "Il gruppo scultoreo del Laocoonte è uno dei capolavori più drammatici dell'arte antica. Raffigura il sacerdote troiano Laocoonte e i suoi due figli avvolti dai serpenti marini, puniti dagli dei per aver tentato di avvertire i Troiani riguardo al cavallo di legno. Scoperto a Roma nel 1506 nei pressi delle Terme di Traiano, il gruppo fu subito acquistato da papa Giulio II e collocato nei Musei Vaticani, dove si trova tuttora. Plinio il Vecchio lo definì la più grande opera d'arte mai creata. La tensione muscolare, l'espressione di dolore e terrore nei volti ne fanno un'icona del pathos ellenistico.",
     "wikipediaSlug": "Laocoön_and_His_Sons",
     "isCosmic": false
@@ -34901,7 +34502,7 @@
     "lat": 39.12,
     "lng": 27.18,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "luogo",
     "description": "L'Altare di Pergamo è un imponente complesso monumentale edificato nella città di Pergamo, nell'odierna Turchia, intorno al 180 a.C., probabilmente per celebrare le vittorie del re Eumene II sui Galati. È celebre per il fregio della Gigantomachia, che corre lungo il basamento per circa 120 metri, con figure titaniche che si scontrano in composizioni di straordinaria energia e pathos. Considerato una delle sette meraviglie dell'antichità da alcuni antichi autori, fu smontato alla fine dell'Ottocento e trasportato a Berlino, dove oggi il Pergamonmuseum ne ospita la ricostruzione parziale. Il fregio influenzò profondamente l'arte barocca e la scultura europea.",
     "wikipediaSlug": "Pergamon_Altar",
     "isCosmic": false
@@ -34913,7 +34514,7 @@
     "lat": 36.43,
     "lng": 28.22,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "luogo",
     "description": "Il Colosso di Rodi fu una gigantesca statua del dio Helios, patrono dell'isola di Rodi, eretta tra il 292 e il 280 a.C. dallo scultore Caro di Lindo per celebrare la resistenza della città all'assedio di Demetrio Poliorcete. Con un'altezza stimata di circa 33 metri, era considerata una delle Sette Meraviglie del Mondo Antico. La statua rimase in piedi per soli 56 anni prima di essere abbattuta da un terremoto nel 226 a.C. I resti giacquero per secoli sul fondale del porto. Ancora oggi la sua posizione esatta e la sua forma sono oggetto di dibattito tra gli studiosi, alimentando il fascino di questa leggenda dell'antichità.",
     "wikipediaSlug": "Colossus_of_Rhodes",
     "isCosmic": false
@@ -34937,7 +34538,7 @@
     "lat": 40.75,
     "lng": 14.49,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "I mosaici di Pompei rappresentano alcune delle testimonianze più straordinarie dell'arte decorativa romana. Realizzati principalmente tra il II e il I secolo a.C., decoravano pavimenti, pareti e fontane delle ville patrizie della città. Il più celebre è il Mosaico di Alessandro, trovato nella Casa del Fauno, che raffigura la battaglia di Isso tra Alessandro Magno e Dario III con una tecnica di raffinato illusionismo visivo. Le tessere minuscole, le opus vermiculatum, permettevano ai mosaicisti di riprodurre originali pittorici greci con stupefacente fedeltà cromatica. L'eruzione del Vesuvio del 79 d.C. conservò questi capolavori intatti sotto le ceneri.",
     "wikipediaSlug": "Roman_mosaic",
     "isCosmic": false
@@ -34949,7 +34550,7 @@
     "lat": 41.9,
     "lng": 12.45,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "L'Apoxyomenos, che significa 'colui che si raschia', è una scultura in bronzo creata da Lisippo di Sicione intorno al 320 a.C., nota oggi attraverso una copia marmorea conservata ai Musei Vaticani. Rappresenta un atleta mentre si ripulisce il sudore e la polvere dalla pelle con lo strigile, uno strumento appuntito usato nelle palestre greche. Lisippo rivoluzionò la scultura greca abbandonando le proporzioni canoniche di Policleto e introducendo una figura più snella, con una testa più piccola rispetto al corpo, che crea un effetto di slancio verso l'alto. L'opera segna il passaggio tra arte classica ed ellenistica.",
     "wikipediaSlug": "Apoxyomenos",
     "isCosmic": false
@@ -34961,7 +34562,7 @@
     "lat": 37.97,
     "lng": 23.72,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "movimento",
     "description": "Con la morte di Alessandro Magno nel 323 a.C. si apre l'età ellenistica, un periodo di straordinaria fioritura artistica che si estende fino alla conquista romana dell'Egitto nel 31 a.C. L'arte ellenistica si caratterizza per il superamento dell'equilibrio classico in favore di dinamismo, pathos e realismo psicologico. I soggetti si ampliano: accanto agli dei e agli eroi compaiono vecchie, bambini, pescatori. I centri di produzione si moltiplicano: Pergamo, Alessandria, Antiochia, Rodi. La fusione tra tradizione greca e culture orientali genera nuovi linguaggi figurativi che influenzano profondamente l'arte romana e, attraverso essa, tutta la tradizione europea.",
     "wikipediaSlug": "Hellenistic_art",
     "isCosmic": false
@@ -34973,7 +34574,7 @@
     "lat": 48.86,
     "lng": 2.35,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "Il Gladiatore Borghese è una statua in marmo pario alta circa 1,57 metri, firmata dallo scultore Agasias di Efeso e datata intorno al 100 a.C. Raffigura un guerriero nudo in posizione di combattimento, con il corpo proteso verso l'alto in un gesto di difesa contro un avversario a cavallo. Ritrovata ad Anzio nel XVII secolo, fu acquistata dalla famiglia Borghese e nel 1807, con il matrimonio di Paolina Bonaparte, venduta a Napoleone, che la trasferì al Louvre, dove si trova tuttora. Nonostante il nome, il soggetto non è un gladiatore romano ma probabilmente un oplita greco, identificato da alcuni con Achille o un altro eroe della tradizione omerica.",
     "wikipediaSlug": "Borghese_Gladiator",
     "isCosmic": false
@@ -34985,7 +34586,7 @@
     "lat": 37.97,
     "lng": 23.72,
     "category": "arte",
-    "tipo": "opera",
+    "tipo": "movimento",
     "description": "Il ritratto è una delle innovazioni più significative dell'arte ellenistica. Se nell'arte classica greca i volti erano idealizzati e universali, a partire dal IV secolo a.C. gli scultori cominciarono a cogliere i tratti individuali dei soggetti: rughe, asimmetrie, espressioni di pensiero o dolore. Il ritratto di Alessandro Magno, con i capelli leonini e lo sguardo rivolto verso l'alto, diventa il prototipo del sovrano eroicizzato. Le corti dei diadochi, i successori di Alessandro, promuovono la produzione di ritratti reali che uniscono somiglianza fisica e idealizzazione propagandistica. Questa tradizione ritrattistica confluisce nell'arte romana e poi in quella rinascimentale.",
     "wikipediaSlug": "Hellenistic_portraiture",
     "isCosmic": false
@@ -34997,7 +34598,7 @@
     "lat": 37.53,
     "lng": 27.36,
     "category": "arte",
-    "tipo": "opera",
+    "tipo": "persona",
     "description": "Apelle di Colofone, nato intorno al 370 a.C. a Cos o Colofone in Asia Minore, fu considerato dagli antichi il più grande pittore mai vissuto. Fu pittore ufficiale di Filippo II e Alessandro Magno, del quale eseguì numerosi ritratti. La sua tecnica era ritenuta insuperabile per la morbidezza delle ombre, la trasparenza dei colori e la capacità di rendere l'incarnato. Le sue opere più celebri, tra cui l'Afrodite anadiomene e l'Alessandro con la folgore, sono andate perdute e ci sono note solo attraverso le descrizioni entusiastiche di autori antichi come Plinio il Vecchio. Il suo nome è diventato sinonimo di eccellenza pittorica per tutta la tradizione classica.",
     "wikipediaSlug": "Apelles",
     "isCosmic": false
@@ -35009,7 +34610,7 @@
     "lat": 44.42,
     "lng": 12.2,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "I mosaici di Ravenna costituiscono uno dei più straordinari insiemi di arte paleocristiana e bizantina nel mondo. Realizzati tra il V e il VI secolo d.C., decorano edifici sacri come il Mausoleo di Galla Placidia, la Basilica di Sant'Apollinare Nuovo e la Basilica di San Vitale, costruita sotto l'imperatore Giustiniano. Le tessere in pasta vitrea, spesso dorate, creano superfici luminose che trasformano gli interni in spazi ultraterreni. Le figure sono solenni, frontali, ieratiche: lo stile abbandona il naturalismo classico per esprimere la trascendenza divina. Dichiarati Patrimonio dell'Umanità dall'UNESCO nel 1996, i mosaici ravennati sono un punto di passaggio fondamentale tra mondo antico e Medioevo.",
     "wikipediaSlug": "Mosaics_of_Ravenna",
     "isCosmic": false
@@ -35021,7 +34622,7 @@
     "lat": 53.34,
     "lng": -6.27,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "Il Libro di Kells è un manoscritto miniato dei quattro Vangeli, realizzato da monaci irlandesi intorno all'800 d.C., probabilmente nel monastero dell'isola di Iona in Scozia o a Kells in Irlanda. È considerato il capolavoro dell'arte insulare e uno dei più belli manoscritti illuminati mai prodotti. Le sue pagine sono decorate con intricati motivi geometrici, figure zoomorfe, tralci vegetali e raffigurazioni dei quattro Evangelisti in uno stile che fonde tradizione celtica e influenze mediterranee. L'opera, composta di 340 pergamene di vitello, è conservata nella biblioteca del Trinity College di Dublino, dove attira ogni anno centinaia di migliaia di visitatori.",
     "wikipediaSlug": "Book_of_Kells",
     "isCosmic": false
@@ -35033,7 +34634,7 @@
     "lat": 50.77,
     "lng": 6.09,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "movimento",
     "description": "L'arte carolingia fiorisce tra l'VIII e il IX secolo sotto l'impulso di Carlo Magno, che nel 800 d.C. viene incoronato imperatore a Roma. In risposta alla frammentazione culturale dell'Europa post-romana, Carlo promuove un grande rinascimento delle arti: scrittura carolingia, miniatura, scultura in avorio, oreficeria e architettura religiosa. Ad Aquisgrana sorge la cappella palatina, modellata su San Vitale di Ravenna. Gli scriptoria monastici, in particolare quello di Tours, producono manoscritti miniati che recuperano i modelli tardoantichi. L'arte carolingia getta le basi per la successiva fioritura romanica e rappresenta il primo grande tentativo di costruire un'identità culturale europea unitaria.",
     "wikipediaSlug": "Carolingian_art",
     "isCosmic": false
@@ -35045,7 +34646,7 @@
     "lat": 31.95,
     "lng": 35.93,
     "category": "arte",
-    "tipo": "opera",
+    "tipo": "movimento",
     "description": "L'arte islamica nasce con la diffusione dell'Islam a partire dal VII secolo e si sviluppa in un vasto territorio che abbraccia il Medio Oriente, il Nord Africa, la Spagna e l'Asia centrale. Caratterizzata dal divieto di rappresentare figure umane e animali nei contesti religiosi, l'arte islamica sviluppa un linguaggio decorativo basato sull'arabesque, complesse trame geometriche e vegetali che ricoprono superfici architettoniche, ceramiche e oggetti preziosi. La calligrafia assurge a forma d'arte suprema. Moschee come il Duomo della Roccia a Gerusalemme (691) e la Grande Moschea di Damasco mostrano come tradizioni bizantine e sassanidi vengano reinterpretate in un nuovo idioma estetico di straordinaria raffinatezza.",
     "wikipediaSlug": "Islamic_art",
     "isCosmic": false
@@ -35057,7 +34658,7 @@
     "lat": 41.01,
     "lng": 28.98,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "movimento",
     "description": "L'icona bizantina è la forma artistica più caratteristica dell'Oriente cristiano, sviluppatasi a partire dal V-VI secolo a Costantinopoli e diffusasi in tutto l'Impero bizantino e nelle chiese ortodosse. Realizzate su tavole di legno con tecnica a tempera su fondo oro, le icone rappresentano Cristo, la Vergine e i santi secondo canoni rigorosamente codificati: figure frontali, sguardo intenso, assenza di spazio prospettico, colori simbolici. L'icona non è un'opera decorativa ma un oggetto sacro, una 'finestra sul divino'. La crisi iconoclasta (726-843) mette a rischio questa tradizione prima di portare alla definitiva affermazione del culto delle immagini nell'ortodossia cristiana.",
     "wikipediaSlug": "Byzantine_iconography",
     "isCosmic": false
@@ -35069,7 +34670,7 @@
     "lat": 52.09,
     "lng": 1.34,
     "category": "arte",
-    "tipo": "persona",
+    "tipo": "opera",
     "description": "Il tesoro di Sutton Hoo è stato scoperto nel 1939 nel Suffolk, in Inghilterra, durante scavi in un cimitero anglosassone. La tomba principale, datata intorno al 625 d.C., conteneva i resti di una grande nave funeraria lunga circa 27 metri e un corredo di straordinaria ricchezza, identificato come quello del re Raedwald dell'Est Anglia. Tra gli oggetti: un elmo decorato, fibule in oro e granato cloisonné, una lira, vasi in bronzo e argenteria di origine orientale. Il tesoro dimostra la sofisticazione raggiunta dalla metallurgia e dall'oreficeria anglosassone nel VII secolo. È ora conservato al British Museum di Londra ed è considerato la più grande scoperta archeologica mai effettuata in Gran Bretagna.",
     "wikipediaSlug": "Sutton_Hoo",
     "isCosmic": false
@@ -35081,7 +34682,7 @@
     "lat": 39.08,
     "lng": 17.13,
     "category": "sport",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Milone di Crotone fu il più celebrato atleta dell'antichità greca, attivo tra il 540 e il 516 a.C. Nato a Crotone, nella Magna Grecia, conquistò sei vittorie olimpiche nella lotta, sette ai Giochi Pitici e numerosi altri trionfi ai Giochi Nemei e Istmici, per un totale di oltre trenta vittorie panelleniche in quarant'anni di carriera. La tradizione gli attribuisce una forza leggendaria: avrebbe sollevato un toro sulle spalle e lo avrebbe portato per l'intera lunghezza dello stadio di Olimpia. Fu discepolo di Pitagora e ne sposò la figlia. La sua leggenda divenne il simbolo della perfezione atletica nell'antichità e ispirò artisti e filosofi per secoli.",
     "wikipediaSlug": "Milo_of_Croton",
     "isCosmic": false
@@ -35093,7 +34694,7 @@
     "lat": 36.08,
     "lng": 27.93,
     "category": "sport",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Leonida di Rodi fu il più dominante velocista dell'antichità, attivo tra il 164 e il 152 a.C. Nel corso di quattro Olimpiadi consecutive conquistò 12 corone di ulivo nelle tre specialità di corsa allora previste: lo stadion (circa 192 metri), il diaulos (doppia distanza) e l'oplitodromos, la corsa in armatura. Il suo record assoluto di 12 vittorie olimpiche rimase insuperato per 2168 anni, fino a quando l'atleta giamaicano Usain Bolt vinse il suo dodicesimo oro olimpico nel 2016. Leonida era venerato dai Rodii come un essere semidivino e la sua memoria fu onorata per generazioni sull'isola natale.",
     "wikipediaSlug": "Leonidas_of_Rhodes",
     "isCosmic": false
@@ -35105,7 +34706,7 @@
     "lat": 40.77,
     "lng": 24.7,
     "category": "sport",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Teagene di Taso fu uno degli atleti più poliedrici e vittoriosi dell'antichità greca, attivo nella prima metà del V secolo a.C. Secondo la tradizione, ottenne 1400 vittorie nell'arco della sua carriera nei Giochi panellenici e locali, eccellendo nel pugilato, nel pancrazio e nella corsa. La sua vittoria più prestigiosa fu quella olimpica nel pancrazio nel 480 a.C. Dopo la morte, i Tasii gli eressero una statua bronzea sulla piazza principale. La leggenda vuole che la statua avesse proprietà taumaturgiche e che guarisse i malati. Il culto di Teagene come eroe sopravvisse per secoli dopo la sua morte, testimonianza del fascino quasi soprannaturale che i grandi atleti esercitavano sul mondo antico.",
     "wikipediaSlug": "Theagenes_of_Thasos",
     "isCosmic": false
@@ -35117,7 +34718,7 @@
     "lat": 36.43,
     "lng": 28.22,
     "category": "sport",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Diagora di Rodi fu il pugile più ammirato del mondo greco antico, celebre non solo per le sue vittorie ma per il suo stile nobile e leale. Vinse i Giochi Olimpici nel 464 a.C. insieme ai Giochi Pitici, Istmici, Nemei e molti altri. Il poeta Pindaro gli dedicò una delle sue più celebri Odi (Olimpica VII), esaltando la sua famiglia come discendente degli dei. La sua gloria raggiunse il culmine quando due dei suoi figli, anch'essi olimpionici, lo portarono in trionfo sulle spalle tra le grida della folla. Un commento anonimo della tradizione diceva: 'Muori ora, Diagora, poiché non puoi salire più in alto dell'Olimpo.' Incarna l'ideale agonistico greco nella sua forma più pura.",
     "wikipediaSlug": "Diagoras_of_Rhodes",
     "isCosmic": false
@@ -35129,7 +34730,7 @@
     "lat": 41.88,
     "lng": 12.48,
     "category": "sport",
-    "tipo": "evento",
+    "tipo": "luogo",
     "description": "Il Circo Massimo di Roma fu la più grande struttura per spettacoli del mondo antico. Situato nella valle tra i colli Aventino e Palatino, aveva una lunghezza di circa 621 metri e una larghezza di 118 metri, con una capienza stimata che poteva raggiungere i 250.000-300.000 spettatori. Originariamente costruito in legno in epoca arcaica, fu progressivamente monumentalizzato con strutture in muratura. Vi si svolgevano principalmente le corse dei carri, le ludi circenses, con i cavalli che percorrevano sette giri intorno alla spina centrale. Il Circo era anche sede di ludi pubblici religiosi e fu teatro di manifestazioni politiche fondamentali per la vita di Roma. L'ultima corsa documentata si tenne nel 549 d.C.",
     "wikipediaSlug": "Circus_Maximus",
     "isCosmic": false
@@ -35165,7 +34766,7 @@
     "lat": 9.03,
     "lng": 38.74,
     "category": "sport",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Abebe Bikila fu un atleta etiope che il 10 settembre 1960, durante le Olimpiadi di Roma, compì una delle imprese più memorabili nella storia dello sport. Corso lungo la Via Appia Antica al chiaro di luna, a piedi nudi, vinse la maratona olimpica stabilendo il record mondiale con il tempo di 2:15:16. Fu il primo africano subsahariano a vincere una medaglia d'oro olimpica. Quattro anni dopo, alle Olimpiadi di Tokyo 1964, bissò la vittoria — questa volta con le scarpe — migliorando ulteriormente il record mondiale. La sua storia diventò un simbolo dell'orgoglio africano e della rivalsa verso l'imperialismo: l'Italia aveva occupato l'Etiopia negli anni Trenta, e lui vinse proprio a Roma.",
     "wikipediaSlug": "Abebe_Bikila",
     "isCosmic": false
@@ -35189,7 +34790,7 @@
     "lat": -34.6,
     "lng": -58.38,
     "category": "sport",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Diego Armando Maradona, nato nel 1960 a Lanús, Argentina, è considerato uno dei più grandi calciatori della storia. Con la maglia dell'Argentina vinse la Coppa del Mondo 1986 in Messico, dove fu protagonista assoluto con un'edizione che include il gol più famoso della storia — il tocco con la mano sinistro ('la mano de Dios') — e il gol del secolo, una serpentina di 60 metri con cui superò cinque inglesi nel quarto di finale. Con il Napoli vinse due Scudetti (1987, 1990) e diventò un idolo partenopeo quasi religioso. La sua vita fu segnata da luci e ombre profonde: la straordinaria carriera sportiva si intrecciò con dipendenze e polemiche. Morì il 25 novembre 2020.",
     "wikipediaSlug": "Diego_Maradona",
     "isCosmic": false
@@ -35237,7 +34838,7 @@
     "lat": 47.56,
     "lng": 7.59,
     "category": "sport",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Roger Federer, nato nel 1981 a Basilea, Svizzera, è considerato da molti il più grande tennista di tutti i tempi. Ha vinto 20 tornei del Grande Slam, con 8 vittorie a Wimbledon, 6 agli Australian Open, 5 agli US Open e 1 al Roland Garros. Ha trascorso 310 settimane al primo posto nella classifica mondiale ATP. La sua eleganza in campo, la varietà di colpi — specialmente il diritto e il rovescio in slice — e la capacità di rendere lo sport bello da vedere lo hanno reso un'icona che va oltre i confini del tennis. Nel 2022, dopo anni di infortuni, ha annunciato il suo ritiro in lacrime alla Laver Cup di Londra, accanto al suo rivale Nadal.",
     "wikipediaSlug": "Roger_Federer",
     "isCosmic": false
@@ -35273,9 +34874,849 @@
     "lat": 45.75,
     "lng": 21.23,
     "category": "sport",
-    "tipo": "evento",
+    "tipo": "persona",
     "description": "Nadia Elena Comaneci, nata nel 1961 a Onești, Romania, è la ginnasta che cambiò per sempre la storia dello sport. Il 18 luglio 1976, alle Olimpiadi di Montreal, all'età di 14 anni, ottenne il primo punteggio perfetto di 10 nella storia della ginnastica artistica olimpica alle parallele asimmetriche. Il tabellone del Forum di Montreal non era nemmeno programmato per visualizzare il numero 10 e mostrò '1.00'. In quelle Olimpiadi ottenne sette punteggi di 10 e vinse tre medaglie d'oro. Nel 1980 vinse ancora due ori olimpici a Mosca. La sua tecnica sopraffina, la forza fisica e la giovane età trasformarono la ginnastica in uno sport dominato da adolescenti, influenzando il regolamento internazionale per decenni.",
     "wikipediaSlug": "Nadia_Comăneci",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-bach-1685",
+    "title": "Johann Sebastian Bach",
+    "year": 1685,
+    "lat": 50.97,
+    "lng": 10.31,
+    "category": "musica",
+    "tipo": "persona",
+    "description": "Johann Sebastian Bach nasce il 31 marzo 1685 a Eisenach, in Turingia. Considerato uno dei più grandi compositori della storia della musica occidentale, Bach sintetizza e porta a compimento il periodo barocco. Maestro del contrappunto, compone un corpus straordinario che include cantate, oratori, messe, opere per organo, per clavicembalo e musica orchestrale. Lavora come organista e direttore musicale in diverse corti e chiese tedesche, tra cui la Thomaskirche di Lipsia. La sua opera rimane fondamentale per tutta la musica successiva.",
+    "wikipediaSlug": "Johann_Sebastian_Bach",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-handel-messia-1741",
+    "title": "Händel — Il Messia",
+    "year": 1741,
+    "lat": 53.33,
+    "lng": -6.25,
+    "category": "musica",
+    "tipo": "opera",
+    "description": "Il Messia è un oratorio composto da Georg Friedrich Händel nel 1741 e presentato in prima assoluta a Dublino il 13 aprile 1742. Considerato uno dei capolavori assoluti della musica corale occidentale, il libretto del poeta Charles Jennens si basa su testi biblici incentrati sulla vita, la passione e la resurrezione di Cristo. Il celebre coro Alleluja, durante il quale il pubblico si alzava in piedi per tradizione, è tra i passi corali più conosciuti al mondo. L'opera segnò il punto culminante della carriera di Händel e resta ancora oggi eseguita in tutto il mondo.",
+    "wikipediaSlug": "Messiah_(Handel)",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-goldberg-1741",
+    "title": "Bach — Le Variazioni Goldberg",
+    "year": 1741,
+    "lat": 51.34,
+    "lng": 12.37,
+    "category": "musica",
+    "tipo": "opera",
+    "description": "Le Variazioni Goldberg, BWV 988, sono una composizione per clavicembalo di Johann Sebastian Bach pubblicate nel 1741 a Lipsia. Strutturate come un'aria con trenta variazioni, rappresentano uno dei vertici assoluti della letteratura per tastiera. La tradizione vuole che siano state commissionate dal conte Hermann Carl von Keyserlingk per aiutarlo a dormire nelle notti insonni, eseguite dal giovane clavicembalista Johann Gottlieb Goldberg. Ogni variazione esplora differenti tecniche contrappuntistiche, tra cui canoni a varie distanze, variazioni a due tastiere e danze stilizzate.",
+    "wikipediaSlug": "Goldberg_Variations",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-opera-buffa-1733",
+    "title": "L'Opera Buffa",
+    "year": 1733,
+    "lat": 40.85,
+    "lng": 14.27,
+    "category": "musica",
+    "tipo": "movimento",
+    "description": "L'opera buffa è un genere teatrale-musicale comico nato a Napoli nei primi decenni del Settecento, contrapposto all'opera seria. La sua prima affermazione avviene con La serva padrona di Pergolesi, rappresentata nel 1733 come intermezzo a Napoli. Caratterizzata da personaggi borghesi e popolari, situazioni quotidiane e linguaggio vivace, l'opera buffa si diffonde rapidamente in tutta Europa, influenzando profondamente Mozart e costituendo una delle radici dell'opera comica ottocentesca. Il genere riflette i valori illuministici di attenzione alla vita comune e critica bonaria dei costumi sociali.",
+    "wikipediaSlug": "Opera_buffa",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-san-carlo-napoli-1737",
+    "title": "Il Teatro San Carlo di Napoli",
+    "year": 1737,
+    "lat": 40.84,
+    "lng": 14.25,
+    "category": "musica",
+    "tipo": "luogo",
+    "description": "Il Teatro di San Carlo di Napoli, inaugurato il 4 novembre 1737 per volere del re Carlo III di Borbone, è il più antico teatro d'opera ancora in attività al mondo. Progettato dall'architetto Giovanni Antonio Medrano, rappresentò fin dall'inizio un modello architettonico di riferimento per i teatri europei. La sua grande sala con palchi su cinque ordini divenne il simbolo del teatro all'italiana. Ospita nei secoli le prime assolute di opere di Rossini, Donizetti e Verdi, consolidando il primato di Napoli nella cultura musicale europea settecentesca e ottocentesca.",
+    "wikipediaSlug": "Teatro_di_San_Carlo",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-haydn-1732",
+    "title": "Joseph Haydn",
+    "year": 1732,
+    "lat": 47.92,
+    "lng": 16.86,
+    "category": "musica",
+    "tipo": "persona",
+    "description": "Franz Joseph Haydn nasce il 31 marzo 1732 a Rohrau, in Austria. Soprannominato il padre della sinfonia e del quartetto d'archi, Haydn è una delle figure centrali del classicismo viennese. Per quasi trent'anni serve come maestro di cappella presso la famiglia Esterházy, godendo di un ambiente creativo stimolante che gli consente di sperimentare e affinare il suo stile. La sua produzione comprende 104 sinfonie, 68 quartetti d'archi, oratori, messe e musica da camera. Fu anche il maestro di Beethoven e contribuì enormemente alla formazione di Mozart.",
+    "wikipediaSlug": "Joseph_Haydn",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-classicismo-viennese-1760",
+    "title": "Il Classicismo Viennese",
+    "year": 1760,
+    "lat": 48.21,
+    "lng": 16.37,
+    "category": "musica",
+    "tipo": "movimento",
+    "description": "Il classicismo viennese è il periodo della storia della musica che si sviluppa a Vienna e nell'Europa centrale tra circa il 1750 e il 1820, caratterizzato dalla produzione dei tre grandi maestri Haydn, Mozart e Beethoven. Si distingue dal barocco per la chiarezza formale, l'equilibrio espressivo e lo sviluppo della forma sonata. Vienna diventa il centro musicale d'Europa, attirando compositori da tutto il continente. Il classicismo viennese pone le fondamenta per tutta la musica romantica successiva e definisce i canoni della sinfonia, del concerto e del quartetto d'archi.",
+    "wikipediaSlug": "Classical_period_(music)",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-mozart-1756",
+    "title": "Wolfgang Amadeus Mozart",
+    "year": 1756,
+    "lat": 47.8,
+    "lng": 13.04,
+    "category": "musica",
+    "tipo": "persona",
+    "description": "Wolfgang Amadeus Mozart nasce il 27 gennaio 1756 a Salisburgo. Considerato uno dei più grandi geni musicali di tutti i tempi, mostra doti straordinarie già in tenera età esibendosi nelle corti europee. La sua produzione, interrotta dalla morte prematura a soli 35 anni, include 41 sinfonie, 27 concerti per pianoforte, opere liriche immortali come Le nozze di Figaro, Don Giovanni e Il flauto magico, oltre a quintetti, quartetti e musica sacra. La sua capacità di fondere melodia, armonia e contrappunto con naturalezza e profondità emotiva rimane insuperata.",
+    "wikipediaSlug": "Wolfgang_Amadeus_Mozart",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-don-giovanni-1787",
+    "title": "Mozart — Don Giovanni",
+    "year": 1787,
+    "lat": 50.08,
+    "lng": 14.43,
+    "category": "musica",
+    "tipo": "opera",
+    "description": "Don Giovanni, ossia Il dissoluto punito è un dramma giocoso in due atti di Wolfgang Amadeus Mozart su libretto di Lorenzo Da Ponte, rappresentato in prima assoluta al Teatro degli Stati di Praga il 29 ottobre 1787. Capolavoro assoluto del teatro musicale, l'opera fonde elementi comici e tragici nella storia del seduttore Don Giovanni, punito dalla statua del Commendatore. Considerata da molti la più grande opera mai scritta, combina melodia irresistibile, caratterizzazione psicologica profonda e riflessione morale di straordinaria modernità. Beethoven e Goethe ne furono ammiratori appassionati.",
+    "wikipediaSlug": "Don_Giovanni",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-flauto-magico-1791",
+    "title": "Mozart — Il Flauto Magico",
+    "year": 1791,
+    "lat": 48.21,
+    "lng": 16.37,
+    "category": "musica",
+    "tipo": "opera",
+    "description": "Il flauto magico è un'opera in due atti di Wolfgang Amadeus Mozart su libretto di Emanuel Schikaneder, rappresentata in prima assoluta al Theater auf der Wieden di Vienna il 30 settembre 1791, pochi mesi prima della morte del compositore. Singspiel intriso di simbologia massonica, l'opera racconta il viaggio iniziatico del principe Tamino alla ricerca della saggezza e dell'amore. Personaggi indimenticabili come la Regina della Notte, con le sue celeberrime arie di coloratura, e Papageno, il cacciatore di uccelli, ne fanno uno dei lavori più amati del repertorio operistico mondiale.",
+    "wikipediaSlug": "The_Magic_Flute",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-scala-milano-1778",
+    "title": "Il Teatro alla Scala di Milano",
+    "year": 1778,
+    "lat": 45.47,
+    "lng": 9.19,
+    "category": "musica",
+    "tipo": "luogo",
+    "description": "Il Teatro alla Scala di Milano, inaugurato il 3 agosto 1778 con L'Europa riconosciuta di Antonio Salieri, è uno dei teatri d'opera più prestigiosi e famosi al mondo. Costruito su progetto dell'architetto Giuseppe Piermarini in stile neoclassico, sorge sul luogo della chiesa di Santa Maria della Scala. Fin dall'apertura diventa il tempio del melodramma italiano, ospitando le prime assolute delle opere di Verdi, Puccini, Donizetti e Bellini. La Scala è ancora oggi il punto di riferimento mondiale per l'opera lirica e la danza classica.",
+    "wikipediaSlug": "La_Scala",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-beethoven-1770",
+    "title": "Ludwig van Beethoven",
+    "year": 1770,
+    "lat": 50.73,
+    "lng": 7.1,
+    "category": "musica",
+    "tipo": "persona",
+    "description": "Ludwig van Beethoven nasce il 17 dicembre 1770 a Bonn. Figura di transizione tra il classicismo e il romanticismo musicale, è considerato uno dei più grandi compositori della storia. Nonostante la progressiva perdita dell'udito che lo rende completamente sordo negli ultimi anni di vita, compone alcune delle opere più sublimi mai scritte: nove sinfonie, cinque concerti per pianoforte, trenta sonate per pianoforte, sedici quartetti d'archi e l'opera Fidelio. La sua musica esprime una forza spirituale e una lotta titanica contro il destino che lo rendono un simbolo universale della volontà umana.",
+    "wikipediaSlug": "Ludwig_van_Beethoven",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-paganini-1782",
+    "title": "Niccolò Paganini",
+    "year": 1782,
+    "lat": 44.41,
+    "lng": 8.93,
+    "category": "musica",
+    "tipo": "persona",
+    "description": "Niccolò Paganini nasce il 27 ottobre 1782 a Genova. Violinista virtuoso di fama leggendaria, è considerato il più grande violinista di tutti i tempi e uno dei fondatori del concetto moderno di virtuosismo strumentale. Le sue 24 Capricci per violino solo rivoluzionano la tecnica violinistica, introducendo armonie doppie, pizzicati della mano sinistra e arco balzato. Composita anche concerti per violino e pezzi da concerto di straordinaria difficoltà tecnica. La sua figura quasi soprannaturale sul palco alimentò la leggenda popolare secondo cui avesse venduto l'anima al diavolo.",
+    "wikipediaSlug": "Niccolò_Paganini",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-sinfonia5-beethoven-1808",
+    "title": "Beethoven — Quinta Sinfonia",
+    "year": 1808,
+    "lat": 48.21,
+    "lng": 16.37,
+    "category": "musica",
+    "tipo": "opera",
+    "description": "La Sinfonia n. 5 in do minore op. 67 di Ludwig van Beethoven viene eseguita in prima assoluta il 22 dicembre 1808 al Theater an der Wien di Vienna. Celeberrima per il motivo iniziale di quattro note — tre brevi e una lunga — che Beethoven stesso descrisse come il destino che bussa alla porta, la sinfonia è strutturata in quattro movimenti che culminano in un trionfale finale in do maggiore. Simbolo di lotta e vittoria, fu interpretata durante la Seconda guerra mondiale come segnale della resistenza alleata. Rimane una delle composizioni più ascoltate e riconoscibili al mondo.",
+    "wikipediaSlug": "Symphony_No._5_(Beethoven)",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-haydn-stagioni-1801",
+    "title": "Haydn — Le Stagioni",
+    "year": 1801,
+    "lat": 48.21,
+    "lng": 16.37,
+    "category": "musica",
+    "tipo": "opera",
+    "description": "Le Stagioni è un oratorio di Joseph Haydn su libretto di Gottfried van Swieten, rappresentato in prima assoluta al Palais Schwarzenberg di Vienna nel 1801. Ispirato al poema The Seasons di James Thomson, descrive il ciclo delle quattro stagioni attraverso scene pastorali e riflessioni sulla vita contadina. Considerato insieme alla Creazione il capolavoro della produzione tarda di Haydn, l'oratorio è scritto per soli, coro e orchestra con un'orchestrazione ricca e variegata. La sua composizione fu tanto intensa che Haydn dichiarò di sentire le forze abbandonarlo durante il lavoro.",
+    "wikipediaSlug": "The_Seasons_(Haydn)",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-schubert-1797",
+    "title": "Franz Schubert",
+    "year": 1797,
+    "lat": 48.21,
+    "lng": 16.37,
+    "category": "musica",
+    "tipo": "persona",
+    "description": "Franz Peter Schubert nasce il 31 gennaio 1797 a Vienna. Primo grande rappresentante del romanticismo musicale, Schubert trasforma il Lied tedesco in una forma d'arte autonoma e suprema, componendo oltre 600 canzoni per voce e pianoforte. La sua produzione, interrotta dalla morte prematura a soli 31 anni, include nove sinfonie, la celebre Incompiuta, quintetti, sonate per pianoforte e musica da camera di straordinaria profondità espressiva. Collegamento fondamentale tra il classicismo viennese di Beethoven e il romanticismo di Schumann, Brahms e Mahler.",
+    "wikipediaSlug": "Franz_Schubert",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-sinfonia9-beethoven-1824",
+    "title": "Beethoven — Sinfonia n.9",
+    "year": 1824,
+    "lat": 48.21,
+    "lng": 16.37,
+    "category": "musica",
+    "tipo": "opera",
+    "description": "La Sinfonia n. 9 in re minore op. 125 di Ludwig van Beethoven, eseguita in prima assoluta il 7 maggio 1824 al Kärntnertor-Theater di Vienna, è l'ultima sinfonia compiuta dal compositore. Rivoluzionaria per l'inserimento di voci soliste e coro nel finale, mette in musica l'Ode alla gioia di Friedrich Schiller. Beethoven, completamente sordo, dirige la prima in persona senza sentirne una nota. L'Inno alla gioia del quarto movimento è diventato l'inno ufficiale dell'Unione Europea. La sinfonia è considerata uno dei vertici assoluti di tutta la storia della musica.",
+    "wikipediaSlug": "Symphony_No._9_(Beethoven)",
+    "isCosmic": false
+  },
+  {
+    "id": "mus-chopin-1810",
+    "title": "Frédéric Chopin",
+    "year": 1810,
+    "lat": 52.22,
+    "lng": 20.95,
+    "category": "musica",
+    "tipo": "persona",
+    "description": "Fryderyk Franciszek Chopin nasce il 1° marzo 1810 a Żelazowa Wola, in Polonia. Massimo esponente del pianoforte romantico, compose quasi esclusivamente per questo strumento, elevandolo a una capacità espressiva fino ad allora sconosciuta. I suoi notturni, polacche, mazurche, preludi, studi e ballate definiscono un linguaggio armonico originalissimo che anticipa il modernismo. Costretto a lasciare la Polonia durante la rivolta del 1830, trascorre gran parte della vita a Parigi, dove muore nel 1849 a soli 39 anni, lasciando un'eredità musicale di valore inestimabile.",
+    "wikipediaSlug": "Frédéric_Chopin",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-locke-1632",
+    "title": "John Locke",
+    "year": 1632,
+    "lat": 51.37,
+    "lng": -2.78,
+    "category": "filosofia",
+    "tipo": "persona",
+    "description": "John Locke nasce il 29 agosto 1632 a Wrington, nel Somerset. Filosofo empirista e padre del liberalismo politico moderno, Locke sostiene che la conoscenza deriva dall'esperienza e che la mente umana è una tabula rasa alla nascita. Nel Saggio sull'intelletto umano analizza i limiti e le fonti del sapere umano, mentre nei Due trattati sul governo civile teorizza il contratto sociale, i diritti naturali alla vita, libertà e proprietà, e il diritto del popolo a rovesciare i governi tiranni. Le sue idee influenzano profondamente le rivoluzioni americana e francese.",
+    "wikipediaSlug": "John_Locke",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-montesquieu-1689",
+    "title": "Montesquieu",
+    "year": 1689,
+    "lat": 44.72,
+    "lng": -0.54,
+    "category": "filosofia",
+    "tipo": "persona",
+    "description": "Charles-Louis de Secondat, barone de La Brède et de Montesquieu, nasce il 18 gennaio 1689 a La Brède, in Guascogna. Filosofo e politologo illuminista, è famoso per Lo spirito delle leggi del 1748, in cui analizza i diversi tipi di governo e formula la teoria della separazione dei poteri in esecutivo, legislativo e giudiziario. Questa teoria diventa il fondamento delle costituzioni democratiche moderne. Con le Lettere persiane aveva già anticipato una critica ironica della società francese vista dagli occhi di osservatori stranieri. Il suo pensiero influenza direttamente i costituenti americani e la Rivoluzione francese.",
+    "wikipediaSlug": "Montesquieu",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-hume-1711",
+    "title": "David Hume",
+    "year": 1711,
+    "lat": 55.95,
+    "lng": -3.19,
+    "category": "filosofia",
+    "tipo": "persona",
+    "description": "David Hume nasce il 7 maggio 1711 a Edimburgo. Filosofo, storico ed economista scozzese, è la figura più importante dell'empirismo britannico e uno dei maggiori pensatori del movimento illuminista. Nel Trattato sulla natura umana e nell'Indagine sull'intelletto umano sviluppa una teoria scettica della conoscenza, sostenendo che tutta la conoscenza deriva dall'esperienza sensoriale e mettendo in discussione il principio di causalità. La sua critica alla metafisica tradizionale e alla religione influenza profondamente Kant, che afferma che Hume lo ha svegliato dal sonno dogmatico.",
+    "wikipediaSlug": "David_Hume",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-voltaire-1694",
+    "title": "Voltaire",
+    "year": 1694,
+    "lat": 48.86,
+    "lng": 2.35,
+    "category": "filosofia",
+    "tipo": "persona",
+    "description": "François-Marie Arouet, conosciuto con lo pseudonimo di Voltaire, nasce il 21 novembre 1694 a Parigi. Scrittore, filosofo e polemista illuminista, è il simbolo della lotta settecentesca per la libertà di pensiero, la tolleranza religiosa e la giustizia sociale. Con il Candido, le Lettere filosofiche e il Dizionario filosofico diffonde le idee illuministiche in forma accessibile e brillante. Esiliato più volte dalla Francia per le sue critiche alla Chiesa e all'assolutismo, vive per anni alla corte di Federico il Grande di Prussia. La sua penna tagliente e il suo umorismo irresistibile lo rendono il filosofo più letto del Settecento.",
+    "wikipediaSlug": "Voltaire",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-rousseau-1712",
+    "title": "Jean-Jacques Rousseau",
+    "year": 1712,
+    "lat": 46.2,
+    "lng": 6.15,
+    "category": "filosofia",
+    "tipo": "persona",
+    "description": "Jean-Jacques Rousseau nasce il 28 giugno 1712 a Ginevra. Filosofo, scrittore e teorico politico, è una delle figure più complesse e influenti del Settecento. Con il Contratto sociale elabora una teoria della sovranità popolare e della volontà generale che ispira la Rivoluzione francese. Con l'Emilio rivoluziona la pedagogia sostenendo che l'educazione deve rispettare la natura del bambino. Critico della civiltà e del progresso, sostiene che l'uomo naturale è buono e che è la società a corrompere. Il suo pensiero è fondamentale per il romanticismo, il nazionalismo e la pedagogia moderna.",
+    "wikipediaSlug": "Jean-Jacques_Rousseau",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-diderot-1713",
+    "title": "Denis Diderot",
+    "year": 1713,
+    "lat": 47.86,
+    "lng": 5.33,
+    "category": "filosofia",
+    "tipo": "persona",
+    "description": "Denis Diderot nasce il 5 ottobre 1713 a Langres, in Champagne. Filosofo e scrittore illuminista, è noto soprattutto come direttore e principale collaboratore dell'Encyclopédie, il monumentale progetto editoriale che raccoglie e diffonde il sapere del suo tempo. Materialista convinto, nega l'immortalità dell'anima e l'esistenza di Dio, anticipando posizioni filosofiche moderne. Tra i suoi scritti letterari spiccano Jacques le fataliste e Il nipote di Rameau. La sua vasta curiosità intellettuale abbraccia filosofia, letteratura, critica d'arte, teatro e scienze naturali, facendone un simbolo dell'ideale illuminista del philosophe.",
+    "wikipediaSlug": "Denis_Diderot",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-illuminismo-movimento-1715",
+    "title": "L'Illuminismo",
+    "year": 1715,
+    "lat": 48.86,
+    "lng": 2.35,
+    "category": "filosofia",
+    "tipo": "movimento",
+    "description": "L'Illuminismo è il movimento culturale e filosofico che domina l'Europa nel XVIII secolo, basato sulla fiducia nella ragione come guida suprema del pensiero e dell'agire umano. Nato in Inghilterra con Locke e Newton, si diffonde in Francia con i philosophes e in Germania con Kant. Propugna la libertà di pensiero, la tolleranza religiosa, il rifiuto della superstizione e dell'assolutismo, e la fiducia nel progresso dell'umanità attraverso l'educazione e la scienza. Ispira le rivoluzioni americana e francese e pone le basi dei diritti umani moderni, dello Stato laico e delle istituzioni democratiche contemporanee.",
+    "wikipediaSlug": "Age_of_Enlightenment",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-encyclopedie-1751",
+    "title": "L'Encyclopédie di Diderot e D'Alembert",
+    "year": 1751,
+    "lat": 48.86,
+    "lng": 2.35,
+    "category": "filosofia",
+    "tipo": "opera",
+    "description": "L'Encyclopédie, ou Dictionnaire raisonné des sciences, des arts et des métiers è la grande opera collettiva del pensiero illuminista francese, diretta da Denis Diderot con il matematico Jean le Rond d'Alembert. Pubblicata tra il 1751 e il 1772 in 28 volumi, raccoglie contributi dei più grandi intellettuali del tempo, tra cui Voltaire, Rousseau e Montesquieu. L'opera mira a sistematizzare tutta la conoscenza umana sulla base della ragione e dell'esperienza, mettendo in discussione l'autorità della Chiesa e dell'assolutismo. Viene censurata più volte dalle autorità francesi ma continua a circolare, diventando il manifesto del pensiero illuminista.",
+    "wikipediaSlug": "Encyclopédie",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-smith-ricchezza-1776",
+    "title": "Adam Smith — La Ricchezza delle Nazioni",
+    "year": 1776,
+    "lat": 51.51,
+    "lng": -0.13,
+    "category": "filosofia",
+    "tipo": "opera",
+    "description": "La Ricchezza delle Nazioni, pubblicata nel 1776 da Adam Smith, è il testo fondante dell'economia politica moderna. Smith elabora la teoria della divisione del lavoro come motore della produttività, introduce il concetto di mano invisibile del mercato che coordina le scelte individuali verso il benessere collettivo, e critica il mercantilismo a favore del libero commercio. Pubblicata nello stesso anno della Dichiarazione di Indipendenza americana, l'opera riflette i valori illuministi di razionalità, libertà individuale e fiducia nel progresso. Fonda l'economia come disciplina scientifica autonoma e influenza due secoli di politica economica mondiale.",
+    "wikipediaSlug": "The_Wealth_of_Nations",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-kant-pratica-1788",
+    "title": "Kant — Critica della Ragion Pratica",
+    "year": 1788,
+    "lat": 54.71,
+    "lng": 20.45,
+    "category": "filosofia",
+    "tipo": "opera",
+    "description": "La Critica della ragion pratica, pubblicata nel 1788 da Immanuel Kant a Königsberg, è la seconda delle tre Critiche kantiane, dedicata all'etica e alla filosofia morale. Kant vi elabora la celebre formula dell'imperativo categorico: agisci solo secondo quella massima che puoi al tempo stesso volere che diventi legge universale. La morale non dipende dalla religione né dall'utilità, ma dalla ragione pura. Il concetto di autonomia della volontà e di dignità umana assoluta è alla base della moderna etica dei diritti umani. L'opera consolida Kant come il più importante filosofo dell'età moderna.",
+    "wikipediaSlug": "Critique_of_Practical_Reason",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-fichte-1762",
+    "title": "Johann Gottlieb Fichte",
+    "year": 1762,
+    "lat": 51.12,
+    "lng": 14.22,
+    "category": "filosofia",
+    "tipo": "persona",
+    "description": "Johann Gottlieb Fichte nasce il 19 maggio 1762 a Rammenau, in Sassonia. Filosofo idealista tedesco, allievo e successore di Kant, sviluppa il sistema dell'idealismo soggettivo a partire dalla dottrina della scienza, dove l'Io assoluto è il principio fondante di tutta la realtà. I Discorsi alla nazione tedesca del 1807-1808, tenuti a Berlino occupata da Napoleone, lo rendono una figura centrale nel nascente nazionalismo tedesco. Primo rettore dell'Università di Berlino, contribuisce allo sviluppo dell'idealismo tedesco che culmina con Hegel. Il suo pensiero politico influenza il liberalismo romantico e il nazionalismo ottocentesco.",
+    "wikipediaSlug": "Johann_Gottlieb_Fichte",
+    "isCosmic": false
+  },
+  {
+    "id": "fil-schelling-1775",
+    "title": "Friedrich Wilhelm Joseph Schelling",
+    "year": 1775,
+    "lat": 48.8,
+    "lng": 9,
+    "category": "filosofia",
+    "tipo": "persona",
+    "description": "Friedrich Wilhelm Joseph Schelling nasce il 27 gennaio 1775 a Leonberg, nel Württemberg. Filosofo idealista tedesco, è figura centrale del Romanticismo filosofico tedesco tra Fichte e Hegel. La sua filosofia della natura cerca di riconciliare il soggetto e l'oggetto, lo spirito e la materia, sostenendo che la natura è spirito visibile e lo spirito è natura invisibile. La filosofia dell'identità elabora un sistema in cui Assoluto, Natura e Spirito si identificano. Il pensiero tardo di Schelling, con la filosofia positiva e la filosofia della mitologia e della rivelazione, anticipa temi esistenzialisti e fenomenologici del Novecento.",
+    "wikipediaSlug": "Friedrich_Wilhelm_Joseph_Schelling",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-banksy-2000",
+    "title": "Banksy — l'Arte di Strada come Critica Sociale",
+    "year": 2000,
+    "lat": 51.51,
+    "lng": -0.13,
+    "category": "arte",
+    "tipo": "persona",
+    "description": "Banksy è un artista di strada britannico anonimo, la cui identità rimane sconosciuta. Attivo a partire dagli anni Novanta, ha rivoluzionato la street art trasformandola in un potente strumento di critica sociale, politica e culturale. Le sue opere, spesso realizzate con stencil, compaiono su muri di tutto il mondo e affrontano temi come la guerra, il capitalismo, la sorveglianza e l'ipocrisia sociale. Nel 2000 la sua fama inizia a diffondersi a livello internazionale. Nel 2018, una sua opera si è autodistrutta durante un'asta da Sotheby's, diventando essa stessa un'opera d'arte.",
+    "wikipediaSlug": "Banksy",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-street-art-1980",
+    "title": "La Street Art — Basquiat, Haring, Graffiti",
+    "year": 1980,
+    "lat": 40.71,
+    "lng": -74.01,
+    "category": "arte",
+    "tipo": "movimento",
+    "description": "La street art emerge come movimento artistico negli anni Settanta e Ottanta nelle metropoli americane, in particolare a New York. Nata dai graffiti sui vagoni della metropolitana, evolve in una forma espressiva complessa che occupa lo spazio pubblico urbano. Artisti come Jean-Michel Basquiat e Keith Haring trasformano i muri della città in gallerie a cielo aperto, portando messaggi sociali, politici e culturali. Il movimento sfida le convenzioni del mondo dell'arte istituzionale, democratizzando la creazione artistica e raggiungendo un pubblico vastissimo. Dagli anni Novanta diventa un fenomeno globale riconosciuto dai grandi musei.",
+    "wikipediaSlug": "Street_art",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-basquiat-1960",
+    "title": "Jean-Michel Basquiat",
+    "year": 1960,
+    "lat": 40.71,
+    "lng": -74.01,
+    "category": "arte",
+    "tipo": "persona",
+    "description": "Jean-Michel Basquiat nasce il 22 dicembre 1960 a Brooklyn, New York, da padre haitiano e madre di origini portoricane. Inizia la sua carriera artistica come writer underground con lo pseudonimo SAMO©, coprendo i muri di Manhattan con scritte enigmatiche. Negli anni Ottanta diventa una delle figure più influenti dell'arte contemporanea, fondendo neo-espressionismo, cultura afroamericana e critica al razzismo. La sua arte cruda, vibrante e simbolica attira l'attenzione di Andy Warhol e dei principali galleristi internazionali. Muore tragicamente nel 1988 a soli 27 anni, lasciando un'eredità artistica inestimabile.",
+    "wikipediaSlug": "Jean-Michel_Basquiat",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-haring-1958",
+    "title": "Keith Haring",
+    "year": 1958,
+    "lat": 40.33,
+    "lng": -75.93,
+    "category": "arte",
+    "tipo": "persona",
+    "description": "Keith Haring nasce il 4 maggio 1958 a Reading, Pennsylvania. Trasferitosi a New York alla fine degli anni Settanta, comincia a disegnare nelle stazioni della metropolitana su pannelli pubblicitari vuoti, sviluppando un linguaggio visivo immediato fatto di figure stilizzate, cani abbaianti e raggi di energia. Il suo stile diventa iconico negli anni Ottanta, quando affronta temi come l'AIDS, il razzismo, la guerra nucleare e i diritti umani. Collabora con scuole, ospedali e comunità marginali, convinto che l'arte debba essere accessibile a tutti. Muore di AIDS nel 1990, lasciando un patrimonio artistico di portata universale.",
+    "wikipediaSlug": "Keith_Haring",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-warhol-1928",
+    "title": "Andy Warhol — La Factory",
+    "year": 1928,
+    "lat": 40.71,
+    "lng": -74.01,
+    "category": "arte",
+    "tipo": "persona",
+    "description": "Andy Warhol nasce il 6 agosto 1928 a Pittsburgh. Figlio di immigrati slovacchi, si afferma a New York come uno dei padri della Pop Art. La sua Factory, aperta nel 1962, diventa il centro pulsante dell'avanguardia newyorkese: artisti, musicisti, modelli e intellettuali si riuniscono attorno ai suoi esperimenti con la serigrafia industriale. Le icone della cultura di massa — lattine di zuppa Campbell, ritratti di Marilyn Monroe e Mao Zedong — diventano monumenti dell'arte del XX secolo. Warhol sfida il confine tra arte e commercio, trasformando il banale in sublime e anticipando l'era della celebrity culture globale.",
+    "wikipediaSlug": "Andy_Warhol",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-concettuale-1965",
+    "title": "L'Arte Concettuale",
+    "year": 1965,
+    "lat": 40.71,
+    "lng": -74.01,
+    "category": "arte",
+    "tipo": "movimento",
+    "description": "L'Arte Concettuale si afferma negli anni Sessanta come movimento radicale che mette l'idea al centro dell'opera, subordinando o eliminando l'oggetto fisico. Artisti come Sol LeWitt, Joseph Kosuth, Lawrence Weiner e il gruppo Fluxus sfidano le convenzioni dell'arte tradizionale, sostenendo che il concetto stesso sia sufficiente a costituire l'opera. Le istruzioni scritte, le fotografie, le installazioni testuali e le performance sostituiscono pittura e scultura. Il movimento emerge in risposta all'arte minimalista e al mercato dell'arte, ponendo domande fondamentali su cosa sia l'arte, chi la definisca e quale sia il ruolo dell'artista nella società contemporanea.",
+    "wikipediaSlug": "Conceptual_art",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-yoko-ono-1933",
+    "title": "Yoko Ono — Fluxus e Arte Concettuale",
+    "year": 1933,
+    "lat": 35.68,
+    "lng": 139.69,
+    "category": "arte",
+    "tipo": "persona",
+    "description": "Yoko Ono nasce il 18 febbraio 1933 a Tokyo in una famiglia dell'aristocrazia giapponese. Cresciuta tra Giappone e Stati Uniti, diventa una delle pioniere dell'arte concettuale e del movimento Fluxus negli anni Sessanta. Le sue performance — come Cut Piece, dove invitava il pubblico a tagliare i suoi vestiti — esplorano i temi della vulnerabilità, della pace e del femminismo. Collabora con John Lennon, con cui realizza azioni pacifiste come il Bed-In for Peace nel 1969. La sua influenza sull'arte contemporanea, sulla musica e sull'attivismo politico è stata profonda e duratura, spesso oscurata dalla sua relazione con il Beatle.",
+    "wikipediaSlug": "Yoko_Ono",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-koons-1955",
+    "title": "Jeff Koons",
+    "year": 1955,
+    "lat": 39.96,
+    "lng": -76.73,
+    "category": "arte",
+    "tipo": "persona",
+    "description": "Jeff Koons nasce il 21 gennaio 1955 a York, Pennsylvania. È considerato uno degli artisti viventi più influenti e controversi del mondo. Le sue sculture in acciaio inossidabile a specchio — palloncini, giocattoli, cuccioli di fiori giganti — portano la cultura popolare e il kitsch al rango di arte alta. La sua serie Balloon Dog e le sculture di Michael Jackson hanno raggiunto prezzi record nelle aste internazionali. Koons lavora con grandi squadre di assistenti, ispirandosi alla produzione industriale warholiana. Celebrato da alcuni come genio della comunicazione visiva, è criticato da altri per una presunta superficialità. Ha esposto nei principali musei del mondo.",
+    "wikipediaSlug": "Jeff_Koons",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-richter-1932",
+    "title": "Gerhard Richter",
+    "year": 1932,
+    "lat": 51.05,
+    "lng": 13.74,
+    "category": "arte",
+    "tipo": "persona",
+    "description": "Gerhard Richter nasce il 9 febbraio 1932 a Dresda. È unanimemente considerato il più importante pittore vivente, capace di spaziare con uguale maestria tra il fotorealismo e l'astrazione. Formatosi nella Germania Est, fugge a Ovest nel 1961 pochi mesi prima della costruzione del Muro di Berlino. I suoi dipinti sfocati da fotografie private o giornalistiche interrogano la memoria, la storia e la rappresentazione visiva. La serie October 18, 1977 sulla Banda Baader-Meinhof è considerata una delle opere più importanti del dopoguerra. Le sue grandi lastre di vetro e i pannelli astratti colorati sono presenti nelle collezioni dei maggiori musei mondiali.",
+    "wikipediaSlug": "Gerhard_Richter",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-hirst-squalo-1991",
+    "title": "Damien Hirst — Lo squalo",
+    "year": 1991,
+    "lat": 51.51,
+    "lng": -0.13,
+    "category": "arte",
+    "tipo": "opera",
+    "description": "The Physical Impossibility of Death in the Mind of Someone Living è l'opera più celebre di Damien Hirst, realizzata nel 1991 e commissionata dal collezionista Charles Saatchi per 50.000 sterline. Consiste in uno squalo tigre di quattro metri immerso in una soluzione di formaldeide all'interno di una teca di vetro e acciaio. L'opera è diventata il simbolo della Young British Artists e dell'arte britannica degli anni Novanta. Nel 2004 è stata venduta a un collezionista americano per circa dodici milioni di dollari. Lo squalo originale, deterioratosi, è stato sostituito nel 2006. L'opera interroga la morte, la percezione del pericolo e i confini dell'arte.",
+    "wikipediaSlug": "The_Physical_Impossibility_of_Death_in_the_Mind_of_Someone_Living",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-nft-2021",
+    "title": "L'Arte Digitale e NFT",
+    "year": 2021,
+    "lat": 37.77,
+    "lng": -122.42,
+    "category": "arte",
+    "tipo": "movimento",
+    "description": "Nel marzo 2021 l'artista digitale Beeple vende l'opera Everydays: The First 5000 Days da Christie's per 69 milioni di dollari, segnando l'esplosione globale degli NFT — token non fungibili basati su blockchain. Gli NFT permettono di certificare la proprietà di opere digitali, aprendo un mercato multimiliardario per arte, musica e video. Il fenomeno democratizza la distribuzione artistica ma genera anche polemiche sull'impatto ambientale delle criptovalute e sulla speculazione finanziaria. Artisti come Pak, Xcopy e molti altri trovano nuovi modelli di vendita diretta al pubblico, aggirando gallerie e case d'asta. Il mercato degli NFT artistici raggiungerà picchi e crolli nel giro di pochi anni.",
+    "wikipediaSlug": "Non-fungible_token",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-nouvelle-vague-1959",
+    "title": "Il Cinema come Arte — Nouvelle Vague",
+    "year": 1959,
+    "lat": 48.86,
+    "lng": 2.35,
+    "category": "arte",
+    "tipo": "movimento",
+    "description": "La Nouvelle Vague è il movimento cinematografico che rivoluziona il cinema mondiale alla fine degli anni Cinquanta. Nasce in Francia con registi come François Truffaut, Jean-Luc Godard, Claude Chabrol, Jacques Rivette e Agnès Varda, molti provenienti dalla rivista Cahiers du Cinéma. I film vengono girati in esterni con troupe ridotte, budget contenuti e grande libertà creativa, rompendo con le convenzioni del cinema classico hollywoodiano. I 400 colpi di Truffaut e Fino all'ultimo respiro di Godard, entrambi del 1959, diventano manifesti del movimento. La Nouvelle Vague influenza generazioni di registi in tutto il mondo e afferma il cinema come forma d'arte a pieno titolo.",
+    "wikipediaSlug": "French_New_Wave",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-kubrick-1928",
+    "title": "Stanley Kubrick",
+    "year": 1928,
+    "lat": 40.71,
+    "lng": -74.01,
+    "category": "arte",
+    "tipo": "persona",
+    "description": "Stanley Kubrick nasce il 26 luglio 1928 nel Bronx, New York. Fotografo autodidatta, diventa uno dei registi più visionari e influenti della storia del cinema. La sua filmografia spazia dalla satira politica di Il dottor Stranamore alla fantascienza filosofica di 2001: Odissea nello spazio, dall'horror psicologico di Shining all'epopea napoleonica mancata. Kubrick è noto per il perfezionismo ossessivo, i lunghi tempi di produzione e l'uso innovativo della fotografia e della musica. Ogni suo film è concepito come opera d'arte totale, capace di sondare gli abissi della psicologia umana. Muore nel 1999 pochi giorni dopo aver completato Eyes Wide Shut.",
+    "wikipediaSlug": "Stanley_Kubrick",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-fellini-1920",
+    "title": "Federico Fellini",
+    "year": 1920,
+    "lat": 44.06,
+    "lng": 12.57,
+    "category": "arte",
+    "tipo": "persona",
+    "description": "Federico Fellini nasce il 20 gennaio 1920 a Rimini, in Romagna. È considerato uno dei più grandi registi della storia del cinema mondiale. I suoi film — da La strada a Le notti di Cabiria, da 8½ a Amarcord — creano un universo onirico e autobiografico unico nel suo genere, capace di fondere realtà e fantasia con straordinaria libertà poetica. Quattro volte vincitore del Premio Oscar per il miglior film straniero, riceve nel 1993 un Oscar alla carriera. Il termine felliniano è entrato nel vocabolario comune per descrivere uno stile visivo surreale, barocco e teatrale. Muore a Roma nel 1993, lasciando un'eredità artistica impareggiabile.",
+    "wikipediaSlug": "Federico_Fellini",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-kurosawa-1910",
+    "title": "Akira Kurosawa",
+    "year": 1910,
+    "lat": 35.68,
+    "lng": 139.69,
+    "category": "arte",
+    "tipo": "persona",
+    "description": "Akira Kurosawa nasce il 23 marzo 1910 a Tokyo. È il più celebre regista giapponese della storia e uno dei cineasti più influenti al mondo. Il suo film Rashomon, vincitore del Leone d'oro a Venezia nel 1951, rivela il cinema giapponese all'Occidente. Capolavori come I sette samurai, Trono di sangue, Ran e Kagemusha rivoluzionano il cinema d'azione e il dramma storico. La sua tecnica — uso del teleobiettivo, movimenti di macchina audaci, montaggio ritmico — influenza profondamente registi come Sergio Leone, George Lucas e Francis Ford Coppola. Riceve un Oscar alla carriera nel 1990. Muore nel 1998 a Tokyo, lasciando un'eredità cinematografica ineguagliabile.",
+    "wikipediaSlug": "Akira_Kurosawa",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-versailles-1682",
+    "title": "Il Palazzo di Versailles",
+    "year": 1682,
+    "lat": 48.8,
+    "lng": 2.12,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Il Palazzo di Versailles è la maestosa residenza reale costruita per volere di Luigi XIV, il Re Sole, che vi trasferisce la corte di Francia nel 1682. Progettato dagli architetti Louis Le Vau e Jules Hardouin-Mansart con i giardini di André Le Nôtre, diventa il simbolo assoluto del potere monarchico assoluto e dello splendore barocco europeo. La Galleria degli Specchi, i 800 ettari di parchi e fontane e le magnifiche sale di rappresentanza ospitano la corte più lussuosa d'Europa. Qui viene firmato nel 1783 il Trattato di Parigi e nel 1871 il Trattato di Versailles. Patrimonio UNESCO dal 1979, accoglie oggi oltre dieci milioni di visitatori l'anno.",
+    "wikipediaSlug": "Palace_of_Versailles",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-torre-eiffel-1889",
+    "title": "La Torre Eiffel",
+    "year": 1889,
+    "lat": 48.86,
+    "lng": 2.29,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "La Torre Eiffel è la struttura metallica più famosa al mondo, costruita dall'ingegnere Gustave Eiffel per l'Esposizione Universale di Parigi del 1889, celebrazione del centenario della Rivoluzione francese. Alta 330 metri, è stata per quarant'anni la struttura artificiale più alta della Terra. Inizialmente criticata come bruttura di ferro dagli intellettuali parigini, diventa rapidamente il simbolo per eccellenza di Parigi e della Francia. Costruita in soli due anni con 18.000 pezzi metallici e oltre due milioni di rivetti, è un capolavoro dell'ingegneria ottocentesca. Oggi è il monumento a pagamento più visitato del mondo, con circa sette milioni di visitatori ogni anno.",
+    "wikipediaSlug": "Eiffel_Tower",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-colosseo-80",
+    "title": "Il Colosseo Romano",
+    "year": 80,
+    "lat": 41.89,
+    "lng": 12.49,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Il Colosseo, o Anfiteatro Flavio, è il più grande anfiteatro mai costruito, inaugurato nell'anno 80 d.C. sotto l'imperatore Tito. Capace di ospitare fino a 80.000 spettatori, era il palcoscenico dei ludi romani: combattimenti tra gladiatori, cacce alle fiere, naumachie e spettacoli pubblici. Costruito in soli dieci anni con 100.000 metri cubi di travertino e decine di migliaia di schiavi, è un capolavoro dell'ingegneria romana per i suoi sistemi di corridoi, velari e ascensori. Devastato da terremoti e saccheggiato nel Medioevo, rimane il monumento simbolo di Roma e della civiltà romana. Patrimonio UNESCO dal 1980, è visitato da oltre sei milioni di persone l'anno.",
+    "wikipediaSlug": "Colosseum",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-acropoli-atene-432",
+    "title": "L'Acropoli di Atene",
+    "year": -432,
+    "lat": 37.97,
+    "lng": 23.73,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "L'Acropoli di Atene è la collina sacra che domina la città, sede dei più importanti templi della Grecia antica. Il Partenone, dedicato ad Atena e completato nel 432 a.C. sotto Pericle su progetto di Ictino e Callicrate, è il capolavoro dell'architettura dorica e uno dei monumenti più celebri del mondo. L'Eretteo, il tempio di Atena Nike e i Propilei completano l'ensemble monumentale. La decorazione scultorea, opera di Fidia, rappresenta l'apice dell'arte classica greca. Saccheggiata nei secoli da Romani, Veneziani e Britannici — Lord Elgin portò i fregi al British Museum — è oggi Patrimonio UNESCO e simbolo universale della democrazia e della cultura occidentale.",
+    "wikipediaSlug": "Acropolis_of_Athens",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-grande-muraglia-221",
+    "title": "La Grande Muraglia Cinese",
+    "year": -221,
+    "lat": 40.43,
+    "lng": 116.57,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "La Grande Muraglia Cinese è la più lunga struttura difensiva mai costruita, che si estende per oltre 21.000 chilometri attraverso il nord della Cina. La sua costruzione sistematica inizia con l'imperatore Qin Shi Huang nel 221 a.C., unendo e potenziando muri preesistenti per difendere l'impero dalle invasioni delle tribù nomadi del nord. Ampliata e restaurata durante le successive dinastie, raggiunge il suo sviluppo massimo sotto i Ming tra il XIV e il XVII secolo. Costruita con terra compressa, pietra e mattoni da centinaia di migliaia di lavoratori e soldati, è costata la vita a innumerevoli costruttori. Patrimonio UNESCO dal 1987 e una delle sette meraviglie del mondo moderno.",
+    "wikipediaSlug": "Great_Wall_of_China",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-pantheon-125",
+    "title": "Il Pantheon di Roma",
+    "year": 125,
+    "lat": 41.9,
+    "lng": 12.48,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Il Pantheon è il tempio romano meglio conservato dell'antichità, ricostruito dall'imperatore Adriano intorno al 125 d.C. sui resti di un edificio precedente di Agrippa. La sua cupola in calcestruzzo, con un diametro di 43,3 metri e l'oculo centrale aperto al cielo, rimane la più grande cupola in muratura non armata del mondo. L'edificio ha ispirato secoli di architettura, dal Rinascimento al Neoclassicismo, influenzando Brunelleschi, Michelangelo e innumerevoli altri architetti. Convertito in chiesa cristiana nel VII secolo, ha garantito la sua straordinaria conservazione. Nella navata sono sepolti Raffaello, Annibale Carracci e i re d'Italia Vittorio Emanuele II e Umberto I.",
+    "wikipediaSlug": "Pantheon,_Rome",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-notre-dame-1163",
+    "title": "La Cattedrale di Notre-Dame",
+    "year": 1163,
+    "lat": 48.85,
+    "lng": 2.35,
+    "category": "arte",
+    "tipo": "luogo",
+    "description": "La Cattedrale di Notre-Dame de Paris è il capolavoro dell'architettura gotica francese, la cui costruzione inizia nel 1163 per volere del vescovo Maurice de Sully sull'Île de la Cité. I suoi archi rampanti, le torri gemelle, i rosoni e le sculture di gargoyle ridefiniscono l'estetica religiosa medievale. Testimone di eventi storici fondamentali — l'incoronazione di Napoleone nel 1804, la liberazione di Parigi nel 1944 — la cattedrale è il cuore spirituale e culturale della Francia. Il tragico incendio del 15 aprile 2019 distrugge la guglia e parte del tetto, scatenando una mobilitazione internazionale per la ricostruzione. I lavori di restauro procedono con l'obiettivo di riaprirla entro il 2024.",
+    "wikipediaSlug": "Notre-Dame_de_Paris",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-duomo-firenze-1436",
+    "title": "Il Duomo di Firenze — Cupola di Brunelleschi",
+    "year": 1436,
+    "lat": 43.77,
+    "lng": 11.26,
+    "category": "arte",
+    "tipo": "luogo",
+    "description": "La cupola della Cattedrale di Santa Maria del Fiore, completata da Filippo Brunelleschi nel 1436, è uno dei capolavori assoluti dell'architettura rinascimentale e dell'ingegneria di tutti i tempi. Con un diametro di 45,5 metri e un'altezza di 114 metri, rimase per secoli la cupola più grande del mondo. Brunelleschi risolse il problema apparentemente insormontabile di coprire l'enorme tamburo della cattedrale senza l'uso delle centine tradizionali, inventando tecniche costruttive rivoluzionarie. La struttura a doppia calotta ottagonale con le nervature in marmo bianco domina ancora oggi il panorama fiorentino. L'interno, affrescato da Giorgio Vasari e Federico Zuccari, raffigura il Giudizio Universale.",
+    "wikipediaSlug": "Florence_Cathedral",
+    "isCosmic": false
+  },
+  {
+    "id": "arte-san-pietro-1626",
+    "title": "La Basilica di San Pietro",
+    "year": 1626,
+    "lat": 41.9,
+    "lng": 12.45,
+    "category": "arte",
+    "tipo": "luogo",
+    "description": "La Basilica di San Pietro in Vaticano è il più grande edificio sacro del mondo cristiano, consacrata nel 1626 dopo oltre un secolo di costruzione. Sorge sul luogo della sepoltura dell'apostolo Pietro ed è il cuore della Città del Vaticano. Vi hanno lavorato i più grandi architetti del Rinascimento e del Barocco: Bramante, Raffaello, Antonio da Sangallo, Michelangelo — che progetta la cupola maestosa — e infine Gian Lorenzo Bernini, autore del colonnato che abbraccia piazza San Pietro. Il suo interno custodisce la Pietà di Michelangelo, il baldacchino bronzeo del Bernini e la Cattedra di Pietro. Patrimonio UNESCO come parte del centro storico di Roma, è meta di milioni di pellegrini ogni anno.",
+    "wikipediaSlug": "St._Peter's_Basilica",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-taj-mahal-1653",
+    "title": "Il Taj Mahal",
+    "year": 1653,
+    "lat": 27.17,
+    "lng": 78.04,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Il Taj Mahal è il mausoleo in marmo bianco costruito dall'imperatore moghul Shah Jahan ad Agra tra il 1632 e il 1653 in memoria della sua amata moglie Mumtaz Mahal, morta di parto. Considerato il più bello esempio di architettura moghul e una delle sette meraviglie del mondo moderno, è stato costruito da oltre 20.000 artigiani provenienti da tutto l'Asia centrale. La simmetria perfetta, i giardini geometrici con i canali riflettenti, i quattro minareti e la cupola centrale in marmo bianco — che cambia colore con la luce del giorno — ne fanno un capolavoro di estetica islamica. Patrimonio UNESCO dal 1983, attrae annualmente oltre sette milioni di visitatori.",
+    "wikipediaSlug": "Taj_Mahal",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-neuschwanstein-1886",
+    "title": "Il Castello di Neuschwanstein",
+    "year": 1886,
+    "lat": 47.56,
+    "lng": 10.75,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Il Castello di Neuschwanstein è la fiabesca residenza costruita dal re Ludwig II di Baviera sulle Alpi bavaresi, aperta al pubblico nel 1886, poco dopo la morte misteriosa del sovrano nel lago di Starnberg. Progettato dal pittore scenografico Christian Jank e ispirato alle opere di Richard Wagner, è un esempio di architettura romantica storicista con torri medievaleggianti, sale affrescate con scene wagneriane e una posizione panoramica mozzafiato. Ludwig II non riuscì mai a completarlo e vi abitò per soli undici giorni prima della morte. Oggi è il castello più visitato d'Europa, con oltre 1,3 milioni di visitatori annui, e ha ispirato il Castello della Bella Addormentata della Walt Disney.",
+    "wikipediaSlug": "Neuschwanstein_Castle",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-angkor-wat-1150",
+    "title": "Angkor Wat",
+    "year": 1150,
+    "lat": 13.41,
+    "lng": 103.87,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Angkor Wat è il più grande complesso religioso del mondo, costruito nella prima metà del XII secolo dal re Suryavarman II dell'Impero Khmer nell'attuale Cambogia. Dedicato inizialmente al dio indù Vishnu e poi convertito al buddhismo, si estende su oltre 160 ettari circondati da un fossato largo 190 metri. Le cinque torri centrali rappresentano i picchi del Monte Meru, dimora degli dei nella cosmologia induista. Le gallerie sono decorate con 600 metri di bassorilievi narrativi tra i più elaborati al mondo. Abbandonato dopo il collasso dell'Impero Khmer nel XV secolo, viene riscoperto dagli Europei nell'Ottocento. Patrimonio UNESCO dal 1992 e simbolo nazionale della Cambogia.",
+    "wikipediaSlug": "Angkor_Wat",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-chichen-itza-900",
+    "title": "Chichen Itza",
+    "year": 900,
+    "lat": 20.68,
+    "lng": -88.57,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Chichen Itza è l'antica città maya nello Yucatán messicano, fiorente tra il 600 e il 1200 d.C. e centro politico e religioso dell'intera penisola. El Castillo, la piramide a gradoni dedicata al dio serpente piumato Kukulcan, è il suo monumento più iconico: ogni equinozio di primavera e autunno, il gioco di luce e ombra sulle scalinate crea l'illusione di un serpente che scende verso terra. Il complesso include il Tempio dei Guerrieri, il Campo da Pelota — il più grande della Mesoamerica — e il Cenote Sagrado, pozzo naturale dove venivano offerti sacrifici. Una delle sette meraviglie del mondo moderno e Patrimonio UNESCO dal 1988, riceve annualmente oltre due milioni di visitatori.",
+    "wikipediaSlug": "Chichen_Itza",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-foro-romano-46",
+    "title": "Il Foro Romano",
+    "year": -46,
+    "lat": 41.89,
+    "lng": 12.49,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Il Foro Romano era il centro della vita pubblica, politica, religiosa e commerciale dell'antica Roma, sviluppatosi in una valle tra il Palatino e il Campidoglio a partire dal VII secolo a.C. Nella sua età d'oro, ospitava templi, basiliche, archi di trionfo, la tribuna dei Rostri da cui i politici arringavano la folla, la Via Sacra percorsa dai cortei trionfali e il tempio di Saturno con il tesoro dello Stato. Giulio Cesare lo ampliò sistematicamente tra il 54 e il 46 a.C. Caduto in rovina dopo il collasso dell'Impero, fu usato come cava di materiali nel Medioevo. Le sue rovine — incluse il Tempio di Vesta, l'Arco di Settimio Severo e la Basilica di Massenzio — sono oggi tra i siti più visitati al mondo.",
+    "wikipediaSlug": "Roman_Forum",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-biblioteca-alessandria-285",
+    "title": "La Biblioteca di Alessandria",
+    "year": -285,
+    "lat": 31.2,
+    "lng": 29.92,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "La Grande Biblioteca di Alessandria d'Egitto fu la più importante istituzione culturale del mondo antico, fondata nel III secolo a.C. sotto i Tolomei nella capitale del regno ellenistico. Parte del Mouseion — antenato dell'università moderna — mirava a raccogliere tutto il sapere del mondo, accumulando fra 400.000 e 700.000 rotoli di papiro. Vi lavorarono Euclide, Eratostene, Archimede, Callimaco e decine di altri grandi pensatori. La biblioteca non fu distrutta in un unico incendio come vuole la leggenda, ma declinò progressivamente attraverso secoli di incuria e conflitti. La sua distruzione simboleggia la perdita irreparabile di una parte enorme del patrimonio intellettuale dell'antichità classica. Una nuova Bibliotheca Alexandrina è stata inaugurata nel 2002.",
+    "wikipediaSlug": "Library_of_Alexandria",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-lega-nazioni-1919",
+    "title": "La Lega delle Nazioni",
+    "year": 1919,
+    "lat": 46.2,
+    "lng": 6.15,
+    "category": "storia",
+    "tipo": "organizzazione",
+    "description": "La Società delle Nazioni — Lega delle Nazioni — è la prima organizzazione intergovernativa mondiale a vocazione universale, istituita dal Trattato di Versailles nel 1919 su proposta del presidente americano Woodrow Wilson. Con sede a Ginevra, aveva l'obiettivo di mantenere la pace internazionale attraverso la diplomazia collettiva, il disarmo e la risoluzione pacifica delle controversie. Contava 58 membri al suo apice, ma fu indebolita dall'assenza degli Stati Uniti — il Congresso rifiutò la ratifica — e dall'uscita di Germania, Giappone e Italia negli anni Trenta. L'incapacità di fermare le aggressioni di Giappone, Italia e Germania ne sancì il fallimento. Fu sciolta nel 1946 e sostituita dalle Nazioni Unite.",
+    "wikipediaSlug": "League_of_Nations",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-onu-1945",
+    "title": "Le Nazioni Unite",
+    "year": 1945,
+    "lat": 37.77,
+    "lng": -122.42,
+    "category": "storia",
+    "tipo": "organizzazione",
+    "description": "Le Nazioni Unite nascono il 24 ottobre 1945 con la firma della Carta delle Nazioni Unite da parte di 51 paesi fondatori a San Francisco, per volontà dei vincitori della Seconda Guerra Mondiale. Succedono alla fallita Lega delle Nazioni con struttura rafforzata: il Consiglio di Sicurezza con cinque membri permanenti dotati di diritto di veto (USA, URSS, UK, Francia, Cina), l'Assemblea Generale, la Corte Internazionale di Giustizia e un sistema di agenzie specializzate. Oggi contano 193 Stati membri. Hanno gestito centinaia di operazioni di pace, adottato la Dichiarazione Universale dei Diritti Umani nel 1948 e coordinato la risposta a crisi umanitarie, climatiche e sanitarie globali.",
+    "wikipediaSlug": "United_Nations",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-nato-1949",
+    "title": "La NATO",
+    "year": 1949,
+    "lat": 38.91,
+    "lng": -77.04,
+    "category": "storia",
+    "tipo": "organizzazione",
+    "description": "La NATO — Organizzazione del Trattato del Nord Atlantico — è l'alleanza militare difensiva fondata il 4 aprile 1949 a Washington da dodici nazioni occidentali: Stati Uniti, Canada, Gran Bretagna, Francia, Italia, Belgio, Paesi Bassi, Lussemburgo, Norvegia, Danimarca, Islanda e Portogallo. Nata in risposta alla crescente minaccia sovietica e al colpo di Stato comunista in Cecoslovacchia del 1948, si fonda sul principio della difesa collettiva stabilito nell'articolo 5: un attacco contro uno è un attacco contro tutti. Ha guidato la difesa occidentale durante l'intera Guerra Fredda, e dopo il 1991 si è ampliata progressivamente verso est, includendo la maggior parte dei paesi dell'ex blocco sovietico. Conta oggi 32 membri.",
+    "wikipediaSlug": "NATO",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-unione-europea-1993",
+    "title": "L'Unione Europea",
+    "year": 1993,
+    "lat": 50.85,
+    "lng": 5.69,
+    "category": "storia",
+    "tipo": "organizzazione",
+    "description": "L'Unione Europea nasce formalmente il 1° novembre 1993 con l'entrata in vigore del Trattato di Maastricht, firmato nel 1992. Evoluzione della Comunità Economica Europea fondata nel 1957 con il Trattato di Roma, l'UE introduce la cittadinanza europea, l'unione economica e monetaria che porterà all'euro nel 2002, e una politica estera e di sicurezza comune. Da 12 membri fondatori è cresciuta fino a 27 stati dopo la Brexit del 2020. Il progetto di integrazione europea è la risposta alle devastazioni delle due guerre mondiali, con l'obiettivo di garantire pace, prosperità e democrazia sul continente. Nel 2012 riceve il Premio Nobel per la pace per il suo contributo alla riconciliazione europea.",
+    "wikipediaSlug": "European_Union",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-croce-rossa-1863",
+    "title": "La Croce Rossa Internazionale",
+    "year": 1863,
+    "lat": 46.2,
+    "lng": 6.15,
+    "category": "storia",
+    "tipo": "organizzazione",
+    "description": "Il Comitato Internazionale della Croce Rossa viene fondato a Ginevra nel 1863 dall'imprenditore svizzero Henry Dunant, sconvolto dall'abbandono dei feriti dopo la battaglia di Solferino del 1859. L'organizzazione stabilisce i principi fondamentali dell'azione umanitaria: umanità, imparzialità, neutralità, indipendenza, volontariato, unità e universalità. La prima Convenzione di Ginevra del 1864 getta le basi del diritto internazionale umanitario, proteggendo i feriti in guerra e il personale sanitario. La Croce Rossa ha poi esteso il suo mandato ai prigionieri di guerra, alle vittime di disastri naturali e agli sfollati. Ha ricevuto il Premio Nobel per la Pace per tre volte: nel 1917, nel 1944 e nel 1963.",
+    "wikipediaSlug": "International_Committee_of_the_Red_Cross",
+    "isCosmic": false
+  },
+  {
+    "id": "scienza-royal-society-1660",
+    "title": "La Royal Society di Londra",
+    "year": 1660,
+    "lat": 51.51,
+    "lng": -0.13,
+    "category": "scienza",
+    "tipo": "organizzazione",
+    "description": "La Royal Society — nome ufficiale The Royal Society of London for Improving Natural Knowledge — è la più antica accademia scientifica ancora attiva al mondo, fondata a Londra nel 1660. Ricevuta la Carta Reale da Carlo II nel 1662, raccoglie fin dalle origini i più grandi scienziati britannici ed europei: Robert Boyle, Christopher Wren, Robert Hooke, Isaac Newton — che ne è presidente dal 1703 al 1727 — e successivamente Charles Darwin, Ernest Rutherford, Albert Einstein. Il suo motto Nullius in verba — non fidarti della parola di nessuno — riassume il metodo scientifico empirico. Le sue pubblicazioni, tra cui le Philosophical Transactions dal 1665, sono tra le più antiche riviste scientifiche al mondo ancora in circolazione.",
+    "wikipediaSlug": "Royal_Society",
+    "isCosmic": false
+  },
+  {
+    "id": "scienza-accademia-lincei-1603",
+    "title": "L'Accademia dei Lincei",
+    "year": 1603,
+    "lat": 41.9,
+    "lng": 12.48,
+    "category": "scienza",
+    "tipo": "organizzazione",
+    "description": "L'Accademia dei Lincei è la prima accademia scientifica moderna del mondo, fondata a Roma nel 1603 dal principe Federico Cesi insieme ad altri tre giovani intellettuali. Il nome rimanda alla lince, simbolo dell'acutezza visiva necessaria per scrutare i segreti della natura. Galileo Galilei ne diventa membro nel 1611, e pubblica sotto l'egida dell'Accademia il Saggiatore nel 1623. Con la morte di Cesi nel 1630 l'Accademia cessa l'attività. Riffondata nel 1847 da Papa Pio IX, nel 1870 diventa la massima istituzione scientifica del Regno d'Italia. Ancor oggi è la principale accademia scientifica italiana, ha sede nel Palazzo Corsini a Roma e conta tra i suoi soci i più illustri scienziati italiani e internazionali.",
+    "wikipediaSlug": "Accademia_dei_Lincei",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-universita-bologna-1088",
+    "title": "L'Università di Bologna",
+    "year": 1088,
+    "lat": 44.49,
+    "lng": 11.34,
+    "category": "storia",
+    "tipo": "organizzazione",
+    "description": "L'Università di Bologna, fondata nel 1088, è considerata la più antica università del mondo ancora in attività. Nata come scuola di diritto attorno al giurista Irnerio, che insegnava il Corpus Iuris Civilis di Giustiniano, diventa rapidamente il principale centro europeo per gli studi giuridici, attirandovi studenti da tutto il continente. Nel XIII secolo conta oltre diecimila studenti stranieri. Ha ospitato pensatori come Petrarca, Dante, Boccaccio e il medico Mondino de' Liuzzi, pioniere dell'anatomia moderna. Il suo modello organizzativo — con gli studenti che eleggono i professori e ne controllano la retribuzione — diventa il prototipo dell'università europea. Il suo motto è Alma mater studiorum.",
+    "wikipediaSlug": "University_of_Bologna",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-universita-oxford-1096",
+    "title": "L'Università di Oxford",
+    "year": 1096,
+    "lat": 51.75,
+    "lng": -1.25,
+    "category": "storia",
+    "tipo": "organizzazione",
+    "description": "L'Università di Oxford è la più antica università di lingua inglese al mondo e la seconda università più antica d'Europa, con tracce di insegnamento risalenti al 1096. Si sviluppa rapidamente dopo il 1167, quando Enrico II d'Inghilterra vieta agli studenti inglesi di frequentare l'Università di Parigi. Organizzata in college autonomi — il più antico è University College, del 1249 — sviluppa il sistema tutorial come metodo pedagogico fondamentale. Tra i suoi alumni figurano 27 primi ministri britannici, 28 premi Nobel e decine tra i più influenti scrittori, scienziati e politici del mondo anglosassone. Le sue biblioteche, tra cui la celebre Bodleiana del 1602, custodiscono oltre 13 milioni di volumi. Rimane oggi tra le prime cinque università al mondo.",
+    "wikipediaSlug": "University_of_Oxford",
+    "isCosmic": false
+  },
+  {
+    "id": "storia-fmi-1945",
+    "title": "Il FMI — Fondo Monetario Internazionale",
+    "year": 1945,
+    "lat": 38.91,
+    "lng": -77.04,
+    "category": "storia",
+    "tipo": "organizzazione",
+    "description": "Il Fondo Monetario Internazionale nasce nel luglio 1944 dalla Conferenza di Bretton Woods nel New Hampshire, dove 44 nazioni disegnano il nuovo ordine economico internazionale del dopoguerra sotto la guida degli economisti John Maynard Keynes e Harry Dexter White. Entra formalmente in attività nel 1945 con sede a Washington. Il suo mandato originale è garantire la stabilità del sistema monetario internazionale, basato sui cambi fissi agganciati al dollaro e all'oro. Dopo l'abbandono del sistema di Bretton Woods nel 1971, si evolve in prestatore di ultima istanza per i paesi in crisi finanziaria, spesso imponendo dure condizioni di aggiustamento strutturale. Conta oggi 190 paesi membri e gestisce risorse per oltre 650 miliardi di diritti speciali di prelievo.",
+    "wikipediaSlug": "International_Monetary_Fund",
     "isCosmic": false
   }
 ]
