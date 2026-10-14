@@ -170,7 +170,7 @@ function AppInner() {
     new Set(['storia', 'arte', 'musica', 'scienza', 'geologia', 'cosmo', 'filosofia', 'sport'])
   );
   const [activeTipi, setActiveTipi] = useState<Set<EntityType>>(
-    new Set(['persona', 'evento', 'conflitto', 'opera', 'luogo', 'scoperta'] as EntityType[])
+    new Set(['persona', 'evento', 'movimento', 'organizzazione', 'opera', 'luogo', 'scoperta'] as EntityType[])
   );
 
   const currentYear  = overrideYear !== null ? overrideYear : sliderToYear(sliderValue);
