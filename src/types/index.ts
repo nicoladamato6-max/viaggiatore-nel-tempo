@@ -1,5 +1,8 @@
 export type EventCategory = 'storia' | 'arte' | 'musica' | 'scienza' | 'geologia' | 'cosmo';
 
+/** Tipo di entità storica — secondo livello di filtro ortogonale alla disciplina */
+export type EntityType = 'persona' | 'evento' | 'opera' | 'luogo' | 'scoperta';
+
 export type Locale = 'it' | 'en';
 
 export interface HistoricalEvent {
@@ -9,11 +12,28 @@ export interface HistoricalEvent {
   lat?: number;
   lng?: number;
   category: EventCategory;
+  tipo?: EntityType;
   description: string;
   wikipediaSlug: string;
   imageUrl?: string;
   isCosmic: boolean;
 }
+
+export const ENTITY_TYPE_LABELS: Record<EntityType, string> = {
+  persona:  '👤 Personaggi',
+  evento:   '⚡ Eventi',
+  opera:    '🎭 Opere',
+  luogo:    '📍 Luoghi',
+  scoperta: '💡 Scoperte',
+};
+
+export const ENTITY_TYPE_COLORS: Record<EntityType, string> = {
+  persona:  '#f1c40f',
+  evento:   '#e67e22',
+  opera:    '#e056a0',
+  luogo:    '#1abc9c',
+  scoperta: '#00bcd4',
+};
 
 export const CATEGORY_COLORS: Record<EventCategory, string> = {
   storia:   '#e74c3c',

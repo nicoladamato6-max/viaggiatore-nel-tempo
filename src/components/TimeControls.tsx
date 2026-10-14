@@ -1,8 +1,9 @@
 import { useState, useRef, useCallback, useMemo } from 'react';
-import { type EventCategory, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
+import { type EventCategory, type EntityType, CATEGORY_COLORS, CATEGORY_LABELS, ENTITY_TYPE_LABELS, ENTITY_TYPE_COLORS } from '../types';
 import { getActivePeriods, getCurrentMacroEra, assignLanes, SUBCATEGORIES } from '../data/historicalPeriods';
 
-const CATEGORIES = Object.keys(CATEGORY_LABELS) as EventCategory[];
+const CATEGORIES  = Object.keys(CATEGORY_LABELS)    as EventCategory[];
+const ENTITY_TYPES = Object.keys(ENTITY_TYPE_LABELS) as EntityType[];
 
 // Soglia storica: solo dopo -2.5M anni si mostrano sottocategorie
 const HISTORICAL_THRESHOLD = -2_500_000;
@@ -17,6 +18,8 @@ interface Props {
   onSliderChange: (value: number) => void;
   activeCategories: Set<EventCategory>;
   onToggleCategory: (cat: EventCategory) => void;
+  activeTipi: Set<EntityType>;
+  onToggleTipo: (tipo: EntityType) => void;
   onEraClick?: (slug: string, label: string) => void;
 }
 
@@ -31,7 +34,8 @@ function formatYearShort(year: number): string {
 
 export function TimeControls({
   sliderValue, currentYear, formatYear, getEra,
-  onSliderChange, activeCategories, onToggleCategory, onEraClick,
+  onSliderChange, activeCategories, onToggleCategory,
+  activeTipi, onToggleTipo, onEraClick,
 }: Props) {
   const era = getEra(currentYear);
   const [isDragging, setIsDragging] = useState(false);
@@ -173,6 +177,19 @@ export function TimeControls({
             onClick={() => onToggleCategory(cat)}
           >
             {CATEGORY_LABELS[cat]}
+          </button>
+        ))}
+      </div>
+
+      <div className="filters filters--tipo">
+        {ENTITY_TYPES.map(tipo => (
+          <button
+            key={tipo}
+            className={`filter-btn filter-btn--tipo ${activeTipi.has(tipo) ? 'active' : ''}`}
+            style={activeTipi.has(tipo) ? { color: ENTITY_TYPE_COLORS[tipo], borderColor: `${ENTITY_TYPE_COLORS[tipo]}55` } : {}}
+            onClick={() => onToggleTipo(tipo)}
+          >
+            {ENTITY_TYPE_LABELS[tipo]}
           </button>
         ))}
       </div>

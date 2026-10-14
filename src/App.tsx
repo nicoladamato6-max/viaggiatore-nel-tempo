@@ -9,7 +9,7 @@ import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { AuthProvider, useAuth } from './hooks/useAuth';
 import eventsData from './data/events.json';
-import { type HistoricalEvent, type EventCategory, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker } from './types';
+import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 import { MACRO_ERAS, SUBCATEGORIES, type Period } from './data/historicalPeriods';
 
@@ -169,6 +169,9 @@ function AppInner() {
   const [activeCategories, setActiveCategories] = useState<Set<EventCategory>>(
     new Set(['storia', 'arte', 'musica', 'scienza', 'geologia', 'cosmo'])
   );
+  const [activeTipi, setActiveTipi] = useState<Set<EntityType>>(
+    new Set(['persona', 'evento', 'opera', 'luogo', 'scoperta'] as EntityType[])
+  );
 
   const currentYear  = overrideYear !== null ? overrideYear : sliderToYear(sliderValue);
   const isCosmicView = currentYear < -4_500_000_000;
@@ -179,15 +182,24 @@ function AppInner() {
       activeCategories.has(e.category) &&
       e.year >= timeWindow.from &&
       e.year <= timeWindow.to &&
-      e.isCosmic === isCosmicView
+      e.isCosmic === isCosmicView &&
+      (e.tipo == null || activeTipi.has(e.tipo))
     ),
-    [ALL_EVENTS, timeWindow, activeCategories, isCosmicView]
+    [ALL_EVENTS, timeWindow, activeCategories, activeTipi, isCosmicView]
   );
 
   const toggleCategory = useCallback((cat: EventCategory) => {
     setActiveCategories(prev => {
       const next = new Set(prev);
       if (next.has(cat)) { next.delete(cat); } else { next.add(cat); }
+      return next;
+    });
+  }, []);
+
+  const toggleTipo = useCallback((tipo: EntityType) => {
+    setActiveTipi(prev => {
+      const next = new Set(prev);
+      if (next.has(tipo)) { next.delete(tipo); } else { next.add(tipo); }
       return next;
     });
   }, []);
@@ -515,6 +527,8 @@ function AppInner() {
           onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
           activeCategories={activeCategories}
           onToggleCategory={toggleCategory}
+          activeTipi={activeTipi}
+          onToggleTipo={toggleTipo}
           onEraClick={handleEraClick}
         />
       </div>
