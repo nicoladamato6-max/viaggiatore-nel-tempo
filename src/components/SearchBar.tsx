@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { type HistoricalEvent, type WikiSearchResult } from '../types';
+import { type Period } from '../data/historicalPeriods';
 
 declare global {
   interface Window {
@@ -31,7 +32,16 @@ interface Props {
   events: HistoricalEvent[];
   onSelect: (event: HistoricalEvent) => void;
   onWikiSelect: (result: WikiSearchResult) => void;
+  onEpochSelect?: (period: Period) => void;
+  epochs?: Period[];
   locale?: string;
+}
+
+function formatPeriodYear(year: number): string {
+  if (Math.abs(year) >= 1_000_000_000) return `${(Math.abs(year) / 1_000_000_000).toFixed(1)} mld ${year < 0 ? 'a.C.' : 'd.C.'}`;
+  if (Math.abs(year) >= 1_000_000)     return `${(Math.abs(year) / 1_000_000).toFixed(0)} mln ${year < 0 ? 'a.C.' : 'd.C.'}`;
+  if (year < 0) return `${Math.abs(year).toLocaleString()} a.C.`;
+  return `${year} d.C.`;
 }
 
 async function searchWikipedia(q: string, lang: string): Promise<WikiSearchResult[]> {
@@ -52,7 +62,7 @@ async function searchWikipedia(q: string, lang: string): Promise<WikiSearchResul
   }));
 }
 
-export function SearchBar({ events, onSelect, onWikiSelect, locale = 'it' }: Props) {
+export function SearchBar({ events, onSelect, onWikiSelect, onEpochSelect, epochs = [], locale = 'it' }: Props) {
   const [query,       setQuery]       = useState('');
   const [open,        setOpen]        = useState(false);
   const [listening,   setListening]   = useState(false);
@@ -71,6 +81,11 @@ export function SearchBar({ events, onSelect, onWikiSelect, locale = 'it' }: Pro
         e.title.toLowerCase().includes(query.toLowerCase()) ||
         e.description.toLowerCase().includes(query.toLowerCase())
       ).slice(0, 5)
+    : [];
+
+  // Epoch results — match on name, min 2 chars
+  const epochResults = query.length >= 2
+    ? epochs.filter(p => p.name.toLowerCase().includes(query.toLowerCase())).slice(0, 5)
     : [];
 
   // Wikipedia search — debounced 400ms, min 3 chars
@@ -129,6 +144,13 @@ export function SearchBar({ events, onSelect, onWikiSelect, locale = 'it' }: Pro
     setWikiResults([]);
   }
 
+  function handleSelectEpoch(period: Period) {
+    onEpochSelect?.(period);
+    setQuery('');
+    setOpen(false);
+    setWikiResults([]);
+  }
+
   const startVoice = useCallback(() => {
     if (!SpeechRecognitionClass) return;
     if (listening) { recognitionRef.current?.stop(); return; }
@@ -147,7 +169,7 @@ export function SearchBar({ events, onSelect, onWikiSelect, locale = 'it' }: Pro
     setListening(true);
   }, [listening, locale]);
 
-  const hasResults = localResults.length > 0 || wikiResults.length > 0 || wikiLoading;
+  const hasResults = localResults.length > 0 || epochResults.length > 0 || wikiResults.length > 0 || wikiLoading;
 
   return (
     <div ref={containerRef} className="search-bar" style={{ position: 'relative' }}>
@@ -192,6 +214,27 @@ export function SearchBar({ events, onSelect, onWikiSelect, locale = 'it' }: Pro
                     {event.year < 0
                       ? `${Math.abs(event.year).toLocaleString()} a.C.`
                       : `${event.year} d.C.`}
+                  </span>
+                </div>
+              ))}
+            </>
+          )}
+
+          {/* ── Epoche storiche ── */}
+          {epochResults.length > 0 && (
+            <>
+              <div className="search-results__section-header search-results__section-header--epoch">
+                📅 {locale === 'it' ? 'Epoche storiche' : 'Historical epochs'}
+              </div>
+              {epochResults.map(period => (
+                <div
+                  key={period.name}
+                  className="search-result-item search-result-item--epoch"
+                  onClick={() => handleSelectEpoch(period)}
+                >
+                  <span className="item-title">{period.name}</span>
+                  <span className="item-year" style={{ color: period.color }}>
+                    {formatPeriodYear(period.start)} — {formatPeriodYear(period.end)}
                   </span>
                 </div>
               ))}

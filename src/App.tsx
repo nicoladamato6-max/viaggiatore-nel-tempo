@@ -11,6 +11,7 @@ import { AuthProvider, useAuth } from './hooks/useAuth';
 import eventsData from './data/events.json';
 import { type HistoricalEvent, type EventCategory, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
+import { MACRO_ERAS, SUBCATEGORIES, type Period } from './data/historicalPeriods';
 
 const STATIC_EVENTS = eventsData as HistoricalEvent[];
 
@@ -269,6 +270,17 @@ function AppInner() {
     });
   }, []);
 
+  // Selezione epoca/sottocategoria dalla SearchBar: salta slider all'inizio dell'epoca e vola al luogo d'origine
+  const handleEpochSearchSelect = useCallback((period: Period) => {
+    setSelectedEvent(null);
+    setWikiMarker(null);
+    setSliderValue(yearToSlider(period.start));
+    setOverrideYear(null);
+    if (period.originLat != null && period.originLng != null) {
+      setFlyTo({ kind: 'geo', lat: period.originLat, lng: period.originLng, ts: Date.now() });
+    }
+  }, []);
+
   // Selezione risultato Wikipedia: apre InfoPanel subito, poi arricchisce con Wikidata async
   const handleWikiSelect = useCallback(async (result: WikiSearchResult) => {
     const lang = locale === 'it' ? 'it' : 'en';
@@ -391,7 +403,14 @@ function AppInner() {
     <div className="app">
       <header className="header">
         <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
-        <SearchBar events={ALL_SEARCHABLE} onSelect={handleSearchSelect} onWikiSelect={handleWikiSelect} locale={locale} />
+        <SearchBar
+          events={ALL_SEARCHABLE}
+          onSelect={handleSearchSelect}
+          onWikiSelect={handleWikiSelect}
+          onEpochSelect={handleEpochSearchSelect}
+          epochs={[...MACRO_ERAS, ...SUBCATEGORIES]}
+          locale={locale}
+        />
         <button
           className="locale-toggle-btn"
           onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
