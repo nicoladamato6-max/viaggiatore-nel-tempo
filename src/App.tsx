@@ -167,10 +167,10 @@ function AppInner() {
   const [showTerritories, setShowTerritories] = useState(false);
   const [locale, setLocale]               = useState<Locale>('it');
   const [activeCategories, setActiveCategories] = useState<Set<EventCategory>>(
-    new Set(['storia', 'arte', 'musica', 'scienza', 'geologia', 'cosmo'])
+    new Set(['storia', 'arte', 'musica', 'scienza', 'geologia', 'cosmo', 'filosofia', 'sport'])
   );
   const [activeTipi, setActiveTipi] = useState<Set<EntityType>>(
-    new Set(['persona', 'evento', 'opera', 'luogo', 'scoperta'] as EntityType[])
+    new Set(['persona', 'evento', 'conflitto', 'opera', 'luogo', 'scoperta'] as EntityType[])
   );
 
   const currentYear  = overrideYear !== null ? overrideYear : sliderToYear(sliderValue);
