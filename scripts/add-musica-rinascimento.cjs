@@ -1,0 +1,34 @@
+const fs = require('fs');
+const path = require('path');
+const eventsPath = path.join(__dirname, '../src/data/events.json');
+const existing = JSON.parse(fs.readFileSync(eventsPath, 'utf8'));
+
+// Musica: Rinascimento (5→12+) — 1351-1599
+const newEvents = [
+
+  {"id":"mu-rin-josquin-des-prez","title":"Josquin des Prez — il Beethoven del Rinascimento","year":1480,"lat":50.43,"lng":3.96,"category":"musica","description":"Josquin des Prez (1450-1521), compositore fiammingo, è il musicista più celebre del Rinascimento — il primo artista a essere chiamato 'divino' in vita. Lavora per Sforza a Milano, per Innocenzo VIII e Alessandro VI a Roma, per Luigi XII a Parigi e per Ercole I d'Este a Ferrara. Le sue messe, i mottetti e le chansons polfoniche raggiungono una perfezione tecnica ed espressiva ineguagliata: Martin Lutero lo chiama 'maestro delle note' e Castiglione lo cita nel Cortegiano come modello dell'artista perfetto. Stampa la sua musica su tutta Europa grazie a Petrucci.","wikipediaSlug":"Josquin_des_Prez","isCosmic":false},
+
+  {"id":"mu-rin-camerata-fiorentina","title":"la Camerata Fiorentina — l'Invenzione dell'Opera","year":1580,"lat":43.77,"lng":11.26,"category":"musica","description":"Nella Firenze medicea degli anni 1570-1600, un gruppo di intellettuali, musicisti e nobili si riunisce a casa del conte Giovanni de' Bardi: la Camerata Fiorentina. Obiettivo: riscoprire la musica greca antica e creare un nuovo tipo di canto drammatico — la monodia accompagnata — dove la voce solista esprime le emozioni del testo. Da queste riunioni nascono le prime opere della storia: Dafne (1598) e L'Euridice (1600) di Jacopo Peri. La Camerata è il gruppo di avanguardia più influente della storia della musica occidentale.","wikipediaSlug":"Florentine_Camerata","isCosmic":false},
+
+  {"id":"mu-rin-william-byrd","title":"William Byrd — il Padre della Musica Inglese","year":1575,"lat":51.51,"lng":-0.13,"category":"musica","description":"William Byrd (1543-1623) è il più grande compositore inglese del Rinascimento: cattolico praticante in un'Inghilterra anglicana che perseguita i papisti, compone in segreto musica per la Messa cattolica ma ottiene ugualmente il monopolio regio della stampa musicale da Elisabetta I. Il suo Psalmes, Songs and Sonnets (1611) è la prima antologia di musica da camera in inglese. Byrd crea il genere del voluntary d'organo e delle variazioni per virginale — strumento prediletto della corte elisabettiana. La sua dualità religiosa e artistica incarna la tensione dell'era.","wikipediaSlug":"William_Byrd","isCosmic":false},
+
+  {"id":"mu-rin-orlando-di-lasso","title":"Orlando di Lasso — il Musicista più Famoso del Mondo nel 1570","year":1560,"lat":48.14,"lng":11.58,"category":"musica","description":"Orlando di Lasso (1532-1594), compositore fiammingo alla corte dei Wittelsbach di Monaco, è il musicista più prolifico e celebre del suo tempo: 2.000 composizioni in tutti i generi — messe, mottetti, madrigali, chanson, lieder tedeschi. Padroneggia tutte le tradizioni musicali europee con uguale maestria. L'imperatore Massimiliano II lo anobilisce nel 1570. Contemporaneo di Palestrina, rappresenta la tradizione fiammingo-internazionale contro il purismo romano di Palestrina: il dibattito tra i due definisce il suono della musica sacra della Controriforma.","wikipediaSlug":"Orlando_di_Lasso","isCosmic":false},
+
+  {"id":"mu-rin-gesualdo-madrigali","title":"Carlo Gesualdo — il Compositore Assassino e i Madrigali Cromatici","year":1594,"lat":40.91,"lng":15.07,"category":"musica","description":"Carlo Gesualdo, Principe di Venosa (1566-1613), è il personaggio più scandaloso della musica rinascimentale: nel 1590 uccide di persona la moglie adultera e l'amante, sfuggendo alla giustizia grazie al rango principesco. Ma è anche il compositore più ardito del suo tempo: i Madrigali (Libri V e VI, 1611) usano cromatismi dissonanti così estremi che non verranno raggiunti di nuovo fino a Wagner 250 anni dopo. La psicologia tormentata dell'assassino-compositore ispira Stravinsky, Huxley e un'opera di Alfred Schnittke.","wikipediaSlug":"Carlo_Gesualdo","isCosmic":false},
+
+  {"id":"mu-rin-victoria-musica-sacra","title":"Tomás Luis de Victoria — la Polifonia Sacra della Spagna Imperiale","year":1572,"lat":40.42,"lng":-3.70,"category":"musica","description":"Tomás Luis de Victoria (1548-1611), sacerdote spagnolo che studia a Roma con Palestrina, è il massimo rappresentante della polifonia sacra spagnola — considerato da molti pari o superiore a Palestrina stesso. Le sue messe, mottetti e il celebre Officium Defunctorum (1605, composto per l'imperatrice Maria d'Austria) sono tra le opere più toccanti della musica rinascimentale. Victoria non compone mai musica profana: tutta la sua arte è al servizio esclusivo della liturgia. Capellano delle Descalzas Reales di Madrid — convento dove sono seppellite le regine spagnole.","wikipediaSlug":"Tomás_Luis_de_Victoria","isCosmic":false},
+
+  {"id":"mu-rin-liuto-rinascimentale","title":"il Liuto — lo Strumento Simbolo del Rinascimento","year":1490,"lat":45.46,"lng":12.34,"category":"musica","description":"Il liuto (dall'arabo al-oud) diventa nel Rinascimento lo strumento più amato nelle corti europee: piccolo, portatile, capace di melodia, armonia e basso in un solo strumento. I liutai veneziani, cremonesi e bolognesi producono strumenti preziosi che vengono trattati come gioielli. La letteratura per liuto è vastissima: fantasie, danze (pavane, gagliarde), trascrizioni di mottetti. Francesco da Milano, soprannominato 'il Divino', è il primo virtuoso del liuto a diventare una stella internazionale. Il liuto è il progenitore diretto della chitarra moderna.","wikipediaSlug":"Lute","isCosmic":false},
+
+  {"id":"mu-rin-ballet-de-cour","title":"il Ballet de Cour — la Danza come Politica alla Corte Francese","year":1581,"lat":48.86,"lng":2.35,"category":"musica","description":"Il Ballet Comique de la Reine (1581), commissionato dalla regina Caterina de' Medici, è il primo spettacolo musicale-coreografico documentato della storia: cinque ore di musica, danza, canto e scenografia per celebrare il matrimonio del Duca di Joyeuse. Il ballet de cour — genere cortigiano francese che combina danza, musica vocale e strumentale — è il precursore del balletto classico e del teatro musicale moderno. Luigi XIV, appassionato danzatore, lo porterà al suo apogeo un secolo dopo con Lully.","wikipediaSlug":"Ballet_comique_de_la_reine","isCosmic":false},
+
+];
+
+const existingIds = new Set(existing.map(function(e) { return e.id; }));
+const toAdd = newEvents.filter(function(e) {
+  if (existingIds.has(e.id)) { console.log('Skip: ' + e.id); return false; }
+  return true;
+});
+const merged = existing.concat(toAdd);
+fs.writeFileSync(eventsPath, JSON.stringify(merged, null, 2), 'utf8');
+console.log('Added ' + toAdd.length + ' eventi. Total: ' + merged.length);
