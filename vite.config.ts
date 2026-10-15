@@ -18,6 +18,12 @@ export default defineConfig({
         secure: false,
         rewrite: (path) => path.replace(/^\/awmc/, '/tiles'),
       },
+      '/gplates': {
+        target: 'https://gws.gplates.org',
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/gplates/, '/reconstruct/static_polygons'),
+      },
     },
   },
 });

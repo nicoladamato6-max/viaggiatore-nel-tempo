@@ -426,17 +426,16 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
       return;
     }
 
-    // Converti in Ma, arrotonda a 5 Ma, clamp al limite del modello GPlates
+    // Converti in Ma, arrotonda a 5 Ma, clamp a 500 (MULLER2019 è affidabile fino a 500 Ma)
     const rawMa = Math.abs(currentYear) / 1_000_000;
-    const Ma    = Math.min(Math.round(rawMa / 5) * 5 || 5, 540);
+    const Ma    = Math.min(Math.round(rawMa / 5) * 5 || 5, 500);
 
+    // Applica GeoJSON: prima aggiunge il nuovo layer, POI rimuove il vecchio
+    // → nessun flash di "globo moderno" durante la transizione tra epoche
     async function applyGplates(data: object) {
       if (!viewerRef.current || viewerRef.current.isDestroyed()) return;
       const v = viewerRef.current;
-      if (gplatesDSRef.current) {
-        v.dataSources.remove(gplatesDSRef.current, true);
-        gplatesDSRef.current = null;
-      }
+      const prevDS = gplatesDSRef.current;
       try {
         const ds = await Cesium.GeoJsonDataSource.load(data, {
           fill:        new Cesium.Color(0.30, 0.52, 0.22, 0.82),
@@ -447,34 +446,39 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
         if (v.isDestroyed()) return;
         await v.dataSources.add(ds);
         gplatesDSRef.current = ds;
+        if (prevDS) v.dataSources.remove(prevDS, true);
       } catch { /* silenzio */ }
     }
 
-    // Abort eventuale fetch precedente prima di cache o nuovo fetch
+    // Abort eventuale fetch precedente
     gplatesAbortRef.current?.abort();
 
+    // Cache hit → applica immediatamente
     const cached = gplatesCacheRef.current.get(Ma);
     if (cached) {
       applyGplates(cached);
       return;
     }
 
+    // Fetch live: debounce 600ms per non saturare l'API mentre si trascina
     const abort = new AbortController();
     gplatesAbortRef.current = abort;
 
-    fetch(
-      `https://gws.gplates.org/reconstruct/static_polygons/?time=${Ma}&model=ZAHIROVIC2022`,
-      { signal: abort.signal },
-    )
-      .then(r => r.json())
-      .then((data: object) => {
-        if (abort.signal.aborted || !viewerRef.current) return;
-        gplatesCacheRef.current.set(Ma, data);
-        applyGplates(data);
-      })
-      .catch(() => { /* abort o rete — silenzio */ });
+    const debounce = setTimeout(() => {
+      fetch(
+        `/gplates/?time=${Ma}&model=MULLER2019`,
+        { signal: abort.signal },
+      )
+        .then(r => r.json())
+        .then((data: object) => {
+          if (abort.signal.aborted || !viewerRef.current) return;
+          gplatesCacheRef.current.set(Ma, data);
+          applyGplates(data);
+        })
+        .catch(() => { /* abort o rete — silenzio */ });
+    }, 600);
 
-    return () => abort.abort();
+    return () => { clearTimeout(debounce); abort.abort(); };
   }, [currentYear, isCosmicView]);
 
   // ── Aggiorna pin eventi storici ──────────────────────────────────────────
