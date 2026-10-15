@@ -426,7 +426,7 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
       return;
     }
 
-    // Converti in Ma, arrotonda a 5 Ma, clamp a 540 (limite del modello PALEOMAP)
+    // Converti in Ma, arrotonda a 5 Ma, clamp a 540 (MERDITH2021 copre 0–1000 Ma)
     const rawMa = Math.abs(currentYear) / 1_000_000;
     const Ma    = Math.min(Math.round(rawMa / 5) * 5 || 5, 540);
 
@@ -466,7 +466,7 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
 
     const debounce = setTimeout(() => {
       fetch(
-        `/gplates/?time=${Ma}&model=PALEOMAP`,
+        `/gplates/?time=${Ma}&model=MERDITH2021`,
         { signal: abort.signal },
       )
         .then(r => r.json())

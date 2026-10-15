@@ -2063,5 +2063,29 @@
     "wikipediaSlug": "Harp",
     "isCosmic": false,
     "tipo": "opera"
+  },
+  {
+    "id": "wd-Q180548",
+    "title": "Rivoluzione neolitica",
+    "description": "fondamentale tappa di transizione dell'evoluzione sociale umana",
+    "year": -9000,
+    "lat": 36,
+    "lng": 40,
+    "category": "storia",
+    "tipo": "evento",
+    "wikipediaSlug": null,
+    "isCosmic": false
+  },
+  {
+    "id": "wd-Q268620",
+    "title": "Tiu",
+    "description": "ancient Egyptian pharaoh",
+    "year": -4000,
+    "lat": null,
+    "lng": null,
+    "category": "storia",
+    "tipo": "persona",
+    "wikipediaSlug": null,
+    "isCosmic": false
   }
 ]
