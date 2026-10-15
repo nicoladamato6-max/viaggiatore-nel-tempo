@@ -3,7 +3,7 @@
 // Cache 30 giorni: i dati paleografici sono statici per definizione.
 export const onRequest: (ctx: { request: Request }) => Promise<Response> = async ({ request }) => {
   const incoming = new URL(request.url);
-  const upstream = `https://gws.gplates.org/reconstruct/static_polygons/${incoming.search}`;
+  const upstream = `https://gws.gplates.org/reconstruct/coastlines/${incoming.search}`;
 
   try {
     const res = await fetch(upstream, {

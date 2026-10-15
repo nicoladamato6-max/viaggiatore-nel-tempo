@@ -22,7 +22,7 @@ export default defineConfig({
         target: 'https://gws.gplates.org',
         changeOrigin: true,
         secure: true,
-        rewrite: (path) => path.replace(/^\/gplates/, '/reconstruct/static_polygons'),
+        rewrite: (path) => path.replace(/^\/gplates/, '/reconstruct/coastlines'),
       },
     },
   },
