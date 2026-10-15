@@ -10,4 +10,14 @@ export default defineConfig({
   define: {
     CESIUM_BASE_URL: JSON.stringify('/cesium/'),
   },
+  server: {
+    proxy: {
+      '/awmc': {
+        target: 'https://cawm.lib.uiowa.edu',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/awmc/, '/tiles'),
+      },
+    },
+  },
 });

@@ -86,8 +86,9 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
   const hudAltRef    = useRef<HTMLSpanElement>(null);
   const hudCoordsRef = useRef<HTMLSpanElement>(null);
   const isCosmicRef  = useRef(isCosmicView);
-  // Paleogeografia — Livello 1 GPlates + Livello 2 AWMC
-  const awmcLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
+  // Paleogeografia — Livello 1 GPlates + Livello 2 CAWM (globale) + DARE (dettaglio Med.)
+  const cawmLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
+  const dareLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
   const gplatesDSRef    = useRef<Cesium.GeoJsonDataSource | null>(null);
   const gplatesCacheRef = useRef<Map<number, object>>(new Map());
   const gplatesAbortRef = useRef<AbortController | null>(null);
@@ -288,20 +289,31 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
     // DEBUG SOLO IN DEV — rimossa in produzione automaticamente da Vite
     if (import.meta.env.DEV) (window as unknown as Record<string, unknown>).__cesiumViewer = viewer;
 
-    // ── Livello 2: AWMC tiles per il periodo antico (attivato/disattivato in useEffect separato) ──
-    // Tile antichità: Gothenburg University "Imperium Romanum" (strade romane, città antiche)
-    // DARE — Digital Atlas of the Roman Empire (Lund University, CC BY)
+    // ── Livello 2a: CAWM — mappa globale mondo antico (via proxy /awmc → Iowa) ──
+    // Classical and Medieval World Map, University of Iowa. Nessun CORS nativo → proxy CF Pages.
+    // Copertura globale z=1-7, visualizza tutto il Vecchio Mondo con nomi latini.
+    const cawmProvider = new Cesium.UrlTemplateImageryProvider({
+      url: '/awmc/{z}/{x}/{y}.png',
+      credit: '© CAWM — Classical and Medieval World Map, University of Iowa',
+      minimumLevel: 1,
+      maximumLevel: 7,
+    });
+    const cawmLayer = viewer.imageryLayers.addImageryProvider(cawmProvider);
+    cawmLayer.show = false;
+    cawmLayerRef.current = cawmLayer;
+
+    // ── Livello 2b: DARE — Impero Romano (dettaglio solo Mediterraneo, si sovrappone a CAWM) ──
     // CORS: Access-Control-Allow-Origin: * confermato. Tile z<3 ritornano 404
     // senza CORS header → minimumLevel:3 previene le richieste a zoom globale.
-    const awmcProvider = new Cesium.UrlTemplateImageryProvider({
+    const dareProvider = new Cesium.UrlTemplateImageryProvider({
       url: 'https://dh.gu.se/tiles/imperium/{z}/{x}/{y}.png',
       credit: '© DARE — Digital Atlas of the Roman Empire, Lund University (CC BY)',
       minimumLevel: 3,
       maximumLevel: 11,
     });
-    const awmcLayer = viewer.imageryLayers.addImageryProvider(awmcProvider);
-    awmcLayer.show = false;
-    awmcLayerRef.current = awmcLayer;
+    const dareLayer = viewer.imageryLayers.addImageryProvider(dareProvider);
+    dareLayer.show = false;
+    dareLayerRef.current = dareLayer;
 
     // ── Navigation HUD: aggiorna altitudine e coordinate ogni frame via DOM diretto ──
     viewer.scene.postRender.addEventListener(() => {
@@ -387,8 +399,9 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
       handler.destroy();
       viewer.destroy();
       viewerRef.current = null;
-      pinsRef.current   = null;
-      awmcLayerRef.current  = null;
+      pinsRef.current       = null;
+      cawmLayerRef.current  = null;
+      dareLayerRef.current  = null;
       gplatesDSRef.current  = null;
     };
   }, []);
@@ -398,10 +411,10 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
     const viewer = viewerRef.current;
     if (!viewer || viewer.isDestroyed()) return;
 
-    // Livello 2: AWMC tiles per il periodo greco-romano (600 a.C. – 400 d.C.)
-    if (awmcLayerRef.current) {
-      awmcLayerRef.current.show = currentYear >= -600 && currentYear <= 400 && !isCosmicView;
-    }
+    // Livello 2: CAWM (base globale) + DARE (dettaglio Mediterraneo) per il periodo greco-romano
+    const showAntique = currentYear >= -600 && currentYear <= 400 && !isCosmicView;
+    if (cawmLayerRef.current) cawmLayerRef.current.show = showAntique;
+    if (dareLayerRef.current) dareLayerRef.current.show = showAntique;
 
     // Livello 1: GPlates paleogeografia — fuori range: rimuovi e basta
     if (currentYear > -1_000_000 || isCosmicView) {
