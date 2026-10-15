@@ -426,9 +426,9 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
       return;
     }
 
-    // Converti in Ma, arrotonda a 5 Ma, clamp a 500 (MULLER2019 è affidabile fino a 500 Ma)
+    // Converti in Ma, arrotonda a 5 Ma, clamp a 540 (limite del modello PALEOMAP)
     const rawMa = Math.abs(currentYear) / 1_000_000;
-    const Ma    = Math.min(Math.round(rawMa / 5) * 5 || 5, 500);
+    const Ma    = Math.min(Math.round(rawMa / 5) * 5 || 5, 540);
 
     // Applica GeoJSON: prima aggiunge il nuovo layer, POI rimuove il vecchio
     // → nessun flash di "globo moderno" durante la transizione tra epoche
@@ -466,7 +466,7 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
 
     const debounce = setTimeout(() => {
       fetch(
-        `/gplates/?time=${Ma}&model=MULLER2019`,
+        `/gplates/?time=${Ma}&model=PALEOMAP`,
         { signal: abort.signal },
       )
         .then(r => r.json())
