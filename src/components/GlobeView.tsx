@@ -10,6 +10,32 @@ import { type Locale } from '../types';
 // Nessun token Ion richiesto: zero costi di licenza Cesium Ion per uso commerciale.
 const MAPTILER_KEY: string = import.meta.env.VITE_MAPTILER_KEY ?? '';
 
+// ── Navigation HUD — formattatori puri (module-level) ───────────────────────
+
+function fmtAlt(m: number): string {
+  if (m >= 1.496e11) return `${(m / 1.496e11).toFixed(2)} UA`;
+  if (m >= 1_000_000) return `${Math.round(m / 1_000).toLocaleString('it-IT')} km`;
+  if (m >= 1_000)     return `${(m / 1_000).toFixed(1)} km`;
+  return `${Math.round(m)} m`;
+}
+
+function fmtDMS(deg: number, pos: string, neg: string): string {
+  const a = Math.abs(deg);
+  const d = Math.floor(a);
+  const mf = (a - d) * 60;
+  const mi = Math.floor(mf);
+  const s  = Math.round((mf - mi) * 60);
+  return `${d}°${String(mi).padStart(2, '0')}'${String(s).padStart(2, '0')}" ${deg >= 0 ? pos : neg}`;
+}
+
+function fmtYearHUD(year: number): string {
+  if (Math.abs(year) >= 1_000_000_000) return `${(Math.abs(year) / 1e9).toFixed(1)} Mld a.C.`;
+  if (Math.abs(year) >= 1_000_000)     return `${(Math.abs(year) / 1e6).toFixed(0)} Mln a.C.`;
+  if (year < 0)   return `${Math.abs(year).toLocaleString('it-IT')} a.C.`;
+  if (year === 0) return 'Anno 0';
+  return `${year.toLocaleString('it-IT')} d.C.`;
+}
+
 const SUN_RADIUS = 696_000_000;
 const SUN_DIST   = 149_600_000_000;
 
@@ -56,10 +82,15 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
   const currentYearRef   = useRef(currentYear);
   const eventsRef  = useRef(events);
   const onClickRef = useRef(onEventClick);
+  // HUD: ref per aggiornamento DOM diretto (evita React re-render a 60fps)
+  const hudAltRef    = useRef<HTMLSpanElement>(null);
+  const hudCoordsRef = useRef<HTMLSpanElement>(null);
+  const isCosmicRef  = useRef(isCosmicView);
 
   eventsRef.current      = events;
   onClickRef.current     = onEventClick;
   currentYearRef.current = currentYear;
+  isCosmicRef.current    = isCosmicView;
 
   // ── Inizializzazione viewer (una volta sola) ──────────────────────────────
   useEffect(() => {
@@ -251,6 +282,18 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
     viewerRef.current = viewer;
     // DEBUG SOLO IN DEV — rimossa in produzione automaticamente da Vite
     if (import.meta.env.DEV) (window as unknown as Record<string, unknown>).__cesiumViewer = viewer;
+
+    // ── Navigation HUD: aggiorna altitudine e coordinate ogni frame via DOM diretto ──
+    viewer.scene.postRender.addEventListener(() => {
+      if (viewer.isDestroyed()) return;
+      const pos = viewer.camera.positionCartographic;
+      if (hudAltRef.current) hudAltRef.current.textContent = fmtAlt(pos.height);
+      if (hudCoordsRef.current) {
+        hudCoordsRef.current.textContent = isCosmicRef.current
+          ? '⊙ Sistema Solare'
+          : `${fmtDMS(Cesium.Math.toDegrees(pos.latitude), 'N', 'S')}  ${fmtDMS(Cesium.Math.toDegrees(pos.longitude), 'E', 'O')}`;
+      }
+    });
 
     // ── Gestione rotazione dispositivo (portrait↔landscape) ─────────────────
     // ── Gestione rotazione dispositivo (portrait↔landscape) ─────────────────
@@ -596,6 +639,20 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
       <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
       {isCosmicView && <CosmicOverlay events={events} onEventClick={onEventClick} />}
+      <div className="globe-hud" aria-hidden="true">
+        <div className="globe-hud__row">
+          <span className="globe-hud__lbl">ALT</span>
+          <span className="globe-hud__val" ref={hudAltRef}>—</span>
+        </div>
+        <div className="globe-hud__row">
+          <span className="globe-hud__lbl">POS</span>
+          <span className="globe-hud__val globe-hud__coords" ref={hudCoordsRef}>—</span>
+        </div>
+        <div className="globe-hud__row">
+          <span className="globe-hud__lbl">ERA</span>
+          <span className="globe-hud__val globe-hud__year">{fmtYearHUD(currentYear)}</span>
+        </div>
+      </div>
     </div>
   );
 }
