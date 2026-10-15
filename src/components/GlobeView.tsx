@@ -86,6 +86,11 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
   const hudAltRef    = useRef<HTMLSpanElement>(null);
   const hudCoordsRef = useRef<HTMLSpanElement>(null);
   const isCosmicRef  = useRef(isCosmicView);
+  // Paleogeografia — Livello 1 GPlates + Livello 2 AWMC
+  const awmcLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
+  const gplatesDSRef    = useRef<Cesium.GeoJsonDataSource | null>(null);
+  const gplatesCacheRef = useRef<Map<number, object>>(new Map());
+  const gplatesAbortRef = useRef<AbortController | null>(null);
 
   eventsRef.current      = events;
   onClickRef.current     = onEventClick;
@@ -283,6 +288,19 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
     // DEBUG SOLO IN DEV — rimossa in produzione automaticamente da Vite
     if (import.meta.env.DEV) (window as unknown as Record<string, unknown>).__cesiumViewer = viewer;
 
+    // ── Livello 2: AWMC tiles per il periodo antico (attivato/disattivato in useEffect separato) ──
+    // Tile antichità: Gothenburg University "Imperium Romanum" (strade romane, città antiche)
+    // Fallback: se le tile non caricano Cesium mostra Esri satellite sotto (layer0)
+    const awmcProvider = new Cesium.UrlTemplateImageryProvider({
+      // URL relativo → Vite proxy in dev, CF Pages Function in prod (risolve CORS)
+      url: '/tiles/imperium/{z}/{x}/{y}.png',
+      credit: '© Digital Humanities, University of Gothenburg',
+      maximumLevel: 10,
+    });
+    const awmcLayer = viewer.imageryLayers.addImageryProvider(awmcProvider);
+    awmcLayer.show = false;
+    awmcLayerRef.current = awmcLayer;
+
     // ── Navigation HUD: aggiorna altitudine e coordinate ogni frame via DOM diretto ──
     viewer.scene.postRender.addEventListener(() => {
       if (viewer.isDestroyed()) return;
@@ -368,8 +386,81 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
       viewer.destroy();
       viewerRef.current = null;
       pinsRef.current   = null;
+      awmcLayerRef.current  = null;
+      gplatesDSRef.current  = null;
     };
   }, []);
+
+  // ── Livello 1 & 2: cambio layer in base all'anno corrente ───────────────
+  useEffect(() => {
+    const viewer = viewerRef.current;
+    if (!viewer || viewer.isDestroyed()) return;
+
+    // Livello 2: AWMC tiles per il periodo greco-romano (600 a.C. – 400 d.C.)
+    if (awmcLayerRef.current) {
+      awmcLayerRef.current.show = currentYear >= -600 && currentYear <= 400 && !isCosmicView;
+    }
+
+    // Livello 1: GPlates paleogeografia — fuori range: rimuovi e basta
+    if (currentYear > -1_000_000 || isCosmicView) {
+      gplatesAbortRef.current?.abort();
+      if (gplatesDSRef.current) {
+        viewer.dataSources.remove(gplatesDSRef.current, true);
+        gplatesDSRef.current = null;
+      }
+      return;
+    }
+
+    // Converti in Ma, arrotonda a 5 Ma, clamp al limite del modello GPlates
+    const rawMa = Math.abs(currentYear) / 1_000_000;
+    const Ma    = Math.min(Math.round(rawMa / 5) * 5 || 5, 540);
+
+    async function applyGplates(data: object) {
+      if (!viewerRef.current || viewerRef.current.isDestroyed()) return;
+      const v = viewerRef.current;
+      if (gplatesDSRef.current) {
+        v.dataSources.remove(gplatesDSRef.current, true);
+        gplatesDSRef.current = null;
+      }
+      try {
+        const ds = await Cesium.GeoJsonDataSource.load(data, {
+          fill:        new Cesium.Color(0.30, 0.52, 0.22, 0.82),
+          stroke:      Cesium.Color.fromCssColorString('#a8dd80'),
+          strokeWidth: 0.8,
+          clampToGround: false,
+        });
+        if (v.isDestroyed()) return;
+        await v.dataSources.add(ds);
+        gplatesDSRef.current = ds;
+      } catch { /* silenzio */ }
+    }
+
+    // Abort eventuale fetch precedente prima di cache o nuovo fetch
+    gplatesAbortRef.current?.abort();
+
+    const cached = gplatesCacheRef.current.get(Ma);
+    if (cached) {
+      applyGplates(cached);
+      return;
+    }
+
+    const abort = new AbortController();
+    gplatesAbortRef.current = abort;
+
+    fetch(
+      `https://gws.gplates.org/reconstruct/static_polygons/?time=${Ma}&model=ZAHIROVIC2022`,
+      { signal: abort.signal },
+    )
+      .then(r => r.json())
+      .then((data: object) => {
+        if (abort.signal.aborted || !viewerRef.current) return;
+        gplatesCacheRef.current.set(Ma, data);
+        applyGplates(data);
+      })
+      .catch(() => { /* abort o rete — silenzio */ });
+
+    return () => abort.abort();
+  }, [currentYear, isCosmicView]);
 
   // ── Aggiorna pin eventi storici ──────────────────────────────────────────
   // removeAll() su PointPrimitiveCollection è molto più veloce di N × removeById() su Entity
