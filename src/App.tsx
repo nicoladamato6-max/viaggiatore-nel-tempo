@@ -8,12 +8,37 @@ import { TimeMachine } from './components/TimeMachine';
 import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { AuthProvider, useAuth } from './hooks/useAuth';
-import eventsData from './data/events.json';
 import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 import { MACRO_ERAS, SUBCATEGORIES, type Period } from './data/historicalPeriods';
 
-const STATIC_EVENTS = eventsData as HistoricalEvent[];
+// ── Opzione C: chunk per era, import dinamici ─────────────────────────────────
+const ERA_KEYS = ['cosmo', 'preistoria', 'antica', 'medioevo', 'moderna', 'ottocento', 'novecento', 'contemporanea', 'senza_anno'] as const;
+type EraKey = typeof ERA_KEYS[number];
+
+function getEraKey(year: number | null, isCosmic: boolean): EraKey {
+  if (isCosmic) return 'cosmo';
+  if (year == null) return 'senza_anno';
+  if (year < -3_500)  return 'preistoria';
+  if (year < 476)     return 'antica';
+  if (year < 1492)    return 'medioevo';
+  if (year < 1789)    return 'moderna';
+  if (year < 1914)    return 'ottocento';
+  if (year < 1945)    return 'novecento';
+  return 'contemporanea';
+}
+
+const ERA_IMPORTS: Record<EraKey, () => Promise<{ default: unknown[] }>> = {
+  cosmo:         () => import('./data/chunks/era-cosmo.json'),
+  preistoria:    () => import('./data/chunks/era-preistoria.json'),
+  antica:        () => import('./data/chunks/era-antica.json'),
+  medioevo:      () => import('./data/chunks/era-medioevo.json'),
+  moderna:       () => import('./data/chunks/era-moderna.json'),
+  ottocento:     () => import('./data/chunks/era-ottocento.json'),
+  novecento:     () => import('./data/chunks/era-novecento.json'),
+  contemporanea: () => import('./data/chunks/era-contemporanea.json'),
+  senza_anno:    () => import('./data/chunks/era-senza_anno.json'),
+};
 
 // Voci cercabili per Luna, Sole e tutti i pianeti
 const MOON_SEARCH: HistoricalEvent = {
@@ -130,7 +155,48 @@ function AppInner() {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [adminOpen, setAdminOpen] = useState(false);
 
-  // Dynamic events: static baseline + Wikidata enrichment
+  // Slider e anno — dichiarati prima del chunk loading (currentEraKey li usa)
+  const [sliderValue, setSliderValue] = useState(yearToSlider(-753));
+  const [overrideYear, setOverrideYear] = useState<number | null>(null);
+
+  // ── Chunk loading (Opzione C) ───────────────────────────────────────────────
+  const chunkCacheRef = useRef<Map<EraKey, HistoricalEvent[]>>(new Map());
+  const [loadedChunks, setLoadedChunks] = useState<Map<EraKey, HistoricalEvent[]>>(new Map());
+
+  const currentEraKey = useMemo(() => {
+    const yr = overrideYear !== null ? overrideYear : sliderToYear(sliderValue);
+    return getEraKey(yr, yr < -4_500_000_000);
+  }, [sliderValue, overrideYear]);
+
+  useEffect(() => {
+    if (chunkCacheRef.current.has(currentEraKey)) return;
+    ERA_IMPORTS[currentEraKey]().then(mod => {
+      const data = mod.default as HistoricalEvent[];
+      chunkCacheRef.current.set(currentEraKey, data);
+      setLoadedChunks(new Map(chunkCacheRef.current));
+    });
+  }, [currentEraKey]);
+
+  // Pre-carica tutti gli altri chunk in background (priorità bassa)
+  useEffect(() => {
+    const remaining = ERA_KEYS.filter(k => !chunkCacheRef.current.has(k) && k !== currentEraKey);
+    let i = 0;
+    let timer: ReturnType<typeof setTimeout>;
+    function loadNext() {
+      if (i >= remaining.length) return;
+      const key = remaining[i++];
+      if (chunkCacheRef.current.has(key)) { loadNext(); return; }
+      ERA_IMPORTS[key]().then(mod => {
+        chunkCacheRef.current.set(key, mod.default as HistoricalEvent[]);
+        setLoadedChunks(new Map(chunkCacheRef.current));
+        timer = setTimeout(loadNext, 400);
+      });
+    }
+    const start = setTimeout(loadNext, 3000);
+    return () => { clearTimeout(start); clearTimeout(timer); };
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Evento Wikidata (enrich API)
   const [wikidataEvents, setWikidataEvents] = useState<HistoricalEvent[]>([]);
 
   useEffect(() => {
@@ -138,27 +204,33 @@ function AppInner() {
       .then(r => r.json())
       .then((d: { events?: HistoricalEvent[] }) => {
         if (d.events && d.events.length > 0) {
-          const staticIds = new Set(STATIC_EVENTS.map(e => e.id));
-          setWikidataEvents(d.events.filter(e => !staticIds.has(e.id)));
+          const allIds = new Set<string>();
+          chunkCacheRef.current.forEach(chunk => chunk.forEach(e => allIds.add(e.id)));
+          setWikidataEvents(d.events.filter(e => !allIds.has(e.id)));
         }
       })
-      .catch(() => { /* API not available, static only */ });
+      .catch(() => { /* API not available */ });
   }, []);
+
+  // Tutti gli eventi statici = unione dei chunk caricati
+  const staticEvents = useMemo(() => {
+    const all: HistoricalEvent[] = [];
+    loadedChunks.forEach(chunk => all.push(...chunk));
+    return all;
+  }, [loadedChunks]);
 
   const staticBreakdown = useMemo(() => {
     const counts: Record<string, number> = {};
-    for (const e of STATIC_EVENTS) counts[e.category] = (counts[e.category] ?? 0) + 1;
+    for (const e of staticEvents) counts[e.category] = (counts[e.category] ?? 0) + 1;
     return counts;
-  }, []);
+  }, [staticEvents]);
 
-  const ALL_EVENTS     = useMemo(() => [...STATIC_EVENTS, ...wikidataEvents], [wikidataEvents]);
+  const ALL_EVENTS     = useMemo(() => [...staticEvents, ...wikidataEvents], [staticEvents, wikidataEvents]);
   const ALL_SEARCHABLE = useMemo(() => [
     ...ALL_EVENTS, MOON_SEARCH, SUN_SEARCH,
     ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS,
   ], [ALL_EVENTS]);
 
-  const [sliderValue, setSliderValue]     = useState(yearToSlider(-753));
-  const [overrideYear, setOverrideYear]   = useState<number | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<HistoricalEvent | null>(null);
   const [mobileGlobeH, setMobileGlobeH] = useState(40); // vh
   const splitDragRef = useRef<{ startY: number; startH: number } | null>(null);
@@ -499,11 +571,11 @@ function AppInner() {
             locale={locale}
             open={adminOpen}
             setOpen={setAdminOpen}
-            staticCount={STATIC_EVENTS.length}
+            staticCount={staticEvents.length}
             staticBreakdown={staticBreakdown}
             wikidataCount={wikidataEvents.length}
             onEventsRefreshed={(evs) => {
-              const staticIds = new Set(STATIC_EVENTS.map(e => e.id));
+              const staticIds = new Set(staticEvents.map(e => e.id));
               setWikidataEvents((evs as HistoricalEvent[]).filter(e => !staticIds.has(e.id)));
             }}
           />

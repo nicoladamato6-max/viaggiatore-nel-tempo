@@ -1,0 +1,153 @@
+[
+  {
+    "id": "prime-stelle",
+    "title": "Formazione delle prime stelle",
+    "year": -13200000000,
+    "category": "cosmo",
+    "description": "Circa 600 milioni di anni dopo il Big Bang, si formano le prime stelle dell'universo, giganti azzurre che bruciano idrogeno ed elio.",
+    "wikipediaSlug": "Stellar_evolution",
+    "isCosmic": true,
+    "tipo": "evento"
+  },
+  {
+    "id": "via-lattea",
+    "title": "Formazione della Via Lattea",
+    "year": -13000000000,
+    "category": "cosmo",
+    "description": "La nostra galassia inizia a formarsi dall'aggregazione di gas, polvere e le prime stelle. Conterrà infine oltre 200 miliardi di stelle.",
+    "wikipediaSlug": "Milky_Way",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/ESO-VLT-Laser-phot-0a-99.jpg/320px-ESO-VLT-Laser-phot-0a-99.jpg",
+    "isCosmic": true,
+    "tipo": "evento"
+  },
+  {
+    "id": "sistema-solare",
+    "title": "Formazione del Sistema Solare",
+    "year": -4600000000,
+    "category": "cosmo",
+    "description": "Una nube di gas e polvere inizia a collassare per gravità, formando il Sole e i pianeti del Sistema Solare.",
+    "wikipediaSlug": "Solar_System",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Planets2013.svg/320px-Planets2013.svg.png",
+    "isCosmic": true,
+    "tipo": "evento"
+  },
+  {
+    "id": "formazione-luna",
+    "title": "Formazione della Luna",
+    "year": -4500000000,
+    "category": "cosmo",
+    "description": "Un corpo delle dimensioni di Marte (Theia) colpisce la giovane Terra. I detriti si aggregano in orbita formando la Luna.",
+    "wikipediaSlug": "Giant-impact_hypothesis",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/240px-FullMoon2010.jpg",
+    "isCosmic": true,
+    "tipo": "evento"
+  },
+  {
+    "id": "big-bang-origine",
+    "title": "Il Big Bang — L'Origine dell'Universo",
+    "year": -13800000000,
+    "lat": 0,
+    "lng": 0,
+    "category": "geologia",
+    "description": "13,8 miliardi di anni fa l'Universo nasce da una singolarità di densità e temperatura infinite — il Big Bang. In meno di un secondo si formano protoni, neutroni ed elettroni. In 380.000 anni l'Universo si raffredda abbastanza da permettere agli atomi di formarsi e alla luce di viaggiare liberamente. La radiazione cosmica di fondo microonde rilevata nel 1965 è l'eco di questo momento.",
+    "wikipediaSlug": "Big_Bang",
+    "isCosmic": true,
+    "tipo": "evento"
+  },
+  {
+    "id": "via-lattea-formazione",
+    "title": "La Via Lattea — Nasce la Nostra Galassia",
+    "year": -13200000000,
+    "lat": -29.0078,
+    "lng": -70.7114,
+    "category": "geologia",
+    "description": "La Via Lattea si forma circa 13,2 miliardi di anni fa dall'aggregazione gravitazionale di gas, polveri e materia oscura. Il nucleo galattico si consolida per primo, poi il disco si struttura lentamente. La nostra galassia contiene 200-400 miliardi di stelle. La stazione di La Silla (Cile) è uno dei migliori osservatori per studiarla dall'emisfero australe.",
+    "wikipediaSlug": "Milky_Way",
+    "isCosmic": true,
+    "tipo": "evento"
+  },
+  {
+    "id": "sole-formazione",
+    "title": "Il Sole — Nasce la Nostra Stella",
+    "year": -4600000000,
+    "lat": 24.7136,
+    "lng": 46.6753,
+    "category": "geologia",
+    "description": "4,6 miliardi di anni fa una nube di gas e polveri collassa per gravità formando il Sole e il disco protoplanetario da cui si formeranno i pianeti. Il Sole è una stella di media grandezza di terza generazione: contiene carbonio, azoto, ossigeno — forgiati nelle stelle precedenti esplose come supernove. Senza quel 'riciclaggio stellare' la vita non sarebbe possibile.",
+    "wikipediaSlug": "Sun",
+    "isCosmic": true,
+    "tipo": "evento"
+  },
+  {
+    "id": "cosm-prima-supernova",
+    "title": "Le Supernove — Le Fabbriche degli Elementi",
+    "year": -5000000000,
+    "lat": -29.0078,
+    "lng": -70.7114,
+    "category": "geologia",
+    "description": "5 miliardi di anni fa (e ancora oggi) le stelle massicce esplodono in supernove: la morte stellare più violenta dell'universo. In pochi secondi una supernova irradia più energia di quanto il Sole emetterà in tutta la sua vita. Ma la vera importanza è chimica: le supernove forgiano e disperdono nello spazio tutti gli elementi più pesanti del ferro — oro, argento, platino, uranio. Siamo letteralmente polvere di stelle.",
+    "wikipediaSlug": "Supernova",
+    "isCosmic": true,
+    "tipo": "evento"
+  },
+  {
+    "id": "cosm-sistema-solare-disco",
+    "title": "Il Disco Protoplanetario — Nasce il Sistema Solare",
+    "year": -4570000000,
+    "lat": 0,
+    "lng": 0,
+    "category": "geologia",
+    "description": "4,57 miliardi di anni fa una nube di gas e polveri inizia a collassare per gravità formando il giovane Sole al centro e un disco di materiale in rotazione attorno — il disco protoplanetario. I pianeti si formano per accrezione: i granelli di polvere si aggregano in planetesimi, poi in protopianeti. Il sistema solare prende forma in circa 100 milioni di anni.",
+    "wikipediaSlug": "Protoplanetary_disk",
+    "isCosmic": true,
+    "tipo": "evento"
+  },
+  {
+    "id": "cosm-giove-saturno",
+    "title": "Giove e Saturno — I Giganti Gassosi",
+    "year": -4500000000,
+    "lat": 0,
+    "lng": 0,
+    "category": "geologia",
+    "description": "4,5 miliardi di anni fa Giove e Saturno si formano rapidamente nel disco protoplanetario prima che il vento solare disperda il gas. Giove è il pianeta più grande — un'orbita di Giove instabile avrebbe potuto catapultare la Terra fuori dal sistema solare. La Grande Migrazione di Giove verso il Sole e poi verso l'esterno (ipotesi del 'Grand Tack') ha plasmato il sistema solare interno.",
+    "wikipediaSlug": "Formation_of_the_Solar_System",
+    "isCosmic": true,
+    "tipo": "evento"
+  },
+  {
+    "id": "cosmo-fill-012",
+    "title": "51 Pegasi b — Primo esopianeta intorno a una stella solare",
+    "year": 1995,
+    "lat": 46.2044,
+    "lng": 6.1432,
+    "category": "cosmo",
+    "tipo": "scoperta",
+    "description": "Il 6 ottobre 1995 gli astronomi svizzeri Michel Mayor e Didier Queloz annunciarono dalla Haute-Provence Observatory la scoperta di 51 Pegasi b: il primo pianeta extrasolare confermato in orbita attorno a una stella simile al Sole. Il pianeta, un \"Giove caldo\" che completa un'orbita in soli 4,2 giorni a 0,05 UA dalla sua stella, rivoluzionò la cosmologia. Da allora sono stati scoperti oltre 5.500 esopianeti. Mayor e Queloz ricevettero il Nobel per la Fisica 2019.",
+    "wikipediaSlug": "51_Pegasi_b",
+    "isCosmic": true
+  },
+  {
+    "id": "cosmo-fill-013",
+    "title": "Sistema TRAPPIST-1 — Sette pianeti rocciosi",
+    "year": 2017,
+    "lat": 50.6326,
+    "lng": 5.5797,
+    "category": "cosmo",
+    "tipo": "scoperta",
+    "description": "Nel febbraio 2017 l'astronomia mondiale rimase stupita dall'annuncio di un sistema con sette pianeti rocciosi in orbita attorno alla nana ultra-fredda TRAPPIST-1, a soli 39 anni luce dalla Terra. Tre di questi pianeti si trovano nella zona abitabile della stella, dove l'acqua potrebbe esistere in forma liquida. Scoperto tramite il metodo del transito dal telescopio belga TRAPPIST (TRAnsiting Planets and PlanetesImals Small Telescope) all'osservatorio di Liegi, il sistema è diventato il principale candidato per la ricerca di vita extraterrestre.",
+    "wikipediaSlug": "TRAPPIST-1",
+    "isCosmic": true
+  },
+  {
+    "id": "cosmo-fill-014",
+    "title": "SN 1987A — La supernova più vicina del XX secolo",
+    "year": 1987,
+    "lat": -29.0146,
+    "lng": -70.6927,
+    "category": "cosmo",
+    "tipo": "scoperta",
+    "description": "Il 23 febbraio 1987, per la prima volta in 400 anni, una supernova fu visibile ad occhio nudo: SN 1987A, nella Grande Nube di Magellano a soli 168.000 anni luce di distanza. Fu anche la prima supernova da cui furono rilevati neutrini: tre rivelatori sotterranei registrarono 25 neutrini in 13 secondi, confermando i modelli teorici del collasso stellare. L'onda di espansione del gas espulso è ancora visibile oggi con il Telescopio Hubble, crescendo a una velocità di 30 milioni di km/h. La stella progenitrice era una supergigante blu, contraddicendo le previsioni teoriche.",
+    "wikipediaSlug": "SN_1987A",
+    "isCosmic": true
+  }
+]

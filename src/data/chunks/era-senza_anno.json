@@ -1,0 +1,13 @@
+[
+  {
+    "id": "geo-terremoto-generico",
+    "title": "Il Terremoto — La Terra che Trema",
+    "year": null,
+    "lat": 0,
+    "lng": 0,
+    "tipo": "evento",
+    "description": "I terremoti sono il risultato del movimento delle placche tettoniche. Le zone più sismiche del pianeta (Anello di Fuoco del Pacifico, Dorsale medio-atlantica) coincidono con i confini di placca.",
+    "category": "geologia",
+    "wikipediaSlug": "Terremoto"
+  }
+]
