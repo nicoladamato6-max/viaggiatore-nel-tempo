@@ -728,18 +728,6 @@
     "tipo": "persona"
   },
   {
-    "id": "marco-aurelio-meditazioni",
-    "title": "Marco Aurelio — Le Meditazioni",
-    "year": 180,
-    "lat": 48.2082,
-    "lng": 16.3738,
-    "category": "arte",
-    "description": "L'imperatore filosofo Marco Aurelio scrive le Meditazioni, diario personale stoico redatto durante le campagne militari sul Danubio, tra cui a Vindobona (Vienna). Non scritto per la pubblicazione, è il documento più autentico di un imperatore romano: riflessioni sul dovere, la virtù e la fragilità umana. Muore a Vienna nel 180.",
-    "wikipediaSlug": "Meditations_(Marcus_Aurelius)",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "diocleziano-tetrarchia",
     "title": "Diocleziano — La Tetrarchia",
     "year": 293,
@@ -1002,18 +990,6 @@
     "wikipediaSlug": "Tenochtitlan",
     "isCosmic": false,
     "tipo": "luogo"
-  },
-  {
-    "id": "magellano-circumnavigazione",
-    "title": "Magellano-Elcano — Prima Circumnavigazione del Globo",
-    "year": 1519,
-    "lat": 37.3891,
-    "lng": -5.9845,
-    "category": "storia",
-    "description": "Il 20 settembre 1519 Ferdinando Magellano salpa da Siviglia con 5 navi e 270 uomini. Traversa l'Atlantico, circumnaviga il Sudamerica, attraversa il Pacifico. Magellano muore nelle Filippine (1521). Il Basco Juan Sebastián Elcano completa il viaggio con una sola nave e 18 sopravvissuti il 6 settembre 1522: la Terra è definitivamente rotonda.",
-    "wikipediaSlug": "Magellan–Elcano_expedition",
-    "isCosmic": false,
-    "tipo": "scoperta"
   },
   {
     "id": "newton-nascita",
@@ -3248,30 +3224,6 @@
     "tipo": "persona"
   },
   {
-    "id": "marco-aurelio-meditazioni",
-    "title": "Marco Aurelio — Le Meditazioni",
-    "year": 170,
-    "lat": 41.9028,
-    "lng": 12.4964,
-    "category": "storia",
-    "description": "Marco Aurelio (161-180 d.C.) è l'imperatore-filosofo: governa l'Impero difendendolo dai Germani sul Danubio mentre scrive le Meditazioni — un diario spirituale stoico scritto in greco, mai destinato alla pubblicazione. 'Non sprecare il resto della tua vita a pensare alle altre persone.' Il libro più letto dei classici antichi.",
-    "wikipediaSlug": "Marcus_Aurelius",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "diocleziano-riforma",
-    "title": "Diocleziano — La Tetrarchia",
-    "year": 285,
-    "lat": 41.9028,
-    "lng": 12.4964,
-    "category": "storia",
-    "description": "L'imperatore Diocleziano (284-305 d.C.) riorganizza l'Impero Romano in crisi con la Tetrarchia (due Augusti e due Cesari) per governare in quattro zone. Riforma l'esercito, l'amministrazione e la moneta. La sua persecuzione dei Cristiani (303-311) è l'ultima — e la più violenta — prima dell'editto di Costantino.",
-    "wikipediaSlug": "Diocletian",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
     "id": "agostino-confessioni",
     "title": "Sant'Agostino — Le Confessioni",
     "year": 397,
@@ -3822,18 +3774,6 @@
     "wikipediaSlug": "Francesco_Sforza",
     "isCosmic": false,
     "tipo": "persona"
-  },
-  {
-    "id": "magellano-circumnavigazione",
-    "title": "Magellano-Elcano — Prima Circumnavigazione del Globo",
-    "year": 1522,
-    "lat": 37.3891,
-    "lng": -5.9845,
-    "category": "storia",
-    "description": "Il 6 settembre 1522 la Victoria — l'unica delle 5 navi originali di Magellano — approda a Siviglia con 18 superstiti su 270 partiti. Magellano è morto nelle Filippine. Il comandante Juan Sebastián Elcano completa la prima circumnavigazione del globo in 3 anni. La Terra è definitivamente rotonda e navigabile.",
-    "wikipediaSlug": "Magellan%E2%80%93Elc, ano_expedition",
-    "isCosmic": false,
-    "tipo": "scoperta"
   },
   {
     "id": "tridentino-catechismo",
@@ -4516,18 +4456,6 @@
     "category": "storia",
     "description": "Intorno al 2500 a.C. la Civiltà della Valle dell'Indo raggiunge il suo apice con città pianificate come Harappa e Mohenjo-daro (Pakistan): fognature, bagni pubblici, urbanistica a griglia. Scrittura (non decifrata), pesi standardizzati, commercio con Mesopotamia ed Egitto. Crollano intorno al 1900 a.C. per cause ancora dibattute.",
     "wikipediaSlug": "Indus_Valley_Civilisation",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "anatolie-ittiti",
-    "title": "Ittiti — L'Impero dell'Anatolia",
-    "year": -1700,
-    "lat": 40.0196,
-    "lng": 34.6182,
-    "category": "storia",
-    "description": "L'Impero Ittita (1700-1200 a.C.) domina l'Anatolia (Turchia) con la capitale Hattusa. Prima civiltà a lavorare il ferro (1200 a.C.). Firmano con Ramesse II il primo trattato di pace conosciuto della storia dopo la battaglia di Qadesh (1274 a.C.). Collassano misteriosamente intorno al 1200 a.C. insieme ad altre civiltà del Mediterraneo.",
-    "wikipediaSlug": "Hittites",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -5360,18 +5288,6 @@
     "tipo": "opera"
   },
   {
-    "id": "persia-ciro-decreto",
-    "title": "Ciro il Grande — Il Cilindro di Ciro",
-    "year": -539,
-    "lat": 33.3152,
-    "lng": 44.3661,
-    "category": "storia",
-    "description": "Nel 539 a.C. Ciro il Grande conquista Babilonia senza combattere — la città apre le porte. Il Cilindro di Ciro (conservato al British Museum) dichiara la libertà di culto per tutti i popoli dell'Impero: gli Ebrei possono tornare in Palestina e ricostruire il Tempio. Spesso citato come il primo documento dei diritti umani della storia.",
-    "wikipediaSlug": "Cyrus_Cylinder",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
     "id": "mesopotamia-scrittura-cuneiforme",
     "title": "La Scrittura Cuneiforme — L'Invenzione della Scrittura",
     "year": -3100,
@@ -5406,18 +5322,6 @@
     "wikipediaSlug": "Ashoka",
     "isCosmic": false,
     "tipo": "persona"
-  },
-  {
-    "id": "romano-claudio-britannia",
-    "title": "Claudio — La Conquista della Britannia",
-    "year": 43,
-    "lat": 51.5074,
-    "lng": -0.1278,
-    "category": "storia",
-    "description": "Nel 43 d.C. l'imperatore Claudio invia 40.000 legionari in Britannia (Inghilterra): la conquista richiede 40 anni e non sarà mai completata (la Scozia resta libera). Londra (Londinium) viene fondata come base commerciale. Le terme romane di Bath, il Vallo di Adriano e le strade romane restano visibili. La Britannia romana dura fino al 410 d.C.",
-    "wikipediaSlug": "Roman_conquest_of_Britain",
-    "isCosmic": false,
-    "tipo": "evento"
   },
   {
     "id": "romano-antonino-pio",
@@ -6100,18 +6004,6 @@
     "category": "storia",
     "description": "Il 16 dicembre 1689 il Parlamento inglese approva il Bill of Rights: il re non può sospendere le leggi, non può mantenere un esercito in tempo di pace senza il consenso del Parlamento, non ci possono essere tasse senza la rappresentanza parlamentare. È la Magna Carta del XVII secolo — il fondamento della monarchia costituzionale e della democrazia parlamentare.",
     "wikipediaSlug": "Bill_of_Rights_1689",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "eta-moderna-vico-filosofia",
-    "title": "Vico — La Scienza Nuova",
-    "year": 1725,
-    "lat": 40.8518,
-    "lng": 14.2681,
-    "category": "storia",
-    "description": "Giambattista Vico pubblica la Scienza Nuova nel 1725 a Napoli: la storia non è lineare ma ciclica (corsi e ricorsi); i popoli attraversano età divina, eroica, umana. La civiltà si costruisce attraverso miti e linguaggio, non attraverso la ragione astratta. Considerato incomprensibile dai contemporanei, Vico viene 'riscoperto' da Croce, Hegel e Marx.",
-    "wikipediaSlug": "New_Science_(Vico)",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -13688,18 +13580,6 @@
     "tipo": "persona"
   },
   {
-    "id": "bmed-crociate-gerusalemme-1099",
-    "title": "La Prima Crociata — La Conquista di Gerusalemme",
-    "year": 1099,
-    "lat": 31.7683,
-    "lng": 35.2137,
-    "category": "storia",
-    "description": "Il 15 luglio 1099 i crociati cristiani entrano a Gerusalemme dopo tre anni di marcia dall'Europa occidentale. Il massacro che segue — ebrei, musulmani, cristiani orientali — è tra i più brutali della storia medievale. Il Cronista Fulcherio: 'i cavalieri avanzavano nel sangue fino alle caviglie e ai finimenti dei cavalli.' Gerusalemme cristiana durerà 88 anni — nel 1187 Saladino la riconquista. Le Crociate aprono un'era di scontro culturale che non è mai finita.",
-    "wikipediaSlug": "First_Crusade",
-    "isCosmic": false,
-    "tipo": "evento"
-  },
-  {
     "id": "bmed-marco-polo-cina-1275",
     "title": "Marco Polo — Il Viaggio in Cina e il Milione",
     "year": 1275,
@@ -13986,18 +13866,6 @@
     "wikipediaSlug": "Existentialism",
     "isCosmic": false,
     "tipo": "movimento"
-  },
-  {
-    "id": "con-israel-fondazione-1948",
-    "title": "La Fondazione di Israele — 14 Maggio 1948",
-    "year": 1948,
-    "lat": 32.0853,
-    "lng": 34.7818,
-    "category": "storia",
-    "description": "Il 14 maggio 1948 David Ben-Gurion proclama l'indipendenza dello Stato di Israele a Tel Aviv — esattamente allo scadere del mandato britannico. Il giorno stesso 5 eserciti arabi attaccano. Israele sopravvive e vince la guerra. La risoluzione ONU 181 (1947) aveva diviso la Palestina in uno stato ebraico e uno arabo — quello arabo non viene proclamato. 700.000 palestinesi diventano rifugiati. Il conflitto israelo-palestinese è ancora irrisolto 75 anni dopo.",
-    "wikipediaSlug": "Declaration_of_Independence_(Israel)",
-    "isCosmic": false,
-    "tipo": "luogo"
   },
   {
     "id": "con-guerre-arabo-israeliane-yom-kippur",
@@ -15380,18 +15248,6 @@
     "tipo": "persona"
   },
   {
-    "id": "ao-hittiti-ferro-anatolia",
-    "title": "gli Ittiti — l'Impero del Ferro in Anatolia",
-    "year": -1400,
-    "lat": 40.0189,
-    "lng": 34.6138,
-    "category": "storia",
-    "description": "L'Impero Ittita dell'Anatolia, odierna Turchia, tra il 1650 e il 1200 a.C. introduce il ferro nella metallurgia: spade e asce di ferro sono piu dure del bronzo e rivoluzionano la guerra. Gli Ittiti combattono Ramesse II a Qadesh nel 1274 a.C. e firmano il piu antico trattato di pace. L'impero crolla con il collasso del Bronzo Tardo intorno al 1200 a.C.",
-    "wikipediaSlug": "Hittites",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
     "id": "ao-civilta-egizia-unificazione",
     "title": "l'Unificazione dell'Egitto — il Primo Stato Centralizzato",
     "year": -3100,
@@ -15476,18 +15332,6 @@
     "tipo": "luogo"
   },
   {
-    "id": "ao-socrate-filosofia-morte",
-    "title": "Socrate — il Processo e la Morte per le Proprie Idee",
-    "year": -399,
-    "lat": 37.9715,
-    "lng": 23.7267,
-    "category": "arte",
-    "description": "Nel 399 a.C. Socrate viene processato ad Atene con l'accusa di empietà e corruzione della gioventu, condannato a morte con la cicuta. Socrate non lascia nulla di scritto: la sua filosofia ci viene trasmessa dai dialoghi di Platone. Il metodo socratico di domande e risposte per smontare le certezze e alla base del pensiero critico occidentale.",
-    "wikipediaSlug": "Socrates",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "ao-platone-accademia-idee",
     "title": "Platone — l'Accademia e il Mondo delle Idee",
     "year": -387,
@@ -15496,18 +15340,6 @@
     "category": "arte",
     "description": "Nel 387 a.C. Platone fonda l'Accademia ad Atene, la prima istituzione universitaria della storia. Il mondo delle Idee platoniche: la caverna dove vediamo solo ombre della realta, il Bene come sole del mondo intelligibile. La Repubblica e la prima utopia politica scritta. Whitehead definisce la filosofia occidentale una serie di note a margine di Platone.",
     "wikipediaSlug": "Plato",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
-    "id": "ao-aristotele-staggirita-scienza",
-    "title": "Aristotele — il Filosofo che Classifica Tutto",
-    "year": -335,
-    "lat": 37.9715,
-    "lng": 23.7267,
-    "category": "arte",
-    "description": "Dal 335 al 323 a.C. Aristotele dirige il Liceo ad Atene: sistematizza logica, metafisica, fisica, biologia, politica, etica, poetica, retorica. Osserva 500 specie animali, classifica i sistemi politici. Aristotele tutore del giovane Alessandro Magno. La sua biologia rimane insuperata per 2.000 anni fino a Harvey e Darwin.",
-    "wikipediaSlug": "Aristotle",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -16664,18 +16496,6 @@
     "tipo": "persona"
   },
   {
-    "id": "mod-newton-calcolo-leibniz-disputa",
-    "title": "la Disputa Newton-Leibniz — la Scienza Diventa Nazionalista",
-    "year": 1711,
-    "lat": 51.5074,
-    "lng": -0.1278,
-    "category": "scienza",
-    "description": "Nel 1711 la Royal Society presieduta da Newton accusa Leibniz di aver plagiato il calcolo infinitesimale da Newton. In realta entrambi lo hanno sviluppato indipendentemente tra il 1665 e il 1675. La disputa avvelena i rapporti tra matematici inglesi e continentali per mezzo secolo. I matematici inglesi usano la notazione di Newton, il resto d'Europa quella di Leibniz che e piu pratica.",
-    "wikipediaSlug": "Leibniz%E2%80%93Newton_calculus_controversy",
-    "isCosmic": false,
-    "tipo": "scoperta"
-  },
-  {
     "id": "mod-new-amsterdam-new-york",
     "title": "New Amsterdam — l'Olanda fonda New York",
     "year": 1626,
@@ -17564,18 +17384,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "ott-darwin-galapagos-viaggio",
-    "title": "il Viaggio del Beagle — Darwin alle Galapagos",
-    "year": 1835,
-    "lat": -0.9538,
-    "lng": -90.9656,
-    "category": "scienza",
-    "description": "Dal 1831 al 1836 il giovane Charles Darwin naviga sul Beagle come naturalista. Alle isole Galapagos nel 1835 osserva 13 specie di fringuelli con becchi diversi a seconda dell'isola: la natura plasma gli organismi secondo l'ambiente. Nel 1859 pubblica L'Origine delle Specie: la selezione naturale come motore dell'evoluzione. La piu grande rivoluzione scientifica dell'Ottocento.",
-    "wikipediaSlug": "The_Voyage_of_the_Beagle",
-    "isCosmic": false,
-    "tipo": "scoperta"
-  },
-  {
     "id": "ott-john-snow-colera-1854",
     "title": "John Snow e il Colera — la Nascita dell'Epidemiologia",
     "year": 1854,
@@ -18008,18 +17816,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "rin-erasmo-elogio-follia",
-    "title": "Erasmo da Rotterdam — l'Elogio della Follia e l'Umanesimo Cristiano",
-    "year": 1511,
-    "lat": 52.3676,
-    "lng": 4.9041,
-    "category": "arte",
-    "description": "Nel 1511 Erasmo da Rotterdam pubblica l'Elogio della Follia: la Follia parla in prima persona ed elogia se stessa, smascherando l'ipocrisia di teologi, papi, re, filosofi. Scritto in una settimana ospite di Thomas More a Londra. Erasmo critica la corruzione della Chiesa ma rifiuta di seguire Lutero nella rottura. L'umanista cristiano che vuole riformare dall'interno senza rompere.",
-    "wikipediaSlug": "The_Praise_of_Folly",
-    "isCosmic": false,
-    "tipo": "movimento"
-  },
-  {
     "id": "rin-palestrina-musica-sacra",
     "title": "Palestrina — la Polifonia Sacra e il Concilio di Trento",
     "year": 1560,
@@ -18388,18 +18184,6 @@
     "category": "storia",
     "description": "Tra il 1500 e il 1200 a.C. viene composto il Rig Veda, la piu antica delle scritture indo-europee: 1.028 inni in sanscrito vedico dedicati agli dei. Gli Arri arrivano in India dal 1500 a.C. Il sistema delle caste emerge dalla societa vedica. Il pensiero filosofico delle Upanishad 800-400 a.C. sviluppa concetti come Brahman, Atman, Karma. L'India vedica fonda la civilta hindu.",
     "wikipediaSlug": "Rigveda",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "ao-ittiti-hattusha",
-    "title": "gli Ittiti — l'Impero del Ferro nella Turchia Antica",
-    "year": -1600,
-    "lat": 40.0194,
-    "lng": 34.6156,
-    "category": "storia",
-    "description": "Dal 1600 al 1180 a.C. l'Impero Ittita domina l'Anatolia e il Levante dalla capitale Hattusha: i primi ad usare il ferro in guerra. La Battaglia di Kadesh del 1274 a.C. contro Ramesse II e la prima battaglia della storia documentata. Il Trattato di Kadesh e il primo trattato di pace della storia. Gli Ittiti parlano la piu antica lingua indo-europea conosciuta.",
-    "wikipediaSlug": "Hittites",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -20696,18 +20480,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "ott-africa-esploratori-stanley",
-    "title": "Stanley e Livingstone — l'Esplorazione dell'Africa",
-    "year": 1871,
-    "lat": -4.3209,
-    "lng": 15.3224,
-    "category": "storia",
-    "description": "Il 10 novembre 1871 Henry Morton Stanley trova David Livingstone sulle rive del Lago Tanganyika: Doctor Livingstone, I presume? Livingstone cercava le sorgenti del Nilo da 6 anni. Stanley mapperà il Congo. L'esplorazione africana e il colonialismo europeo: la Conferenza di Berlino del 1884 spartisce l'Africa tra le potenze. Il mito dell'esplorazione copre l'esplorazione economica e militare. Conrad: Il Cuore di Tenebra.",
-    "wikipediaSlug": "David_Livingstone",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
     "id": "ott-cezanne-post-impressionismo",
     "title": "Cézanne — il Padre del Cubismo e dell'Arte Moderna",
     "year": 1895,
@@ -20900,18 +20672,6 @@
     "tipo": "persona"
   },
   {
-    "id": "mod-galileo-telescopio-1610",
-    "title": "Galileo — il Telescopio e le Lune di Giove",
-    "year": 1610,
-    "lat": 45.4064,
-    "lng": 11.8768,
-    "category": "scienza",
-    "description": "Nel gennaio 1610 Galileo punta il suo telescopio verso Giove e scopre quattro lune: Io, Europa, Ganimede, Callisto. Questi corpi celesti non orbitano attorno alla Terra. Il Sidereus Nuncius pubblica le scoperte. Nel 1633 il processo dell'Inquisizione: Galileo abiura il copernicanesimo sotto minaccia di tortura. E pur si muove secondo la tradizione. La condanna di Galileo come simbolo del conflitto tra scienza e dogma religioso.",
-    "wikipediaSlug": "Galileo_Galilei",
-    "isCosmic": false,
-    "tipo": "scoperta"
-  },
-  {
     "id": "mod-ottomano-suleiman-il-magnifico",
     "title": "Solimano il Magnifico — il Picco dell'Impero Ottomano",
     "year": 1520,
@@ -20994,18 +20754,6 @@
     "wikipediaSlug": "Globe_Theatre",
     "isCosmic": false,
     "tipo": "opera"
-  },
-  {
-    "id": "mod-newton-optics-light",
-    "title": "Newton — la Luce Bianca e il Prisma",
-    "year": 1704,
-    "lat": 52.2053,
-    "lng": 0.1218,
-    "category": "scienza",
-    "description": "Nel 1704 Newton pubblica Opticks: la luce bianca è composta da tutti i colori dello spettro visibile, separabili dal prisma. L'arcobaleno spiegato fisicamente. La corpuscolare teoria della luce contro la teoria ondulatoria di Huygens. La disputa Newton-Huygens che divide la fisica per 200 anni: Young nel 1801 dimostra le interferenze luminose (Huygens aveva ragione). Einstein nel 1905 unifica le teorie: la luce è sia onda che corpuscolo.",
-    "wikipediaSlug": "Opticks",
-    "isCosmic": false,
-    "tipo": "scoperta"
   },
   {
     "id": "mod-france-revolution-danton",
@@ -21524,18 +21272,6 @@
     "tipo": "persona"
   },
   {
-    "id": "cont-music-woodstock-1969",
-    "title": "Woodstock — 3 Giorni di Pace, Amore e Musica",
-    "year": 1969,
-    "lat": 41.6974,
-    "lng": -74.1494,
-    "category": "musica",
-    "description": "Dal 15 al 17 agosto 1969 a Bethel, New York, il Festival di Woodstock: 400.000 persone, Hendrix, Joplin, Jefferson Airplane, The Who, Santana, Joan Baez. Tre giorni di fango e musica. Woodstock come apice e simbolo della controcultura degli anni Sessanta: pace, libero amore, musica come protesta. Quattro giorni dopo Woodstock, gli Altamont Speedway Free Festival con un omicidio durante un concerto degli Stones. La fine del sogno sessantottino.",
-    "wikipediaSlug": "Woodstock_festival",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "cont-cubist-revolution-cold-war-culture",
     "title": "la Guerra Fredda Culturale — CIA e Arte Moderna",
     "year": 1950,
@@ -21712,18 +21448,6 @@
     "category": "storia",
     "description": "Nel 1884 Hiram Maxim inventa la prima mitragliatrice completamente automatica: 600 colpi al minuto raffreddati ad acqua. La mitragliatrice Maxim diventa la spina dorsale dell'imperialismo europeo in Africa e Asia: un soldato europeo con la Maxim può tenere a bada centinaia di guerrieri con lance e archi. Hilaire Belloc: Whatever happens, we have got the Maxim gun, and they have not. La battaglia di Omdurman nel 1898: 10.000 dervisci morti, 48 britannici.",
     "wikipediaSlug": "Maxim_gun",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "ott-imperialism-berlin-congo",
-    "title": "la Conferenza di Berlino — la Spartizione dell'Africa",
-    "year": 1884,
-    "lat": 52.52,
-    "lng": 13.405,
-    "category": "storia",
-    "description": "Dal novembre 1884 al febbraio 1885 le potenze europee si riuniscono a Berlino su invito di Bismarck: spartiscono l'Africa tra di loro senza invitare nessun africano. Il diritto alla colonizzazione basato sull'occupazione effettiva. Il Congo diventa proprietà personale del re del Belgio Leopoldo II: 10 milioni di morti in 23 anni, mani amputate a chi non consegna abbastanza caucciù. Il Congo di Leopoldo come il primo genocidio documentato del XX secolo.",
-    "wikipediaSlug": "Berlin_Conference",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -21928,18 +21652,6 @@
     "category": "arte",
     "description": "Il 2 febbraio 1922 James Joyce pubblica l'Ulisse a Parigi tramite la libreria Shakespeare and Company di Sylvia Beach: il romanzo piu influente del XX secolo secondo molti critici. L'Odissea di Omero ambientata a Dublino in un solo giorno: 16 giugno 1904. Il flusso di coscienza: il pensiero di Leopold Bloom, Molly, Stephen Dedalus nella loro forma frammentata e associativa. Il romanzo censurato negli USA fino al 1933. Il modernismo letterario come rivoluzione formale.",
     "wikipediaSlug": "Ulysses_(novel)",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
-    "id": "bm-aquinas-summa-theologica",
-    "title": "Tommaso d'Aquino — la Summa Theologica e la Sintesi",
-    "year": 1265,
-    "lat": 41.7025,
-    "lng": 13.7925,
-    "category": "filosofia",
-    "description": "Dal 1265 al 1274 Tommaso d'Aquino scrive la Summa Theologica: la sintesi tra la filosofia aristotelica e la teologia cristiana. Dio esiste (cinque prove cosmologiche). La ragione e la fede non si contraddicono. La filosofia come serva della teologia. Rimane incompiuta alla sua morte. La scolastica come il sistema intellettuale dominante dell'Europa medievale. Il tomismo come filosofia ufficiale della Chiesa cattolica fino al XX secolo. Dante colloca Tommaso nel Paradiso.",
-    "wikipediaSlug": "Summa_Theologica",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -22278,18 +21990,6 @@
     "wikipediaSlug": "Battle_of_Vienna",
     "isCosmic": false,
     "tipo": "evento"
-  },
-  {
-    "id": "mod-newton-calculus-leibniz",
-    "title": "La Disputa Newton-Leibniz — Chi ha Inventato il Calcolo?",
-    "year": 1715,
-    "lat": 51.5074,
-    "lng": -0.1278,
-    "category": "scienza",
-    "description": "Dal 1715 la Royal Society britannica e l'Accademia delle Scienze di Berlino si scontrano sulla priorità dell'invenzione del calcolo infinitesimale: Newton (1666) o Leibniz (1675)? Entrambi lo hanno inventato indipendentemente. Newton usa la notazione dei punti (ẋ), Leibniz usa dy/dx: la notazione di Leibniz è quella usata ancora oggi. La disputa avvelena i rapporti tra matematici britannici e continentali per un secolo. La matematica inglese rimane indietro perché usa la notazione peggiore.",
-    "wikipediaSlug": "Leibniz–Newton_calculus_controversy",
-    "isCosmic": false,
-    "tipo": "scoperta"
   },
   {
     "id": "mod-japan-sakoku-isolation",
@@ -24284,18 +23984,6 @@
     "tipo": "movimento"
   },
   {
-    "id": "ott-imperialism-scramble-africa-berlin",
-    "title": "la Conferenza di Berlino — la Spartizione dell'Africa",
-    "year": 1884,
-    "lat": 52.52,
-    "lng": 13.405,
-    "category": "storia",
-    "description": "Dal novembre 1884 al febbraio 1885 la Conferenza di Berlino convocata da Bismarck: 14 potenze europee spartiscono l'Africa tracciano confini su mappe senza conoscere il territorio. Il principio di occupazione effettiva. Nel 1880 il 10% dell'Africa è colonizzato; nel 1914 il 90%. Solo Etiopia e Liberia restano indipendenti. Il Congo del re del Belgio Leopoldo II come la colonia privata più brutale della storia: 10 milioni di morti, le mani tagliate come punizione per la produzione di gomma insufficiente.",
-    "wikipediaSlug": "Berlin_Conference_of_1884%E2%80%931885",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
     "id": "ott-dostoevsky-brothers-karamazov",
     "title": "Dostoevskij — i Fratelli Karamazov e la Ricerca di Dio",
     "year": 1880,
@@ -24378,18 +24066,6 @@
     "wikipediaSlug": "Richard_Wagner",
     "isCosmic": false,
     "tipo": "opera"
-  },
-  {
-    "id": "ott-colonialism-india-opium-wars",
-    "title": "le Guerre dell'Oppio — la Cina Umiliata dall'Occidente",
-    "year": 1839,
-    "lat": 23.1291,
-    "lng": 113.2644,
-    "category": "storia",
-    "description": "Dal 1839 al 1842 la Prima Guerra dell'Oppio: la Cina cerca di bloccare il commercio illegale dell'oppio dalla East India Company britannica. La Cina perde: il Trattato di Nanchino cede Hong Kong alla Gran Bretagna e apre 5 porti al commercio forzato. La Seconda Guerra dell'Oppio dal 1856: la Cina perde ancora, il Palazzo d'Estate imperiale a Pechino bruciato. I Trattati Ineguali come il simbolo del Secolo dell'Umiliazione cinese (1839-1949). Xi Jinping usa questo trauma per giustificare il nazionalismo cinese del XXI secolo.",
-    "wikipediaSlug": "First_Opium_War",
-    "isCosmic": false,
-    "tipo": "persona"
   },
   {
     "id": "ott-anarchism-bakunin-proudhon",
@@ -24954,18 +24630,6 @@
     "wikipediaSlug": "Marco_Polo",
     "isCosmic": false,
     "tipo": "persona"
-  },
-  {
-    "id": "bm-thomas-aquinas-summa-theology",
-    "title": "la Summa Theologiae — Tommaso d'Aquino e la Sintesi Cristiana",
-    "year": 1265,
-    "lat": 41.4631,
-    "lng": 14.0623,
-    "category": "scienza",
-    "description": "Dal 1265 al 1274 Tommaso d'Aquino scrive la Summa Theologiae: la sintesi sistematica della teologia cristiana con la filosofia aristotelica. Le 5 vie per dimostrare l'esistenza di Dio. La distinzione tra fede e ragione come metodi complementari, non contraddittori. La grazia che non distrugge la natura ma la perfeziona. Tommaso come il Dottore Angelico della Chiesa cattolica: la sua filosofia (tomismo) è ancora la base della teologia cattolica ufficiale. La Summa incompiuta: Tommaso smette di scrivere dopo un'esperienza mistica.",
-    "wikipediaSlug": "Summa_Theologiae",
-    "isCosmic": false,
-    "tipo": "scoperta"
   },
   {
     "id": "bm-joan-of-arc-france",
@@ -25568,18 +25232,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "mod-newton-principia-gravity",
-    "title": "Newton — i Principia Mathematica e la Gravitazione Universale",
-    "year": 1687,
-    "lat": 52.2053,
-    "lng": 0.1218,
-    "category": "scienza",
-    "description": "Nel 1687 Isaac Newton pubblica i Philosophiae Naturalis Principia Mathematica: la teoria della gravitazione universale, le tre leggi del moto, il calcolo infinitesimale applicato alla meccanica. La mela che cade come il mito. La Luna come proiettile che cade continuamente verso la Terra senza raggiungerla. Newton unifica meccanica celeste (Keplero) e terrestre (Galileo) in una sola teoria. I Principia come il testo scientifico più importante mai scritto. Newton come il più grande scienziato prima del XX secolo.",
-    "wikipediaSlug": "Philosophiæ_Naturalis_Principia_Mathematica",
-    "isCosmic": false,
-    "tipo": "scoperta"
-  },
-  {
     "id": "mod-thirty-years-war-1618",
     "title": "la Guerra dei Trent'Anni — l'Europa che Brucia",
     "year": 1618,
@@ -25686,18 +25338,6 @@
     "wikipediaSlug": "Valley_Forge",
     "isCosmic": false,
     "tipo": "evento"
-  },
-  {
-    "id": "mod-art-baroque-caravaggio-light",
-    "title": "Caravaggio — il Chiaroscuro e la Rivoluzione Pittorica Barocca",
-    "year": 1600,
-    "lat": 41.9028,
-    "lng": 12.4964,
-    "category": "arte",
-    "description": "Intorno al 1600 Michelangelo Merisi da Caravaggio dipinge a Roma: la Vocazione di Matteo, la Crocifissione di Pietro, il Martirio di Paolo. Il tenebrismo: la luce che emerge dal buio assoluto, il contrasto violento tra ombre e luci. Il realismo radicale: i piedi sporchi dei contadini come modelli dei santi. Caravaggio come l'artista più rivoluzionario del Barocco: influenza Rubens, Velázquez, Rembrandt, la pittura europea per un secolo. Fuggitivo per l'omicidio del 1606, muore a 38 anni.",
-    "wikipediaSlug": "Caravaggio",
-    "isCosmic": false,
-    "tipo": "opera"
   },
   {
     "id": "mod-france-napoleon-reforms",
@@ -25830,18 +25470,6 @@
     "wikipediaSlug": "Stockton_and_Darlington_Railway",
     "isCosmic": false,
     "tipo": "scoperta"
-  },
-  {
-    "id": "ott-romanticism-music-chopin-piano",
-    "title": "Chopin — il Poeta del Pianoforte e l'Esilio Polacco",
-    "year": 1831,
-    "lat": 48.8566,
-    "lng": 2.3522,
-    "category": "musica",
-    "description": "Nel 1831 Frédéric Chopin lascia la Polonia dopo la repressione russa della rivolta: a Parigi diventa il compositore più celebre del salotto romantico. I notturni, le mazurke, le polonaise, gli studi, i balletti: musica quasi esclusivamente per pianoforte solo. La tecnica pianistica rivoluzionaria: il rubato, la mano sinistra come accompagnamento, la melodia come canto dell'orchestra. La relazione con George Sand. Chopin muore di tubercolosi a 39 anni. Il cuore sepolto a Varsavia, il corpo a Père-Lachaise a Parigi.",
-    "wikipediaSlug": "Frédéric_Chopin",
-    "isCosmic": false,
-    "tipo": "opera"
   },
   {
     "id": "ott-philosophy-mill-utilitarianism",
@@ -26082,18 +25710,6 @@
     "wikipediaSlug": "European_resistance_to_Nazism",
     "isCosmic": false,
     "tipo": "movimento"
-  },
-  {
-    "id": "nov-middle-east-creation-israel-1948",
-    "title": "la Fondazione di Israele — il 1948 e il Conflitto che Dura",
-    "year": 1948,
-    "lat": 32.0853,
-    "lng": 34.7818,
-    "category": "storia",
-    "description": "Il 14 maggio 1948 David Ben-Gurion proclama l'indipendenza dello Stato di Israele: il giorno dopo 5 eserciti arabi attaccano. La guerra d'indipendenza (Nakba per i palestinesi: la catastrofe). 700.000 palestinesi fuggono o vengono espulsi. Israele sopravvive e conquista più territorio del piano ONU di partizione. La Dichiarazione Balfour del 1917 come l'origine diplomatica. Il movimento sionista di Theodor Herzl dal 1897. L'Olocausto come il contesto storico. Il 1948 come l'anno che ancora struttura il conflitto israelo-palestinese del XXI secolo.",
-    "wikipediaSlug": "Israeli_Declaration_of_Independence",
-    "isCosmic": false,
-    "tipo": "luogo"
   },
   {
     "id": "nov-culture-jazz-age-roaring-twenties",
@@ -26442,18 +26058,6 @@
     "wikipediaSlug": "Chernobyl_disaster",
     "isCosmic": false,
     "tipo": "persona"
-  },
-  {
-    "id": "cont-astronomy-black-hole-image-2019",
-    "title": "la Prima Fotografia di un Buco Nero — l'EHT e M87*",
-    "year": 2019,
-    "lat": 19.0952,
-    "lng": -155.8422,
-    "category": "scienza",
-    "description": "Il 10 aprile 2019 l'Event Horizon Telescope (EHT) pubblica la prima immagine di un buco nero: M87*, buco nero supermassiccio al centro della galassia Messier 87, 6,5 miliardi di masse solari. La rete di 8 radiotelescopi distribuiti sul globo che forma un telescopio delle dimensioni della Terra. Katie Bouman come la giovane scienziata che sviluppa l'algoritmo per ricostruire l'immagine dai dati. Nel 2022 l'immagine di Sagittarius A*, il buco nero al centro della Via Lattea.",
-    "wikipediaSlug": "First_image_of_a_black_hole",
-    "isCosmic": false,
-    "tipo": "scoperta"
   },
   {
     "id": "mod-ming-china-explorer-zheng-he",
@@ -27150,18 +26754,6 @@
     "wikipediaSlug": "Harry_Potter",
     "isCosmic": false,
     "tipo": "opera"
-  },
-  {
-    "id": "mod-seven-years-war-1756",
-    "title": "la Guerra dei Sette Anni — la Prima Guerra Mondiale",
-    "year": 1756,
-    "lat": 52.52,
-    "lng": 13.405,
-    "category": "storia",
-    "description": "Dal 1756 al 1763 la Guerra dei Sette Anni: il primo conflitto globale che tocca Europa, America, India, Africa, Filippine. Prussia vs Austria-Francia-Russia in Europa. Gran Bretagna vs Francia in America (conquista del Canada francese), in India (Plassey, 1757), nel Caribe. Winston Churchill la chiama il vero primo conflitto mondiale. I trattati del 1763: il Canada alla Gran Bretagna, la Louisiana alla Spagna, la Florida alla Gran Bretagna. Il mondo ripartito tra le potenze europee.",
-    "wikipediaSlug": "Seven_Years'_War",
-    "isCosmic": false,
-    "tipo": "evento"
   },
   {
     "id": "mod-swiss-watchmaking-1700s",
@@ -28628,18 +28220,6 @@
     "tipo": "persona"
   },
   {
-    "id": "nov-liberation-auschwitz",
-    "title": "La liberazione di Auschwitz",
-    "year": 1945,
-    "lat": 50.03,
-    "lng": 19.2,
-    "category": "storia",
-    "description": "I soldati sovietici liberano il campo di concentramento di Auschwitz-Birkenau il 27 gennaio 1945, rivelando al mondo gli orrori dello sterminio nazista. Oltre un milione di persone, in maggioranza ebrei, erano state assassinate nel campo. Il 27 gennaio è oggi la Giornata della Memoria, commemorata in tutto il mondo.",
-    "wikipediaSlug": "Liberation_of_Auschwitz_concentration_camp",
-    "isCosmic": false,
-    "tipo": "evento"
-  },
-  {
     "id": "c24-japan-economic-miracle",
     "title": "Il miracolo economico giapponese",
     "year": 1964,
@@ -28998,18 +28578,6 @@
     "wikipediaSlug": "Casablanca_(film)",
     "isCosmic": false,
     "tipo": "opera"
-  },
-  {
-    "id": "ma-frida-kahlo",
-    "title": "Frida Kahlo e l'arte del dolore",
-    "year": 1940,
-    "lat": 19.35,
-    "lng": -99.16,
-    "category": "arte",
-    "description": "La pittrice messicana Frida Kahlo crea una serie di autoritratti che fondono surrealismo, cultura tradizionale messicana e autobiografia del dolore. Sopravvissuta a un incidente devastante, Kahlo trasforma la sofferenza fisica in arte visionaria. Riscoperta dal femminismo negli anni '70, diventa una delle artiste più iconiche del XX secolo.",
-    "wikipediaSlug": "Frida_Kahlo",
-    "isCosmic": false,
-    "tipo": "persona"
   },
   {
     "id": "ma-charlie-parker-bebop",
@@ -34292,18 +33860,6 @@
     "isCosmic": false
   },
   {
-    "id": "cosmo-galileo-telescopio-1609",
-    "title": "Galileo punta il telescopio al cielo",
-    "year": 1609,
-    "lat": 43.77,
-    "lng": 11.26,
-    "category": "cosmo",
-    "tipo": "scoperta",
-    "description": "Nel 1609 Galileo Galilei costruì un telescopio migliorato e lo puntò per la prima volta sistematicamente verso il cielo. Scoprì le montagne della Luna, le macchie solari, le fasi di Venere, e i quattro grandi satelliti di Giove (oggi detti galileiani: Io, Europa, Ganimede e Callisto). La scoperta delle lune di Giove — corpi celesti che orbitano attorno a un pianeta diverso dalla Terra — confutò l'argomento che tutto dovesse orbitare intorno alla Terra e fornì il primo supporto osservativo diretto per il sistema copernicano.",
-    "wikipediaSlug": "Galileo_affair",
-    "isCosmic": false
-  },
-  {
     "id": "cosmo-sidereus-nuncius-1610",
     "title": "Galileo — Sidereus Nuncius",
     "year": 1610,
@@ -34313,18 +33869,6 @@
     "tipo": "opera",
     "description": "Il Sidereus Nuncius (Messaggero Celeste) di Galileo Galilei, pubblicato nel marzo 1610, fu il primo trattato scientifico basato su osservazioni telescopiche. Riportava la scoperta delle irregolarità sulla superficie lunare, di stelle invisibili a occhio nudo nella Via Lattea, e soprattutto dei quattro satelliti di Giove. L'opera fu una sensazione immediata in tutta Europa, tradotta rapidamente e letta con interesse da Keplero e dai principali intellettuali dell'epoca. Inaugurò l'astronomia osservativa moderna e dimostrò che il cielo non è immutabile come sosteneva Aristotele.",
     "wikipediaSlug": "Sidereus_Nuncius",
-    "isCosmic": false
-  },
-  {
-    "id": "cosmo-newton-gravitazione-1687",
-    "title": "Newton — la gravitazione universale spiega le orbite",
-    "year": 1687,
-    "lat": 52.79,
-    "lng": -0.63,
-    "category": "cosmo",
-    "tipo": "scoperta",
-    "description": "Isaac Newton, nei Philosophiae Naturalis Principia Mathematica del 1687, formulò la legge di gravitazione universale: ogni corpo nell'universo attrae ogni altro corpo con una forza proporzionale al prodotto delle masse e inversamente proporzionale al quadrato della distanza. Questa legge spiegava in un colpo solo la caduta dei gravi, le maree, e le orbite dei pianeti e della Luna, unificando la fisica terrestre e quella celeste. Dimostrò matematicamente che le leggi di Keplero sono una conseguenza della gravitazione, comprendendo l'intero meccanismo del sistema solare.",
-    "wikipediaSlug": "Newton's_law_of_universal_gravitation",
     "isCosmic": false
   },
   {
@@ -34421,18 +33965,6 @@
     "tipo": "persona",
     "description": "Nicolò Copernico, canonico polacco con una solida formazione matematica e astronomica acquisita in Italia, iniziò già intorno al 1510 a sviluppare il suo sistema eliocentrico circolando manoscritti tra pochi amici fidati. Motivato dall'insoddisfazione per la complessità e le incongruenze del sistema tolemaico, trascorse decenni a elaborare il modello alternativo prima di pubblicarlo. Uomo profondamente religioso, concepiva la semplicità matematica del sistema solare come espressione dell'armonia divina. La sua opera rivoluzionò la cosmologia europea e aprì la strada alla rivoluzione scientifica.",
     "wikipediaSlug": "Nicolaus_Copernicus",
-    "isCosmic": false
-  },
-  {
-    "id": "cosmo-galileo-persona-1600",
-    "title": "Galileo Galilei — il padre dell'astronomia osservativa",
-    "year": 1600,
-    "lat": 43.77,
-    "lng": 11.26,
-    "category": "cosmo",
-    "tipo": "persona",
-    "description": "Galileo Galilei, fisico e astronomo toscano, è considerato il padre dell'astronomia osservativa moderna e uno dei fondatori del metodo scientifico sperimentale. Con il suo telescopio rivoluzionò la conoscenza del cielo, scoprendo le lune di Giove, le fasi di Venere, le macchie solari e la struttura della Via Lattea. Difese il sistema copernicano contro la dottrina geocentrica della Chiesa, fu processato dall'Inquisizione nel 1633 e condannato agli arresti domiciliari. La sua vicenda simboleggia il conflitto tra scienza e dogma, rimasto emblematico per tutta la modernità.",
-    "wikipediaSlug": "Galileo_Galilei",
     "isCosmic": false
   },
   {
@@ -36284,18 +35816,6 @@
     "isCosmic": false
   },
   {
-    "id": "filo-fill-011",
-    "title": "Confucio",
-    "year": -551,
-    "lat": 35.5973,
-    "lng": 116.9917,
-    "category": "filosofia",
-    "tipo": "persona",
-    "description": "Confucio (551–479 a.C.), nato a Qufu nello stato di Lu (Cina orientale), fu il pensatore che più profondamente modellò la civiltà cinese e asiatica orientale. La sua filosofia, raccolta negli \"Analetti\" dai suoi discepoli, pone al centro la coltivazione morale individuale, la rettitudine nei rapporti sociali (padre-figlio, sovrano-suddito, marito-moglie, fratello maggiore-minore, amico-amico) e il governo illuminato basato sulla virtù. Il confucianesimo divenne dottrina di stato in Cina per oltre duemila anni e rimane la base culturale di Cina, Giappone, Corea e Vietnam.",
-    "wikipediaSlug": "Confucio",
-    "isCosmic": false
-  },
-  {
     "id": "filo-fill-013",
     "title": "Adi Shankara — Advaita Vedanta",
     "year": 788,
@@ -36488,18 +36008,6 @@
     "tipo": "persona"
   },
   {
-    "id": "cosmo-pitagora-sfericita",
-    "title": "Pitagora — sfericità della Terra",
-    "year": -500,
-    "lat": 39.08,
-    "lng": 17.12,
-    "category": "cosmo",
-    "description": "Pitagora di Samo, vissuto nel VI-V secolo a.C. e operante nella Magna Grecia a Crotone, è tradizionalmente accreditato come il primo a sostenere che la Terra è una sfera. L'ipotesi nasceva da ragionamenti filosofici e geometrici: la forma sferica era considerata la più perfetta e dunque adeguata al cosmo. La comunità pitagorica sviluppò una cosmologia in cui i corpi celesti si muovono in cerchi perfetti e producono, con il loro moto, una «musica delle sfere» inudibile all'orecchio umano. L'idea della Terra sferica, elaborata e dimostrata più rigorosamente da Aristotele e Eratostene, diventa il punto di partenza di tutta l'astronomia greca successiva.",
-    "wikipediaSlug": "Pythagoras",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
     "id": "cosmo-anassagora-sole",
     "title": "Anassagora — il Sole come corpo incandescente",
     "year": -450,
@@ -36668,42 +36176,6 @@
     "tipo": "persona"
   },
   {
-    "id": "cosmo-galileo-telescopio",
-    "title": "Galileo — telescopio, lune di Giove, fasi di Venere",
-    "year": 1610,
-    "lat": 45.41,
-    "lng": 11.88,
-    "category": "cosmo",
-    "description": "Nel 1609-1610, a Padova e poi a Firenze, Galileo Galilei punta per primo un telescopio verso il cielo con intento sistematico e scientifico, scoprendo montagne sulla Luna, macchie sul Sole, quattro satelliti di Giove (le lune medicee) e le fasi di Venere. Le fasi di Venere — impossibili nel sistema tolemaico ma necessarie in quello copernicano — costituiscono la prima prova osservativa diretta che Venere orbita attorno al Sole. I satelliti di Giove dimostrano che non tutti i corpi celesti ruotano attorno alla Terra. Queste scoperte, pubblicate nel «Sidereus Nuncius» (1610) e nelle «Lettere sulle macchie solari» (1613), forniscono prove cruciali a favore del sistema copernicano e scatenano il conflitto con la Chiesa che porterà al processo del 1633.",
-    "wikipediaSlug": "Galileo_Galilei",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "cosmo-keplero-leggi",
-    "title": "Keplero — le tre leggi del moto planetario",
-    "year": 1609,
-    "lat": 50.08,
-    "lng": 14.43,
-    "category": "cosmo",
-    "description": "Tra il 1609 e il 1619, lavorando a Praga sui dati di Tycho Brahe, il matematico tedesco Johannes Keplero enuncia le tre leggi del moto planetario: i pianeti seguono orbite ellittiche con il Sole in uno dei fuochi (1ª legge, 1609); il raggio vettore pianeta-Sole spazza aree uguali in tempi uguali (2ª legge, 1609); il quadrato del periodo orbitale è proporzionale al cubo del semiasse maggiore (3ª legge, 1619). Abbandonando i cerchi perfetti — un dogma dalla Grecia antica — Keplero scopre che la natura segue ellissi, inaugurando la meccanica celeste matematica. Le sue leggi, spiegate fisicamente da Newton attraverso la legge di gravitazione universale, costituiscono ancora oggi la base del calcolo delle orbite di satelliti, sonde e pianeti.",
-    "wikipediaSlug": "Johannes_Kepler",
-    "isCosmic": false,
-    "tipo": "scoperta"
-  },
-  {
-    "id": "cosmo-newton-gravitazione",
-    "title": "Newton — Principia Mathematica e gravitazione universale",
-    "year": 1687,
-    "lat": 52.2,
-    "lng": 0.12,
-    "category": "cosmo",
-    "description": "Nel 1687 Isaac Newton pubblica i «Philosophiae Naturalis Principia Mathematica», opera che unifica la meccanica terrestre e la meccanica celeste in un'unica legge di gravitazione universale: ogni massa attrae ogni altra massa con una forza proporzionale al prodotto delle masse e inversamente proporzionale al quadrato della distanza. Newton dimostra matematicamente che le leggi di Keplero derivano necessariamente dalla sua legge di gravitazione, e spiega le maree, la precessione degli equinozi e le orbite delle comete. I Principia fondano la fisica classica e dominano la scienza per oltre due secoli, fino alla relatività generale di Einstein. Newton porta a compimento la rivoluzione scientifica iniziata da Copernico, trasformando l'astronomia in una scienza matematica di precisione assoluta.",
-    "wikipediaSlug": "Philosophiae_Naturalis_Principia_Mathematica",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "cosmo-halley-cometa",
     "title": "Halley — periodicità delle comete e gravitazione",
     "year": 1705,
@@ -36712,18 +36184,6 @@
     "category": "cosmo",
     "description": "Nel 1705 l'astronomo inglese Edmond Halley pubblica la «Synopsis Astronomia Cometicae», in cui applica le leggi di Newton alle comete storiche e dimostra che le comete apparse nel 1531, 1607 e 1682 sono in realtà la stessa cometa che percorre un'orbita ellittica attorno al Sole con un periodo di circa 76 anni, prevedendo il suo ritorno per il 1758. Halley muore nel 1742, ma la cometa torna puntualmente nel 1758-1759, confermando in modo spettacolare la teoria newtoniana della gravitazione. La «Cometa di Halley» diventa il simbolo della capacità predittiva della scienza moderna. Halley contribuisce anche al calcolo della distanza Terra-Sole attraverso i transiti di Venere, e scopre il moto proprio delle stelle.",
     "wikipediaSlug": "Edmond_Halley",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "cosmo-herschel-urano",
-    "title": "William Herschel — scoperta di Urano",
-    "year": 1781,
-    "lat": 51.38,
-    "lng": -2.36,
-    "category": "cosmo",
-    "description": "Il 13 marzo 1781, dall'orto della sua casa a Bath (Inghilterra), l'astronomo William Herschel scopre con il suo telescopio artigianale Urano, il primo pianeta identificato con uno strumento ottico nella storia — tutti i pianeti precedenti (Mercurio, Venere, Marte, Giove, Saturno) erano noti sin dall'antichità a occhio nudo. Inizialmente Herschel lo scambia per una cometa, ma le osservazioni successive rivelano un'orbita quasi circolare: è un pianeta. La scoperta raddoppia le dimensioni note del sistema solare e dimostra che il cosmo può ancora riservare sorprese inesplorate. Herschel e sua sorella Caroline costruiscono telescopi sempre più potenti e catalogano oltre 2500 nebulose e ammassi stellari, fondando l'astronomia stellare moderna.",
-    "wikipediaSlug": "William_Herschel",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -36836,30 +36296,6 @@
     "tipo": "scoperta"
   },
   {
-    "id": "cosmo-energia-oscura",
-    "title": "Energia oscura — l'espansione accelerata dell'universo",
-    "year": 1998,
-    "lat": 42.36,
-    "lng": -71.09,
-    "category": "cosmo",
-    "description": "Nel 1998 due team indipendenti di astrofisici — il Supernova Cosmology Project e il High-Z Supernova Search Team — pubblicano la scoperta sconvolgente che l'universo non si espande a velocità decrescente, come previsto dalla gravità, ma si espande in modo accelerato. La prova viene dalle distanze delle supernove di tipo Ia ad alto redshift, che appaiono più lontane del previsto. L'accelerazione è attribuita a una misteriosa forma di energia, denominata «energia oscura», che permea lo spazio e contrasta la gravità su scale cosmologiche. L'energia oscura costituirebbe circa il 68% del contenuto energetico totale dell'universo. La scoperta, per cui Saul Perlmutter, Brian Schmidt e Adam Riess ricevono il Nobel nel 2011, è considerata uno dei risultati scientifici più sorprendenti del XX secolo.",
-    "wikipediaSlug": "Dark_energy",
-    "isCosmic": false,
-    "tipo": "scoperta"
-  },
-  {
-    "id": "cosmo-foto-buco-nero-eht",
-    "title": "Prima fotografia di un buco nero — Event Horizon Telescope",
-    "year": 2019,
-    "lat": 19.82,
-    "lng": -155.47,
-    "category": "cosmo",
-    "description": "Il 10 aprile 2019 la collaborazione Event Horizon Telescope (EHT) — una rete globale di radiotelescopi che simula un telescopio delle dimensioni della Terra — pubblica la prima immagine diretta di un buco nero: l'ombra del buco nero supermassiccio M87*, nel centro della galassia Messier 87, a 55 milioni di anni luce di distanza e con una massa 6,5 miliardi di volte quella del Sole. L'immagine, rossa e sfumata, mostra l'anello di luce attorno alla regione da cui nulla, nemmeno la luce, può sfuggire, confermando visivamente previsioni della Relatività Generale attese da decenni. Nel 2022 EHT pubblica anche l'immagine di Sgr A*, il buco nero al centro della Via Lattea. Queste immagini rappresentano una frontiera storica: la prima osservazione diretta di oggetti che Einstein stesso riteneva impossibili da vedere.",
-    "wikipediaSlug": "Event_Horizon_Telescope",
-    "isCosmic": false,
-    "tipo": "evento"
-  },
-  {
     "id": "cosmo-jwst-webb",
     "title": "Telescopio James Webb — l'universo primordiale in infrarosso",
     "year": 2021,
@@ -36940,18 +36376,6 @@
     "category": "filosofia",
     "description": "John Stuart Mill nacque a Londra nel 1806 e divenne il principale filosofo del liberalismo e dell'utilitarismo nell'Ottocento anglosassone. Formatosi con un'educazione intensiva imposta dal padre James Mill, fu un prodigioso pensatore che scrisse su economia, logica, politica e morale. Nella sua opera Utilitarismo (1863) sviluppò e raffinò la teoria di Jeremy Bentham, distinguendo tra piaceri qualitativamente superiori e inferiori: «meglio essere Socrate insoddisfatto che uno stupido soddisfatto». Il suo saggio Sulla libertà (1859) è una delle difese più eloquenti della libertà individuale contro la tirannia della maggioranza e rimane un testo fondamentale del pensiero liberal-democratico. Mill fu anche un pioniere dei diritti delle donne, sostenendo nel suo La soggezione delle donne (1869) la piena parità politica e sociale tra i sessi.",
     "wikipediaSlug": "John_Stuart_Mill",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "fil-marx-1818",
-    "title": "Karl Marx",
-    "year": 1818,
-    "lat": 49.7492,
-    "lng": 6.6381,
-    "category": "filosofia",
-    "description": "Karl Marx nacque a Treviri nel 1818 e fu filosofo, economista e teorico politico, autore di una delle analisi più influenti e controverse del capitalismo moderno. Partendo dall'idealismo hegeliano, sviluppò il materialismo storico e dialettico: le strutture economiche — i «rapporti di produzione» — determinano le forme culturali, politiche e ideologiche di ogni società. Con Friedrich Engels scrisse il Manifesto del Partito Comunista (1848), che aprì con le parole «Uno spettro si aggira per l'Europa», diventando uno dei testi politici più letti della storia. Nel suo capolavoro Il Capitale (1867) condusse un'analisi sistematica dell'economia capitalistica, introducendo concetti come il plusvalore, l'alienazione del lavoro e l'accumulazione primitiva. Morì a Londra nel 1883, ma le sue idee ispirarono rivoluzioni e movimenti sociali in tutto il mondo nel Novecento.",
-    "wikipediaSlug": "Karl_Marx",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -38382,5 +37806,434 @@
     "wikipediaSlug": "UFC_1",
     "isCosmic": false,
     "tipo": "evento"
+  },
+  {
+    "id": "cosmo-sn1604-kepler",
+    "title": "Supernova di Keplero — SN 1604",
+    "year": 1604,
+    "lat": 17.01,
+    "lng": 263.33,
+    "tipo": "evento",
+    "description": "L'ultima supernova visibile a occhio nudo nella Via Lattea, osservata da Keplero per 18 mesi. Segnò la fine del sistema aristotelico delle sfere celesti immutabili.",
+    "category": "cosmo",
+    "wikipediaSlug": "SN_1604"
+  },
+  {
+    "id": "filo-islam-622",
+    "title": "Islam — La Rivelazione a Maometto",
+    "year": 622,
+    "lat": 21.4225,
+    "lng": 39.8262,
+    "tipo": "evento",
+    "description": "La predicazione di Maometto e l'Egira segnano la nascita dell'Islam. Nel giro di un secolo la nuova fede si diffonde dall'Arabia alla Spagna e all'Asia centrale.",
+    "category": "filosofia",
+    "wikipediaSlug": "Islam"
+  },
+  {
+    "id": "filo-ebraismo-antico",
+    "title": "Ebraismo — La Torah e il Monoteismo",
+    "year": -586,
+    "lat": 31.7767,
+    "lng": 35.2345,
+    "tipo": "evento",
+    "description": "La distruzione del Primo Tempio e l'esilio babilonese consolidano la tradizione ebraica scritta. La Torah diventa il fondamento del primo grande monoteismo della storia.",
+    "category": "filosofia",
+    "wikipediaSlug": "Ebraismo"
+  },
+  {
+    "id": "filo-history-jews-israel",
+    "title": "Storia degli Ebrei in Terra d'Israele",
+    "year": -1200,
+    "lat": 31.5,
+    "lng": 34.8,
+    "tipo": "evento",
+    "description": "Tremila anni di presenza ebraica nella terra di Canaan/Israele: dall'insediamento delle tribù, ai regni di Davide e Salomone, alle diaspore, fino al ritorno moderno.",
+    "category": "filosofia",
+    "wikipediaSlug": "History_of_the_Jews_and_Judaism_in_the_Land_of_Israel"
+  },
+  {
+    "id": "geo-terremoto-turchia-siria-2023",
+    "title": "Terremoto in Turchia e Siria del 2023",
+    "year": 2023,
+    "lat": 37.174,
+    "lng": 37.032,
+    "tipo": "evento",
+    "description": "Il sisma del 6 febbraio 2023 (M 7.8) colpisce il sud-est della Turchia e la Siria settentrionale. Oltre 57.000 vittime, uno dei peggiori terremoti del XXI secolo.",
+    "category": "geologia",
+    "wikipediaSlug": "Terremoto_in_Turchia_e_Siria_del_2023"
+  },
+  {
+    "id": "geo-terremoto-irpinia-1980",
+    "title": "Terremoto dell'Irpinia del 1980",
+    "year": 1980,
+    "lat": 40.77,
+    "lng": 15.28,
+    "tipo": "evento",
+    "description": "Il 23 novembre 1980 un terremoto di magnitudo 6.9 devasta l'Irpinia, in Campania. 2914 morti, 280.000 sfollati. Mette in luce i ritardi nei soccorsi e la fragilità sismica del Sud Italia.",
+    "category": "geologia",
+    "wikipediaSlug": "Terremoto_dell'Irpinia_del_1980"
+  },
+  {
+    "id": "geo-terremoto-aquila-2009",
+    "title": "Terremoto dell'Aquila del 2009",
+    "year": 2009,
+    "lat": 42.354,
+    "lng": 13.395,
+    "tipo": "evento",
+    "description": "La notte del 6 aprile 2009 un sisma di M 6.3 distrugge il centro storico dell'Aquila. 309 vittime. Il processo ai sette membri della Commissione Grandi Rischi suscita un dibattito internazionale.",
+    "category": "geologia",
+    "wikipediaSlug": "Terremoto_dell'Aquila_del_2009"
+  },
+  {
+    "id": "geo-terremoto-valdivia-1960",
+    "title": "Terremoto di Valdivia del 1960",
+    "year": 1960,
+    "lat": -39.858,
+    "lng": -73.8,
+    "tipo": "evento",
+    "description": "Il 22 maggio 1960 il sisma di M 9.5 a Valdivia (Cile) è il più potente mai strumentalmente registrato. Il maremoto conseguente colpisce Hawaii, Giappone e Filippine.",
+    "category": "geologia",
+    "wikipediaSlug": "Terremoto_di_Valdivia_del_1960"
+  },
+  {
+    "id": "geo-terremoto-oceano-indiano-2004",
+    "title": "Terremoto e maremoto dell'Oceano Indiano del 2004",
+    "year": 2004,
+    "lat": 3.295,
+    "lng": 95.982,
+    "tipo": "evento",
+    "description": "Il 26 dicembre 2004 un sisma di M 9.1 al largo di Sumatra scatena uno tsunami devastante. Oltre 230.000 vittime in 14 Paesi: la catastrofe naturale più mortale del XXI secolo.",
+    "category": "geologia",
+    "wikipediaSlug": "Terremoto_e_maremoto_dell'Oceano_Indiano_del_2004"
+  },
+  {
+    "id": "geo-terremoto-messina-1908",
+    "title": "Terremoto di Messina del 1908",
+    "year": 1908,
+    "lat": 38.19,
+    "lng": 15.55,
+    "tipo": "evento",
+    "description": "Il 28 dicembre 1908 un sisma di M 7.1 e il conseguente maremoto distruggono Messina e Reggio Calabria. Tra 75.000 e 200.000 morti: la catastrofe naturale più grave della storia italiana moderna.",
+    "category": "geologia",
+    "wikipediaSlug": "Terremoto_di_Messina_del_1908"
+  },
+  {
+    "id": "geo-terremoto-tohoku-2011",
+    "title": "Terremoto e maremoto del Tōhoku del 2011",
+    "year": 2011,
+    "lat": 38.322,
+    "lng": 142.369,
+    "tipo": "evento",
+    "description": "L'11 marzo 2011 un sisma di M 9.1 al largo del Giappone scatena uno tsunami che devasta la costa nordorientale. 19.759 morti, crisi nucleare di Fukushima Daiichi.",
+    "category": "geologia",
+    "wikipediaSlug": "Terremoto_e_maremoto_del_Tōhoku_del_2011"
+  },
+  {
+    "id": "geo-terremoto-generico",
+    "title": "Il Terremoto — La Terra che Trema",
+    "year": null,
+    "lat": 0,
+    "lng": 0,
+    "tipo": "evento",
+    "description": "I terremoti sono il risultato del movimento delle placche tettoniche. Le zone più sismiche del pianeta (Anello di Fuoco del Pacifico, Dorsale medio-atlantica) coincidono con i confini di placca.",
+    "category": "geologia",
+    "wikipediaSlug": "Terremoto"
+  },
+  {
+    "id": "mus-annalisa-cantante",
+    "title": "Annalisa — Voce del Pop Italiano Contemporaneo",
+    "year": 2011,
+    "lat": 44.2007,
+    "lng": 8.1589,
+    "tipo": "persona",
+    "description": "Annalisa Scarrone (Savona, 1985), cantante e compositrice italiana. Emersa da X Factor 2010, afferma il proprio stile tra pop, elettronica e ballate. Tra le artiste più ascoltate del pop italiano degli anni 2020.",
+    "category": "musica",
+    "wikipediaSlug": "Annalisa_(cantante)"
+  },
+  {
+    "id": "mus-mina-cantante",
+    "title": "Mina — La Tigre di Cremona",
+    "year": 1958,
+    "lat": 45.1347,
+    "lng": 10.0201,
+    "tipo": "persona",
+    "description": "Anna Maria Mazzini, nota come Mina (Busto Arsizio, 1940). Dotata di un'estensione vocale eccezionale, e' considerata la piu' grande voce della musica leggera italiana. Dal 1978 vive in ritiro senza apparizioni pubbliche.",
+    "category": "musica",
+    "wikipediaSlug": "Mina_(cantante)"
+  },
+  {
+    "id": "mus-madonna-cantante",
+    "title": "Madonna — La Regina del Pop",
+    "year": 1982,
+    "lat": 42.3314,
+    "lng": -83.0458,
+    "tipo": "persona",
+    "description": "Madonna Louise Ciccone (Bay City, 1958) è l'artista femminile solista con il maggior numero di dischi venduti nella storia. Ha ridefinito l'immagine pubblica dell'artista pop, unendo musica, moda e provocazione.",
+    "category": "musica",
+    "wikipediaSlug": "Madonna_(cantante)"
+  },
+  {
+    "id": "mus-tutti-insieme-sound-of-music",
+    "title": "Tutti insieme appassionatamente — Sound of Music",
+    "year": 1965,
+    "lat": 47.8007,
+    "lng": 13.0437,
+    "tipo": "opera",
+    "description": "Film musicale diretto da Robert Wise (1965), tratto dal musical di Rodgers & Hammerstein. Ambientato nella Salisburgo del 1938, narra la storia della famiglia von Trapp e della loro fuga dall'Austria nazista.",
+    "category": "musica",
+    "wikipediaSlug": "The_Sound_of_Music_(film)"
+  },
+  {
+    "id": "mus-kid-rock",
+    "title": "Kid Rock — Country Rap e Rock Americano",
+    "year": 1998,
+    "lat": 42.5803,
+    "lng": -83.0302,
+    "tipo": "persona",
+    "description": "Robert James Ritchie (Romeo, Michigan, 1971), in arte Kid Rock. Pioniere del rap-rock e country-rap, ha venduto oltre 35 milioni di dischi. Il suo stile ibrido riflette la cultura working-class del Michigan.",
+    "category": "musica",
+    "wikipediaSlug": "Kid_Rock"
+  },
+  {
+    "id": "mus-giorgia-cantante",
+    "title": "Giorgia — La Voce del Soul Italiano",
+    "year": 1992,
+    "lat": 41.9028,
+    "lng": 12.4964,
+    "tipo": "persona",
+    "description": "Giorgia Todrani (Roma, 1971) è tra le cantanti italiane con le maggiori doti vocali. Il suo stile spazia dal pop al soul e R&B. \"Di sole e d'azzurro\" (1995) è uno dei maggiori successi del pop italiano anni '90.",
+    "category": "musica",
+    "wikipediaSlug": "Giorgia_(cantante_1971)"
+  },
+  {
+    "id": "mus-elodie-cantante",
+    "title": "Elodie — L'Anima del Pop Italiano",
+    "year": 2016,
+    "lat": 41.9028,
+    "lng": 12.4964,
+    "tipo": "persona",
+    "description": "Elodie Di Patrizi (Roma, 1990), cantante italiana tra le più ascoltate degli anni 2020. Formatasi ad Amici di Maria De Filippi, ha costruito un'immagine che unisce pop, R&B e urban con forte personalità visiva.",
+    "category": "musica",
+    "wikipediaSlug": "Elodie_(cantante)"
+  },
+  {
+    "id": "mus-mango-cantante",
+    "title": "Mango — Il Cantautore di Lagonegro",
+    "year": 1979,
+    "lat": 40.1267,
+    "lng": 15.7636,
+    "tipo": "persona",
+    "description": "Giuseppe Mango (Lagonegro, 1954 – 2014), cantautore italiano. Noto per le sonorità esotiche e le melodie innovative, tra i suoi successi \"Oro\" e \"La rondine\". Figura di riferimento del pop d'autore italiano.",
+    "category": "musica",
+    "wikipediaSlug": "Mango_(cantante)"
+  },
+  {
+    "id": "mus-madame-cantante",
+    "title": "Madame — La Rapper della Generazione Z",
+    "year": 2020,
+    "lat": 45.55,
+    "lng": 11.55,
+    "tipo": "persona",
+    "description": "Francesca Calearo, in arte Madame (Vicenza, 2002). Esordisce giovanissima con brani rap e trap, imponendosi come una delle voci più originali della musica italiana degli anni 2020.",
+    "category": "musica",
+    "wikipediaSlug": "Madame_(cantante)"
+  },
+  {
+    "id": "sport-campionato-mondiale-calcio",
+    "title": "Coppa del Mondo FIFA — Il Torneo più Seguito al Mondo",
+    "year": 1930,
+    "lat": -34.9011,
+    "lng": -56.1645,
+    "tipo": "evento",
+    "description": "Il Campionato Mondiale di Calcio FIFA, fondato nel 1930 in Uruguay, è il torneo sportivo più seguito al mondo con oltre 3 miliardi di spettatori. L'Uruguay vinse la prima edizione.",
+    "category": "sport",
+    "wikipediaSlug": "Campionato_mondiale_di_calcio"
+  },
+  {
+    "id": "sport-nazionale-calcio-italia",
+    "title": "Nazionale di Calcio dell'Italia — Gli Azzurri",
+    "year": 1910,
+    "lat": 41.9028,
+    "lng": 12.4964,
+    "tipo": "organizzazione",
+    "description": "La Nazionale italiana di calcio, fondata nel 1910, ha vinto quattro Campionati Mondiali (1934, 1938, 1982, 2006) e un Campionato Europeo (2021). È tra le nazionali più titolate della storia.",
+    "category": "sport",
+    "wikipediaSlug": "Nazionale_di_calcio_dell'Italia"
+  },
+  {
+    "id": "sport-nazionale-argentina-calcio",
+    "title": "Argentina — La Nazionale di Maradona e Messi",
+    "year": 1901,
+    "lat": -34.6083,
+    "lng": -58.3712,
+    "tipo": "organizzazione",
+    "description": "La Nazionale argentina di calcio ha vinto tre Mondiali (1978, 1986, 2022) e quindici Coppe America. Ha espresso campioni leggendari come Diego Armando Maradona e Lionel Messi.",
+    "category": "sport",
+    "wikipediaSlug": "Argentina_national_football_team"
+  },
+  {
+    "id": "sport-manchester-city-fc",
+    "title": "Manchester City FC — Il Dominio del Calcio Inglese",
+    "year": 1880,
+    "lat": 53.4831,
+    "lng": -2.2004,
+    "tipo": "organizzazione",
+    "description": "Il Manchester City Football Club, fondato nel 1880, è diventato sotto la guida di Pep Guardiola una delle squadre più titolate del calcio europeo, vincendo il Treble nella stagione 2022-23.",
+    "category": "sport",
+    "wikipediaSlug": "Manchester_City_Football_Club"
+  },
+  {
+    "id": "sport-psg-fc",
+    "title": "Paris Saint-Germain FC — La Potenza Finanziaria nel Calcio",
+    "year": 1970,
+    "lat": 48.8414,
+    "lng": 2.253,
+    "tipo": "organizzazione",
+    "description": "Il Paris Saint-Germain, fondato nel 1970 e acquisito dal Qatar Sports Investments nel 2011, è diventato un simbolo del calcio finanziario moderno, attirando stelle come Neymar e Messi.",
+    "category": "sport",
+    "wikipediaSlug": "Paris_Saint-Germain_Football_Club"
+  },
+  {
+    "id": "sport-man-united-fc",
+    "title": "Manchester United FC — Il Teatro dei Sogni",
+    "year": 1878,
+    "lat": 53.4631,
+    "lng": -2.2913,
+    "tipo": "organizzazione",
+    "description": "Il Manchester United, fondato nel 1878, è uno dei club calcistici più famosi al mondo. Con Sir Alex Ferguson ha dominato il calcio inglese, vincendo 20 campionati e 3 Champions League.",
+    "category": "sport",
+    "wikipediaSlug": "Manchester_United_Football_Club"
+  },
+  {
+    "id": "sport-chelsea-fc",
+    "title": "Chelsea FC — Dal Miliardario russo ai Campioni d'Europa",
+    "year": 1905,
+    "lat": 51.4816,
+    "lng": -0.191,
+    "tipo": "organizzazione",
+    "description": "Il Chelsea Football Club, fondato nel 1905, trasformato da Roman Abramovich dal 2003 in una potenza europea. Due Champions League (2012, 2021) e numerosi trofei inglesi.",
+    "category": "sport",
+    "wikipediaSlug": "Chelsea_Football_Club"
+  },
+  {
+    "id": "sport-genoa-cfc",
+    "title": "Genoa CFC — Il Club più Antico d'Italia",
+    "year": 1893,
+    "lat": 44.4156,
+    "lng": 8.9462,
+    "tipo": "organizzazione",
+    "description": "Il Genoa Cricket and Football Club, fondato nel 1893, è il club calcistico più antico d'Italia. Ha vinto 9 campionati italiani tra il 1898 e il 1924.",
+    "category": "sport",
+    "wikipediaSlug": "Genoa_Cricket_and_Football_Club"
+  },
+  {
+    "id": "sport-campionato-mondiale-calcio-2022",
+    "title": "Coppa del Mondo 2022 — Il Mondiale in Qatar",
+    "year": 2022,
+    "lat": 25.286,
+    "lng": 51.533,
+    "tipo": "evento",
+    "description": "Il Mondiale 2022 disputato in Qatar è stato il primo organizzato in Medio Oriente e il primo in novembre-dicembre. L'Argentina di Messi ha battuto la Francia in finale ai rigori dopo un 3-3 storico.",
+    "category": "sport",
+    "wikipediaSlug": "Campionato_mondiale_di_calcio_2022"
+  },
+  {
+    "id": "sport-campionato-mondiale-rugby-2023",
+    "title": "Coppa del Mondo di Rugby 2023",
+    "year": 2023,
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "tipo": "evento",
+    "description": "La Coppa del Mondo di Rugby 2023, disputata in Francia, ha visto il Sudafrica conquistare il suo quarto titolo mondiale battendo la Nuova Zelanda in finale, a Parigi.",
+    "category": "sport",
+    "wikipediaSlug": "Coppa_del_Mondo_di_rugby_2023"
+  },
+  {
+    "id": "sport-campionato-mondiale-calcio-femminile-2023",
+    "title": "Mondiale Femminile 2023 — La Spagna e le Matildas",
+    "year": 2023,
+    "lat": -33.8688,
+    "lng": 151.2093,
+    "tipo": "evento",
+    "description": "Il Campionato Mondiale Femminile 2023 in Australia e Nuova Zelanda ha visto la Spagna trionfare per la prima volta. La nazionale australiana (Matildas) ha entusiasmato il proprio pubblico arrivando in semifinale.",
+    "category": "sport",
+    "wikipediaSlug": "Campionato_mondiale_di_calcio_femminile_2023"
+  },
+  {
+    "id": "sport-atalanta-bc",
+    "title": "Atalanta BC — La Dea di Bergamo nel Calcio d'Europa",
+    "year": 1907,
+    "lat": 45.6949,
+    "lng": 9.6773,
+    "tipo": "organizzazione",
+    "description": "L'Atalanta Bergamasca Calcio, fondata nel 1907, è diventata una delle squadre rivelazione del calcio europeo degli anni 2010-2020, raggiungendo i quarti di Champions League nel 2020 e vincendo l'Europa League 2024.",
+    "category": "sport",
+    "wikipediaSlug": "Atalanta_Bergamasca_Calcio"
+  },
+  {
+    "id": "sport-campionato-scacchi-mondiale",
+    "title": "Campionato del Mondo di Scacchi",
+    "year": 1886,
+    "lat": 40.7128,
+    "lng": -74.006,
+    "tipo": "evento",
+    "description": "Il Campionato del Mondo di Scacchi, fondato nel 1886, è la massima competizione scacchistica mondiale. Campioni leggendari come Capablanca, Fischer, Kasparov e Carlsen ne hanno segnato la storia.",
+    "category": "sport",
+    "wikipediaSlug": "World_Chess_Championship"
+  },
+  {
+    "id": "sport-al-nassr-fc",
+    "title": "Al-Nassr FC — Cristiano Ronaldo in Arabia Saudita",
+    "year": 1955,
+    "lat": 24.5547,
+    "lng": 46.7169,
+    "tipo": "organizzazione",
+    "description": "L'Al-Nassr Football Club, fondato nel 1955 a Riad, è diventato noto a livello mondiale con l'arrivo di Cristiano Ronaldo nel gennaio 2023, simbolo della crescita calcistica della Saudi Pro League.",
+    "category": "sport",
+    "wikipediaSlug": "Al-Nassr_Football_Club"
+  },
+  {
+    "id": "sport-monza-ac",
+    "title": "Associazione Calcio Monza — L'Ascesa in Serie A",
+    "year": 1912,
+    "lat": 45.5845,
+    "lng": 9.2744,
+    "tipo": "organizzazione",
+    "description": "Il Monza, fondato nel 1912, ha raggiunto per la prima volta nella storia la Serie A nel 2022 dopo l'acquisizione da parte di Silvio Berlusconi e Adriano Galliani. Un club storico della Lombardia.",
+    "category": "sport",
+    "wikipediaSlug": "Associazione_Calcio_Monza"
+  },
+  {
+    "id": "sport-sampdoria-uc",
+    "title": "Sampdoria — Lo Scudetto del 1991",
+    "year": 1946,
+    "lat": 44.4056,
+    "lng": 8.9463,
+    "tipo": "organizzazione",
+    "description": "L'Unione Calcio Sampdoria, fondata nel 1946 dalla fusione di Sampierdarenese e Andrea Doria, ha vinto lo scudetto nel 1991 con Mancini, Vialli e Lombardo guidati da Boskov. Una stagione leggendaria.",
+    "category": "sport",
+    "wikipediaSlug": "Unione_Calcio_Sampdoria"
+  },
+  {
+    "id": "sport-nazionale-brasile-calcio",
+    "title": "Brasile — La Seleção dei Cinque Mondiali",
+    "year": 1914,
+    "lat": -15.7801,
+    "lng": -47.9292,
+    "tipo": "organizzazione",
+    "description": "La Nazionale brasiliana di calcio è la più vittoriosa al mondo con 5 Campionati Mondiali (1958, 1962, 1970, 1994, 2002). Il Brasile è l'unica squadra ad aver partecipato a tutti i 22 Mondiali disputati.",
+    "category": "sport",
+    "wikipediaSlug": "Brazil_national_football_team"
+  },
+  {
+    "id": "sport-nazionale-portogallo-calcio",
+    "title": "Portogallo — Da Eusébio a Cristiano Ronaldo",
+    "year": 1921,
+    "lat": 38.7169,
+    "lng": -9.1399,
+    "tipo": "organizzazione",
+    "description": "La Nazionale portoghese di calcio ha vissuto due ere d'oro: gli anni '60 con Eusébio (terzo posto al Mondiale 1966) e gli anni 2010-2020 con Cristiano Ronaldo, vincendo Euro 2016 e Nations League 2019.",
+    "category": "sport",
+    "wikipediaSlug": "Portugal_national_football_team"
   }
 ]
