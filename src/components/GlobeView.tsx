@@ -511,11 +511,27 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
 
     if (flyTo.kind === 'geo') {
       if (isCosmicView) return;
-      // range opzionale: la Time Machine passa 20 000m (livello tile 12-13, globalmente disponibile)
-      const altitude = flyTo.range ?? 2_500_000;
+
+      let altitude: number;
+      let duration: number;
+
+      if (flyTo.range !== undefined) {
+        // Range esplicito (Macchina del Tempo, epoch search) — rispettato com'è
+        altitude = flyTo.range;
+        duration = altitude < 100_000 ? 3.0 : 2.0;
+      } else {
+        // Click su pin o ricerca: zoom al massimo dettaglio disponibile.
+        // Esri World Imagery (maximumLevel=19) è nitido fino a ~10 000m globalmente.
+        // Se già vicini (<= 200 000m) non fare zoom-out: semplice pan alla stessa quota.
+        const MAX_DETAIL = 10_000;
+        const currentAlt = viewer.camera.positionCartographic.height;
+        altitude = currentAlt <= 200_000 ? currentAlt : MAX_DETAIL;
+        duration = currentAlt <= 200_000 ? 1.2 : 2.5;
+      }
+
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(flyTo.lng, flyTo.lat, altitude),
-        duration: altitude < 100_000 ? 3.5 : 2,
+        duration,
         easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
       });
       return;

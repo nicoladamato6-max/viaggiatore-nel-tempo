@@ -290,7 +290,7 @@ function AppInner() {
     setSliderValue(yearToSlider(period.start));
     setOverrideYear(null);
     if (period.originLat != null && period.originLng != null) {
-      setFlyTo({ kind: 'geo', lat: period.originLat, lng: period.originLng, ts: Date.now() });
+      setFlyTo({ kind: 'geo', lat: period.originLat, lng: period.originLng, ts: Date.now(), range: 2_000_000 });
     }
   }, []);
 
