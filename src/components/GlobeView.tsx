@@ -345,9 +345,9 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
         position: Cesium.Cartesian3.fromDegrees(event.lng, event.lat),
         color: Cesium.Color.fromCssColorString(CATEGORY_COLORS[event.category]),
         outlineColor: Cesium.Color.WHITE,
-        outlineWidth: 2,
-        pixelSize: 11,
-        scaleByDistance:        new Cesium.NearFarScalar(500_000, 2.0, 20_000_000, 0.6),
+        outlineWidth: 1,
+        pixelSize: 7,
+        scaleByDistance:        new Cesium.NearFarScalar(500_000, 1.8, 20_000_000, 0.5),
         translucencyByDistance: new Cesium.NearFarScalar(15_000_000, 1.0, 25_000_000, 0.0),
         disableDepthTestDistance: Number.POSITIVE_INFINITY,
       });

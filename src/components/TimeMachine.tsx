@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { type FlyTarget, type Locale } from '../types';
+import { MACRO_ERAS, SUBCATEGORIES } from '../data/historicalPeriods';
 
 // ── Parser date potenziato ────────────────────────────────────────────────────
 const IT_MONTHS: Record<string, number> = {
@@ -81,6 +82,19 @@ export function parseYear(raw: string): number | null {
 
   // Numero puro qualunque: "44"
   if (/^\d+$/.test(s.trim())) return parseInt(s.trim());
+
+  // Nomi di epoche e sottoepoche — es. "Rinascimento", "Guerra Fredda", "Grecia Classica"
+  const stripEmoji = (t: string) => t.replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '').trim();
+  const allPeriods = [...MACRO_ERAS, ...SUBCATEGORIES];
+  for (const period of allPeriods) {
+    const pName = stripEmoji(period.name).toLowerCase().replace(/\s+/g, ' ');
+    if (lower === pName || lower.includes(pName) || pName.includes(lower)) {
+      // Punto mediano dell'epoca; per ere cosmologiche usa l'inizio (più significativo)
+      return Math.abs(period.start) >= 1_000_000
+        ? period.start
+        : Math.round((period.start + period.end) / 2);
+    }
+  }
 
   return null;
 }
@@ -254,7 +268,7 @@ export function TimeMachine({ locale, onNavigate }: Props) {
                   ref={yearRef}
                   className="tm-input"
                   type="text"
-                  placeholder={it ? 'es. 15 marzo 44 a.C.  |  1492  |  -65000000' : 'e.g. March 15, 44 BC  |  1492  |  -65000000'}
+                  placeholder={it ? 'es. 1492  ·  44 a.C.  ·  Rinascimento  ·  Guerra Fredda' : 'e.g. 1492  ·  44 BC  ·  Renaissance  ·  Cold War'}
                   value={yearText}
                   onChange={e => setYearText(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && handleLaunch()}
