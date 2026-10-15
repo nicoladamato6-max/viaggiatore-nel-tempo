@@ -290,12 +290,14 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
 
     // ── Livello 2: AWMC tiles per il periodo antico (attivato/disattivato in useEffect separato) ──
     // Tile antichità: Gothenburg University "Imperium Romanum" (strade romane, città antiche)
-    // Fallback: se le tile non caricano Cesium mostra Esri satellite sotto (layer0)
+    // DARE — Digital Atlas of the Roman Empire (Lund University, CC BY)
+    // CORS: Access-Control-Allow-Origin: * confermato. Tile z<3 ritornano 404
+    // senza CORS header → minimumLevel:3 previene le richieste a zoom globale.
     const awmcProvider = new Cesium.UrlTemplateImageryProvider({
-      // URL relativo → Vite proxy in dev, CF Pages Function in prod (risolve CORS)
-      url: '/tiles/imperium/{z}/{x}/{y}.png',
-      credit: '© Digital Humanities, University of Gothenburg',
-      maximumLevel: 10,
+      url: 'https://dh.gu.se/tiles/imperium/{z}/{x}/{y}.png',
+      credit: '© DARE — Digital Atlas of the Roman Empire, Lund University (CC BY)',
+      minimumLevel: 3,
+      maximumLevel: 11,
     });
     const awmcLayer = viewer.imageryLayers.addImageryProvider(awmcProvider);
     awmcLayer.show = false;

@@ -10,13 +10,4 @@ export default defineConfig({
   define: {
     CESIUM_BASE_URL: JSON.stringify('/cesium/'),
   },
-  server: {
-    proxy: {
-      '/tiles': {
-        target: 'https://dh.gu.se',
-        changeOrigin: true,
-        secure: true,
-      },
-    },
-  },
 });
