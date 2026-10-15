@@ -416,9 +416,9 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
     if (cawmLayerRef.current) cawmLayerRef.current.show = showAntique;
     if (dareLayerRef.current) dareLayerRef.current.show = showAntique;
 
-    // Livello 1: GPlates paleogeografia — attivo per tutto il periodo pre-CAWM
-    // (-∞ fino a 600 a.C.); per anni recenti Ma=5 ≈ posizioni odierne
-    if (currentYear >= -600 || isCosmicView) {
+    // Livello 1: GPlates paleogeografia — attivo solo per epoche geologiche
+    // (> 1 milione di anni fa); epoche storiche/recenti usano il globo moderno
+    if (currentYear > -1_000_000 || isCosmicView) {
       gplatesAbortRef.current?.abort();
       if (gplatesDSRef.current) {
         viewer.dataSources.remove(gplatesDSRef.current, true);
