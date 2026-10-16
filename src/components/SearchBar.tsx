@@ -212,7 +212,12 @@ export function SearchBar({ events, onSelect, onWikiSelect, onEpochSelect, epoch
         type="text"
         placeholder={locale === 'it' ? 'Cerca eventi, personaggi, luoghi…' : 'Search events, people, places…'}
         value={query}
-        onChange={e => { setQuery(normalizeQuery(e.target.value)); setOpen(true); }}
+        onChange={e => {
+          const normalized = normalizeQuery(e.target.value);
+          e.target.value = normalized; // reset DOM diretto: evita che React salti il re-render
+          setQuery(normalized);
+          setOpen(true);
+        }}
         onFocus={() => setOpen(true)}
       />
 
