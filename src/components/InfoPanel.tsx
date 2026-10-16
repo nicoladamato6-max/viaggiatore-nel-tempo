@@ -91,30 +91,70 @@ function formatYear(year: number): string {
   return `${year} d.C.`;
 }
 
+// Estrae testo leggibile dall'HTML Wikipedia: rimuove infobox, tabelle, note, nav
+function extractWikiText(html: string): string {
+  const div = document.createElement('div');
+  div.innerHTML = html;
+  div.querySelectorAll(
+    '.infobox, .reference, .reflist, .toc, .navbox, .mw-editsection, ' +
+    'table, script, style, sup, .thumb, .sidebar, .hatnote, [role="note"]'
+  ).forEach(el => el.remove());
+  return (div.textContent ?? '')
+    .replace(/\[\d+\]/g, '')  // rimuovi marker footnote [1][2]
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 15000);
+}
+
+// Divide il testo in chunk ~250 char su confini di frase per evitare
+// il bug Chrome che tronca gli utterance dopo ~15 secondi
+function splitChunks(text: string, maxLen = 250): string[] {
+  const sentences = text.match(/[^.!?]+[.!?]*/g) ?? [text];
+  const chunks: string[] = [];
+  let cur = '';
+  for (const s of sentences) {
+    if ((cur + s).length > maxLen && cur) { chunks.push(cur.trim()); cur = s; }
+    else cur += s;
+  }
+  if (cur.trim()) chunks.push(cur.trim());
+  return chunks.filter(c => c.length > 0);
+}
+
 // ── Text-to-Speech ────────────────────────────────────────────────────────
 function useTTS() {
   const [speaking, setSpeaking] = useState(false);
+  const cancelledRef = useRef(false);
 
   function speak(text: string, lang: string) {
     if (!window.speechSynthesis) return;
     window.speechSynthesis.cancel();
     if (speaking) { setSpeaking(false); return; }
-    const utt = new SpeechSynthesisUtterance(text);
-    utt.lang  = lang === 'it' ? 'it-IT' : 'en-US';
-    utt.rate  = 0.95;
-    utt.onend = () => setSpeaking(false);
-    utt.onerror = () => setSpeaking(false);
-    window.speechSynthesis.speak(utt);
+
+    cancelledRef.current = false;
+    const chunks = splitChunks(text);
+    let idx = 0;
+
+    function speakNext() {
+      if (cancelledRef.current || idx >= chunks.length) { setSpeaking(false); return; }
+      const utt  = new SpeechSynthesisUtterance(chunks[idx++]);
+      utt.lang   = lang === 'it' ? 'it-IT' : 'en-US';
+      utt.rate   = 0.95;
+      utt.onend  = speakNext;
+      utt.onerror = () => setSpeaking(false);
+      window.speechSynthesis.speak(utt);
+    }
+
+    speakNext();
     setSpeaking(true);
   }
 
   function stop() {
+    cancelledRef.current = true;
     window.speechSynthesis?.cancel();
     setSpeaking(false);
   }
 
-  // Ferma automaticamente quando il componente si smonta
-  useEffect(() => () => { window.speechSynthesis?.cancel(); }, []);
+  useEffect(() => () => { stop(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return { speaking, speak, stop };
 }
@@ -215,7 +255,13 @@ export function InfoPanel({ event, locale, onClose }: Props) {
           {window.speechSynthesis && (
             <button
               className={`info-panel__icon-btn${speaking ? ' tts-active' : ''}`}
-              onClick={() => speak(`${event.title}. ${event.description}`, locale)}
+              onClick={() => {
+                const wikiText = body ? extractWikiText(body) : '';
+                speak(
+                  wikiText ? `${event.title}. ${wikiText}` : `${event.title}. ${event.description}`,
+                  locale,
+                );
+              }}
               title={speaking ? 'Ferma lettura' : 'Leggi ad alta voce'}
               aria-label="Text-to-speech"
             >
