@@ -18,6 +18,11 @@ export default defineConfig({
         secure: false,
         rewrite: (path) => path.replace(/^\/awmc/, '/tiles'),
       },
+      '/tiles': {
+        target: 'https://dh.gu.se',
+        changeOrigin: true,
+        secure: false,
+      },
       '/gplates': {
         target: 'https://gws.gplates.org',
         changeOrigin: true,

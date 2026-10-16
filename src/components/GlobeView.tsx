@@ -307,7 +307,7 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
     // CORS: Access-Control-Allow-Origin: * confermato. Tile z<3 ritornano 404
     // senza CORS header → minimumLevel:3 previene le richieste a zoom globale.
     const dareProvider = new Cesium.UrlTemplateImageryProvider({
-      url: 'https://dh.gu.se/tiles/imperium/{z}/{x}/{y}.png',
+      url: '/tiles/imperium/{z}/{x}/{y}.png',
       credit: '© DARE — Digital Atlas of the Roman Empire, Lund University (CC BY)',
       minimumLevel: 3,
       maximumLevel: 11,
