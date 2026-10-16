@@ -4347,11 +4347,11 @@
     "title": "Leonardo da Vinci",
     "description": "scienziato, inventore e artista italiano (1452–1519)",
     "year": 1452,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7992,
+    "lng": 10.9381,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Leonardo_da_Vinci",
     "isCosmic": false
   },
   {
@@ -4359,11 +4359,11 @@
     "title": "Dante Alighieri",
     "description": "poeta, scrittore e politico fiorentino, considerato il padre della lingua italiana (1265-1321)",
     "year": 1265,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Dante_Alighieri",
     "isCosmic": false
   },
   {
@@ -4371,11 +4371,11 @@
     "title": "Michelangelo Buonarroti",
     "description": "scultore, pittore, architetto e poeta italiano (1475-1564)",
     "year": 1475,
-    "lat": null,
-    "lng": null,
+    "lat": 43.6408,
+    "lng": 11.9858,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michelangelo_Buonarroti",
     "isCosmic": false
   },
   {
@@ -4383,11 +4383,11 @@
     "title": "Martin Lutero",
     "description": "teologo, predicatore e accademico tedesco, figura centrale della Riforma protestante (1483-1546)",
     "year": 1483,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5167,
+    "lng": 11.55,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Martin_Lutero",
     "isCosmic": false
   },
   {
@@ -4395,11 +4395,11 @@
     "title": "Cristoforo Colombo",
     "description": "esploratore e navigatore italiano",
     "year": 1451,
-    "lat": null,
-    "lng": null,
+    "lat": 44.4072,
+    "lng": 8.9339,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cristoforo_Colombo",
     "isCosmic": false
   },
   {
@@ -4407,11 +4407,11 @@
     "title": "Niccolò Machiavelli",
     "description": "politico, politologo, storico, drammaturgo, scrittore, diplomatico e filosofo italiano (1469-1527)",
     "year": 1469,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Niccolò_Machiavelli",
     "isCosmic": false
   },
   {
@@ -4419,11 +4419,11 @@
     "title": "Niccolò Copernico",
     "description": "astronomo polacco (1473-1543)",
     "year": 1473,
-    "lat": null,
-    "lng": null,
+    "lat": 53.0167,
+    "lng": 18.6167,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Niccolò_Copernico",
     "isCosmic": false
   },
   {
@@ -4431,11 +4431,11 @@
     "title": "Marco Polo",
     "description": "mercante, ambasciatore e viaggiatore italiano, appartenente al patriziato veneziano e alla corte del Gran Khan Kubilai",
     "year": 1254,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4397,
+    "lng": 12.3319,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marco_Polo",
     "isCosmic": false
   },
   {
@@ -4443,11 +4443,11 @@
     "title": "Tommaso d'Aquino",
     "description": "teologo cattolico, filosofo italiano e Dottore della Chiesa",
     "year": 1225,
-    "lat": null,
-    "lng": null,
+    "lat": 41.5478,
+    "lng": 13.6704,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tommaso_d'Aquino",
     "isCosmic": false
   },
   {
@@ -4455,11 +4455,11 @@
     "title": "Gengis Khan",
     "description": "condottiero e sovrano mongolo, fondatore e primo grande Khan dell'impero mongolo",
     "year": 1162,
-    "lat": null,
-    "lng": null,
+    "lat": 49.0218,
+    "lng": 111.6247,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gengis_Khan",
     "isCosmic": false
   },
   {
@@ -4467,11 +4467,11 @@
     "title": "Li Bai",
     "description": "poeta cinese della Dinastia Tang",
     "year": 701,
-    "lat": null,
-    "lng": null,
+    "lat": 31.7761,
+    "lng": 104.7406,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Li_Bai",
     "isCosmic": false
   },
   {
@@ -4479,11 +4479,11 @@
     "title": "Ferdinando Magellano",
     "description": "navigatore ed esploratore portoghese al servizio della Spagna",
     "year": 1480,
-    "lat": null,
-    "lng": null,
+    "lat": 41.8,
+    "lng": -8.4167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ferdinando_Magellano",
     "isCosmic": false
   },
   {
@@ -4491,11 +4491,11 @@
     "title": "Raffaello Sanzio",
     "description": "pittore e architetto italiano del Rinascimento (1483-1520)",
     "year": 1483,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7252,
+    "lng": 12.6372,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Raffaello_Sanzio",
     "isCosmic": false
   },
   {
@@ -4503,11 +4503,11 @@
     "title": "Avicenna",
     "description": "medico, filosofo, matematico e fisico persiano",
     "year": 980,
-    "lat": null,
-    "lng": null,
+    "lat": 39.9944,
+    "lng": 64.3792,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Avicenna",
     "isCosmic": false
   },
   {
@@ -4515,11 +4515,11 @@
     "title": "Albrecht Dürer",
     "description": "pittore, incisore, matematico e teorico dell'arte tedesco",
     "year": 1471,
-    "lat": null,
-    "lng": null,
+    "lat": 49.4539,
+    "lng": 11.0775,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Albrecht_Dürer",
     "isCosmic": false
   },
   {
@@ -4527,11 +4527,11 @@
     "title": "Carlo Magno",
     "description": "re dei Franchi (r. 768-814) e dei Longobardi (r. 774-814), primo imperatore del Sacro Romano Impero (r. 800-814)",
     "year": 742,
-    "lat": null,
-    "lng": null,
+    "lat": 47.24,
+    "lng": 6.02,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_Magno",
     "isCosmic": false
   },
   {
@@ -4539,11 +4539,11 @@
     "title": "Vasco da Gama",
     "description": "esploratore portoghese",
     "year": 1460,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9547,
+    "lng": -8.8642,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Vasco_da_Gama",
     "isCosmic": false
   },
   {
@@ -4551,11 +4551,11 @@
     "title": "Johannes Gutenberg",
     "description": "orafo, inventore e tipografo tedesco, inventore della stampa a caratteri mobili moderna",
     "year": 1400,
-    "lat": null,
-    "lng": null,
+    "lat": 49.9994,
+    "lng": 8.2736,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johannes_Gutenberg",
     "isCosmic": false
   },
   {
@@ -4563,11 +4563,11 @@
     "title": "Geoffrey Chaucer",
     "description": "scrittore, poeta, burocrate e diplomatico inglese",
     "year": 1343,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Geoffrey_Chaucer",
     "isCosmic": false
   },
   {
@@ -4575,11 +4575,11 @@
     "title": "Hernán Cortés",
     "description": "condottiero spagnolo (1485-1547)",
     "year": 1485,
-    "lat": null,
-    "lng": null,
+    "lat": 38.963,
+    "lng": -5.9581,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Hernán_Cortés",
     "isCosmic": false
   },
   {
@@ -4587,11 +4587,11 @@
     "title": "ʿUmar Khayyām",
     "description": "matematico, astronomo e poeta persiano",
     "year": 1048,
-    "lat": null,
-    "lng": null,
+    "lat": 36.2133,
+    "lng": 58.7958,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "ʿUmar_Khayyām",
     "isCosmic": false
   },
   {
@@ -4603,7 +4603,7 @@
     "lng": null,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Muḥammad_ibn_Mūsā_al-Khwārizmī",
     "isCosmic": false
   },
   {
@@ -4611,11 +4611,11 @@
     "title": "Ibn Khaldun",
     "description": "storico e filosofo del Nordafrica",
     "year": 1332,
-    "lat": null,
-    "lng": null,
+    "lat": 36.8008,
+    "lng": 10.18,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ibn_Khaldun",
     "isCosmic": false
   },
   {
@@ -4623,11 +4623,11 @@
     "title": "Ibn Battuta",
     "description": "esploratore e viaggiatore berbero",
     "year": 1304,
-    "lat": null,
-    "lng": null,
+    "lat": 35.7695,
+    "lng": -5.8045,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ibn_Baṭṭūṭa",
     "isCosmic": false
   },
   {
@@ -4635,11 +4635,11 @@
     "title": "Francesco Petrarca",
     "description": "scrittore, filosofo, filologo e poeta italiano (1304-1374)",
     "year": 1304,
-    "lat": null,
-    "lng": null,
+    "lat": 43.4631,
+    "lng": 11.8781,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Francesco_Petrarca",
     "isCosmic": false
   },
   {
@@ -4647,11 +4647,11 @@
     "title": "Hafez",
     "description": "mistico e poeta persiano",
     "year": 1325,
-    "lat": null,
-    "lng": null,
+    "lat": 29.6103,
+    "lng": 52.5311,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Hafez",
     "isCosmic": false
   },
   {
@@ -4659,11 +4659,11 @@
     "title": "Abu Nuwas",
     "description": "poeta arabo",
     "year": 756,
-    "lat": null,
-    "lng": null,
+    "lat": 31.3189,
+    "lng": 48.6842,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Abu_Nuwas",
     "isCosmic": false
   },
   {
@@ -4671,11 +4671,11 @@
     "title": "Murasaki Shikibu",
     "description": "scrittrice e poetessa giapponese",
     "year": 970,
-    "lat": null,
-    "lng": null,
+    "lat": 35,
+    "lng": 135.7667,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Murasaki_Shikibu",
     "isCosmic": false
   },
   {
@@ -4683,11 +4683,11 @@
     "title": "Gialal al-Din Rumi",
     "description": "poeta e mistico persiano",
     "year": 1207,
-    "lat": null,
-    "lng": null,
+    "lat": 37.7147,
+    "lng": 68.8344,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jalal_al-Din_Rumi",
     "isCosmic": false
   },
   {
@@ -4695,11 +4695,11 @@
     "title": "Erasmo da Rotterdam",
     "description": "teologo, umanista e filosofo olandese",
     "year": 1466,
-    "lat": null,
-    "lng": null,
+    "lat": 51.92,
+    "lng": 4.48,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Erasmo_da_Rotterdam",
     "isCosmic": false
   },
   {
@@ -4707,11 +4707,11 @@
     "title": "Zheng He",
     "description": "navigatore cinese",
     "year": 1371,
-    "lat": null,
-    "lng": null,
+    "lat": 25.0433,
+    "lng": 102.7061,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zheng_He",
     "isCosmic": false
   },
   {
@@ -4719,11 +4719,11 @@
     "title": "Giovanni Boccaccio",
     "description": "scrittore e poeta italiano (1313-1375)",
     "year": 1313,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_Boccaccio",
     "isCosmic": false
   },
   {
@@ -4731,11 +4731,11 @@
     "title": "Ali ibn Abi Talib",
     "description": "cugino primo e genero del profeta dell'Islam Maometto",
     "year": 599,
-    "lat": null,
-    "lng": null,
+    "lat": 21.4225,
+    "lng": 39.8261,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "ʿAlī_ibn_ʾAbī_Ṭālib",
     "isCosmic": false
   },
   {
@@ -4743,11 +4743,11 @@
     "title": "Al-Ghazali",
     "description": "teologo, filosofo e mistico persiano",
     "year": 1056,
-    "lat": null,
-    "lng": null,
+    "lat": 36.4861,
+    "lng": 59.5176,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Al-Ghazali",
     "isCosmic": false
   },
   {
@@ -4755,11 +4755,11 @@
     "title": "Francesco d'Assisi",
     "description": "religioso, santo e poeta italiano (1181/2-1226)",
     "year": 1182,
-    "lat": null,
-    "lng": null,
+    "lat": 43.0708,
+    "lng": 12.615,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Francesco_d'Assisi",
     "isCosmic": false
   },
   {
@@ -4767,11 +4767,11 @@
     "title": "Sinān",
     "description": "architetto ottomano di origine armena o greca",
     "year": 1490,
-    "lat": null,
-    "lng": null,
+    "lat": 38.8172,
+    "lng": 35.7206,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sinān",
     "isCosmic": false
   },
   {
@@ -4779,11 +4779,11 @@
     "title": "Du Fu",
     "description": "poeta cinese",
     "year": 712,
-    "lat": null,
-    "lng": null,
+    "lat": 34.7513,
+    "lng": 112.9854,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Du_Fu",
     "isCosmic": false
   },
   {
@@ -4791,11 +4791,11 @@
     "title": "Tommaso Moro",
     "description": "umanista, scrittore e politico inglese",
     "year": 1478,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tommaso_Moro",
     "isCosmic": false
   },
   {
@@ -4803,11 +4803,11 @@
     "title": "Averroè",
     "description": "filosofo, medico e matematico arabo",
     "year": 1126,
-    "lat": null,
-    "lng": null,
+    "lat": 37.89,
+    "lng": -4.78,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Averroè",
     "isCosmic": false
   },
   {
@@ -4815,11 +4815,11 @@
     "title": "Zhu Xi",
     "description": "filosofo cinese (1130–1200)",
     "year": 1130,
-    "lat": null,
-    "lng": null,
+    "lat": 26.1725,
+    "lng": 118.1849,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zhu_Xi",
     "isCosmic": false
   },
   {
@@ -4827,11 +4827,11 @@
     "title": "Firdusi",
     "description": "poeta persiano",
     "year": 940,
-    "lat": null,
-    "lng": null,
+    "lat": 36.4861,
+    "lng": 59.5176,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Firdusi",
     "isCosmic": false
   },
   {
@@ -4839,11 +4839,11 @@
     "title": "Abū Bakr",
     "description": "primo califfo dell'Islam",
     "year": 573,
-    "lat": null,
-    "lng": null,
+    "lat": 21.4225,
+    "lng": 39.8261,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Abū_Bakr",
     "isCosmic": false
   },
   {
@@ -4855,7 +4855,7 @@
     "lng": 2,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_dei_cent'anni",
     "isCosmic": false
   },
   {
@@ -4863,11 +4863,11 @@
     "title": "Brahmagupta",
     "description": "matematico e astronomo indiano",
     "year": 598,
-    "lat": null,
-    "lng": null,
+    "lat": 25,
+    "lng": 72.25,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Brahmagupta",
     "isCosmic": false
   },
   {
@@ -4875,11 +4875,11 @@
     "title": "Maometto II",
     "description": "sultano ottomano (r. 1444-1446, 1451-1481)",
     "year": 1432,
-    "lat": null,
-    "lng": null,
+    "lat": 41.673,
+    "lng": 26.5736,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Maometto_II",
     "isCosmic": false
   },
   {
@@ -4887,11 +4887,11 @@
     "title": "Enrico VIII d'Inghilterra",
     "description": "re d'Inghilterra e d'Irlanda (r. 1509-1547), fondatore della Chiesa anglicana",
     "year": 1491,
-    "lat": null,
-    "lng": null,
+    "lat": 51.4822,
+    "lng": -0.0067,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_VIII_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -4899,11 +4899,11 @@
     "title": "Saˁdi",
     "description": "poeta persiano",
     "year": 1210,
-    "lat": null,
-    "lng": null,
+    "lat": 29.6103,
+    "lng": 52.5311,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Saʿdi",
     "isCosmic": false
   },
   {
@@ -4911,11 +4911,11 @@
     "title": "Sandro Botticelli",
     "description": "pittore italiano del XV secolo (1445-1510)",
     "year": 1445,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sandro_Botticelli",
     "isCosmic": false
   },
   {
@@ -4923,11 +4923,11 @@
     "title": "Ildegarda di Bingen",
     "description": "religiosa e santa cattolica, mistica, teologa, medico e naturalista tedesca",
     "year": 1098,
-    "lat": null,
-    "lng": null,
+    "lat": 49.7792,
+    "lng": 8.0981,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ildegarda_di_Bingen",
     "isCosmic": false
   },
   {
@@ -4935,11 +4935,11 @@
     "title": "Amerigo Vespucci",
     "description": "navigatore, esploratore e cartografo italiano",
     "year": 1454,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Amerigo_Vespucci",
     "isCosmic": false
   },
   {
@@ -4947,11 +4947,11 @@
     "title": "Guglielmo I d'Inghilterra",
     "description": "duca di Normandia (r. 1035-1087) e re d'Inghilterra (r. 1066-1087)",
     "year": 1028,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8972,
+    "lng": -0.1975,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guglielmo_I_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -4959,11 +4959,11 @@
     "title": "Riccardo I d'Inghilterra",
     "description": "re d'Inghilterra (r. 1189-1199)",
     "year": 1157,
-    "lat": null,
-    "lng": null,
+    "lat": 51.755,
+    "lng": -1.2627,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Riccardo_I_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -4971,11 +4971,11 @@
     "title": "Al-Biruni",
     "description": "matematico, filosofo e scienziato persiano",
     "year": 973,
-    "lat": null,
-    "lng": null,
+    "lat": 41.6558,
+    "lng": 60.3025,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Al-Biruni",
     "isCosmic": false
   },
   {
@@ -4983,11 +4983,11 @@
     "title": "Mosè Maimonide",
     "description": "filosofo, rabbino e medico ebraico",
     "year": 1135,
-    "lat": null,
-    "lng": null,
+    "lat": 37.89,
+    "lng": -4.78,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mosè_Maimonide",
     "isCosmic": false
   },
   {
@@ -4995,11 +4995,11 @@
     "title": "Tiziano Vecellio",
     "description": "pittore italiano",
     "year": 1490,
-    "lat": null,
-    "lng": null,
+    "lat": 46.4287,
+    "lng": 12.3753,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tiziano_Vecellio",
     "isCosmic": false
   },
   {
@@ -5011,7 +5011,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Re_Artù",
     "isCosmic": false
   },
   {
@@ -5019,11 +5019,11 @@
     "title": "Donatello",
     "description": "scultore, orafo e disegnatore italiano (1386-1466)",
     "year": 1386,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Donatello",
     "isCosmic": false
   },
   {
@@ -5031,11 +5031,11 @@
     "title": "Babur",
     "description": "fondatore della dinastia Moghul",
     "year": 1483,
-    "lat": null,
-    "lng": null,
+    "lat": 40.7833,
+    "lng": 72.3506,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Babur",
     "isCosmic": false
   },
   {
@@ -5043,11 +5043,11 @@
     "title": "Guru Nanak Dev",
     "description": "guru del sikhismo",
     "year": 1469,
-    "lat": null,
-    "lng": null,
+    "lat": 31.4492,
+    "lng": 73.7124,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guru_Nanak_Dev",
     "isCosmic": false
   },
   {
@@ -5055,11 +5055,11 @@
     "title": "Aisha",
     "description": "una delle mogli di Maometto",
     "year": 614,
-    "lat": null,
-    "lng": null,
+    "lat": 21.4225,
+    "lng": 39.8261,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "ʿĀʾisha_bint_Abī_Bakr",
     "isCosmic": false
   },
   {
@@ -5067,11 +5067,11 @@
     "title": "Alhazen",
     "description": "medico, filosofo, matematico, fisico ed astronomo arabo",
     "year": 965,
-    "lat": null,
-    "lng": null,
+    "lat": 30.515,
+    "lng": 47.81,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alhazen",
     "isCosmic": false
   },
   {
@@ -5079,11 +5079,11 @@
     "title": "Jan Hus",
     "description": "teologo e riformatore religioso boemo",
     "year": 1370,
-    "lat": null,
-    "lng": null,
+    "lat": 49.055,
+    "lng": 13.987,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jan_Hus",
     "isCosmic": false
   },
   {
@@ -5091,11 +5091,11 @@
     "title": "Pietro Abelardo",
     "description": "scrittore e filosofo medievale francese (1079-1142)",
     "year": 1079,
-    "lat": null,
-    "lng": null,
+    "lat": 47.1383,
+    "lng": -1.3358,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pietro_Abelardo",
     "isCosmic": false
   },
   {
@@ -5103,11 +5103,11 @@
     "title": "al-Husayn ibn Ali",
     "description": "nipote di Maometto, terzo imām dello Sciismo",
     "year": 626,
-    "lat": null,
-    "lng": null,
+    "lat": 24.47,
+    "lng": 39.61,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Al-Husayn_ibn_Ali",
     "isCosmic": false
   },
   {
@@ -5115,11 +5115,11 @@
     "title": "Leif Erikson",
     "description": "esploratore norreno",
     "year": 972,
-    "lat": null,
-    "lng": null,
+    "lat": 65.0592,
+    "lng": -21.5411,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Leif_Erikson",
     "isCosmic": false
   },
   {
@@ -5127,11 +5127,11 @@
     "title": "Alfredo il Grande",
     "description": "re del Wessex (r. 871-899), santo per la Chiesa cattolica e la Chiesa anglicana",
     "year": 849,
-    "lat": null,
-    "lng": null,
+    "lat": 51.589,
+    "lng": -1.427,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alfredo_il_Grande",
     "isCosmic": false
   },
   {
@@ -5139,11 +5139,11 @@
     "title": "Aryabhata",
     "description": "matematico, astronomo e astrologo indiano",
     "year": 476,
-    "lat": null,
-    "lng": null,
+    "lat": 25.611,
+    "lng": 85.144,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Āryabhaṭa",
     "isCosmic": false
   },
   {
@@ -5151,11 +5151,11 @@
     "title": "Fatima bint Muhammad",
     "description": "figlia di Maometto e Khadija",
     "year": 604,
-    "lat": null,
-    "lng": null,
+    "lat": 21.4225,
+    "lng": 39.8261,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fāṭima_bint_Muhammad",
     "isCosmic": false
   },
   {
@@ -5163,11 +5163,11 @@
     "title": "Guglielmo di Occam",
     "description": "religioso cattolico, teologo e filosofo inglese (1288-1347)",
     "year": 1287,
-    "lat": null,
-    "lng": null,
+    "lat": 51.298,
+    "lng": -0.461,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guglielmo_di_Occam",
     "isCosmic": false
   },
   {
@@ -5175,11 +5175,11 @@
     "title": "al-Farabi",
     "description": "filosofo persiano",
     "year": 870,
-    "lat": null,
-    "lng": null,
+    "lat": 42.8515,
+    "lng": 68.303,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Al-Farabi",
     "isCosmic": false
   },
   {
@@ -5187,11 +5187,11 @@
     "title": "Jabir ibn Hayyan",
     "description": "alchimista arabo",
     "year": 721,
-    "lat": null,
-    "lng": null,
+    "lat": 36.4861,
+    "lng": 59.5176,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jabir_ibn_Hayyan",
     "isCosmic": false
   },
   {
@@ -5199,11 +5199,11 @@
     "title": "Giotto",
     "description": "pittore e architetto italiano del XIV secolo",
     "year": 1267,
-    "lat": null,
-    "lng": null,
+    "lat": 43.9333,
+    "lng": 11.4667,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giotto",
     "isCosmic": false
   },
   {
@@ -5211,11 +5211,11 @@
     "title": "Śaṅkara",
     "description": "teologo e filosofo indiano",
     "year": 788,
-    "lat": null,
-    "lng": null,
+    "lat": 10.1661,
+    "lng": 76.4389,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Śaṅkara",
     "isCosmic": false
   },
   {
@@ -5223,11 +5223,11 @@
     "title": "Rhazes",
     "description": "scienziato persiano",
     "year": 866,
-    "lat": null,
-    "lng": null,
+    "lat": 35.5975,
+    "lng": 51.4344,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Rhazes",
     "isCosmic": false
   },
   {
@@ -5235,11 +5235,11 @@
     "title": "Ruggero Bacone",
     "description": "filosofo, scienziato e teologo inglese",
     "year": 1220,
-    "lat": null,
-    "lng": null,
+    "lat": 51.0011,
+    "lng": -2.6825,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ruggero_Bacone",
     "isCosmic": false
   },
   {
@@ -5247,11 +5247,11 @@
     "title": "Alberto Magno",
     "description": "vescovo cattolico, religioso e santo tedesco",
     "year": 1200,
-    "lat": null,
-    "lng": null,
+    "lat": 48.5667,
+    "lng": 10.4333,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alberto_Magno",
     "isCosmic": false
   },
   {
@@ -5259,11 +5259,11 @@
     "title": "Luigi IX di Francia",
     "description": "re di Francia (r. 1226-1270)",
     "year": 1214,
-    "lat": null,
-    "lng": null,
+    "lat": 48.9289,
+    "lng": 2.0447,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_IX_di_Francia",
     "isCosmic": false
   },
   {
@@ -5271,11 +5271,11 @@
     "title": "Hieronymus Bosch",
     "description": "pittore olandese",
     "year": 1450,
-    "lat": null,
-    "lng": null,
+    "lat": 51.7,
+    "lng": 5.3167,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Hieronymus_Bosch",
     "isCosmic": false
   },
   {
@@ -5283,11 +5283,11 @@
     "title": "Severino Boezio",
     "description": "filosofo e senatore romano",
     "year": 480,
-    "lat": null,
-    "lng": null,
+    "lat": 41.8931,
+    "lng": 12.4828,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Severino_Boezio",
     "isCosmic": false
   },
   {
@@ -5295,11 +5295,11 @@
     "title": "Giovanni d'Inghilterra",
     "description": "re d'Inghilterra (r. 1199-1216)",
     "year": 1166,
-    "lat": null,
-    "lng": null,
+    "lat": 51.755,
+    "lng": -1.2627,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -5307,11 +5307,11 @@
     "title": "Federico II di Svevia",
     "description": "re di Sicilia (r. 1198-1250), sovrano del Sacro Romano Impero (r. 1215-1250), re di Gerusalemme (r. 1225-1250)",
     "year": 1195,
-    "lat": null,
-    "lng": null,
+    "lat": 43.5238,
+    "lng": 13.2462,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Federico_II_di_Svevia",
     "isCosmic": false
   },
   {
@@ -5319,11 +5319,11 @@
     "title": "Anselmo d'Aosta",
     "description": "teologo, filosofo, monaco e arcivescovo",
     "year": 1033,
-    "lat": null,
-    "lng": null,
+    "lat": 45.7372,
+    "lng": 7.3206,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Anselmo_d'Aosta",
     "isCosmic": false
   },
   {
@@ -5331,11 +5331,11 @@
     "title": "Bernardo di Chiaravalle",
     "description": "religioso, abate e teologo francese, santo della Chiesa cristiana",
     "year": 1091,
-    "lat": null,
-    "lng": null,
+    "lat": 47.3433,
+    "lng": 5.0192,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bernardo_di_Chiaravalle",
     "isCosmic": false
   },
   {
@@ -5343,11 +5343,11 @@
     "title": "Nizami Ganjavi",
     "description": "poeta persiano",
     "year": 1141,
-    "lat": null,
-    "lng": null,
+    "lat": 40.6828,
+    "lng": 46.3606,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nizami_Ganjavi",
     "isCosmic": false
   },
   {
@@ -5355,11 +5355,11 @@
     "title": "Selim I",
     "description": "sultano ottomano (r. 1512-1520)",
     "year": 1470,
-    "lat": null,
-    "lng": null,
+    "lat": 40.6787,
+    "lng": 35.8278,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Selim_I",
     "isCosmic": false
   },
   {
@@ -5367,11 +5367,11 @@
     "title": "Leon Battista Alberti",
     "description": "architetto, scrittore e matematico italiano",
     "year": 1404,
-    "lat": null,
-    "lng": null,
+    "lat": 44.4072,
+    "lng": 8.9339,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Leon_Battista_Alberti",
     "isCosmic": false
   },
   {
@@ -5379,11 +5379,11 @@
     "title": "Ibn Arabi",
     "description": "filosofo, mistico e poeta arabo",
     "year": 1165,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9833,
+    "lng": -1.1303,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ibn_Arabi",
     "isCosmic": false
   },
   {
@@ -5391,11 +5391,11 @@
     "title": "Edoardo I d'Inghilterra",
     "description": "re d'Inghilterra (r. 1272-1307)",
     "year": 1239,
-    "lat": null,
-    "lng": null,
+    "lat": 51.4994,
+    "lng": -0.1242,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edoardo_I_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -5403,11 +5403,11 @@
     "title": "Riccardo III d'Inghilterra",
     "description": "re d'Inghilterra (r. 1483-1485)",
     "year": 1452,
-    "lat": null,
-    "lng": null,
+    "lat": 52.5242,
+    "lng": -0.4357,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Riccardo_III_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -5415,11 +5415,11 @@
     "title": "papa Adriano VI",
     "description": "218° vescovo di Roma e papa della Chiesa cattolica dal 1522 al 1523",
     "year": 1459,
-    "lat": null,
-    "lng": null,
+    "lat": 52.0908,
+    "lng": 5.1217,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Papa_Adriano_VI",
     "isCosmic": false
   },
   {
@@ -5427,11 +5427,11 @@
     "title": "Jan van Eyck",
     "description": "pittore fiammingo",
     "year": 1390,
-    "lat": null,
-    "lng": null,
+    "lat": 51.1019,
+    "lng": 5.7856,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jan_van_Eyck",
     "isCosmic": false
   },
   {
@@ -5439,11 +5439,11 @@
     "title": "Girolamo Savonarola",
     "description": "religioso, politico e predicatore italiano (1452-1498)",
     "year": 1452,
-    "lat": null,
-    "lng": null,
+    "lat": 44.8392,
+    "lng": 11.6175,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Girolamo_Savonarola",
     "isCosmic": false
   },
   {
@@ -5451,11 +5451,11 @@
     "title": "Giami",
     "description": "poeta persiano",
     "year": 1414,
-    "lat": null,
-    "lng": null,
+    "lat": 34.5358,
+    "lng": 60.1775,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giami",
     "isCosmic": false
   },
   {
@@ -5463,11 +5463,11 @@
     "title": "Ludovico il Pio",
     "description": "imperatore carolingio (r. 814-840)",
     "year": 778,
-    "lat": null,
-    "lng": null,
+    "lat": 46.6511,
+    "lng": 0.3722,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ludovico_il_Pio",
     "isCosmic": false
   },
   {
@@ -5475,11 +5475,11 @@
     "title": "al-Kindi",
     "description": "musicista, filosofo, matematico, fisico astronomo e scienziato arabo",
     "year": 801,
-    "lat": null,
-    "lng": null,
+    "lat": 32.03,
+    "lng": 44.4,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Al-Kindi",
     "isCosmic": false
   },
   {
@@ -5487,11 +5487,11 @@
     "title": "papa Eugenio IV",
     "description": "207° vescovo di Roma e papa della Chiesa cattolica dal 1431 al 1447",
     "year": 1383,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4397,
+    "lng": 12.3319,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Papa_Eugenio_IV",
     "isCosmic": false
   },
   {
@@ -5499,11 +5499,11 @@
     "title": "Enrico II d'Inghilterra",
     "description": "re d'Inghilterra (r. 1154-1189)",
     "year": 1133,
-    "lat": null,
-    "lng": null,
+    "lat": 48.0042,
+    "lng": 0.1969,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_II_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -5511,11 +5511,11 @@
     "title": "Carlo il Calvo",
     "description": "re dei Franchi occidentali (r. 840-877) e imperatore carolingio (r. 875-877)",
     "year": 823,
-    "lat": null,
-    "lng": null,
+    "lat": 50.1106,
+    "lng": 8.6822,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_il_Calvo",
     "isCosmic": false
   },
   {
@@ -5523,11 +5523,11 @@
     "title": "Isidoro di Siviglia",
     "description": "teologo, scrittore e arcivescovo cattolico spagnolo",
     "year": 560,
-    "lat": null,
-    "lng": null,
+    "lat": 37.6019,
+    "lng": -0.9842,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Isidoro_di_Siviglia",
     "isCosmic": false
   },
   {
@@ -5535,11 +5535,11 @@
     "title": "John Wyclif",
     "description": "teologo britannico",
     "year": 1320,
-    "lat": null,
-    "lng": null,
+    "lat": 54.38,
+    "lng": -1.719,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Wyclif",
     "isCosmic": false
   },
   {
@@ -5547,11 +5547,11 @@
     "title": "Kabīr",
     "description": "mistico e poeta indiano",
     "year": 1398,
-    "lat": null,
-    "lng": null,
+    "lat": 25.3189,
+    "lng": 83.0128,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Kabīr",
     "isCosmic": false
   },
   {
@@ -5559,11 +5559,11 @@
     "title": "Edoardo III d'Inghilterra",
     "description": "re d'Inghilterra (r. 1327-1377)",
     "year": 1312,
-    "lat": null,
-    "lng": null,
+    "lat": 51.4839,
+    "lng": -0.6044,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edoardo_III_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -5571,11 +5571,11 @@
     "title": "Enrico VII d'Inghilterra",
     "description": "re d'Inghilterra (r. 1485-1509)",
     "year": 1457,
-    "lat": null,
-    "lng": null,
+    "lat": 51.6769,
+    "lng": -4.9206,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_VII_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -5583,11 +5583,11 @@
     "title": "Nicola Cusano",
     "description": "cardinale, teologo, filosofo, umanista, giurista, matematico e astronomo tedesco (1401-1464)",
     "year": 1401,
-    "lat": null,
-    "lng": null,
+    "lat": 49.9161,
+    "lng": 7.0694,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nicola_Cusano",
     "isCosmic": false
   },
   {
@@ -5595,11 +5595,11 @@
     "title": "Caterina da Siena",
     "description": "religiosa italiana",
     "year": 1347,
-    "lat": null,
-    "lng": null,
+    "lat": 43.3183,
+    "lng": 11.3314,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Caterina_da_Siena",
     "isCosmic": false
   },
   {
@@ -5607,11 +5607,11 @@
     "title": "Scià Isma'il I",
     "description": "scià di Persia, capostipite della dinastia safavide",
     "year": 1487,
-    "lat": null,
-    "lng": null,
+    "lat": 38.25,
+    "lng": 48.3,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Scià_Isma'il_I",
     "isCosmic": false
   },
   {
@@ -5619,11 +5619,11 @@
     "title": "Pipino il Breve",
     "description": "maestro di palazzo franco dal 741 al 751, poi re dei Franchi (r. 751-768)",
     "year": 714,
-    "lat": null,
-    "lng": null,
+    "lat": 50.6397,
+    "lng": 5.5706,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pipino_il_Breve",
     "isCosmic": false
   },
   {
@@ -5631,11 +5631,11 @@
     "title": "Carlo IV di Lussemburgo",
     "description": "sovrano del Sacro Romano Impero e re di Boemia (r. 1346-1378)",
     "year": 1316,
-    "lat": null,
-    "lng": null,
+    "lat": 50.0875,
+    "lng": 14.4214,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_IV_di_Lussemburgo",
     "isCosmic": false
   },
   {
@@ -5643,11 +5643,11 @@
     "title": "Pedro Álvares Cabral",
     "description": "navigatore e esploratore portoghese",
     "year": 1467,
-    "lat": null,
-    "lng": null,
+    "lat": 40.3667,
+    "lng": -7.35,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pedro_Álvares_Cabral",
     "isCosmic": false
   },
   {
@@ -5659,7 +5659,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bartolomeo_Diaz",
     "isCosmic": false
   },
   {
@@ -5671,7 +5671,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Vladimir_I_di_Kiev",
     "isCosmic": false
   },
   {
@@ -5679,11 +5679,11 @@
     "title": "Murad II",
     "description": "sultano ottomano (r. 1421-1444, 1446-1451)",
     "year": 1404,
-    "lat": null,
-    "lng": null,
+    "lat": 40.6787,
+    "lng": 35.8278,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Murad_II",
     "isCosmic": false
   },
   {
@@ -5695,7 +5695,7 @@
     "lng": 38.7667,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Badr",
     "isCosmic": false
   },
   {
@@ -5707,7 +5707,7 @@
     "lng": 0.4878,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Hastings",
     "isCosmic": false
   },
   {
@@ -5719,7 +5719,7 @@
     "lng": -1.3167,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_delle_due_rose",
     "isCosmic": false
   },
   {
@@ -5727,11 +5727,11 @@
     "title": "Giovanni Damasceno",
     "description": "presbitero e teologo siriano",
     "year": 675,
-    "lat": null,
-    "lng": null,
+    "lat": 33.5131,
+    "lng": 36.2919,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_Damasceno",
     "isCosmic": false
   },
   {
@@ -5739,11 +5739,11 @@
     "title": "Masaccio",
     "description": "pittore italiano (1401-1428)",
     "year": 1401,
-    "lat": null,
-    "lng": null,
+    "lat": 43.5644,
+    "lng": 11.5328,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Masaccio",
     "isCosmic": false
   },
   {
@@ -5751,11 +5751,11 @@
     "title": "Christine de Pizan",
     "description": "scrittrice e poetessa francese di origine italiana",
     "year": 1364,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4397,
+    "lng": 12.3319,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Christine_de_Pizan",
     "isCosmic": false
   },
   {
@@ -5763,11 +5763,11 @@
     "title": "papa Gregorio VIII",
     "description": "173° vescovo di Roma e papa della Chiesa cattolica da ottobre a dicembre del 1187",
     "year": 1100,
-    "lat": null,
-    "lng": null,
+    "lat": 41.1333,
+    "lng": 14.7833,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Papa_Gregorio_VIII",
     "isCosmic": false
   },
   {
@@ -5775,11 +5775,11 @@
     "title": "Carlo VI di Francia",
     "description": "re di Francia (r. 1380-1422)",
     "year": 1368,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_VI_di_Francia",
     "isCosmic": false
   },
   {
@@ -5787,11 +5787,11 @@
     "title": "Uluğ Bek",
     "description": "astronomo e matematico persiano",
     "year": 1394,
-    "lat": null,
-    "lng": null,
+    "lat": 36.4347,
+    "lng": 48.7975,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Uluğ_Bek",
     "isCosmic": false
   },
   {
@@ -5799,11 +5799,11 @@
     "title": "Amir Khusrow",
     "description": "poeta indiano",
     "year": 1253,
-    "lat": null,
-    "lng": null,
+    "lat": 27.6908,
+    "lng": 78.9983,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Amir_Khusrow",
     "isCosmic": false
   },
   {
@@ -5811,11 +5811,11 @@
     "title": "Bonaventura da Bagnoregio",
     "description": "cardinale, filosofo e teologo italiano (1221-1274)",
     "year": 1221,
-    "lat": null,
-    "lng": null,
+    "lat": 42.63,
+    "lng": 12.0892,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bonaventura_da_Bagnoregio",
     "isCosmic": false
   },
   {
@@ -5823,11 +5823,11 @@
     "title": "Bayezid II",
     "description": "sultano ottomano (r. 1481-1512)",
     "year": 1447,
-    "lat": null,
-    "lng": null,
+    "lat": 41.35,
+    "lng": 26.5,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bayezid_II",
     "isCosmic": false
   },
   {
@@ -5835,11 +5835,11 @@
     "title": "Alfonso X di Castiglia",
     "description": "re di Castiglia e León (r. 1252-1284)",
     "year": 1221,
-    "lat": null,
-    "lng": null,
+    "lat": 39.8667,
+    "lng": -4.0333,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alfonso_X_di_Castiglia",
     "isCosmic": false
   },
   {
@@ -5847,11 +5847,11 @@
     "title": "Duns Scoto",
     "description": "frate, filosofo, teologo e beato cattolico scozzese",
     "year": 1266,
-    "lat": null,
-    "lng": null,
+    "lat": 55.7784,
+    "lng": -2.3426,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Duns_Scoto",
     "isCosmic": false
   },
   {
@@ -5859,11 +5859,11 @@
     "title": "Tommaso da Kempis",
     "description": "monaco tedesco",
     "year": 1379,
-    "lat": null,
-    "lng": null,
+    "lat": 51.3658,
+    "lng": 6.4194,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tommaso_da_Kempis",
     "isCosmic": false
   },
   {
@@ -5871,11 +5871,11 @@
     "title": "Carlo VII di Francia",
     "description": "re di Francia (r. 1422-1461)",
     "year": 1403,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_VII_di_Francia",
     "isCosmic": false
   },
   {
@@ -5883,11 +5883,11 @@
     "title": "Canuto I di Danimarca",
     "description": "re d'Inghilterra (r. 1016-1035), Danimarca (r. 1018-1035) e Norvegia (r. 1028-1035)",
     "year": 994,
-    "lat": null,
-    "lng": null,
+    "lat": 56,
+    "lng": 10,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Canuto_il_Grande",
     "isCosmic": false
   },
   {
@@ -5895,11 +5895,11 @@
     "title": "Khayr al-Din Barbarossa",
     "description": "corsaro e ammiraglio ottomano",
     "year": 1478,
-    "lat": null,
-    "lng": null,
+    "lat": 39.1047,
+    "lng": 26.5536,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Khayr_al-Dīn_Barbarossa",
     "isCosmic": false
   },
   {
@@ -5907,11 +5907,11 @@
     "title": "Beato Angelico",
     "description": "pittore italiano e beato della Chiesa Cattolica (1395-1455)",
     "year": 1390,
-    "lat": null,
-    "lng": null,
+    "lat": 43.9333,
+    "lng": 11.4667,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Beato_Angelico",
     "isCosmic": false
   },
   {
@@ -5919,11 +5919,11 @@
     "title": "Xuánzàng",
     "description": "monaco buddhista, esploratore e traduttore cinese",
     "year": 602,
-    "lat": null,
-    "lng": null,
+    "lat": 34.723,
+    "lng": 112.7796,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Xuánzàng",
     "isCosmic": false
   },
   {
@@ -5931,11 +5931,11 @@
     "title": "Giovanni Pico della Mirandola",
     "description": "umanista e filosofo italiano (1463-1494)",
     "year": 1463,
-    "lat": null,
-    "lng": null,
+    "lat": 44.8873,
+    "lng": 11.066,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_Pico_della_Mirandola",
     "isCosmic": false
   },
   {
@@ -5943,11 +5943,11 @@
     "title": "Edoardo IV d'Inghilterra",
     "description": "re d'Inghilterra (r. 1461-1470, 1471-1483)",
     "year": 1442,
-    "lat": null,
-    "lng": null,
+    "lat": 49.4431,
+    "lng": 1.1025,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edoardo_IV_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -5955,11 +5955,11 @@
     "title": "Edoardo II d'Inghilterra",
     "description": "re d'Inghilterra (r. 1307-1327)",
     "year": 1284,
-    "lat": null,
-    "lng": null,
+    "lat": 53.1393,
+    "lng": -4.2769,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edoardo_II_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -5967,11 +5967,11 @@
     "title": "Murad I",
     "description": "sultano ottomano (r. 1362-1389)",
     "year": 1326,
-    "lat": null,
-    "lng": null,
+    "lat": 40.1913,
+    "lng": 29.0805,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Murad_I",
     "isCosmic": false
   },
   {
@@ -5979,11 +5979,11 @@
     "title": "Sejong il Grande",
     "description": "re della dinastia Joseon",
     "year": 1397,
-    "lat": null,
-    "lng": null,
+    "lat": 37.58,
+    "lng": 126.9703,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sejong_il_Grande",
     "isCosmic": false
   },
   {
@@ -5991,11 +5991,11 @@
     "title": "Bramante",
     "description": "pittore e architetto italiano del XVI secolo",
     "year": 1444,
-    "lat": null,
-    "lng": null,
+    "lat": 43.6766,
+    "lng": 12.645,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bramante",
     "isCosmic": false
   },
   {
@@ -6003,11 +6003,11 @@
     "title": "Enrico III d'Inghilterra",
     "description": "re d'Inghilterra (r. 1216-1272)",
     "year": 1207,
-    "lat": null,
-    "lng": null,
+    "lat": 51.0618,
+    "lng": -1.3203,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_III_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6015,11 +6015,11 @@
     "title": "Enrico VI d'Inghilterra",
     "description": "re d'Inghilterra (r. 1422-1461, 1470-1471)",
     "year": 1421,
-    "lat": null,
-    "lng": null,
+    "lat": 51.4839,
+    "lng": -0.6044,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_VI_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6027,11 +6027,11 @@
     "title": "Luigi VII di Francia",
     "description": "re di Francia (r. 1137-1180)",
     "year": 1120,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_VII_di_Francia",
     "isCosmic": false
   },
   {
@@ -6039,11 +6039,11 @@
     "title": "Roberto I di Scozia",
     "description": "re di Scozia (r. 1306-1329)",
     "year": 1274,
-    "lat": null,
-    "lng": null,
+    "lat": 55.3261,
+    "lng": -4.8441,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Roberto_I_di_Scozia",
     "isCosmic": false
   },
   {
@@ -6051,11 +6051,11 @@
     "title": "Carlo V di Francia",
     "description": "re di Francia (r. 1364-1380)",
     "year": 1338,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8428,
+    "lng": 2.4358,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_V_di_Francia",
     "isCosmic": false
   },
   {
@@ -6063,11 +6063,11 @@
     "title": "Riccardo II d'Inghilterra",
     "description": "re d'Inghilterra (r. 1377-1399)",
     "year": 1367,
-    "lat": null,
-    "lng": null,
+    "lat": 44.8378,
+    "lng": -0.5794,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Riccardo_II_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6075,11 +6075,11 @@
     "title": "Nasir al-Din al-Tusi",
     "description": "astronomo e matematico persiano (1201-1274)",
     "year": 1201,
-    "lat": null,
-    "lng": null,
+    "lat": 36.4861,
+    "lng": 59.5176,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Naṣīr_al-Dīn_al-Ṭūsī",
     "isCosmic": false
   },
   {
@@ -6087,11 +6087,11 @@
     "title": "Raimondo Lullo",
     "description": "filosofo, scrittore e teologo spagnolo",
     "year": 1232,
-    "lat": null,
-    "lng": null,
+    "lat": 39.5667,
+    "lng": 2.6497,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Raimondo_Lullo",
     "isCosmic": false
   },
   {
@@ -6099,11 +6099,11 @@
     "title": "Meister Eckhart",
     "description": "teologo e religioso tedesco",
     "year": 1260,
-    "lat": null,
-    "lng": null,
+    "lat": 51.0077,
+    "lng": 10.667,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Meister_Eckhart",
     "isCosmic": false
   },
   {
@@ -6111,11 +6111,11 @@
     "title": "Enrico IV d'Inghilterra",
     "description": "re d'Inghilterra (r. 1399-1413)",
     "year": 1367,
-    "lat": null,
-    "lng": null,
+    "lat": 53.1651,
+    "lng": 0.0169,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_IV_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6123,11 +6123,11 @@
     "title": "Mehmet I",
     "description": "sultano ottomano (r. 1413-1421)",
     "year": 1386,
-    "lat": null,
-    "lng": null,
+    "lat": 40.1913,
+    "lng": 29.0805,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mehmet_I",
     "isCosmic": false
   },
   {
@@ -6135,11 +6135,11 @@
     "title": "Atelstano",
     "description": "re del Wessex (r. 924-939), considerato il primo re d'Inghilterra",
     "year": 895,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2,
+    "lng": -2,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Atelstano",
     "isCosmic": false
   },
   {
@@ -6147,11 +6147,11 @@
     "title": "Giovanni Bellini",
     "description": "pittore italiano",
     "year": 1430,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4397,
+    "lng": 12.3319,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_Bellini",
     "isCosmic": false
   },
   {
@@ -6159,11 +6159,11 @@
     "title": "Domenico Ghirlandaio",
     "description": "pittore italiano del XV secolo",
     "year": 1448,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Domenico_Ghirlandaio",
     "isCosmic": false
   },
   {
@@ -6171,11 +6171,11 @@
     "title": "papa Innocenzo V",
     "description": "185° vescovo di Roma e papa della Chiesa cattolica da gennaio a giugno del 1276",
     "year": 1225,
-    "lat": null,
-    "lng": null,
+    "lat": 45.3731,
+    "lng": 4.4886,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Papa_Innocenzo_V",
     "isCosmic": false
   },
   {
@@ -6183,11 +6183,11 @@
     "title": "Sigismondo di Lussemburgo",
     "description": "sovrano del Sacro Romano Impero (r. 1411-1437), re di Boemia (r. 1419-1437), re consorte d'Ungheria e Croazia (1387-1437)",
     "year": 1368,
-    "lat": null,
-    "lng": null,
+    "lat": 49.45,
+    "lng": 11.0833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sigismondo_di_Lussemburgo",
     "isCosmic": false
   },
   {
@@ -6195,11 +6195,11 @@
     "title": "Stefano I d'Ungheria",
     "description": "re d'Ungheria (r. 1000-1038) e santo",
     "year": 975,
-    "lat": null,
-    "lng": null,
+    "lat": 47.7856,
+    "lng": 18.7403,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Stefano_I_d'Ungheria",
     "isCosmic": false
   },
   {
@@ -6207,11 +6207,11 @@
     "title": "Mattia Corvino",
     "description": "re d'Ungheria (r. 1458-1490)",
     "year": 1443,
-    "lat": null,
-    "lng": null,
+    "lat": 46.7689,
+    "lng": 23.5907,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mattia_Corvino",
     "isCosmic": false
   },
   {
@@ -6219,11 +6219,11 @@
     "title": "Belisario",
     "description": "generale bizantino",
     "year": 505,
-    "lat": null,
-    "lng": null,
+    "lat": 42.2874,
+    "lng": 23.2589,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Belisario",
     "isCosmic": false
   },
   {
@@ -6231,11 +6231,11 @@
     "title": "Marsilio Ficino",
     "description": "filosofo, umanista e astrologo italiano",
     "year": 1433,
-    "lat": null,
-    "lng": null,
+    "lat": 43.6167,
+    "lng": 11.4667,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marsilio_Ficino",
     "isCosmic": false
   },
   {
@@ -6243,11 +6243,11 @@
     "title": "Carlo il Grosso",
     "description": "ultimo imperatore carolingio (r. 881-887)",
     "year": 832,
-    "lat": null,
-    "lng": null,
+    "lat": 47.9125,
+    "lng": 8.5704,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_il_Grosso",
     "isCosmic": false
   },
   {
@@ -6255,11 +6255,11 @@
     "title": "Luigi VIII di Francia",
     "description": "re di Francia (r. 1223-1226)",
     "year": 1187,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_VIII_di_Francia",
     "isCosmic": false
   },
   {
@@ -6267,11 +6267,11 @@
     "title": "Goffredo di Buglione",
     "description": "nobile franco, comandante della Prima Crociata e difensore del Santo Sepolcro",
     "year": 1060,
-    "lat": null,
-    "lng": null,
+    "lat": 50.7256,
+    "lng": 1.6139,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Goffredo_di_Buglione",
     "isCosmic": false
   },
   {
@@ -6279,11 +6279,11 @@
     "title": "Giovanna di Castiglia",
     "description": "regina di Castiglia e d'Aragona",
     "year": 1479,
-    "lat": null,
-    "lng": null,
+    "lat": 39.8667,
+    "lng": -4.0333,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanna_di_Castiglia",
     "isCosmic": false
   },
   {
@@ -6295,7 +6295,7 @@
     "lng": 20.1247,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Grunwald",
     "isCosmic": false
   },
   {
@@ -6303,11 +6303,11 @@
     "title": "papa Giovanni XXI",
     "description": "187° vescovo di Roma e papa della Chiesa cattolica dal 1276 al 1277",
     "year": 1210,
-    "lat": null,
-    "lng": null,
+    "lat": 38.708,
+    "lng": -9.139,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Papa_Giovanni_XXI",
     "isCosmic": false
   },
   {
@@ -6315,11 +6315,11 @@
     "title": "Andrej Rublëv",
     "description": "pittore russo di icone (ca. 1360-1430)",
     "year": 1360,
-    "lat": null,
-    "lng": null,
+    "lat": 55.7506,
+    "lng": 37.6175,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Andrej_Rublëv",
     "isCosmic": false
   },
   {
@@ -6327,11 +6327,11 @@
     "title": "Andrea Mantegna",
     "description": "pittore, incisore e miniaturista italiano",
     "year": 1431,
-    "lat": null,
-    "lng": null,
+    "lat": 45.5704,
+    "lng": 11.7325,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Andrea_Mantegna",
     "isCosmic": false
   },
   {
@@ -6339,11 +6339,11 @@
     "title": "Chiara d'Assisi",
     "description": "religiosa italiana santa",
     "year": 1194,
-    "lat": null,
-    "lng": null,
+    "lat": 43.0708,
+    "lng": 12.615,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Chiara_d'Assisi",
     "isCosmic": false
   },
   {
@@ -6351,11 +6351,11 @@
     "title": "Ali-Shir Nava'i",
     "description": "poeta e politico turco",
     "year": 1441,
-    "lat": null,
-    "lng": null,
+    "lat": 34.3419,
+    "lng": 62.2031,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ali-Shir_Nava'i",
     "isCosmic": false
   },
   {
@@ -6363,11 +6363,11 @@
     "title": "Luca Pacioli",
     "description": "religioso, matematico e economista italiano",
     "year": 1440,
-    "lat": null,
-    "lng": null,
+    "lat": 43.5756,
+    "lng": 12.1439,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luca_Pacioli",
     "isCosmic": false
   },
   {
@@ -6379,7 +6379,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Rjurik",
     "isCosmic": false
   },
   {
@@ -6387,11 +6387,11 @@
     "title": "Filippo Brunelleschi",
     "description": "architetto, ingegnere, scultore e matematico italiano (1377–1446)",
     "year": 1377,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filippo_Brunelleschi",
     "isCosmic": false
   },
   {
@@ -6399,11 +6399,11 @@
     "title": "Farid al-Din 'Attar",
     "description": "mistico e poeta persiano",
     "year": 1145,
-    "lat": null,
-    "lng": null,
+    "lat": 36.2133,
+    "lng": 58.7958,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Farid_al-Din_'Attar",
     "isCosmic": false
   },
   {
@@ -6411,11 +6411,11 @@
     "title": "Brigida di Svezia",
     "description": "religiosa e mistica svedese",
     "year": 1303,
-    "lat": null,
-    "lng": null,
+    "lat": 59.7373,
+    "lng": 18.4948,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Brigida_di_Svezia",
     "isCosmic": false
   },
   {
@@ -6423,11 +6423,11 @@
     "title": "Alfonso de Albuquerque",
     "description": "esploratore portoghese",
     "year": 1453,
-    "lat": null,
-    "lng": null,
+    "lat": 38.9256,
+    "lng": -9.0099,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alfonso_de_Albuquerque",
     "isCosmic": false
   },
   {
@@ -6439,7 +6439,7 @@
     "lng": 0.5344,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Poitiers_(732)",
     "isCosmic": false
   },
   {
@@ -6447,11 +6447,11 @@
     "title": "Piero della Francesca",
     "description": "pittore e matematico italiano del XV secolo",
     "year": 1415,
-    "lat": null,
-    "lng": null,
+    "lat": 43.5756,
+    "lng": 12.1439,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Piero_della_Francesca",
     "isCosmic": false
   },
   {
@@ -6459,11 +6459,11 @@
     "title": "Tabari",
     "description": "storico e teologo persiano",
     "year": 839,
-    "lat": null,
-    "lng": null,
+    "lat": 36.4697,
+    "lng": 52.3508,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ṭabarī",
     "isCosmic": false
   },
   {
@@ -6471,11 +6471,11 @@
     "title": "Stefano d'Inghilterra",
     "description": "re d'Inghilterra (r. 1135-1154)",
     "year": 1095,
-    "lat": null,
-    "lng": null,
+    "lat": 47.5931,
+    "lng": 1.3272,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Stefano_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6483,11 +6483,11 @@
     "title": "Giorgione",
     "description": "pittore italiano del XVI secolo",
     "year": 1478,
-    "lat": null,
-    "lng": null,
+    "lat": 45.6667,
+    "lng": 11.9333,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giorgione",
     "isCosmic": false
   },
   {
@@ -6495,11 +6495,11 @@
     "title": "Carlo III di Francia",
     "description": "re dei Franchi occidentali (r. 898-922)",
     "year": 879,
-    "lat": null,
-    "lng": null,
+    "lat": 49.9292,
+    "lng": 2.9325,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_III_di_Francia",
     "isCosmic": false
   },
   {
@@ -6507,11 +6507,11 @@
     "title": "Lotario I",
     "description": "imperatore carolingio (r. 840-855)",
     "year": 795,
-    "lat": null,
-    "lng": null,
+    "lat": 48.5667,
+    "lng": 12.1167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Lotario_I",
     "isCosmic": false
   },
   {
@@ -6519,11 +6519,11 @@
     "title": "Enrico il Navigatore",
     "description": "infante del Portogallo, promotore di esplorazioni geografiche",
     "year": 1394,
-    "lat": null,
-    "lng": null,
+    "lat": 41.15,
+    "lng": -8.6108,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_il_Navigatore",
     "isCosmic": false
   },
   {
@@ -6531,11 +6531,11 @@
     "title": "Erik il Rosso",
     "description": "esploratore norreno",
     "year": 950,
-    "lat": null,
-    "lng": null,
+    "lat": 58.7167,
+    "lng": 5.75,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Erik_il_Rosso",
     "isCosmic": false
   },
   {
@@ -6543,11 +6543,11 @@
     "title": "Andrea del Verrocchio",
     "description": "scultore e pittore italiano",
     "year": 1435,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Andrea_del_Verrocchio",
     "isCosmic": false
   },
   {
@@ -6555,11 +6555,11 @@
     "title": "Carlo IV di Francia",
     "description": "re di Francia (r. 1322-1328)",
     "year": 1294,
-    "lat": null,
-    "lng": null,
+    "lat": 49.2578,
+    "lng": 2.4828,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_IV_di_Francia",
     "isCosmic": false
   },
   {
@@ -6567,11 +6567,11 @@
     "title": "Bhaskara",
     "description": "astronomo e matematico indiano",
     "year": 1114,
-    "lat": null,
-    "lng": null,
+    "lat": 18.9904,
+    "lng": 75.7542,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bhāskara_II",
     "isCosmic": false
   },
   {
@@ -6579,11 +6579,11 @@
     "title": "Perugino",
     "description": "pittore italiano del XV secolo e Rinascimento",
     "year": 1448,
-    "lat": null,
-    "lng": null,
+    "lat": 42.9521,
+    "lng": 12.0025,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Perugino",
     "isCosmic": false
   },
   {
@@ -6591,11 +6591,11 @@
     "title": "Duccio di Buoninsegna",
     "description": "pittore italiano del XIII secolo (1255-1319)",
     "year": 1255,
-    "lat": null,
-    "lng": null,
+    "lat": 43.3183,
+    "lng": 11.3314,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Duccio_di_Buoninsegna",
     "isCosmic": false
   },
   {
@@ -6603,11 +6603,11 @@
     "title": "Luigi VI di Francia",
     "description": "re di Francia (r. 1108-1137)",
     "year": 1081,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_VI_di_Francia",
     "isCosmic": false
   },
   {
@@ -6615,11 +6615,11 @@
     "title": "Clotario I",
     "description": "re franco della dinastia merovingia",
     "year": 498,
-    "lat": null,
-    "lng": null,
+    "lat": 49.3811,
+    "lng": 3.3225,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Clotario_I",
     "isCosmic": false
   },
   {
@@ -6627,11 +6627,11 @@
     "title": "Filippo I di Francia",
     "description": "re di Francia (r. 1060-1108)",
     "year": 1052,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4217,
+    "lng": 0.3172,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filippo_I_di_Francia",
     "isCosmic": false
   },
   {
@@ -6639,11 +6639,11 @@
     "title": "Teodora",
     "description": "imperatrice romana d'Oriente consorte di Giustiniano I",
     "year": 497,
-    "lat": null,
-    "lng": null,
+    "lat": 41.6,
+    "lng": 35,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Teodora_(moglie_di_Giustiniano)",
     "isCosmic": false
   },
   {
@@ -6651,11 +6651,11 @@
     "title": "Juan Sebastián Elcano",
     "description": "esploratore spagnolo",
     "year": 1486,
-    "lat": null,
-    "lng": null,
+    "lat": 43.3045,
+    "lng": -2.2037,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Juan_Sebastián_Elcano",
     "isCosmic": false
   },
   {
@@ -6667,7 +6667,7 @@
     "lng": 39.6117,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Uḥud",
     "isCosmic": false
   },
   {
@@ -6679,7 +6679,7 @@
     "lng": 42.59,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Manzicerta",
     "isCosmic": false
   },
   {
@@ -6687,11 +6687,11 @@
     "title": "Shen Kuo",
     "description": "geologo, astronomo e ambasciatore cinese (1031-1095)",
     "year": 1031,
-    "lat": null,
-    "lng": null,
+    "lat": 30.2375,
+    "lng": 120.1408,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Shen_Kuo",
     "isCosmic": false
   },
   {
@@ -6699,11 +6699,11 @@
     "title": "Juan Ponce de León",
     "description": "condottiero spagnolo",
     "year": 1460,
-    "lat": null,
-    "lng": null,
+    "lat": 42.2169,
+    "lng": -5.1008,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Juan_Ponce_de_León",
     "isCosmic": false
   },
   {
@@ -6711,11 +6711,11 @@
     "title": "Cosroe II",
     "description": "imperatore sasanide (r. 590-628)",
     "year": 570,
-    "lat": null,
-    "lng": null,
+    "lat": 33.0936,
+    "lng": 44.5808,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cosroe_II",
     "isCosmic": false
   },
   {
@@ -6723,11 +6723,11 @@
     "title": "Piri Reìs",
     "description": "ammiraglio e cartografo turco",
     "year": 1470,
-    "lat": null,
-    "lng": null,
+    "lat": 40.4139,
+    "lng": 26.6703,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Piri_Reìs",
     "isCosmic": false
   },
   {
@@ -6739,7 +6739,7 @@
     "lng": 44.0314,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Kerbela",
     "isCosmic": false
   },
   {
@@ -6751,7 +6751,7 @@
     "lng": 2.1414,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Azincourt",
     "isCosmic": false
   },
   {
@@ -6759,11 +6759,11 @@
     "title": "Agrippa von Nettesheim",
     "description": "alchimista, astrologo e esoterista tedesco",
     "year": 1486,
-    "lat": null,
-    "lng": null,
+    "lat": 50.9422,
+    "lng": 6.9578,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Agrippa_von_Nettesheim",
     "isCosmic": false
   },
   {
@@ -6771,11 +6771,11 @@
     "title": "Rogier van der Weyden",
     "description": "pittore fiammingo",
     "year": 1390,
-    "lat": null,
-    "lng": null,
+    "lat": 50.6056,
+    "lng": 3.3881,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Rogier_van_der_Weyden",
     "isCosmic": false
   },
   {
@@ -6783,11 +6783,11 @@
     "title": "Cimabue",
     "description": "pittore italiano del XIII secolo",
     "year": 1240,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cimabue",
     "isCosmic": false
   },
   {
@@ -6795,11 +6795,11 @@
     "title": "Edmondo I d'Inghilterra",
     "description": "re d'Inghilterra (r. 939-946)",
     "year": 920,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2,
+    "lng": -2,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edmondo_I_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6811,7 +6811,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ludovico_II_il_Germanico",
     "isCosmic": false
   },
   {
@@ -6819,11 +6819,11 @@
     "title": "Cristiano I di Danimarca",
     "description": "re di Danimarca (r. 1448-1481), Norvegia (r. 1450-1481), Svezia (r. 1457-1464)",
     "year": 1426,
-    "lat": null,
-    "lng": null,
+    "lat": 53.1439,
+    "lng": 8.2139,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cristiano_I_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -6835,7 +6835,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Arnolfo_di_Carinzia",
     "isCosmic": false
   },
   {
@@ -6843,11 +6843,11 @@
     "title": "Giacomo IV di Scozia",
     "description": "re di Scozia (r. 1488-1513)",
     "year": 1473,
-    "lat": null,
-    "lng": null,
+    "lat": 55.9532,
+    "lng": -3.1716,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giacomo_IV_di_Scozia",
     "isCosmic": false
   },
   {
@@ -6855,11 +6855,11 @@
     "title": "Vasco Núñez de Balboa",
     "description": "militare spagnolo",
     "year": 1475,
-    "lat": null,
-    "lng": null,
+    "lat": 38.3208,
+    "lng": -6.773,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Vasco_Núñez_de_Balboa",
     "isCosmic": false
   },
   {
@@ -6867,11 +6867,11 @@
     "title": "Harald III di Norvegia",
     "description": "re di Norvegia (r. 1047-1066)",
     "year": 1015,
-    "lat": null,
-    "lng": null,
+    "lat": 60.2053,
+    "lng": 10.1525,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Harald_III_di_Norvegia",
     "isCosmic": false
   },
   {
@@ -6883,7 +6883,7 @@
     "lng": 21.12,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_della_Piana_dei_Merli",
     "isCosmic": false
   },
   {
@@ -6891,11 +6891,11 @@
     "title": "Andrea del Sarto",
     "description": "pittore italiano del XVI secolo",
     "year": 1486,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Andrea_del_Sarto",
     "isCosmic": false
   },
   {
@@ -6903,11 +6903,11 @@
     "title": "Lucas Cranach il Vecchio",
     "description": "pittore tedesco (1472-1553)",
     "year": 1472,
-    "lat": null,
-    "lng": null,
+    "lat": 50.2411,
+    "lng": 11.3281,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Lucas_Cranach_il_Vecchio",
     "isCosmic": false
   },
   {
@@ -6915,11 +6915,11 @@
     "title": "Etelredo II d'Inghilterra",
     "description": "re d'Inghilterra (r. 978-1013, 1014-1016)",
     "year": 967,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2,
+    "lng": -2,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Etelredo_II_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6927,11 +6927,11 @@
     "title": "Al-Jāḥiẓ",
     "description": "letterato, filosofo e filologo arabo",
     "year": 775,
-    "lat": null,
-    "lng": null,
+    "lat": 30.515,
+    "lng": 47.81,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Al-Jāḥiẓ",
     "isCosmic": false
   },
   {
@@ -6939,11 +6939,11 @@
     "title": "Antonello da Messina",
     "description": "pittore italiano del XV secolo",
     "year": 1430,
-    "lat": null,
-    "lng": null,
+    "lat": 38.1936,
+    "lng": 15.5542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antonello_da_Messina",
     "isCosmic": false
   },
   {
@@ -6951,11 +6951,11 @@
     "title": "Paolo Uccello",
     "description": "pittore italiano (1397-1475)",
     "year": 1397,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7878,
+    "lng": 11.7244,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Paolo_Uccello",
     "isCosmic": false
   },
   {
@@ -6967,7 +6967,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_II_di_Francia",
     "isCosmic": false
   },
   {
@@ -6975,11 +6975,11 @@
     "title": "Edmondo II d'Inghilterra",
     "description": "re d'Inghilterra (r. 1016)",
     "year": 980,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2,
+    "lng": -2,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edmondo_II_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6987,11 +6987,11 @@
     "title": "Edgardo il Pacifico",
     "description": "re d'Inghilterra (r. 959-975)",
     "year": 943,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2,
+    "lng": -2,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edgardo_I_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6999,11 +6999,11 @@
     "title": "Davide II di Scozia",
     "description": "re di Scozia (r. 1329-1371)",
     "year": 1324,
-    "lat": null,
-    "lng": null,
+    "lat": 56.0695,
+    "lng": -3.4646,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Davide_II_di_Scozia",
     "isCosmic": false
   },
   {
@@ -7011,11 +7011,11 @@
     "title": "Muhammad ibn Jābir al-Harrānī al-Battānī",
     "description": "matematico e astronomo arabo",
     "year": 858,
-    "lat": null,
-    "lng": null,
+    "lat": 36.8708,
+    "lng": 39.025,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Muḥammad_ibn_Jābir_al-Ḥarrānī_al-Battānī",
     "isCosmic": false
   },
   {
@@ -7023,11 +7023,11 @@
     "title": "Luigi I d'Ungheria",
     "description": "re d'Ungheria (r. 1342-1382) e Polonia (r. 1370-1382)",
     "year": 1326,
-    "lat": null,
-    "lng": null,
+    "lat": 47.7858,
+    "lng": 18.9702,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_I_d'Ungheria",
     "isCosmic": false
   },
   {
@@ -7035,11 +7035,11 @@
     "title": "Eduino",
     "description": "re d'Inghilterra (r. 955-959)",
     "year": 940,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2,
+    "lng": -2,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eadwig_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -7047,11 +7047,11 @@
     "title": "Edredo d'Inghilterra",
     "description": "re d'Inghilterra (r. 946-955)",
     "year": 923,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2,
+    "lng": -2,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edredo_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -7063,7 +7063,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ludovico_II_il_Giovane",
     "isCosmic": false
   },
   {
@@ -7071,11 +7071,11 @@
     "title": "Enrico VI del Sacro Romano Impero",
     "description": "sovrano del Sacro Romano Impero (r. 1190-1197) e re di Sicilia (r. 1194-1197)",
     "year": 1165,
-    "lat": null,
-    "lng": null,
+    "lat": 51.8475,
+    "lng": 5.8625,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_VI_di_Svevia",
     "isCosmic": false
   },
   {
@@ -7083,11 +7083,11 @@
     "title": "Ottone IV di Brunswick",
     "description": "sovrano del Sacro Romano Impero (r. 1198-1215)",
     "year": 1175,
-    "lat": null,
-    "lng": null,
+    "lat": 52.2692,
+    "lng": 10.5211,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ottone_IV_di_Brunswick",
     "isCosmic": false
   },
   {
@@ -7095,11 +7095,11 @@
     "title": "Cristiano II di Danimarca",
     "description": "re di Danimarca, Norvegia (r. 1513-1523), Svezia (r. 1520-1521)",
     "year": 1481,
-    "lat": null,
-    "lng": null,
+    "lat": 55.3097,
+    "lng": 10.7917,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cristiano_II_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -7107,11 +7107,11 @@
     "title": "Ibn Bajja",
     "description": "filosofo, medico, astronomo, geometra, musicista e poeta di Al-Andalus nel XII secolo",
     "year": 1095,
-    "lat": null,
-    "lng": null,
+    "lat": 41.6544,
+    "lng": -0.8776,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ibn_Bajja",
     "isCosmic": false
   },
   {
@@ -7119,11 +7119,11 @@
     "title": "Abbas ibn Firnas",
     "description": "scienziato e inventore berbero",
     "year": 810,
-    "lat": null,
-    "lng": null,
+    "lat": 36.7372,
+    "lng": -5.1647,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Abbas_ibn_Firnas",
     "isCosmic": false
   },
   {
@@ -7135,7 +7135,7 @@
     "lng": null,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nascita_di_Venere",
     "isCosmic": false
   },
   {
@@ -7143,11 +7143,11 @@
     "title": "Aroldo I di Danimarca",
     "description": "re di Danimarca (r. 958-986) e Norvegia (r. 970-986)",
     "year": 911,
-    "lat": null,
-    "lng": null,
+    "lat": 56,
+    "lng": 10,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aroldo_I_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -7155,11 +7155,11 @@
     "title": "Alessandro III di Scozia",
     "description": "re di Scozia (r. 1249-1286)",
     "year": 1241,
-    "lat": null,
-    "lng": null,
+    "lat": 55.5667,
+    "lng": -2.4667,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alessandro_III_di_Scozia",
     "isCosmic": false
   },
   {
@@ -7167,11 +7167,11 @@
     "title": "Egbert del Wessex",
     "description": "re del Wessex",
     "year": 771,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2,
+    "lng": -2,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Egberto_del_Wessex",
     "isCosmic": false
   },
   {
@@ -7183,7 +7183,7 @@
     "lng": 53,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Conquista_islamica_della_Persia",
     "isCosmic": false
   },
   {
@@ -7191,11 +7191,11 @@
     "title": "Al-Jazari",
     "description": "matematico, inventore e ingegnere meccanico arabo",
     "year": 1136,
-    "lat": null,
-    "lng": null,
+    "lat": 36.4667,
+    "lng": 42.1,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Al-Jazari",
     "isCosmic": false
   },
   {
@@ -7203,11 +7203,11 @@
     "title": "Abd al-Rahmān al-Sūfi",
     "description": "astronomo persiano",
     "year": 903,
-    "lat": null,
-    "lng": null,
+    "lat": 35.5975,
+    "lng": 51.4344,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Abd_al-Rahmān_al-Sūfi",
     "isCosmic": false
   },
   {
@@ -7215,11 +7215,11 @@
     "title": "Correggio",
     "description": "pittore italiano del XVI secolo",
     "year": 1489,
-    "lat": null,
-    "lng": null,
+    "lat": 44.7717,
+    "lng": 10.7806,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Correggio_(pittore)",
     "isCosmic": false
   },
   {
@@ -7227,11 +7227,11 @@
     "title": "Luigi III di Francia",
     "description": "re dei Franchi occidentali (r. 879-882)",
     "year": 863,
-    "lat": null,
-    "lng": null,
+    "lat": 48.9356,
+    "lng": 2.3539,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_III_di_Francia",
     "isCosmic": false
   },
   {
@@ -7243,7 +7243,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Clotario_II",
     "isCosmic": false
   },
   {
@@ -7251,11 +7251,11 @@
     "title": "Alessandro II di Scozia",
     "description": "re di Scozia (r. 1214-1249)",
     "year": 1198,
-    "lat": null,
-    "lng": null,
+    "lat": 55.9561,
+    "lng": -2.7833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alessandro_II_di_Scozia",
     "isCosmic": false
   },
   {
@@ -7263,11 +7263,11 @@
     "title": "Abu l-Wafa Muhammad al-Buzjani",
     "description": "matematico e astronomo persiano",
     "year": 940,
-    "lat": null,
-    "lng": null,
+    "lat": 35.1667,
+    "lng": 60.7333,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Abu_l-Wafa_Muhammad_al-Buzjani",
     "isCosmic": false
   },
   {
@@ -7275,11 +7275,11 @@
     "title": "Canuto II d'Inghilterra",
     "description": "re di Danimarca (r. 1035-1042) e Inghilterra (r. 1040-1042)",
     "year": 1018,
-    "lat": null,
-    "lng": null,
+    "lat": 52.0667,
+    "lng": -1.3167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Canuto_II_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -7287,11 +7287,11 @@
     "title": "Enrico V del Sacro Romano Impero",
     "description": "sovrano del Sacro Romano Impero (r. 1105-1125)",
     "year": 1086,
-    "lat": null,
-    "lng": null,
+    "lat": 51.906,
+    "lng": 10.4292,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_V_di_Franconia",
     "isCosmic": false
   },
   {
@@ -7299,11 +7299,11 @@
     "title": "Kenneth I di Scozia",
     "description": "re di Scozia (r. 843-858)",
     "year": 810,
-    "lat": null,
-    "lng": null,
+    "lat": 56.33,
+    "lng": -6.41,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Kenneth_I_di_Scozia",
     "isCosmic": false
   },
   {
@@ -7311,11 +7311,11 @@
     "title": "Ahmad ibn Fadlan",
     "description": "scrittore e viaggiatore arabo",
     "year": 879,
-    "lat": null,
-    "lng": null,
+    "lat": 33.3153,
+    "lng": 44.3661,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ahmad_ibn_Fadlan",
     "isCosmic": false
   },
   {
@@ -7327,7 +7327,7 @@
     "lng": 32.95,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Angora",
     "isCosmic": false
   },
   {
@@ -7339,7 +7339,7 @@
     "lng": -0.9125,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Stamford_Bridge",
     "isCosmic": false
   },
   {
@@ -7351,7 +7351,7 @@
     "lng": 39.6,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_Fossato",
     "isCosmic": false
   },
   {
@@ -7359,11 +7359,11 @@
     "title": "Regiomontano",
     "description": "matematico, astronomo e astrologo tedesco",
     "year": 1436,
-    "lat": null,
-    "lng": null,
+    "lat": 50.0778,
+    "lng": 10.5667,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Regiomontano",
     "isCosmic": false
   },
   {
@@ -7371,11 +7371,11 @@
     "title": "Su Shi",
     "description": "poeta cinese",
     "year": 1037,
-    "lat": null,
-    "lng": null,
+    "lat": 30.0575,
+    "lng": 103.8381,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Su_Shi",
     "isCosmic": false
   },
   {
@@ -7383,11 +7383,11 @@
     "title": "Wang Wei",
     "description": "poeta e pittore cinese",
     "year": 699,
-    "lat": null,
-    "lng": null,
+    "lat": 34.867,
+    "lng": 110.4417,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Wang_Wei",
     "isCosmic": false
   },
   {
@@ -7395,11 +7395,11 @@
     "title": "Carlomanno I",
     "description": "re dei franchi (r. 768-771)",
     "year": 751,
-    "lat": null,
-    "lng": null,
+    "lat": 49.3811,
+    "lng": 3.3225,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlomanno_I",
     "isCosmic": false
   },
   {
@@ -7411,7 +7411,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edoardo_il_Martire",
     "isCosmic": false
   },
   {
@@ -7419,11 +7419,11 @@
     "title": "Corrado III del Sacro Romano Impero",
     "description": "sovrano del Sacro Romano Impero (r. 1138-1152)",
     "year": 1093,
-    "lat": null,
-    "lng": null,
+    "lat": 49.8917,
+    "lng": 10.8917,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Corrado_III_di_Svevia",
     "isCosmic": false
   },
   {
@@ -7431,11 +7431,11 @@
     "title": "Andronico III Paleologo",
     "description": "imperatore bizantino (r. 1328-1341)",
     "year": 1297,
-    "lat": null,
-    "lng": null,
+    "lat": 41.0122,
+    "lng": 28.976,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Andronico_III_Paleologo",
     "isCosmic": false
   },
   {
@@ -7443,11 +7443,11 @@
     "title": "Lorenzo Ghiberti",
     "description": "scultore, orafo e architetto italiano",
     "year": 1378,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Lorenzo_Ghiberti",
     "isCosmic": false
   },
   {
@@ -7459,7 +7459,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Clodomiro",
     "isCosmic": false
   },
   {
@@ -7467,11 +7467,11 @@
     "title": "Childeberto I",
     "description": "re franco della dinastia merovingia",
     "year": 497,
-    "lat": null,
-    "lng": null,
+    "lat": 49.2653,
+    "lng": 4.0286,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Childeberto_I",
     "isCosmic": false
   },
   {
@@ -7483,7 +7483,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Andrea_II_d'Ungheria",
     "isCosmic": false
   },
   {
@@ -7491,11 +7491,11 @@
     "title": "Isacco I di Bisanzio",
     "description": "imperatore bizantino (r. 1057-1059)",
     "year": 1007,
-    "lat": null,
-    "lng": null,
+    "lat": 41.0125,
+    "lng": 28.98,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Isacco_I_Comneno",
     "isCosmic": false
   },
   {
@@ -7503,11 +7503,11 @@
     "title": "Giovanni da Pian del Carpine",
     "description": "religioso e diplomatico italiano",
     "year": 1182,
-    "lat": null,
-    "lng": null,
+    "lat": 43.1428,
+    "lng": 12.2053,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_da_Pian_del_Carpine",
     "isCosmic": false
   },
   {
@@ -7515,11 +7515,11 @@
     "title": "Guglielmo di Rubruck",
     "description": "religioso e missionario fiammingo",
     "year": 1210,
-    "lat": null,
-    "lng": null,
+    "lat": 50.8386,
+    "lng": 2.3556,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guglielmo_di_Rubruck",
     "isCosmic": false
   },
   {
@@ -7531,7 +7531,7 @@
     "lng": 38.6714,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Kulikovo",
     "isCosmic": false
   },
   {
@@ -7539,11 +7539,11 @@
     "title": "Matthias Grünewald",
     "description": "pittore tedesco",
     "year": 1480,
-    "lat": null,
-    "lng": null,
+    "lat": 49.7944,
+    "lng": 9.9294,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Matthias_Grünewald",
     "isCosmic": false
   },
   {
@@ -7551,11 +7551,11 @@
     "title": "Simone Martini",
     "description": "pittore italiano (1284-1344)",
     "year": 1284,
-    "lat": null,
-    "lng": null,
+    "lat": 43.3183,
+    "lng": 11.3314,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Simone_Martini",
     "isCosmic": false
   },
   {
@@ -7563,11 +7563,11 @@
     "title": "Filippo Lippi",
     "description": "pittore italiano (1406-1469)",
     "year": 1406,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filippo_Lippi",
     "isCosmic": false
   },
   {
@@ -7575,11 +7575,11 @@
     "title": "Hans Memling",
     "description": "pittore tedesco di formazione fiamminga",
     "year": 1435,
-    "lat": null,
-    "lng": null,
+    "lat": 50.0441,
+    "lng": 8.9753,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Hans_Memling",
     "isCosmic": false
   },
   {
@@ -7587,11 +7587,11 @@
     "title": "Albrecht Altdorfer",
     "description": "pittore tedesco",
     "year": 1480,
-    "lat": null,
-    "lng": null,
+    "lat": 49.3875,
+    "lng": 11.3569,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Albrecht_Altdorfer",
     "isCosmic": false
   },
   {
@@ -7599,11 +7599,11 @@
     "title": "Ladislao III di Polonia",
     "description": "re di Polonia (r. 1434-1444) e Ungheria (r. 1440-1444)",
     "year": 1424,
-    "lat": null,
-    "lng": null,
+    "lat": 50.0614,
+    "lng": 19.9372,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ladislao_III_di_Polonia",
     "isCosmic": false
   },
   {
@@ -7611,11 +7611,11 @@
     "title": "Sigismondo I di Polonia",
     "description": "re di Polonia e granduca di Lituania (r. 1506-1548)",
     "year": 1467,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5856,
+    "lng": 21.5511,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sigismondo_I_Jagellone",
     "isCosmic": false
   },
   {
@@ -7623,11 +7623,11 @@
     "title": "Dionigi del Portogallo",
     "description": "re del Portogallo (r. 1279-1325)",
     "year": 1261,
-    "lat": null,
-    "lng": null,
+    "lat": 38.708,
+    "lng": -9.139,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Dionigi_del_Portogallo",
     "isCosmic": false
   },
   {
@@ -7635,11 +7635,11 @@
     "title": "Béla IV d'Ungheria",
     "description": "re d'Ungheria (r. 1235-1270)",
     "year": 1206,
-    "lat": null,
-    "lng": null,
+    "lat": 46.7667,
+    "lng": 23.5833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Béla_IV_d'Ungheria",
     "isCosmic": false
   },
   {
@@ -7647,11 +7647,11 @@
     "title": "Alberto I d'Asburgo",
     "description": "sovrano del Sacro Romano Impero (r. 1298-1308)",
     "year": 1255,
-    "lat": null,
-    "lng": null,
+    "lat": 47.5539,
+    "lng": 7.7958,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alberto_I_d'Asburgo",
     "isCosmic": false
   },
   {
@@ -7659,11 +7659,11 @@
     "title": "Alberto II d'Asburgo",
     "description": "sovrano del Sacro Romano Impero e re di Boemia (r. 1438-1439), re consorte d'Ungheria e Croazia (1437-1439)",
     "year": 1397,
-    "lat": null,
-    "lng": null,
+    "lat": 48.2083,
+    "lng": 16.3725,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alberto_II_d'Asburgo",
     "isCosmic": false
   },
   {
@@ -7671,11 +7671,11 @@
     "title": "Alfonso III del Portogallo",
     "description": "re del Portogallo (r. 1248-1279)",
     "year": 1210,
-    "lat": null,
-    "lng": null,
+    "lat": 40.2111,
+    "lng": -8.4289,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alfonso_III_del_Portogallo",
     "isCosmic": false
   },
   {
@@ -7683,11 +7683,11 @@
     "title": "Giovanni VIII di Bisanzio",
     "description": "imperatore bizantino (r. 1425-1448)",
     "year": 1392,
-    "lat": null,
-    "lng": null,
+    "lat": 41.0122,
+    "lng": 28.976,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_VIII_Paleologo",
     "isCosmic": false
   },
   {
@@ -7695,11 +7695,11 @@
     "title": "Sher Shah Suri",
     "description": "Founder of the Suri Empire in India (1472-1545)",
     "year": 1472,
-    "lat": null,
-    "lng": null,
+    "lat": 24.95,
+    "lng": 84.03,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sher_Shah_Suri",
     "isCosmic": false
   },
   {
@@ -7711,7 +7711,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Dagoberto_I",
     "isCosmic": false
   },
   {
@@ -7719,11 +7719,11 @@
     "title": "Giovanni da Verrazzano",
     "description": "esploratore italiano",
     "year": 1491,
-    "lat": null,
-    "lng": null,
+    "lat": 43.5833,
+    "lng": 11.3167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_da_Verrazzano",
     "isCosmic": false
   },
   {
@@ -7735,7 +7735,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Chilperico_I",
     "isCosmic": false
   },
   {
@@ -7743,11 +7743,11 @@
     "title": "Margherita di Scozia",
     "description": "regina di Scozia (r. 1286-1290)",
     "year": 1283,
-    "lat": null,
-    "lng": null,
+    "lat": 59.267,
+    "lng": 10.409,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Margherita_di_Scozia",
     "isCosmic": false
   },
   {
@@ -7755,11 +7755,11 @@
     "title": "Ingólfur Arnarson",
     "description": "esploratore normanno",
     "year": 848,
-    "lat": null,
-    "lng": null,
+    "lat": 61.3644,
+    "lng": 5.2594,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ingólfur_Arnarson",
     "isCosmic": false
   },
   {
@@ -7771,7 +7771,7 @@
     "lng": 1.8878,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Crécy",
     "isCosmic": false
   },
   {
@@ -7779,11 +7779,11 @@
     "title": "Vittore Carpaccio",
     "description": "pittore italiano del XV e XVI secolo",
     "year": 1465,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4397,
+    "lng": 12.3319,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Vittore_Carpaccio",
     "isCosmic": false
   },
   {
@@ -7791,11 +7791,11 @@
     "title": "Luca Signorelli",
     "description": "pittore italiano del XV secolo",
     "year": 1450,
-    "lat": null,
-    "lng": null,
+    "lat": 43.2756,
+    "lng": 11.9881,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luca_Signorelli",
     "isCosmic": false
   },
   {
@@ -7803,11 +7803,11 @@
     "title": "Gentile Bellini",
     "description": "pittore e medaglista italiano",
     "year": 1429,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4397,
+    "lng": 12.3319,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gentile_Bellini",
     "isCosmic": false
   },
   {
@@ -7819,7 +7819,7 @@
     "lng": 19.94,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Dama_con_l'ermellino",
     "isCosmic": false
   },
   {
@@ -7827,11 +7827,11 @@
     "title": "Romano III di Bisanzio",
     "description": "imperatore bizantino (r. 1028-1034)",
     "year": 968,
-    "lat": null,
-    "lng": null,
+    "lat": 37.925,
+    "lng": 29.1258,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Romano_III_Argiro",
     "isCosmic": false
   },
   {
@@ -7839,11 +7839,11 @@
     "title": "Ladislao I di Polonia",
     "description": "re di Polonia (r. 1320-1333)",
     "year": 1260,
-    "lat": null,
-    "lng": null,
+    "lat": 52.7,
+    "lng": 18.55,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ladislao_I_di_Polonia",
     "isCosmic": false
   },
   {
@@ -7851,11 +7851,11 @@
     "title": "Totila",
     "description": "re degli Ostrogoti (r. 541-552)",
     "year": 510,
-    "lat": null,
-    "lng": null,
+    "lat": 45.6658,
+    "lng": 12.2456,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Totila",
     "isCosmic": false
   },
   {
@@ -7867,7 +7867,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Offa_di_Mercia",
     "isCosmic": false
   },
   {
@@ -7879,7 +7879,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cariberto_I",
     "isCosmic": false
   },
   {
@@ -7891,7 +7891,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Childerico_III",
     "isCosmic": false
   },
   {
@@ -7899,11 +7899,11 @@
     "title": "Ladislao I d'Ungheria",
     "description": "re d'Ungheria (r. 1077-1095) e santo",
     "year": 1040,
-    "lat": null,
-    "lng": null,
+    "lat": 50.0614,
+    "lng": 19.9372,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ladislao_I_d'Ungheria",
     "isCosmic": false
   },
   {
@@ -7911,11 +7911,11 @@
     "title": "Abd al-Rahman II ibn al-Hakam",
     "description": "emiro omayyade di al-Andalus",
     "year": 792,
-    "lat": null,
-    "lng": null,
+    "lat": 39.8667,
+    "lng": -4.0333,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Abd_al-Rahman_II_ibn_al-Hakam",
     "isCosmic": false
   },
   {
@@ -7923,11 +7923,11 @@
     "title": "Antonio Pigafetta",
     "description": "navigatore, geografo e scrittore italiano",
     "year": 1490,
-    "lat": null,
-    "lng": null,
+    "lat": 45.55,
+    "lng": 11.55,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antonio_Pigafetta",
     "isCosmic": false
   },
   {
@@ -7939,7 +7939,7 @@
     "lng": 35.357,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Ayn_Jalut",
     "isCosmic": false
   },
   {
@@ -7947,11 +7947,11 @@
     "title": "Ambrogio Lorenzetti",
     "description": "pittore italiano",
     "year": 1290,
-    "lat": null,
-    "lng": null,
+    "lat": 43.3183,
+    "lng": 11.3314,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ambrogio_Lorenzetti",
     "isCosmic": false
   },
   {
@@ -7959,11 +7959,11 @@
     "title": "Filippino Lippi",
     "description": "pittore italiano (1457-1504)",
     "year": 1457,
-    "lat": null,
-    "lng": null,
+    "lat": 43.8808,
+    "lng": 11.0966,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filippino_Lippi",
     "isCosmic": false
   },
   {
@@ -7971,11 +7971,11 @@
     "title": "Jean Fouquet",
     "description": "pittore e miniatore francese",
     "year": 1410,
-    "lat": null,
-    "lng": null,
+    "lat": 47.3928,
+    "lng": 0.6883,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean_Fouquet",
     "isCosmic": false
   },
   {
@@ -7983,11 +7983,11 @@
     "title": "Krum",
     "description": "sovrano bulgaro",
     "year": 755,
-    "lat": null,
-    "lng": null,
+    "lat": 43.3667,
+    "lng": 27.1167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Krum",
     "isCosmic": false
   },
   {
@@ -7995,11 +7995,11 @@
     "title": "Carlo Roberto d'Angiò",
     "description": "re d'Ungheria (r. 1308-1342)",
     "year": 1288,
-    "lat": null,
-    "lng": null,
+    "lat": 40.8358,
+    "lng": 14.2486,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_Roberto_d'Angiò",
     "isCosmic": false
   },
   {
@@ -8007,11 +8007,11 @@
     "title": "Giovanni di Danimarca",
     "description": "re di Danimarca (r. 1481-1513), Norvegia (r. 1483-1513), Svezia (r. 1497-1501)",
     "year": 1455,
-    "lat": null,
-    "lng": null,
+    "lat": 57.05,
+    "lng": 9.9167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -8019,11 +8019,11 @@
     "title": "Eric di Pomerania",
     "description": "re di Norvegia (r. 1389-1442), Danimarca (r. 1396-1439), Svezia (r. 1396-1434, 1436-1439)",
     "year": 1381,
-    "lat": null,
-    "lng": null,
+    "lat": 54.4208,
+    "lng": 16.4106,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eric_di_Pomerania",
     "isCosmic": false
   },
   {
@@ -8031,11 +8031,11 @@
     "title": "Giovanni I d'Ungheria",
     "description": "voivoda di Transilvania e re dell'Ungheria orientale",
     "year": 1487,
-    "lat": null,
-    "lng": null,
+    "lat": 49.0006,
+    "lng": 20.7683,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_I_d'Ungheria",
     "isCosmic": false
   },
   {
@@ -8043,11 +8043,11 @@
     "title": "Ferdinando del Portogallo",
     "description": "re del Portogallo (r. 1367-1383)",
     "year": 1345,
-    "lat": null,
-    "lng": null,
+    "lat": 39.2392,
+    "lng": -8.6869,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ferdinando_I_del_Portogallo",
     "isCosmic": false
   },
   {
@@ -8055,11 +8055,11 @@
     "title": "Enrico IV di Castiglia",
     "description": "re di Castiglia e León (r. 1454-1474)",
     "year": 1425,
-    "lat": null,
-    "lng": null,
+    "lat": 41.65,
+    "lng": -4.7253,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_IV_di_Castiglia",
     "isCosmic": false
   },
   {
@@ -8071,7 +8071,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Muhammad_di_Ghur",
     "isCosmic": false
   },
   {
@@ -8079,11 +8079,11 @@
     "title": "Costanza d'Altavilla",
     "description": "regina di Sicilia (r. 1194-1197), imperatrice consorte del Sacro Romano Impero",
     "year": 1154,
-    "lat": null,
-    "lng": null,
+    "lat": 38.1157,
+    "lng": 13.3613,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Costanza_d'Altavilla",
     "isCosmic": false
   },
   {
@@ -8091,11 +8091,11 @@
     "title": "Ottocaro II di Boemia",
     "description": "re di Boemia (r. 1253-1278)",
     "year": 1233,
-    "lat": null,
-    "lng": null,
+    "lat": 50.2072,
+    "lng": 15.2977,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ottocaro_II_di_Boemia",
     "isCosmic": false
   },
   {
@@ -8103,11 +8103,11 @@
     "title": "Yaqut",
     "description": "geografo e biografo siriano",
     "year": 1178,
-    "lat": null,
-    "lng": null,
+    "lat": 41.0122,
+    "lng": 28.976,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Yaqut",
     "isCosmic": false
   },
   {
@@ -8119,7 +8119,7 @@
     "lng": 37.4957,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_fiume_Kalka",
     "isCosmic": false
   },
   {
@@ -8131,7 +8131,7 @@
     "lng": 14,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_gotica_(535-553)",
     "isCosmic": false
   },
   {
@@ -8139,11 +8139,11 @@
     "title": "Michele V di Bisanzio",
     "description": "imperatore bizantino (r. 1041-1042)",
     "year": 1015,
-    "lat": null,
-    "lng": null,
+    "lat": 41.6,
+    "lng": 35,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michele_V_il_Calafato",
     "isCosmic": false
   },
   {
@@ -8151,11 +8151,11 @@
     "title": "Venceslao I",
     "description": "duca di Boemia",
     "year": 903,
-    "lat": null,
-    "lng": null,
+    "lat": 49.9667,
+    "lng": 14.5,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Venceslao_I_(duca_di_Boemia)",
     "isCosmic": false
   },
   {
@@ -8163,11 +8163,11 @@
     "title": "Olav II di Norvegia",
     "description": "re di Norvegia (r. 1015-1028), santo",
     "year": 995,
-    "lat": null,
-    "lng": null,
+    "lat": 60.2053,
+    "lng": 10.1525,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Olaf_II_di_Norvegia",
     "isCosmic": false
   },
   {
@@ -8175,11 +8175,11 @@
     "title": "Pedro de Alvarado",
     "description": "condottiero spagnolo",
     "year": 1485,
-    "lat": null,
-    "lng": null,
+    "lat": 38.8779,
+    "lng": -6.9706,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pedro_de_Alvarado",
     "isCosmic": false
   },
   {
@@ -8191,7 +8191,7 @@
     "lng": 24.8958,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Nicopoli",
     "isCosmic": false
   },
   {
@@ -8203,7 +8203,7 @@
     "lng": 27.5,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_lago_ghiacciato",
     "isCosmic": false
   },
   {
@@ -8215,7 +8215,7 @@
     "lng": 27.8833,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Varna",
     "isCosmic": false
   },
   {
@@ -8223,11 +8223,11 @@
     "title": "Diego de Almagro",
     "description": "condottiero spagnolo",
     "year": 1475,
-    "lat": null,
-    "lng": null,
+    "lat": 38.8882,
+    "lng": -3.7118,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Diego_de_Almagro",
     "isCosmic": false
   },
   {
@@ -8235,11 +8235,11 @@
     "title": "Brendano di Clonfert",
     "description": "abate irlandese",
     "year": 486,
-    "lat": null,
-    "lng": null,
+    "lat": 52.2768,
+    "lng": -9.858,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Brandano_(santo)",
     "isCosmic": false
   },
   {
@@ -8251,7 +8251,7 @@
     "lng": -3.549,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Las_Navas_de_Tolosa",
     "isCosmic": false
   },
   {
@@ -8263,7 +8263,7 @@
     "lng": -4.2392,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Conquista_islamica_della_penisola_iberica",
     "isCosmic": false
   },
   {
@@ -8275,7 +8275,7 @@
     "lng": -1.4103,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Bosworth_Field",
     "isCosmic": false
   },
   {
@@ -8283,11 +8283,11 @@
     "title": "Diogo Cão",
     "description": "esploratore portoghese",
     "year": 1452,
-    "lat": null,
-    "lng": null,
+    "lat": 41.2953,
+    "lng": -7.7461,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Diogo_Cão",
     "isCosmic": false
   },
   {
@@ -8295,11 +8295,11 @@
     "title": "Beniamino di Tudela",
     "description": "geografo e esploratore spagnolo",
     "year": 1130,
-    "lat": null,
-    "lng": null,
+    "lat": 42.0653,
+    "lng": -1.6067,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Beniamino_di_Tudela",
     "isCosmic": false
   },
   {
@@ -8311,7 +8311,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bogurodzica",
     "isCosmic": false
   },
   {
@@ -8323,7 +8323,7 @@
     "lng": 37.1667,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Aleppo_del_1138",
     "isCosmic": false
   },
   {
@@ -8335,7 +8335,7 @@
     "lng": 7.6,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Basilea",
     "isCosmic": false
   },
   {
@@ -8347,7 +8347,7 @@
     "lng": 36.12,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Antiochia_del_526",
     "isCosmic": false
   },
   {
@@ -8359,7 +8359,7 @@
     "lng": 54.3,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Damghan_dell'856",
     "isCosmic": false
   },
   {
@@ -8371,7 +8371,7 @@
     "lng": 27,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Creta_del_1303",
     "isCosmic": false
   },
   {
@@ -8383,7 +8383,7 @@
     "lng": 46.3,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "1139_Ganja_earthquake",
     "isCosmic": false
   }
 ]

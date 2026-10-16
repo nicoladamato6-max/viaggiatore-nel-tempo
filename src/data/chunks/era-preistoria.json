@@ -2073,7 +2073,7 @@
     "lng": 40,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Rivoluzione_neolitica",
     "isCosmic": false
   },
   {
@@ -2085,7 +2085,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tiu_(pharaoh)",
     "isCosmic": false
   },
   {
@@ -2097,7 +2097,7 @@
     "lng": 17,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alluvione_zancleana",
     "isCosmic": false
   }
 ]

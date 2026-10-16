@@ -4974,11 +4974,11 @@
     "title": "William Shakespeare",
     "description": "drammaturgo e poeta inglese (1564–1616)",
     "year": 1564,
-    "lat": null,
-    "lng": null,
+    "lat": 52.1928,
+    "lng": -1.7064,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Shakespeare",
     "isCosmic": false
   },
   {
@@ -4986,11 +4986,11 @@
     "title": "Isaac Newton",
     "description": "matematico, fisico, filosofo naturale, astronomo, teologo ed alchimista inglese (1642–1726)",
     "year": 1643,
-    "lat": null,
-    "lng": null,
+    "lat": 52.8092,
+    "lng": -0.6306,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Isaac_Newton",
     "isCosmic": false
   },
   {
@@ -4998,11 +4998,11 @@
     "title": "Johann Wolfgang von Goethe",
     "description": "drammaturgo, poeta, saggista, scrittore, pittore, teologo, filosofo, umanista, scienziato, critico d'arte e critico musicale tedesco (1749–1832)",
     "year": 1749,
-    "lat": null,
-    "lng": null,
+    "lat": 50.1106,
+    "lng": 8.6822,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johann_Wolfgang_von_Goethe",
     "isCosmic": false
   },
   {
@@ -5010,11 +5010,11 @@
     "title": "George Washington",
     "description": "politico e generale statunitense (1732–1799), 1º Presidente degli Stati Uniti d'America (1789–1797)",
     "year": 1732,
-    "lat": null,
-    "lng": null,
+    "lat": 38.1861,
+    "lng": -76.9306,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "George_Washington",
     "isCosmic": false
   },
   {
@@ -5022,11 +5022,11 @@
     "title": "Galileo Galilei",
     "description": "fisico, astronomo, filosofo, matematico e scrittore italiano (1564–1642)",
     "year": 1564,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7167,
+    "lng": 10.4,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Galileo_Galilei",
     "isCosmic": false
   },
   {
@@ -5034,11 +5034,11 @@
     "title": "Cartesio",
     "description": "filosofo e matematico francese (1596-1650)",
     "year": 1596,
-    "lat": null,
-    "lng": null,
+    "lat": 46.9736,
+    "lng": 0.6978,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cartesio",
     "isCosmic": false
   },
   {
@@ -5046,11 +5046,11 @@
     "title": "Miguel de Cervantes",
     "description": "scrittore, romanziere, poeta, drammaturgo e militare spagnolo",
     "year": 1547,
-    "lat": null,
-    "lng": null,
+    "lat": 40.4818,
+    "lng": -3.3643,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Miguel_de_Cervantes",
     "isCosmic": false
   },
   {
@@ -5058,11 +5058,11 @@
     "title": "Molière",
     "description": "commediografo e attore teatrale francese (1622–1673)",
     "year": 1622,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Molière",
     "isCosmic": false
   },
   {
@@ -5070,11 +5070,11 @@
     "title": "Thomas Jefferson",
     "description": "politico, scienziato e architetto statunitense (1743-1826), 3º presidente degli Stati Uniti d'America (1801-1809)",
     "year": 1743,
-    "lat": null,
-    "lng": null,
+    "lat": 38.0131,
+    "lng": -78.3956,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Thomas_Jefferson",
     "isCosmic": false
   },
   {
@@ -5082,11 +5082,11 @@
     "title": "Adam Smith",
     "description": "filosofo ed economista scozzese (1723-1790)",
     "year": 1723,
-    "lat": null,
-    "lng": null,
+    "lat": 56.1107,
+    "lng": -3.1674,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Adam_Smith",
     "isCosmic": false
   },
   {
@@ -5094,11 +5094,11 @@
     "title": "George Gordon Byron",
     "description": "poeta e politico inglese (1788-1824)",
     "year": 1788,
-    "lat": null,
-    "lng": null,
+    "lat": 51.4975,
+    "lng": -0.1372,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "George_Gordon_Byron",
     "isCosmic": false
   },
   {
@@ -5106,11 +5106,11 @@
     "title": "Linneo",
     "description": "botanico, medico e zoologo svedese (1707–1778); sviluppò le basi della tassonomia moderna",
     "year": 1707,
-    "lat": null,
-    "lng": null,
+    "lat": 56.618,
+    "lng": 14.202,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Linneo",
     "isCosmic": false
   },
   {
@@ -5118,11 +5118,11 @@
     "title": "Rembrandt",
     "description": "pittore e incisore olandese",
     "year": 1606,
-    "lat": null,
-    "lng": null,
+    "lat": 52.16,
+    "lng": 4.49,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Rembrandt",
     "isCosmic": false
   },
   {
@@ -5130,11 +5130,11 @@
     "title": "Gottfried Wilhelm von Leibniz",
     "description": "filosofo, matematico, scienziato, logico, teologo, linguista, glottoteta, diplomatico, giurista, storico, magistrato tedesco",
     "year": 1646,
-    "lat": null,
-    "lng": null,
+    "lat": 51.3406,
+    "lng": 12.3747,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gottfried_Wilhelm_von_Leibniz",
     "isCosmic": false
   },
   {
@@ -5142,11 +5142,11 @@
     "title": "Matsuo Bashō",
     "description": "poeta giapponese",
     "year": 1644,
-    "lat": null,
-    "lng": null,
+    "lat": 34.7686,
+    "lng": 136.1355,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Matsuo_Bashō",
     "isCosmic": false
   },
   {
@@ -5154,11 +5154,11 @@
     "title": "Carl Friedrich Gauss",
     "description": "matematico, astronomo e fisico tedesco",
     "year": 1777,
-    "lat": null,
-    "lng": null,
+    "lat": 52.2692,
+    "lng": 10.5211,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carl_Friedrich_Gauss",
     "isCosmic": false
   },
   {
@@ -5166,11 +5166,11 @@
     "title": "Blaise Pascal",
     "description": "matematico, fisico, filosofo, retore e teologo francese (1623–1662)",
     "year": 1623,
-    "lat": null,
-    "lng": null,
+    "lat": 45.7784,
+    "lng": 3.0853,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Blaise_Pascal",
     "isCosmic": false
   },
   {
@@ -5178,11 +5178,11 @@
     "title": "Eulero",
     "description": "matematico e fisico svizzero (1707-1783)",
     "year": 1707,
-    "lat": null,
-    "lng": null,
+    "lat": 47.5606,
+    "lng": 7.5906,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eulero",
     "isCosmic": false
   },
   {
@@ -5190,11 +5190,11 @@
     "title": "Francesco Bacone",
     "description": "filosofo, politico, giurista e saggista inglese (1561-1626)",
     "year": 1561,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5081,
+    "lng": -0.1233,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Francesco_Bacone",
     "isCosmic": false
   },
   {
@@ -5202,11 +5202,11 @@
     "title": "Giovanni Keplero",
     "description": "astronomo, matematico, astrologo e teorico musicale tedesco (1571-1630)",
     "year": 1572,
-    "lat": null,
-    "lng": null,
+    "lat": 48.7508,
+    "lng": 8.8706,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_Keplero",
     "isCosmic": false
   },
   {
@@ -5214,11 +5214,11 @@
     "title": "Francisco Goya",
     "description": "pittore e incisore spagnolo (1746-1828)",
     "year": 1746,
-    "lat": null,
-    "lng": null,
+    "lat": 41.3413,
+    "lng": -0.9595,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Francisco_Goya",
     "isCosmic": false
   },
   {
@@ -5226,11 +5226,11 @@
     "title": "James Cook",
     "description": "esploratore britannico",
     "year": 1728,
-    "lat": null,
-    "lng": null,
+    "lat": 54.5406,
+    "lng": -1.2124,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "James_Cook",
     "isCosmic": false
   },
   {
@@ -5238,11 +5238,11 @@
     "title": "Friedrich Schiller",
     "description": "poeta, filosofo e drammaturgo tedesco",
     "year": 1759,
-    "lat": null,
-    "lng": null,
+    "lat": 48.9406,
+    "lng": 9.2575,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Friedrich_Schiller",
     "isCosmic": false
   },
   {
@@ -5250,11 +5250,11 @@
     "title": "Luigi XIV di Francia",
     "description": "re di Francia (r. 1643-1715)",
     "year": 1638,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8981,
+    "lng": 2.0964,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_XIV_di_Francia",
     "isCosmic": false
   },
   {
@@ -5262,11 +5262,11 @@
     "title": "Katsushika Hokusai",
     "description": "pittore e incisore giapponese",
     "year": 1760,
-    "lat": null,
-    "lng": null,
+    "lat": 35.7038,
+    "lng": 139.8023,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Katsushika_Hokusai",
     "isCosmic": false
   },
   {
@@ -5274,11 +5274,11 @@
     "title": "Baruch Spinoza",
     "description": "filosofo olandese",
     "year": 1632,
-    "lat": null,
-    "lng": null,
+    "lat": 52.3667,
+    "lng": 4.8833,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Baruch_Spinoza",
     "isCosmic": false
   },
   {
@@ -5286,11 +5286,11 @@
     "title": "James Madison",
     "description": "politico statunitense (1751-1836), 4º presidente degli Stati Uniti d'America (1809-1817)",
     "year": 1751,
-    "lat": null,
-    "lng": null,
+    "lat": 38.1772,
+    "lng": -77.1861,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "James_Madison",
     "isCosmic": false
   },
   {
@@ -5298,11 +5298,11 @@
     "title": "Peter Paul Rubens",
     "description": "pittore fiammingo (1577-1640)",
     "year": 1577,
-    "lat": null,
-    "lng": null,
+    "lat": 50.8756,
+    "lng": 8.0167,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Peter_Paul_Rubens",
     "isCosmic": false
   },
   {
@@ -5310,11 +5310,11 @@
     "title": "Simón Bolívar",
     "description": "generale, patriota e rivoluzionario venezuelano",
     "year": 1783,
-    "lat": null,
-    "lng": null,
+    "lat": 10.5061,
+    "lng": -66.9144,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Simón_Bolívar",
     "isCosmic": false
   },
   {
@@ -5322,11 +5322,11 @@
     "title": "Akbar",
     "description": "terzo sovrano timuride dell'Impero Moghul, Gran Mogol dal 1556 fino alla morte",
     "year": 1542,
-    "lat": null,
-    "lng": null,
+    "lat": 25.3636,
+    "lng": 69.7339,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Akbar",
     "isCosmic": false
   },
   {
@@ -5334,11 +5334,11 @@
     "title": "Diego Velázquez",
     "description": "pittore spagnolo (1599-1660)",
     "year": 1599,
-    "lat": null,
-    "lng": null,
+    "lat": 37.3886,
+    "lng": -5.995,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Diego_Velázquez",
     "isCosmic": false
   },
   {
@@ -5346,11 +5346,11 @@
     "title": "William Blake",
     "description": "poeta, incisore, filosofo e pittore inglese",
     "year": 1757,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Blake",
     "isCosmic": false
   },
   {
@@ -5358,11 +5358,11 @@
     "title": "Jonathan Swift",
     "description": "scrittore e poeta irlandese",
     "year": 1667,
-    "lat": null,
-    "lng": null,
+    "lat": 53.3497,
+    "lng": -6.2603,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jonathan_Swift",
     "isCosmic": false
   },
   {
@@ -5370,11 +5370,11 @@
     "title": "Jacques Cartier",
     "description": "esploratore francese",
     "year": 1492,
-    "lat": null,
-    "lng": null,
+    "lat": 48.6819,
+    "lng": -1.9681,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jacques_Cartier",
     "isCosmic": false
   },
   {
@@ -5382,11 +5382,11 @@
     "title": "James Watt",
     "description": "matematico e ingegnere britannico",
     "year": 1736,
-    "lat": null,
-    "lng": null,
+    "lat": 55.95,
+    "lng": -4.7667,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "James_Watt",
     "isCosmic": false
   },
   {
@@ -5394,11 +5394,11 @@
     "title": "Thomas Hobbes",
     "description": "filosofo britannico",
     "year": 1588,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5854,
+    "lng": -2.1013,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Thomas_Hobbes",
     "isCosmic": false
   },
   {
@@ -5406,11 +5406,11 @@
     "title": "John Milton",
     "description": "poeta e scrittore inglese",
     "year": 1608,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5141,
+    "lng": -0.0937,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Milton",
     "isCosmic": false
   },
   {
@@ -5418,11 +5418,11 @@
     "title": "Caterina II di Russia",
     "description": "imperatrice di Russia (r. 1762-1796)",
     "year": 1729,
-    "lat": null,
-    "lng": null,
+    "lat": 53.4247,
+    "lng": 14.5553,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Caterina_II_di_Russia",
     "isCosmic": false
   },
   {
@@ -5430,11 +5430,11 @@
     "title": "Giordano Bruno",
     "description": "scrittore e filosofo italiano (1548-1600)",
     "year": 1548,
-    "lat": null,
-    "lng": null,
+    "lat": 40.9333,
+    "lng": 14.5333,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giordano_Bruno",
     "isCosmic": false
   },
   {
@@ -5446,7 +5446,7 @@
     "lng": 2.3354,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gioconda",
     "isCosmic": false
   },
   {
@@ -5454,11 +5454,11 @@
     "title": "Jean de La Fontaine",
     "description": "scrittore e poeta francese",
     "year": 1621,
-    "lat": null,
-    "lng": null,
+    "lat": 49.0464,
+    "lng": 3.4031,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean_de_La_Fontaine",
     "isCosmic": false
   },
   {
@@ -5466,11 +5466,11 @@
     "title": "Daniel Defoe",
     "description": "scrittore britannico",
     "year": 1660,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Daniel_Defoe",
     "isCosmic": false
   },
   {
@@ -5478,11 +5478,11 @@
     "title": "Zachary Taylor",
     "description": "politico e generale statunitense (1784-1850), 12º presidente degli Stati Uniti d'America (1849-1850)",
     "year": 1784,
-    "lat": null,
-    "lng": null,
+    "lat": 38.1708,
+    "lng": -78.2817,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zachary_Taylor",
     "isCosmic": false
   },
   {
@@ -5490,11 +5490,11 @@
     "title": "Alexander von Humboldt",
     "description": "naturalista, esploratore e botanico tedesco",
     "year": 1769,
-    "lat": null,
-    "lng": null,
+    "lat": 52.5167,
+    "lng": 13.3833,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alexander_von_Humboldt",
     "isCosmic": false
   },
   {
@@ -5502,11 +5502,11 @@
     "title": "William Wordsworth",
     "description": "poeta britannico",
     "year": 1770,
-    "lat": null,
-    "lng": null,
+    "lat": 54.6613,
+    "lng": -3.362,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Wordsworth",
     "isCosmic": false
   },
   {
@@ -5514,11 +5514,11 @@
     "title": "Michel de Montaigne",
     "description": "filosofo, scrittore e politico francese",
     "year": 1533,
-    "lat": null,
-    "lng": null,
+    "lat": 44.8783,
+    "lng": 0.03,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michel_de_Montaigne",
     "isCosmic": false
   },
   {
@@ -5526,11 +5526,11 @@
     "title": "William Henry Harrison",
     "description": "generale e politico statunitense (1773-1841), 9º Presidente degli Stati Uniti d'America (4 marzo - 4 aprile 1841)",
     "year": 1773,
-    "lat": null,
-    "lng": null,
+    "lat": 37.35,
+    "lng": -77.06,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Henry_Harrison",
     "isCosmic": false
   },
   {
@@ -5538,11 +5538,11 @@
     "title": "Walter Scott",
     "description": "scrittore e poeta britannico",
     "year": 1771,
-    "lat": null,
-    "lng": null,
+    "lat": 55.9533,
+    "lng": -3.1892,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Walter_Scott",
     "isCosmic": false
   },
   {
@@ -5550,11 +5550,11 @@
     "title": "Thomas Paine",
     "description": "rivoluzionario e politico britannico naturalizzato statunitense (1737-1809)",
     "year": 1737,
-    "lat": null,
-    "lng": null,
+    "lat": 52.41,
+    "lng": 0.74,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Thomas_Paine",
     "isCosmic": false
   },
   {
@@ -5562,11 +5562,11 @@
     "title": "Samuel Johnson",
     "description": "critico letterario, poeta e saggista britannico",
     "year": 1709,
-    "lat": null,
-    "lng": null,
+    "lat": 52.6835,
+    "lng": -1.8265,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Samuel_Johnson",
     "isCosmic": false
   },
   {
@@ -5574,11 +5574,11 @@
     "title": "Jean-Auguste-Dominique Ingres",
     "description": "pittore francese (1780-1867)",
     "year": 1780,
-    "lat": null,
-    "lng": null,
+    "lat": 44.0172,
+    "lng": 1.355,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-Auguste-Dominique_Ingres",
     "isCosmic": false
   },
   {
@@ -5586,11 +5586,11 @@
     "title": "Mary Wollstonecraft",
     "description": "filosofa e scrittrice britannica",
     "year": 1759,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5166,
+    "lng": -0.075,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mary_Wollstonecraft",
     "isCosmic": false
   },
   {
@@ -5598,11 +5598,11 @@
     "title": "Antoine-Laurent de Lavoisier",
     "description": "chimico, biologo, economista e filosofo francese",
     "year": 1743,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antoine-Laurent_de_Lavoisier",
     "isCosmic": false
   },
   {
@@ -5610,11 +5610,11 @@
     "title": "Pierre Simon Laplace",
     "description": "primo marchese di Laplace, matematico, fisico, astronomo e politico francese (1749–1827)",
     "year": 1749,
-    "lat": null,
-    "lng": null,
+    "lat": 49.2783,
+    "lng": 0.1097,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pierre_Simon_Laplace",
     "isCosmic": false
   },
   {
@@ -5622,11 +5622,11 @@
     "title": "Luigi XVI di Francia",
     "description": "re di Francia (r. 1774-1792)",
     "year": 1754,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8047,
+    "lng": 2.1203,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_XVI_di_Francia",
     "isCosmic": false
   },
   {
@@ -5634,11 +5634,11 @@
     "title": "Lope de Vega",
     "description": "scrittore, poeta e drammaturgo spagnolo",
     "year": 1562,
-    "lat": null,
-    "lng": null,
+    "lat": 40.4169,
+    "lng": -3.7033,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Lope_de_Vega",
     "isCosmic": false
   },
   {
@@ -5646,11 +5646,11 @@
     "title": "Carlo V d'Asburgo",
     "description": "duca di Borgogna (r. 1506-1556), re di Spagna (r. 1516-1556) e imperatore del Sacro Romano Impero (r. 1519-1556)",
     "year": 1500,
-    "lat": null,
-    "lng": null,
+    "lat": 51.0536,
+    "lng": 3.7253,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_V_d'Asburgo",
     "isCosmic": false
   },
   {
@@ -5658,11 +5658,11 @@
     "title": "Robert Burns",
     "description": "poeta e compositore scozzese",
     "year": 1759,
-    "lat": null,
-    "lng": null,
+    "lat": 55.4327,
+    "lng": -4.6335,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Robert_Burns",
     "isCosmic": false
   },
   {
@@ -5670,11 +5670,11 @@
     "title": "Edmund Burke",
     "description": "politico, filosofo e scrittore britannico",
     "year": 1729,
-    "lat": null,
-    "lng": null,
+    "lat": 53.3497,
+    "lng": -6.2603,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edmund_Burke",
     "isCosmic": false
   },
   {
@@ -5682,11 +5682,11 @@
     "title": "Federico II di Prussia",
     "description": "elettore di Brandeburgo e re di Prussia (r. 1740-1786)",
     "year": 1712,
-    "lat": null,
-    "lng": null,
+    "lat": 52.5167,
+    "lng": 13.3833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Federico_II_di_Prussia",
     "isCosmic": false
   },
   {
@@ -5694,11 +5694,11 @@
     "title": "Tycho Brahe",
     "description": "astronomo danese",
     "year": 1546,
-    "lat": null,
-    "lng": null,
+    "lat": 55.9794,
+    "lng": 13.1347,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tycho_Brahe",
     "isCosmic": false
   },
   {
@@ -5706,11 +5706,11 @@
     "title": "Samuel Taylor Coleridge",
     "description": "poeta, critico letterario e filosofo britannico",
     "year": 1772,
-    "lat": null,
-    "lng": null,
+    "lat": 50.752,
+    "lng": -3.279,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Samuel_Taylor_Coleridge",
     "isCosmic": false
   },
   {
@@ -5718,11 +5718,11 @@
     "title": "Nostradamus",
     "description": "astrologo, scrittore, farmacista e speziale francese (1503-1566)",
     "year": 1503,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7894,
+    "lng": 4.8317,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nostradamus",
     "isCosmic": false
   },
   {
@@ -5730,11 +5730,11 @@
     "title": "Alexander Pope",
     "description": "poeta inglese",
     "year": 1688,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alexander_Pope",
     "isCosmic": false
   },
   {
@@ -5742,11 +5742,11 @@
     "title": "Christiaan Huygens",
     "description": "matematico, astronomo e fisico olandese (1629–1695)",
     "year": 1629,
-    "lat": null,
-    "lng": null,
+    "lat": 52.08,
+    "lng": 4.31,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Christiaan_Huygens",
     "isCosmic": false
   },
   {
@@ -5754,11 +5754,11 @@
     "title": "Francis Drake",
     "description": "corsaro, navigatore e politico inglese",
     "year": 1540,
-    "lat": null,
-    "lng": null,
+    "lat": 50.55,
+    "lng": -4.1442,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Francis_Drake",
     "isCosmic": false
   },
   {
@@ -5766,11 +5766,11 @@
     "title": "André-Marie Ampère",
     "description": "fisico francese",
     "year": 1775,
-    "lat": null,
-    "lng": null,
+    "lat": 45.7675,
+    "lng": 4.835,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "André-Marie_Ampère",
     "isCosmic": false
   },
   {
@@ -5778,11 +5778,11 @@
     "title": "Jean Racine",
     "description": "drammaturgo e scrittore francese",
     "year": 1639,
-    "lat": null,
-    "lng": null,
+    "lat": 49.1783,
+    "lng": 3.1239,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean_Racine",
     "isCosmic": false
   },
   {
@@ -5790,11 +5790,11 @@
     "title": "Alessandro Volta",
     "description": "chimico e fisico italiano (1745–1827)",
     "year": 1745,
-    "lat": null,
-    "lng": null,
+    "lat": 45.8103,
+    "lng": 9.0861,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alessandro_Volta",
     "isCosmic": false
   },
   {
@@ -5802,11 +5802,11 @@
     "title": "Jan Vermeer",
     "description": "pittore olandese (1632-1675)",
     "year": 1632,
-    "lat": null,
-    "lng": null,
+    "lat": 52.0117,
+    "lng": 4.3592,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jan_Vermeer",
     "isCosmic": false
   },
   {
@@ -5814,11 +5814,11 @@
     "title": "Caravaggio",
     "description": "pittore italiano (1571-1610)",
     "year": 1571,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4669,
+    "lng": 9.19,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Caravaggio",
     "isCosmic": false
   },
   {
@@ -5826,11 +5826,11 @@
     "title": "El Greco",
     "description": "pittore, scultore e architetto greco",
     "year": 1541,
-    "lat": null,
-    "lng": null,
+    "lat": 35.3403,
+    "lng": 25.1344,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "El_Greco",
     "isCosmic": false
   },
   {
@@ -5838,11 +5838,11 @@
     "title": "Robert Boyle",
     "description": "chimico, fisico e inventore irlandese",
     "year": 1627,
-    "lat": null,
-    "lng": null,
+    "lat": 52.1406,
+    "lng": -7.9325,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Robert_Boyle",
     "isCosmic": false
   },
   {
@@ -5850,11 +5850,11 @@
     "title": "William Herschel",
     "description": "astronomo, fisico e compositore tedesco-britannico (1738-1822)",
     "year": 1738,
-    "lat": null,
-    "lng": null,
+    "lat": 52.3744,
+    "lng": 9.7386,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Herschel",
     "isCosmic": false
   },
   {
@@ -5862,11 +5862,11 @@
     "title": "Jean Baptiste Le Rond d'Alembert",
     "description": "enciclopedista, matematico, fisico, filosofo e astronomo francese",
     "year": 1717,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean_Baptiste_Le_Rond_d'Alembert",
     "isCosmic": false
   },
   {
@@ -5874,11 +5874,11 @@
     "title": "Edward Jenner",
     "description": "medico e naturalista britannico",
     "year": 1749,
-    "lat": null,
-    "lng": null,
+    "lat": 51.691,
+    "lng": -2.459,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edward_Jenner",
     "isCosmic": false
   },
   {
@@ -5886,11 +5886,11 @@
     "title": "Novalis",
     "description": "poeta e teologo tedesco",
     "year": 1772,
-    "lat": null,
-    "lng": null,
+    "lat": 51.6667,
+    "lng": 11.5331,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Novalis",
     "isCosmic": false
   },
   {
@@ -5898,11 +5898,11 @@
     "title": "John Dalton",
     "description": "chimico, fisico e meteorologo inglese (1766-1844)",
     "year": 1766,
-    "lat": null,
-    "lng": null,
+    "lat": 54.75,
+    "lng": -3,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Dalton",
     "isCosmic": false
   },
   {
@@ -5910,11 +5910,11 @@
     "title": "Luís de Camões",
     "description": "poeta portoghese",
     "year": 1524,
-    "lat": null,
-    "lng": null,
+    "lat": 38.708,
+    "lng": -9.139,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luís_de_Camões",
     "isCosmic": false
   },
   {
@@ -5922,11 +5922,11 @@
     "title": "Alessandro I di Russia",
     "description": "imperatore di Russia (r. 1801-1825)",
     "year": 1777,
-    "lat": null,
-    "lng": null,
+    "lat": 59.95,
+    "lng": 30.3167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alessandro_I_di_Russia",
     "isCosmic": false
   },
   {
@@ -5934,11 +5934,11 @@
     "title": "Carlo I d'Inghilterra",
     "description": "re d'Inghilterra, Scozia e Irlanda (r. 1625-1649)",
     "year": 1600,
-    "lat": null,
-    "lng": null,
+    "lat": 56.0695,
+    "lng": -3.4646,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_I_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -5946,11 +5946,11 @@
     "title": "Michail Vasil'evič Lomonosov",
     "description": "scienziato e linguista russo (1711-1765)",
     "year": 1711,
-    "lat": null,
-    "lng": null,
+    "lat": 64.23,
+    "lng": 41.7336,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michail_Vasil'evič_Lomonosov",
     "isCosmic": false
   },
   {
@@ -5958,11 +5958,11 @@
     "title": "Jean-Baptiste de Lamarck",
     "description": "naturalista, enciclopedista, biologo, zoologo e botanico francese",
     "year": 1744,
-    "lat": null,
-    "lng": null,
+    "lat": 50.0303,
+    "lng": 2.7631,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-Baptiste_de_Lamarck",
     "isCosmic": false
   },
   {
@@ -5970,11 +5970,11 @@
     "title": "Anton van Leeuwenhoek",
     "description": "ottico e naturalista olandese",
     "year": 1632,
-    "lat": null,
-    "lng": null,
+    "lat": 52.0117,
+    "lng": 4.3592,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antoni_van_Leeuwenhoek",
     "isCosmic": false
   },
   {
@@ -5982,11 +5982,11 @@
     "title": "Teresa d'Ávila",
     "description": "religiosa e mistica spagnola",
     "year": 1515,
-    "lat": null,
-    "lng": null,
+    "lat": 40.6543,
+    "lng": -4.6962,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Teresa_d'Avila",
     "isCosmic": false
   },
   {
@@ -5994,11 +5994,11 @@
     "title": "Pierre Corneille",
     "description": "drammaturgo e scrittore francese",
     "year": 1606,
-    "lat": null,
-    "lng": null,
+    "lat": 49.4431,
+    "lng": 1.1025,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pierre_Corneille",
     "isCosmic": false
   },
   {
@@ -6006,11 +6006,11 @@
     "title": "Alessandro Manzoni",
     "description": "scrittore e poeta italiano (1785-1873)",
     "year": 1785,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4669,
+    "lng": 9.19,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alessandro_Manzoni",
     "isCosmic": false
   },
   {
@@ -6018,11 +6018,11 @@
     "title": "Charles Perrault",
     "description": "scrittore francese",
     "year": 1628,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Charles_Perrault",
     "isCosmic": false
   },
   {
@@ -6030,11 +6030,11 @@
     "title": "Carl von Clausewitz",
     "description": "generale e scrittore prussiano",
     "year": 1780,
-    "lat": null,
-    "lng": null,
+    "lat": 52.2725,
+    "lng": 11.855,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carl_von_Clausewitz",
     "isCosmic": false
   },
   {
@@ -6042,11 +6042,11 @@
     "title": "Giorgio III del Regno Unito",
     "description": "re di Gran Bretagna e Irlanda (r. 1760-1820)",
     "year": 1738,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1339,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giorgio_III_del_Regno_Unito",
     "isCosmic": false
   },
   {
@@ -6054,11 +6054,11 @@
     "title": "Paracelso",
     "description": "medico, alchimista e astrologo svizzero",
     "year": 1493,
-    "lat": null,
-    "lng": null,
+    "lat": 47.3019,
+    "lng": 8.6906,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Paracelso",
     "isCosmic": false
   },
   {
@@ -6066,11 +6066,11 @@
     "title": "Gotthold Ephraim Lessing",
     "description": "scrittore, filosofo e drammaturgo tedesco",
     "year": 1729,
-    "lat": null,
-    "lng": null,
+    "lat": 51.27,
+    "lng": 14.0953,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gotthold_Ephraim_Lessing",
     "isCosmic": false
   },
   {
@@ -6078,11 +6078,11 @@
     "title": "Pedro Calderón de la Barca",
     "description": "drammaturgo e religioso spagnolo (1600-1681)",
     "year": 1600,
-    "lat": null,
-    "lng": null,
+    "lat": 40.4169,
+    "lng": -3.7033,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pedro_Calderón_de_la_Barca",
     "isCosmic": false
   },
   {
@@ -6090,11 +6090,11 @@
     "title": "Giacomo Casanova",
     "description": "avventuriero, scrittore, diplomatico e agente segreto italiano",
     "year": 1725,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4397,
+    "lng": 12.3319,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giacomo_Casanova",
     "isCosmic": false
   },
   {
@@ -6102,11 +6102,11 @@
     "title": "Jeremy Bentham",
     "description": "filosofo e giurista inglese",
     "year": 1748,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5153,
+    "lng": -0.0787,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jeremy_Bentham",
     "isCosmic": false
   },
   {
@@ -6114,11 +6114,11 @@
     "title": "Marchese de Sade",
     "description": "scrittore, filosofo, poeta e drammaturgo francese",
     "year": 1740,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8506,
+    "lng": 2.3385,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marchese_de_Sade",
     "isCosmic": false
   },
   {
@@ -6126,11 +6126,11 @@
     "title": "Thomas Robert Malthus",
     "description": "economista inglese",
     "year": 1766,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2242,
+    "lng": -0.3617,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Thomas_Robert_Malthus",
     "isCosmic": false
   },
   {
@@ -6138,11 +6138,11 @@
     "title": "Luigi XV di Francia",
     "description": "re di Francia (r. 1715-1774)",
     "year": 1710,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8047,
+    "lng": 2.1203,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_XV_di_Francia",
     "isCosmic": false
   },
   {
@@ -6150,11 +6150,11 @@
     "title": "Maria Teresa d'Austria",
     "description": "imperatrice del Sacro Romano Impero (1717-1780)",
     "year": 1717,
-    "lat": null,
-    "lng": null,
+    "lat": 48.2064,
+    "lng": 16.3653,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Maria_Teresa_d'Austria",
     "isCosmic": false
   },
   {
@@ -6162,11 +6162,11 @@
     "title": "Enrico IV di Francia",
     "description": "re di Francia (r. 1589-1610)",
     "year": 1553,
-    "lat": null,
-    "lng": null,
+    "lat": 43.2947,
+    "lng": -0.375,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enrico_IV_di_Francia",
     "isCosmic": false
   },
   {
@@ -6174,11 +6174,11 @@
     "title": "Joseph-Louis Lagrange",
     "description": "matematico e astronomo italiano",
     "year": 1736,
-    "lat": null,
-    "lng": null,
+    "lat": 45.0792,
+    "lng": 7.6761,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Joseph-Louis_Lagrange",
     "isCosmic": false
   },
   {
@@ -6186,11 +6186,11 @@
     "title": "Alexander Hamilton",
     "description": "politico e economista statunitense",
     "year": 1757,
-    "lat": null,
-    "lng": null,
+    "lat": 17.1431,
+    "lng": -62.6269,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alexander_Hamilton",
     "isCosmic": false
   },
   {
@@ -6198,11 +6198,11 @@
     "title": "Robert Hooke",
     "description": "fisico, biologo e geologo inglese",
     "year": 1635,
-    "lat": null,
-    "lng": null,
+    "lat": 50.6826,
+    "lng": -1.5249,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Robert_Hooke",
     "isCosmic": false
   },
   {
@@ -6210,11 +6210,11 @@
     "title": "Arthur Wellesley, I duca di Wellington",
     "description": "primo duca di Wellington, generale e politico britannico",
     "year": 1769,
-    "lat": null,
-    "lng": null,
+    "lat": 53.3497,
+    "lng": -6.2603,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Arthur_Wellesley,_I_duca_di_Wellington",
     "isCosmic": false
   },
   {
@@ -6222,11 +6222,11 @@
     "title": "Abel Tasman",
     "description": "navigatore, esploratore e cartografo olandese",
     "year": 1603,
-    "lat": null,
-    "lng": null,
+    "lat": 53.2333,
+    "lng": 6.2578,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Abel_Tasman",
     "isCosmic": false
   },
   {
@@ -6234,11 +6234,11 @@
     "title": "Humphry Davy",
     "description": "chimico britannico",
     "year": 1778,
-    "lat": null,
-    "lng": null,
+    "lat": 50.1214,
+    "lng": -5.5368,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Humphry_Davy",
     "isCosmic": false
   },
   {
@@ -6246,11 +6246,11 @@
     "title": "Christopher Marlowe",
     "description": "drammaturgo, poeta e traduttore britannico",
     "year": 1564,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2783,
+    "lng": 1.0775,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Christopher_Marlowe",
     "isCosmic": false
   },
   {
@@ -6258,11 +6258,11 @@
     "title": "John Donne",
     "description": "poeta e religioso inglese",
     "year": 1572,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Donne",
     "isCosmic": false
   },
   {
@@ -6270,11 +6270,11 @@
     "title": "Johann Gottfried Herder",
     "description": "filosofo tedesco",
     "year": 1744,
-    "lat": null,
-    "lng": null,
+    "lat": 53.9153,
+    "lng": 19.9272,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johann_Gottfried_Herder",
     "isCosmic": false
   },
   {
@@ -6282,11 +6282,11 @@
     "title": "Shah Jahan",
     "description": "sovrano dell'impero mogul (1592-1666)",
     "year": 1592,
-    "lat": null,
-    "lng": null,
+    "lat": 31.5903,
+    "lng": 74.3097,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Shah_Jahan",
     "isCosmic": false
   },
   {
@@ -6294,11 +6294,11 @@
     "title": "Charles Augustin de Coulomb",
     "description": "ingegnere e fisico francese",
     "year": 1736,
-    "lat": null,
-    "lng": null,
+    "lat": 45.6494,
+    "lng": 0.1594,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Charles_Augustin_de_Coulomb",
     "isCosmic": false
   },
   {
@@ -6306,11 +6306,11 @@
     "title": "Shaka",
     "description": "fondatore e primo sovrano dell'Impero Zulu",
     "year": 1786,
-    "lat": null,
-    "lng": null,
+    "lat": -28.515,
+    "lng": 31.8486,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Shaka",
     "isCosmic": false
   },
   {
@@ -6318,11 +6318,11 @@
     "title": "Hans Christian Ørsted",
     "description": "fisico e chimico danese",
     "year": 1777,
-    "lat": null,
-    "lng": null,
+    "lat": 54.938,
+    "lng": 10.716,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Hans_Christian_Ørsted",
     "isCosmic": false
   },
   {
@@ -6330,11 +6330,11 @@
     "title": "Edmond Halley",
     "description": "astronomo, matematico e fisico inglese",
     "year": 1656,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5346,
+    "lng": -0.0766,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edmond_Halley",
     "isCosmic": false
   },
   {
@@ -6342,11 +6342,11 @@
     "title": "Anders Celsius",
     "description": "fisico e astronomo svedese",
     "year": 1701,
-    "lat": null,
-    "lng": null,
+    "lat": 59.8498,
+    "lng": 17.6389,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Anders_Celsius",
     "isCosmic": false
   },
   {
@@ -6358,7 +6358,7 @@
     "lng": -1.3167,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_civile_inglese",
     "isCosmic": false
   },
   {
@@ -6366,11 +6366,11 @@
     "title": "Amedeo Avogadro",
     "description": "chimico e fisico italiano",
     "year": 1776,
-    "lat": null,
-    "lng": null,
+    "lat": 45.0792,
+    "lng": 7.6761,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Amedeo_Avogadro",
     "isCosmic": false
   },
   {
@@ -6378,11 +6378,11 @@
     "title": "Comenio",
     "description": "teologo e pedagogista ceco",
     "year": 1592,
-    "lat": null,
-    "lng": null,
+    "lat": 49.0251,
+    "lng": 17.6472,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Comenio",
     "isCosmic": false
   },
   {
@@ -6390,11 +6390,11 @@
     "title": "David Ricardo",
     "description": "economista britannico",
     "year": 1772,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "David_Ricardo",
     "isCosmic": false
   },
   {
@@ -6402,11 +6402,11 @@
     "title": "Wilhelm von Humboldt",
     "description": "linguista, diplomatico e filosofo tedesco",
     "year": 1767,
-    "lat": null,
-    "lng": null,
+    "lat": 52.3959,
+    "lng": 13.0579,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Wilhelm_von_Humboldt",
     "isCosmic": false
   },
   {
@@ -6414,11 +6414,11 @@
     "title": "Carlo II d'Inghilterra",
     "description": "re d'Inghilterra, Scozia e Irlanda (r. 1660-1685)",
     "year": 1630,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5047,
+    "lng": -0.1378,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_II_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6430,7 +6430,7 @@
     "lng": 15.5,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_dei_sette_anni",
     "isCosmic": false
   },
   {
@@ -6438,11 +6438,11 @@
     "title": "Friedrich Hölderlin",
     "description": "poeta tedesco (1770-1843)",
     "year": 1770,
-    "lat": null,
-    "lng": null,
+    "lat": 49.0764,
+    "lng": 9.1567,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Friedrich_Hölderlin",
     "isCosmic": false
   },
   {
@@ -6450,11 +6450,11 @@
     "title": "Isabelle de Charrière",
     "description": "scrittrice olandese",
     "year": 1740,
-    "lat": null,
-    "lng": null,
+    "lat": 52.1271,
+    "lng": 5.0731,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Isabelle_de_Charrière",
     "isCosmic": false
   },
   {
@@ -6462,11 +6462,11 @@
     "title": "Giacomo I d'Inghilterra",
     "description": "re di Scozia (r. 1567-1625), d'Inghilterra e d'Irlanda (r. 1603-1625)",
     "year": 1566,
-    "lat": null,
-    "lng": null,
+    "lat": 55.9487,
+    "lng": -3.2007,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giacomo_I_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6474,11 +6474,11 @@
     "title": "Guglielmo IV del Regno Unito",
     "description": "re del Regno Unito (r. 1830-1837)",
     "year": 1765,
-    "lat": null,
-    "lng": null,
+    "lat": 51.501,
+    "lng": -0.142,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guglielmo_IV_del_Regno_Unito",
     "isCosmic": false
   },
   {
@@ -6486,11 +6486,11 @@
     "title": "Pierre-Augustin Caron de Beaumarchais",
     "description": "drammaturgo francese (1732-1799)",
     "year": 1732,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8642,
+    "lng": 2.35,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pierre-Augustin_Caron_de_Beaumarchais",
     "isCosmic": false
   },
   {
@@ -6498,11 +6498,11 @@
     "title": "Aurangzeb",
     "description": "sovrano dell'Impero Mogul",
     "year": 1618,
-    "lat": null,
-    "lng": null,
+    "lat": 22.52,
+    "lng": 74.15,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aurangzeb",
     "isCosmic": false
   },
   {
@@ -6510,11 +6510,11 @@
     "title": "Edoardo VI d'Inghilterra",
     "description": "re d'Inghilterra e d'Irlanda (r. 1547-1553)",
     "year": 1537,
-    "lat": null,
-    "lng": null,
+    "lat": 51.4034,
+    "lng": -0.3375,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Edoardo_VI_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6522,11 +6522,11 @@
     "title": "Jacques-Louis David",
     "description": "pittore francese (1748-1825)",
     "year": 1748,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jacques-Louis_David",
     "isCosmic": false
   },
   {
@@ -6534,11 +6534,11 @@
     "title": "Ugo Grozio",
     "description": "giurista, filosofo e scrittore olandese",
     "year": 1583,
-    "lat": null,
-    "lng": null,
+    "lat": 52.0117,
+    "lng": 4.3592,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ugo_Grozio",
     "isCosmic": false
   },
   {
@@ -6546,11 +6546,11 @@
     "title": "Anna di Gran Bretagna",
     "description": "regina di Gran Bretagna e d'Irlanda (r. 1702-1714)",
     "year": 1665,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5047,
+    "lng": -0.1378,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Anna_di_Gran_Bretagna",
     "isCosmic": false
   },
   {
@@ -6558,11 +6558,11 @@
     "title": "Evangelista Torricelli",
     "description": "matematico e fisico italiano (1608-1647)",
     "year": 1608,
-    "lat": null,
-    "lng": null,
+    "lat": 41.8931,
+    "lng": 12.4828,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Evangelista_Torricelli",
     "isCosmic": false
   },
   {
@@ -6570,11 +6570,11 @@
     "title": "Joseph Priestley",
     "description": "chimico e filosofo inglese",
     "year": 1733,
-    "lat": null,
-    "lng": null,
+    "lat": 53.7343,
+    "lng": -1.6609,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Joseph_Priestley",
     "isCosmic": false
   },
   {
@@ -6582,11 +6582,11 @@
     "title": "Pieter Bruegel il Vecchio",
     "description": "pittore fiammingo",
     "year": 1525,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5889,
+    "lng": 4.7758,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pieter_Bruegel_il_Vecchio",
     "isCosmic": false
   },
   {
@@ -6594,11 +6594,11 @@
     "title": "Ernst Theodor Amadeus Hoffmann",
     "description": "scrittore, compositore, pittore e giurista tedesco",
     "year": 1776,
-    "lat": null,
-    "lng": null,
+    "lat": 54.7115,
+    "lng": 20.5093,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ernst_Theodor_Amadeus_Hoffmann",
     "isCosmic": false
   },
   {
@@ -6606,11 +6606,11 @@
     "title": "Friedrich Schelling",
     "description": "filosofo tedesco (1775-1854)",
     "year": 1775,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8014,
+    "lng": 9.0131,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Friedrich_Schelling",
     "isCosmic": false
   },
   {
@@ -6618,11 +6618,11 @@
     "title": "Thomas Young",
     "description": "scienziato britannico",
     "year": 1773,
-    "lat": null,
-    "lng": null,
+    "lat": 51.0241,
+    "lng": -3.2588,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Thomas_Young",
     "isCosmic": false
   },
   {
@@ -6630,11 +6630,11 @@
     "title": "Georges-Louis Leclerc de Buffon",
     "description": "primo conte di Buffon, naturalista, biologo e zoologo francese (1707-1788)",
     "year": 1707,
-    "lat": null,
-    "lng": null,
+    "lat": 47.6231,
+    "lng": 4.3369,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Georges-Louis_Leclerc_de_Buffon",
     "isCosmic": false
   },
   {
@@ -6642,11 +6642,11 @@
     "title": "Nicolas Poussin",
     "description": "pittore francese",
     "year": 1594,
-    "lat": null,
-    "lng": null,
+    "lat": 49.2456,
+    "lng": 1.4117,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nicolas_Poussin",
     "isCosmic": false
   },
   {
@@ -6654,11 +6654,11 @@
     "title": "Caspar David Friedrich",
     "description": "pittore tedesco",
     "year": 1774,
-    "lat": null,
-    "lng": null,
+    "lat": 54.0833,
+    "lng": 13.3833,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Caspar_David_Friedrich",
     "isCosmic": false
   },
   {
@@ -6666,11 +6666,11 @@
     "title": "Madame de Staël",
     "description": "baronessa di Staël-Holstein, scrittrice e salottiera francese",
     "year": 1766,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Madame_de_Staël",
     "isCosmic": false
   },
   {
@@ -6682,7 +6682,7 @@
     "lng": -76.61,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Rivoluzione_americana",
     "isCosmic": false
   },
   {
@@ -6690,11 +6690,11 @@
     "title": "Henry Cavendish",
     "description": "chimico e fisico scozzese",
     "year": 1731,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7019,
+    "lng": 7.2683,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Henry_Cavendish",
     "isCosmic": false
   },
   {
@@ -6702,11 +6702,11 @@
     "title": "Guglielmo III d'Inghilterra",
     "description": "statolder delle Province Unite (1672-1702), re d'Inghilterra, Scozia e Irlanda (r. 1689-1702)",
     "year": 1650,
-    "lat": null,
-    "lng": null,
+    "lat": 52.0796,
+    "lng": 4.3134,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guglielmo_III_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6714,11 +6714,11 @@
     "title": "Aleksandr Vasil'evič Suvorov",
     "description": "principe e generalissimo russo (1730–1800)",
     "year": 1730,
-    "lat": null,
-    "lng": null,
+    "lat": 55.7506,
+    "lng": 37.6175,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aleksandr_Vasil'evič_Suvorov",
     "isCosmic": false
   },
   {
@@ -6726,11 +6726,11 @@
     "title": "Daniel Bernoulli",
     "description": "matematico e fisico svizzero",
     "year": 1700,
-    "lat": null,
-    "lng": null,
+    "lat": 53.2189,
+    "lng": 6.5675,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Daniel_Bernoulli",
     "isCosmic": false
   },
   {
@@ -6738,11 +6738,11 @@
     "title": "Jöns Jacob Berzelius",
     "description": "chimico svedese",
     "year": 1779,
-    "lat": null,
-    "lng": null,
+    "lat": 58.3467,
+    "lng": 14.7103,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jöns_Jacob_Berzelius",
     "isCosmic": false
   },
   {
@@ -6750,11 +6750,11 @@
     "title": "Giorgio Vasari",
     "description": "pittore, architetto e storico dell'arte italiano (1511-1574)",
     "year": 1511,
-    "lat": null,
-    "lng": null,
+    "lat": 43.4631,
+    "lng": 11.8781,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giorgio_Vasari",
     "isCosmic": false
   },
   {
@@ -6762,11 +6762,11 @@
     "title": "Joseph Addison",
     "description": "politico, scrittore e drammaturgo britannico (1672-1719)",
     "year": 1672,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2064,
+    "lng": -1.7692,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Joseph_Addison",
     "isCosmic": false
   },
   {
@@ -6774,11 +6774,11 @@
     "title": "Giacomo II d'Inghilterra",
     "description": "re d'Inghilterra, Scozia e Irlanda (r. 1685-1688)",
     "year": 1633,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giacomo_II_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -6786,11 +6786,11 @@
     "title": "Giorgio II di Gran Bretagna",
     "description": "re di Gran Bretagna e d'Irlanda (r. 1727-1760)",
     "year": 1683,
-    "lat": null,
-    "lng": null,
+    "lat": 52.3744,
+    "lng": 9.7386,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giorgio_II_di_Gran_Bretagna",
     "isCosmic": false
   },
   {
@@ -6798,11 +6798,11 @@
     "title": "Francesco Saverio",
     "description": "gesuita e missionario spagnolo",
     "year": 1506,
-    "lat": null,
-    "lng": null,
+    "lat": 42.5916,
+    "lng": -1.2092,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Francesco_Saverio",
     "isCosmic": false
   },
   {
@@ -6810,11 +6810,11 @@
     "title": "Emanuel Swedenborg",
     "description": "scienziato, filosofo e mistico svedese",
     "year": 1688,
-    "lat": null,
-    "lng": null,
+    "lat": 59.3304,
+    "lng": 18.0706,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Emanuel_Swedenborg",
     "isCosmic": false
   },
   {
@@ -6822,11 +6822,11 @@
     "title": "William Turner",
     "description": "pittore e incisore inglese",
     "year": 1775,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5107,
+    "lng": -0.1229,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Turner",
     "isCosmic": false
   },
   {
@@ -6834,11 +6834,11 @@
     "title": "Christopher Wren",
     "description": "architetto e scienziato inglese",
     "year": 1632,
-    "lat": null,
-    "lng": null,
+    "lat": 51.0789,
+    "lng": -2.1772,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Christopher_Wren",
     "isCosmic": false
   },
   {
@@ -6846,11 +6846,11 @@
     "title": "Nicolas Appert",
     "description": "inventore francese (1749–1841)",
     "year": 1749,
-    "lat": null,
-    "lng": null,
+    "lat": 48.9567,
+    "lng": 4.3644,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nicolas_Appert",
     "isCosmic": false
   },
   {
@@ -6858,11 +6858,11 @@
     "title": "Cristina I di Svezia",
     "description": "regina di Svezia (r. 1632-1654)",
     "year": 1626,
-    "lat": null,
-    "lng": null,
+    "lat": 59.3294,
+    "lng": 18.0686,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cristina_di_Svezia",
     "isCosmic": false
   },
   {
@@ -6870,11 +6870,11 @@
     "title": "Georges Cuvier",
     "description": "biologo e naturalista francese (1769–1832)",
     "year": 1769,
-    "lat": null,
-    "lng": null,
+    "lat": 47.5097,
+    "lng": 6.7983,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Georges_Cuvier",
     "isCosmic": false
   },
   {
@@ -6882,11 +6882,11 @@
     "title": "Nepero",
     "description": "matematico, astronomo e fisico scozzese",
     "year": 1550,
-    "lat": null,
-    "lng": null,
+    "lat": 55.9333,
+    "lng": -3.2139,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nepero",
     "isCosmic": false
   },
   {
@@ -6894,11 +6894,11 @@
     "title": "Tintoretto",
     "description": "pittore italiano del XVI secolo",
     "year": 1519,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4397,
+    "lng": 12.3319,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tintoretto",
     "isCosmic": false
   },
   {
@@ -6906,11 +6906,11 @@
     "title": "Pietro III di Russia",
     "description": "imperatore di Russia (r. 1762)",
     "year": 1728,
-    "lat": null,
-    "lng": null,
+    "lat": 54.3233,
+    "lng": 10.1394,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pietro_III_di_Russia",
     "isCosmic": false
   },
   {
@@ -6918,11 +6918,11 @@
     "title": "Elisabetta di Russia",
     "description": "imperatrice di Russia (r. 1741-1762)",
     "year": 1709,
-    "lat": null,
-    "lng": null,
+    "lat": 55.6677,
+    "lng": 37.6666,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Elisabetta_di_Russia",
     "isCosmic": false
   },
   {
@@ -6930,11 +6930,11 @@
     "title": "Antoon van Dyck",
     "description": "pittore fiammingo",
     "year": 1599,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2211,
+    "lng": 4.3997,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antoon_van_Dyck",
     "isCosmic": false
   },
   {
@@ -6942,11 +6942,11 @@
     "title": "Giovanni III Sobieski",
     "description": "sovrano della Polonia-Lituania (r. 1674-1696)",
     "year": 1629,
-    "lat": null,
-    "lng": null,
+    "lat": 49.9667,
+    "lng": 24.8833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_III_Sobieski",
     "isCosmic": false
   },
   {
@@ -6954,11 +6954,11 @@
     "title": "'Abbas I il Grande",
     "description": "scià di Persia",
     "year": 1571,
-    "lat": null,
-    "lng": null,
+    "lat": 34.3419,
+    "lng": 62.2031,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "ʿAbbās_I_il_Grande",
     "isCosmic": false
   },
   {
@@ -6966,11 +6966,11 @@
     "title": "Vitus Bering",
     "description": "esploratore danese",
     "year": 1681,
-    "lat": null,
-    "lng": null,
+    "lat": 55.8619,
+    "lng": 9.8519,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Vitus_Bering",
     "isCosmic": false
   },
   {
@@ -6978,11 +6978,11 @@
     "title": "Daniel Gabriel Fahrenheit",
     "description": "fisico e ingegnere tedesco",
     "year": 1686,
-    "lat": null,
-    "lng": null,
+    "lat": 54.3483,
+    "lng": 18.654,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Daniel_Gabriel_Fahrenheit",
     "isCosmic": false
   },
   {
@@ -6990,11 +6990,11 @@
     "title": "Joseph Louis Gay-Lussac",
     "description": "fisico e chimico francese",
     "year": 1778,
-    "lat": null,
-    "lng": null,
+    "lat": 45.8375,
+    "lng": 1.4906,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Joseph_Louis_Gay-Lussac",
     "isCosmic": false
   },
   {
@@ -7002,11 +7002,11 @@
     "title": "Louis Daguerre",
     "description": "artista, chimico e fisico francese",
     "year": 1787,
-    "lat": null,
-    "lng": null,
+    "lat": 48.9731,
+    "lng": 2.2006,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Louis_Daguerre",
     "isCosmic": false
   },
   {
@@ -7014,11 +7014,11 @@
     "title": "Giuseppe II d'Asburgo-Lorena",
     "description": "sovrano del Sacro Romano Impero (r. 1765-1790)",
     "year": 1741,
-    "lat": null,
-    "lng": null,
+    "lat": 48.1814,
+    "lng": 16.2581,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giuseppe_II_d'Asburgo-Lorena",
     "isCosmic": false
   },
   {
@@ -7026,11 +7026,11 @@
     "title": "Filippo IV di Spagna",
     "description": "re di Spagna (r. 1621-1665) e Portogallo (r. 1621-1640)",
     "year": 1605,
-    "lat": null,
-    "lng": null,
+    "lat": 41.6564,
+    "lng": -4.7258,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filippo_IV_di_Spagna",
     "isCosmic": false
   },
   {
@@ -7038,11 +7038,11 @@
     "title": "Georg Christoph Lichtenberg",
     "description": "fisico, scrittore e aforista tedesco",
     "year": 1742,
-    "lat": null,
-    "lng": null,
+    "lat": 49.8333,
+    "lng": 8.75,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Georg_Christoph_Lichtenberg",
     "isCosmic": false
   },
   {
@@ -7050,11 +7050,11 @@
     "title": "Paul Henri Thiry d'Holbach",
     "description": "filosofo e enciclopedista tedesco",
     "year": 1723,
-    "lat": null,
-    "lng": null,
+    "lat": 49.2642,
+    "lng": 8.1344,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Paul_Henri_Thiry_d'Holbach",
     "isCosmic": false
   },
   {
@@ -7062,11 +7062,11 @@
     "title": "Carl Maria von Weber",
     "description": "compositore, direttore d'orchestra e pianista tedesco",
     "year": 1786,
-    "lat": null,
-    "lng": null,
+    "lat": 54.1378,
+    "lng": 10.6181,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carl_Maria_von_Weber",
     "isCosmic": false
   },
   {
@@ -7074,11 +7074,11 @@
     "title": "William Hogarth",
     "description": "pittore e incisore inglese",
     "year": 1697,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Hogarth",
     "isCosmic": false
   },
   {
@@ -7086,11 +7086,11 @@
     "title": "Jahangir",
     "description": "imperatore Moghul",
     "year": 1569,
-    "lat": null,
-    "lng": null,
+    "lat": 27.0911,
+    "lng": 77.6611,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jahangir",
     "isCosmic": false
   },
   {
@@ -7098,11 +7098,11 @@
     "title": "Gerolamo Cardano",
     "description": "medico, matematico, filosofo, astrologo, illusionista e accademico italiano",
     "year": 1501,
-    "lat": null,
-    "lng": null,
+    "lat": 45.1853,
+    "lng": 9.155,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gerolamo_Cardano",
     "isCosmic": false
   },
   {
@@ -7110,11 +7110,11 @@
     "title": "Bartolomé Esteban Murillo",
     "description": "pittore spagnolo",
     "year": 1617,
-    "lat": null,
-    "lng": null,
+    "lat": 37.3886,
+    "lng": -5.995,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bartolomé_Esteban_Murillo",
     "isCosmic": false
   },
   {
@@ -7122,11 +7122,11 @@
     "title": "Francisco de Zurbarán",
     "description": "pittore spagnolo",
     "year": 1598,
-    "lat": null,
-    "lng": null,
+    "lat": 38.2467,
+    "lng": -6.3092,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Francisco_de_Zurbarán",
     "isCosmic": false
   },
   {
@@ -7134,11 +7134,11 @@
     "title": "Humayun",
     "description": "imperatore indiano",
     "year": 1508,
-    "lat": null,
-    "lng": null,
+    "lat": 34.5328,
+    "lng": 69.1658,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Humayun",
     "isCosmic": false
   },
   {
@@ -7146,11 +7146,11 @@
     "title": "Luigi Galvani",
     "description": "fisiologo, fisico e anatomista italiano",
     "year": 1737,
-    "lat": null,
-    "lng": null,
+    "lat": 44.4939,
+    "lng": 11.3428,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_Galvani",
     "isCosmic": false
   },
   {
@@ -7158,11 +7158,11 @@
     "title": "Ole Rømer",
     "description": "astronomo danese",
     "year": 1644,
-    "lat": null,
-    "lng": null,
+    "lat": 56.1564,
+    "lng": 10.2097,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ole_Rømer",
     "isCosmic": false
   },
   {
@@ -7170,11 +7170,11 @@
     "title": "Filippo Melantone",
     "description": "umanista e teologo tedesco",
     "year": 1497,
-    "lat": null,
-    "lng": null,
+    "lat": 49.0364,
+    "lng": 8.7061,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filippo_Melantone",
     "isCosmic": false
   },
   {
@@ -7182,11 +7182,11 @@
     "title": "Gian Lorenzo Bernini",
     "description": "scultore, architetto e pittore italiano (1598-1680)",
     "year": 1598,
-    "lat": null,
-    "lng": null,
+    "lat": 40.8358,
+    "lng": 14.2486,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gian_Lorenzo_Bernini",
     "isCosmic": false
   },
   {
@@ -7194,11 +7194,11 @@
     "title": "Robert Owen",
     "description": "imprenditore e sindacalista britannico",
     "year": 1771,
-    "lat": null,
-    "lng": null,
+    "lat": 52.5132,
+    "lng": -3.3141,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Robert_Owen",
     "isCosmic": false
   },
   {
@@ -7206,11 +7206,11 @@
     "title": "Carl Scheele",
     "description": "chimico svedese",
     "year": 1742,
-    "lat": null,
-    "lng": null,
+    "lat": 54.3092,
+    "lng": 13.0819,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carl_Scheele",
     "isCosmic": false
   },
   {
@@ -7218,11 +7218,11 @@
     "title": "Paolo Veronese",
     "description": "pittore italiano del XVI secolo",
     "year": 1528,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4386,
+    "lng": 10.9928,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Paolo_Veronese",
     "isCosmic": false
   },
   {
@@ -7230,11 +7230,11 @@
     "title": "Andrea Palladio",
     "description": "architetto, teorico dell'architettura e scenografo italiano",
     "year": 1508,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4078,
+    "lng": 11.8733,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Andrea_Palladio",
     "isCosmic": false
   },
   {
@@ -7242,11 +7242,11 @@
     "title": "Giambattista Vico",
     "description": "filosofo, storico e giurista italiano",
     "year": 1668,
-    "lat": null,
-    "lng": null,
+    "lat": 40.8358,
+    "lng": 14.2486,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giambattista_Vico",
     "isCosmic": false
   },
   {
@@ -7254,11 +7254,11 @@
     "title": "Olympe de Gouges",
     "description": "drammaturga francese, attivista politica",
     "year": 1748,
-    "lat": null,
-    "lng": null,
+    "lat": 44.0172,
+    "lng": 1.355,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Olympe_de_Gouges",
     "isCosmic": false
   },
   {
@@ -7266,11 +7266,11 @@
     "title": "Jean-Baptiste Jules Bernadotte",
     "description": "generale francese, principe di Pontecorvo, re di Svezia e Norvegia (1763-1844; r. 1818-1844)",
     "year": 1763,
-    "lat": null,
-    "lng": null,
+    "lat": 43.3008,
+    "lng": -0.37,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-Baptiste_Jules_Bernadotte",
     "isCosmic": false
   },
   {
@@ -7278,11 +7278,11 @@
     "title": "Carlo XII di Svezia",
     "description": "re di Svezia (r. 1697-1718)",
     "year": 1682,
-    "lat": null,
-    "lng": null,
+    "lat": 59.3265,
+    "lng": 18.0727,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_XII_di_Svezia",
     "isCosmic": false
   },
   {
@@ -7290,11 +7290,11 @@
     "title": "Nadir Shah",
     "description": "scià di Persia, capostipite della dinastia afsharide",
     "year": 1688,
-    "lat": null,
-    "lng": null,
+    "lat": 36.6294,
+    "lng": 59.1678,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nadir_Shah",
     "isCosmic": false
   },
   {
@@ -7302,11 +7302,11 @@
     "title": "Carlo VI del Sacro Romano Impero",
     "description": "sovrano del Sacro Romano Impero (r. 1711-1740), re di Napoli (r. 1713-1734), Sardegna (r. 1713-1720) e Sicilia (r. 1720-1735)",
     "year": 1685,
-    "lat": null,
-    "lng": null,
+    "lat": 48.2083,
+    "lng": 16.3725,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_VI_d'Asburgo",
     "isCosmic": false
   },
   {
@@ -7314,11 +7314,11 @@
     "title": "Caterina I di Russia",
     "description": "imperatrice di Russia (r. 1725-1727)",
     "year": 1684,
-    "lat": null,
-    "lng": null,
+    "lat": 56.5161,
+    "lng": 25.8783,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Caterina_I_di_Russia",
     "isCosmic": false
   },
   {
@@ -7326,11 +7326,11 @@
     "title": "Maria II d'Inghilterra",
     "description": "regina d'Inghilterra, Scozia e Irlanda (r. 1689-1694)",
     "year": 1662,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5047,
+    "lng": -0.1378,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Maria_II_d'Inghilterra",
     "isCosmic": false
   },
   {
@@ -7338,11 +7338,11 @@
     "title": "Willem Barents",
     "description": "navigatore e esploratore olandese",
     "year": 1550,
-    "lat": null,
-    "lng": null,
+    "lat": 53.3897,
+    "lng": 5.3094,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Willem_Barents",
     "isCosmic": false
   },
   {
@@ -7354,7 +7354,7 @@
     "lng": 31,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Grande_guerra_del_Nord",
     "isCosmic": false
   },
   {
@@ -7362,11 +7362,11 @@
     "title": "Jakob Bernoulli",
     "description": "matematico e scienziato svizzero",
     "year": 1654,
-    "lat": null,
-    "lng": null,
+    "lat": 47.5606,
+    "lng": 7.5906,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jakob_Bernoulli",
     "isCosmic": false
   },
   {
@@ -7374,11 +7374,11 @@
     "title": "Giovanni Cassini",
     "description": "astronomo, matematico, ingegnere, medico e biologo italiano, naturalizzato francese (1625 - 1712)",
     "year": 1625,
-    "lat": null,
-    "lng": null,
+    "lat": 43.8669,
+    "lng": 7.6744,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_Cassini",
     "isCosmic": false
   },
   {
@@ -7386,11 +7386,11 @@
     "title": "Henri de Saint-Simon",
     "description": "filosofo francese",
     "year": 1760,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Claude-Henri_de_Rouvroy_de_Saint-Simon",
     "isCosmic": false
   },
   {
@@ -7398,11 +7398,11 @@
     "title": "Maria Gaetana Agnesi",
     "description": "matematica e benefattrice italiana (1718-1799)",
     "year": 1718,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4669,
+    "lng": 9.19,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Maria_Gaetana_Agnesi",
     "isCosmic": false
   },
   {
@@ -7410,11 +7410,11 @@
     "title": "Jean de La Bruyère",
     "description": "scrittore e aforista francese",
     "year": 1645,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean_de_La_Bruyère",
     "isCosmic": false
   },
   {
@@ -7422,11 +7422,11 @@
     "title": "Ferdinando I d'Asburgo",
     "description": "re di Boemia e d'Ungheria (r. 1526-1564) e sovrano del Sacro Romano Impero (r. 1556-1564)",
     "year": 1503,
-    "lat": null,
-    "lng": null,
+    "lat": 40.4818,
+    "lng": -3.3643,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ferdinando_I_d'Asburgo",
     "isCosmic": false
   },
   {
@@ -7434,11 +7434,11 @@
     "title": "Guy Fawkes",
     "description": "militare, attivista politico e rivoluzionario inglese",
     "year": 1570,
-    "lat": null,
-    "lng": null,
+    "lat": 53.95,
+    "lng": -1.0833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guy_Fawkes",
     "isCosmic": false
   },
   {
@@ -7446,11 +7446,11 @@
     "title": "Charles Messier",
     "description": "astronomo francese",
     "year": 1730,
-    "lat": null,
-    "lng": null,
+    "lat": 48.5,
+    "lng": 6.8931,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Charles_Messier",
     "isCosmic": false
   },
   {
@@ -7458,11 +7458,11 @@
     "title": "John James Audubon",
     "description": "ornitologo e illustratore statunitense",
     "year": 1785,
-    "lat": null,
-    "lng": null,
+    "lat": 18.2,
+    "lng": -73.75,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_James_Audubon",
     "isCosmic": false
   },
   {
@@ -7470,11 +7470,11 @@
     "title": "Charles Fourier",
     "description": "filosofo francese",
     "year": 1772,
-    "lat": null,
-    "lng": null,
+    "lat": 47.2422,
+    "lng": 6.0214,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Charles_Fourier",
     "isCosmic": false
   },
   {
@@ -7482,11 +7482,11 @@
     "title": "Claude-Adrien Helvétius",
     "description": "filosofo e scrittore francese",
     "year": 1715,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8672,
+    "lng": 2.336,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Claude-Adrien_Helvétius",
     "isCosmic": false
   },
   {
@@ -7494,11 +7494,11 @@
     "title": "Tommaso Campanella",
     "description": "filosofo, teologo, rivoluzionario e poeta italiano",
     "year": 1568,
-    "lat": null,
-    "lng": null,
+    "lat": 38.4833,
+    "lng": 16.4667,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tommaso_Campanella",
     "isCosmic": false
   },
   {
@@ -7506,11 +7506,11 @@
     "title": "John Wesley",
     "description": "teologo inglese",
     "year": 1703,
-    "lat": null,
-    "lng": null,
+    "lat": 53.5167,
+    "lng": -0.8167,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Wesley",
     "isCosmic": false
   },
   {
@@ -7518,11 +7518,11 @@
     "title": "Giuseppe Piazzi",
     "description": "astronomo e presbitero italiano",
     "year": 1746,
-    "lat": null,
-    "lng": null,
+    "lat": 46.1833,
+    "lng": 9.9833,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giuseppe_Piazzi",
     "isCosmic": false
   },
   {
@@ -7534,7 +7534,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "95_tesi_di_Lutero",
     "isCosmic": false
   },
   {
@@ -7542,11 +7542,11 @@
     "title": "Aaron Burr",
     "description": "politico statunitense",
     "year": 1756,
-    "lat": null,
-    "lng": null,
+    "lat": 40.7356,
+    "lng": -74.1722,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aaron_Burr",
     "isCosmic": false
   },
   {
@@ -7554,11 +7554,11 @@
     "title": "Gioacchino Murat",
     "description": "generale francese, granduca di Berg e Clèves (r. 1806-1808) e re di Napoli (r. 1808-1815)",
     "year": 1767,
-    "lat": null,
-    "lng": null,
+    "lat": 44.6475,
+    "lng": 1.5675,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gioacchino_Murat",
     "isCosmic": false
   },
   {
@@ -7566,11 +7566,11 @@
     "title": "George Stephenson",
     "description": "ingegnere britannico",
     "year": 1781,
-    "lat": null,
-    "lng": null,
+    "lat": 54.974,
+    "lng": -1.821,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "George_Stephenson",
     "isCosmic": false
   },
   {
@@ -7578,11 +7578,11 @@
     "title": "Juana Inés de la Cruz",
     "description": "religiosa e poetessa messicana",
     "year": 1651,
-    "lat": null,
-    "lng": null,
+    "lat": 18.9803,
+    "lng": -98.8408,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Juana_Inés_de_la_Cruz",
     "isCosmic": false
   },
   {
@@ -7590,11 +7590,11 @@
     "title": "Baltasar Gracián",
     "description": "gesuita, scrittore e filosofo spagnolo",
     "year": 1601,
-    "lat": null,
-    "lng": null,
+    "lat": 41.3125,
+    "lng": -1.5374,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Baltasar_Gracián",
     "isCosmic": false
   },
   {
@@ -7602,11 +7602,11 @@
     "title": "Gilbert du Motier de La Fayette",
     "description": "marchese di La Fayette, generale e politico francese",
     "year": 1757,
-    "lat": null,
-    "lng": null,
+    "lat": 45.1586,
+    "lng": 3.5806,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gilbert_du_Motier_de_La_Fayette",
     "isCosmic": false
   },
   {
@@ -7614,11 +7614,11 @@
     "title": "Johann Bernoulli",
     "description": "matematico svizzero",
     "year": 1667,
-    "lat": null,
-    "lng": null,
+    "lat": 47.5606,
+    "lng": 7.5906,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johann_Bernoulli",
     "isCosmic": false
   },
   {
@@ -7626,11 +7626,11 @@
     "title": "François Arago",
     "description": "matematico, fisico e astronomo francese",
     "year": 1786,
-    "lat": null,
-    "lng": null,
+    "lat": 42.7722,
+    "lng": 2.6989,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "François_Arago",
     "isCosmic": false
   },
   {
@@ -7638,11 +7638,11 @@
     "title": "Augustin-Jean Fresnel",
     "description": "fisico francese",
     "year": 1788,
-    "lat": null,
-    "lng": null,
+    "lat": 49.0086,
+    "lng": 0.5294,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Augustin-Jean_Fresnel",
     "isCosmic": false
   },
   {
@@ -7650,11 +7650,11 @@
     "title": "Artemisia Gentileschi",
     "description": "pittrice italiana",
     "year": 1593,
-    "lat": null,
-    "lng": null,
+    "lat": 41.8931,
+    "lng": 12.4828,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Artemisia_Gentileschi",
     "isCosmic": false
   },
   {
@@ -7662,11 +7662,11 @@
     "title": "Gerardo Mercatore",
     "description": "matematico, astronomo e cartografo fiammingo",
     "year": 1512,
-    "lat": null,
-    "lng": null,
+    "lat": 51.1261,
+    "lng": 4.2908,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gerardo_Mercatore",
     "isCosmic": false
   },
   {
@@ -7674,11 +7674,11 @@
     "title": "Friedrich Schlegel",
     "description": "filosofo, critico e traduttore tedesco",
     "year": 1772,
-    "lat": null,
-    "lng": null,
+    "lat": 52.3744,
+    "lng": 9.7386,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Friedrich_Schlegel",
     "isCosmic": false
   },
   {
@@ -7686,11 +7686,11 @@
     "title": "Tulsidas",
     "description": "poeta e mistico indiano",
     "year": 1511,
-    "lat": null,
-    "lng": null,
+    "lat": 25.3833,
+    "lng": 81.15,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tulsidas",
     "isCosmic": false
   },
   {
@@ -7698,11 +7698,11 @@
     "title": "Ahmad Shah Durrani",
     "description": "politico afghano",
     "year": 1722,
-    "lat": null,
-    "lng": null,
+    "lat": 34.3419,
+    "lng": 62.2031,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ahmad_Shah_Durrani",
     "isCosmic": false
   },
   {
@@ -7710,11 +7710,11 @@
     "title": "Michail Illarionovič Kutuzov",
     "description": "principe di Smolensk e generale russo (1745–1813)",
     "year": 1747,
-    "lat": null,
-    "lng": null,
+    "lat": 59.95,
+    "lng": 30.3167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michail_Illarionovič_Kutuzov",
     "isCosmic": false
   },
   {
@@ -7722,11 +7722,11 @@
     "title": "Samuel de Champlain",
     "description": "esploratore francese",
     "year": 1567,
-    "lat": null,
-    "lng": null,
+    "lat": 45.8497,
+    "lng": -1.0756,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Samuel_de_Champlain",
     "isCosmic": false
   },
   {
@@ -7734,11 +7734,11 @@
     "title": "Friedrich Wilhelm Bessel",
     "description": "matematico, astronomo e geodeta tedesco",
     "year": 1784,
-    "lat": null,
-    "lng": null,
+    "lat": 52.2883,
+    "lng": 8.9167,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Friedrich_Wilhelm_Bessel",
     "isCosmic": false
   },
   {
@@ -7746,11 +7746,11 @@
     "title": "Tadeusz Kościuszko",
     "description": "generale e ingegnere polacco (1746-1817)",
     "year": 1746,
-    "lat": null,
-    "lng": null,
+    "lat": 52.7655,
+    "lng": 25.1238,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tadeusz_Kościuszko",
     "isCosmic": false
   },
   {
@@ -7758,11 +7758,11 @@
     "title": "Maria Sibylla Merian",
     "description": "naturalista e pittrice tedesca",
     "year": 1647,
-    "lat": null,
-    "lng": null,
+    "lat": 50.1106,
+    "lng": 8.6822,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Maria_Sibylla_Merian",
     "isCosmic": false
   },
   {
@@ -7770,11 +7770,11 @@
     "title": "William Godwin",
     "description": "filosofo, scrittore e politico britannico",
     "year": 1756,
-    "lat": null,
-    "lng": null,
+    "lat": 52.6642,
+    "lng": 0.1603,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Godwin",
     "isCosmic": false
   },
   {
@@ -7782,11 +7782,11 @@
     "title": "Pierre Bayle",
     "description": "filosofo, scrittore e enciclopedista francese",
     "year": 1647,
-    "lat": null,
-    "lng": null,
+    "lat": 43.1506,
+    "lng": 1.3936,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pierre_Bayle",
     "isCosmic": false
   },
   {
@@ -7794,11 +7794,11 @@
     "title": "Honoré Gabriel Riqueti de Mirabeau",
     "description": "scrittore e diplomatico francese",
     "year": 1749,
-    "lat": null,
-    "lng": null,
+    "lat": 48.1481,
+    "lng": 2.9228,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Honoré_Gabriel_Riqueti_de_Mirabeau",
     "isCosmic": false
   },
   {
@@ -7806,11 +7806,11 @@
     "title": "Alessio I di Russia",
     "description": "zar di Russia (r. 1645-1676)",
     "year": 1629,
-    "lat": null,
-    "lng": null,
+    "lat": 55.7506,
+    "lng": 37.6175,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alessio_Michajlovič",
     "isCosmic": false
   },
   {
@@ -7818,11 +7818,11 @@
     "title": "Leopoldo I d'Asburgo",
     "description": "sovrano del Sacro Romano Impero (r. 1658-1705)",
     "year": 1640,
-    "lat": null,
-    "lng": null,
+    "lat": 48.2083,
+    "lng": 16.3725,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Leopoldo_I_d'Asburgo",
     "isCosmic": false
   },
   {
@@ -7830,11 +7830,11 @@
     "title": "William Gilbert",
     "description": "fisico britannico (1544-1603)",
     "year": 1544,
-    "lat": null,
-    "lng": null,
+    "lat": 51.8886,
+    "lng": 0.9036,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Gilbert",
     "isCosmic": false
   },
   {
@@ -7842,11 +7842,11 @@
     "title": "Robert Fulton",
     "description": "ingegnere statunitense",
     "year": 1765,
-    "lat": null,
-    "lng": null,
+    "lat": 39.7417,
+    "lng": -76.1264,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Robert_Fulton",
     "isCosmic": false
   },
   {
@@ -7854,11 +7854,11 @@
     "title": "Claude Joseph Rouget de Lisle",
     "description": "poeta e militare francese",
     "year": 1760,
-    "lat": null,
-    "lng": null,
+    "lat": 46.6744,
+    "lng": 5.5539,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Claude_Joseph_Rouget_de_Lisle",
     "isCosmic": false
   },
   {
@@ -7866,11 +7866,11 @@
     "title": "Hans Holbein il Giovane",
     "description": "pittore e incisore tedesco",
     "year": 1497,
-    "lat": null,
-    "lng": null,
+    "lat": 48.3689,
+    "lng": 10.8978,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Hans_Holbein_il_Giovane",
     "isCosmic": false
   },
   {
@@ -7878,11 +7878,11 @@
     "title": "Thomas Gainsborough",
     "description": "pittore inglese",
     "year": 1727,
-    "lat": null,
-    "lng": null,
+    "lat": 52.0417,
+    "lng": 0.7282,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Thomas_Gainsborough",
     "isCosmic": false
   },
   {
@@ -7890,11 +7890,11 @@
     "title": "John Constable",
     "description": "pittore inglese",
     "year": 1776,
-    "lat": null,
-    "lng": null,
+    "lat": 51.9759,
+    "lng": 1.0168,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Constable",
     "isCosmic": false
   },
   {
@@ -7906,7 +7906,7 @@
     "lng": 4.3143,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ragazza_col_turbante",
     "isCosmic": false
   },
   {
@@ -7914,11 +7914,11 @@
     "title": "Gustavo I di Svezia",
     "description": "re di Svezia (r. 1523-1560)",
     "year": 1496,
-    "lat": null,
-    "lng": null,
+    "lat": 59.5838,
+    "lng": 18.1246,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gustavo_I_di_Svezia",
     "isCosmic": false
   },
   {
@@ -7926,11 +7926,11 @@
     "title": "Michele di Russia",
     "description": "zar di Russia (r. 1613-1645)",
     "year": 1596,
-    "lat": null,
-    "lng": null,
+    "lat": 55.7506,
+    "lng": 37.6175,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michele_di_Russia",
     "isCosmic": false
   },
   {
@@ -7938,11 +7938,11 @@
     "title": "Walter Raleigh",
     "description": "navigatore e poeta inglese",
     "year": 1552,
-    "lat": null,
-    "lng": null,
+    "lat": 50.6588,
+    "lng": -3.3449,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Walter_Raleigh",
     "isCosmic": false
   },
   {
@@ -7950,11 +7950,11 @@
     "title": "Caroline Lucretia Herschel",
     "description": "astronoma, matematica e cantante lirica britannica",
     "year": 1750,
-    "lat": null,
-    "lng": null,
+    "lat": 52.3744,
+    "lng": 9.7386,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Caroline_Lucretia_Herschel",
     "isCosmic": false
   },
   {
@@ -7962,11 +7962,11 @@
     "title": "Canaletto",
     "description": "pittore e incisore italiano",
     "year": 1697,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4397,
+    "lng": 12.3319,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Canaletto",
     "isCosmic": false
   },
   {
@@ -7974,11 +7974,11 @@
     "title": "Jean-Antoine Caritat de Condorcet",
     "description": "marchese di Condorcet, matematico, economista e filosofo francese",
     "year": 1743,
-    "lat": null,
-    "lng": null,
+    "lat": 49.7956,
+    "lng": 3.4583,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nicolas_de_Condorcet",
     "isCosmic": false
   },
   {
@@ -7986,11 +7986,11 @@
     "title": "Joseph de Maistre",
     "description": "filosofo, politico e diplomatico italiano",
     "year": 1753,
-    "lat": null,
-    "lng": null,
+    "lat": 45.5664,
+    "lng": 5.9208,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Joseph_de_Maistre",
     "isCosmic": false
   },
   {
@@ -7998,11 +7998,11 @@
     "title": "Guru Gobind Singh",
     "description": "guru del sikhismo",
     "year": 1666,
-    "lat": null,
-    "lng": null,
+    "lat": 25.61,
+    "lng": 85.1414,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guru_Gobind_Singh",
     "isCosmic": false
   },
   {
@@ -8010,11 +8010,11 @@
     "title": "Sigismondo III di Svezia",
     "description": "re di Polonia-Lituania (r. 1587-1632) e di Svezia (r. 1592-1599)",
     "year": 1566,
-    "lat": null,
-    "lng": null,
+    "lat": 59.2561,
+    "lng": 17.2192,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sigismondo_III_di_Polonia",
     "isCosmic": false
   },
   {
@@ -8022,11 +8022,11 @@
     "title": "Rodolfo II d'Asburgo",
     "description": "sovrano del Sacro Romano Impero (r. 1576-1612)",
     "year": 1552,
-    "lat": null,
-    "lng": null,
+    "lat": 48.2083,
+    "lng": 16.3725,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Rodolfo_II_d'Asburgo",
     "isCosmic": false
   },
   {
@@ -8034,11 +8034,11 @@
     "title": "Hernando de Soto",
     "description": "navigatore spagnolo",
     "year": 1500,
-    "lat": null,
-    "lng": null,
+    "lat": 38.3221,
+    "lng": -6.7714,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Hernando_de_Soto",
     "isCosmic": false
   },
   {
@@ -8046,11 +8046,11 @@
     "title": "Henry Hudson",
     "description": "esploratore inglese",
     "year": 1565,
-    "lat": null,
-    "lng": null,
+    "lat": 52.0667,
+    "lng": -1.3167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Henry_Hudson",
     "isCosmic": false
   },
   {
@@ -8058,11 +8058,11 @@
     "title": "Joseph von Fraunhofer",
     "description": "fisico e astronomo tedesco",
     "year": 1787,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8772,
+    "lng": 12.5758,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Joseph_von_Fraunhofer",
     "isCosmic": false
   },
   {
@@ -8070,11 +8070,11 @@
     "title": "Jean-Philippe Rameau",
     "description": "compositore, clavicembalista, organista e teorico della musica francese",
     "year": 1683,
-    "lat": null,
-    "lng": null,
+    "lat": 47.3231,
+    "lng": 5.0419,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-Philippe_Rameau",
     "isCosmic": false
   },
   {
@@ -8082,11 +8082,11 @@
     "title": "Antoine Watteau",
     "description": "pittore francese",
     "year": 1684,
-    "lat": null,
-    "lng": null,
+    "lat": 50.3581,
+    "lng": 3.5233,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antoine_Watteau",
     "isCosmic": false
   },
   {
@@ -8094,11 +8094,11 @@
     "title": "Joshua Reynolds",
     "description": "pittore inglese (1723-1792)",
     "year": 1723,
-    "lat": null,
-    "lng": null,
+    "lat": 50.386,
+    "lng": -4.051,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Joshua_Reynolds",
     "isCosmic": false
   },
   {
@@ -8106,11 +8106,11 @@
     "title": "Fénelon",
     "description": "religioso, teologo e pedagogo francese",
     "year": 1651,
-    "lat": null,
-    "lng": null,
+    "lat": 44.8456,
+    "lng": 1.3367,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fénelon",
     "isCosmic": false
   },
   {
@@ -8118,11 +8118,11 @@
     "title": "Giuseppe Bonaparte",
     "description": "re di Napoli (r. 1806-1808) e di Spagna (r. 1808-1813)",
     "year": 1768,
-    "lat": null,
-    "lng": null,
+    "lat": 42.3056,
+    "lng": 9.1506,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giuseppe_Bonaparte",
     "isCosmic": false
   },
   {
@@ -8130,11 +8130,11 @@
     "title": "Sophie Germain",
     "description": "matematica francese",
     "year": 1776,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sophie_Germain",
     "isCosmic": false
   },
   {
@@ -8142,11 +8142,11 @@
     "title": "Nicolas-Louis de Lacaille",
     "description": "astronomo francese",
     "year": 1713,
-    "lat": null,
-    "lng": null,
+    "lat": 49.8086,
+    "lng": 4.2664,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nicolas-Louis_de_Lacaille",
     "isCosmic": false
   },
   {
@@ -8154,11 +8154,11 @@
     "title": "Jean-Baptiste Lully",
     "description": "compositore, ballerino e strumentista italiano naturalizzato francese",
     "year": 1632,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-Baptiste_Lully",
     "isCosmic": false
   },
   {
@@ -8166,11 +8166,11 @@
     "title": "Élisabeth Vigée Le Brun",
     "description": "pittrice francese",
     "year": 1755,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Élisabeth_Vigée_Le_Brun",
     "isCosmic": false
   },
   {
@@ -8178,11 +8178,11 @@
     "title": "Savinien Cyrano de Bergerac",
     "description": "filosofo, scrittore e drammaturgo francese (1619-1655)",
     "year": 1619,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Savinien_Cyrano_de_Bergerac",
     "isCosmic": false
   },
   {
@@ -8190,11 +8190,11 @@
     "title": "Étienne de La Boétie",
     "description": "filosofo, scrittore e politico francese",
     "year": 1530,
-    "lat": null,
-    "lng": null,
+    "lat": 44.89,
+    "lng": 1.2167,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Étienne_de_La_Boétie",
     "isCosmic": false
   },
   {
@@ -8202,11 +8202,11 @@
     "title": "Benjamin Constant",
     "description": "politico e scrittore franco-svizzero",
     "year": 1767,
-    "lat": null,
-    "lng": null,
+    "lat": 46.5333,
+    "lng": 6.6333,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Benjamin_Constant",
     "isCosmic": false
   },
   {
@@ -8214,11 +8214,11 @@
     "title": "Francesco I di Lorena",
     "description": "granduca di Toscana (r. 1737-1765) e sovrano del Sacro Romano Impero (r. 1745-1765)",
     "year": 1708,
-    "lat": null,
-    "lng": null,
+    "lat": 48.6928,
+    "lng": 6.1836,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Francesco_I_di_Lorena",
     "isCosmic": false
   },
   {
@@ -8226,11 +8226,11 @@
     "title": "Eugenio di Savoia",
     "description": "principe di Casa Savoia, poi comandante in capo degli eserciti del Sacro Romano Impero (1663-1736)",
     "year": 1663,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eugenio_di_Savoia",
     "isCosmic": false
   },
   {
@@ -8238,11 +8238,11 @@
     "title": "Adelbert von Chamisso",
     "description": "poeta e botanico tedesco (1781–1838)",
     "year": 1781,
-    "lat": null,
-    "lng": null,
+    "lat": 48.9567,
+    "lng": 4.3644,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Adelbert_von_Chamisso",
     "isCosmic": false
   },
   {
@@ -8250,11 +8250,11 @@
     "title": "Jean-Baptiste Biot",
     "description": "fisico e matematico francese",
     "year": 1774,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-Baptiste_Biot",
     "isCosmic": false
   },
   {
@@ -8262,11 +8262,11 @@
     "title": "Heinrich Wilhelm Olbers",
     "description": "astronomo tedesco",
     "year": 1758,
-    "lat": null,
-    "lng": null,
+    "lat": 53.039,
+    "lng": 8.9168,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Heinrich_Wilhelm_Olbers",
     "isCosmic": false
   },
   {
@@ -8274,11 +8274,11 @@
     "title": "Samuel Hahnemann",
     "description": "medico tedesco",
     "year": 1755,
-    "lat": null,
-    "lng": null,
+    "lat": 51.1636,
+    "lng": 13.4775,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Samuel_Hahnemann",
     "isCosmic": false
   },
   {
@@ -8286,11 +8286,11 @@
     "title": "Jusepe de Ribera",
     "description": "pittore spagnolo, attivo principalmente a Napoli (1591-1652)",
     "year": 1591,
-    "lat": null,
-    "lng": null,
+    "lat": 38.9887,
+    "lng": -0.5192,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jusepe_de_Ribera",
     "isCosmic": false
   },
   {
@@ -8298,11 +8298,11 @@
     "title": "Frans Hals",
     "description": "pittore olandese",
     "year": 1582,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2211,
+    "lng": 4.3997,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Frans_Hals",
     "isCosmic": false
   },
   {
@@ -8314,7 +8314,7 @@
     "lng": 12.4833,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fontana_di_Trevi",
     "isCosmic": false
   },
   {
@@ -8322,11 +8322,11 @@
     "title": "Robert Brown",
     "description": "botanico scozzese (1773 - 1858)",
     "year": 1773,
-    "lat": null,
-    "lng": null,
+    "lat": 56.708,
+    "lng": -2.467,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Robert_Brown_(botanico_1773)",
     "isCosmic": false
   },
   {
@@ -8334,11 +8334,11 @@
     "title": "Michele Serveto",
     "description": "teologo, umanista e medico spagnolo",
     "year": 1511,
-    "lat": null,
-    "lng": null,
+    "lat": 41.7153,
+    "lng": -0.0089,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michele_Serveto",
     "isCosmic": false
   },
   {
@@ -8346,11 +8346,11 @@
     "title": "Leopold Mozart",
     "description": "compositore e violinista tedesco",
     "year": 1719,
-    "lat": null,
-    "lng": null,
+    "lat": 48.3689,
+    "lng": 10.8978,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Leopold_Mozart",
     "isCosmic": false
   },
   {
@@ -8358,11 +8358,11 @@
     "title": "Giambattista Tiepolo",
     "description": "pittore e incisore italiano",
     "year": 1696,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4397,
+    "lng": 12.3319,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giambattista_Tiepolo",
     "isCosmic": false
   },
   {
@@ -8370,11 +8370,11 @@
     "title": "Karl Friedrich Schinkel",
     "description": "architetto e pittore tedesco",
     "year": 1781,
-    "lat": null,
-    "lng": null,
+    "lat": 52.9222,
+    "lng": 12.8,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Karl_Friedrich_Schinkel",
     "isCosmic": false
   },
   {
@@ -8382,11 +8382,11 @@
     "title": "Bahadur Shah II",
     "description": "imperatore Mughal",
     "year": 1775,
-    "lat": null,
-    "lng": null,
+    "lat": 28.6667,
+    "lng": 77.2167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bahadur_Shah_II",
     "isCosmic": false
   },
   {
@@ -8398,7 +8398,7 @@
     "lng": 18.6472,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Mohács_(1526)",
     "isCosmic": false
   },
   {
@@ -8410,7 +8410,7 @@
     "lng": 15.5,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_di_successione_austriaca",
     "isCosmic": false
   },
   {
@@ -8418,11 +8418,11 @@
     "title": "Joseph Nicéphore Niépce",
     "description": "fotografo francese",
     "year": 1765,
-    "lat": null,
-    "lng": null,
+    "lat": 46.7811,
+    "lng": 4.8539,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Joseph_Nicéphore_Niépce",
     "isCosmic": false
   },
   {
@@ -8430,11 +8430,11 @@
     "title": "Siméon-Denis Poisson",
     "description": "matematico, fisico e astronomo francese",
     "year": 1781,
-    "lat": null,
-    "lng": null,
+    "lat": 48.1719,
+    "lng": 2.2519,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Siméon-Denis_Poisson",
     "isCosmic": false
   },
   {
@@ -8442,11 +8442,11 @@
     "title": "Giuseppe Arcimboldo",
     "description": "pittore italiano del XVI secolo",
     "year": 1527,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4669,
+    "lng": 9.19,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giuseppe_Arcimboldo",
     "isCosmic": false
   },
   {
@@ -8454,11 +8454,11 @@
     "title": "Benvenuto Cellini",
     "description": "scultore, orafo e scrittore italiano (1500-1571)",
     "year": 1500,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Benvenuto_Cellini",
     "isCosmic": false
   },
   {
@@ -8470,7 +8470,7 @@
     "lng": 4.35,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Manneken_Pis",
     "isCosmic": false
   },
   {
@@ -8478,11 +8478,11 @@
     "title": "Jean-Baptiste Colbert",
     "description": "primo barone di Seignelay e Sceaux, politico e economista francese",
     "year": 1619,
-    "lat": null,
-    "lng": null,
+    "lat": 49.2653,
+    "lng": 4.0286,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-Baptiste_Colbert",
     "isCosmic": false
   },
   {
@@ -8494,7 +8494,7 @@
     "lng": -4,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gloriosa_rivoluzione",
     "isCosmic": false
   },
   {
@@ -8502,11 +8502,11 @@
     "title": "Francesco Borromini",
     "description": "architetto italiano originario del Ticino",
     "year": 1599,
-    "lat": null,
-    "lng": null,
+    "lat": 45.95,
+    "lng": 8.9667,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Francesco_Borromini",
     "isCosmic": false
   },
   {
@@ -8514,11 +8514,11 @@
     "title": "Bernard le Bovier de Fontenelle",
     "description": "scrittore e aforista francese",
     "year": 1657,
-    "lat": null,
-    "lng": null,
+    "lat": 49.4431,
+    "lng": 1.1025,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bernard_le_Bovier_de_Fontenelle",
     "isCosmic": false
   },
   {
@@ -8526,11 +8526,11 @@
     "title": "Sofonisba Anguissola",
     "description": "nobildonna e pittrice italiana",
     "year": 1532,
-    "lat": null,
-    "lng": null,
+    "lat": 45.1333,
+    "lng": 10.0247,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sofonisba_Anguissola",
     "isCosmic": false
   },
   {
@@ -8538,11 +8538,11 @@
     "title": "Ivan V di Russia",
     "description": "zar di Russia (r. 1682-1696)",
     "year": 1666,
-    "lat": null,
-    "lng": null,
+    "lat": 55.7506,
+    "lng": 37.6175,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ivan_V_di_Russia",
     "isCosmic": false
   },
   {
@@ -8550,11 +8550,11 @@
     "title": "Ferdinando III d'Asburgo",
     "description": "sovrano del Sacro Romano Impero (r. 1637-1657)",
     "year": 1608,
-    "lat": null,
-    "lng": null,
+    "lat": 47.0708,
+    "lng": 15.4386,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ferdinando_III_d'Asburgo",
     "isCosmic": false
   },
   {
@@ -8562,11 +8562,11 @@
     "title": "Giuseppe I d'Asburgo",
     "description": "sovrano del Sacro Romano Impero (r. 1705-1711)",
     "year": 1678,
-    "lat": null,
-    "lng": null,
+    "lat": 48.2083,
+    "lng": 16.3725,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giuseppe_I_d'Asburgo",
     "isCosmic": false
   },
   {
@@ -8574,11 +8574,11 @@
     "title": "Qianlong",
     "description": "imperatore cinese",
     "year": 1711,
-    "lat": null,
-    "lng": null,
+    "lat": 39.904,
+    "lng": 116.4075,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Qianlong",
     "isCosmic": false
   },
   {
@@ -8586,11 +8586,11 @@
     "title": "Peter Simon Pallas",
     "description": "biologo, zoologo e botanico tedesco",
     "year": 1741,
-    "lat": null,
-    "lng": null,
+    "lat": 52.5167,
+    "lng": 13.3833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Peter_Simon_Pallas",
     "isCosmic": false
   },
   {
@@ -8602,7 +8602,7 @@
     "lng": 16.335,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Vienna",
     "isCosmic": false
   },
   {
@@ -8610,11 +8610,11 @@
     "title": "Otto von Guericke",
     "description": "politico, giurista e fisico tedesco",
     "year": 1602,
-    "lat": null,
-    "lng": null,
+    "lat": 52.1316,
+    "lng": 11.64,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Otto_von_Guericke",
     "isCosmic": false
   },
   {
@@ -8622,11 +8622,11 @@
     "title": "David Brewster",
     "description": "fisico e inventore britannico (1781–1868)",
     "year": 1781,
-    "lat": null,
-    "lng": null,
+    "lat": 55.477,
+    "lng": -2.546,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "David_Brewster",
     "isCosmic": false
   },
   {
@@ -8634,11 +8634,11 @@
     "title": "Johannes Hevelius",
     "description": "astronomo polacco",
     "year": 1611,
-    "lat": null,
-    "lng": null,
+    "lat": 54.3483,
+    "lng": 18.654,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johannes_Hevelius",
     "isCosmic": false
   },
   {
@@ -8646,11 +8646,11 @@
     "title": "Agnolo Bronzino",
     "description": "pittore italiano del XVI secolo (1503-1572)",
     "year": 1503,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Agnolo_Bronzino",
     "isCosmic": false
   },
   {
@@ -8658,11 +8658,11 @@
     "title": "Jean-Baptiste Say",
     "description": "economista francese",
     "year": 1767,
-    "lat": null,
-    "lng": null,
+    "lat": 45.7675,
+    "lng": 4.835,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-Baptiste_Say",
     "isCosmic": false
   },
   {
@@ -8670,11 +8670,11 @@
     "title": "Matteo Ricci",
     "description": "gesuita, matematico e cartografo italiano (1552-1610)",
     "year": 1552,
-    "lat": null,
-    "lng": null,
+    "lat": 43.3003,
+    "lng": 13.4533,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Matteo_Ricci",
     "isCosmic": false
   },
   {
@@ -8682,11 +8682,11 @@
     "title": "Evliya Çelebi",
     "description": "scrittore ottomano",
     "year": 1611,
-    "lat": null,
-    "lng": null,
+    "lat": 41.01,
+    "lng": 28.9603,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Evliya_Çelebi",
     "isCosmic": false
   },
   {
@@ -8694,11 +8694,11 @@
     "title": "Émilie du Châtelet",
     "description": "matematica, fisica e scrittrice francese",
     "year": 1706,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Émilie_du_Châtelet",
     "isCosmic": false
   },
   {
@@ -8706,11 +8706,11 @@
     "title": "Joseph Black",
     "description": "chimico e fisico scozzese (1728–1799)",
     "year": 1728,
-    "lat": null,
-    "lng": null,
+    "lat": 44.8378,
+    "lng": -0.5794,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Joseph_Black",
     "isCosmic": false
   },
   {
@@ -8718,11 +8718,11 @@
     "title": "Giorgio Agricola",
     "description": "scienziato e mineralogista tedesco",
     "year": 1494,
-    "lat": null,
-    "lng": null,
+    "lat": 50.8233,
+    "lng": 12.5444,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Georg_Agricola",
     "isCosmic": false
   },
   {
@@ -8730,11 +8730,11 @@
     "title": "James Hutton",
     "description": "geologo britannico",
     "year": 1726,
-    "lat": null,
-    "lng": null,
+    "lat": 55.9533,
+    "lng": -3.1892,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "James_Hutton",
     "isCosmic": false
   },
   {
@@ -8742,11 +8742,11 @@
     "title": "Cesare Beccaria",
     "description": "marchese di Gualdrasco e Villareggio, giurista, filosofo, economista e letterato italiano (1738-1794)",
     "year": 1738,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4669,
+    "lng": 9.19,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cesare_Beccaria",
     "isCosmic": false
   },
   {
@@ -8754,11 +8754,11 @@
     "title": "François Quesnay",
     "description": "economista, medico e naturalista francese",
     "year": 1694,
-    "lat": null,
-    "lng": null,
+    "lat": 48.7861,
+    "lng": 1.8172,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "François_Quesnay",
     "isCosmic": false
   },
   {
@@ -8766,11 +8766,11 @@
     "title": "Carlo IX di Svezia",
     "description": "re di Svezia (r. 1604-1611)",
     "year": 1550,
-    "lat": null,
-    "lng": null,
+    "lat": 59.3258,
+    "lng": 18.0714,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_IX_di_Svezia",
     "isCosmic": false
   },
   {
@@ -8778,11 +8778,11 @@
     "title": "Guglielmo I dei Paesi Bassi",
     "description": "re dei Paesi Bassi e granduca del Lussemburgo (r. 1815-1840)",
     "year": 1772,
-    "lat": null,
-    "lng": null,
+    "lat": 52.08,
+    "lng": 4.31,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guglielmo_I_dei_Paesi_Bassi",
     "isCosmic": false
   },
   {
@@ -8794,7 +8794,7 @@
     "lng": 34.5528,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Campagna_di_Poltava",
     "isCosmic": false
   },
   {
@@ -8802,11 +8802,11 @@
     "title": "Lazare Carnot",
     "description": "generale, matematico e fisico francese (1753–1823)",
     "year": 1753,
-    "lat": null,
-    "lng": null,
+    "lat": 46.9519,
+    "lng": 4.6342,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Lazare_Carnot",
     "isCosmic": false
   },
   {
@@ -8814,11 +8814,11 @@
     "title": "Antonio Canova",
     "description": "scultore e pittore italiano (1757-1822)",
     "year": 1757,
-    "lat": null,
-    "lng": null,
+    "lat": 45.85,
+    "lng": 11.8833,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antonio_Canova",
     "isCosmic": false
   },
   {
@@ -8826,11 +8826,11 @@
     "title": "Fëdor III di Russia",
     "description": "zar di Russia (r. 1676-1682)",
     "year": 1661,
-    "lat": null,
-    "lng": null,
+    "lat": 55.7506,
+    "lng": 37.6175,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fëdor_III_di_Russia",
     "isCosmic": false
   },
   {
@@ -8838,11 +8838,11 @@
     "title": "Federico Guglielmo III di Prussia",
     "description": "re di Prussia (r. 1797-1840)",
     "year": 1770,
-    "lat": null,
-    "lng": null,
+    "lat": 52.4009,
+    "lng": 13.0591,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Federico_Guglielmo_III_di_Prussia",
     "isCosmic": false
   },
   {
@@ -8850,11 +8850,11 @@
     "title": "Federico Guglielmo I di Prussia",
     "description": "elettore di Brandeburgo e re in Prussia (r. 1713-1740)",
     "year": 1688,
-    "lat": null,
-    "lng": null,
+    "lat": 52.5167,
+    "lng": 13.3833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Federico_Guglielmo_I_di_Prussia",
     "isCosmic": false
   },
   {
@@ -8862,11 +8862,11 @@
     "title": "Giovanni IV del Portogallo",
     "description": "re del Portogallo (r. 1640-1656)",
     "year": 1604,
-    "lat": null,
-    "lng": null,
+    "lat": 38.7824,
+    "lng": -7.4219,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_IV_del_Portogallo",
     "isCosmic": false
   },
   {
@@ -8874,11 +8874,11 @@
     "title": "Luigi Bonaparte",
     "description": "re dei Paesi Bassi, fratello di Napoleone Bonaparte",
     "year": 1778,
-    "lat": null,
-    "lng": null,
+    "lat": 41.9256,
+    "lng": 8.7364,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_Bonaparte",
     "isCosmic": false
   },
   {
@@ -8886,11 +8886,11 @@
     "title": "Fabian Gottlieb von Bellingshausen",
     "description": "esploratore e militare russo",
     "year": 1778,
-    "lat": null,
-    "lng": null,
+    "lat": 58.4167,
+    "lng": 22.5,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fabian_Gottlieb_von_Bellingshausen",
     "isCosmic": false
   },
   {
@@ -8902,7 +8902,7 @@
     "lng": 109.7,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_dello_Shaanxi_del_1556",
     "isCosmic": false
   },
   {
@@ -8910,11 +8910,11 @@
     "title": "Athanasius Kircher",
     "description": "gesuita, filosofo e storico tedesco",
     "year": 1602,
-    "lat": null,
-    "lng": null,
+    "lat": 50.7167,
+    "lng": 9.9667,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Athanasius_Kircher",
     "isCosmic": false
   },
   {
@@ -8922,11 +8922,11 @@
     "title": "Johann Heinrich Lambert",
     "description": "matematico, fisico e astronomo tedesco",
     "year": 1728,
-    "lat": null,
-    "lng": null,
+    "lat": 47.7486,
+    "lng": 7.3392,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johann_Heinrich_Lambert",
     "isCosmic": false
   },
   {
@@ -8934,11 +8934,11 @@
     "title": "Pierre Gassendi",
     "description": "presbitero, filosofo e teologo francese",
     "year": 1592,
-    "lat": null,
-    "lng": null,
+    "lat": 44.0953,
+    "lng": 6.1633,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pierre_Gassendi",
     "isCosmic": false
   },
   {
@@ -8946,11 +8946,11 @@
     "title": "Gaspard Monge",
     "description": "matematico e disegnatore francese inventore della geometria descrittiva",
     "year": 1746,
-    "lat": null,
-    "lng": null,
+    "lat": 47.0242,
+    "lng": 4.8389,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gaspard_Monge",
     "isCosmic": false
   },
   {
@@ -8958,11 +8958,11 @@
     "title": "John Dee",
     "description": "matematico, geografo, alchimista, astrologo, astronomo inglese (1527-1608)",
     "year": 1527,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Dee",
     "isCosmic": false
   },
   {
@@ -8970,11 +8970,11 @@
     "title": "François Boucher",
     "description": "pittore francese",
     "year": 1703,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "François_Boucher",
     "isCosmic": false
   },
   {
@@ -8982,11 +8982,11 @@
     "title": "Fath Ali Shah",
     "description": "scià di Persia",
     "year": 1772,
-    "lat": null,
-    "lng": null,
+    "lat": 36.1681,
+    "lng": 54.3481,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fath_Ali_Shah",
     "isCosmic": false
   },
   {
@@ -8994,11 +8994,11 @@
     "title": "Bernardo O'Higgins",
     "description": "generale e politico cileno",
     "year": 1778,
-    "lat": null,
-    "lng": null,
+    "lat": -36.6067,
+    "lng": -72.1033,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bernardo_O'Higgins",
     "isCosmic": false
   },
   {
@@ -9006,11 +9006,11 @@
     "title": "Michel Ney",
     "description": "generale francese",
     "year": 1769,
-    "lat": null,
-    "lng": null,
+    "lat": 49.3167,
+    "lng": 6.75,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michel_Ney",
     "isCosmic": false
   },
   {
@@ -9018,11 +9018,11 @@
     "title": "Conrad Gessner",
     "description": "naturalista, teologo e bibliografo svizzero",
     "year": 1516,
-    "lat": null,
-    "lng": null,
+    "lat": 47.3744,
+    "lng": 8.5411,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Conrad_Gessner",
     "isCosmic": false
   },
   {
@@ -9030,11 +9030,11 @@
     "title": "Marin Mersenne",
     "description": "teologo, filosofo e matematico francese",
     "year": 1588,
-    "lat": null,
-    "lng": null,
+    "lat": 47.8106,
+    "lng": 0.1033,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marin_Mersenne",
     "isCosmic": false
   },
   {
@@ -9042,11 +9042,11 @@
     "title": "Jean-Honoré Fragonard",
     "description": "pittore francese",
     "year": 1732,
-    "lat": null,
-    "lng": null,
+    "lat": 43.6581,
+    "lng": 6.9253,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-Honoré_Fragonard",
     "isCosmic": false
   },
   {
@@ -9054,11 +9054,11 @@
     "title": "George Vancouver",
     "description": "esploratore britannico",
     "year": 1750,
-    "lat": null,
-    "lng": null,
+    "lat": 52.7543,
+    "lng": 0.3976,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "George_Vancouver",
     "isCosmic": false
   },
   {
@@ -9070,7 +9070,7 @@
     "lng": -11,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Lisbona_del_1755",
     "isCosmic": false
   },
   {
@@ -9078,11 +9078,11 @@
     "title": "Pierre-Louis Moreau de Maupertuis",
     "description": "matematico, fisico e filosofo francese",
     "year": 1698,
-    "lat": null,
-    "lng": null,
+    "lat": 48.6494,
+    "lng": -2.0261,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pierre-Louis_Moreau_de_Maupertuis",
     "isCosmic": false
   },
   {
@@ -9090,11 +9090,11 @@
     "title": "Adrien-Marie Legendre",
     "description": "matematico francese",
     "year": 1752,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Adrien-Marie_Legendre",
     "isCosmic": false
   },
   {
@@ -9102,11 +9102,11 @@
     "title": "Abraham de Moivre",
     "description": "matematico francese",
     "year": 1667,
-    "lat": null,
-    "lng": null,
+    "lat": 48.7247,
+    "lng": 4.5844,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Abraham_de_Moivre",
     "isCosmic": false
   },
   {
@@ -9118,7 +9118,7 @@
     "lng": 4.885,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ronda_di_notte",
     "isCosmic": false
   },
   {
@@ -9126,11 +9126,11 @@
     "title": "George Clinton",
     "description": "politico statunitense",
     "year": 1739,
-    "lat": null,
-    "lng": null,
+    "lat": 41.4778,
+    "lng": -74.1297,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "George_Clinton_(politico)",
     "isCosmic": false
   },
   {
@@ -9138,11 +9138,11 @@
     "title": "Barone di Münchhausen",
     "description": "militare tedesco",
     "year": 1720,
-    "lat": null,
-    "lng": null,
+    "lat": 51.9667,
+    "lng": 9.5167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Barone_di_Münchhausen",
     "isCosmic": false
   },
   {
@@ -9150,11 +9150,11 @@
     "title": "Pierre-Ambroise-François Choderlos de Laclos",
     "description": "scrittore, generale e inventore francese",
     "year": 1741,
-    "lat": null,
-    "lng": null,
+    "lat": 49.8919,
+    "lng": 2.2978,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pierre-Ambroise-François_Choderlos_de_Laclos",
     "isCosmic": false
   },
   {
@@ -9166,7 +9166,7 @@
     "lng": 88.25,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Plassey",
     "isCosmic": false
   },
   {
@@ -9178,7 +9178,7 @@
     "lng": 14,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prima_guerra_del_nord",
     "isCosmic": false
   },
   {
@@ -9186,11 +9186,11 @@
     "title": "Denis Papin",
     "description": "matematico, fisico e inventore francese",
     "year": 1647,
-    "lat": null,
-    "lng": null,
+    "lat": 47.4972,
+    "lng": 1.3706,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Denis_Papin",
     "isCosmic": false
   },
   {
@@ -9198,11 +9198,11 @@
     "title": "Laura Bassi",
     "description": "fisica italiana",
     "year": 1711,
-    "lat": null,
-    "lng": null,
+    "lat": 44.4939,
+    "lng": 11.3428,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Laura_Bassi",
     "isCosmic": false
   },
   {
@@ -9210,11 +9210,11 @@
     "title": "Jacques-Henri Bernardin de Saint-Pierre",
     "description": "scrittore e botanico francese",
     "year": 1737,
-    "lat": null,
-    "lng": null,
+    "lat": 49.4942,
+    "lng": 0.1081,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jacques-Henri_Bernardin_de_Saint-Pierre",
     "isCosmic": false
   },
   {
@@ -9222,11 +9222,11 @@
     "title": "Johann Friedrich Herbart",
     "description": "filosofo tedesco",
     "year": 1776,
-    "lat": null,
-    "lng": null,
+    "lat": 53.1439,
+    "lng": 8.2139,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johann_Friedrich_Herbart",
     "isCosmic": false
   },
   {
@@ -9234,11 +9234,11 @@
     "title": "Cao Xueqin",
     "description": "scrittore cinese",
     "year": 1724,
-    "lat": null,
-    "lng": null,
+    "lat": 32.0608,
+    "lng": 118.7789,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cao_Xueqin",
     "isCosmic": false
   },
   {
@@ -9250,7 +9250,7 @@
     "lng": -3.6922,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Las_Meninas_(Velázquez)",
     "isCosmic": false
   },
   {
@@ -9258,11 +9258,11 @@
     "title": "Carlo X Gustavo di Svezia",
     "description": "re di Svezia (r. 1654-1660)",
     "year": 1622,
-    "lat": null,
-    "lng": null,
+    "lat": 58.7582,
+    "lng": 17.0185,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_X_Gustavo_di_Svezia",
     "isCosmic": false
   },
   {
@@ -9270,11 +9270,11 @@
     "title": "Giovanni III di Svezia",
     "description": "re di Svezia (r. 1568-1592)",
     "year": 1537,
-    "lat": null,
-    "lng": null,
+    "lat": 58.4414,
+    "lng": 16.5989,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_III_di_Svezia",
     "isCosmic": false
   },
   {
@@ -9282,11 +9282,11 @@
     "title": "Vassili IV di Russia",
     "description": "zar di Russia (r. 1606-1610)",
     "year": 1552,
-    "lat": null,
-    "lng": null,
+    "lat": 56.3269,
+    "lng": 44.0075,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Basilio_IV_di_Moscovia",
     "isCosmic": false
   },
   {
@@ -9294,11 +9294,11 @@
     "title": "Federico V di Danimarca",
     "description": "re di Danimarca e Norvegia (r. 1746-1766)",
     "year": 1723,
-    "lat": null,
-    "lng": null,
+    "lat": 55.6772,
+    "lng": 12.58,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Federico_V_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -9306,11 +9306,11 @@
     "title": "Gebhard Leberecht von Blücher",
     "description": "primo principe di Wahlstatt e feldmaresciallo prussiano",
     "year": 1742,
-    "lat": null,
-    "lng": null,
+    "lat": 54.0833,
+    "lng": 12.1333,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gebhard_Leberecht_von_Blücher",
     "isCosmic": false
   },
   {
@@ -9318,11 +9318,11 @@
     "title": "John Churchill, I duca di Marlborough",
     "description": "primo duca di Marlborough, generale e politico inglese",
     "year": 1650,
-    "lat": null,
-    "lng": null,
+    "lat": 50.7455,
+    "lng": -3.027,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Churchill,_I_duca_di_Marlborough",
     "isCosmic": false
   },
   {
@@ -9330,11 +9330,11 @@
     "title": "Mary Somerville",
     "description": "matematica scozzese",
     "year": 1780,
-    "lat": null,
-    "lng": null,
+    "lat": 55.477,
+    "lng": -2.546,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mary_Somerville",
     "isCosmic": false
   },
   {
@@ -9342,11 +9342,11 @@
     "title": "Ruggero Giuseppe Boscovich",
     "description": "fisico italiano",
     "year": 1711,
-    "lat": null,
-    "lng": null,
+    "lat": 42.6403,
+    "lng": 18.1083,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ruggero_Giuseppe_Boscovich",
     "isCosmic": false
   },
   {
@@ -9354,11 +9354,11 @@
     "title": "William Hyde Wollaston",
     "description": "chimico e fisico britannico",
     "year": 1766,
-    "lat": null,
-    "lng": null,
+    "lat": 52.6822,
+    "lng": 0.9404,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Hyde_Wollaston",
     "isCosmic": false
   },
   {
@@ -9366,11 +9366,11 @@
     "title": "Richard Trevithick",
     "description": "inventore e ingegnere britannico (1771-1833)",
     "year": 1771,
-    "lat": null,
-    "lng": null,
+    "lat": 50.2213,
+    "lng": -5.263,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Richard_Trevithick",
     "isCosmic": false
   },
   {
@@ -9378,11 +9378,11 @@
     "title": "Bonaventura Cavalieri",
     "description": "matematico italiano",
     "year": 1598,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4669,
+    "lng": 9.19,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bonaventura_Cavalieri",
     "isCosmic": false
   },
   {
@@ -9390,11 +9390,11 @@
     "title": "John Flamsteed",
     "description": "astronomo inglese",
     "year": 1646,
-    "lat": null,
-    "lng": null,
+    "lat": 53.0197,
+    "lng": -1.4253,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Flamsteed",
     "isCosmic": false
   },
   {
@@ -9406,7 +9406,7 @@
     "lng": 12.4533,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pietà_vaticana",
     "isCosmic": false
   },
   {
@@ -9414,11 +9414,11 @@
     "title": "Carlo XIII di Svezia",
     "description": "re di Svezia (r. 1809-1818) e Norvegia (r. 1814-1818)",
     "year": 1748,
-    "lat": null,
-    "lng": null,
+    "lat": 59.3294,
+    "lng": 18.0686,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_XIII_di_Svezia",
     "isCosmic": false
   },
   {
@@ -9426,11 +9426,11 @@
     "title": "Cristiano VII di Danimarca",
     "description": "re di Danimarca e Norvegia (r. 1766-1808)",
     "year": 1749,
-    "lat": null,
-    "lng": null,
+    "lat": 55.6758,
+    "lng": 12.5789,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cristiano_VII_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -9438,11 +9438,11 @@
     "title": "Cristiano VIII di Danimarca",
     "description": "re di Danimarca (r. 1839-1848)",
     "year": 1786,
-    "lat": null,
-    "lng": null,
+    "lat": 55.6758,
+    "lng": 12.5789,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cristiano_VIII_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -9450,11 +9450,11 @@
     "title": "Robert Clive",
     "description": "militare e politico inglese",
     "year": 1725,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5,
+    "lng": -0.1333,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Robert_Clive",
     "isCosmic": false
   },
   {
@@ -9462,11 +9462,11 @@
     "title": "Carl Ritter",
     "description": "geografo tedesco",
     "year": 1779,
-    "lat": null,
-    "lng": null,
+    "lat": 51.7917,
+    "lng": 11.1472,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carl_Ritter",
     "isCosmic": false
   },
   {
@@ -9474,11 +9474,11 @@
     "title": "Mungo Park",
     "description": "esploratore e naturalista scozzese",
     "year": 1771,
-    "lat": null,
-    "lng": null,
+    "lat": 57,
+    "lng": -5,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mungo_Park",
     "isCosmic": false
   },
   {
@@ -9490,7 +9490,7 @@
     "lng": -105,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_franco-indiana",
     "isCosmic": false
   },
   {
@@ -9498,11 +9498,11 @@
     "title": "Isaac Barrow",
     "description": "matematico e teologo inglese",
     "year": 1630,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Isaac_Barrow",
     "isCosmic": false
   },
   {
@@ -9510,11 +9510,11 @@
     "title": "Sébastien Le Prestre de Vauban",
     "description": "militare francese",
     "year": 1633,
-    "lat": null,
-    "lng": null,
+    "lat": 47.3869,
+    "lng": 4.0408,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sébastien_Le_Prestre_de_Vauban",
     "isCosmic": false
   },
   {
@@ -9522,11 +9522,11 @@
     "title": "Thomas Newcomen",
     "description": "inventore inglese",
     "year": 1664,
-    "lat": null,
-    "lng": null,
+    "lat": 50.3503,
+    "lng": -3.5786,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Thomas_Newcomen",
     "isCosmic": false
   },
   {
@@ -9534,11 +9534,11 @@
     "title": "Niccolò Tartaglia",
     "description": "matematico ed editore italiano (fl. 1537-1554)",
     "year": 1499,
-    "lat": null,
-    "lng": null,
+    "lat": 45.5389,
+    "lng": 10.2203,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Niccolò_Tartaglia",
     "isCosmic": false
   },
   {
@@ -9546,11 +9546,11 @@
     "title": "Johann Bayer",
     "description": "giurista e astronomo tedesco",
     "year": 1572,
-    "lat": null,
-    "lng": null,
+    "lat": 48.6833,
+    "lng": 10.9167,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johann_Bayer",
     "isCosmic": false
   },
   {
@@ -9558,11 +9558,11 @@
     "title": "Étienne Bonnot de Condillac",
     "description": "filosofo, enciclopedista e economista francese",
     "year": 1714,
-    "lat": null,
-    "lng": null,
+    "lat": 45.1869,
+    "lng": 5.7264,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Étienne_Bonnot_de_Condillac",
     "isCosmic": false
   },
   {
@@ -9570,11 +9570,11 @@
     "title": "Guido Reni",
     "description": "pittore e incisore italiano",
     "year": 1575,
-    "lat": null,
-    "lng": null,
+    "lat": 44.4939,
+    "lng": 11.3428,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guido_Reni",
     "isCosmic": false
   },
   {
@@ -9582,11 +9582,11 @@
     "title": "William Hazlitt",
     "description": "scrittore, pittore e saggista britannico",
     "year": 1778,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2717,
+    "lng": 0.5294,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Hazlitt",
     "isCosmic": false
   },
   {
@@ -9594,11 +9594,11 @@
     "title": "Angelika Kauffmann",
     "description": "pittrice svizzera",
     "year": 1741,
-    "lat": null,
-    "lng": null,
+    "lat": 46.8521,
+    "lng": 9.5297,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Angelika_Kauffmann",
     "isCosmic": false
   },
   {
@@ -9606,11 +9606,11 @@
     "title": "Marie Tussaud",
     "description": "scultrice francese",
     "year": 1760,
-    "lat": null,
-    "lng": null,
+    "lat": 48.5733,
+    "lng": 7.7522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marie_Tussaud",
     "isCosmic": false
   },
   {
@@ -9618,11 +9618,11 @@
     "title": "Inigo Jones",
     "description": "architetto, scenografo e costumista britannico",
     "year": 1573,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5187,
+    "lng": -0.1034,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Inigo_Jones",
     "isCosmic": false
   },
   {
@@ -9630,11 +9630,11 @@
     "title": "Augusto III di Polonia",
     "description": "elettore di Sassonia e sovrano della Polonia-Lituania (r. 1733-1763)",
     "year": 1696,
-    "lat": null,
-    "lng": null,
+    "lat": 51.0493,
+    "lng": 13.7381,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Augusto_III_di_Polonia",
     "isCosmic": false
   },
   {
@@ -9642,11 +9642,11 @@
     "title": "Ladislao IV di Polonia",
     "description": "sovrano della Polonia-Lituania (r. 1632-1648)",
     "year": 1595,
-    "lat": null,
-    "lng": null,
+    "lat": 50.0753,
+    "lng": 19.9075,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ladislao_IV_Vasa",
     "isCosmic": false
   },
   {
@@ -9654,11 +9654,11 @@
     "title": "Falso Dimitri I di Russia",
     "description": "pretendente russo",
     "year": 1600,
-    "lat": null,
-    "lng": null,
+    "lat": 55.7506,
+    "lng": 37.6175,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Falso_Dimitri_I_di_Russia",
     "isCosmic": false
   },
   {
@@ -9666,11 +9666,11 @@
     "title": "Federico Guglielmo II di Prussia",
     "description": "elettore di Brandeburgo e re di Prussia (r. 1786-1797)",
     "year": 1744,
-    "lat": null,
-    "lng": null,
+    "lat": 52.5167,
+    "lng": 13.3833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Federico_Guglielmo_II_di_Prussia",
     "isCosmic": false
   },
   {
@@ -9678,11 +9678,11 @@
     "title": "Jan Steen",
     "description": "pittore olandese (1626–1679)",
     "year": 1626,
-    "lat": null,
-    "lng": null,
+    "lat": 52.16,
+    "lng": 4.49,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jan_Steen",
     "isCosmic": false
   },
   {
@@ -9690,11 +9690,11 @@
     "title": "Claude Lorrain",
     "description": "pittore, disegnatore e incisore francese (1600-1682)",
     "year": 1600,
-    "lat": null,
-    "lng": null,
+    "lat": 48.4083,
+    "lng": 6.28,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Claude_Lorrain",
     "isCosmic": false
   },
   {
@@ -9702,11 +9702,11 @@
     "title": "Carlo XI di Svezia",
     "description": "re di Svezia (r. 1660-1697)",
     "year": 1655,
-    "lat": null,
-    "lng": null,
+    "lat": 59.3294,
+    "lng": 18.0686,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_XI_di_Svezia",
     "isCosmic": false
   },
   {
@@ -9714,11 +9714,11 @@
     "title": "Federico VI di Danimarca",
     "description": "re di Danimarca (r. 1808-1839) e Norvegia (r. 1808-1814)",
     "year": 1768,
-    "lat": null,
-    "lng": null,
+    "lat": 55.6758,
+    "lng": 12.5789,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Federico_VI_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -9726,11 +9726,11 @@
     "title": "Nurhaci",
     "description": "nobile cinese",
     "year": 1559,
-    "lat": null,
-    "lng": null,
+    "lat": 41.702,
+    "lng": 124.858,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nurhaci",
     "isCosmic": false
   },
   {
@@ -9738,11 +9738,11 @@
     "title": "Muḥammad Khān Qājār",
     "description": "scià di Persia, capostipite della dinastia Qajar",
     "year": 1742,
-    "lat": null,
-    "lng": null,
+    "lat": 36.8467,
+    "lng": 54.43,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Muḥammad_Khān_Qājār",
     "isCosmic": false
   },
   {
@@ -9750,11 +9750,11 @@
     "title": "William Dampier",
     "description": "pirata e esploratore inglese",
     "year": 1651,
-    "lat": null,
-    "lng": null,
+    "lat": 50.9101,
+    "lng": -2.6485,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Dampier",
     "isCosmic": false
   },
   {
@@ -9762,11 +9762,11 @@
     "title": "Davy Crockett",
     "description": "militare e politico statunitense",
     "year": 1786,
-    "lat": null,
-    "lng": null,
+    "lat": 36.2281,
+    "lng": -82.6306,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Davy_Crockett",
     "isCosmic": false
   },
   {
@@ -9778,7 +9778,7 @@
     "lng": 14,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_austro-turca_(1683-1699)",
     "isCosmic": false
   },
   {
@@ -9790,7 +9790,7 @@
     "lng": -59,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_della_Grande_Alleanza",
     "isCosmic": false
   },
   {
@@ -9798,11 +9798,11 @@
     "title": "Jean Victor Poncelet",
     "description": "matematico e ingegnere francese",
     "year": 1788,
-    "lat": null,
-    "lng": null,
+    "lat": 49.1197,
+    "lng": 6.1769,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean_Victor_Poncelet",
     "isCosmic": false
   },
   {
@@ -9810,11 +9810,11 @@
     "title": "Alexis Clairault",
     "description": "matematico e astronomo francese",
     "year": 1713,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alexis_Claude_Clairaut",
     "isCosmic": false
   },
   {
@@ -9822,11 +9822,11 @@
     "title": "Jérôme Lalande",
     "description": "astronomo francese",
     "year": 1732,
-    "lat": null,
-    "lng": null,
+    "lat": 46.2047,
+    "lng": 5.2281,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jérôme_Lalande",
     "isCosmic": false
   },
   {
@@ -9834,11 +9834,11 @@
     "title": "Georges de La Tour",
     "description": "pittore francese",
     "year": 1593,
-    "lat": null,
-    "lng": null,
+    "lat": 48.7822,
+    "lng": 6.5314,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Georges_de_La_Tour",
     "isCosmic": false
   },
   {
@@ -9846,11 +9846,11 @@
     "title": "Charles Le Brun",
     "description": "pittore e decoratore francese",
     "year": 1619,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Charles_Le_Brun",
     "isCosmic": false
   },
   {
@@ -9858,11 +9858,11 @@
     "title": "Gustavo IV Adolfo di Svezia",
     "description": "re di Svezia (r. 1792-1809)",
     "year": 1778,
-    "lat": null,
-    "lng": null,
+    "lat": 59.3267,
+    "lng": 18.0717,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gustavo_IV_Adolfo_di_Svezia",
     "isCosmic": false
   },
   {
@@ -9870,11 +9870,11 @@
     "title": "Giovanni II Casimiro di Polonia",
     "description": "sovrano della Polonia-Lituania (r. 1648-1668)",
     "year": 1609,
-    "lat": null,
-    "lng": null,
+    "lat": 50.0614,
+    "lng": 19.9372,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_II_Casimiro_di_Polonia",
     "isCosmic": false
   },
   {
@@ -9882,11 +9882,11 @@
     "title": "Pëtr Ivanovič Bagration",
     "description": "principe e generale russo",
     "year": 1765,
-    "lat": null,
-    "lng": null,
+    "lat": 43.8547,
+    "lng": 46.7139,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pëtr_Ivanovič_Bagration",
     "isCosmic": false
   },
   {
@@ -9894,11 +9894,11 @@
     "title": "Albrecht von Wallenstein",
     "description": "militare e politico boemo",
     "year": 1583,
-    "lat": null,
-    "lng": null,
+    "lat": 50.3796,
+    "lng": 15.9186,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Albrecht_von_Wallenstein",
     "isCosmic": false
   },
   {
@@ -9906,11 +9906,11 @@
     "title": "Johan Gadolin",
     "description": "chimico, mineralogista e geologo finlandese",
     "year": 1760,
-    "lat": null,
-    "lng": null,
+    "lat": 60.4517,
+    "lng": 22.2669,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johan_Gadolin",
     "isCosmic": false
   },
   {
@@ -9918,11 +9918,11 @@
     "title": "Johann Friedrich Blumenbach",
     "description": "medico, antropologo e fisiologo (1752 - 1840), socio dell'Accademia delle Scienze di Torino dal 1803",
     "year": 1752,
-    "lat": null,
-    "lng": null,
+    "lat": 50.9489,
+    "lng": 10.7183,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johann_Friedrich_Blumenbach",
     "isCosmic": false
   },
   {
@@ -9930,11 +9930,11 @@
     "title": "Simone Stevino",
     "description": "ingegnere, fisico e matematico fiammingo",
     "year": 1548,
-    "lat": null,
-    "lng": null,
+    "lat": 51.2089,
+    "lng": 3.2242,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Simone_Stevino",
     "isCosmic": false
   },
   {
@@ -9942,11 +9942,11 @@
     "title": "Franz Anton Mesmer",
     "description": "medico tedesco",
     "year": 1734,
-    "lat": null,
-    "lng": null,
+    "lat": 47.7157,
+    "lng": 8.9595,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Franz_Anton_Mesmer",
     "isCosmic": false
   },
   {
@@ -9954,11 +9954,11 @@
     "title": "James Bradley",
     "description": "astronomo inglese",
     "year": 1693,
-    "lat": null,
-    "lng": null,
+    "lat": 50.9491,
+    "lng": -2.5183,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "James_Bradley",
     "isCosmic": false
   },
   {
@@ -9966,11 +9966,11 @@
     "title": "Niccolò Stenone",
     "description": "naturalista, geologo e anatomista danese",
     "year": 1638,
-    "lat": null,
-    "lng": null,
+    "lat": 55.6761,
+    "lng": 12.5689,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Niccolò_Stenone",
     "isCosmic": false
   },
   {
@@ -9978,11 +9978,11 @@
     "title": "Shunzhi",
     "description": "imperatore cinese (1638–1661)",
     "year": 1638,
-    "lat": null,
-    "lng": null,
+    "lat": 41.7958,
+    "lng": 123.45,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Shunzhi",
     "isCosmic": false
   },
   {
@@ -9990,11 +9990,11 @@
     "title": "Johann Kaspar Lavater",
     "description": "scrittore, filosofo e teologo svizzero",
     "year": 1741,
-    "lat": null,
-    "lng": null,
+    "lat": 47.3744,
+    "lng": 8.5411,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johann_Kaspar_Lavater",
     "isCosmic": false
   },
   {
@@ -10002,11 +10002,11 @@
     "title": "Inca Garcilaso de la Vega",
     "description": "scrittore peruviano",
     "year": 1539,
-    "lat": null,
-    "lng": null,
+    "lat": -13.5169,
+    "lng": -71.9786,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Inca_Garcilaso_de_la_Vega",
     "isCosmic": false
   },
   {
@@ -10014,11 +10014,11 @@
     "title": "Bertel Thorvaldsen",
     "description": "scultore danese",
     "year": 1770,
-    "lat": null,
-    "lng": null,
+    "lat": 55.6761,
+    "lng": 12.5689,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bertel_Thorvaldsen",
     "isCosmic": false
   },
   {
@@ -10026,11 +10026,11 @@
     "title": "André Le Nôtre",
     "description": "architetto francese",
     "year": 1613,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "André_Le_Nôtre",
     "isCosmic": false
   },
   {
@@ -10038,11 +10038,11 @@
     "title": "François Mansart",
     "description": "architetto francese del XVII secolo",
     "year": 1598,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "François_Mansart",
     "isCosmic": false
   },
   {
@@ -10050,11 +10050,11 @@
     "title": "Erik XIV di Svezia",
     "description": "re di Svezia (r. 1560-1568)",
     "year": 1533,
-    "lat": null,
-    "lng": null,
+    "lat": 59.3258,
+    "lng": 18.0714,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Erik_XIV_di_Svezia",
     "isCosmic": false
   },
   {
@@ -10062,11 +10062,11 @@
     "title": "Cristiano III di Danimarca",
     "description": "re di Danimarca e Norvegia (r. 1534-1559)",
     "year": 1503,
-    "lat": null,
-    "lng": null,
+    "lat": 54.5117,
+    "lng": 9.5414,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cristiano_III_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -10074,11 +10074,11 @@
     "title": "Luigi II d'Ungheria e Boemia",
     "description": "re d'Ungheria e di Boemia (r. 1506–1526)",
     "year": 1506,
-    "lat": null,
-    "lng": null,
+    "lat": 47.4667,
+    "lng": 19.05,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luigi_II_d'Ungheria_e_Boemia",
     "isCosmic": false
   },
   {
@@ -10086,11 +10086,11 @@
     "title": "Pasquale Paoli",
     "description": "politico, militare e generale corso",
     "year": 1725,
-    "lat": null,
-    "lng": null,
+    "lat": 42.4353,
+    "lng": 9.3,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pasquale_Paoli",
     "isCosmic": false
   },
   {
@@ -10098,11 +10098,11 @@
     "title": "Michael Andreas Barclay de Tolly",
     "description": "Feldmaresciallo russo e ministro di guerra",
     "year": 1761,
-    "lat": null,
-    "lng": null,
+    "lat": 56.0917,
+    "lng": 23.6639,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michael_Andreas_Barclay_de_Tolly",
     "isCosmic": false
   },
   {
@@ -10110,11 +10110,11 @@
     "title": "Georg Forster",
     "description": "naturalista, etnologo e giornalista tedesco (1754-1794)",
     "year": 1754,
-    "lat": null,
-    "lng": null,
+    "lat": 54.2928,
+    "lng": 18.7156,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Georg_Forster",
     "isCosmic": false
   },
   {
@@ -10122,11 +10122,11 @@
     "title": "Matthew Flinders",
     "description": "esploratore britannico",
     "year": 1774,
-    "lat": null,
-    "lng": null,
+    "lat": 52.904,
+    "lng": -0.1982,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Matthew_Flinders",
     "isCosmic": false
   },
   {
@@ -10134,11 +10134,11 @@
     "title": "John Smith di Jamestown",
     "description": "militare, marinaio e scrittore britannico",
     "year": 1580,
-    "lat": null,
-    "lng": null,
+    "lat": 53.224,
+    "lng": 0.21,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Smith_(esploratore)",
     "isCosmic": false
   },
   {
@@ -10150,7 +10150,7 @@
     "lng": 44.5,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_caucasica",
     "isCosmic": false
   },
   {
@@ -10158,11 +10158,11 @@
     "title": "Johann Friedrich Gmelin",
     "description": "biologo, botanico e entomologo tedesco",
     "year": 1748,
-    "lat": null,
-    "lng": null,
+    "lat": 48.52,
+    "lng": 9.0556,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Johann_Friedrich_Gmelin",
     "isCosmic": false
   },
   {
@@ -10170,11 +10170,11 @@
     "title": "Claude Louis Berthollet",
     "description": "chimico francese",
     "year": 1748,
-    "lat": null,
-    "lng": null,
+    "lat": 45.8403,
+    "lng": 6.2136,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Claude_Louis_Berthollet",
     "isCosmic": false
   },
   {
@@ -10182,11 +10182,11 @@
     "title": "Michel Eugène Chevreul",
     "description": "chimico francese",
     "year": 1786,
-    "lat": null,
-    "lng": null,
+    "lat": 47.4728,
+    "lng": -0.5556,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michel_Eugène_Chevreul",
     "isCosmic": false
   },
   {
@@ -10194,11 +10194,11 @@
     "title": "Jean-Baptiste-Siméon Chardin",
     "description": "pittore francese",
     "year": 1699,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-Baptiste-Siméon_Chardin",
     "isCosmic": false
   },
   {
@@ -10206,11 +10206,11 @@
     "title": "Pontormo",
     "description": "pittore italiano (1494-1556)",
     "year": 1494,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7167,
+    "lng": 10.95,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pontormo",
     "isCosmic": false
   },
   {
@@ -10218,11 +10218,11 @@
     "title": "Francesco Redi",
     "description": "medico, naturalista e letterato italiano",
     "year": 1626,
-    "lat": null,
-    "lng": null,
+    "lat": 43.2323,
+    "lng": -7.5853,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Francesco_Redi",
     "isCosmic": false
   },
   {
@@ -10230,11 +10230,11 @@
     "title": "Kobayashi Issa",
     "description": "poeta e pittore giapponese",
     "year": 1763,
-    "lat": null,
-    "lng": null,
+    "lat": 36.8064,
+    "lng": 138.207,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Kobayashi_Issa",
     "isCosmic": false
   },
   {
@@ -10242,11 +10242,11 @@
     "title": "Francesco Bartolomeo Rastrelli",
     "description": "architetto italiano",
     "year": 1700,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bartolomeo_Rastrelli",
     "isCosmic": false
   },
   {
@@ -10258,7 +10258,7 @@
     "lng": -73.9633,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Morte_di_Socrate",
     "isCosmic": false
   },
   {
@@ -10266,11 +10266,11 @@
     "title": "Federico IV di Danimarca",
     "description": "re di Danimarca e Norvegia (r. 1699-1730)",
     "year": 1671,
-    "lat": null,
-    "lng": null,
+    "lat": 55.6772,
+    "lng": 12.58,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Federico_IV_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -10278,11 +10278,11 @@
     "title": "Jean Lannes",
     "description": "Generale francese delle guerre napoleoniche, Maresciallo dell'Impero",
     "year": 1769,
-    "lat": null,
-    "lng": null,
+    "lat": 43.9344,
+    "lng": 0.6211,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean_Lannes",
     "isCosmic": false
   },
   {
@@ -10290,11 +10290,11 @@
     "title": "Jean-François de La Pérouse",
     "description": "navigatore, geografo e esploratore francese",
     "year": 1741,
-    "lat": null,
-    "lng": null,
+    "lat": 43.9503,
+    "lng": 2.1619,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jean-François_de_La_Pérouse",
     "isCosmic": false
   },
   {
@@ -10302,11 +10302,11 @@
     "title": "William Baffin",
     "description": "navigatore e esploratore inglese",
     "year": 1584,
-    "lat": null,
-    "lng": null,
+    "lat": 51.5072,
+    "lng": -0.1275,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Baffin",
     "isCosmic": false
   },
   {
@@ -10314,11 +10314,11 @@
     "title": "Sacajawea",
     "description": "esploratrice nativa americana",
     "year": 1786,
-    "lat": null,
-    "lng": null,
+    "lat": 45.1781,
+    "lng": -113.903,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sacajawea",
     "isCosmic": false
   },
   {
@@ -10330,7 +10330,7 @@
     "lng": 14.3194,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_della_Montagna_Bianca",
     "isCosmic": false
   },
   {
@@ -10338,11 +10338,11 @@
     "title": "Annibale Carracci",
     "description": "pittore italiano del XVI secolo",
     "year": 1560,
-    "lat": null,
-    "lng": null,
+    "lat": 44.4939,
+    "lng": 11.3428,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Annibale_Carracci",
     "isCosmic": false
   },
   {
@@ -10350,11 +10350,11 @@
     "title": "Anton Raphael Mengs",
     "description": "pittore, storico dell'arte e critico d'arte tedesco",
     "year": 1728,
-    "lat": null,
-    "lng": null,
+    "lat": 50.6592,
+    "lng": 14.0417,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Anton_Raphael_Mengs",
     "isCosmic": false
   },
   {
@@ -10362,11 +10362,11 @@
     "title": "Kitagawa Utamaro",
     "description": "pittore e disegnatore giapponese",
     "year": 1753,
-    "lat": null,
-    "lng": null,
+    "lat": 35.9251,
+    "lng": 139.4858,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Kitagawa_Utamaro",
     "isCosmic": false
   },
   {
@@ -10378,7 +10378,7 @@
     "lng": 54.4,
     "category": "arte",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Salvator_mundi_(Leonardo)",
     "isCosmic": false
   },
   {
@@ -10386,11 +10386,11 @@
     "title": "Bahadur Shah I",
     "description": "the seventh Mughal Emperor from 1707 to 1712",
     "year": 1643,
-    "lat": null,
-    "lng": null,
+    "lat": 21.3,
+    "lng": 76.2267,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bahadur_Shah_I",
     "isCosmic": false
   },
   {
@@ -10398,11 +10398,11 @@
     "title": "Louis Nicolas Davout",
     "description": "generale francese",
     "year": 1770,
-    "lat": null,
-    "lng": null,
+    "lat": 47.6264,
+    "lng": 4.0506,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Louis_Nicolas_Davout",
     "isCosmic": false
   },
   {
@@ -10410,11 +10410,11 @@
     "title": "Ermak Timofeevič",
     "description": "militare russo",
     "year": 1532,
-    "lat": null,
-    "lng": null,
+    "lat": 55.7506,
+    "lng": 37.6175,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ermak_Timofeevič",
     "isCosmic": false
   },
   {
@@ -10422,11 +10422,11 @@
     "title": "Parmigianino",
     "description": "pittore italiano del XVI secolo, esponente del Manierismo (1503-1540)",
     "year": 1503,
-    "lat": null,
-    "lng": null,
+    "lat": 44.8015,
+    "lng": 10.328,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Parmigianino",
     "isCosmic": false
   },
   {
@@ -10434,11 +10434,11 @@
     "title": "Cristiano VI di Danimarca",
     "description": "re di Danimarca e Norvegia (r. 1730-1746)",
     "year": 1699,
-    "lat": null,
-    "lng": null,
+    "lat": 55.6772,
+    "lng": 12.58,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cristiano_VI_di_Danimarca",
     "isCosmic": false
   },
   {
@@ -10446,11 +10446,11 @@
     "title": "Pietro II del Portogallo",
     "description": "re del Portogallo (r. 1683-1706)",
     "year": 1648,
-    "lat": null,
-    "lng": null,
+    "lat": 38.7068,
+    "lng": -9.137,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pietro_II_del_Portogallo",
     "isCosmic": false
   },
   {
@@ -10458,11 +10458,11 @@
     "title": "Rafael del Riego",
     "description": "generale e politico spagnolo",
     "year": 1784,
-    "lat": null,
-    "lng": null,
+    "lat": 43.2736,
+    "lng": -6.3709,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Rafael_del_Riego",
     "isCosmic": false
   },
   {
@@ -10470,11 +10470,11 @@
     "title": "Fernando Álvarez de Toledo",
     "description": "duca d'Alba e generale spagnolo",
     "year": 1507,
-    "lat": null,
-    "lng": null,
+    "lat": 40.4635,
+    "lng": -5.3276,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fernando_Álvarez_de_Toledo",
     "isCosmic": false
   },
   {
@@ -10482,11 +10482,11 @@
     "title": "Josef Radetzky",
     "description": "feldmaresciallo austriaco",
     "year": 1766,
-    "lat": null,
-    "lng": null,
+    "lat": 49.6506,
+    "lng": 14.3619,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Josef_Radetzky",
     "isCosmic": false
   },
   {
@@ -10494,11 +10494,11 @@
     "title": "Mary Wortley Montagu",
     "description": "scrittrice e poetessa inglese",
     "year": 1689,
-    "lat": null,
-    "lng": null,
+    "lat": 52.946,
+    "lng": -1.066,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mary_Wortley_Montagu",
     "isCosmic": false
   },
   {
@@ -10506,11 +10506,11 @@
     "title": "Giovanni Battista Belzoni",
     "description": "esploratore e archeologo italiano (1778-1823)",
     "year": 1778,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4078,
+    "lng": 11.8733,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giovanni_Battista_Belzoni",
     "isCosmic": false
   },
   {
@@ -10518,11 +10518,11 @@
     "title": "Avvakum",
     "description": "religioso e scrittore russo",
     "year": 1620,
-    "lat": null,
-    "lng": null,
+    "lat": 55.7817,
+    "lng": 44.6314,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Avvakum",
     "isCosmic": false
   },
   {
@@ -10530,11 +10530,11 @@
     "title": "Leone l'Africano",
     "description": "diplomatico e geografo nordafricano",
     "year": 1494,
-    "lat": null,
-    "lng": null,
+    "lat": 37.175,
+    "lng": -3.6,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Leone_l'Africano",
     "isCosmic": false
   },
   {
@@ -10546,7 +10546,7 @@
     "lng": 19,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_di_successione_polacca",
     "isCosmic": false
   },
   {
@@ -10554,11 +10554,11 @@
     "title": "Adolfo Federico di Svezia",
     "description": "re di Svezia (r. 1751-1771)",
     "year": 1710,
-    "lat": null,
-    "lng": null,
+    "lat": 54.5117,
+    "lng": 9.5414,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Adolfo_Federico_di_Svezia",
     "isCosmic": false
   },
   {
@@ -10566,11 +10566,11 @@
     "title": "Federico I di Svezia",
     "description": "re di Svezia (r. 1720-1751)",
     "year": 1676,
-    "lat": null,
-    "lng": null,
+    "lat": 51.3158,
+    "lng": 9.4979,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Federico_I_di_Svezia",
     "isCosmic": false
   },
   {
@@ -10578,11 +10578,11 @@
     "title": "Carlo d'Asburgo-Teschen",
     "description": "duca di Teschen, feldmaresciallo, scrittore e teorico militare austriaco",
     "year": 1771,
-    "lat": null,
-    "lng": null,
+    "lat": 43.7714,
+    "lng": 11.2542,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Carlo_d'Asburgo-Teschen",
     "isCosmic": false
   },
   {
@@ -10590,11 +10590,11 @@
     "title": "José Gervasio Artigas",
     "description": "militare e politico rioplatense",
     "year": 1764,
-    "lat": null,
-    "lng": null,
+    "lat": -34.9059,
+    "lng": -56.1913,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "José_Gervasio_Artigas",
     "isCosmic": false
   },
   {
@@ -10602,11 +10602,11 @@
     "title": "Michiel de Ruyter",
     "description": "ammiraglio olandese",
     "year": 1607,
-    "lat": null,
-    "lng": null,
+    "lat": 51.45,
+    "lng": 3.5833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michiel_de_Ruyter",
     "isCosmic": false
   },
   {
@@ -10614,11 +10614,11 @@
     "title": "Józef Antoni Poniatowski",
     "description": "generale polacco",
     "year": 1763,
-    "lat": null,
-    "lng": null,
+    "lat": 48.2083,
+    "lng": 16.3725,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Józef_Antoni_Poniatowski",
     "isCosmic": false
   },
   {
@@ -10626,11 +10626,11 @@
     "title": "Fëdor Fëdorovič Ušakov",
     "description": "ammiraglio russo (1745-1817)",
     "year": 1745,
-    "lat": null,
-    "lng": null,
+    "lat": 58.0036,
+    "lng": 39.2928,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fëdor_Fëdorovič_Ušakov",
     "isCosmic": false
   },
   {
@@ -10638,11 +10638,11 @@
     "title": "Eugenio di Beauharnais",
     "description": "viceré d'Italia, primo duca di Leuchtenberg e principe di Eichstätt, politico e generale francese",
     "year": 1781,
-    "lat": null,
-    "lng": null,
+    "lat": 48.8567,
+    "lng": 2.3522,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eugenio_di_Beauharnais",
     "isCosmic": false
   },
   {
@@ -10650,11 +10650,11 @@
     "title": "Maurizio di Nassau",
     "description": "principe d'Orange",
     "year": 1567,
-    "lat": null,
-    "lng": null,
+    "lat": 50.7333,
+    "lng": 8.2833,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Maurizio_di_Nassau",
     "isCosmic": false
   },
   {
@@ -10662,11 +10662,11 @@
     "title": "John Franklin",
     "description": "ufficiale, esploratore e scrittore britannico",
     "year": 1786,
-    "lat": null,
-    "lng": null,
+    "lat": 53.1727,
+    "lng": 0.0931,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "John_Franklin",
     "isCosmic": false
   },
   {
@@ -10678,7 +10678,7 @@
     "lng": 136.4616,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Sekigahara",
     "isCosmic": false
   },
   {
@@ -10690,7 +10690,7 @@
     "lng": 76.9728,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prima_battaglia_di_Panipat",
     "isCosmic": false
   },
   {
@@ -10698,11 +10698,11 @@
     "title": "Sokollu Mehmed Pascià",
     "description": "politico ottomano",
     "year": 1505,
-    "lat": null,
-    "lng": null,
+    "lat": 43.9425,
+    "lng": 18.9319,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sokollu_Mehmed_Pascià",
     "isCosmic": false
   },
   {
@@ -10714,7 +10714,7 @@
     "lng": 127,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Invasioni_giapponesi_della_Corea_(1592-1598)",
     "isCosmic": false
   },
   {
@@ -10726,7 +10726,7 @@
     "lng": 31,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_russo-turca_(1768-1774)",
     "isCosmic": false
   },
   {
@@ -10734,11 +10734,11 @@
     "title": "William Petty, II conte di Shelburne",
     "description": "primo marchese di Lansdowne, conte di Shelburne e politico inglese",
     "year": 1737,
-    "lat": null,
-    "lng": null,
+    "lat": 53.3497,
+    "lng": -6.2603,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "William_Petty,_II_conte_di_Shelburne",
     "isCosmic": false
   },
   {
@@ -10746,11 +10746,11 @@
     "title": "Auguste Marmont",
     "description": "generale francese",
     "year": 1774,
-    "lat": null,
-    "lng": null,
+    "lat": 47.8583,
+    "lng": 4.5742,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Auguste_Marmont",
     "isCosmic": false
   },
   {
@@ -10758,11 +10758,11 @@
     "title": "Jakob Roggeveen",
     "description": "navigatore olandese",
     "year": 1659,
-    "lat": null,
-    "lng": null,
+    "lat": 51.4997,
+    "lng": 3.6136,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jacob_Roggeveen",
     "isCosmic": false
   },
   {
@@ -10770,11 +10770,11 @@
     "title": "René Robert Cavelier de La Salle",
     "description": "esploratore francese",
     "year": 1643,
-    "lat": null,
-    "lng": null,
+    "lat": 49.4431,
+    "lng": 1.1025,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "René_Robert_Cavelier_de_La_Salle",
     "isCosmic": false
   },
   {
@@ -10782,11 +10782,11 @@
     "title": "Michail Petrovič Lazarev",
     "description": "esploratore e ammiraglio russo",
     "year": 1788,
-    "lat": null,
-    "lng": null,
+    "lat": 56.1286,
+    "lng": 40.4058,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Michail_Petrovič_Lazarev",
     "isCosmic": false
   },
   {
@@ -10794,11 +10794,11 @@
     "title": "Miguel López de Legazpi",
     "description": "militare spagnolo e fondatore delle città di Cebu e Manila",
     "year": 1502,
-    "lat": null,
-    "lng": null,
+    "lat": 43.0831,
+    "lng": -2.3167,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Miguel_López_de_Legazpi",
     "isCosmic": false
   },
   {
@@ -10810,7 +10810,7 @@
     "lng": 15.0131,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_del_Val_di_Noto_del_1693",
     "isCosmic": false
   },
   {
@@ -10822,7 +10822,7 @@
     "lng": 28.7,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Costantinopoli_del_1509",
     "isCosmic": false
   },
   {
@@ -10834,7 +10834,7 @@
     "lng": 18.1,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "1667_Dubrovnik_earthquake",
     "isCosmic": false
   },
   {
@@ -10846,7 +10846,7 @@
     "lng": 118.6,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "1668_Shandong_earthquake",
     "isCosmic": false
   },
   {
@@ -10858,7 +10858,7 @@
     "lng": -125,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_della_Cascadia_del_1700",
     "isCosmic": false
   },
   {
@@ -10870,7 +10870,7 @@
     "lng": 36,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "1668_North_Anatolia_earthquake",
     "isCosmic": false
   },
   {
@@ -10882,7 +10882,7 @@
     "lng": 44.7,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "1679_Armenia_earthquake",
     "isCosmic": false
   },
   {
@@ -10894,7 +10894,7 @@
     "lng": 15.97,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_della_Calabria_meridionale_del_1783",
     "isCosmic": false
   }
 ]

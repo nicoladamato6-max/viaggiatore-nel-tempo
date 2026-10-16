@@ -5056,11 +5056,11 @@
     "title": "Aristotele",
     "description": "filosofo e scienziato greco antico",
     "year": -383,
-    "lat": null,
-    "lng": null,
+    "lat": 40.5908,
+    "lng": 23.7942,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aristotele",
     "isCosmic": false
   },
   {
@@ -5068,11 +5068,11 @@
     "title": "Confucio",
     "description": "filosofo cinese",
     "year": -550,
-    "lat": null,
-    "lng": null,
+    "lat": 35.6,
+    "lng": 116.9833,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Confucio",
     "isCosmic": false
   },
   {
@@ -5080,11 +5080,11 @@
     "title": "Platone",
     "description": "filosofo greco antico",
     "year": -428,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9842,
+    "lng": 23.7281,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Platone",
     "isCosmic": false
   },
   {
@@ -5092,11 +5092,11 @@
     "title": "Gautama Buddha",
     "description": "monaco, filosofo, mistico e asceta indiano, fondatore del buddhismo",
     "year": -500,
-    "lat": null,
-    "lng": null,
+    "lat": 27.4814,
+    "lng": 83.2758,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gautama_Buddha",
     "isCosmic": false
   },
   {
@@ -5104,11 +5104,11 @@
     "title": "Alessandro Magno",
     "description": "fondatore dell'impero ellenistico, fu re di Macedonia, egemone della lega ellenica, faraone d'Egitto e imperatore di Persia",
     "year": -355,
-    "lat": null,
-    "lng": null,
+    "lat": 40.76,
+    "lng": 22.5256,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alessandro_Magno",
     "isCosmic": false
   },
   {
@@ -5116,11 +5116,11 @@
     "title": "Archimede",
     "description": "matematico, ingegnere, fisico e inventore greco antico",
     "year": -286,
-    "lat": null,
-    "lng": null,
+    "lat": 37.0833,
+    "lng": 15.2833,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Archimede",
     "isCosmic": false
   },
   {
@@ -5128,11 +5128,11 @@
     "title": "Sofocle",
     "description": "tragediografo ateniese",
     "year": -495,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9958,
+    "lng": 23.7153,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sofocle",
     "isCosmic": false
   },
   {
@@ -5140,11 +5140,11 @@
     "title": "Laozi",
     "description": "filosofo cinese",
     "year": -579,
-    "lat": null,
-    "lng": null,
+    "lat": 30.4228,
+    "lng": 112.1733,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Laozi",
     "isCosmic": false
   },
   {
@@ -5152,11 +5152,11 @@
     "title": "Pitagora",
     "description": "matematico, legislatore, filosofo, astronomo, scienziato e politico greco antico",
     "year": -582,
-    "lat": null,
-    "lng": null,
+    "lat": 37.6908,
+    "lng": 26.9383,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pitagora",
     "isCosmic": false
   },
   {
@@ -5168,7 +5168,7 @@
     "lng": null,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Euclide",
     "isCosmic": false
   },
   {
@@ -5176,11 +5176,11 @@
     "title": "Marco Tullio Cicerone",
     "description": "avvocato, politico, scrittore, oratore e filosofo romano",
     "year": -106,
-    "lat": null,
-    "lng": null,
+    "lat": 41.6471,
+    "lng": 13.6116,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marco_Tullio_Cicerone",
     "isCosmic": false
   },
   {
@@ -5188,11 +5188,11 @@
     "title": "Qin Shi Huang",
     "description": "primo imperatore cinese e primo imperatore della dinastia Qin",
     "year": -258,
-    "lat": null,
-    "lng": null,
+    "lat": 36.6116,
+    "lng": 114.4894,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Qin_Shi_Huang",
     "isCosmic": false
   },
   {
@@ -5200,11 +5200,11 @@
     "title": "Ippocrate",
     "description": "medico, geografo e aforista greco antico",
     "year": -459,
-    "lat": null,
-    "lng": null,
+    "lat": 36.8959,
+    "lng": 27.2905,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ippocrate",
     "isCosmic": false
   },
   {
@@ -5212,11 +5212,11 @@
     "title": "Cleopatra",
     "description": "ultima regina del regno tolemaico d'Egitto",
     "year": -68,
-    "lat": null,
-    "lng": null,
+    "lat": 31.1975,
+    "lng": 29.8925,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cleopatra",
     "isCosmic": false
   },
   {
@@ -5224,11 +5224,11 @@
     "title": "Quinto Orazio Flacco",
     "description": "poeta romano",
     "year": -64,
-    "lat": null,
-    "lng": null,
+    "lat": 40.9667,
+    "lng": 15.8167,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Quinto_Orazio_Flacco",
     "isCosmic": false
   },
   {
@@ -5236,11 +5236,11 @@
     "title": "Esopo",
     "description": "favolista greco antico",
     "year": -619,
-    "lat": null,
-    "lng": null,
+    "lat": 37.6908,
+    "lng": 26.9383,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Esopo",
     "isCosmic": false
   },
   {
@@ -5248,11 +5248,11 @@
     "title": "Sun Tzu",
     "description": "generale e filosofo cinese",
     "year": -543,
-    "lat": null,
-    "lng": null,
+    "lat": 36.865,
+    "lng": 118.34,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sun_Tzu",
     "isCosmic": false
   },
   {
@@ -5260,11 +5260,11 @@
     "title": "Talete",
     "description": "filosofo, astronomo, matematico, fisico e politico greco antico",
     "year": -624,
-    "lat": null,
-    "lng": null,
+    "lat": 37.5311,
+    "lng": 27.2756,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Talete",
     "isCosmic": false
   },
   {
@@ -5272,11 +5272,11 @@
     "title": "Lucio Anneo Seneca",
     "description": "filosofo, poeta, politico e drammaturgo romano",
     "year": -4,
-    "lat": null,
-    "lng": null,
+    "lat": 37.8848,
+    "lng": -4.7764,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Lucio_Anneo_Seneca",
     "isCosmic": false
   },
   {
@@ -5284,11 +5284,11 @@
     "title": "Euripide",
     "description": "tragediografo ateniese",
     "year": -480,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9333,
+    "lng": 23.5,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Euripide",
     "isCosmic": false
   },
   {
@@ -5296,11 +5296,11 @@
     "title": "Democrito",
     "description": "filosofo greco antico",
     "year": -460,
-    "lat": null,
-    "lng": null,
+    "lat": 40.9337,
+    "lng": 24.9733,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Democrito",
     "isCosmic": false
   },
   {
@@ -5308,11 +5308,11 @@
     "title": "Ciro II di Persia",
     "description": "sovrano persiano, fondatore dell'Impero achemenide (r. 559-530 a.C.)",
     "year": -599,
-    "lat": null,
-    "lng": null,
+    "lat": 30.0117,
+    "lng": 52.4078,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ciro_II_di_Persia",
     "isCosmic": false
   },
   {
@@ -5320,11 +5320,11 @@
     "title": "Epicuro",
     "description": "filosofo greco antico",
     "year": -341,
-    "lat": null,
-    "lng": null,
+    "lat": 37.6908,
+    "lng": 26.9383,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Epicuro",
     "isCosmic": false
   },
   {
@@ -5332,11 +5332,11 @@
     "title": "Saffo",
     "description": "poetessa greca antica",
     "year": -650,
-    "lat": null,
-    "lng": null,
+    "lat": 39.21,
+    "lng": 26.28,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Saffo",
     "isCosmic": false
   },
   {
@@ -5344,11 +5344,11 @@
     "title": "Eraclito",
     "description": "filosofo greco antico",
     "year": -534,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9397,
+    "lng": 27.3408,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eraclito",
     "isCosmic": false
   },
   {
@@ -5356,11 +5356,11 @@
     "title": "Chanakya",
     "description": "scrittore indiano",
     "year": -374,
-    "lat": null,
-    "lng": null,
+    "lat": 33.7457,
+    "lng": 72.8152,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cāṇakya",
     "isCosmic": false
   },
   {
@@ -5368,11 +5368,11 @@
     "title": "Sima Qian",
     "description": "storico cinese",
     "year": -144,
-    "lat": null,
-    "lng": null,
+    "lat": 35.5914,
+    "lng": 110.706,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sima_Qian",
     "isCosmic": false
   },
   {
@@ -5380,11 +5380,11 @@
     "title": "Salomone",
     "description": "personaggio biblico, re d'Israele",
     "year": -989,
-    "lat": null,
-    "lng": null,
+    "lat": 31.7767,
+    "lng": 35.2342,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Salomone",
     "isCosmic": false
   },
   {
@@ -5392,11 +5392,11 @@
     "title": "Davide",
     "description": "patriarca biblico, re d'Israele",
     "year": -1038,
-    "lat": null,
-    "lng": null,
+    "lat": 31.7044,
+    "lng": 35.2061,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Davide",
     "isCosmic": false
   },
   {
@@ -5404,11 +5404,11 @@
     "title": "Senofonte",
     "description": "storico e filosofo ateniese",
     "year": -430,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9672,
+    "lng": 23.9187,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Senofonte",
     "isCosmic": false
   },
   {
@@ -5416,11 +5416,11 @@
     "title": "Hammurabi",
     "description": "sesto re di Babilonia",
     "year": -1809,
-    "lat": null,
-    "lng": null,
+    "lat": 32.5,
+    "lng": 44.5,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Hammurabi",
     "isCosmic": false
   },
   {
@@ -5428,11 +5428,11 @@
     "title": "Tito Lucrezio Caro",
     "description": "poeta e filosofo romano",
     "year": -93,
-    "lat": null,
-    "lng": null,
+    "lat": 40.7506,
+    "lng": 14.4897,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tito_Lucrezio_Caro",
     "isCosmic": false
   },
   {
@@ -5440,11 +5440,11 @@
     "title": "Diogene di Sinope",
     "description": "filosofo cinico greco antico",
     "year": -399,
-    "lat": null,
-    "lng": null,
+    "lat": 42.0258,
+    "lng": 35.143,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Diogene_di_Sinope",
     "isCosmic": false
   },
   {
@@ -5452,11 +5452,11 @@
     "title": "Solone",
     "description": "legislatore, giurista e poeta ateniese",
     "year": -629,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9722,
+    "lng": 23.7222,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Solone",
     "isCosmic": false
   },
   {
@@ -5468,7 +5468,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Strabone",
     "isCosmic": false
   },
   {
@@ -5476,11 +5476,11 @@
     "title": "Anassimandro",
     "description": "filosofo greco antico",
     "year": -609,
-    "lat": null,
-    "lng": null,
+    "lat": 37.5311,
+    "lng": 27.2756,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Anassimandro",
     "isCosmic": false
   },
   {
@@ -5488,11 +5488,11 @@
     "title": "Anassagora",
     "description": "filosofo greco antico",
     "year": -499,
-    "lat": null,
-    "lng": null,
+    "lat": 38.3739,
+    "lng": 26.7853,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Anassagora",
     "isCosmic": false
   },
   {
@@ -5500,11 +5500,11 @@
     "title": "Parmenide",
     "description": "filosofo greco antico",
     "year": -514,
-    "lat": null,
-    "lng": null,
+    "lat": 40.1594,
+    "lng": 15.1544,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Parmenide",
     "isCosmic": false
   },
   {
@@ -5516,7 +5516,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Dario_I_di_Persia",
     "isCosmic": false
   },
   {
@@ -5524,11 +5524,11 @@
     "title": "Eratostene di Cirene",
     "description": "matematico, astronomo, geografo e poeta greco antico",
     "year": -275,
-    "lat": null,
-    "lng": null,
+    "lat": 32.823,
+    "lng": 21.8573,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eratostene",
     "isCosmic": false
   },
   {
@@ -5536,11 +5536,11 @@
     "title": "Protagora",
     "description": "retore e filosofo greco antico",
     "year": -489,
-    "lat": null,
-    "lng": null,
+    "lat": 40.9337,
+    "lng": 24.9733,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Protagora",
     "isCosmic": false
   },
   {
@@ -5548,11 +5548,11 @@
     "title": "Marco Porcio Catone",
     "description": "politico, generale e scrittore romano",
     "year": -233,
-    "lat": null,
-    "lng": null,
+    "lat": 41.7983,
+    "lng": 12.7108,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marco_Porcio_Catone",
     "isCosmic": false
   },
   {
@@ -5564,7 +5564,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mencio",
     "isCosmic": false
   },
   {
@@ -5572,11 +5572,11 @@
     "title": "Empedocle",
     "description": "filosofo e politico greco antico",
     "year": -493,
-    "lat": null,
-    "lng": null,
+    "lat": 37.2923,
+    "lng": 13.5936,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Empedocle",
     "isCosmic": false
   },
   {
@@ -5584,11 +5584,11 @@
     "title": "Senofane",
     "description": "filosofo greco antico",
     "year": -569,
-    "lat": null,
-    "lng": null,
+    "lat": 38.1156,
+    "lng": 27.1422,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Senofane",
     "isCosmic": false
   },
   {
@@ -5600,7 +5600,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Regina_di_Saba",
     "isCosmic": false
   },
   {
@@ -5608,11 +5608,11 @@
     "title": "Zhuāngzǐ",
     "description": "filosofo e mistico cinese",
     "year": -368,
-    "lat": null,
-    "lng": null,
+    "lat": 34.4259,
+    "lng": 115.6467,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zhuāngzǐ",
     "isCosmic": false
   },
   {
@@ -5620,11 +5620,11 @@
     "title": "Teofrasto",
     "description": "filosofo e botanico greco antico",
     "year": -370,
-    "lat": null,
-    "lng": null,
+    "lat": 39.1699,
+    "lng": 25.9338,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Teofrasto",
     "isCosmic": false
   },
   {
@@ -5632,11 +5632,11 @@
     "title": "Zenone di Elea",
     "description": "filosofo greco antico",
     "year": -489,
-    "lat": null,
-    "lng": null,
+    "lat": 40.1594,
+    "lng": 15.1544,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zenone_di_Elea",
     "isCosmic": false
   },
   {
@@ -5644,11 +5644,11 @@
     "title": "Nabucodonosor II",
     "description": "sovrano babilonese",
     "year": -641,
-    "lat": null,
-    "lng": null,
+    "lat": 31.3259,
+    "lng": 45.6374,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nabucodonosor_II",
     "isCosmic": false
   },
   {
@@ -5656,11 +5656,11 @@
     "title": "Mahavira",
     "description": "maestro spirituale indiano",
     "year": -598,
-    "lat": null,
-    "lng": null,
+    "lat": 25.9866,
+    "lng": 85.1256,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mahavira",
     "isCosmic": false
   },
   {
@@ -5672,7 +5672,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filippo_II_di_Macedonia",
     "isCosmic": false
   },
   {
@@ -5680,11 +5680,11 @@
     "title": "Anassimene di Mileto",
     "description": "filosofo greco antico",
     "year": -584,
-    "lat": null,
-    "lng": null,
+    "lat": 37.5311,
+    "lng": 27.2756,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Anassimene_di_Mileto",
     "isCosmic": false
   },
   {
@@ -5692,11 +5692,11 @@
     "title": "Zenone di Cizio",
     "description": "filosofo greco antico",
     "year": -333,
-    "lat": null,
-    "lng": null,
+    "lat": 34.9233,
+    "lng": 33.6305,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zenone_di_Cizio",
     "isCosmic": false
   },
   {
@@ -5704,11 +5704,11 @@
     "title": "Antistene",
     "description": "filosofo greco antico",
     "year": -444,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9372,
+    "lng": 23.6447,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antistene",
     "isCosmic": false
   },
   {
@@ -5716,11 +5716,11 @@
     "title": "Ipparco di Nicea",
     "description": "astronomo, matematico e geografo greco antico",
     "year": -189,
-    "lat": null,
-    "lng": null,
+    "lat": 40.429,
+    "lng": 29.7195,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ipparco_di_Nicea",
     "isCosmic": false
   },
   {
@@ -5732,7 +5732,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pirro",
     "isCosmic": false
   },
   {
@@ -5744,7 +5744,7 @@
     "lng": 22.5369,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_delle_Termopili",
     "isCosmic": false
   },
   {
@@ -5756,7 +5756,7 @@
     "lng": 14.0167,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_del_Peloponneso",
     "isCosmic": false
   },
   {
@@ -5764,11 +5764,11 @@
     "title": "Leucippo",
     "description": "filosofo greco antico",
     "year": -500,
-    "lat": null,
-    "lng": null,
+    "lat": 37.5311,
+    "lng": 27.2756,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Leucippo",
     "isCosmic": false
   },
   {
@@ -5776,11 +5776,11 @@
     "title": "Erode il Grande",
     "description": "re di Giudea (r. 37-4 a.C.)",
     "year": -73,
-    "lat": null,
-    "lng": null,
+    "lat": 30.3286,
+    "lng": 35.4419,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Erode_il_Grande",
     "isCosmic": false
   },
   {
@@ -5788,11 +5788,11 @@
     "title": "Apollonio di Perga",
     "description": "matematico e astronomo greco antico",
     "year": -261,
-    "lat": null,
-    "lng": null,
+    "lat": 36.9622,
+    "lng": 30.8551,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Apollonio_di_Perga",
     "isCosmic": false
   },
   {
@@ -5800,11 +5800,11 @@
     "title": "Dario III di Persia",
     "description": "ultimo gran re dell'Impero achemenide (r. 336-330 a.C.)",
     "year": -379,
-    "lat": null,
-    "lng": null,
+    "lat": 30,
+    "lng": 52,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Dario_III_di_Persia",
     "isCosmic": false
   },
   {
@@ -5812,11 +5812,11 @@
     "title": "Aristarco di Samo",
     "description": "astronomo greco antico",
     "year": -309,
-    "lat": null,
-    "lng": null,
+    "lat": 37.75,
+    "lng": 26.8333,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aristarco_di_Samo",
     "isCosmic": false
   },
   {
@@ -5828,7 +5828,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marco_Giunio_Bruto",
     "isCosmic": false
   },
   {
@@ -5840,7 +5840,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Saul",
     "isCosmic": false
   },
   {
@@ -5852,7 +5852,7 @@
     "lng": 23.9783,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Maratona",
     "isCosmic": false
   },
   {
@@ -5864,7 +5864,7 @@
     "lng": 17,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Seconda_guerra_punica",
     "isCosmic": false
   },
   {
@@ -5872,11 +5872,11 @@
     "title": "Imhotep",
     "description": "architetto, medico e astronomo vissuto durante la terza dinastia egizia",
     "year": -2800,
-    "lat": null,
-    "lng": null,
+    "lat": 29.8447,
+    "lng": 31.2509,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Imhotep",
     "isCosmic": false
   },
   {
@@ -5884,11 +5884,11 @@
     "title": "Han Fei",
     "description": "filosofo e funzionario cinese",
     "year": -279,
-    "lat": null,
-    "lng": null,
+    "lat": 34.3962,
+    "lng": 113.7249,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Han_Fei",
     "isCosmic": false
   },
   {
@@ -5896,11 +5896,11 @@
     "title": "Marco Terenzio Varrone",
     "description": "letterato, scrittore e militare romano",
     "year": -115,
-    "lat": null,
-    "lng": null,
+    "lat": 42.4044,
+    "lng": 12.8567,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marco_Terenzio_Varrone",
     "isCosmic": false
   },
   {
@@ -5908,11 +5908,11 @@
     "title": "Filone di Alessandria",
     "description": "filosofo ellenistico di cultura ebraica",
     "year": -14,
-    "lat": null,
-    "lng": null,
+    "lat": 31.1975,
+    "lng": 29.8925,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filone_di_Alessandria",
     "isCosmic": false
   },
   {
@@ -5920,11 +5920,11 @@
     "title": "Fidia",
     "description": "scultore e architetto greco antico",
     "year": -499,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9842,
+    "lng": 23.7281,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fidia",
     "isCosmic": false
   },
   {
@@ -5932,11 +5932,11 @@
     "title": "Aristippo",
     "description": "filosofo greco antico",
     "year": -434,
-    "lat": null,
-    "lng": null,
+    "lat": 32.823,
+    "lng": 21.8573,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aristippo",
     "isCosmic": false
   },
   {
@@ -5944,11 +5944,11 @@
     "title": "Eudosso di Cnido",
     "description": "matematico e astronomo greco antico",
     "year": -407,
-    "lat": null,
-    "lng": null,
+    "lat": 36.6858,
+    "lng": 27.375,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eudosso_di_Cnido",
     "isCosmic": false
   },
   {
@@ -5960,7 +5960,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Xunzi",
     "isCosmic": false
   },
   {
@@ -5968,11 +5968,11 @@
     "title": "Enḫeduanna",
     "description": "sacerdotessa e autrice accadica",
     "year": -2300,
-    "lat": null,
-    "lng": null,
+    "lat": 33.1,
+    "lng": 44.1,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Enḫeduanna",
     "isCosmic": false
   },
   {
@@ -5984,7 +5984,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mozi",
     "isCosmic": false
   },
   {
@@ -5992,11 +5992,11 @@
     "title": "Publilio Siro",
     "description": "scrittore e drammaturgo romano",
     "year": -100,
-    "lat": null,
-    "lng": null,
+    "lat": 37.0833,
+    "lng": 41.2167,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Publilio_Siro",
     "isCosmic": false
   },
   {
@@ -6008,7 +6008,7 @@
     "lng": 16.1325,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Canne",
     "isCosmic": false
   },
   {
@@ -6020,7 +6020,7 @@
     "lng": 43.25,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Gaugamela",
     "isCosmic": false
   },
   {
@@ -6032,7 +6032,7 @@
     "lng": 17,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prima_guerra_punica",
     "isCosmic": false
   },
   {
@@ -6040,11 +6040,11 @@
     "title": "Aspasia di Mileto",
     "description": "antica greca, seconda moglie di Pericle",
     "year": -469,
-    "lat": null,
-    "lng": null,
+    "lat": 37.5311,
+    "lng": 27.2756,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aspasia_di_Mileto",
     "isCosmic": false
   },
   {
@@ -6056,7 +6056,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Menes",
     "isCosmic": false
   },
   {
@@ -6064,11 +6064,11 @@
     "title": "Archita",
     "description": "filosofo, teorico della musica, astronomo, matematico e politico greco antico",
     "year": -429,
-    "lat": null,
-    "lng": null,
+    "lat": 40.476,
+    "lng": 17.228,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Archita",
     "isCosmic": false
   },
   {
@@ -6076,11 +6076,11 @@
     "title": "Erode Antipa",
     "description": "tetrarca di Galilea e Perea (r. 4 a.C. - 39 d.C.)",
     "year": -20,
-    "lat": null,
-    "lng": null,
+    "lat": 31.6989,
+    "lng": 35.3064,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Erode_Antipa",
     "isCosmic": false
   },
   {
@@ -6092,7 +6092,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nimrod_(Bibbia)",
     "isCosmic": false
   },
   {
@@ -6104,7 +6104,7 @@
     "lng": 10,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terza_guerra_punica",
     "isCosmic": false
   },
   {
@@ -6112,11 +6112,11 @@
     "title": "Pitea",
     "description": "navigatore e geografo greco antico",
     "year": -358,
-    "lat": null,
-    "lng": null,
+    "lat": 43.2969,
+    "lng": 5.3825,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pitea",
     "isCosmic": false
   },
   {
@@ -6124,11 +6124,11 @@
     "title": "Jinmu",
     "description": "imperatore giapponese",
     "year": -710,
-    "lat": null,
-    "lng": null,
+    "lat": 32.7117,
+    "lng": 131.3078,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jinmu",
     "isCosmic": false
   },
   {
@@ -6136,11 +6136,11 @@
     "title": "Roboamo",
     "description": "re di Giuda",
     "year": -971,
-    "lat": null,
-    "lng": null,
+    "lat": 31.7767,
+    "lng": 35.2342,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Roboamo",
     "isCosmic": false
   },
   {
@@ -6148,11 +6148,11 @@
     "title": "Amilcare Barca",
     "description": "generale cartaginese",
     "year": -274,
-    "lat": null,
-    "lng": null,
+    "lat": 36.8526,
+    "lng": 10.3235,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Amilcare_Barca",
     "isCosmic": false
   },
   {
@@ -6164,7 +6164,7 @@
     "lng": 2.9,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Conquista_della_Gallia",
     "isCosmic": false
   },
   {
@@ -6172,11 +6172,11 @@
     "title": "Posidonio",
     "description": "filosofo, geografo e storico greco antico",
     "year": -134,
-    "lat": null,
-    "lng": null,
+    "lat": 35.4167,
+    "lng": 36.4,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Posidonio",
     "isCosmic": false
   },
   {
@@ -6184,11 +6184,11 @@
     "title": "Lucio Anneo Seneca il Vecchio",
     "description": "scrittore romano",
     "year": -53,
-    "lat": null,
-    "lng": null,
+    "lat": 37.89,
+    "lng": -4.78,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Lucio_Anneo_Seneca_il_Vecchio",
     "isCosmic": false
   },
   {
@@ -6196,11 +6196,11 @@
     "title": "Ezechia",
     "description": "re di Giuda",
     "year": -740,
-    "lat": null,
-    "lng": null,
+    "lat": 31.7767,
+    "lng": 35.2342,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ezechia",
     "isCosmic": false
   },
   {
@@ -6208,11 +6208,11 @@
     "title": "Crisippo di Soli",
     "description": "filosofo e matematico greco antico",
     "year": -280,
-    "lat": null,
-    "lng": null,
+    "lat": 36.7427,
+    "lng": 34.5379,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Crisippo_di_Soli",
     "isCosmic": false
   },
   {
@@ -6220,11 +6220,11 @@
     "title": "Pittaco",
     "description": "filosofo e politico greco antico",
     "year": -650,
-    "lat": null,
-    "lng": null,
+    "lat": 39.1047,
+    "lng": 26.5536,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pittaco",
     "isCosmic": false
   },
   {
@@ -6232,11 +6232,11 @@
     "title": "Tarquinio il Superbo",
     "description": "settimo e ultimo re di Roma",
     "year": -600,
-    "lat": null,
-    "lng": null,
+    "lat": 41.89,
+    "lng": 12.48,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tarquinio_il_Superbo",
     "isCosmic": false
   },
   {
@@ -6244,11 +6244,11 @@
     "title": "Dario II di Persia",
     "description": "gran re dell'Impero achemenide (r. 423-404 a.C.)",
     "year": -474,
-    "lat": null,
-    "lng": null,
+    "lat": 30,
+    "lng": 52,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Dario_II_di_Persia",
     "isCosmic": false
   },
   {
@@ -6260,7 +6260,7 @@
     "lng": 9.4492,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Zama",
     "isCosmic": false
   },
   {
@@ -6272,7 +6272,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Melchisedec",
     "isCosmic": false
   },
   {
@@ -6284,7 +6284,7 @@
     "lng": 36.498,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Qadeš",
     "isCosmic": false
   },
   {
@@ -6292,11 +6292,11 @@
     "title": "Filolao",
     "description": "filosofo, astronomo e matematico greco antico",
     "year": -469,
-    "lat": null,
-    "lng": null,
+    "lat": 40.476,
+    "lng": 17.228,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filolao",
     "isCosmic": false
   },
   {
@@ -6304,11 +6304,11 @@
     "title": "Pirrone",
     "description": "filosofo greco antico",
     "year": -360,
-    "lat": null,
-    "lng": null,
+    "lat": 37.8922,
+    "lng": 21.3744,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pirrone",
     "isCosmic": false
   },
   {
@@ -6316,11 +6316,11 @@
     "title": "Apelle",
     "description": "pittore greco antico",
     "year": -369,
-    "lat": null,
-    "lng": null,
+    "lat": 38.1156,
+    "lng": 27.1422,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Apelle",
     "isCosmic": false
   },
   {
@@ -6328,11 +6328,11 @@
     "title": "Prassitele",
     "description": "scultore greco antico",
     "year": -394,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9842,
+    "lng": 23.7281,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prassitele",
     "isCosmic": false
   },
   {
@@ -6340,11 +6340,11 @@
     "title": "Apollodoro di Atene",
     "description": "storico, grammatico e lessicografo greco antico",
     "year": -179,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9722,
+    "lng": 23.7222,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Apollodoro_di_Atene",
     "isCosmic": false
   },
   {
@@ -6352,11 +6352,11 @@
     "title": "Biante",
     "description": "filosofo greco antico",
     "year": -599,
-    "lat": null,
-    "lng": null,
+    "lat": 37.6597,
+    "lng": 27.2978,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Biante",
     "isCosmic": false
   },
   {
@@ -6364,11 +6364,11 @@
     "title": "Anacarsi",
     "description": "filosofo scita",
     "year": -700,
-    "lat": null,
-    "lng": null,
+    "lat": 44.9428,
+    "lng": 34.1206,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Anacarsi",
     "isCosmic": false
   },
   {
@@ -6380,7 +6380,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Asa_(re)",
     "isCosmic": false
   },
   {
@@ -6392,7 +6392,7 @@
     "lng": 36.2111,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Isso",
     "isCosmic": false
   },
   {
@@ -6404,7 +6404,7 @@
     "lng": 14.2,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terza_guerra_servile",
     "isCosmic": false
   },
   {
@@ -6412,11 +6412,11 @@
     "title": "Senocrate",
     "description": "filosofo greco antico",
     "year": -395,
-    "lat": null,
-    "lng": null,
+    "lat": 40.9833,
+    "lng": 29.0333,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Senocrate",
     "isCosmic": false
   },
   {
@@ -6428,7 +6428,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Kaṇāda",
     "isCosmic": false
   },
   {
@@ -6436,11 +6436,11 @@
     "title": "Periandro",
     "description": "politico greco antico, tiranno di Corinto, talvolta annoverato come uno dei sette sapienti",
     "year": -700,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9386,
+    "lng": 22.9272,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Periandro",
     "isCosmic": false
   },
   {
@@ -6448,11 +6448,11 @@
     "title": "Nefertari",
     "description": "regina egizia, moglie di Ramses II",
     "year": -1289,
-    "lat": null,
-    "lng": null,
+    "lat": 26.5642,
+    "lng": 31.7461,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nefertari",
     "isCosmic": false
   },
   {
@@ -6460,11 +6460,11 @@
     "title": "Mirone",
     "description": "scultore greco antico",
     "year": -500,
-    "lat": null,
-    "lng": null,
+    "lat": 38.1794,
+    "lng": 23.376,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mirone",
     "isCosmic": false
   },
   {
@@ -6472,11 +6472,11 @@
     "title": "Li Si",
     "description": "primo ministro (o cancelliere) dello stato feudale cinese Qin, ministro del famoso Qin Shi Huang",
     "year": -279,
-    "lat": null,
-    "lng": null,
+    "lat": 33.2656,
+    "lng": 114.2622,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Li_Si",
     "isCosmic": false
   },
   {
@@ -6484,11 +6484,11 @@
     "title": "Chilone",
     "description": "politico greco antico, eforo di Sparta",
     "year": -599,
-    "lat": null,
-    "lng": null,
+    "lat": 37.0819,
+    "lng": 22.4236,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Chilone",
     "isCosmic": false
   },
   {
@@ -6496,11 +6496,11 @@
     "title": "Shang Yang",
     "description": "statista della Cina antica",
     "year": -389,
-    "lat": null,
-    "lng": null,
+    "lat": 35.7639,
+    "lng": 115.03,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Shang_Yang",
     "isCosmic": false
   },
   {
@@ -6512,7 +6512,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Acaz",
     "isCosmic": false
   },
   {
@@ -6524,7 +6524,7 @@
     "lng": 23.318,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Platea",
     "isCosmic": false
   },
   {
@@ -6532,11 +6532,11 @@
     "title": "Lisippo",
     "description": "scultore e bronzista greco antico",
     "year": -389,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9841,
+    "lng": 22.7111,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Lisippo",
     "isCosmic": false
   },
   {
@@ -6544,11 +6544,11 @@
     "title": "Policleto",
     "description": "scultore, bronzista e teorico greco antico",
     "year": -489,
-    "lat": null,
-    "lng": null,
+    "lat": 37.6306,
+    "lng": 22.7215,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Policleto",
     "isCosmic": false
   },
   {
@@ -6556,11 +6556,11 @@
     "title": "Melisso di Samo",
     "description": "filosofo e militare greco antico",
     "year": -490,
-    "lat": null,
-    "lng": null,
+    "lat": 37.6908,
+    "lng": 26.9383,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Melisso_di_Samo",
     "isCosmic": false
   },
   {
@@ -6572,7 +6572,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Horo_Scorpione_II",
     "isCosmic": false
   },
   {
@@ -6584,7 +6584,7 @@
     "lng": 22.8475,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Cheronea_(338_a.C.)",
     "isCosmic": false
   },
   {
@@ -6592,11 +6592,11 @@
     "title": "Alcmeone di Crotone",
     "description": "filosofo greco antico",
     "year": -600,
-    "lat": null,
-    "lng": null,
+    "lat": 39.0833,
+    "lng": 17.1167,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alcmeone_di_Crotone",
     "isCosmic": false
   },
   {
@@ -6604,11 +6604,11 @@
     "title": "Crizia",
     "description": "politico, scrittore e filosofo ateniese, membro dei Trenta tiranni",
     "year": -459,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9722,
+    "lng": 23.7222,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Crizia",
     "isCosmic": false
   },
   {
@@ -6616,11 +6616,11 @@
     "title": "Cleante",
     "description": "filosofo greco antico",
     "year": -330,
-    "lat": null,
-    "lng": null,
+    "lat": 39.4916,
+    "lng": 26.3397,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cleante",
     "isCosmic": false
   },
   {
@@ -6628,11 +6628,11 @@
     "title": "Eschine",
     "description": "politico e retore ateniese",
     "year": -389,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9842,
+    "lng": 23.7281,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eschine",
     "isCosmic": false
   },
   {
@@ -6644,7 +6644,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giosafat",
     "isCosmic": false
   },
   {
@@ -6656,7 +6656,7 @@
     "lng": 73.6389,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_dell'Idaspe",
     "isCosmic": false
   },
   {
@@ -6668,7 +6668,7 @@
     "lng": 39.0333,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Carre",
     "isCosmic": false
   },
   {
@@ -6676,11 +6676,11 @@
     "title": "Gezabele",
     "description": "personaggio biblico",
     "year": -899,
-    "lat": null,
-    "lng": null,
+    "lat": 33.5606,
+    "lng": 35.3758,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gezabele",
     "isCosmic": false
   },
   {
@@ -6692,7 +6692,7 @@
     "lng": 27.2422,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_Granico",
     "isCosmic": false
   },
   {
@@ -6700,11 +6700,11 @@
     "title": "Arato di Soli",
     "description": "poeta greco antico",
     "year": -314,
-    "lat": null,
-    "lng": null,
+    "lat": 36.7427,
+    "lng": 34.5379,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Arato_di_Soli",
     "isCosmic": false
   },
   {
@@ -6716,7 +6716,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cleopatra_II",
     "isCosmic": false
   },
   {
@@ -6724,11 +6724,11 @@
     "title": "Acazia",
     "description": "re di Giuda, figlio di Ioram",
     "year": -862,
-    "lat": null,
-    "lng": null,
+    "lat": 31.7767,
+    "lng": 35.2342,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Acazia_(re_di_Giuda)",
     "isCosmic": false
   },
   {
@@ -6736,11 +6736,11 @@
     "title": "Aristosseno",
     "description": "filosofo e teorico della musica greco antico",
     "year": -359,
-    "lat": null,
-    "lng": null,
+    "lat": 40.476,
+    "lng": 17.228,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aristosseno",
     "isCosmic": false
   },
   {
@@ -6748,11 +6748,11 @@
     "title": "Ippaso",
     "description": "filosofo e matematico greco antico",
     "year": -600,
-    "lat": null,
-    "lng": null,
+    "lat": 40.4161,
+    "lng": 16.8168,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ippaso_(filosofo)",
     "isCosmic": false
   },
   {
@@ -6760,11 +6760,11 @@
     "title": "Manasse",
     "description": "re di Giuda",
     "year": -708,
-    "lat": null,
-    "lng": null,
+    "lat": 31.7767,
+    "lng": 35.2342,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Manasse_(re)",
     "isCosmic": false
   },
   {
@@ -6776,7 +6776,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cleopatra_III",
     "isCosmic": false
   },
   {
@@ -6784,11 +6784,11 @@
     "title": "Amon",
     "description": "re di Giuda",
     "year": -663,
-    "lat": null,
-    "lng": null,
+    "lat": 31.5326,
+    "lng": 35.0998,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Amon_(re)",
     "isCosmic": false
   },
   {
@@ -6800,7 +6800,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Massinissa",
     "isCosmic": false
   },
   {
@@ -6812,7 +6812,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Necao_II",
     "isCosmic": false
   },
   {
@@ -6824,7 +6824,7 @@
     "lng": 22.3833,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Farsalo",
     "isCosmic": false
   },
   {
@@ -6832,11 +6832,11 @@
     "title": "Ippocrate di Chio",
     "description": "matematico e astronomo greco antico",
     "year": -469,
-    "lat": null,
-    "lng": null,
+    "lat": 38.4,
+    "lng": 26.0167,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ippocrate_di_Chio",
     "isCosmic": false
   },
   {
@@ -6844,11 +6844,11 @@
     "title": "Berosso",
     "description": "sacerdote, astronomo e astrologo babilonese",
     "year": -400,
-    "lat": null,
-    "lng": null,
+    "lat": 32.5425,
+    "lng": 44.4211,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Berosso",
     "isCosmic": false
   },
   {
@@ -6856,11 +6856,11 @@
     "title": "Cleopatra VIII",
     "description": "figlia di Cleopatra e Marco Antonio, regina consorte di Numidia e di Mauretania",
     "year": -39,
-    "lat": null,
-    "lng": null,
+    "lat": 31.1975,
+    "lng": 29.8925,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cleopatra_VIII",
     "isCosmic": false
   },
   {
@@ -6868,11 +6868,11 @@
     "title": "Arsinoe II",
     "description": "figlia di Tolomeo I, moglie di Lisimaco, Tolomeo Cerauno e Tolomeo II",
     "year": -315,
-    "lat": null,
-    "lng": null,
+    "lat": 29.8447,
+    "lng": 31.2509,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Arsinoe_II",
     "isCosmic": false
   },
   {
@@ -6884,7 +6884,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ioram_(re_di_Giuda)",
     "isCosmic": false
   },
   {
@@ -6892,11 +6892,11 @@
     "title": "Gaio Giulio Igino",
     "description": "scrittore e bibliotecario dell'Impero romano",
     "year": -63,
-    "lat": null,
-    "lng": null,
+    "lat": 40.21,
+    "lng": -4.35,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gaio_Giulio_Igino",
     "isCosmic": false
   },
   {
@@ -6904,11 +6904,11 @@
     "title": "Arsinoe III",
     "description": "regina egizia",
     "year": -245,
-    "lat": null,
-    "lng": null,
+    "lat": 31.1975,
+    "lng": 29.8925,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Arsinoe_III",
     "isCosmic": false
   },
   {
@@ -6916,11 +6916,11 @@
     "title": "Ioas",
     "description": "re di Giuda",
     "year": -841,
-    "lat": null,
-    "lng": null,
+    "lat": 31.7767,
+    "lng": 35.2342,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ioas_(re_di_Giuda)",
     "isCosmic": false
   },
   {
@@ -6932,7 +6932,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Iotam_(re)",
     "isCosmic": false
   },
   {
@@ -6944,7 +6944,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ciro_il_Giovane",
     "isCosmic": false
   },
   {
@@ -6956,7 +6956,7 @@
     "lng": 12.085,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_lago_Trasimeno",
     "isCosmic": false
   },
   {
@@ -6964,11 +6964,11 @@
     "title": "Ippia di Elide",
     "description": "filosofo greco antico",
     "year": -442,
-    "lat": null,
-    "lng": null,
+    "lat": 37.8922,
+    "lng": 21.3744,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ippia_di_Elide",
     "isCosmic": false
   },
   {
@@ -6976,11 +6976,11 @@
     "title": "Jehu",
     "description": "re di Israele",
     "year": -875,
-    "lat": null,
-    "lng": null,
+    "lat": 32.275,
+    "lng": 35.19,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Jehu",
     "isCosmic": false
   },
   {
@@ -6992,7 +6992,7 @@
     "lng": 35,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Rivolta_ionica",
     "isCosmic": false
   },
   {
@@ -7004,7 +7004,7 @@
     "lng": 23,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_di_Corinto",
     "isCosmic": false
   },
   {
@@ -7012,11 +7012,11 @@
     "title": "Epicarmo",
     "description": "commediografo, filosofo e poeta siceliota",
     "year": -539,
-    "lat": null,
-    "lng": null,
+    "lat": 36.8959,
+    "lng": 27.2905,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Epicarmo",
     "isCosmic": false
   },
   {
@@ -7028,7 +7028,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Omri",
     "isCosmic": false
   },
   {
@@ -7036,11 +7036,11 @@
     "title": "Zhou Wuwang",
     "description": "sovrano cinese della dinastia Zhou",
     "year": -1150,
-    "lat": null,
-    "lng": null,
+    "lat": 35.6,
+    "lng": 109.3,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zhou_Wuwang",
     "isCosmic": false
   },
   {
@@ -7048,11 +7048,11 @@
     "title": "Sosigene di Alessandria",
     "description": "astronomo greco antico",
     "year": -100,
-    "lat": null,
-    "lng": null,
+    "lat": 31.1975,
+    "lng": 29.8925,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sosigene_di_Alessandria",
     "isCosmic": false
   },
   {
@@ -7064,7 +7064,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Demetrio_I_Sotere",
     "isCosmic": false
   },
   {
@@ -7076,7 +7076,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Šuppiluliuma_I",
     "isCosmic": false
   },
   {
@@ -7084,11 +7084,11 @@
     "title": "Dongmyeong di Goguryeo",
     "description": "Sovrano coreano",
     "year": -57,
-    "lat": null,
-    "lng": null,
+    "lat": 44.435,
+    "lng": 125.175,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Dongmyeong_di_Goguryeo",
     "isCosmic": false
   },
   {
@@ -7100,7 +7100,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Scorpione_I",
     "isCosmic": false
   },
   {
@@ -7112,7 +7112,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Osea_(re)",
     "isCosmic": false
   },
   {
@@ -7120,11 +7120,11 @@
     "title": "Efestione",
     "description": "nobile macedone e generale nell'esercito di Alessandro Magno e suo amante",
     "year": -355,
-    "lat": null,
-    "lng": null,
+    "lat": 40.76,
+    "lng": 22.5256,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Efestione",
     "isCosmic": false
   },
   {
@@ -7136,7 +7136,7 @@
     "lng": 9.5675,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_della_Trebbia",
     "isCosmic": false
   },
   {
@@ -7148,7 +7148,7 @@
     "lng": 12.5,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_sociale",
     "isCosmic": false
   },
   {
@@ -7160,7 +7160,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Arsinoe_I",
     "isCosmic": false
   },
   {
@@ -7172,7 +7172,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Argishtis_I_di_Urartu",
     "isCosmic": false
   },
   {
@@ -7184,7 +7184,7 @@
     "lng": 23.1667,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Leuttra",
     "isCosmic": false
   },
   {
@@ -7192,11 +7192,11 @@
     "title": "Teano",
     "description": "filosofa greca antica",
     "year": -600,
-    "lat": null,
-    "lng": null,
+    "lat": 39.0833,
+    "lng": 17.1167,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Teano_(filosofa)",
     "isCosmic": false
   },
   {
@@ -7204,11 +7204,11 @@
     "title": "Eraclide Pontico",
     "description": "filosofo e astronomo greco antico",
     "year": -384,
-    "lat": null,
-    "lng": null,
+    "lat": 41.2847,
+    "lng": 31.4147,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eraclide_Pontico",
     "isCosmic": false
   },
   {
@@ -7216,11 +7216,11 @@
     "title": "Aglaonice",
     "description": "astronoma greca antica",
     "year": -199,
-    "lat": null,
-    "lng": null,
+    "lat": 39.6,
+    "lng": 22.2,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aglaonice",
     "isCosmic": false
   },
   {
@@ -7228,11 +7228,11 @@
     "title": "Zeusi",
     "description": "pittore greco antico",
     "year": -500,
-    "lat": null,
-    "lng": null,
+    "lat": 40.213,
+    "lng": 16.6783,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zeusi",
     "isCosmic": false
   },
   {
@@ -7244,7 +7244,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fraate_III",
     "isCosmic": false
   },
   {
@@ -7256,7 +7256,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pekach",
     "isCosmic": false
   },
   {
@@ -7268,7 +7268,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Artabano_II",
     "isCosmic": false
   },
   {
@@ -7280,7 +7280,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mardonio_(generale)",
     "isCosmic": false
   },
   {
@@ -7292,7 +7292,7 @@
     "lng": 27.1574,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Micale",
     "isCosmic": false
   },
   {
@@ -7300,11 +7300,11 @@
     "title": "Eudemo da Rodi",
     "description": "filosofo e storico della scienza greco antico",
     "year": -349,
-    "lat": null,
-    "lng": null,
+    "lat": 36.17,
+    "lng": 27.92,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eudemo_da_Rodi",
     "isCosmic": false
   },
   {
@@ -7312,11 +7312,11 @@
     "title": "Skopas",
     "description": "scultore e architetto greco antico",
     "year": -394,
-    "lat": null,
-    "lng": null,
+    "lat": 37.05,
+    "lng": 25.1833,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Skopas",
     "isCosmic": false
   },
   {
@@ -7328,7 +7328,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antioco_V",
     "isCosmic": false
   },
   {
@@ -7336,11 +7336,11 @@
     "title": "Antioco VII",
     "description": "sovrano dell'Impero seleucide (r. 138-129 a.C.)",
     "year": -163,
-    "lat": null,
-    "lng": null,
+    "lat": 36.7724,
+    "lng": 31.3934,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antioco_VII",
     "isCosmic": false
   },
   {
@@ -7352,7 +7352,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pekachia",
     "isCosmic": false
   },
   {
@@ -7360,11 +7360,11 @@
     "title": "Tito Labieno",
     "description": "militare romano",
     "year": -97,
-    "lat": null,
-    "lng": null,
+    "lat": 43.3742,
+    "lng": 13.2164,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tito_Labieno",
     "isCosmic": false
   },
   {
@@ -7376,7 +7376,7 @@
     "lng": 35.1844,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Megiddo_(XV_secolo_a.C.)",
     "isCosmic": false
   },
   {
@@ -7388,7 +7388,7 @@
     "lng": 35,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerre_mitridatiche",
     "isCosmic": false
   },
   {
@@ -7396,11 +7396,11 @@
     "title": "Speusippo",
     "description": "filosofo greco antico",
     "year": -406,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9722,
+    "lng": 23.7222,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Speusippo",
     "isCosmic": false
   },
   {
@@ -7408,11 +7408,11 @@
     "title": "Filone di Bisanzio",
     "description": "scienziato greco antico",
     "year": -279,
-    "lat": null,
-    "lng": null,
+    "lat": 41.0134,
+    "lng": 28.9836,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filone_di_Bisanzio",
     "isCosmic": false
   },
   {
@@ -7424,7 +7424,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antioco_VI",
     "isCosmic": false
   },
   {
@@ -7436,7 +7436,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Geroboamo_II",
     "isCosmic": false
   },
   {
@@ -7444,11 +7444,11 @@
     "title": "Eumene di Cardia",
     "description": "militare e ammiraglio macedone antico",
     "year": -362,
-    "lat": null,
-    "lng": null,
+    "lat": 40.5482,
+    "lng": 26.7508,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Eumene_di_Cardia",
     "isCosmic": false
   },
   {
@@ -7460,7 +7460,7 @@
     "lng": 30.99,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Ipso",
     "isCosmic": false
   },
   {
@@ -7472,7 +7472,7 @@
     "lng": 22.5667,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Cinocefale",
     "isCosmic": false
   },
   {
@@ -7484,7 +7484,7 @@
     "lng": 23,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Seconda_guerra_macedonica",
     "isCosmic": false
   },
   {
@@ -7492,11 +7492,11 @@
     "title": "Ippodamo",
     "description": "architetto e urbanista greco antico",
     "year": -497,
-    "lat": null,
-    "lng": null,
+    "lat": 37.5311,
+    "lng": 27.2756,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ippodamo",
     "isCosmic": false
   },
   {
@@ -7504,11 +7504,11 @@
     "title": "Hattušili I",
     "description": "sovrano ittita",
     "year": -1700,
-    "lat": null,
-    "lng": null,
+    "lat": 39.385,
+    "lng": 37.502,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ḫattušili_I",
     "isCosmic": false
   },
   {
@@ -7520,7 +7520,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mĕnaḥēm",
     "isCosmic": false
   },
   {
@@ -7532,7 +7532,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Salomè_Alessandra",
     "isCosmic": false
   },
   {
@@ -7544,7 +7544,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Perdicca_III_di_Macedonia",
     "isCosmic": false
   },
   {
@@ -7556,7 +7556,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Abgar_V",
     "isCosmic": false
   },
   {
@@ -7568,7 +7568,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zaccaria_(re)",
     "isCosmic": false
   },
   {
@@ -7580,7 +7580,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ioacaz_(re_di_Israele)",
     "isCosmic": false
   },
   {
@@ -7592,7 +7592,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sallum",
     "isCosmic": false
   },
   {
@@ -7604,7 +7604,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Wen_Wang",
     "isCosmic": false
   },
   {
@@ -7616,7 +7616,7 @@
     "lng": 27.4333,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Magnesia",
     "isCosmic": false
   },
   {
@@ -7628,7 +7628,7 @@
     "lng": 7.3,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_giugurtina",
     "isCosmic": false
   },
   {
@@ -7640,7 +7640,7 @@
     "lng": 23,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_romano-siriaca",
     "isCosmic": false
   },
   {
@@ -7648,11 +7648,11 @@
     "title": "Conone di Samo",
     "description": "matematico e astronomo greco",
     "year": -279,
-    "lat": null,
-    "lng": null,
+    "lat": 37.75,
+    "lng": 26.8333,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Conone_di_Samo",
     "isCosmic": false
   },
   {
@@ -7664,7 +7664,7 @@
     "lng": null,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Vasiṣṭha",
     "isCosmic": false
   },
   {
@@ -7672,11 +7672,11 @@
     "title": "Marco Pacuvio",
     "description": "drammaturgo, poeta e pittore romano",
     "year": -219,
-    "lat": null,
-    "lng": null,
+    "lat": 40.6383,
+    "lng": 17.9458,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marco_Pacuvio",
     "isCosmic": false
   },
   {
@@ -7688,7 +7688,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aminta_IV_di_Macedonia",
     "isCosmic": false
   },
   {
@@ -7700,7 +7700,7 @@
     "lng": 22.4736,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Pidna",
     "isCosmic": false
   },
   {
@@ -7712,7 +7712,7 @@
     "lng": 22.3228,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prima_guerra_macedonica",
     "isCosmic": false
   },
   {
@@ -7724,7 +7724,7 @@
     "lng": 23,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_lamiaca",
     "isCosmic": false
   },
   {
@@ -7732,11 +7732,11 @@
     "title": "Menecmo",
     "description": "matematico greco antico",
     "year": -379,
-    "lat": null,
-    "lng": null,
+    "lat": 40.3139,
+    "lng": 26.2494,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Menecmo",
     "isCosmic": false
   },
   {
@@ -7744,11 +7744,11 @@
     "title": "Leocare",
     "description": "scultore greco antico",
     "year": -400,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9842,
+    "lng": 23.7281,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Leocare",
     "isCosmic": false
   },
   {
@@ -7760,7 +7760,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antioco_IX",
     "isCosmic": false
   },
   {
@@ -7772,7 +7772,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Xia_Jie",
     "isCosmic": false
   },
   {
@@ -7784,7 +7784,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerre_servili",
     "isCosmic": false
   },
   {
@@ -7792,11 +7792,11 @@
     "title": "Metone di Atene",
     "description": "astronomo, matematico e geometra greco antico",
     "year": -500,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9842,
+    "lng": 23.7281,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Metone_di_Atene",
     "isCosmic": false
   },
   {
@@ -7804,11 +7804,11 @@
     "title": "Autolico di Pitane",
     "description": "matematico e astronomo greco antico",
     "year": -359,
-    "lat": null,
-    "lng": null,
+    "lat": 38.9333,
+    "lng": 26.9333,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Autolico_di_Pitane",
     "isCosmic": false
   },
   {
@@ -7820,7 +7820,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Filippo_IV_di_Macedonia",
     "isCosmic": false
   },
   {
@@ -7832,7 +7832,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ibbi-Sin",
     "isCosmic": false
   },
   {
@@ -7844,7 +7844,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sin-muballit",
     "isCosmic": false
   },
   {
@@ -7856,7 +7856,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nicomede_IV",
     "isCosmic": false
   },
   {
@@ -7868,7 +7868,7 @@
     "lng": 8.8667,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_Ticino",
     "isCosmic": false
   },
   {
@@ -7876,11 +7876,11 @@
     "title": "Dicearco",
     "description": "filosofo e geografo greco antico",
     "year": -349,
-    "lat": null,
-    "lng": null,
+    "lat": 38.1923,
+    "lng": 15.5566,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Dicearco",
     "isCosmic": false
   },
   {
@@ -7888,11 +7888,11 @@
     "title": "Teeteto",
     "description": "matematico e filosofo greco antico",
     "year": -416,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9842,
+    "lng": 23.7281,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Teeteto_(matematico)",
     "isCosmic": false
   },
   {
@@ -7900,11 +7900,11 @@
     "title": "Zhao",
     "description": "imperatore cinese della dinastia Han",
     "year": -93,
-    "lat": null,
-    "lng": null,
+    "lat": 34.3083,
+    "lng": 108.8583,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Emperor_Zhao_of_Han",
     "isCosmic": false
   },
   {
@@ -7912,11 +7912,11 @@
     "title": "Xuan",
     "description": "imperatore cinese della dinastia Han",
     "year": -90,
-    "lat": null,
-    "lng": null,
+    "lat": 34.3083,
+    "lng": 108.8583,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Emperor_Xuan_of_Han",
     "isCosmic": false
   },
   {
@@ -7924,11 +7924,11 @@
     "title": "Labarna I",
     "description": "re ittita",
     "year": -1650,
-    "lat": null,
-    "lng": null,
+    "lat": 39.385,
+    "lng": 37.502,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Labarna_I",
     "isCosmic": false
   },
   {
@@ -7936,11 +7936,11 @@
     "title": "Perdicca I di Macedonia",
     "description": "re di Macedonia",
     "year": -700,
-    "lat": null,
-    "lng": null,
+    "lat": 37.6306,
+    "lng": 22.7215,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Perdicca_I_di_Macedonia",
     "isCosmic": false
   },
   {
@@ -7948,11 +7948,11 @@
     "title": "Tudhaliya IV",
     "description": "sovrano ittita",
     "year": -1300,
-    "lat": null,
-    "lng": null,
+    "lat": 41.207,
+    "lng": 35.42,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tudhaliya_IV",
     "isCosmic": false
   },
   {
@@ -7964,7 +7964,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Perdicca_II_di_Macedonia",
     "isCosmic": false
   },
   {
@@ -7976,7 +7976,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Menua",
     "isCosmic": false
   },
   {
@@ -7988,7 +7988,7 @@
     "lng": 12.52,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_fiume_Allia",
     "isCosmic": false
   },
   {
@@ -8000,7 +8000,7 @@
     "lng": 44.08,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Cunassa",
     "isCosmic": false
   },
   {
@@ -8012,7 +8012,7 @@
     "lng": -4.85,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Munda_(45_a.C.)",
     "isCosmic": false
   },
   {
@@ -8024,7 +8024,7 @@
     "lng": 19.8,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terza_guerra_macedonica",
     "isCosmic": false
   },
   {
@@ -8032,11 +8032,11 @@
     "title": "Callippo di Cizico",
     "description": "astronomo greco antico",
     "year": -369,
-    "lat": null,
-    "lng": null,
+    "lat": 40.3878,
+    "lng": 27.8706,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Callippo_di_Cizico",
     "isCosmic": false
   },
   {
@@ -8048,7 +8048,7 @@
     "lng": null,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Yajnavalkya",
     "isCosmic": false
   },
   {
@@ -8060,7 +8060,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Neferneferuaton",
     "isCosmic": false
   },
   {
@@ -8072,7 +8072,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Farnace_II_del_Ponto",
     "isCosmic": false
   },
   {
@@ -8084,7 +8084,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sarduri_II",
     "isCosmic": false
   },
   {
@@ -8092,11 +8092,11 @@
     "title": "Prusia I",
     "description": "re di Bitinia (r. 228-182 a.C.)",
     "year": -300,
-    "lat": null,
-    "lng": null,
+    "lat": 40.5,
+    "lng": 31,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prusia_I",
     "isCosmic": false
   },
   {
@@ -8104,11 +8104,11 @@
     "title": "Arame di Urartu",
     "description": "re urarteo",
     "year": -900,
-    "lat": null,
-    "lng": null,
+    "lat": 38.5,
+    "lng": 43.3425,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Arame_di_Urartu",
     "isCosmic": false
   },
   {
@@ -8120,7 +8120,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Merikara",
     "isCosmic": false
   },
   {
@@ -8132,7 +8132,7 @@
     "lng": 14.7833,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Benevento_(275_a.C.)",
     "isCosmic": false
   },
   {
@@ -8144,7 +8144,7 @@
     "lng": 16.6697,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Eraclea",
     "isCosmic": false
   },
   {
@@ -8156,7 +8156,7 @@
     "lng": 11.0478,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Tapso",
     "isCosmic": false
   },
   {
@@ -8168,7 +8168,7 @@
     "lng": 14.0167,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prima_guerra_servile",
     "isCosmic": false
   },
   {
@@ -8176,11 +8176,11 @@
     "title": "Timeo di Locri",
     "description": "giurista, astronomo e filosofo greco antico",
     "year": -500,
-    "lat": null,
-    "lng": null,
+    "lat": 38.2364,
+    "lng": 16.2599,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Timeo_di_Locri",
     "isCosmic": false
   },
   {
@@ -8192,7 +8192,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Salmanassar_IV",
     "isCosmic": false
   },
   {
@@ -8200,11 +8200,11 @@
     "title": "Yuan",
     "description": "imperatore cinese della dinastina Han",
     "year": -74,
-    "lat": null,
-    "lng": null,
+    "lat": 34.3083,
+    "lng": 108.8583,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Emperor_Yuan_of_Han",
     "isCosmic": false
   },
   {
@@ -8216,7 +8216,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Demetrio_II_Etolico",
     "isCosmic": false
   },
   {
@@ -8228,7 +8228,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Telipinu",
     "isCosmic": false
   },
   {
@@ -8240,7 +8240,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Farnace_I_del_Ponto",
     "isCosmic": false
   },
   {
@@ -8252,7 +8252,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mitridate_V_del_Ponto",
     "isCosmic": false
   },
   {
@@ -8264,7 +8264,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Amenemope",
     "isCosmic": false
   },
   {
@@ -8276,7 +8276,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antipatro_II",
     "isCosmic": false
   },
   {
@@ -8288,7 +8288,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerre_cimbriche",
     "isCosmic": false
   },
   {
@@ -8300,7 +8300,7 @@
     "lng": 51.5986,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_della_porta_persiana",
     "isCosmic": false
   },
   {
@@ -8312,7 +8312,7 @@
     "lng": 34.2519,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Rafah",
     "isCosmic": false
   },
   {
@@ -8324,7 +8324,7 @@
     "lng": 15.5578,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Ascoli_(279_a.C.)",
     "isCosmic": false
   },
   {
@@ -8336,7 +8336,7 @@
     "lng": 4.8089,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Arausio",
     "isCosmic": false
   },
   {
@@ -8348,7 +8348,7 @@
     "lng": 27.6178,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Corupedio",
     "isCosmic": false
   },
   {
@@ -8360,7 +8360,7 @@
     "lng": 35,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prima_guerra_mitridatica",
     "isCosmic": false
   },
   {
@@ -8372,7 +8372,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_latina",
     "isCosmic": false
   },
   {
@@ -8380,11 +8380,11 @@
     "title": "Teodoro di Cirene",
     "description": "matematico greco antico",
     "year": -464,
-    "lat": null,
-    "lng": null,
+    "lat": 32.823,
+    "lng": 21.8573,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Teodoro_di_Cirene_(matematico)",
     "isCosmic": false
   },
   {
@@ -8392,11 +8392,11 @@
     "title": "Ahmes",
     "description": "Scriba e matematico egiziano",
     "year": -1659,
-    "lat": null,
-    "lng": null,
+    "lat": 29.8,
+    "lng": 31.3,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ahmes",
     "isCosmic": false
   },
   {
@@ -8404,11 +8404,11 @@
     "title": "Ione di Chio",
     "description": "drammaturgo greco antico",
     "year": -489,
-    "lat": null,
-    "lng": null,
+    "lat": 38.4,
+    "lng": 26.0167,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ione_di_Chio",
     "isCosmic": false
   },
   {
@@ -8416,11 +8416,11 @@
     "title": "Liu Xiang",
     "description": "scrittore cinese",
     "year": -76,
-    "lat": null,
-    "lng": null,
+    "lat": 34.7279,
+    "lng": 116.9326,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Liu_Xiang_(autore)",
     "isCosmic": false
   },
   {
@@ -8428,11 +8428,11 @@
     "title": "Alcamene",
     "description": "scultore greco antico",
     "year": -500,
-    "lat": null,
-    "lng": null,
+    "lat": 39.9167,
+    "lng": 25.25,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Alcamene",
     "isCosmic": false
   },
   {
@@ -8444,7 +8444,7 @@
     "lng": 38.015,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Karkemiš",
     "isCosmic": false
   },
   {
@@ -8456,7 +8456,7 @@
     "lng": 13.0145,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_Metauro",
     "isCosmic": false
   },
   {
@@ -8468,7 +8468,7 @@
     "lng": 13.5833,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Agrigento",
     "isCosmic": false
   },
   {
@@ -8480,7 +8480,7 @@
     "lng": 85.5,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_di_Kalinga",
     "isCosmic": false
   },
   {
@@ -8488,11 +8488,11 @@
     "title": "Zenone di Sidone",
     "description": "filosofo epicureo greco antico",
     "year": -149,
-    "lat": null,
-    "lng": null,
+    "lat": 33.5606,
+    "lng": 35.3758,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zenone_di_Sidone",
     "isCosmic": false
   },
   {
@@ -8504,7 +8504,7 @@
     "lng": 35.8833,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Zela_(47_a.C.)",
     "isCosmic": false
   },
   {
@@ -8516,7 +8516,7 @@
     "lng": -5.9363,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Ilipa",
     "isCosmic": false
   },
   {
@@ -8528,7 +8528,7 @@
     "lng": 27.1,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Lade",
     "isCosmic": false
   },
   {
@@ -8540,7 +8540,7 @@
     "lng": null,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tapputi",
     "isCosmic": false
   },
   {
@@ -8552,7 +8552,7 @@
     "lng": 4.0333,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Bibracte",
     "isCosmic": false
   },
   {
@@ -8564,7 +8564,7 @@
     "lng": 13.8114,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Imera_(480_a.C.)",
     "isCosmic": false
   },
   {
@@ -8576,7 +8576,7 @@
     "lng": 113.8959,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Muye",
     "isCosmic": false
   },
   {
@@ -8588,7 +8588,7 @@
     "lng": 36.3305,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Qarqar",
     "isCosmic": false
   },
   {
@@ -8600,7 +8600,7 @@
     "lng": 41.0014,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Tigranocerta",
     "isCosmic": false
   },
   {
@@ -8612,7 +8612,7 @@
     "lng": null,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Thutmose_(scultore)",
     "isCosmic": false
   },
   {
@@ -8624,7 +8624,7 @@
     "lng": 5.4539,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Aquae_Sextiae",
     "isCosmic": false
   },
   {
@@ -8636,7 +8636,7 @@
     "lng": 8.4167,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_dei_Campi_Raudii",
     "isCosmic": false
   },
   {
@@ -8648,7 +8648,7 @@
     "lng": 23,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Seconda_guerra_persiana",
     "isCosmic": false
   },
   {
@@ -8660,7 +8660,7 @@
     "lng": 35,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terza_guerra_mitridatica",
     "isCosmic": false
   },
   {
@@ -8668,11 +8668,11 @@
     "title": "Antenore",
     "description": "scultore greco antico",
     "year": -600,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9842,
+    "lng": 23.7281,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antenore_(scultore)",
     "isCosmic": false
   },
   {
@@ -8680,11 +8680,11 @@
     "title": "Cresila",
     "description": "scultore greco antico",
     "year": -479,
-    "lat": null,
-    "lng": null,
+    "lat": 35.5173,
+    "lng": 24.0195,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Cresila",
     "isCosmic": false
   },
   {
@@ -8696,7 +8696,7 @@
     "lng": 22.4,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Mantinea_(362_a.C.)",
     "isCosmic": false
   },
   {
@@ -8708,7 +8708,7 @@
     "lng": 22.4167,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Sellasia",
     "isCosmic": false
   },
   {
@@ -8720,7 +8720,7 @@
     "lng": 12.8545,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_Sentino",
     "isCosmic": false
   },
   {
@@ -8732,7 +8732,7 @@
     "lng": 22.8802,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Corinto",
     "isCosmic": false
   },
   {
@@ -8744,7 +8744,7 @@
     "lng": 32.5451,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Pelusio_(525_a.C.)",
     "isCosmic": false
   },
   {
@@ -8756,7 +8756,7 @@
     "lng": 14.5333,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_delle_Forche_Caudine",
     "isCosmic": false
   },
   {
@@ -8768,7 +8768,7 @@
     "lng": -3.1,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Baecula",
     "isCosmic": false
   },
   {
@@ -8780,7 +8780,7 @@
     "lng": 19.45,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Dyrrhachium",
     "isCosmic": false
   },
   {
@@ -8792,7 +8792,7 @@
     "lng": 10.1659,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Tunisi_(255_a.C.)",
     "isCosmic": false
   },
   {
@@ -8804,7 +8804,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battle_of_the_Ten_Kings",
     "isCosmic": false
   },
   {
@@ -8816,7 +8816,7 @@
     "lng": 38.4074,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_dell'Ali",
     "isCosmic": false
   },
   {
@@ -8828,7 +8828,7 @@
     "lng": 35,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Seconda_guerra_mitridatica",
     "isCosmic": false
   },
   {
@@ -8840,7 +8840,7 @@
     "lng": 23,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_cremonidea",
     "isCosmic": false
   },
   {
@@ -8852,7 +8852,7 @@
     "lng": 21.85,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prima_guerra_messenica",
     "isCosmic": false
   },
   {
@@ -8864,7 +8864,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Quarta_guerra_macedonica",
     "isCosmic": false
   },
   {
@@ -8872,11 +8872,11 @@
     "title": "Antigono di Caristo",
     "description": "scrittore e scultore greco antico",
     "year": -294,
-    "lat": null,
-    "lng": null,
+    "lat": 38.0158,
+    "lng": 24.4203,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Antigono_di_Caristo",
     "isCosmic": false
   },
   {
@@ -8888,7 +8888,7 @@
     "lng": 43.1528,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Ninive_(612_a.C.)",
     "isCosmic": false
   },
   {
@@ -8900,7 +8900,7 @@
     "lng": 3.4417,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_fiume_Sabis",
     "isCosmic": false
   },
   {
@@ -8912,7 +8912,7 @@
     "lng": 12.6972,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_lago_Regillo",
     "isCosmic": false
   },
   {
@@ -8924,7 +8924,7 @@
     "lng": 35.3333,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Pteria",
     "isCosmic": false
   },
   {
@@ -8936,7 +8936,7 @@
     "lng": 24,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_lelantina",
     "isCosmic": false
   },
   {
@@ -8948,7 +8948,7 @@
     "lng": 12.4828,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_di_Perugia",
     "isCosmic": false
   },
   {
@@ -8960,7 +8960,7 @@
     "lng": 22.3522,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_cleomenea",
     "isCosmic": false
   },
   {
@@ -8972,7 +8972,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prima_guerra_del_Peloponneso",
     "isCosmic": false
   },
   {
@@ -8984,7 +8984,7 @@
     "lng": 11.133,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Talamone",
     "isCosmic": false
   },
   {
@@ -8996,7 +8996,7 @@
     "lng": 3.8459,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_fiume_Axona",
     "isCosmic": false
   },
   {
@@ -9008,7 +9008,7 @@
     "lng": 4.8178,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_del_fiume_Arar",
     "isCosmic": false
   },
   {
@@ -9020,7 +9020,7 @@
     "lng": 23.3333,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Potidea",
     "isCosmic": false
   },
   {
@@ -9032,7 +9032,7 @@
     "lng": 26,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prima_guerra_persiana",
     "isCosmic": false
   },
   {
@@ -9044,7 +9044,7 @@
     "lng": -2.4444,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_numantina",
     "isCosmic": false
   },
   {
@@ -9052,11 +9052,11 @@
     "title": "Peonio di Mende",
     "description": "scultore greco antico",
     "year": -500,
-    "lat": null,
-    "lng": null,
+    "lat": 39.9638,
+    "lng": 23.4226,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Peonio_di_Mende",
     "isCosmic": false
   },
   {
@@ -9068,7 +9068,7 @@
     "lng": 21.6657,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Sfacteria_(425_a.C.)",
     "isCosmic": false
   },
   {
@@ -9080,7 +9080,7 @@
     "lng": 23.8471,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Anfipoli",
     "isCosmic": false
   },
   {
@@ -9092,7 +9092,7 @@
     "lng": 34.45,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Gaza_(312_a.C.)",
     "isCosmic": false
   },
   {
@@ -9104,7 +9104,7 @@
     "lng": 23.6492,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Delio",
     "isCosmic": false
   },
   {
@@ -9116,7 +9116,7 @@
     "lng": 15.5614,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Messina",
     "isCosmic": false
   },
   {
@@ -9128,7 +9128,7 @@
     "lng": -6.35,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglie_del_Baetis_superiore",
     "isCosmic": false
   },
   {
@@ -9140,7 +9140,7 @@
     "lng": -0.9825,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Assedio_di_Cartagena",
     "isCosmic": false
   },
   {
@@ -9152,7 +9152,7 @@
     "lng": 27.8333,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Thymbra",
     "isCosmic": false
   },
   {
@@ -9164,7 +9164,7 @@
     "lng": 27.375,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Cnido",
     "isCosmic": false
   },
   {
@@ -9176,7 +9176,7 @@
     "lng": 25.3,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_degli_alleati_(357-355_a.C.)",
     "isCosmic": false
   },
   {
@@ -9188,7 +9188,7 @@
     "lng": 24.8933,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerra_di_Creta",
     "isCosmic": false
   },
   {
@@ -9200,7 +9200,7 @@
     "lng": 7.3333,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_in_Alsazia",
     "isCosmic": false
   },
   {
@@ -9212,7 +9212,7 @@
     "lng": 10.1717,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Adys",
     "isCosmic": false
   },
   {
@@ -9224,7 +9224,7 @@
     "lng": 4.8097,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battle_of_the_Rhône_Crossing",
     "isCosmic": false
   },
   {
@@ -9236,7 +9236,7 @@
     "lng": 22.3,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Seconda_guerra_messenica",
     "isCosmic": false
   },
   {
@@ -9248,7 +9248,7 @@
     "lng": 102.8478,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guerre_di_unificazione_dello_stato_di_Qin",
     "isCosmic": false
   },
   {
@@ -9260,7 +9260,7 @@
     "lng": 22.3753,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terza_guerra_sacra",
     "isCosmic": false
   },
   {
@@ -9272,7 +9272,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Disputa_Chu-Han",
     "isCosmic": false
   },
   {
@@ -9284,7 +9284,7 @@
     "lng": 22.4455,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Prima_guerra_sacra",
     "isCosmic": false
   },
   {
@@ -9296,7 +9296,7 @@
     "lng": 22.5017,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Seconda_guerra_sacra",
     "isCosmic": false
   },
   {
@@ -9308,7 +9308,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Riforma_di_Clistene",
     "isCosmic": false
   },
   {
@@ -9320,7 +9320,7 @@
     "lng": 12.48,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Overthrow_of_the_Roman_monarchy",
     "isCosmic": false
   },
   {
@@ -9328,11 +9328,11 @@
     "title": "Gaio Giulio Cesare",
     "description": "console e dittatore della Repubblica romana, nonché oratore, scrittore e storico",
     "year": -99,
-    "lat": null,
-    "lng": null,
+    "lat": 41.8931,
+    "lng": 12.4828,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gaio_Giulio_Cesare",
     "isCosmic": false
   },
   {
@@ -9344,7 +9344,7 @@
     "lng": null,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Omero",
     "isCosmic": false
   },
   {
@@ -9352,11 +9352,11 @@
     "title": "Publio Virgilio Marone",
     "description": "poeta romano",
     "year": -69,
-    "lat": null,
-    "lng": null,
+    "lat": 45.1252,
+    "lng": 10.8239,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Publio_Virgilio_Marone",
     "isCosmic": false
   },
   {
@@ -9364,11 +9364,11 @@
     "title": "Agostino d'Ippona",
     "description": "filosofo, vescovo, teologo e santo cristiano, berbero con cittadinanza romana",
     "year": 354,
-    "lat": null,
-    "lng": null,
+    "lat": 36.2864,
+    "lng": 7.9511,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Agostino_d'Ippona",
     "isCosmic": false
   },
   {
@@ -9376,11 +9376,11 @@
     "title": "Publio Ovidio Nasone",
     "description": "poeta romano",
     "year": -42,
-    "lat": null,
-    "lng": null,
+    "lat": 42.048,
+    "lng": 13.9262,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Publio_Ovidio_Nasone",
     "isCosmic": false
   },
   {
@@ -9388,11 +9388,11 @@
     "title": "Marco Aurelio",
     "description": "sedicesimo imperatore romano (r. 161-180), filosofo e scrittore",
     "year": 121,
-    "lat": null,
-    "lng": null,
+    "lat": 41.8931,
+    "lng": 12.4828,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marco_Aurelio",
     "isCosmic": false
   },
   {
@@ -9400,11 +9400,11 @@
     "title": "Plutarco",
     "description": "biografo, scrittore e filosofo greco antico",
     "year": 40,
-    "lat": null,
-    "lng": null,
+    "lat": 38.4959,
+    "lng": 22.8452,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Plutarco",
     "isCosmic": false
   },
   {
@@ -9412,11 +9412,11 @@
     "title": "Aristofane",
     "description": "commediografo ateniese",
     "year": -444,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9722,
+    "lng": 23.7222,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aristofane",
     "isCosmic": false
   },
   {
@@ -9424,11 +9424,11 @@
     "title": "Publio Cornelio Tacito",
     "description": "storico, oratore e senatore romano",
     "year": 55,
-    "lat": null,
-    "lng": null,
+    "lat": 44,
+    "lng": 4,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Publio_Cornelio_Tacito",
     "isCosmic": false
   },
   {
@@ -9436,11 +9436,11 @@
     "title": "Claudio Tolomeo",
     "description": "astrologo, astronomo e geografo greco",
     "year": 100,
-    "lat": null,
-    "lng": null,
+    "lat": 26.4769,
+    "lng": 31.8036,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Claudio_Tolomeo",
     "isCosmic": false
   },
   {
@@ -9448,11 +9448,11 @@
     "title": "Nerone",
     "description": "quinto imperatore romano (r. 54-68)",
     "year": 37,
-    "lat": null,
-    "lng": null,
+    "lat": 41.4483,
+    "lng": 12.6286,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nerone",
     "isCosmic": false
   },
   {
@@ -9460,11 +9460,11 @@
     "title": "Galeno",
     "description": "medico greco antico",
     "year": 129,
-    "lat": null,
-    "lng": null,
+    "lat": 39.1295,
+    "lng": 27.1841,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Galeno",
     "isCosmic": false
   },
   {
@@ -9476,7 +9476,7 @@
     "lng": null,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tito_Livio",
     "isCosmic": false
   },
   {
@@ -9484,11 +9484,11 @@
     "title": "Esiodo",
     "description": "poeta greco antico",
     "year": -775,
-    "lat": null,
-    "lng": null,
+    "lat": 38.7618,
+    "lng": 26.9422,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Esiodo",
     "isCosmic": false
   },
   {
@@ -9500,7 +9500,7 @@
     "lng": null,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Plinio_il_Vecchio",
     "isCosmic": false
   },
   {
@@ -9508,11 +9508,11 @@
     "title": "Gaio Valerio Catullo",
     "description": "poeta lirico latino della Repubblica romana",
     "year": -83,
-    "lat": null,
-    "lng": null,
+    "lat": 45.4386,
+    "lng": 10.9928,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Gaio_Valerio_Catullo",
     "isCosmic": false
   },
   {
@@ -9520,11 +9520,11 @@
     "title": "Nāgārjuna",
     "description": "monaco buddhista indiano",
     "year": 150,
-    "lat": null,
-    "lng": null,
+    "lat": 13,
+    "lng": 77,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Nāgārjuna",
     "isCosmic": false
   },
   {
@@ -9532,11 +9532,11 @@
     "title": "Epitteto",
     "description": "filosofo stoico greco antico",
     "year": 50,
-    "lat": null,
-    "lng": null,
+    "lat": 37.925,
+    "lng": 29.1258,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Epitteto",
     "isCosmic": false
   },
   {
@@ -9544,11 +9544,11 @@
     "title": "Traiano",
     "description": "tredicesimo imperatore romano (r. 98-117)",
     "year": 53,
-    "lat": null,
-    "lng": null,
+    "lat": 37.4412,
+    "lng": -6.0445,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Traiano",
     "isCosmic": false
   },
   {
@@ -9556,11 +9556,11 @@
     "title": "Ipazia",
     "description": "filosofa greca antica",
     "year": 360,
-    "lat": null,
-    "lng": null,
+    "lat": 31.1975,
+    "lng": 29.8925,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ipazia",
     "isCosmic": false
   },
   {
@@ -9568,11 +9568,11 @@
     "title": "Adriano",
     "description": "quattordicesimo imperatore romano (r. 117-138)",
     "year": 76,
-    "lat": null,
-    "lng": null,
+    "lat": 37.4412,
+    "lng": -6.0445,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Adriano",
     "isCosmic": false
   },
   {
@@ -9580,11 +9580,11 @@
     "title": "san Girolamo",
     "description": "scrittore, teologo e santo cristiano, di cittadinanza romana",
     "year": 345,
-    "lat": null,
-    "lng": null,
+    "lat": 43.8128,
+    "lng": 16.2188,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "San_Girolamo",
     "isCosmic": false
   },
   {
@@ -9592,11 +9592,11 @@
     "title": "Menandro",
     "description": "commediografo ateniese, maggiore esponente della commedia nuova",
     "year": -340,
-    "lat": null,
-    "lng": null,
+    "lat": 38.0833,
+    "lng": 23.8167,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Menandro",
     "isCosmic": false
   },
   {
@@ -9604,11 +9604,11 @@
     "title": "Luciano di Samosata",
     "description": "scrittore e retore greco antico di origine siriana",
     "year": 120,
-    "lat": null,
-    "lng": null,
+    "lat": 37.5796,
+    "lng": 38.4813,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Luciano_di_Samosata",
     "isCosmic": false
   },
   {
@@ -9616,11 +9616,11 @@
     "title": "Plotino",
     "description": "filosofo greco antico",
     "year": 205,
-    "lat": null,
-    "lng": null,
+    "lat": 30.9087,
+    "lng": 31.0555,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Plotino",
     "isCosmic": false
   },
   {
@@ -9632,7 +9632,7 @@
     "lng": null,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pindaro",
     "isCosmic": false
   },
   {
@@ -9640,11 +9640,11 @@
     "title": "Apuleio",
     "description": "scrittore e filosofo romano",
     "year": 125,
-    "lat": null,
-    "lng": null,
+    "lat": 36.0778,
+    "lng": 7.9024,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Apuleio",
     "isCosmic": false
   },
   {
@@ -9652,11 +9652,11 @@
     "title": "Plinio il Giovane",
     "description": "avvocato, scrittore e senatore romano",
     "year": 61,
-    "lat": null,
-    "lng": null,
+    "lat": 45.8103,
+    "lng": 9.0861,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Plinio_il_Giovane",
     "isCosmic": false
   },
   {
@@ -9668,7 +9668,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tertulliano",
     "isCosmic": false
   },
   {
@@ -9676,11 +9676,11 @@
     "title": "Sant'Ambrogio",
     "description": "vescovo di Milano, scrittore e santo cristano",
     "year": 339,
-    "lat": null,
-    "lng": null,
+    "lat": 49.7597,
+    "lng": 6.644,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Sant'Ambrogio",
     "isCosmic": false
   },
   {
@@ -9688,11 +9688,11 @@
     "title": "Diocleziano",
     "description": "imperatore romano (r. 284-305)",
     "year": 240,
-    "lat": null,
-    "lng": null,
+    "lat": 42.4681,
+    "lng": 19.2656,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Diocleziano",
     "isCosmic": false
   },
   {
@@ -9700,11 +9700,11 @@
     "title": "Marco Vitruvio Pollione",
     "description": "architetto e scrittore romano",
     "year": -79,
-    "lat": null,
-    "lng": null,
+    "lat": 41.9,
+    "lng": 12.5,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marco_Vitruvio_Pollione",
     "isCosmic": false
   },
   {
@@ -9712,11 +9712,11 @@
     "title": "Flavio Claudio Giuliano",
     "description": "imperatore romano (r. 361-363), filosofo e scrittore",
     "year": 331,
-    "lat": null,
-    "lng": null,
+    "lat": 41.0122,
+    "lng": 28.976,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Flavio_Claudio_Giuliano",
     "isCosmic": false
   },
   {
@@ -9724,11 +9724,11 @@
     "title": "San Basilio",
     "description": "vescovo e teologo greco antico",
     "year": 329,
-    "lat": null,
-    "lng": null,
+    "lat": 38.7225,
+    "lng": 35.4875,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "San_Basilio",
     "isCosmic": false
   },
   {
@@ -9740,7 +9740,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Clodoveo_I",
     "isCosmic": false
   },
   {
@@ -9748,11 +9748,11 @@
     "title": "Caracalla",
     "description": "ventunesimo imperatore romano (r. 209-217)",
     "year": 188,
-    "lat": null,
-    "lng": null,
+    "lat": 45.7597,
+    "lng": 4.8194,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Caracalla",
     "isCosmic": false
   },
   {
@@ -9760,11 +9760,11 @@
     "title": "Petronio Arbitro",
     "description": "scrittore e politico romano",
     "year": 27,
-    "lat": null,
-    "lng": null,
+    "lat": 43.2963,
+    "lng": 5.3699,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Petronio_Arbitro",
     "isCosmic": false
   },
   {
@@ -9772,11 +9772,11 @@
     "title": "Teodorico il Grande",
     "description": "re degli Ostrogoti (r. 474-526), re d'Italia (r. 493-526) e reggente dei Visigoti (r. 511-526)",
     "year": 454,
-    "lat": null,
-    "lng": null,
+    "lat": 48.1133,
+    "lng": 16.8614,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Teodorico",
     "isCosmic": false
   },
   {
@@ -9784,11 +9784,11 @@
     "title": "Origene",
     "description": "teologo e filosofo greco antico",
     "year": 184,
-    "lat": null,
-    "lng": null,
+    "lat": 31.1975,
+    "lng": 29.8925,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Origene",
     "isCosmic": false
   },
   {
@@ -9796,11 +9796,11 @@
     "title": "Erone di Alessandria",
     "description": "matematico, ingegnere e inventore greco antico",
     "year": 10,
-    "lat": null,
-    "lng": null,
+    "lat": 31.1975,
+    "lng": 29.8925,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Erone_di_Alessandria",
     "isCosmic": false
   },
   {
@@ -9808,11 +9808,11 @@
     "title": "Ireneo di Lione",
     "description": "santo, vescovo e teologo romano",
     "year": 130,
-    "lat": null,
-    "lng": null,
+    "lat": 38.4127,
+    "lng": 27.1384,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ireneo_di_Lione",
     "isCosmic": false
   },
   {
@@ -9820,11 +9820,11 @@
     "title": "Clemente Alessandrino",
     "description": "teologo, filosofo e apologeta greco",
     "year": 150,
-    "lat": null,
-    "lng": null,
+    "lat": 37.9842,
+    "lng": 23.7281,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Clemente_Alessandrino",
     "isCosmic": false
   },
   {
@@ -9832,11 +9832,11 @@
     "title": "Ammiano Marcellino",
     "description": "storico romano",
     "year": 330,
-    "lat": null,
-    "lng": null,
+    "lat": 36.2047,
+    "lng": 36.1817,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Ammiano_Marcellino",
     "isCosmic": false
   },
   {
@@ -9844,11 +9844,11 @@
     "title": "Mani",
     "description": "predicatore e teologo iranico, fondatore del manicheismo",
     "year": 216,
-    "lat": null,
-    "lng": null,
+    "lat": 33.0936,
+    "lng": 44.5808,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Mani_(teologo)",
     "isCosmic": false
   },
   {
@@ -9856,11 +9856,11 @@
     "title": "Valente",
     "description": "imperatore romano (r. 364-378)",
     "year": 328,
-    "lat": null,
-    "lng": null,
+    "lat": 45.2833,
+    "lng": 18.8,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Valente_(imperatore)",
     "isCosmic": false
   },
   {
@@ -9868,11 +9868,11 @@
     "title": "Marco Vipsanio Agrippa",
     "description": "politico, militare e architetto romano",
     "year": -62,
-    "lat": null,
-    "lng": null,
+    "lat": 45.2,
+    "lng": 13.9,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Marco_Vipsanio_Agrippa",
     "isCosmic": false
   },
   {
@@ -9880,11 +9880,11 @@
     "title": "Giustino",
     "description": "filosofo e martire cristiano",
     "year": 100,
-    "lat": null,
-    "lng": null,
+    "lat": 32.2208,
+    "lng": 35.2628,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Giustino_(filosofo)",
     "isCosmic": false
   },
   {
@@ -9892,11 +9892,11 @@
     "title": "Porfirio",
     "description": "filosofo e teologo greco antico",
     "year": 233,
-    "lat": null,
-    "lng": null,
+    "lat": 33.2667,
+    "lng": 35.2,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Porfirio",
     "isCosmic": false
   },
   {
@@ -9908,7 +9908,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "opera",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Secondo_libro_dei_Maccabei",
     "isCosmic": false
   },
   {
@@ -9916,11 +9916,11 @@
     "title": "san Sebastiano",
     "description": "santo e martire romano (256-288)",
     "year": 255,
-    "lat": null,
-    "lng": null,
+    "lat": 43.1847,
+    "lng": 3.0036,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "San_Sebastiano",
     "isCosmic": false
   },
   {
@@ -9928,11 +9928,11 @@
     "title": "Zhang Heng",
     "description": "scienziato cinese",
     "year": 78,
-    "lat": null,
-    "lng": null,
+    "lat": 32.9987,
+    "lng": 112.5292,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zhang_Heng",
     "isCosmic": false
   },
   {
@@ -9944,7 +9944,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Tascio_Cecilio_Cipriano",
     "isCosmic": false
   },
   {
@@ -9952,11 +9952,11 @@
     "title": "Valentiniano III",
     "description": "imperatore romano d'Occidente (r. 425-455)",
     "year": 419,
-    "lat": null,
-    "lng": null,
+    "lat": 44.4161,
+    "lng": 12.2017,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Valentiniano_III",
     "isCosmic": false
   },
   {
@@ -9964,11 +9964,11 @@
     "title": "Amenofi III",
     "description": "faraone egizio",
     "year": -1399,
-    "lat": null,
-    "lng": null,
+    "lat": 27,
+    "lng": 29,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Amenofi_III",
     "isCosmic": false
   },
   {
@@ -9976,11 +9976,11 @@
     "title": "Zenone di Bisanzio",
     "description": "imperatore romano d'Oriente (r. 474-491)",
     "year": 425,
-    "lat": null,
-    "lng": null,
+    "lat": 36.6998,
+    "lng": 32.6905,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zenone_(imperatore)",
     "isCosmic": false
   },
   {
@@ -9992,7 +9992,7 @@
     "lng": 8.1258,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_della_foresta_di_Teutoburgo",
     "isCosmic": false
   },
   {
@@ -10000,11 +10000,11 @@
     "title": "Anastasio I Dicoro",
     "description": "imperatore romano d'Oriente (r. 491-518)",
     "year": 430,
-    "lat": null,
-    "lng": null,
+    "lat": 41.3133,
+    "lng": 19.4458,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Anastasio_I_Dicoro",
     "isCosmic": false
   },
   {
@@ -10016,7 +10016,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Diadumeniano",
     "isCosmic": false
   },
   {
@@ -10024,11 +10024,11 @@
     "title": "Zhuge Liang",
     "description": "militare cinese",
     "year": 181,
-    "lat": null,
-    "lng": null,
+    "lat": 35.5493,
+    "lng": 118.467,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Zhuge_Liang",
     "isCosmic": false
   },
   {
@@ -10040,7 +10040,7 @@
     "lng": 4.5,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_dei_Campi_Catalaunici",
     "isCosmic": false
   },
   {
@@ -10048,11 +10048,11 @@
     "title": "Pappo di Alessandria",
     "description": "matematico greco antico",
     "year": 290,
-    "lat": null,
-    "lng": null,
+    "lat": 31.1975,
+    "lng": 29.8925,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Pappo_di_Alessandria",
     "isCosmic": false
   },
   {
@@ -10064,7 +10064,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Childerico_I",
     "isCosmic": false
   },
   {
@@ -10072,11 +10072,11 @@
     "title": "Meroveo",
     "description": "re dei franchi e capostipite della dinastia dei Merovingi",
     "year": 415,
-    "lat": null,
-    "lng": null,
+    "lat": 50.6056,
+    "lng": 3.3881,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Meroveo",
     "isCosmic": false
   },
   {
@@ -10084,11 +10084,11 @@
     "title": "Aulo Gellio",
     "description": "scrittore e giurista romano",
     "year": 130,
-    "lat": null,
-    "lng": null,
+    "lat": 41.8931,
+    "lng": 12.4828,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Aulo_Gellio",
     "isCosmic": false
   },
   {
@@ -10096,11 +10096,11 @@
     "title": "Kanishka",
     "description": "the fourth and greatest Kushan emperor (127–150)",
     "year": 78,
-    "lat": null,
-    "lng": null,
+    "lat": 34.0144,
+    "lng": 71.5675,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Kaniṣka",
     "isCosmic": false
   },
   {
@@ -10108,11 +10108,11 @@
     "title": "Fǎxiǎn",
     "description": "monaco buddhista e traduttore cinese",
     "year": 337,
-    "lat": null,
-    "lng": null,
+    "lat": 36.5288,
+    "lng": 113.0346,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Fǎxiǎn",
     "isCosmic": false
   },
   {
@@ -10124,7 +10124,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Bahram_V",
     "isCosmic": false
   },
   {
@@ -10132,11 +10132,11 @@
     "title": "Guan Yu",
     "description": "generale cinese divinizzato come dio della guerra e delle arti marziali mistiche.",
     "year": 160,
-    "lat": null,
-    "lng": null,
+    "lat": 35.0157,
+    "lng": 110.9918,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Guan_Yu",
     "isCosmic": false
   },
   {
@@ -10148,7 +10148,7 @@
     "lng": 26.6,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Adrianopoli_(378)",
     "isCosmic": false
   },
   {
@@ -10156,11 +10156,11 @@
     "title": "Megastene",
     "description": "diplomatico, storico e geografo greco antico",
     "year": -350,
-    "lat": null,
-    "lng": null,
+    "lat": 39,
+    "lng": 34,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Megastene",
     "isCosmic": false
   },
   {
@@ -10168,11 +10168,11 @@
     "title": "Annone il Navigatore",
     "description": "navigatore ed esploratore cartaginese",
     "year": -499,
-    "lat": null,
-    "lng": null,
+    "lat": 36.8526,
+    "lng": 10.3235,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Annone_il_Navigatore",
     "isCosmic": false
   },
   {
@@ -10184,7 +10184,7 @@
     "lng": 12.4669,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Battaglia_di_Ponte_Milvio",
     "isCosmic": false
   },
   {
@@ -10196,7 +10196,7 @@
     "lng": 23,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Creta_del_365",
     "isCosmic": false
   },
   {
@@ -10208,7 +10208,7 @@
     "lng": 36.1,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Antiochia_del_115",
     "isCosmic": false
   },
   {
@@ -10220,7 +10220,7 @@
     "lng": 14.5,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Pompei_del_62",
     "isCosmic": false
   },
   {
@@ -10232,7 +10232,7 @@
     "lng": 28.21,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "Terremoto_di_Rodi_del_226_a.C.",
     "isCosmic": false
   }
 ]
