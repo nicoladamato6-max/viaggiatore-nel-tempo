@@ -86,12 +86,13 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
   const hudAltRef    = useRef<HTMLSpanElement>(null);
   const hudCoordsRef = useRef<HTMLSpanElement>(null);
   const isCosmicRef  = useRef(isCosmicView);
-  // Paleogeografia — Livello 1 GPlates + Livello 2 CAWM (globale) + DARE (dettaglio Med.)
+  // Paleogeografia — L1 GPlates + L2 CAWM/DARE + L3 Era Glaciale (piattaforma continentale LGM)
   const cawmLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
   const dareLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
   const gplatesDSRef    = useRef<Cesium.GeoJsonDataSource | null>(null);
   const gplatesCacheRef = useRef<Map<number, object>>(new Map());
   const gplatesAbortRef = useRef<AbortController | null>(null);
+  const lgmDSRef        = useRef<Cesium.GeoJsonDataSource | null>(null);
 
   eventsRef.current      = events;
   onClickRef.current     = onEventClick;
@@ -403,6 +404,7 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
       cawmLayerRef.current  = null;
       dareLayerRef.current  = null;
       gplatesDSRef.current  = null;
+      lgmDSRef.current      = null;
     };
   }, []);
 
@@ -412,7 +414,7 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
     if (!viewer || viewer.isDestroyed()) return;
 
     // Livello 2: CAWM (base globale) + DARE (dettaglio Mediterraneo) per il periodo greco-romano
-    const showAntique = currentYear >= -600 && currentYear <= 400 && !isCosmicView;
+    const showAntique = currentYear >= -600 && currentYear <= 700 && !isCosmicView;
     if (cawmLayerRef.current) cawmLayerRef.current.show = showAntique;
     if (dareLayerRef.current) dareLayerRef.current.show = showAntique;
 
@@ -480,6 +482,36 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
     }, 600);
 
     return () => { clearTimeout(debounce); abort.abort(); };
+  }, [currentYear, isCosmicView]);
+
+  // ── Livello 3: Era Glaciale — piattaforma continentale esposta durante LGM ─
+  // Mostra le terre emerse aggiuntive tra -25.000 e -8.000 a.C. (livello del mare -120m)
+  useEffect(() => {
+    const viewer = viewerRef.current;
+    if (!viewer || viewer.isDestroyed()) return;
+
+    const showLGM = currentYear >= -25_000 && currentYear <= -8_000 && !isCosmicView;
+
+    if (!showLGM) {
+      if (lgmDSRef.current) {
+        viewer.dataSources.remove(lgmDSRef.current, true);
+        lgmDSRef.current = null;
+      }
+      return;
+    }
+
+    if (lgmDSRef.current) return;
+
+    Cesium.GeoJsonDataSource.load('/lgm-coastlines.geojson', {
+      fill:          new Cesium.Color(0.18, 0.42, 0.72, 0.60),
+      stroke:        Cesium.Color.fromCssColorString('#7bb8f0'),
+      strokeWidth:   0.6,
+      clampToGround: false,
+    }).then(ds => {
+      if (!viewerRef.current || viewerRef.current.isDestroyed()) return;
+      viewerRef.current.dataSources.add(ds);
+      lgmDSRef.current = ds;
+    }).catch(() => {});
   }, [currentYear, isCosmicView]);
 
   // ── Aggiorna pin eventi storici ──────────────────────────────────────────
