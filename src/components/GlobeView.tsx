@@ -509,6 +509,9 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
       clampToGround: false,
     }).then(ds => {
       if (!viewerRef.current || viewerRef.current.isDestroyed()) return;
+      // Verifica che l'anno non sia cambiato durante il caricamento asincrono
+      const yr = currentYearRef.current;
+      if (yr < -25_000 || yr > -8_000) return;
       viewerRef.current.dataSources.add(ds);
       lgmDSRef.current = ds;
     }).catch(() => {});
