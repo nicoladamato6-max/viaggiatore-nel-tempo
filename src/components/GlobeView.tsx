@@ -502,19 +502,21 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
 
     if (lgmDSRef.current) return;
 
+    let cancelled = false;
     Cesium.GeoJsonDataSource.load('/lgm-coastlines.geojson', {
       fill:          new Cesium.Color(0.18, 0.42, 0.72, 0.60),
       stroke:        Cesium.Color.fromCssColorString('#7bb8f0'),
       strokeWidth:   0.6,
       clampToGround: false,
     }).then(ds => {
-      if (!viewerRef.current || viewerRef.current.isDestroyed()) return;
-      // Verifica che l'anno non sia cambiato durante il caricamento asincrono
+      if (cancelled || !viewerRef.current || viewerRef.current.isDestroyed()) return;
       const yr = currentYearRef.current;
       if (yr < -25_000 || yr > -8_000) return;
       viewerRef.current.dataSources.add(ds);
       lgmDSRef.current = ds;
     }).catch(() => {});
+
+    return () => { cancelled = true; };
   }, [currentYear, isCosmicView]);
 
   // ── Aggiorna pin eventi storici ──────────────────────────────────────────
