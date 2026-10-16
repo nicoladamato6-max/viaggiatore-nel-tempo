@@ -2087,5 +2087,17 @@
     "tipo": "persona",
     "wikipediaSlug": null,
     "isCosmic": false
+  },
+  {
+    "id": "wd-Q3612703",
+    "title": "Alluvione zancleana",
+    "description": "theoretical refilling of the Mediterranean Sea between the Miocene and Pliocene Epochs",
+    "year": -5330000,
+    "lat": 38,
+    "lng": 17,
+    "category": "geologia",
+    "tipo": "evento",
+    "wikipediaSlug": null,
+    "isCosmic": false
   }
 ]
