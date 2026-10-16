@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { type HistoricalEvent, type WikiSearchResult } from '../types';
 import { type Period } from '../data/historicalPeriods';
 
@@ -62,6 +62,19 @@ async function searchWikipedia(q: string, lang: string): Promise<WikiSearchResul
   }));
 }
 
+// Rimuove punteggiatura terminale inserita dall'STT ("Dante Alighieri." → "Dante Alighieri")
+function normalizeQuery(raw: string): string {
+  return raw.trim().replace(/[.,;:!?。，]+$/, '').trim();
+}
+
+function queryWords(q: string): string[] {
+  return q.split(/\s+/).filter(w => w.length >= 2);
+}
+
+function allWordsIn(words: string[], text: string): boolean {
+  return words.every(w => text.includes(w));
+}
+
 export function SearchBar({ events, onSelect, onWikiSelect, onEpochSelect, epochs = [], locale = 'it' }: Props) {
   const [query,       setQuery]       = useState('');
   const [open,        setOpen]        = useState(false);
@@ -76,12 +89,34 @@ export function SearchBar({ events, onSelect, onWikiSelect, onEpochSelect, epoch
   const lang = locale === 'it' ? 'it' : 'en';
 
   // Local results — instant, min 2 chars
-  const localResults = query.length >= 2
-    ? events.filter(e =>
-        e.title.toLowerCase().includes(query.toLowerCase()) ||
-        e.description.toLowerCase().includes(query.toLowerCase())
-      ).slice(0, 5)
-    : [];
+  // Priorità: frase esatta > inizia con frase > contiene frase > tutte le parole nel titolo > parole nella descrizione
+  const localResults = useMemo(() => {
+    const norm = normalizeQuery(query);
+    if (norm.length < 2) return [];
+    const q = norm.toLowerCase();
+    const words = queryWords(q);
+
+    const rank = (title: string, desc: string): number => {
+      if (title === q) return 0;
+      if (title.startsWith(q)) return 1;
+      if (title.includes(q)) return 2;
+      if (allWordsIn(words, title)) return 3;
+      if (desc && (desc.includes(q) || allWordsIn(words, desc))) return 4;
+      return 5;
+    };
+
+    return events
+      .filter(e => {
+        const t = e.title.toLowerCase();
+        const d = e.description?.toLowerCase() ?? '';
+        return t.includes(q) || d.includes(q) || allWordsIn(words, t) || allWordsIn(words, d);
+      })
+      .sort((a, b) =>
+        rank(a.title.toLowerCase(), a.description?.toLowerCase() ?? '') -
+        rank(b.title.toLowerCase(), b.description?.toLowerCase() ?? '')
+      )
+      .slice(0, 7);
+  }, [events, query]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Epoch results — match on name, min 2 chars
   const epochResults = query.length >= 2
@@ -159,7 +194,7 @@ export function SearchBar({ events, onSelect, onWikiSelect, onEpochSelect, epoch
     rec.interimResults = false;
     rec.maxAlternatives = 1;
     rec.onresult = (e: SpeechRecognitionEvent) => {
-      setQuery(e.results[0][0].transcript);
+      setQuery(normalizeQuery(e.results[0][0].transcript));
       setOpen(true);
     };
     rec.onerror = () => setListening(false);
@@ -177,7 +212,7 @@ export function SearchBar({ events, onSelect, onWikiSelect, onEpochSelect, epoch
         type="text"
         placeholder={locale === 'it' ? 'Cerca eventi, personaggi, luoghi…' : 'Search events, people, places…'}
         value={query}
-        onChange={e => { setQuery(e.target.value); setOpen(true); }}
+        onChange={e => { setQuery(normalizeQuery(e.target.value)); setOpen(true); }}
         onFocus={() => setOpen(true)}
       />
 
@@ -201,7 +236,7 @@ export function SearchBar({ events, onSelect, onWikiSelect, onEpochSelect, epoch
           {localResults.length > 0 && (
             <>
               <div className="search-results__section-header">
-                📍 {locale === 'it' ? 'Sulla mappa' : 'On map'}
+                📅 {locale === 'it' ? 'Nel dataset' : 'In dataset'}
               </div>
               {localResults.map(event => (
                 <div

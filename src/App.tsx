@@ -225,11 +225,26 @@ function AppInner() {
     return counts;
   }, [staticEvents]);
 
-  const ALL_EVENTS     = useMemo(() => [...staticEvents, ...wikidataEvents], [staticEvents, wikidataEvents]);
-  const ALL_SEARCHABLE = useMemo(() => [
-    ...ALL_EVENTS, MOON_SEARCH, SUN_SEARCH,
-    ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS,
-  ], [ALL_EVENTS]);
+  const ALL_EVENTS = useMemo(() => [...staticEvents, ...wikidataEvents], [staticEvents, wikidataEvents]);
+
+  // Index leggero (id, title, year, lat, lng…) per ricerca globale anche su era non caricate.
+  // Caricato una sola volta all'avvio; chunk completi (con description) hanno precedenza.
+  const [searchIndex, setSearchIndex] = useState<HistoricalEvent[]>([]);
+  useEffect(() => {
+    import('./data/chunks/events-index.json').then(mod => {
+      const idx = (mod.default as Array<{
+        id: string; title: string; year: number; category: EventCategory;
+        tipo?: EntityType; lat?: number; lng?: number; isCosmic: boolean; wikipediaSlug: string;
+      }>).map(e => ({ ...e, description: '' }));
+      setSearchIndex(idx);
+    }).catch(() => {});
+  }, []);
+
+  const ALL_SEARCHABLE = useMemo(() => {
+    const loadedIds = new Set(ALL_EVENTS.map(e => e.id));
+    const indexOnly = searchIndex.filter(e => !loadedIds.has(e.id));
+    return [...ALL_EVENTS, ...indexOnly, MOON_SEARCH, SUN_SEARCH, ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS];
+  }, [ALL_EVENTS, searchIndex]);
 
   const [selectedEvent, setSelectedEvent] = useState<HistoricalEvent | null>(null);
   const [mobileGlobeH, setMobileGlobeH] = useState(40); // vh
