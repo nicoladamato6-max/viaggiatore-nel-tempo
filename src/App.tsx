@@ -309,11 +309,24 @@ function AppInner() {
     }
 
     setWikiMarker(null);
+    setOverrideYear(null); // resetta TimeMachine: currentEraKey deve seguire il nuovo slider
     setSliderValue(yearToSlider(event.year));
+
+    // Force-load del chunk per l'era dell'evento: il pallino compare prima che arrivi la camera
+    if (!event.isCosmic) {
+      const eraKey = getEraKey(event.year, false);
+      if (!chunkCacheRef.current.has(eraKey)) {
+        ERA_IMPORTS[eraKey]().then(mod => {
+          chunkCacheRef.current.set(eraKey, mod.default as HistoricalEvent[]);
+          setLoadedChunks(new Map(chunkCacheRef.current));
+        });
+      }
+    }
+
     if (!event.isCosmic && event.lat != null && event.lng != null) {
       setFlyTo({ kind: 'geo', lat: event.lat, lng: event.lng, ts: Date.now() });
     }
-  }, []);
+  }, []); // setter stabili, refs stabili, getEraKey e ERA_IMPORTS module-level
 
   // Transizione cosmo↔Terra gestita qui (non in GlobeView) per controllare
   // il primo mount e garantire che non parta alcuna animazione all'avvio
