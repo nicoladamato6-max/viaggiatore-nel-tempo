@@ -11,13 +11,14 @@ type Tab = 'login' | 'register' | 'reset';
 
 export function AuthModal({ onClose, locale }: Props) {
   const { login, register, resetPassword, loading } = useAuth();
-  const [tab,         setTab]         = useState<Tab>('login');
-  const [email,       setEmail]       = useState('');
-  const [password,    setPassword]    = useState('');
-  const [gdprConsent, setGdprConsent] = useState(false);
-  const [error,       setError]       = useState<string | null>(null);
-  const [done,        setDone]        = useState(false);
-  const [doneMsg,     setDoneMsg]     = useState('');
+  const [tab,          setTab]         = useState<Tab>('login');
+  const [email,        setEmail]       = useState('');
+  const [password,     setPassword]    = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [gdprConsent,  setGdprConsent] = useState(false);
+  const [error,        setError]       = useState<string | null>(null);
+  const [done,         setDone]        = useState(false);
+  const [doneMsg,      setDoneMsg]     = useState('');
 
   const it = locale === 'it';
 
@@ -96,16 +97,26 @@ export function AuthModal({ onClose, locale }: Props) {
           {tab !== 'reset' && (
             <div className="auth-field">
               <label className="auth-label">▸ PASSWORD</label>
-              <input
-                className="auth-input"
-                type="password"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-                placeholder={tab === 'register' ? (it ? 'Minimo 6 caratteri' : 'Min. 6 characters') : '••••••••'}
-                required
-                minLength={tab === 'register' ? 6 : undefined}
-                autoComplete={tab === 'login' ? 'current-password' : 'new-password'}
-              />
+              <div className="auth-password-wrap">
+                <input
+                  className="auth-input auth-input--password"
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}
+                  placeholder={tab === 'register' ? (it ? 'Minimo 6 caratteri' : 'Min. 6 characters') : '••••••••'}
+                  required
+                  minLength={tab === 'register' ? 6 : undefined}
+                  autoComplete={tab === 'login' ? 'current-password' : 'new-password'}
+                />
+                <button
+                  type="button"
+                  className="auth-eye"
+                  onClick={() => setShowPassword(v => !v)}
+                  aria-label={showPassword ? 'Nascondi password' : 'Mostra password'}
+                >
+                  {showPassword ? '🙈' : '👁'}
+                </button>
+              </div>
             </div>
           )}
 
@@ -143,7 +154,11 @@ export function AuthModal({ onClose, locale }: Props) {
           {error && <div className="auth-error">✗ {error}</div>}
           {done  && <div className="auth-ok">{doneMsg}</div>}
 
-          <button className="auth-submit" type="submit" disabled={loading || (done && tab !== 'reset')}>
+          <button
+            className="auth-submit"
+            type="submit"
+            disabled={loading || (done && tab !== 'reset') || (tab === 'register' && !gdprConsent)}
+          >
             {loading
               ? (it ? '◌ VERIFICA…' : '◌ VERIFYING…')
               : done
