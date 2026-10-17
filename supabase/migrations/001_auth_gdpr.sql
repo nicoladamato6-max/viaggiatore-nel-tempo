@@ -37,11 +37,16 @@ create policy "profiles_own_rw" on public.profiles
   for all using (auth.uid() = id)
   with check (auth.uid() = id);
 
--- Admin può leggere tutti i profili
+-- Funzione SECURITY DEFINER per leggere il ruolo senza ricorsione RLS
+-- (le subquery su profiles dentro le policy causano infinite recursion → 500)
+create or replace function public.get_my_role()
+returns text as $$
+  select role from public.profiles where id = auth.uid();
+$$ language sql security definer stable;
+
+-- Admin può leggere tutti i profili (usa la funzione per evitare ricorsione)
 create policy "profiles_admin_select" on public.profiles
-  for select using (
-    exists (select 1 from public.profiles p where p.id = auth.uid() and p.role = 'admin')
-  );
+  for select using (public.get_my_role() = 'admin');
 
 -- Utenti autenticati possono inserire il proprio log accesso
 create policy "access_logs_own_insert" on public.access_logs
@@ -49,9 +54,7 @@ create policy "access_logs_own_insert" on public.access_logs
 
 -- Admin può leggere tutti i log
 create policy "access_logs_admin_select" on public.access_logs
-  for select using (
-    exists (select 1 from public.profiles p where p.id = auth.uid() and p.role = 'admin')
-  );
+  for select using (public.get_my_role() = 'admin');
 
 -- ── Trigger: crea profilo automaticamente al signup ──────────
 create or replace function public.handle_new_user()
