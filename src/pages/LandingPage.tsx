@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, type Variants } from 'framer-motion';
 import './LandingPage.css';
 
 // ── Stelle animate via canvas ─────────────────────────────────────────────────
@@ -51,11 +51,11 @@ function StarCanvas() {
 }
 
 // ── Animazioni Framer Motion ──────────────────────────────────────────────────
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 32 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+  show:   { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' as const } },
 };
-const stagger = { show: { transition: { staggerChildren: 0.15 } } };
+const stagger: Variants = { show: { transition: { staggerChildren: 0.15 } } };
 
 function FadeSection({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   const ref   = useRef(null);
