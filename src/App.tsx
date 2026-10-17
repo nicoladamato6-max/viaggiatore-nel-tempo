@@ -156,6 +156,25 @@ function AppInner() {
   const [profileOpen,  setProfileOpen]  = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [adminOpen,    setAdminOpen]    = useState(false);
+  const [toast,        setToast]        = useState<string | null>(null);
+
+  // Rileva redirect post-conferma email (#type=signup o #type=recovery nel hash)
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash.includes('type=signup')) {
+      setToast('✓ Email confermata — benvenuto nel Viaggiatore nel Tempo!');
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    } else if (hash.includes('type=recovery')) {
+      setToast('✓ Puoi ora impostare la nuova password dal tuo profilo.');
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!toast) return;
+    const t = setTimeout(() => setToast(null), 5000);
+    return () => clearTimeout(t);
+  }, [toast]);
 
   // Slider e anno — dichiarati prima del chunk loading (currentEraKey li usa)
   const [sliderValue, setSliderValue] = useState(yearToSlider(-753));
@@ -641,6 +660,12 @@ function AppInner() {
 
       {authOpen    && <AuthModal    locale={locale} onClose={() => setAuthOpen(false)} />}
       {profileOpen && <ProfileModal locale={locale} onClose={() => setProfileOpen(false)} />}
+
+      {toast && (
+        <div className="app-toast" onClick={() => setToast(null)}>
+          {toast}
+        </div>
+      )}
     </div>
   );
 }
