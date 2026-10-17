@@ -71,6 +71,8 @@ export interface WikiMarker {
   title: string;
 }
 
+export type MobileTab = 'globe' | 'search' | 'timeline' | 'profile';
+
 export const CATEGORY_LABELS: Record<EventCategory, string> = {
   storia:    'Storia',
   arte:      'Arte',

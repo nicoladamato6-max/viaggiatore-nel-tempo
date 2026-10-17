@@ -8,8 +8,10 @@ import { TimeMachine } from './components/TimeMachine';
 import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { ProfileModal } from './components/ProfileModal';
+import { MobileNav } from './components/MobileNav';
 import { useAuth } from './hooks/useAuth';
-import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker } from './types';
+import { useMobile } from './hooks/useMobile';
+import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker, type MobileTab } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 import { MACRO_ERAS, SUBCATEGORIES, type Period } from './data/historicalPeriods';
 
@@ -152,11 +154,14 @@ export default function App() {
 
 function AppInner() {
   const { user, logout } = useAuth();
+  const isMobile = useMobile();
   const [authOpen,     setAuthOpen]     = useState(false);
   const [profileOpen,  setProfileOpen]  = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [adminOpen,    setAdminOpen]    = useState(false);
   const [toast,        setToast]        = useState<string | null>(null);
+  const [mobileTab,    setMobileTab]    = useState<MobileTab>('globe');
+  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
 
   // Rileva redirect post-conferma email (#type=signup o #type=recovery nel hash)
   useEffect(() => {
@@ -533,64 +538,25 @@ function AppInner() {
     } catch { /* placeholder rimane aperto con Wikipedia */ }
   }, [currentYear, locale]);
 
-  return (
-    <div className="app">
-      <header className="header">
-        <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
-        <SearchBar
-          events={ALL_SEARCHABLE}
-          onSelect={handleSearchSelect}
-          onWikiSelect={handleWikiSelect}
-          onEpochSelect={handleEpochSearchSelect}
-          epochs={[...MACRO_ERAS, ...SUBCATEGORIES]}
-          locale={locale}
-        />
-        <button
-          className="locale-toggle-btn"
-          onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
-          title={locale === 'it' ? 'Switch to English' : 'Passa all\'italiano'}
-        >
-          {locale === 'it' ? '🇮🇹 IT' : '🇬🇧 EN'} ⇄
-        </button>
-        <div className="header-auth-wrap">
-          <button
-            className="auth-header-btn"
-            onClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
-            title={user ? user.email : (locale === 'it' ? 'Accedi' : 'Sign in')}
-          >
-            {user ? '👤' : '🔑'}
-          </button>
-          {userMenuOpen && user && (
-            <>
-              <div className="user-menu-backdrop" onClick={() => setUserMenuOpen(false)} />
-              <div className="user-menu">
-                <div className="user-menu__email">{user.email}</div>
-                {user.role === 'admin' && <div className="user-menu__role">ADMIN</div>}
-                <button className="user-menu__item" onClick={() => { setProfileOpen(true); setUserMenuOpen(false); }}>
-                  {locale === 'it' ? '👤 Il mio profilo' : '👤 My profile'}
-                </button>
-                <button className="user-menu__logout" onClick={() => { logout(); setUserMenuOpen(false); }}>
-                  {locale === 'it' ? '⏏ Esci dall\'account' : '⏏ Sign out'}
-                </button>
-              </div>
-            </>
-          )}
-        </div>
-        {user?.role === 'admin' && (
-          <button
-            className="admin-header-btn"
-            onClick={() => setAdminOpen(true)}
-            title={locale === 'it' ? 'Pannello Amministratore' : 'Admin Panel'}
-          >
-            ⚙️
-          </button>
-        )}
-      </header>
+  // Su mobile, il tab "search" apre il modal full-screen
+  const handleMobileTabChange = useCallback((tab: MobileTab) => {
+    if (tab === 'search') {
+      setMobileSearchOpen(true);
+      setMobileTab('globe'); // mantieni il globo come tab attivo di base
+    } else if (tab === 'profile') {
+      if (user) setProfileOpen(true);
+      else setAuthOpen(true);
+    } else {
+      setMobileTab(tab);
+    }
+  }, [user]);
 
-      <div className={`globe-container${selectedEvent ? ' has-panel' : ''}`}>
+  const globeAndControls = (
+    <>
+      <div className={`globe-container${selectedEvent && !isMobile ? ' has-panel' : ''}`}>
         <div
           className="globe-wrapper"
-          style={selectedEvent ? { '--mobile-globe-h': `${mobileGlobeH}vh` } as React.CSSProperties : undefined}
+          style={selectedEvent && !isMobile ? { '--mobile-globe-h': `${mobileGlobeH}vh` } as React.CSSProperties : undefined}
         >
           <GlobeView
             events={visibleEvents}
@@ -601,7 +567,7 @@ function AppInner() {
             currentYear={currentYear}
             showTerritories={showTerritories}
             locale={locale}
-            onEventClick={handleEventClick}
+            onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
           />
           <TimeMachine
             locale={locale}
@@ -633,30 +599,175 @@ function AppInner() {
             }}
           />
         </div>
-        {selectedEvent && (
+        {selectedEvent && !isMobile && (
           <div
             className="mobile-split-handle"
             onTouchStart={onSplitDown}
             onMouseDown={onSplitDown}
           />
         )}
-        <InfoPanel event={selectedEvent} locale={locale} onClose={() => setSelectedEvent(null)} />
+        {!isMobile && <InfoPanel event={selectedEvent} locale={locale} onClose={() => setSelectedEvent(null)} />}
       </div>
 
-      <div className="controls">
-        <TimeControls
-          sliderValue={sliderValue}
-          currentYear={currentYear}
-          formatYear={formatYear}
-          getEra={getEra}
-          onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
-          activeCategories={activeCategories}
-          onToggleCategory={toggleCategory}
-          activeTipi={activeTipi}
-          onToggleTipo={toggleTipo}
-          onEraClick={handleEraClick}
-        />
-      </div>
+      {/* Desktop: controls in basso */}
+      {!isMobile && (
+        <div className="controls">
+          <TimeControls
+            sliderValue={sliderValue}
+            currentYear={currentYear}
+            formatYear={formatYear}
+            getEra={getEra}
+            onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
+            activeCategories={activeCategories}
+            onToggleCategory={toggleCategory}
+            activeTipi={activeTipi}
+            onToggleTipo={toggleTipo}
+            onEraClick={handleEraClick}
+          />
+        </div>
+      )}
+    </>
+  );
+
+  return (
+    <div className={`app${isMobile ? ' app--mobile' : ''}`}>
+
+      {/* ── Header (solo desktop) ── */}
+      {!isMobile && (
+        <header className="header">
+          <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
+          <SearchBar
+            events={ALL_SEARCHABLE}
+            onSelect={handleSearchSelect}
+            onWikiSelect={handleWikiSelect}
+            onEpochSelect={handleEpochSearchSelect}
+            epochs={[...MACRO_ERAS, ...SUBCATEGORIES]}
+            locale={locale}
+          />
+          <button
+            className="locale-toggle-btn"
+            onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
+            title={locale === 'it' ? 'Switch to English' : 'Passa all\'italiano'}
+          >
+            {locale === 'it' ? '🇮🇹 IT' : '🇬🇧 EN'} ⇄
+          </button>
+          <div className="header-auth-wrap">
+            <button
+              className="auth-header-btn"
+              onClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
+              title={user ? user.email : (locale === 'it' ? 'Accedi' : 'Sign in')}
+            >
+              {user ? '👤' : '🔑'}
+            </button>
+            {userMenuOpen && user && (
+              <>
+                <div className="user-menu-backdrop" onClick={() => setUserMenuOpen(false)} />
+                <div className="user-menu">
+                  <div className="user-menu__email">{user.email}</div>
+                  {user.role === 'admin' && <div className="user-menu__role">ADMIN</div>}
+                  <button className="user-menu__item" onClick={() => { setProfileOpen(true); setUserMenuOpen(false); }}>
+                    {locale === 'it' ? '👤 Il mio profilo' : '👤 My profile'}
+                  </button>
+                  <button className="user-menu__logout" onClick={() => { logout(); setUserMenuOpen(false); }}>
+                    {locale === 'it' ? '⏏ Esci dall\'account' : '⏏ Sign out'}
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+          {user?.role === 'admin' && (
+            <button
+              className="admin-header-btn"
+              onClick={() => setAdminOpen(true)}
+              title={locale === 'it' ? 'Pannello Amministratore' : 'Admin Panel'}
+            >
+              ⚙️
+            </button>
+          )}
+        </header>
+      )}
+
+      {/* ── Mobile: mini header con logo + lingua ── */}
+      {isMobile && (
+        <header className="header header--mobile">
+          <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
+          <button
+            className="locale-toggle-btn"
+            onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
+          >
+            {locale === 'it' ? '🇮🇹' : '🇬🇧'}
+          </button>
+          {user?.role === 'admin' && (
+            <button className="admin-header-btn" onClick={() => setAdminOpen(true)}>⚙️</button>
+          )}
+        </header>
+      )}
+
+      {/* ── Contenuto principale ── */}
+      {isMobile ? (
+        <>
+          {/* Globe tab: sempre montato, visibile quando activeTab = globe */}
+          <div className={`mobile-screen${mobileTab === 'globe' ? ' mobile-screen--active' : ''}`}>
+            {globeAndControls}
+          </div>
+
+          {/* Timeline tab: slider + filtri full-screen */}
+          <div className={`mobile-screen mobile-timeline-screen${mobileTab === 'timeline' ? ' mobile-screen--active' : ''}`}>
+            <div className="controls controls--fullscreen">
+              <TimeControls
+                sliderValue={sliderValue}
+                currentYear={currentYear}
+                formatYear={formatYear}
+                getEra={getEra}
+                onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
+                activeCategories={activeCategories}
+                onToggleCategory={toggleCategory}
+                activeTipi={activeTipi}
+                onToggleTipo={toggleTipo}
+                onEraClick={handleEraClick}
+              />
+            </div>
+          </div>
+
+          {/* Bottom sheet InfoPanel su mobile */}
+          {selectedEvent && (
+            <div className="mobile-bottom-sheet">
+              <div className="mobile-bottom-sheet__grip" />
+              <InfoPanel event={selectedEvent} locale={locale} onClose={() => setSelectedEvent(null)} />
+            </div>
+          )}
+
+          {/* Search modal full-screen */}
+          {mobileSearchOpen && (
+            <div className="mobile-search-modal">
+              <div className="mobile-search-modal__header">
+                <button className="mobile-search-modal__close" onClick={() => setMobileSearchOpen(false)}>✕</button>
+              </div>
+              <div className="mobile-search-modal__body">
+                <SearchBar
+                  events={ALL_SEARCHABLE}
+                  onSelect={(ev) => { handleSearchSelect(ev); setMobileSearchOpen(false); }}
+                  onWikiSelect={(r) => { handleWikiSelect(r); setMobileSearchOpen(false); }}
+                  onEpochSelect={(p) => { handleEpochSearchSelect(p); setMobileSearchOpen(false); }}
+                  epochs={[...MACRO_ERAS, ...SUBCATEGORIES]}
+                  locale={locale}
+                />
+              </div>
+            </div>
+          )}
+
+          {/* Bottom nav */}
+          <MobileNav
+            activeTab={mobileTab}
+            onTabChange={handleMobileTabChange}
+            hasEvent={!!selectedEvent}
+            isLoggedIn={!!user}
+            locale={locale}
+          />
+        </>
+      ) : (
+        globeAndControls
+      )}
 
       {authOpen    && <AuthModal    locale={locale} onClose={() => setAuthOpen(false)} />}
       {profileOpen && <ProfileModal locale={locale} onClose={() => setProfileOpen(false)} />}

@@ -1990,3 +1990,245 @@ body {
   from { opacity: 0; transform: translateX(-50%) translateY(10px); }
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   FEATURE 4 — MOBILE EXPERIENCE (< 768px)
+   Architettura: bottom nav 4 tab, globe full-screen, bottom sheet InfoPanel,
+   search modal full-screen, timeline tab full-screen.
+   ══════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Struttura root mobile ─────────────────────────────────────────────────── */
+.app--mobile {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+}
+
+/* Mini-header mobile: solo logo + lingua */
+.header--mobile {
+  height: 48px;
+  padding: 0 12px;
+  flex-shrink: 0;
+}
+.header--mobile h1 {
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+/* ── Schermate mobile (tab switching) ─────────────────────────────────────── */
+.mobile-screen {
+  position: absolute;
+  inset: 48px 0 60px 0; /* header=48px, nav=60px */
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+.mobile-screen--active {
+  display: flex;
+}
+
+/* Il globe-container dentro mobile-screen deve prendere tutto lo spazio */
+.mobile-screen .globe-container {
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+}
+.mobile-screen .globe-wrapper {
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── Timeline full-screen ──────────────────────────────────────────────────── */
+.mobile-timeline-screen {
+  padding: 0;
+  overflow-y: auto;
+}
+.controls--fullscreen {
+  flex: 1;
+  padding: 20px 16px;
+  border: none;
+  background: rgba(2, 6, 16, 0.98);
+  overflow-y: auto;
+}
+
+/* ── Bottom Nav (4 tab) ────────────────────────────────────────────────────── */
+.mobile-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: stretch;
+  background: rgba(2, 6, 16, 0.97);
+  border-top: 1px solid var(--clr-neon-cyan);
+  box-shadow:
+    0 -1px 0 rgba(0, 200, 255, 0.6),
+    0 -2px 16px rgba(0, 200, 255, 0.18);
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.mobile-nav__btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 0;
+  color: var(--clr-text-muted);
+  transition: var(--transition-ui);
+  position: relative;
+}
+
+.mobile-nav__btn--active {
+  color: var(--clr-neon-cyan);
+}
+
+.mobile-nav__btn--active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: var(--clr-neon-cyan);
+  box-shadow: 0 0 8px var(--clr-neon-cyan), 0 0 16px rgba(0, 200, 255, 0.5);
+  border-radius: 0 0 2px 2px;
+}
+
+.mobile-nav__icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  filter: drop-shadow(0 0 4px currentColor);
+}
+
+.mobile-nav__label {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Bottom Sheet (InfoPanel su mobile) ───────────────────────────────────── */
+.mobile-bottom-sheet {
+  position: absolute;
+  bottom: 60px; /* sopra la nav */
+  left: 0;
+  right: 0;
+  height: 55dvh;
+  background: rgba(2, 6, 16, 0.98);
+  border-top: 1px solid var(--clr-neon-cyan);
+  box-shadow:
+    0 -1px 0 rgba(0, 200, 255, 0.5),
+    0 -4px 24px rgba(0, 200, 255, 0.12),
+    0 -8px 40px rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  animation: sheet-in 0.32s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+
+@keyframes sheet-in {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.mobile-bottom-sheet__grip {
+  width: 36px;
+  height: 4px;
+  background: rgba(0, 200, 255, 0.4);
+  border-radius: 2px;
+  margin: 10px auto 6px;
+  flex-shrink: 0;
+}
+
+/* InfoPanel dentro bottom sheet: occupa tutto lo spazio rimanente */
+.mobile-bottom-sheet .info-panel {
+  border-left: none;
+  border-top: none;
+  flex: 1;
+  min-height: 0;
+  width: 100% !important;
+  box-shadow: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* ── Search Modal full-screen ─────────────────────────────────────────────── */
+.mobile-search-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(2, 6, 16, 0.99);
+  display: flex;
+  flex-direction: column;
+  animation: toastIn 0.2s ease;
+  backdrop-filter: blur(20px);
+}
+
+.mobile-search-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 14px 16px 8px;
+  border-bottom: 1px solid var(--clr-border-soft);
+  flex-shrink: 0;
+}
+
+.mobile-search-modal__close {
+  background: none;
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  border-radius: 8px;
+  color: var(--clr-neon-cyan);
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  transition: var(--transition-ui);
+}
+.mobile-search-modal__close:hover {
+  background: rgba(0, 200, 255, 0.1);
+  border-color: var(--clr-neon-cyan);
+}
+
+.mobile-search-modal__body {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Nel modal mobile, la search bar occupa tutta la larghezza */
+.mobile-search-modal__body .search-bar {
+  margin-left: 0;
+  width: 100%;
+}
+.mobile-search-modal__body .search-bar input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 10px 14px;
+}
+.mobile-search-modal__body .search-results {
+  position: relative;
+  top: 8px;
+  right: auto;
+  left: auto;
+  width: 100%;
+}
+
+/* ── Adattamenti desktop → rimangono invariati via media query ────────────── */
+@media (min-width: 768px) {
+  .mobile-nav    { display: none !important; }
+  .mobile-screen { display: none !important; }
+  .header--mobile { display: none !important; }
+}
