@@ -58,6 +58,7 @@ const SUN_CARD: HistoricalEvent = {
 
 interface Props {
   events: HistoricalEvent[];
+  selectedEventId: string | null;
   isCosmicView: boolean;
   flyTo: FlyTarget | null;
   wikiMarker: WikiMarker | null;
@@ -67,7 +68,7 @@ interface Props {
   onEventClick: (event: HistoricalEvent) => void;
 }
 
-export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear, showTerritories, locale, onEventClick }: Props) {
+export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMarker, currentYear, showTerritories, locale, onEventClick }: Props) {
   const containerRef  = useRef<HTMLDivElement>(null);
   const viewerRef     = useRef<Cesium.Viewer | null>(null);
   // PointPrimitiveCollection per i pin degli eventi storici — molto più veloce delle Entity
@@ -531,19 +532,21 @@ export function GlobeView({ events, isCosmicView, flyTo, wikiMarker, currentYear
 
     for (const event of events) {
       if (event.lat == null || event.lng == null) continue;
+      const isSelected = event.id === selectedEventId;
+      const baseColor  = Cesium.Color.fromCssColorString(CATEGORY_COLORS[event.category]);
       pins.add({
         id: event.id,
         position: Cesium.Cartesian3.fromDegrees(event.lng, event.lat),
-        color: Cesium.Color.fromCssColorString(CATEGORY_COLORS[event.category]),
-        outlineColor: Cesium.Color.WHITE,
-        outlineWidth: 1,
-        pixelSize: 7,
-        scaleByDistance:        new Cesium.NearFarScalar(500_000, 1.8, 20_000_000, 0.5),
+        color: isSelected ? Cesium.Color.WHITE : baseColor,
+        outlineColor: isSelected ? baseColor : Cesium.Color.WHITE,
+        outlineWidth: isSelected ? 3 : 1,
+        pixelSize: isSelected ? 14 : 7,
+        scaleByDistance:        new Cesium.NearFarScalar(500_000, isSelected ? 2.2 : 1.8, 20_000_000, isSelected ? 0.8 : 0.5),
         translucencyByDistance: new Cesium.NearFarScalar(15_000_000, 1.0, 25_000_000, 0.0),
         disableDepthTestDistance: Number.POSITIVE_INFINITY,
       });
     }
-  }, [events, isCosmicView]);
+  }, [events, isCosmicView, selectedEventId]);
 
   // ── Mappe politiche storiche (GeoJsonDataSource) ────────────────────────────
   useEffect(() => {

@@ -2904,17 +2904,6 @@
     "wikipediaSlug": "Seneca_the_Younger"
   },
   {
-    "id": "gesù-crocifissione",
-    "year": 30,
-    "title": "Crocifissione di Gesù di Nazareth",
-    "category": "filosofia",
-    "tipo": "persona",
-    "lat": 31.7683,
-    "lng": 35.2137,
-    "isCosmic": false,
-    "wikipediaSlug": "Crucifixion_of_Jesus"
-  },
-  {
     "id": "paolo-di-tarso",
     "year": 50,
     "title": "San Paolo — L'Apostolo dei Gentili",
@@ -2935,17 +2924,6 @@
     "lng": 12.4964,
     "isCosmic": false,
     "wikipediaSlug": "Trajan"
-  },
-  {
-    "id": "adriano-muro",
-    "year": 122,
-    "title": "Adriano — Il Muro e i Viaggi dell'Imperatore",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 55,
-    "lng": -2,
-    "isCosmic": false,
-    "wikipediaSlug": "Hadrian"
   },
   {
     "id": "agostino-confessioni",
@@ -4134,17 +4112,6 @@
     "lng": 23.7348,
     "isCosmic": false,
     "wikipediaSlug": "Praxiteles"
-  },
-  {
-    "id": "erodoto-storie",
-    "year": -440,
-    "title": "Erodoto — Il Padre della Storiografia",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 37.0384,
-    "lng": 27.4241,
-    "isCosmic": false,
-    "wikipediaSlug": "Herodotus"
   },
   {
     "id": "pindaro-odi",
@@ -6402,17 +6369,6 @@
     "wikipediaSlug": "Woolly_mammoth"
   },
   {
-    "id": "altamira-pitture",
-    "year": -22000,
-    "title": "Altamira — I Bisonti della Preistoria",
-    "category": "arte",
-    "tipo": "opera",
-    "lat": 43.3794,
-    "lng": -4.1162,
-    "isCosmic": false,
-    "wikipediaSlug": "Cave_of_Altamira"
-  },
-  {
     "id": "barca-navigazione-paleolitica",
     "year": -50000,
     "title": "Le Prime Barche — L'Umanità Naviga",
@@ -6598,17 +6554,6 @@
     "lng": 28.5648,
     "isCosmic": false,
     "wikipediaSlug": "Chalcolithic"
-  },
-  {
-    "id": "jericho-prima-citta",
-    "year": -9000,
-    "title": "Gerico — La Più Antica Città del Mondo",
-    "category": "geologia",
-    "tipo": "evento",
-    "lat": 31.8611,
-    "lng": 35.4556,
-    "isCosmic": false,
-    "wikipediaSlug": "Jericho"
   },
   {
     "id": "ain-ghazal-statue",
@@ -96613,30 +96558,8 @@
     "wikipediaSlug": "Marco_(evangelista)"
   },
   {
-    "id": "wd-Q31966",
-    "year": 12,
-    "title": "Marco",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 31.6253,
-    "lng": 35.1453,
-    "isCosmic": false,
-    "wikipediaSlug": "Marco_(evangelista)"
-  },
-  {
     "id": "wd-Q10133",
     "year": 69,
-    "title": "Gaio Svetonio Tranquillo",
-    "category": "arte",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Gaio_Svetonio_Tranquillo"
-  },
-  {
-    "id": "wd-Q10133",
-    "year": 70,
     "title": "Gaio Svetonio Tranquillo",
     "category": "arte",
     "tipo": "persona",
@@ -96659,17 +96582,6 @@
   {
     "id": "wd-Q43954",
     "year": 390,
-    "title": "papa Leone I",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 43.45,
-    "lng": 11.2,
-    "isCosmic": false,
-    "wikipediaSlug": "Papa_Leone_I"
-  },
-  {
-    "id": "wd-Q43954",
-    "year": 400,
     "title": "papa Leone I",
     "category": "storia",
     "tipo": "persona",
@@ -96833,17 +96745,6 @@
     "wikipediaSlug": "Gorgia"
   },
   {
-    "id": "wd-Q179785",
-    "year": -482,
-    "title": "Gorgia",
-    "category": "filosofia",
-    "tipo": "persona",
-    "lat": 37.2833,
-    "lng": 15,
-    "isCosmic": false,
-    "wikipediaSlug": "Gorgia"
-  },
-  {
     "id": "wd-Q171241",
     "year": -89,
     "title": "Diodoro Siculo",
@@ -96857,17 +96758,6 @@
   {
     "id": "wd-Q44011",
     "year": 329,
-    "title": "Gregorio Nazianzeno",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 38.3944,
-    "lng": 34.3814,
-    "isCosmic": false,
-    "wikipediaSlug": "Gregorio_Nazianzeno"
-  },
-  {
-    "id": "wd-Q44011",
-    "year": 330,
     "title": "Gregorio Nazianzeno",
     "category": "storia",
     "tipo": "persona",
@@ -96952,17 +96842,6 @@
     "lng": 85.144,
     "isCosmic": false,
     "wikipediaSlug": "Candragupta_Maurya"
-  },
-  {
-    "id": "wd-Q1417",
-    "year": 15,
-    "title": "Vitellio",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 40.7431,
-    "lng": 14.6739,
-    "isCosmic": false,
-    "wikipediaSlug": "Vitellio"
   },
   {
     "id": "wd-Q1417",
@@ -97130,17 +97009,6 @@
     "wikipediaSlug": "Martino_di_Tours"
   },
   {
-    "id": "wd-Q133704",
-    "year": 316,
-    "title": "Martino di Tours",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 47.2319,
-    "lng": 16.62,
-    "isCosmic": false,
-    "wikipediaSlug": "Martino_di_Tours"
-  },
-  {
     "id": "wd-Q179552",
     "year": -523,
     "title": "Temistocle",
@@ -97183,17 +97051,6 @@
     "lng": 29.8925,
     "isCosmic": false,
     "wikipediaSlug": "Diofanto_di_Alessandria"
-  },
-  {
-    "id": "wd-Q102371",
-    "year": 370,
-    "title": "Alarico I",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 45.0667,
-    "lng": 28.75,
-    "isCosmic": false,
-    "wikipediaSlug": "Alarico_I"
   },
   {
     "id": "wd-Q1769",
@@ -97363,17 +97220,6 @@
   {
     "id": "wd-Q1752",
     "year": 164,
-    "title": "Macrino",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 36.6075,
-    "lng": 2.19,
-    "isCosmic": false,
-    "wikipediaSlug": "Macrino"
-  },
-  {
-    "id": "wd-Q1752",
-    "year": 165,
     "title": "Macrino",
     "category": "storia",
     "tipo": "persona",
@@ -97702,17 +97548,6 @@
     "wikipediaSlug": "Costanzo_II"
   },
   {
-    "id": "wd-Q46418",
-    "year": 317,
-    "title": "Costanzo II",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 44.9661,
-    "lng": 19.6106,
-    "isCosmic": false,
-    "wikipediaSlug": "Costanzo_II"
-  },
-  {
     "id": "wd-Q103333",
     "year": 433,
     "title": "Odoacre",
@@ -97889,30 +97724,8 @@
     "wikipediaSlug": "Cai_Lun"
   },
   {
-    "id": "wd-Q229235",
-    "year": 50,
-    "title": "Cai Lun",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 26.4179,
-    "lng": 112.8457,
-    "isCosmic": false,
-    "wikipediaSlug": "Cai_Lun"
-  },
-  {
     "id": "wd-Q46750",
     "year": 199,
-    "title": "Valeriano",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 41.9,
-    "lng": 12.5,
-    "isCosmic": false,
-    "wikipediaSlug": "Valeriano"
-  },
-  {
-    "id": "wd-Q46750",
-    "year": 200,
     "title": "Valeriano",
     "category": "storia",
     "tipo": "persona",
@@ -98001,17 +97814,6 @@
   {
     "id": "wd-Q177975",
     "year": -157,
-    "title": "Gaio Mario",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 41.6471,
-    "lng": 13.6116,
-    "isCosmic": false,
-    "wikipediaSlug": "Gaio_Mario"
-  },
-  {
-    "id": "wd-Q177975",
-    "year": -156,
     "title": "Gaio Mario",
     "category": "storia",
     "tipo": "persona",
@@ -98144,17 +97946,6 @@
   {
     "id": "wd-Q179718",
     "year": 282,
-    "title": "Caterina d'Alessandria",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 31.1975,
-    "lng": 29.8925,
-    "isCosmic": false,
-    "wikipediaSlug": "Caterina_d'Alessandria"
-  },
-  {
-    "id": "wd-Q179718",
-    "year": 287,
     "title": "Caterina d'Alessandria",
     "category": "storia",
     "tipo": "persona",
@@ -98406,30 +98197,8 @@
     "wikipediaSlug": "Mitridate_VI_del_Ponto"
   },
   {
-    "id": "wd-Q185126",
-    "year": -131,
-    "title": "Mitridate VI del Ponto",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 42.0267,
-    "lng": 35.1511,
-    "isCosmic": false,
-    "wikipediaSlug": "Mitridate_VI_del_Ponto"
-  },
-  {
     "id": "wd-Q46768",
     "year": 240,
-    "title": "Massimiano",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 44.9661,
-    "lng": 19.6106,
-    "isCosmic": false,
-    "wikipediaSlug": "Massimiano"
-  },
-  {
-    "id": "wd-Q46768",
-    "year": 250,
     "title": "Massimiano",
     "category": "storia",
     "tipo": "persona",
@@ -98516,30 +98285,8 @@
     "wikipediaSlug": "Pausania_il_Periegeta"
   },
   {
-    "id": "wd-Q192931",
-    "year": 115,
-    "title": "Pausania il Periegeta",
-    "category": "scienza",
-    "tipo": "persona",
-    "lat": 38.4,
-    "lng": 28.3,
-    "isCosmic": false,
-    "wikipediaSlug": "Pausania_il_Periegeta"
-  },
-  {
     "id": "wd-Q1797",
     "year": 170,
-    "title": "Pupieno",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 41.8931,
-    "lng": 12.4828,
-    "isCosmic": false,
-    "wikipediaSlug": "Pupieno"
-  },
-  {
-    "id": "wd-Q1797",
-    "year": 178,
     "title": "Pupieno",
     "category": "storia",
     "tipo": "persona",
@@ -98562,17 +98309,6 @@
   {
     "id": "wd-Q31845",
     "year": 89,
-    "title": "Arriano",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 40.7625,
-    "lng": 29.9175,
-    "isCosmic": false,
-    "wikipediaSlug": "Arriano"
-  },
-  {
-    "id": "wd-Q31845",
-    "year": 95,
     "title": "Arriano",
     "category": "storia",
     "tipo": "persona",
@@ -98639,17 +98375,6 @@
   {
     "id": "wd-Q192638",
     "year": -294,
-    "title": "Apollonio Rodio",
-    "category": "arte",
-    "tipo": "persona",
-    "lat": 31.1975,
-    "lng": 29.8925,
-    "isCosmic": false,
-    "wikipediaSlug": "Apollonio_Rodio"
-  },
-  {
-    "id": "wd-Q192638",
-    "year": -289,
     "title": "Apollonio Rodio",
     "category": "arte",
     "tipo": "persona",
@@ -98868,17 +98593,6 @@
     "wikipediaSlug": "Policarpo_di_Smirne"
   },
   {
-    "id": "wd-Q192371",
-    "year": 70,
-    "title": "Policarpo di Smirne",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 38.4127,
-    "lng": 27.1384,
-    "isCosmic": false,
-    "wikipediaSlug": "Policarpo_di_Smirne"
-  },
-  {
     "id": "wd-Q189705",
     "year": 240,
     "title": "Zenobia",
@@ -98989,30 +98703,8 @@
     "wikipediaSlug": "Sapore_II"
   },
   {
-    "id": "wd-Q234860",
-    "year": 310,
-    "title": "Sapore II",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 28.8436,
-    "lng": 52.5706,
-    "isCosmic": false,
-    "wikipediaSlug": "Sapore_II"
-  },
-  {
     "id": "wd-Q207634",
     "year": -569,
-    "title": "Clistene",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 37.9722,
-    "lng": 23.7222,
-    "isCosmic": false,
-    "wikipediaSlug": "Clistene"
-  },
-  {
-    "id": "wd-Q207634",
-    "year": -564,
     "title": "Clistene",
     "category": "storia",
     "tipo": "persona",
@@ -99187,17 +98879,6 @@
     "wikipediaSlug": "Marco_Aurelio_Caro"
   },
   {
-    "id": "wd-Q187004",
-    "year": 224,
-    "title": "Marco Aurelio Caro",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 43.1847,
-    "lng": 3.0036,
-    "isCosmic": false,
-    "wikipediaSlug": "Marco_Aurelio_Caro"
-  },
-  {
     "id": "wd-Q183776",
     "year": 401,
     "title": "Leone I il Trace",
@@ -99308,30 +98989,8 @@
     "wikipediaSlug": "Artaserse_II_di_Persia"
   },
   {
-    "id": "wd-Q188472",
-    "year": -451,
-    "title": "Artaserse II di Persia",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Artaserse_II_di_Persia"
-  },
-  {
     "id": "wd-Q190055",
     "year": -346,
-    "title": "Rossane",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 36.7581,
-    "lng": 66.8989,
-    "isCosmic": false,
-    "wikipediaSlug": "Rossane"
-  },
-  {
-    "id": "wd-Q190055",
-    "year": -344,
     "title": "Rossane",
     "category": "storia",
     "tipo": "persona",
@@ -99387,17 +99046,6 @@
   {
     "id": "wd-Q185538",
     "year": 320,
-    "title": "Costante I",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 42.5,
-    "lng": 12.5,
-    "isCosmic": false,
-    "wikipediaSlug": "Costante_I"
-  },
-  {
-    "id": "wd-Q185538",
-    "year": 323,
     "title": "Costante I",
     "category": "storia",
     "tipo": "persona",
@@ -99548,17 +99196,6 @@
     "lng": null,
     "isCosmic": false,
     "wikipediaSlug": "Publio_Vegezio_Renato"
-  },
-  {
-    "id": "wd-Q46837",
-    "year": 230,
-    "title": "Ostiliano",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 44.97,
-    "lng": 19.6125,
-    "isCosmic": false,
-    "wikipediaSlug": "Ostiliano"
   },
   {
     "id": "wd-Q110892",
@@ -99814,17 +99451,6 @@
     "wikipediaSlug": "Alessandro_IV_di_Macedonia"
   },
   {
-    "id": "wd-Q207847",
-    "year": -322,
-    "title": "Alessandro IV di Macedonia",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 32.5425,
-    "lng": 44.4211,
-    "isCosmic": false,
-    "wikipediaSlug": "Alessandro_IV_di_Macedonia"
-  },
-  {
     "id": "wd-Q315526",
     "year": -319,
     "title": "Bindusara",
@@ -99845,17 +99471,6 @@
     "lng": 12.4828,
     "isCosmic": false,
     "wikipediaSlug": "Servio_Tullio"
-  },
-  {
-    "id": "wd-Q39595",
-    "year": -243,
-    "title": "Tolomeo IV",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Tolomeo_IV"
   },
   {
     "id": "wd-Q39595",
@@ -99981,17 +99596,6 @@
   {
     "id": "wd-Q39938",
     "year": -61,
-    "title": "Tolomeo XIII",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 27,
-    "lng": 29,
-    "isCosmic": false,
-    "wikipediaSlug": "Tolomeo_XIII"
-  },
-  {
-    "id": "wd-Q39938",
-    "year": -60,
     "title": "Tolomeo XIII",
     "category": "storia",
     "tipo": "persona",
@@ -100133,17 +99737,6 @@
     "wikipediaSlug": "Antioco_I"
   },
   {
-    "id": "wd-Q211488",
-    "year": -322,
-    "title": "Antioco I",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 40.478,
-    "lng": 22.3228,
-    "isCosmic": false,
-    "wikipediaSlug": "Antioco_I"
-  },
-  {
     "id": "wd-Q146029",
     "year": -1400,
     "title": "Ay",
@@ -100168,17 +99761,6 @@
   {
     "id": "wd-Q469701",
     "year": -58,
-    "title": "Livia Drusilla",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 41.8931,
-    "lng": 12.4828,
-    "isCosmic": false,
-    "wikipediaSlug": "Livia_Drusilla"
-  },
-  {
-    "id": "wd-Q469701",
-    "year": -57,
     "title": "Livia Drusilla",
     "category": "storia",
     "tipo": "persona",
@@ -100397,17 +99979,6 @@
     "wikipediaSlug": "Lisimaco"
   },
   {
-    "id": "wd-Q32133",
-    "year": -354,
-    "title": "Lisimaco",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 40.76,
-    "lng": 22.5256,
-    "isCosmic": false,
-    "wikipediaSlug": "Lisimaco"
-  },
-  {
     "id": "wd-Q40252",
     "year": -203,
     "title": "Cleopatra I",
@@ -100595,28 +100166,6 @@
     "wikipediaSlug": "Tolomeo_VI"
   },
   {
-    "id": "wd-Q39952",
-    "year": -185,
-    "title": "Tolomeo VI",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Tolomeo_VI"
-  },
-  {
-    "id": "wd-Q39952",
-    "year": -183,
-    "title": "Tolomeo VI",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Tolomeo_VI"
-  },
-  {
     "id": "wd-Q45053",
     "year": -1,
     "title": "Gioele",
@@ -100672,17 +100221,6 @@
     "wikipediaSlug": "Alarico_II"
   },
   {
-    "id": "wd-Q110884",
-    "year": 466,
-    "title": "Alarico II",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Alarico_II"
-  },
-  {
     "id": "wd-Q151817",
     "year": -2900,
     "title": "Hotepsekhemwy",
@@ -100718,17 +100256,6 @@
   {
     "id": "wd-Q242172",
     "year": -599,
-    "title": "Pisistrato",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 37.9842,
-    "lng": 23.7281,
-    "isCosmic": false,
-    "wikipediaSlug": "Pisistrato"
-  },
-  {
-    "id": "wd-Q242172",
-    "year": -550,
     "title": "Pisistrato",
     "category": "storia",
     "tipo": "persona",
@@ -100784,17 +100311,6 @@
   {
     "id": "wd-Q158052",
     "year": -1440,
-    "title": "Amenofi II",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Amenofi_II"
-  },
-  {
-    "id": "wd-Q158052",
-    "year": -1401,
     "title": "Amenofi II",
     "category": "storia",
     "tipo": "persona",
@@ -101530,17 +101046,6 @@
     "wikipediaSlug": "Tolomeo_XIV"
   },
   {
-    "id": "wd-Q40017",
-    "year": -58,
-    "title": "Tolomeo XIV",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Tolomeo_XIV"
-  },
-  {
     "id": "wd-Q233677",
     "year": -434,
     "title": "Santippe",
@@ -101660,17 +101165,6 @@
     "lng": -5.4539,
     "isCosmic": false,
     "wikipediaSlug": "Pomponio_Mela"
-  },
-  {
-    "id": "wd-Q313327",
-    "year": 182,
-    "title": "Sun Quan",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 30.2667,
-    "lng": 120.15,
-    "isCosmic": false,
-    "wikipediaSlug": "Sun_Quan"
   },
   {
     "id": "wd-Q313327",
@@ -101871,17 +101365,6 @@
     "wikipediaSlug": "Demetrio_I_Poliorcete"
   },
   {
-    "id": "wd-Q59734",
-    "year": -335,
-    "title": "Demetrio I Poliorcete",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Demetrio_I_Poliorcete"
-  },
-  {
     "id": "wd-Q73527",
     "year": -314,
     "title": "Arcesilao",
@@ -101895,17 +101378,6 @@
   {
     "id": "wd-Q315670",
     "year": -51,
-    "title": "Giuba II",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 36.8837,
-    "lng": 7.7551,
-    "isCosmic": false,
-    "wikipediaSlug": "Giuba_II"
-  },
-  {
-    "id": "wd-Q315670",
-    "year": -47,
     "title": "Giuba II",
     "category": "storia",
     "tipo": "persona",
@@ -101935,17 +101407,6 @@
     "lng": 27.92,
     "isCosmic": false,
     "wikipediaSlug": "Panezio_di_Rodi"
-  },
-  {
-    "id": "wd-Q3345",
-    "year": -138,
-    "title": "Tolomeo X",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Tolomeo_X"
   },
   {
     "id": "wd-Q272082",
@@ -102157,30 +101618,8 @@
     "wikipediaSlug": "Prodico"
   },
   {
-    "id": "wd-Q297402",
-    "year": -459,
-    "title": "Prodico",
-    "category": "filosofia",
-    "tipo": "persona",
-    "lat": 37.642,
-    "lng": 24.341,
-    "isCosmic": false,
-    "wikipediaSlug": "Prodico"
-  },
-  {
     "id": "wd-Q332750",
     "year": -430,
-    "title": "Dionisio I di Siracusa",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 37.0692,
-    "lng": 15.2875,
-    "isCosmic": false,
-    "wikipediaSlug": "Dionisio_I_di_Siracusa"
-  },
-  {
-    "id": "wd-Q332750",
-    "year": -429,
     "title": "Dionisio I di Siracusa",
     "category": "storia",
     "tipo": "persona",
@@ -102232,17 +101671,6 @@
     "lng": 5.075,
     "isCosmic": false,
     "wikipediaSlug": "Pompeo_Trogo"
-  },
-  {
-    "id": "wd-Q319219",
-    "year": -100,
-    "title": "Hillel",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 32.5425,
-    "lng": 44.4211,
-    "isCosmic": false,
-    "wikipediaSlug": "Hillel"
   },
   {
     "id": "wd-Q229413",
@@ -102696,17 +102124,6 @@
     "wikipediaSlug": "Torismondo"
   },
   {
-    "id": "wd-Q313079",
-    "year": 420,
-    "title": "Torismondo",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Torismondo"
-  },
-  {
     "id": "wd-Q311731",
     "year": 410,
     "title": "Prisco di Panion",
@@ -103070,17 +102487,6 @@
     "wikipediaSlug": "Simeone_Stilita_il_Vecchio"
   },
   {
-    "id": "wd-Q310987",
-    "year": 390,
-    "title": "Simeone Stilita il Vecchio",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 37.4507,
-    "lng": 35.8123,
-    "isCosmic": false,
-    "wikipediaSlug": "Simeone_Stilita_il_Vecchio"
-  },
-  {
     "id": "wd-Q264903",
     "year": 300,
     "title": "Narsete di Persia",
@@ -103367,17 +102773,6 @@
     "wikipediaSlug": "Nicola_di_Damasco"
   },
   {
-    "id": "wd-Q312682",
-    "year": -436,
-    "title": "Euclide di Megara",
-    "category": "filosofia",
-    "tipo": "persona",
-    "lat": 37.0632,
-    "lng": 14.2582,
-    "isCosmic": false,
-    "wikipediaSlug": "Euclide_di_Megara"
-  },
-  {
     "id": "wd-Q3371",
     "year": -242,
     "title": "Seleuco III",
@@ -103402,17 +102797,6 @@
   {
     "id": "wd-Q231688",
     "year": -114,
-    "title": "Berenice III",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Berenice_III"
-  },
-  {
-    "id": "wd-Q231688",
-    "year": -113,
     "title": "Berenice III",
     "category": "storia",
     "tipo": "persona",
@@ -103475,17 +102859,6 @@
     "lng": 107.3254,
     "isCosmic": false,
     "wikipediaSlug": "Zhang_Qian"
-  },
-  {
-    "id": "wd-Q231688",
-    "year": -119,
-    "title": "Berenice III",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": null,
-    "lng": null,
-    "isCosmic": false,
-    "wikipediaSlug": "Berenice_III"
   },
   {
     "id": "wd-Q317055",
@@ -103589,17 +102962,6 @@
   {
     "id": "wd-Q316483",
     "year": 70,
-    "title": "Floro",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 31.8,
-    "lng": 12.74,
-    "isCosmic": false,
-    "wikipediaSlug": "Floro"
-  },
-  {
-    "id": "wd-Q316483",
-    "year": 74,
     "title": "Floro",
     "category": "storia",
     "tipo": "persona",
@@ -104038,17 +103400,6 @@
     "wikipediaSlug": "Berenice_II"
   },
   {
-    "id": "wd-Q40010",
-    "year": -265,
-    "title": "Berenice II",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 32.823,
-    "lng": 21.8573,
-    "isCosmic": false,
-    "wikipediaSlug": "Berenice_II"
-  },
-  {
     "id": "wd-Q231682",
     "year": -163,
     "title": "Cleopatra Tea",
@@ -104082,17 +103433,6 @@
     "wikipediaSlug": "Cleopatra_IV"
   },
   {
-    "id": "wd-Q40023",
-    "year": -134,
-    "title": "Cleopatra IV",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 31.1975,
-    "lng": 29.8925,
-    "isCosmic": false,
-    "wikipediaSlug": "Cleopatra_IV"
-  },
-  {
     "id": "wd-Q319107",
     "year": -126,
     "title": "Alessandro Ianneo",
@@ -104106,17 +103446,6 @@
   {
     "id": "wd-Q231262",
     "year": 39,
-    "title": "Claudia Ottavia",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 41.8931,
-    "lng": 12.4828,
-    "isCosmic": false,
-    "wikipediaSlug": "Claudia_Ottavia"
-  },
-  {
-    "id": "wd-Q231262",
-    "year": 40,
     "title": "Claudia Ottavia",
     "category": "storia",
     "tipo": "persona",
@@ -104161,17 +103490,6 @@
   {
     "id": "wd-Q313419",
     "year": 27,
-    "title": "Erode Agrippa II",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 41.8931,
-    "lng": 12.4828,
-    "isCosmic": false,
-    "wikipediaSlug": "Erode_Agrippa_II"
-  },
-  {
-    "id": "wd-Q313419",
-    "year": 28,
     "title": "Erode Agrippa II",
     "category": "storia",
     "tipo": "persona",
@@ -104269,17 +103587,6 @@
     "wikipediaSlug": "Macario_il_Grande"
   },
   {
-    "id": "wd-Q43920",
-    "year": 300,
-    "title": "Macario il Grande",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 30.6,
-    "lng": 31.1,
-    "isCosmic": false,
-    "wikipediaSlug": "Macario_il_Grande"
-  },
-  {
     "id": "wd-Q544981",
     "year": 275,
     "title": "Marino diacono",
@@ -104293,17 +103600,6 @@
   {
     "id": "wd-Q80979",
     "year": 451,
-    "title": "Brigida d'Irlanda",
-    "category": "storia",
-    "tipo": "persona",
-    "lat": 54.0488,
-    "lng": -6.3843,
-    "isCosmic": false,
-    "wikipediaSlug": "Brigida_d'Irlanda"
-  },
-  {
-    "id": "wd-Q80979",
-    "year": 453,
     "title": "Brigida d'Irlanda",
     "category": "storia",
     "tipo": "persona",

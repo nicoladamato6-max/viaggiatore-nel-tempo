@@ -589,18 +589,6 @@
     "tipo": "evento"
   },
   {
-    "id": "altamira-pitture",
-    "title": "Altamira — I Bisonti della Preistoria",
-    "year": -22000,
-    "lat": 43.3794,
-    "lng": -4.1162,
-    "category": "arte",
-    "description": "22.000 anni fa nella grotta di Altamira (Cantabria, Spagna) vengono dipinti 19 bisonti a grandezza naturale sul soffitto con il sistema della policromia — più colori combinati per dare tridimensionalità. Scoperta nel 1879 dalla figlia 9enne di Marcelino Sanz de Sautuola, viene inizialmente respinta come falso: gli scienziati non credono che 'i selvaggi preistorici' potessero dipingere così.",
-    "wikipediaSlug": "Cave_of_Altamira",
-    "isCosmic": false,
-    "tipo": "opera"
-  },
-  {
     "id": "barca-navigazione-paleolitica",
     "title": "Le Prime Barche — L'Umanità Naviga",
     "year": -50000,
@@ -789,18 +777,6 @@
     "category": "geologia",
     "description": "5.500 anni fa in Bulgaria (sito di Varna) emerge la prima metallurgia del rame: il cimitero di Varna contiene oltre 3.000 oggetti d'oro — la più antica collezione di oggetti d'oro del mondo. Il rame nativo viene inizialmente lavorato a freddo, poi fuso. L'Età del Rame (Calcolitico) precede il Bronzo: gli oggetti in metallo sono rari e di alto status.",
     "wikipediaSlug": "Chalcolithic",
-    "isCosmic": false,
-    "tipo": "evento"
-  },
-  {
-    "id": "jericho-prima-citta",
-    "title": "Gerico — La Più Antica Città del Mondo",
-    "year": -9000,
-    "lat": 31.8611,
-    "lng": 35.4556,
-    "category": "geologia",
-    "description": "9.000 anni prima di Cristo Gerico (Palestina) è già un insediamento permanente con torri difensive in pietra (la Torre di Gerico, 8 m di altezza) — costruzione monumentale tra le più antiche al mondo. L'oasi della Valle del Giordano permette l'agricoltura. In continua occupazione per 11.000 anni, Gerico è considerata la città abitata ininterrottamente più antica del mondo.",
-    "wikipediaSlug": "Jericho",
     "isCosmic": false,
     "tipo": "evento"
   },

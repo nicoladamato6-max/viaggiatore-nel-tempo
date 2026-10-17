@@ -1646,18 +1646,6 @@
     "tipo": "movimento"
   },
   {
-    "id": "gesù-crocifissione",
-    "title": "Crocifissione di Gesù di Nazareth",
-    "year": 30,
-    "lat": 31.7683,
-    "lng": 35.2137,
-    "category": "filosofia",
-    "description": "Intorno al 30 d.C. Gesù di Nazareth viene crocifisso a Gerusalemme per ordine del governatore Ponzio Pilato. Questo evento — storicamente documentato da Tacito e Flavio Giuseppe — diventa il fulcro della fede cristiana. Il movimento dei suoi seguaci, inizialmente perseguitato, diventa la religione più diffusa al mondo.",
-    "wikipediaSlug": "Crucifixion_of_Jesus",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
     "id": "paolo-di-tarso",
     "title": "San Paolo — L'Apostolo dei Gentili",
     "year": 50,
@@ -1678,18 +1666,6 @@
     "category": "storia",
     "description": "Traiano (98-117 d.C.) è il primo imperatore romano nato in provincia (Spagna) e il primo di origine non italica. Porta l'Impero alla sua massima estensione territoriale con le conquiste di Dacia (Romania) e Mesopotamia. I Mercati di Traiano e la Colonna Traiana a Roma celebrano le sue vittorie. I successori lo chiamano 'optimum principem'.",
     "wikipediaSlug": "Trajan",
-    "isCosmic": false,
-    "tipo": "persona"
-  },
-  {
-    "id": "adriano-muro",
-    "title": "Adriano — Il Muro e i Viaggi dell'Imperatore",
-    "year": 122,
-    "lat": 55,
-    "lng": -2,
-    "category": "storia",
-    "description": "L'imperatore Adriano (117-138 d.C.) fa costruire nel 122 il Vallo di Adriano in Gran Bretagna — 117 km da mare a mare — per difendere il confine settentrionale dai Pitti. Viaggiatore instancabile, visita tutte le province dell'Impero. Amante della cultura greca, ricostruisce Atene e il Pantheon di Roma.",
-    "wikipediaSlug": "Hadrian",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2112,18 +2088,6 @@
     "wikipediaSlug": "Praxiteles",
     "isCosmic": false,
     "tipo": "opera"
-  },
-  {
-    "id": "erodoto-storie",
-    "title": "Erodoto — Il Padre della Storiografia",
-    "year": -440,
-    "lat": 37.0384,
-    "lng": 27.4241,
-    "category": "storia",
-    "description": "Erodoto di Alicarnasso (484-425 a.C.) viaggia in Egitto, Persia, Babilonia, Libia raccogliendo testimonianze orali che confluiscono nelle Storie: il primo resoconto storico della tradizione occidentale. Descrive le Guerre Persiane ma anche le usanze dei popoli visitati. Cicerone lo chiama 'padre della storia'. Tucidide lo critica per la credulità.",
-    "wikipediaSlug": "Herodotus",
-    "isCosmic": false,
-    "tipo": "persona"
   },
   {
     "id": "pindaro-odi",
@@ -10680,34 +10644,10 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q31966",
-    "title": "Marco",
-    "description": "evangelista, discepolo dell'apostolo Paolo",
-    "year": 12,
-    "lat": 31.6253,
-    "lng": 35.1453,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Marco_(evangelista)",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q10133",
     "title": "Gaio Svetonio Tranquillo",
     "description": "scrittore romano d'età imperiale",
     "year": 69,
-    "lat": null,
-    "lng": null,
-    "category": "arte",
-    "tipo": "persona",
-    "wikipediaSlug": "Gaio_Svetonio_Tranquillo",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q10133",
-    "title": "Gaio Svetonio Tranquillo",
-    "description": "scrittore romano d'età imperiale",
-    "year": 70,
     "lat": null,
     "lng": null,
     "category": "arte",
@@ -10732,18 +10672,6 @@
     "title": "papa Leone I",
     "description": "45° vescovo di Roma e papa della Chiesa cattolica dal 440 al 461",
     "year": 390,
-    "lat": 43.45,
-    "lng": 11.2,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Papa_Leone_I",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q43954",
-    "title": "papa Leone I",
-    "description": "45° vescovo di Roma e papa della Chiesa cattolica dal 440 al 461",
-    "year": 400,
     "lat": 43.45,
     "lng": 11.2,
     "category": "storia",
@@ -10920,18 +10848,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q179785",
-    "title": "Gorgia",
-    "description": "filosofo greco antico",
-    "year": -482,
-    "lat": 37.2833,
-    "lng": 15,
-    "category": "filosofia",
-    "tipo": "persona",
-    "wikipediaSlug": "Gorgia",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q171241",
     "title": "Diodoro Siculo",
     "description": "storico siceliota",
@@ -10948,18 +10864,6 @@
     "title": "Gregorio Nazianzeno",
     "description": "vescovo, teologo e santo greco antico",
     "year": 329,
-    "lat": 38.3944,
-    "lng": 34.3814,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Gregorio_Nazianzeno",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q44011",
-    "title": "Gregorio Nazianzeno",
-    "description": "vescovo, teologo e santo greco antico",
-    "year": 330,
     "lat": 38.3944,
     "lng": 34.3814,
     "category": "storia",
@@ -11049,18 +10953,6 @@
     "category": "storia",
     "tipo": "persona",
     "wikipediaSlug": "Candragupta_Maurya",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q1417",
-    "title": "Vitellio",
-    "description": "ottavo imperatore romano (r. 69)",
-    "year": 15,
-    "lat": 40.7431,
-    "lng": 14.6739,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Vitellio",
     "isCosmic": false
   },
   {
@@ -11244,18 +11136,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q133704",
-    "title": "Martino di Tours",
-    "description": "vescovo francese",
-    "year": 316,
-    "lat": 47.2319,
-    "lng": 16.62,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Martino_di_Tours",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q179552",
     "title": "Temistocle",
     "description": "politico e militare ateniese",
@@ -11301,18 +11181,6 @@
     "category": "scienza",
     "tipo": "persona",
     "wikipediaSlug": "Diofanto_di_Alessandria",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q102371",
-    "title": "Alarico I",
-    "description": "sovrano visigoto",
-    "year": 370,
-    "lat": 45.0667,
-    "lng": 28.75,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Alarico_I",
     "isCosmic": false
   },
   {
@@ -11500,18 +11368,6 @@
     "title": "Macrino",
     "description": "ventiduesimo imperatore romano (r. 217-218)",
     "year": 164,
-    "lat": 36.6075,
-    "lng": 2.19,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Macrino",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q1752",
-    "title": "Macrino",
-    "description": "ventiduesimo imperatore romano (r. 217-218)",
-    "year": 165,
     "lat": 36.6075,
     "lng": 2.19,
     "category": "storia",
@@ -11868,18 +11724,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q46418",
-    "title": "Costanzo II",
-    "description": "imperatore romano (r. 337-361)",
-    "year": 317,
-    "lat": 44.9661,
-    "lng": 19.6106,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Costanzo_II",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q103333",
     "title": "Odoacre",
     "description": "principe germanico",
@@ -12072,34 +11916,10 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q229235",
-    "title": "Cai Lun",
-    "description": "inventore cinese",
-    "year": 50,
-    "lat": 26.4179,
-    "lng": 112.8457,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Cai_Lun",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q46750",
     "title": "Valeriano",
     "description": "imperatore romano (r. 253-260)",
     "year": 199,
-    "lat": 41.9,
-    "lng": 12.5,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Valeriano",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q46750",
-    "title": "Valeriano",
-    "description": "imperatore romano (r. 253-260)",
-    "year": 200,
     "lat": 41.9,
     "lng": 12.5,
     "category": "storia",
@@ -12196,18 +12016,6 @@
     "title": "Gaio Mario",
     "description": "politico e militare romano",
     "year": -157,
-    "lat": 41.6471,
-    "lng": 13.6116,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Gaio_Mario",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q177975",
-    "title": "Gaio Mario",
-    "description": "politico e militare romano",
-    "year": -156,
     "lat": 41.6471,
     "lng": 13.6116,
     "category": "storia",
@@ -12352,18 +12160,6 @@
     "title": "Caterina d'Alessandria",
     "description": "martire e santa cristiana",
     "year": 282,
-    "lat": 31.1975,
-    "lng": 29.8925,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Caterina_d'Alessandria",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q179718",
-    "title": "Caterina d'Alessandria",
-    "description": "martire e santa cristiana",
-    "year": 287,
     "lat": 31.1975,
     "lng": 29.8925,
     "category": "storia",
@@ -12636,34 +12432,10 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q185126",
-    "title": "Mitridate VI del Ponto",
-    "description": "re del Ponto (r. 111-63 a.C.)",
-    "year": -131,
-    "lat": 42.0267,
-    "lng": 35.1511,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Mitridate_VI_del_Ponto",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q46768",
     "title": "Massimiano",
     "description": "imperatore romano, cesare (r. 285-286) e poi augusto (r. 286-305) d'Occidente",
     "year": 240,
-    "lat": 44.9661,
-    "lng": 19.6106,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Massimiano",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q46768",
-    "title": "Massimiano",
-    "description": "imperatore romano, cesare (r. 285-286) e poi augusto (r. 286-305) d'Occidente",
-    "year": 250,
     "lat": 44.9661,
     "lng": 19.6106,
     "category": "storia",
@@ -12756,34 +12528,10 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q192931",
-    "title": "Pausania il Periegeta",
-    "description": "scrittore e geografo greco antico",
-    "year": 115,
-    "lat": 38.4,
-    "lng": 28.3,
-    "category": "scienza",
-    "tipo": "persona",
-    "wikipediaSlug": "Pausania_il_Periegeta",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q1797",
     "title": "Pupieno",
     "description": "imperatore romano (r. 238)",
     "year": 170,
-    "lat": 41.8931,
-    "lng": 12.4828,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Pupieno",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q1797",
-    "title": "Pupieno",
-    "description": "imperatore romano (r. 238)",
-    "year": 178,
     "lat": 41.8931,
     "lng": 12.4828,
     "category": "storia",
@@ -12808,18 +12556,6 @@
     "title": "Arriano",
     "description": "storico e politico greco antico",
     "year": 89,
-    "lat": 40.7625,
-    "lng": 29.9175,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Arriano",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q31845",
-    "title": "Arriano",
-    "description": "storico e politico greco antico",
-    "year": 95,
     "lat": 40.7625,
     "lng": 29.9175,
     "category": "storia",
@@ -12892,18 +12628,6 @@
     "title": "Apollonio Rodio",
     "description": "poeta greco antico",
     "year": -294,
-    "lat": 31.1975,
-    "lng": 29.8925,
-    "category": "arte",
-    "tipo": "persona",
-    "wikipediaSlug": "Apollonio_Rodio",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q192638",
-    "title": "Apollonio Rodio",
-    "description": "poeta greco antico",
-    "year": -289,
     "lat": 31.1975,
     "lng": 29.8925,
     "category": "arte",
@@ -13140,18 +12864,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q192371",
-    "title": "Policarpo di Smirne",
-    "description": "vescovo, teologo e santo greco antico",
-    "year": 70,
-    "lat": 38.4127,
-    "lng": 27.1384,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Policarpo_di_Smirne",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q189705",
     "title": "Zenobia",
     "description": "regina di Palmira, usurpatrice dell'Impero romano",
@@ -13272,34 +12984,10 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q234860",
-    "title": "Sapore II",
-    "description": "imperatore sasanide (r. 309-379)",
-    "year": 310,
-    "lat": 28.8436,
-    "lng": 52.5706,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Sapore_II",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q207634",
     "title": "Clistene",
     "description": "politico e legislatore ateniese",
     "year": -569,
-    "lat": 37.9722,
-    "lng": 23.7222,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Clistene",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q207634",
-    "title": "Clistene",
-    "description": "politico e legislatore ateniese",
-    "year": -564,
     "lat": 37.9722,
     "lng": 23.7222,
     "category": "storia",
@@ -13488,18 +13176,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q187004",
-    "title": "Marco Aurelio Caro",
-    "description": "imperatore romano (r. 282-283)",
-    "year": 224,
-    "lat": 43.1847,
-    "lng": 3.0036,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Marco_Aurelio_Caro",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q183776",
     "title": "Leone I il Trace",
     "description": "imperatore romano d'Oriente (r. 457-474)",
@@ -13620,34 +13296,10 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q188472",
-    "title": "Artaserse II di Persia",
-    "description": "gran re dell'Impero achemenide (r. 404-358 a.C.)",
-    "year": -451,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Artaserse_II_di_Persia",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q190055",
     "title": "Rossane",
     "description": "principessa battriana, moglie di Alessandro Magno",
     "year": -346,
-    "lat": 36.7581,
-    "lng": 66.8989,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Rossane",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q190055",
-    "title": "Rossane",
-    "description": "principessa battriana, moglie di Alessandro Magno",
-    "year": -344,
     "lat": 36.7581,
     "lng": 66.8989,
     "category": "storia",
@@ -13708,18 +13360,6 @@
     "title": "Costante I",
     "description": "imperatore romano (r. 337-350)",
     "year": 320,
-    "lat": 42.5,
-    "lng": 12.5,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Costante_I",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q185538",
-    "title": "Costante I",
-    "description": "imperatore romano (r. 337-350)",
-    "year": 323,
     "lat": 42.5,
     "lng": 12.5,
     "category": "storia",
@@ -13881,18 +13521,6 @@
     "category": "storia",
     "tipo": "persona",
     "wikipediaSlug": "Publio_Vegezio_Renato",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q46837",
-    "title": "Ostiliano",
-    "description": "co-imperatore romano (r. 251)",
-    "year": 230,
-    "lat": 44.97,
-    "lng": 19.6125,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Ostiliano",
     "isCosmic": false
   },
   {
@@ -14172,18 +13800,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q207847",
-    "title": "Alessandro IV di Macedonia",
-    "description": "sovrano dell'impero ellenistico",
-    "year": -322,
-    "lat": 32.5425,
-    "lng": 44.4211,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Alessandro_IV_di_Macedonia",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q315526",
     "title": "Bindusara",
     "description": "re di Magadha",
@@ -14205,18 +13821,6 @@
     "category": "storia",
     "tipo": "persona",
     "wikipediaSlug": "Servio_Tullio",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q39595",
-    "title": "Tolomeo IV",
-    "description": "sovrano del Regno tolemaico d'Egitto (r. 222-204 a.C.)",
-    "year": -243,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Tolomeo_IV",
     "isCosmic": false
   },
   {
@@ -14356,18 +13960,6 @@
     "title": "Tolomeo XIII",
     "description": "sovrano egizio",
     "year": -61,
-    "lat": 27,
-    "lng": 29,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Tolomeo_XIII",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q39938",
-    "title": "Tolomeo XIII",
-    "description": "sovrano egizio",
-    "year": -60,
     "lat": 27,
     "lng": 29,
     "category": "storia",
@@ -14520,18 +14112,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q211488",
-    "title": "Antioco I",
-    "description": "sovrano dell'Impero seleucide (r. 281-261 a.C.)",
-    "year": -322,
-    "lat": 40.478,
-    "lng": 22.3228,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Antioco_I",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q146029",
     "title": "Ay",
     "description": "faraone egizio",
@@ -14560,18 +14140,6 @@
     "title": "Livia Drusilla",
     "description": "imperatrice romana, moglie di Augusto e madre di Tiberio",
     "year": -58,
-    "lat": 41.8931,
-    "lng": 12.4828,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Livia_Drusilla",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q469701",
-    "title": "Livia Drusilla",
-    "description": "imperatrice romana, moglie di Augusto e madre di Tiberio",
-    "year": -57,
     "lat": 41.8931,
     "lng": 12.4828,
     "category": "storia",
@@ -14808,18 +14376,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q32133",
-    "title": "Lisimaco",
-    "description": "re di Macedonia (r. 288-281 a.C.)",
-    "year": -354,
-    "lat": 40.76,
-    "lng": 22.5256,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Lisimaco",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q40252",
     "title": "Cleopatra I",
     "description": "regina egizia",
@@ -15024,30 +14580,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q39952",
-    "title": "Tolomeo VI",
-    "description": "sovrano del Regno tolemaico d'Egitto (r. 180-170, 163-145 a.C.)",
-    "year": -185,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Tolomeo_VI",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q39952",
-    "title": "Tolomeo VI",
-    "description": "sovrano del Regno tolemaico d'Egitto (r. 180-170, 163-145 a.C.)",
-    "year": -183,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Tolomeo_VI",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q45053",
     "title": "Gioele",
     "description": "profeta biblico",
@@ -15108,18 +14640,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q110884",
-    "title": "Alarico II",
-    "description": "sovrano visigoto",
-    "year": 466,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Alarico_II",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q151817",
     "title": "Hotepsekhemwy",
     "description": "faraone egizio",
@@ -15160,18 +14680,6 @@
     "title": "Pisistrato",
     "description": "politico e militare ateniese, tiranno di Atene",
     "year": -599,
-    "lat": 37.9842,
-    "lng": 23.7281,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Pisistrato",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q242172",
-    "title": "Pisistrato",
-    "description": "politico e militare ateniese, tiranno di Atene",
-    "year": -550,
     "lat": 37.9842,
     "lng": 23.7281,
     "category": "storia",
@@ -15232,18 +14740,6 @@
     "title": "Amenofi II",
     "description": "faraone egizio",
     "year": -1440,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Amenofi_II",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q158052",
-    "title": "Amenofi II",
-    "description": "faraone egizio",
-    "year": -1401,
     "lat": null,
     "lng": null,
     "category": "storia",
@@ -16044,18 +15540,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q40017",
-    "title": "Tolomeo XIV",
-    "description": "sovrano egizio",
-    "year": -58,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Tolomeo_XIV",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q233677",
     "title": "Santippe",
     "description": "donna ateniese, moglie di Socrate",
@@ -16185,18 +15669,6 @@
     "category": "scienza",
     "tipo": "persona",
     "wikipediaSlug": "Pomponio_Mela",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q313327",
-    "title": "Sun Quan",
-    "description": "imperatore cinese",
-    "year": 182,
-    "lat": 30.2667,
-    "lng": 120.15,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Sun_Quan",
     "isCosmic": false
   },
   {
@@ -16416,18 +15888,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q59734",
-    "title": "Demetrio I Poliorcete",
-    "description": "re di Macedonia (r. 294-283 a.C.)",
-    "year": -335,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Demetrio_I_Poliorcete",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q73527",
     "title": "Arcesilao",
     "description": "filosofo greco antico",
@@ -16444,18 +15904,6 @@
     "title": "Giuba II",
     "description": "re di Numidia (r. 30-25 a.C.) e Mauretania (25 a.C. - 23 d.C.)",
     "year": -51,
-    "lat": 36.8837,
-    "lng": 7.7551,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Giuba_II",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q315670",
-    "title": "Giuba II",
-    "description": "re di Numidia (r. 30-25 a.C.) e Mauretania (25 a.C. - 23 d.C.)",
-    "year": -47,
     "lat": 36.8837,
     "lng": 7.7551,
     "category": "storia",
@@ -16485,18 +15933,6 @@
     "category": "filosofia",
     "tipo": "persona",
     "wikipediaSlug": "Panezio_di_Rodi",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q3345",
-    "title": "Tolomeo X",
-    "description": "sovrano dell'Egitto tolemaico",
-    "year": -138,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Tolomeo_X",
     "isCosmic": false
   },
   {
@@ -16728,34 +16164,10 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q297402",
-    "title": "Prodico",
-    "description": "filosofo e retore greco antico",
-    "year": -459,
-    "lat": 37.642,
-    "lng": 24.341,
-    "category": "filosofia",
-    "tipo": "persona",
-    "wikipediaSlug": "Prodico",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q332750",
     "title": "Dionisio I di Siracusa",
     "description": "tiranno di Siracusa",
     "year": -430,
-    "lat": 37.0692,
-    "lng": 15.2875,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Dionisio_I_di_Siracusa",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q332750",
-    "title": "Dionisio I di Siracusa",
-    "description": "tiranno di Siracusa",
-    "year": -429,
     "lat": 37.0692,
     "lng": 15.2875,
     "category": "storia",
@@ -16809,18 +16221,6 @@
     "category": "arte",
     "tipo": "persona",
     "wikipediaSlug": "Pompeo_Trogo",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q319219",
-    "title": "Hillel",
-    "description": "rabbino",
-    "year": -100,
-    "lat": 32.5425,
-    "lng": 44.4211,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Hillel",
     "isCosmic": false
   },
   {
@@ -17316,18 +16716,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q313079",
-    "title": "Torismondo",
-    "description": "sovrano visigoto",
-    "year": 420,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Torismondo",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q311731",
     "title": "Prisco di Panion",
     "description": "storico bizantino",
@@ -17724,18 +17112,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q310987",
-    "title": "Simeone Stilita il Vecchio",
-    "description": "monaco siro",
-    "year": 390,
-    "lat": 37.4507,
-    "lng": 35.8123,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Simeone_Stilita_il_Vecchio",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q264903",
     "title": "Narsete di Persia",
     "description": "imperatore sasanide (r. 293-303)",
@@ -18048,18 +17424,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q312682",
-    "title": "Euclide di Megara",
-    "description": "filosofo socratico greco antico",
-    "year": -436,
-    "lat": 37.0632,
-    "lng": 14.2582,
-    "category": "filosofia",
-    "tipo": "persona",
-    "wikipediaSlug": "Euclide_di_Megara",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q3371",
     "title": "Seleuco III",
     "description": "sovrano dell'Impero seleucide (r. 226-223 a.C.)",
@@ -18088,18 +17452,6 @@
     "title": "Berenice III",
     "description": "regina dell'Egitto tolemaico",
     "year": -114,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Berenice_III",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q231688",
-    "title": "Berenice III",
-    "description": "regina dell'Egitto tolemaico",
-    "year": -113,
     "lat": null,
     "lng": null,
     "category": "storia",
@@ -18165,18 +17517,6 @@
     "category": "storia",
     "tipo": "persona",
     "wikipediaSlug": "Zhang_Qian",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q231688",
-    "title": "Berenice III",
-    "description": "regina dell'Egitto tolemaico",
-    "year": -119,
-    "lat": null,
-    "lng": null,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Berenice_III",
     "isCosmic": false
   },
   {
@@ -18292,18 +17632,6 @@
     "title": "Floro",
     "description": "autore romano",
     "year": 70,
-    "lat": 31.8,
-    "lng": 12.74,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Floro",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q316483",
-    "title": "Floro",
-    "description": "autore romano",
-    "year": 74,
     "lat": 31.8,
     "lng": 12.74,
     "category": "storia",
@@ -18780,18 +18108,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q40010",
-    "title": "Berenice II",
-    "description": "regina egiziana",
-    "year": -265,
-    "lat": 32.823,
-    "lng": 21.8573,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Berenice_II",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q231682",
     "title": "Cleopatra Tea",
     "description": "sovrana egizia",
@@ -18828,18 +18144,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q40023",
-    "title": "Cleopatra IV",
-    "description": "regina egizia appartenente al periodo tolemaico",
-    "year": -134,
-    "lat": 31.1975,
-    "lng": 29.8925,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Cleopatra_IV",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q319107",
     "title": "Alessandro Ianneo",
     "description": "re di Giudea e sommo sacerdote",
@@ -18856,18 +18160,6 @@
     "title": "Claudia Ottavia",
     "description": "nobildonna romana, figlia di Claudio e Messalina, prima moglie di Nerone",
     "year": 39,
-    "lat": 41.8931,
-    "lng": 12.4828,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Claudia_Ottavia",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q231262",
-    "title": "Claudia Ottavia",
-    "description": "nobildonna romana, figlia di Claudio e Messalina, prima moglie di Nerone",
-    "year": 40,
     "lat": 41.8931,
     "lng": 12.4828,
     "category": "storia",
@@ -18916,18 +18208,6 @@
     "title": "Erode Agrippa II",
     "description": "sovrano giudeo (r. 50-93)",
     "year": 27,
-    "lat": 41.8931,
-    "lng": 12.4828,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Erode_Agrippa_II",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q313419",
-    "title": "Erode Agrippa II",
-    "description": "sovrano giudeo (r. 50-93)",
-    "year": 28,
     "lat": 41.8931,
     "lng": 12.4828,
     "category": "storia",
@@ -19032,18 +18312,6 @@
     "isCosmic": false
   },
   {
-    "id": "wd-Q43920",
-    "title": "Macario il Grande",
-    "description": "monaco e santo egiziano",
-    "year": 300,
-    "lat": 30.6,
-    "lng": 31.1,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Macario_il_Grande",
-    "isCosmic": false
-  },
-  {
     "id": "wd-Q544981",
     "title": "Marino diacono",
     "description": "santo cristiano",
@@ -19060,18 +18328,6 @@
     "title": "Brigida d'Irlanda",
     "description": "religiosa, badessa e santa irlandese",
     "year": 451,
-    "lat": 54.0488,
-    "lng": -6.3843,
-    "category": "storia",
-    "tipo": "persona",
-    "wikipediaSlug": "Brigida_d'Irlanda",
-    "isCosmic": false
-  },
-  {
-    "id": "wd-Q80979",
-    "title": "Brigida d'Irlanda",
-    "description": "religiosa, badessa e santa irlandese",
-    "year": 453,
     "lat": 54.0488,
     "lng": -6.3843,
     "category": "storia",

@@ -570,6 +570,7 @@ function AppInner() {
         >
           <GlobeView
             events={visibleEvents}
+            selectedEventId={selectedEvent?.id ?? null}
             isCosmicView={isCosmicView}
             flyTo={flyTo}
             wikiMarker={wikiMarker}
