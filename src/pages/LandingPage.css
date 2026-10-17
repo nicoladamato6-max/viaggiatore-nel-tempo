@@ -330,6 +330,84 @@
   color: var(--lp-text);
 }
 
+/* ── Scroll offset per navbar sticky ── */
+#features, #how {
+  scroll-margin-top: 72px;
+}
+
+/* ── Feature card hero (Macchina del Tempo) ── */
+.lp-feature-card--hero {
+  grid-column: 1 / -1;
+  padding: 40px 36px;
+  background: linear-gradient(135deg, rgba(0,200,255,0.08) 0%, rgba(10,22,40,0.9) 60%);
+  border-color: rgba(0,200,255,0.35);
+  margin-bottom: 8px;
+}
+.lp-feature-card-hero-inner {
+  display: flex;
+  gap: 48px;
+  align-items: center;
+}
+.lp-feature-hero-left { flex: 1; }
+.lp-feature-hero-right { flex-shrink: 0; }
+
+.lp-feature-icon--big { font-size: 3rem; margin-bottom: 20px; }
+.lp-feature-title--big { font-size: 1.4rem; margin-bottom: 14px; }
+
+.lp-timemachine-preview {
+  width: 260px;
+  background: rgba(0,10,24,0.8);
+  border: 1px solid rgba(0,200,255,0.4);
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+}
+.lp-tm-badge {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--lp-cyan);
+  margin-bottom: 16px;
+  padding: 4px 12px;
+  border: 1px solid var(--lp-border);
+  border-radius: 20px;
+  display: inline-block;
+  background: var(--lp-cyan-dim);
+}
+.lp-tm-year {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--lp-text);
+  margin-bottom: 6px;
+}
+.lp-tm-era {
+  font-size: 0.8rem;
+  color: var(--lp-text-dim);
+  margin-bottom: 20px;
+}
+.lp-tm-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.lp-tm-dots span {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--lp-cyan);
+  opacity: 0.4;
+  animation: tm-pulse 1.5s ease-in-out infinite;
+}
+.lp-tm-dots span:nth-child(2) { animation-delay: 0.3s; }
+.lp-tm-dots span:nth-child(3) { animation-delay: 0.6s; }
+@keyframes tm-pulse {
+  0%, 100% { opacity: 0.2; transform: scale(0.85); }
+  50%       { opacity: 1;   transform: scale(1.1); }
+}
+
+@media (max-width: 900px) {
+  .lp-feature-card-hero-inner { flex-direction: column; }
+  .lp-timemachine-preview { width: 100%; }
+}
+
 /* ── Feature grid ── */
 .lp-features-grid {
   display: grid;

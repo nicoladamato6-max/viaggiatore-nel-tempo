@@ -3,13 +3,14 @@ import { useAuth } from '../hooks/useAuth';
 import { type Locale } from '../types';
 
 interface Props {
-  onClose: () => void;
-  locale:  Locale;
+  onClose:        () => void;
+  locale:         Locale;
+  onLoginSuccess?: () => void;
 }
 
 type Tab = 'login' | 'register' | 'reset';
 
-export function AuthModal({ onClose, locale }: Props) {
+export function AuthModal({ onClose, locale, onLoginSuccess }: Props) {
   const { login, register, resetPassword, loading } = useAuth();
   const [tab,          setTab]         = useState<Tab>('login');
   const [email,        setEmail]       = useState('');
@@ -49,7 +50,7 @@ export function AuthModal({ onClose, locale }: Props) {
       if (err) { setError(err); return; }
       setDone(true);
       setDoneMsg(it ? '⚡ Accesso confermato' : '⚡ Access granted');
-      setTimeout(onClose, 900);
+      setTimeout(() => { onClose(); onLoginSuccess?.(); }, 900);
       return;
     }
 

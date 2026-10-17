@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, useInView, type Variants } from 'framer-motion';
+import { AuthModal } from '../components/AuthModal';
 import './LandingPage.css';
 
 // ── Stelle animate via canvas ─────────────────────────────────────────────────
@@ -100,7 +101,33 @@ function Step({ n, title, desc }: { n: number; title: string; desc: string }) {
 // ── Main ──────────────────────────────────────────────────────────────────────
 export function LandingPage() {
   const navigate  = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [authOpen, setAuthOpen] = useState(searchParams.get('login') === 'true');
   const [tick, setTick] = useState(0);
+
+  // Sblocca scroll per la landing page (index.css ha height:100% che blocca)
+  useEffect(() => {
+    const html = document.documentElement;
+    const body = document.body;
+    const prev = { htmlH: html.style.height, bodyH: body.style.height, bodyOv: body.style.overflowY };
+    html.style.height = 'auto';
+    body.style.height = 'auto';
+    body.style.overflowY = 'auto';
+    return () => {
+      html.style.height = prev.htmlH;
+      body.style.height = prev.bodyH;
+      body.style.overflowY = prev.bodyOv;
+    };
+  }, []);
+
+  function openAuth() {
+    setSearchParams({ login: 'true' });
+    setAuthOpen(true);
+  }
+  function closeAuth() {
+    setSearchParams({});
+    setAuthOpen(false);
+  }
 
   // Titolo animato lettera per lettera
   const words = ['Esplora', 'la', 'Storia', 'del', 'Mondo'];
@@ -121,10 +148,10 @@ export function LandingPage() {
           <span className="lp-nav-dot">◉</span> Viaggiatore nel Tempo
         </div>
         <div className="lp-nav-links">
-          <a href="#features" className="lp-nav-link">Feature</a>
-          <a href="#how"      className="lp-nav-link">Come funziona</a>
-          <button className="lp-nav-btn" onClick={() => navigate('/app')}>
-            Esplora →
+          <a href="#features" className="lp-nav-link" onClick={e => { e.preventDefault(); document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' }); }}>Feature</a>
+          <a href="#how"      className="lp-nav-link" onClick={e => { e.preventDefault(); document.getElementById('how')?.scrollIntoView({ behavior: 'smooth' }); }}>Come funziona</a>
+          <button className="lp-nav-btn" onClick={openAuth}>
+            Accedi →
           </button>
         </div>
       </nav>
@@ -167,10 +194,10 @@ export function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.6, duration: 0.7 }}
           >
-            <button className="lp-btn-primary" onClick={() => navigate('/app')}>
+            <button className="lp-btn-primary" onClick={openAuth}>
               ⚡ Inizia il viaggio
             </button>
-            <a href="#features" className="lp-btn-ghost">Scopri di più ↓</a>
+            <a href="#features" className="lp-btn-ghost" onClick={e => { e.preventDefault(); document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' }); }}>Scopri di più ↓</a>
           </motion.div>
         </motion.div>
 
@@ -209,6 +236,33 @@ export function LandingPage() {
           <motion.div variants={fadeUp} className="lp-section-header">
             <div className="lp-section-tag">FUNZIONALITÀ</div>
             <h2 className="lp-section-title">Tutto quello che ti serve per<br />esplorare la storia</h2>
+          </motion.div>
+
+          {/* Card hero: Macchina del Tempo */}
+          <motion.div variants={fadeUp} className="lp-feature-card lp-feature-card--hero">
+            <div className="lp-feature-card-hero-inner">
+              <div className="lp-feature-hero-left">
+                <div className="lp-feature-icon lp-feature-icon--big">⚡</div>
+                <h3 className="lp-feature-title lp-feature-title--big">Macchina del Tempo</h3>
+                <p className="lp-feature-desc">
+                  Scegli un'epoca e viaggia: la Macchina del Tempo ti porta direttamente tra gli eventi
+                  più significativi di quel periodo, con una narrazione immersiva che contestualizza
+                  battaglie, scoperte e civiltà. Il tuo portale personale nel passato.
+                </p>
+              </div>
+              <div className="lp-feature-hero-right">
+                <div className="lp-timemachine-preview">
+                  <div className="lp-tm-badge">⚡ MACCHINA DEL TEMPO</div>
+                  <div className="lp-tm-year">−753 a.C.</div>
+                  <div className="lp-tm-era">Età Antica · Roma Arcaica</div>
+                  <div className="lp-tm-dots">
+                    <span/>
+                    <span/>
+                    <span/>
+                  </div>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           <div className="lp-features-grid">
@@ -256,15 +310,17 @@ export function LandingPage() {
             Il passato ti aspetta.
           </motion.h2>
           <motion.p variants={fadeUp} className="lp-cta-sub">
-            Gratuito, senza registrazione. Accedi per salvare le tue esplorazioni.
+            Registrazione gratuita. Accedi e inizia il tuo viaggio attraverso la storia.
           </motion.p>
           <motion.div variants={fadeUp} className="lp-hero-cta">
-            <button className="lp-btn-primary lp-btn-primary--large" onClick={() => navigate('/app')}>
-              ⚡ Esplora il Viaggiatore nel Tempo
+            <button className="lp-btn-primary lp-btn-primary--large" onClick={openAuth}>
+              ⚡ Registrati gratis
             </button>
           </motion.div>
         </FadeSection>
       </section>
+
+      {authOpen && <AuthModal locale="it" onClose={closeAuth} onLoginSuccess={() => { closeAuth(); navigate('/app'); }} />}
 
       {/* ── Footer ── */}
       <footer className="lp-footer">

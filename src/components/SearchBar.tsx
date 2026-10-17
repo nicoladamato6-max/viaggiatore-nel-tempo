@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
 import { type HistoricalEvent, type WikiSearchResult } from '../types';
 import { type Period } from '../data/historicalPeriods';
+import { supabase } from '../lib/supabase';
 
 declare global {
   interface Window {
@@ -165,7 +166,16 @@ export function SearchBar({ events, onSelect, onWikiSelect, onEpochSelect, epoch
     return () => document.removeEventListener('mousedown', handleClick);
   }, []);
 
+  async function logSearch(q: string, resultId: string | null, resultType: string) {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return;
+    supabase.from('search_logs').insert({
+      user_id: user.id, query: q, result_id: resultId, result_type: resultType,
+    }).then(() => {});
+  }
+
   function handleSelectLocal(event: HistoricalEvent) {
+    logSearch(query || event.title, event.id, 'static');
     onSelect(event);
     setQuery('');
     setOpen(false);
@@ -173,6 +183,7 @@ export function SearchBar({ events, onSelect, onWikiSelect, onEpochSelect, epoch
   }
 
   function handleSelectWiki(result: WikiSearchResult) {
+    logSearch(query || result.title, String(result.pageid), 'wiki');
     onWikiSelect(result);
     setQuery('');
     setOpen(false);

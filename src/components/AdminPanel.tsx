@@ -25,6 +25,11 @@ interface UserStats {
   newToday:   number;
 }
 
+interface SearchStats {
+  total30d:  number;
+  topQuery:  string | null;
+}
+
 const CAT_ICONS: Record<string, string> = {
   storia: '⚔️', arte: '🎨', scienza: '🔬',
   musica: '🎵', geologia: '🌋', cosmo: '🌌',
@@ -40,10 +45,11 @@ const CAT_EN: Record<string, string> = {
 
 export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, staticBreakdown, onEventsRefreshed }: Props) {
   const { token, user } = useAuth();
-  const [status,    setStatus]    = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [msg,       setMsg]       = useState('');
-  const [apiInfo,   setApiInfo]   = useState<ApiStatus | null>(null);
-  const [userStats, setUserStats] = useState<UserStats | null>(null);
+  const [status,      setStatus]      = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [msg,         setMsg]         = useState('');
+  const [apiInfo,     setApiInfo]     = useState<ApiStatus | null>(null);
+  const [userStats,   setUserStats]   = useState<UserStats | null>(null);
+  const [searchStats, setSearchStats] = useState<SearchStats | null>(null);
 
   const it = locale === 'it';
   const catLabel = it ? CAT_IT : CAT_EN;
@@ -65,6 +71,18 @@ export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, 
         active30d: activeRes.count ?? 0,
         newToday:  newRes.count ?? 0,
       });
+    }).catch(() => {});
+
+    // Statistiche ricerche
+    Promise.all([
+      supabase.from('search_logs').select('*', { count: 'exact', head: true }).gte('created_at', now30dAgo),
+      supabase.from('search_logs').select('query').gte('created_at', now30dAgo).limit(200),
+    ]).then(([countRes, queriesRes]) => {
+      const queries = (queriesRes.data ?? []) as { query: string }[];
+      const freq: Record<string, number> = {};
+      for (const { query } of queries) freq[query] = (freq[query] ?? 0) + 1;
+      const topQuery = Object.entries(freq).sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
+      setSearchStats({ total30d: countRes.count ?? 0, topQuery });
     }).catch(() => {});
 
     fetch('/api/events')
@@ -175,6 +193,27 @@ export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, 
             ) : (
               <div className="admin-stats-section__ts">
                 {it ? 'Caricamento…' : 'Loading…'}
+              </div>
+            )}
+          </div>
+
+          {/* ── Sezione ricerche ── */}
+          <div className="admin-stats-section">
+            <div className="admin-stats-section__header">
+              <span className="admin-stats-section__title">
+                {it ? 'RICERCHE (30 GG)' : 'SEARCHES (30D)'}
+              </span>
+              <span className="admin-stats-section__count">{searchStats?.total30d ?? '—'}</span>
+            </div>
+            {searchStats?.topQuery ? (
+              <div className="admin-user-pills">
+                <span className="admin-category-pill">
+                  🔍 {it ? 'Top query:' : 'Top query:'} <strong>{searchStats.topQuery}</strong>
+                </span>
+              </div>
+            ) : (
+              <div className="admin-stats-section__ts">
+                {it ? 'Nessuna ricerca ancora' : 'No searches yet'}
               </div>
             )}
           </div>

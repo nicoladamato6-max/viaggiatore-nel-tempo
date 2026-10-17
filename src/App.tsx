@@ -8,7 +8,7 @@ import { TimeMachine } from './components/TimeMachine';
 import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { ProfileModal } from './components/ProfileModal';
-import { AuthProvider, useAuth } from './hooks/useAuth';
+import { useAuth } from './hooks/useAuth';
 import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 import { MACRO_ERAS, SUBCATEGORIES, type Period } from './data/historicalPeriods';
@@ -145,9 +145,9 @@ export function getEra(year: number): { label: string; color: string; wikipediaS
   return                            { label: '⚙️ Età Contemporanea',    color: '#a8c8ff', wikipediaSlug: 'Modern_history' };
 }
 
-// ── Wrapper con provider (necessario per useAuth dentro App) ──────────────────
+// AuthProvider è ora in main.tsx (condiviso tra Landing e App)
 export default function App() {
-  return <AuthProvider><AppInner /></AuthProvider>;
+  return <AppInner />;
 }
 
 function AppInner() {
