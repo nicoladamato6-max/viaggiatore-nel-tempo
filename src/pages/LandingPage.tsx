@@ -101,8 +101,8 @@ function Step({ n, title, desc }: { n: number; title: string; desc: string }) {
 // ── Main ──────────────────────────────────────────────────────────────────────
 export function LandingPage() {
   const navigate  = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [authOpen, setAuthOpen] = useState(searchParams.get('login') === 'true');
+  const [, setSearchParams] = useSearchParams();
+  const [authOpen, setAuthOpen] = useState(false);
   const [tick, setTick] = useState(0);
 
   // Sblocca scroll per la landing page (index.css ha height:100% che blocca)

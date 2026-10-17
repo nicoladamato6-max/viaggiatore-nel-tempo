@@ -18,8 +18,7 @@ function ProtectedApp() {
   );
 
   if (!user) {
-    // Redirect a landing con ?login=true per aprire il modal
-    navigate('/?login=true', { replace: true });
+    navigate('/', { replace: true });
     return null;
   }
 
