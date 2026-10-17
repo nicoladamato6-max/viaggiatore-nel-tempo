@@ -22,6 +22,12 @@ export function AuthModal({ onClose, locale }: Props) {
 
   const it = locale === 'it';
 
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const isFormValid =
+    tab === 'reset'    ? emailValid :
+    tab === 'login'    ? emailValid && password.length > 0 :
+    /* register */       emailValid && password.length >= 6 && gdprConsent;
+
   function switchTab(t: Tab) { setTab(t); setError(null); setDone(false); }
 
   async function handleSubmit(e: React.FormEvent) {
@@ -157,7 +163,7 @@ export function AuthModal({ onClose, locale }: Props) {
           <button
             className="auth-submit"
             type="submit"
-            disabled={loading || (done && tab !== 'reset') || (tab === 'register' && !gdprConsent)}
+            disabled={loading || (done && tab !== 'reset') || !isFormValid}
           >
             {loading
               ? (it ? '◌ VERIFICA…' : '◌ VERIFYING…')
