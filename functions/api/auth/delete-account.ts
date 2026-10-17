@@ -1,18 +1,19 @@
 // POST /api/auth/delete-account — hard-delete utente autenticato (GDPR Art. 17)
+// Verifica il token delegando a Supabase Auth API (supporta ECC P-256 e HS256)
 import { json } from '../_shared';
 
 interface Env {
   SUPABASE_URL?: string;
   SUPABASE_SERVICE_ROLE_KEY?: string;
-  SUPABASE_JWT_SECRET?: string;
+  SUPABASE_ANON_KEY?: string;
 }
 
 interface PagesContext { request: Request; env: Env }
 
 export const onRequestPost = async ({ request, env }: PagesContext): Promise<Response> => {
-  const { SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, SUPABASE_JWT_SECRET } = env;
+  const { SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, SUPABASE_ANON_KEY } = env;
 
-  if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !SUPABASE_JWT_SECRET) {
+  if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !SUPABASE_ANON_KEY) {
     return json({ error: 'Supabase non configurato sul server' }, 503);
   }
 
@@ -20,43 +21,32 @@ export const onRequestPost = async ({ request, env }: PagesContext): Promise<Res
   const token = auth.startsWith('Bearer ') ? auth.slice(7) : '';
   if (!token) return json({ error: 'Non autenticato' }, 401);
 
-  const payload = await verifySupabaseJWT(token, SUPABASE_JWT_SECRET);
-  if (!payload) return json({ error: 'Token non valido o scaduto' }, 401);
+  // Verifica token via Supabase Auth API (funziona con ECC P-256 e HS256)
+  const userRes = await fetch(`${SUPABASE_URL}/auth/v1/user`, {
+    headers: {
+      'apikey':        SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${token}`,
+    },
+  });
+  if (!userRes.ok) return json({ error: 'Token non valido o scaduto' }, 401);
 
-  const userId = payload.sub as string;
+  const userData = await userRes.json() as { id?: string };
+  const userId   = userData.id;
   if (!userId) return json({ error: 'Utente non trovato nel token' }, 400);
 
-  const res = await fetch(`${SUPABASE_URL}/auth/v1/admin/users/${userId}`, {
+  // Hard-delete via Admin API (richiede service_role key)
+  const deleteRes = await fetch(`${SUPABASE_URL}/auth/v1/admin/users/${userId}`, {
     method:  'DELETE',
     headers: {
-      apikey:        SUPABASE_SERVICE_ROLE_KEY,
-      Authorization: `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+      'apikey':        SUPABASE_SERVICE_ROLE_KEY,
+      'Authorization': `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
     },
   });
 
-  if (!res.ok) {
-    const body = await res.text().catch(() => '');
+  if (!deleteRes.ok) {
+    const body = await deleteRes.text().catch(() => '');
     return json({ error: `Errore eliminazione: ${body}` }, 500);
   }
 
   return json({ ok: true });
 };
-
-async function verifySupabaseJWT(token: string, secret: string): Promise<Record<string, unknown> | null> {
-  try {
-    const parts = token.split('.');
-    if (parts.length !== 3) return null;
-    const enc  = new TextEncoder();
-    const key  = await crypto.subtle.importKey(
-      'raw', enc.encode(secret),
-      { name: 'HMAC', hash: 'SHA-256' }, false, ['verify'],
-    );
-    const pad = (s: string) => s.replace(/-/g, '+').replace(/_/g, '/');
-    const sigBytes = Uint8Array.from(atob(pad(parts[2])), c => c.charCodeAt(0));
-    const valid = await crypto.subtle.verify('HMAC', key, sigBytes, enc.encode(`${parts[0]}.${parts[1]}`));
-    if (!valid) return null;
-    const payloadJson = JSON.parse(atob(pad(parts[1])));
-    if ((payloadJson.exp as number) < Math.floor(Date.now() / 1000)) return null;
-    return payloadJson;
-  } catch { return null; }
-}
