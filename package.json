@@ -12,8 +12,10 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
     "cesium": "^1.146.0",
+    "framer-motion": "^14.3.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4",
     "vite-plugin-cesium": "^1.2.23"
   },
   "devDependencies": {
