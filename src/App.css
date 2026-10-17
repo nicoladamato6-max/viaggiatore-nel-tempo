@@ -1,3 +1,24 @@
+/* ── Design System — Sci-Fi Holographic ──────────────────────────────────── */
+:root {
+  --clr-bg:          #060b14;
+  --clr-surface:     rgba(8, 14, 28, 0.92);
+  --clr-glass-bg:    rgba(6, 12, 24, 0.75);
+  --clr-border:      rgba(0, 200, 255, 0.14);
+  --clr-border-soft: rgba(255, 255, 255, 0.07);
+  --clr-neon-cyan:   #00c8ff;
+  --clr-neon-glow:   rgba(0, 200, 255, 0.25);
+  --clr-gold:        #ffd166;
+  --clr-gold-glow:   rgba(255, 209, 102, 0.35);
+  --clr-text:        #e8e8f0;
+  --clr-text-muted:  #8888aa;
+  --font-heading:    'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-mono:       'JetBrains Mono', 'Courier New', monospace;
+  --shadow-neon:     0 0 18px rgba(0, 200, 255, 0.22), 0 0 40px rgba(0, 80, 160, 0.12);
+  --shadow-panel:    0 8px 32px rgba(0, 0, 0, 0.5);
+  --radius-panel:    0px;
+  --transition-ui:   all 0.18s ease;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,9 +26,9 @@
 }
 
 body {
-  background: #0a0a1a;
-  color: #e8e8f0;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  font-family: var(--font-heading);
   overflow: hidden;
 }
 
@@ -17,6 +38,28 @@ body {
   flex-direction: column;
   height: 100dvh;
   width: 100dvw;
+  position: relative;
+}
+
+/* Scan-line overlay su tutta l'app */
+.app::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0, 200, 255, 0.012) 3px,
+    rgba(0, 200, 255, 0.012) 4px
+  );
+  pointer-events: none;
+  z-index: 9000;
+  animation: scanlines-drift 8s linear infinite;
+}
+@keyframes scanlines-drift {
+  from { background-position-y: 0; }
+  to   { background-position-y: 100px; }
 }
 
 /* ── Header ── */
@@ -25,21 +68,27 @@ body {
   align-items: center;
   gap: 12px;
   padding: 10px 16px;
-  background: rgba(10, 10, 26, 0.9);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--clr-glass-bg);
+  border-bottom: 1px solid var(--clr-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(0, 200, 255, 0.08), var(--shadow-neon);
   z-index: 10;
   flex-shrink: 0;
 }
 
 .header h1 {
+  font-family: var(--font-heading);
   font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  color: #a8c8ff;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--clr-neon-cyan);
+  text-shadow: 0 0 16px var(--clr-neon-glow);
 }
 
 .header h1 span {
-  color: #ffd166;
+  color: var(--clr-gold);
+  text-shadow: 0 0 12px var(--clr-gold-glow);
 }
 
 /* ── Area globo + pannello laterale ── */
@@ -60,8 +109,11 @@ body {
 /* ── Pannello controlli (basso) ── */
 .controls {
   position: relative; /* necessario per il Gantt assoluto che fuoriesce in alto */
-  background: rgba(10, 10, 26, 0.92);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--clr-glass-bg);
+  border-top: 1px solid var(--clr-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 -1px 0 rgba(0, 200, 255, 0.08);
   padding: 12px 16px;
   z-index: 10;
   flex-shrink: 0;
@@ -100,15 +152,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  font-family: var(--font-mono);
   font-size: 0.75rem;
-  color: #8888aa;
+  color: var(--clr-text-muted);
 }
 
 .time-label .current-year {
+  font-family: var(--font-mono);
   font-size: 1rem;
   font-weight: 700;
-  color: #ffd166;
+  color: var(--clr-gold);
   letter-spacing: 0.05em;
+  text-shadow: 0 0 10px var(--clr-gold-glow);
 }
 
 /* ── Track colorato (era bands) ── */
@@ -170,10 +225,14 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ffd166;
+  background: var(--clr-gold);
   cursor: pointer;
   margin-top: -7px;
-  box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.25);
+  box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.25), 0 0 12px var(--clr-gold-glow);
+  transition: box-shadow 0.2s;
+}
+.slider-input::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 4px rgba(255, 209, 102, 0.35), 0 0 22px var(--clr-gold-glow);
 }
 
 .slider-input::-moz-range-track {
@@ -186,9 +245,10 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ffd166;
+  background: var(--clr-gold);
   border: none;
   cursor: pointer;
+  box-shadow: 0 0 12px var(--clr-gold-glow);
 }
 
 /* ── Tag sottocategorie storiche (sempre visibili) ── */
@@ -315,21 +375,24 @@ body {
   padding: 3px 10px;
   border-radius: 20px;
   border: 1px solid transparent;
+  font-family: var(--font-heading);
   font-size: 0.7rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.15s;
-  background: rgba(255, 255, 255, 0.05);
+  transition: var(--transition-ui);
+  background: rgba(255, 255, 255, 0.04);
   color: #ccc;
 }
 
 .filter-btn.active {
   color: #fff;
   border-color: currentColor;
+  box-shadow: 0 0 8px currentColor, inset 0 0 8px rgba(255,255,255,0.04);
 }
 
 .filter-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
 }
 
 /* Filtro tipo entità — seconda riga, visual più leggero */
@@ -358,30 +421,37 @@ body {
 }
 
 .search-bar input {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 10, 24, 0.6);
+  border: 1px solid var(--clr-border);
   border-radius: 8px;
   padding: 5px 10px;
-  color: #e8e8f0;
+  color: var(--clr-text);
+  font-family: var(--font-heading);
   font-size: 0.8rem;
   width: 260px;
   outline: none;
+  backdrop-filter: blur(8px);
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .search-bar input::placeholder {
-  color: #666688;
+  color: var(--clr-text-muted);
 }
 
 .search-bar input:focus {
-  border-color: #a8c8ff;
+  border-color: var(--clr-neon-cyan);
+  box-shadow: 0 0 0 1px rgba(0, 200, 255, 0.15), 0 0 12px rgba(0, 200, 255, 0.1);
 }
 
 /* ── Info Panel (sidebar destra) ── */
 .info-panel {
   /* la larghezza è gestita via style={{ width }} in React */
   flex-shrink: 0;
-  background: rgba(8, 8, 22, 0.98);
-  border-left: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(4, 8, 20, 0.96);
+  border-left: 1px solid var(--clr-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: -1px 0 0 rgba(0, 200, 255, 0.05), -4px 0 24px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -402,7 +472,8 @@ body {
 }
 
 .info-panel__resize-handle:hover {
-  background: rgba(168, 200, 255, 0.35);
+  background: rgba(0, 200, 255, 0.25);
+  box-shadow: 2px 0 8px rgba(0, 200, 255, 0.15);
 }
 
 /* linea visibile al centro dell'handle */
@@ -471,19 +542,22 @@ body {
 }
 
 .info-panel__title {
+  font-family: var(--font-heading);
   font-size: 0.98rem;
   font-weight: 700;
   line-height: 1.3;
-  color: #e8e8f0;
+  color: var(--clr-text);
   margin-bottom: 4px;
 }
 
 .info-panel__year {
+  font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: #ffd166;
+  color: var(--clr-gold);
   font-weight: 600;
   margin-bottom: 8px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
+  text-shadow: 0 0 8px var(--clr-gold-glow);
 }
 
 .info-panel__desc {
@@ -667,31 +741,36 @@ body {
 .locale-toggle-btn {
   margin-left: auto;
   padding: 4px 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(0, 200, 255, 0.06);
+  border: 1px solid var(--clr-border);
   border-radius: 6px;
   color: #c0c0d8;
+  font-family: var(--font-heading);
   font-size: 0.78rem;
   cursor: pointer;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: background 0.15s, color 0.15s;
+  transition: var(--transition-ui);
 }
 .locale-toggle-btn:hover {
-  background: rgba(168, 200, 255, 0.12);
-  color: #a8c8ff;
+  background: rgba(0, 200, 255, 0.14);
+  color: var(--clr-neon-cyan);
+  box-shadow: 0 0 8px rgba(0, 200, 255, 0.15);
 }
 
 /* ── Tooltip sul globo ── */
 .globe-tooltip {
-  background: rgba(10, 10, 30, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(4, 10, 24, 0.92);
+  border: 1px solid var(--clr-border);
   border-radius: 8px;
   padding: 6px 10px;
+  font-family: var(--font-heading);
   font-size: 0.75rem;
-  color: #e8e8f0;
+  color: var(--clr-text);
   max-width: 200px;
   pointer-events: none;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 12px rgba(0, 200, 255, 0.08);
 }
 
 /* ── Risultati ricerca ── */
@@ -700,11 +779,14 @@ body {
   top: 44px;
   right: 16px;
   width: 260px;
-  background: rgba(15, 15, 35, 0.98);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(4, 10, 24, 0.97);
+  border: 1px solid var(--clr-border);
   border-radius: 10px;
   overflow: hidden;
   z-index: 30;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 16px rgba(0, 200, 255, 0.06);
 }
 
 .search-result-item {
@@ -1293,14 +1375,20 @@ body {
   background: rgba(0, 200, 255, 0.10);
   border: 1px solid rgba(0, 200, 255, 0.35);
   border-radius: 8px;
-  color: #00c8ff;
+  color: var(--clr-neon-cyan);
   cursor: pointer;
+  font-family: var(--font-heading);
   font-size: 1rem;
   padding: 5px 10px;
-  transition: background 0.2s, border-color 0.2s;
+  transition: var(--transition-ui);
   flex-shrink: 0;
 }
-.auth-header-btn:hover { background: rgba(0, 200, 255, 0.22); border-color: #00c8ff; }
+.auth-header-btn:hover {
+  background: rgba(0, 200, 255, 0.22);
+  border-color: var(--clr-neon-cyan);
+  box-shadow: 0 0 12px rgba(0, 200, 255, 0.25);
+  transform: translateY(-1px);
+}
 
 /* ── Auth overlay & console (stessa filosofia della Time Machine) ─────────── */
 .auth-overlay {
@@ -1327,9 +1415,10 @@ body {
   margin-bottom: 4px;
 }
 .auth-title {
-  font-family: 'Courier New', monospace;
+  font-family: var(--font-mono);
   font-size: 0.75rem; letter-spacing: 0.18em;
-  color: #00c8ff; font-weight: 700;
+  color: var(--clr-neon-cyan); font-weight: 700;
+  text-shadow: 0 0 12px var(--clr-neon-glow);
 }
 .auth-close {
   background: none; border: none; color: #556; cursor: pointer;
@@ -1398,6 +1487,7 @@ body {
 .auth-submit:hover:not(:disabled) {
   background: linear-gradient(135deg, rgba(0,200,255,0.28), rgba(0,100,200,0.28));
   box-shadow: 0 0 20px rgba(0, 200, 255, 0.3);
+  transform: translateY(-1px);
 }
 .auth-submit:disabled { opacity: 0.6; cursor: not-allowed; }
 
@@ -1573,19 +1663,23 @@ body {
 /* ── Maps button in header ─────────────────────────────────────────────────── */
 .header-maps-btn {
   padding: 4px 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 200, 255, 0.05);
+  border: 1px solid var(--clr-border);
   border-radius: 6px; color: #999; font-size: 1rem;
   cursor: pointer; flex-shrink: 0;
-  transition: all 0.15s;
+  transition: var(--transition-ui);
 }
 .header-maps-btn:hover {
-  background: rgba(168, 200, 255, 0.1);
-  border-color: rgba(168, 200, 255, 0.35); color: #a8c8ff;
+  background: rgba(0, 200, 255, 0.12);
+  border-color: rgba(0, 200, 255, 0.35);
+  color: var(--clr-neon-cyan);
+  transform: translateY(-1px);
 }
 .header-maps-btn.active {
-  background: rgba(168, 200, 255, 0.14);
-  border-color: rgba(168, 200, 255, 0.45); color: #a8c8ff;
+  background: rgba(0, 200, 255, 0.16);
+  border-color: rgba(0, 200, 255, 0.5);
+  color: var(--clr-neon-cyan);
+  box-shadow: 0 0 8px rgba(0, 200, 255, 0.2);
 }
 
 /* ── Navigation HUD (altitudine · coordinate · era) ─────────────────────── */
@@ -1594,13 +1688,15 @@ body {
   bottom: 14px;
   left: 14px;
   z-index: 10;
-  background: rgba(0, 6, 14, 0.78);
-  border: 1px solid rgba(0, 210, 180, 0.22);
+  background: rgba(0, 6, 14, 0.82);
+  border: 1px solid rgba(0, 210, 180, 0.28);
   border-radius: 6px;
   padding: 6px 12px 7px 10px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--font-mono);
   pointer-events: none;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 16px rgba(0, 200, 180, 0.08), inset 0 0 12px rgba(0, 0, 0, 0.3);
   line-height: 1;
   user-select: none;
 }
@@ -1635,9 +1731,9 @@ body {
 .globe-hud__year {
   font-size: 11.5px;
   font-weight: 700;
-  color: #ffd166;
+  color: var(--clr-gold);
   letter-spacing: 0.04em;
-  text-shadow: 0 0 8px rgba(255, 209, 102, 0.4);
+  text-shadow: 0 0 10px var(--clr-gold-glow);
 }
 
 /* ── Admin header button ───────────────────────────────────────────────────── */
