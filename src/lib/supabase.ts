@@ -1,10 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl     = import.meta.env.VITE_SUPABASE_URL     as string;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
+// Valori pubblici del progetto — safe da includere nel bundle client (anon key = publishable key)
+const supabaseUrl     = (import.meta.env.VITE_SUPABASE_URL     as string) || 'https://tsdkqaheddnwzgxgphtw.supabase.co';
+const supabaseAnonKey = (import.meta.env.VITE_SUPABASE_ANON_KEY as string) || 'sb_publishable_rK0birboCtt7dSAyBh5T7g_zVt6ZXCY';
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn('[Supabase] VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY mancanti — auth disabilitata');
-}
-
-export const supabase = createClient(supabaseUrl ?? 'https://placeholder.supabase.co', supabaseAnonKey ?? 'placeholder');
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
