@@ -534,14 +534,17 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
       if (event.lat == null || event.lng == null) continue;
       const isSelected = event.id === selectedEventId;
       const baseColor  = Cesium.Color.fromCssColorString(CATEGORY_COLORS[event.category]);
+      // Pin selezionato: colore categoria pieno (luminoso) + outline bianco spesso + dimensione maggiore
+      // Colore categoria garantisce buon contrasto sia su sfondo scuro (satellite) che chiaro (AWMC)
+      const selectedColor = baseColor.brighten(0.3, new Cesium.Color());
       pins.add({
         id: event.id,
         position: Cesium.Cartesian3.fromDegrees(event.lng, event.lat),
-        color: isSelected ? Cesium.Color.WHITE : baseColor,
-        outlineColor: isSelected ? baseColor : Cesium.Color.WHITE,
-        outlineWidth: isSelected ? 3 : 1,
-        pixelSize: isSelected ? 14 : 7,
-        scaleByDistance:        new Cesium.NearFarScalar(500_000, isSelected ? 2.2 : 1.8, 20_000_000, isSelected ? 0.8 : 0.5),
+        color:        isSelected ? selectedColor           : baseColor,
+        outlineColor: isSelected ? Cesium.Color.WHITE      : Cesium.Color.BLACK.withAlpha(0.6),
+        outlineWidth: isSelected ? 4                       : 1,
+        pixelSize:    isSelected ? 18                      : 7,
+        scaleByDistance:        new Cesium.NearFarScalar(500_000, isSelected ? 2.5 : 1.8, 20_000_000, isSelected ? 1.0 : 0.5),
         translucencyByDistance: new Cesium.NearFarScalar(15_000_000, 1.0, 25_000_000, 0.0),
         disableDepthTestDistance: Number.POSITIVE_INFINITY,
       });

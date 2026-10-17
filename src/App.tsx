@@ -7,6 +7,7 @@ import { SearchBar } from './components/SearchBar';
 import { TimeMachine } from './components/TimeMachine';
 import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
+import { ProfileModal } from './components/ProfileModal';
 import { AuthProvider, useAuth } from './hooks/useAuth';
 import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
@@ -151,9 +152,10 @@ export default function App() {
 
 function AppInner() {
   const { user, logout } = useAuth();
-  const [authOpen, setAuthOpen] = useState(false);
+  const [authOpen,     setAuthOpen]     = useState(false);
+  const [profileOpen,  setProfileOpen]  = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
-  const [adminOpen, setAdminOpen] = useState(false);
+  const [adminOpen,    setAdminOpen]    = useState(false);
 
   // Slider e anno — dichiarati prima del chunk loading (currentEraKey li usa)
   const [sliderValue, setSliderValue] = useState(yearToSlider(-753));
@@ -545,6 +547,9 @@ function AppInner() {
               <div className="user-menu">
                 <div className="user-menu__email">{user.email}</div>
                 {user.role === 'admin' && <div className="user-menu__role">ADMIN</div>}
+                <button className="user-menu__item" onClick={() => { setProfileOpen(true); setUserMenuOpen(false); }}>
+                  {locale === 'it' ? '👤 Il mio profilo' : '👤 My profile'}
+                </button>
                 <button className="user-menu__logout" onClick={() => { logout(); setUserMenuOpen(false); }}>
                   {locale === 'it' ? '⏏ Esci dall\'account' : '⏏ Sign out'}
                 </button>
@@ -634,7 +639,8 @@ function AppInner() {
         />
       </div>
 
-      {authOpen && <AuthModal locale={locale} onClose={() => setAuthOpen(false)} />}
+      {authOpen    && <AuthModal    locale={locale} onClose={() => setAuthOpen(false)} />}
+      {profileOpen && <ProfileModal locale={locale} onClose={() => setProfileOpen(false)} />}
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useAuth } from '../hooks/useAuth';
+import { supabase } from '../lib/supabase';
 import { type Locale } from '../types';
 
 interface Props {
@@ -18,6 +19,12 @@ interface ApiStatus {
   categoryBreakdown: Record<string, number>;
 }
 
+interface UserStats {
+  total:      number;
+  active30d:  number;
+  newToday:   number;
+}
+
 const CAT_ICONS: Record<string, string> = {
   storia: '⚔️', arte: '🎨', scienza: '🔬',
   musica: '🎵', geologia: '🌋', cosmo: '🌌',
@@ -33,15 +40,33 @@ const CAT_EN: Record<string, string> = {
 
 export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, staticBreakdown, onEventsRefreshed }: Props) {
   const { token, user } = useAuth();
-  const [status,   setStatus]   = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [msg,      setMsg]      = useState('');
-  const [apiInfo,  setApiInfo]  = useState<ApiStatus | null>(null);
+  const [status,    setStatus]    = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [msg,       setMsg]       = useState('');
+  const [apiInfo,   setApiInfo]   = useState<ApiStatus | null>(null);
+  const [userStats, setUserStats] = useState<UserStats | null>(null);
 
   const it = locale === 'it';
   const catLabel = it ? CAT_IT : CAT_EN;
 
   useEffect(() => {
     if (!open) return;
+
+    // Statistiche utenti da Supabase
+    const now30dAgo = new Date(Date.now() - 30 * 24 * 3600 * 1000).toISOString();
+    const today     = new Date(); today.setHours(0,0,0,0);
+
+    Promise.all([
+      supabase.from('profiles').select('*', { count: 'exact', head: true }).is('deleted_at', null),
+      supabase.from('access_logs').select('*', { count: 'exact', head: true }).gte('created_at', now30dAgo),
+      supabase.from('profiles').select('*', { count: 'exact', head: true }).gte('created_at', today.toISOString()),
+    ]).then(([totalRes, activeRes, newRes]) => {
+      setUserStats({
+        total:     totalRes.count ?? 0,
+        active30d: activeRes.count ?? 0,
+        newToday:  newRes.count ?? 0,
+      });
+    }).catch(() => {});
+
     fetch('/api/events')
       .then(r => r.json())
       .then((d: { count?: number; lastRefresh?: number; events?: Array<{ category?: string }> }) => {
@@ -129,6 +154,30 @@ export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, 
         <div className="admin-subtitle">— {user.email} · ADMIN —</div>
 
         <div className="admin-body">
+
+          {/* ── Sezione utenti (Supabase) ── */}
+          <div className="admin-stats-section">
+            <div className="admin-stats-section__header">
+              <span className="admin-stats-section__title">
+                {it ? 'UTENTI REGISTRATI' : 'REGISTERED USERS'}
+              </span>
+              <span className="admin-stats-section__count">{userStats?.total ?? '—'}</span>
+            </div>
+            {userStats ? (
+              <div className="admin-user-pills">
+                <span className="admin-category-pill">
+                  📅 {it ? 'Accessi 30gg:' : 'Logins 30d:'} <strong>{userStats.active30d}</strong>
+                </span>
+                <span className="admin-category-pill">
+                  🆕 {it ? 'Oggi:' : 'Today:'} <strong>{userStats.newToday}</strong>
+                </span>
+              </div>
+            ) : (
+              <div className="admin-stats-section__ts">
+                {it ? 'Caricamento…' : 'Loading…'}
+              </div>
+            )}
+          </div>
 
           {/* ── Sezione eventi statici ── */}
           <div className="admin-stats-section">
