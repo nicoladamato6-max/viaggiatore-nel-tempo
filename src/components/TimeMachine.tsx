@@ -12,9 +12,18 @@ interface AiBriefing {
 type EpochBriefings = Record<string, { it: AiBriefing; en: AiBriefing }>;
 
 function getStaticBriefing(year: number, locale: Locale): AiBriefing | null {
+  const briefings = epochBriefingsData as EpochBriefings;
+  // Preferisci la sotto-epoca più specifica (span più corto) che copre l'anno
+  const activeSubs = SUBCATEGORIES.filter(p => year >= p.start && year <= p.end && !!p.wikipediaSlug);
+  if (activeSubs.length > 0) {
+    const best = activeSubs.reduce((a, b) => (b.end - b.start) < (a.end - a.start) ? b : a);
+    const entry = briefings[best.wikipediaSlug!];
+    if (entry) return entry[locale] ?? entry['it'] ?? null;
+  }
+  // Fallback alla macro-era
   const era = getCurrentMacroEra(year);
   if (!era.wikipediaSlug) return null;
-  const entry = (epochBriefingsData as EpochBriefings)[era.wikipediaSlug];
+  const entry = briefings[era.wikipediaSlug];
   if (!entry) return null;
   return entry[locale] ?? entry['it'] ?? null;
 }
