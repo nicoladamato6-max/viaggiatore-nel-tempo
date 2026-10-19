@@ -1,0 +1,114 @@
+{
+  "Absolute_monarchy": {
+    "it": [
+      {"text": "Ammira le decorazioni di Charles Le Brun nella Galleria degli Specchi a Versailles: la pittura di corte come propaganda reale", "cat": "arte"},
+      {"text": "Assisti a un'opera di Jean-Baptiste Lully a Versailles: balletto, recitativo e magnificenza al servizio del Re Sole", "cat": "musica"},
+      {"text": "Studia il Discorso sul metodo di Cartesio (1637): il cogito ergo sum fonda la filosofia moderna e il metodo deduttivo", "cat": "scienza"},
+      {"text": "Leggi la Politique tirée de l'Écriture Sainte di Bossuet: il diritto divino come fondamento teologico del potere assoluto", "cat": "filosofia"},
+      {"text": "Partecipa a una caccia reale nella foresta di Fontainebleau: il grand veneur guida cortigiani a cavallo in formazione cerimoniale", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Admire Charles Le Brun's decorations in the Hall of Mirrors at Versailles: court painting as royal propaganda", "cat": "arte"},
+      {"text": "Attend a court opera by Jean-Baptiste Lully at Versailles: ballet, recitative and magnificence in service of the Sun King", "cat": "musica"},
+      {"text": "Study Descartes' Discourse on the Method (1637): the cogito ergo sum founds modern philosophy and the deductive method", "cat": "scienza"},
+      {"text": "Read Bossuet's Politics Drawn from Holy Scripture: divine right as the theological foundation of absolute royal power", "cat": "filosofia"},
+      {"text": "Join a royal hunt in the forest of Fontainebleau: the grand veneur leads courtiers on horseback in ceremonial formation", "cat": "sport"}
+    ]
+  },
+  "Scientific_Revolution": {
+    "it": [
+      {"text": "Studia Vermeer e la sua camera oscura: il pittore di Delft usa la proiezione ottica per catturare la luce con precisione matematica", "cat": "arte"},
+      {"text": "Ascolta le cantate di Johann Sebastian Bach: unite geometria armonica e devozione nel cuore della rivoluzione scientifica europea", "cat": "musica"},
+      {"text": "Osserva Robert Hooke al microscopio nel 1665: descrive le cellule nel Micrographia, prima mappa del mondo invisibile", "cat": "scienza"},
+      {"text": "Leggi il Saggio sull'intelletto umano di John Locke (1689): l'esperienza come unica fonte di conoscenza sfida secoli di razionalismo", "cat": "filosofia"},
+      {"text": "Partecipa a una partita di cricket nel Kent degli anni 1700: il primo sport moderno organizzato con regole scritte e arbitro", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Study Vermeer and his camera obscura: the Delft painter uses optical projection to capture light with mathematical precision", "cat": "arte"},
+      {"text": "Listen to Johann Sebastian Bach's cantatas: they unite harmonic geometry and devotion at the heart of the scientific revolution", "cat": "musica"},
+      {"text": "Watch Robert Hooke at the microscope in 1665: he describes cells in Micrographia — the first map of the invisible world", "cat": "scienza"},
+      {"text": "Read John Locke's Essay Concerning Human Understanding (1689): experience as the sole source of knowledge challenges centuries of rationalism", "cat": "filosofia"},
+      {"text": "Take part in a cricket match in 1700s Kent: the first modern sport organized with written rules and a formal umpire", "cat": "sport"}
+    ]
+  },
+  "Age_of_Enlightenment": {
+    "it": [
+      {"text": "Ammira Le Pèlerinage à l'île de Cythère di Watteau: le fêtes galantes, il malinconico piacere rococò che preannuncia il tramonto dell'ancien régime", "cat": "arte"},
+      {"text": "Ascolta la Sinfonia n. 94 'La Sorpresa' di Haydn: la forma-sonata come linguaggio universale della ragione musicale settecentesca", "cat": "musica"},
+      {"text": "Studia il Systema Naturae di Linneo (1735): ordina ogni essere vivente con genere, specie e binomio latino in un unico sistema universale", "cat": "scienza"},
+      {"text": "Leggi il Candide di Voltaire (1759): l'ironia come arma filosofica contro ottimismo metafisico, fanatismo e corruzione istituzionale", "cat": "filosofia"},
+      {"text": "Assisti a una partita di cricket a Lord's Cricket Ground, 1787: i nobili inglesi codificano le prime regole sportive universali", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Admire Watteau's Pilgrimage to the Isle of Cythera: the fêtes galantes, melancholic rococo pleasure heralding the twilight of the ancien régime", "cat": "arte"},
+      {"text": "Listen to Haydn's Symphony No. 94 'Surprise': the sonata form as the universal language of 18th-century musical reason", "cat": "musica"},
+      {"text": "Study Linnaeus's Systema Naturae (1735): it orders every living being by genus, species and Latin binomial in one universal system", "cat": "scienza"},
+      {"text": "Read Voltaire's Candide (1759): irony as a philosophical weapon against metaphysical optimism, fanaticism and institutional corruption", "cat": "filosofia"},
+      {"text": "Attend a cricket match at Lord's Cricket Ground, 1787: English nobles codify the first universal sporting rules", "cat": "sport"}
+    ]
+  },
+  "Age_of_Revolution": {
+    "it": [
+      {"text": "Studia Il Giuramento degli Orazi di Jacques-Louis David (1784): la pittura neoclassica come manifesto di virtù civica rivoluzionaria", "cat": "arte"},
+      {"text": "Canta la Marsigliese nelle strade di Parigi nel 1792: il primo inno nazionale europeo composto in una notte da Rouget de Lisle", "cat": "musica"},
+      {"text": "Studia la macchina a vapore perfezionata da James Watt nel 1769: la doppia azione converte il calore in moto rotatorio continuo", "cat": "scienza"},
+      {"text": "Leggi i Diritti dell'Uomo di Thomas Paine (1791): il manifesto liberale che giustifica la Rivoluzione Americana e ispira quella Francese", "cat": "filosofia"},
+      {"text": "Osserva gli esercizi militari della guardia nazionale: la disciplina fisica come virtù repubblicana che trasforma il cittadino in soldato", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Study Jacques-Louis David's Oath of the Horatii (1784): neoclassical painting as a manifesto of revolutionary civic virtue", "cat": "arte"},
+      {"text": "Sing the Marseillaise in the streets of Paris in 1792: the first European national anthem, composed in one night by Rouget de Lisle", "cat": "musica"},
+      {"text": "Study James Watt's improved steam engine of 1769: the double-action design converts heat into continuous rotary motion", "cat": "scienza"},
+      {"text": "Read Thomas Paine's Rights of Man (1791): the liberal manifesto justifying the American Revolution and inspiring the French one", "cat": "filosofia"},
+      {"text": "Watch National Guard military exercises: physical discipline as republican virtue that transforms the citizen into a soldier", "cat": "sport"}
+    ]
+  },
+  "Concert_of_Europe": {
+    "it": [
+      {"text": "Ammira La Libertà guida il Popolo di Eugène Delacroix (1830): il Romanticismo politico che trasforma la rivoluzione in allegoria monumentale", "cat": "arte"},
+      {"text": "Ascolta la Sinfonia Incompiuta di Franz Schubert: il Romanticismo musicale che esplora l'infinito e il limite dell'espressione umana", "cat": "musica"},
+      {"text": "Leggi i Principi di geologia di Charles Lyell (1830-33): la Terra ha milioni di anni e muta per processi uniformi ancora in atto", "cat": "scienza"},
+      {"text": "Studia la Fenomenologia dello Spirito di Hegel (1807): la storia come dispiegarsi dialettico della ragione, tra tesi, antitesi e sintesi", "cat": "filosofia"},
+      {"text": "Assisti a un duello alla pistola nel Bois de Boulogne: codice d'onore aristocratico che trasforma il conflitto personale in rito formale", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Admire Eugène Delacroix's Liberty Leading the People (1830): political Romanticism that transforms revolution into monumental allegory", "cat": "arte"},
+      {"text": "Listen to Franz Schubert's Unfinished Symphony: musical Romanticism exploring the infinite and the limits of human expression", "cat": "musica"},
+      {"text": "Read Charles Lyell's Principles of Geology (1830-33): the Earth is millions of years old, shaped by uniform processes still active today", "cat": "scienza"},
+      {"text": "Study Hegel's Phenomenology of Spirit (1807): history as the dialectical unfolding of reason through thesis, antithesis and synthesis", "cat": "filosofia"},
+      {"text": "Attend a pistol duel in the Bois de Boulogne: aristocratic code of honor that transforms personal conflict into formal ritual", "cat": "sport"}
+    ]
+  },
+  "Risorgimento": {
+    "it": [
+      {"text": "Ammira Il Bacio di Francesco Hayez (1859): la pittura storico-romantica italiana che trasforma un gesto intimo in dichiarazione patriottica", "cat": "arte"},
+      {"text": "Assisti al Nabucco di Giuseppe Verdi alla Scala di Milano: il coro Va' pensiero diventa inno non ufficiale del Risorgimento italiano", "cat": "musica"},
+      {"text": "Osserva la posa del primo cavo telegrafico tra Torino e Milano nel 1847: la comunicazione istantanea al servizio dell'unificazione nazionale", "cat": "scienza"},
+      {"text": "Leggi i Doveri dell'Uomo di Giuseppe Mazzini: il nazionalismo democratico come missione morale e non semplice rivendicazione territoriale", "cat": "filosofia"},
+      {"text": "Unisciti a una Società di Ginnastica patriottica a Torino negli anni 1840: il corpo come strumento di disciplina civile e coscienza nazionale", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Admire Francesco Hayez's The Kiss (1859): Italian historical-romantic painting that transforms an intimate gesture into a patriotic declaration", "cat": "arte"},
+      {"text": "Attend Giuseppe Verdi's Nabucco at La Scala in Milan: the Va' pensiero chorus becomes the unofficial anthem of Italian unification", "cat": "musica"},
+      {"text": "Watch the installation of the first telegraph cable between Turin and Milan in 1847: instant communication in service of national unification", "cat": "scienza"},
+      {"text": "Read Giuseppe Mazzini's Duties of Man: democratic nationalism as a moral mission, not merely a territorial claim", "cat": "filosofia"},
+      {"text": "Join a patriotic Gymnastics Society in Turin in the 1840s: the body as an instrument of civic discipline and national consciousness", "cat": "sport"}
+    ]
+  },
+  "Industrial_Revolution": {
+    "it": [
+      {"text": "Visita il Salon di Parigi del 1850 e scopri Gustave Courbet: Gli Spaccapietre rivoluzionano la pittura mostrando il lavoro manuale senza retorica", "cat": "arte"},
+      {"text": "Entra in un music hall di Manchester nel 1870: canzoni comiche, ballate sentimentali e varietà di strada — la cultura operaia fatta spettacolo", "cat": "musica"},
+      {"text": "Visita la Royal Institution di Londra e ascolta Michael Faraday dimostrare l'induzione elettromagnetica nel 1831: dalla corrente nasce la luce", "cat": "scienza"},
+      {"text": "Leggi il Manifesto del Partito Comunista di Marx ed Engels (1848): la storia come lotta di classe e il proletariato come motore del cambiamento", "cat": "filosofia"},
+      {"text": "Assisti alla prima partita di football con le regole di Cambridge del 1848: il calcio codificato nasce nei cortili delle scuole inglesi", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Visit the 1850 Paris Salon and discover Gustave Courbet: The Stone Breakers revolutionize painting by showing manual labor without rhetoric", "cat": "arte"},
+      {"text": "Enter a Manchester music hall in 1870: comic songs, sentimental ballads and street variety — working-class culture turned into spectacle", "cat": "musica"},
+      {"text": "Visit the Royal Institution in London and watch Michael Faraday demonstrate electromagnetic induction in 1831: current gives birth to light", "cat": "scienza"},
+      {"text": "Read Marx and Engels's Communist Manifesto (1848): history as class struggle and the proletariat as the engine of change", "cat": "filosofia"},
+      {"text": "Watch the first football match under Cambridge Rules in 1848: codified football is born in the courtyards of English schools", "cat": "sport"}
+    ]
+  }
+}

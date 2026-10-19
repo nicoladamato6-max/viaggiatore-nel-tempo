@@ -1,0 +1,370 @@
+{
+  "Age_of_imperialism": {
+    "it": [
+      {
+        "text": "Visita il Salon des Refusés del 1863 dove Manet espone «Le déjeuner sur l'herbe»: l'Impressionismo nasce dal rifiuto dell'arte ufficiale",
+        "cat": "arte"
+      },
+      {
+        "text": "Assisti a un'operetta di Offenbach a Parigi: musica leggera e satira politica che conquista il pubblico borghese europeo",
+        "cat": "musica"
+      },
+      {
+        "text": "Leggi «L'origine delle specie» di Darwin (1859) e comprendi come l'evoluzione per selezione naturale rivoluziona la biologia e sfida la teologia",
+        "cat": "scienza"
+      },
+      {
+        "text": "Studia Nietzsche che in «Così parlò Zarathustra» (1883) dichiara la morte di Dio e propone il superuomo come risposta al nichilismo europeo",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Partecipa alle prime Olimpiadi moderne ad Atene nel 1896: 241 atleti da 14 nazioni e la maratona reintrodotta come evento simbolo",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Visit the 1863 Salon des Refusés where Manet exhibits Le déjeuner sur l'herbe: Impressionism is born from rejection by the official art world",
+        "cat": "arte"
+      },
+      {
+        "text": "Attend an Offenbach operetta in Paris: light music and political satire winning over European bourgeois audiences",
+        "cat": "musica"
+      },
+      {
+        "text": "Read Darwin's On the Origin of Species (1859) and understand how evolution by natural selection revolutionizes biology and challenges theology",
+        "cat": "scienza"
+      },
+      {
+        "text": "Study Nietzsche declaring the death of God in Thus Spoke Zarathustra (1883) and proposing the Übermensch as answer to European nihilism",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Compete in the first modern Olympics in Athens in 1896: 241 athletes from 14 nations and the marathon reintroduced as a symbolic event",
+        "cat": "sport"
+      }
+    ]
+  },
+  "Belle_Époque": {
+    "it": [
+      {
+        "text": "Ammira «Il Bacio» di Klimt (1907-08): oro, erotismo e ornamento nel cuore della Secessione viennese che reinventa la pittura decorativa",
+        "cat": "arte"
+      },
+      {
+        "text": "Ascolta Debussy eseguire «Prélude à l'après-midi d'un faune» (1894): la musica abbandona la tonalità romantica e inventa l'impressionismo sonoro",
+        "cat": "musica"
+      },
+      {
+        "text": "Osserva Röntgen scoprire i raggi X nel 1895 e fare la prima radiografia della mano di sua moglie — la medicina moderna inizia in un laboratorio buio",
+        "cat": "scienza"
+      },
+      {
+        "text": "Leggi «L'interpretazione dei sogni» di Freud (1899): nasce la psicanalisi e l'inconscio diventa il nuovo campo di battaglia della filosofia",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Assisti al primo Tour de France nel 1903: 60 ciclisti, 2.428 chilometri, sei tappe — la competizione sportiva moderna come spettacolo di massa",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Admire Klimt's The Kiss (1907-08): gold, eroticism and ornament at the heart of the Vienna Secession reinventing decorative painting",
+        "cat": "arte"
+      },
+      {
+        "text": "Listen to Debussy premiere Prélude à l'après-midi d'un faune (1894): music abandons romantic tonality and invents sonic impressionism",
+        "cat": "musica"
+      },
+      {
+        "text": "Watch Röntgen discover X-rays in 1895 and take the first radiograph of his wife's hand — modern medicine begins in a dark laboratory",
+        "cat": "scienza"
+      },
+      {
+        "text": "Read Freud's The Interpretation of Dreams (1899): psychoanalysis is born and the unconscious becomes the new battleground of Western philosophy",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Watch the first Tour de France in 1903: 60 cyclists, 2,428 kilometres, six stages — modern sport competition as mass spectacle",
+        "cat": "sport"
+      }
+    ]
+  },
+  "World_War_I": {
+    "it": [
+      {
+        "text": "Osserva Max Ernst creare i collage Dada a Colonia nel 1919: l'arte risponde all'orrore della guerra con immagini frammentate e irrazionali",
+        "cat": "arte"
+      },
+      {
+        "text": "Canta «It's a Long Way to Tipperary» con i soldati britannici che marciano verso il fronte: le canzoni di trincea come unico conforto collettivo",
+        "cat": "musica"
+      },
+      {
+        "text": "Studia Fritz Haber che sviluppa il primo attacco con gas cloro a Ypres nel 1915 — lo stesso chimico che aveva nutrito il mondo con l'azoto sintetico",
+        "cat": "scienza"
+      },
+      {
+        "text": "Leggi Wittgenstein che scrive il «Tractatus» in trincea sul fronte galiziano: la filosofia analitica nasce tra le bombe e il fango",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Rivivi la tregua di Natale del 1914: soldati tedeschi e britannici giocano a calcio nella terra di nessuno prima di riprendere a combattere",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Watch Max Ernst create Dada collages in Cologne in 1919: art responds to war's horror with fragmented and irrational imagery",
+        "cat": "arte"
+      },
+      {
+        "text": "Sing It's a Long Way to Tipperary with British soldiers marching to the front: trench songs as the only collective comfort",
+        "cat": "musica"
+      },
+      {
+        "text": "Study Fritz Haber developing the first chlorine gas attack at Ypres in 1915 — the same chemist who had fed the world with synthetic nitrogen",
+        "cat": "scienza"
+      },
+      {
+        "text": "Read Wittgenstein writing the Tractatus in the Galician trench: analytic philosophy is born between bombs and mud",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Relive the Christmas Truce of 1914: German and British soldiers play football in no man's land before returning to combat",
+        "cat": "sport"
+      }
+    ]
+  },
+  "Interwar_period": {
+    "it": [
+      {
+        "text": "Ammira «Guernica» di Picasso (1937): sedici metri quadri in bianco e nero che condensano l'orrore del bombardamento nella Guerra Civile Spagnola",
+        "cat": "arte"
+      },
+      {
+        "text": "Ascolta Kurt Weill e Brecht presentare «L'opera da tre soldi» a Berlino nel 1928: jazz, cabaret e critica marxista sul palcoscenico",
+        "cat": "musica"
+      },
+      {
+        "text": "Studia Heisenberg formulare il principio di indeterminazione nel 1927: la meccanica quantistica demolisce il determinismo classico e sconcerta Einstein",
+        "cat": "scienza"
+      },
+      {
+        "text": "Leggi «Essere e Tempo» di Heidegger (1927): l'esistenzialismo inizia con la domanda sul senso dell'essere e rivoluziona la filosofia del Novecento",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Assisti a Jesse Owens vincere quattro ori alle Olimpiadi di Berlino del 1936 davanti a Hitler: la risposta atletica al nazismo",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Admire Picasso's Guernica (1937): sixteen square metres in black and white condensing the horror of the bombing during the Spanish Civil War",
+        "cat": "arte"
+      },
+      {
+        "text": "Listen to Kurt Weill and Brecht premiere The Threepenny Opera in Berlin in 1928: jazz, cabaret and Marxist critique on stage",
+        "cat": "musica"
+      },
+      {
+        "text": "Study Heisenberg formulate the uncertainty principle in 1927: quantum mechanics demolishes classical determinism and baffles Einstein",
+        "cat": "scienza"
+      },
+      {
+        "text": "Read Heidegger's Being and Time (1927): existentialism begins with the question of the meaning of being and revolutionizes twentieth-century philosophy",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Watch Jesse Owens win four gold medals at the 1936 Berlin Olympics in front of Hitler: the athletic answer to Nazism",
+        "cat": "sport"
+      }
+    ]
+  },
+  "World_War_II": {
+    "it": [
+      {
+        "text": "Osserva il manifesto «Rosie the Riveter» (1943) di J. Howard Miller: l'immagine che mobilita le donne americane nelle fabbriche di guerra",
+        "cat": "arte"
+      },
+      {
+        "text": "Ascolta Glenn Miller suonare «In the Mood» per i soldati statunitensi in Europa: il jazz come strumento di morale e propaganda alleata",
+        "cat": "musica"
+      },
+      {
+        "text": "Studia il computer Colossus di Alan Turing a Bletchley Park: la macchina che decifra Enigma e accorcia la guerra — e inventa l'informatica moderna",
+        "cat": "scienza"
+      },
+      {
+        "text": "Leggi Hannah Arendt sulla «banalità del male» nel processo Eichmann: la brutalità non nasce da mostri ma da funzionari obbedienti",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Ricorda il «Match della Morte» di Kiev, agosto 1942: i calciatori dello Start FC battono la Luftwaffe e vengono fucilati dai nazisti",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Examine J. Howard Miller's Rosie the Riveter poster (1943): the image that mobilises American women into wartime factories",
+        "cat": "arte"
+      },
+      {
+        "text": "Listen to Glenn Miller play In the Mood for US troops in Europe: jazz as a tool for Allied morale and propaganda",
+        "cat": "musica"
+      },
+      {
+        "text": "Study Alan Turing's Colossus computer at Bletchley Park: the machine that cracks Enigma and shortens the war — and invents modern computing",
+        "cat": "scienza"
+      },
+      {
+        "text": "Read Hannah Arendt on the banality of evil at the Eichmann trial: brutality comes not from monsters but from obedient functionaries",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Remember the Death Match in Kiev, August 1942: Start FC footballers beat the Luftwaffe team and are shot by the Nazis",
+        "cat": "sport"
+      }
+    ]
+  },
+  "Cold_War": {
+    "it": [
+      {
+        "text": "Visita la Factory di Andy Warhol a New York nel 1962: lattine di zuppa Campbell serigrafate — la Pop Art trasforma il consumismo in arte",
+        "cat": "arte"
+      },
+      {
+        "text": "Ascolta i Beatles invadere gli Stati Uniti nel 1964: 73 milioni di spettatori in TV — il rock britannico come arma culturale della Guerra Fredda",
+        "cat": "musica"
+      },
+      {
+        "text": "Studia come ARPANET, finanziata dal Pentagono nel 1969, connette quattro università americane — la rete militare che diventa Internet",
+        "cat": "scienza"
+      },
+      {
+        "text": "Leggi Sartre dibattere con Camus su marxismo e libertà negli anni Cinquanta a Parigi: la filosofia esistenzialista si divide sulla questione comunista",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Assisti alla «Partita del Secolo» Fischer-Spassky nel 1972 a Reykjavik: gli scacchi come campo di battaglia simbolico della Guerra Fredda",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Visit Andy Warhol's Factory in New York in 1962: silkscreened Campbell's soup cans — Pop Art transforms consumerism into art",
+        "cat": "arte"
+      },
+      {
+        "text": "Watch the Beatles invade the United States in 1964: 73 million TV viewers — British rock as a cultural weapon in the Cold War",
+        "cat": "musica"
+      },
+      {
+        "text": "Study how ARPANET, funded by the Pentagon in 1969, connects four American universities — the military network that becomes the Internet",
+        "cat": "scienza"
+      },
+      {
+        "text": "Read Sartre debate with Camus on Marxism and freedom in 1950s Paris: existentialist philosophy splits over the communist question",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Watch the Fischer-Spassky Match of the Century in Reykjavik in 1972: chess as the symbolic battlefield of the Cold War",
+        "cat": "sport"
+      }
+    ]
+  },
+  "Globalization": {
+    "it": [
+      {
+        "text": "Visita la mostra di Ai Weiwei «Remembering» a Monaco nel 2009: 9.000 zainetti di bambini sul museo come accusa al governo cinese",
+        "cat": "arte"
+      },
+      {
+        "text": "Guarda MTV nascere nell'agosto 1981 con «Video Killed the Radio Star»: il canale musicale che globalizza la cultura pop e crea le pop star visive",
+        "cat": "musica"
+      },
+      {
+        "text": "Assisti alla pubblicazione del genoma umano completo nel 2003: tre miliardi di basi azotate sequenziate — la carta d'identità biologica della specie",
+        "cat": "scienza"
+      },
+      {
+        "text": "Leggi Fukuyama dichiarare «la fine della storia» nel 1992 e Stiglitz criticare la globalizzazione: il grande dibattito intellettuale degli anni Novanta",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Assisti alle NBA Finals del 1992 con Michael Jordan: il basket americano diventa sport globale e il merchandising sportivo supera i miliardi di dollari",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Visit Ai Weiwei's Remembering installation in Munich in 2009: 9,000 children's backpacks on the museum facade as an indictment of the Chinese government",
+        "cat": "arte"
+      },
+      {
+        "text": "Watch MTV launch in August 1981 with Video Killed the Radio Star: the music channel that globalises pop culture and creates visual pop stars",
+        "cat": "musica"
+      },
+      {
+        "text": "Witness the publication of the complete human genome in 2003: three billion base pairs sequenced — the biological identity card of the species",
+        "cat": "scienza"
+      },
+      {
+        "text": "Read Fukuyama declare the end of history in 1992 and Stiglitz critique globalization: the great intellectual debate of the 1990s",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Watch the 1992 NBA Finals with Michael Jordan: American basketball becomes a global sport and sports merchandising surpasses billions of dollars",
+        "cat": "sport"
+      }
+    ]
+  },
+  "Digital_age": {
+    "it": [
+      {
+        "text": "Osserva Banksy distruggere «Balloon Girl» (2018) all'asta di Sotheby's: l'arte di strada sfida il mercato e triplica il valore dell'opera",
+        "cat": "arte"
+      },
+      {
+        "text": "Esplora Spotify nel 2008: la musica dell'intera storia umana accessibile su uno smartphone — lo streaming trasforma l'industria discografica globale",
+        "cat": "musica"
+      },
+      {
+        "text": "Studia CRISPR-Cas9 dal 2012: la tecnica che taglia e incolla il DNA come un testo — Jennifer Doudna e Emmanuelle Charpentier vincono il Nobel nel 2020",
+        "cat": "scienza"
+      },
+      {
+        "text": "Leggi «Homo Deus» di Yuval Noah Harari (2015): il transumanesimo e il data-ismo sfidano le idee tradizionali di umanità, libertà e coscienza",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Guarda il Campionato Mondiale di League of Legends (2023): 74 milioni di spettatori online — gli esport superano la NBA come pubblico globale",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Watch Banksy shred Balloon Girl (2018) at Sotheby's: street art challenges the market and triples the work's value in real time",
+        "cat": "arte"
+      },
+      {
+        "text": "Explore Spotify in 2008: all of human musical history accessible on one smartphone — streaming transforms the global music industry",
+        "cat": "musica"
+      },
+      {
+        "text": "Study CRISPR-Cas9 from 2012: the technique that cuts and pastes DNA like text — Jennifer Doudna and Emmanuelle Charpentier win the Nobel in 2020",
+        "cat": "scienza"
+      },
+      {
+        "text": "Read Yuval Noah Harari's Homo Deus (2015): transhumanism and dataism challenge traditional ideas of humanity, freedom and consciousness",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Watch the League of Legends World Championship (2023): 74 million online viewers — esports surpasses the NBA as global audience",
+        "cat": "sport"
+      }
+    ]
+  }
+}

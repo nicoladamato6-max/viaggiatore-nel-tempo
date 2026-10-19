@@ -1,0 +1,82 @@
+{
+  "Roman_Empire": {
+    "it": [
+      {"text": "Studia la Colonna Traiana e i suoi 2.500 soldati scolpiti in spirale — il più grande racconto visivo narrativo dell'antichità", "cat": "arte"},
+      {"text": "Ascolta l'hydraulis, l'organo ad acqua inventato da Ctesibio di Alessandria, risuonare nei teatri romani durante gli spettacoli", "cat": "musica"},
+      {"text": "Leggi il De Architectura di Vitruvio e scopri come i romani progettano terme, teatri e acquedotti con calcoli geometrici precisi", "cat": "scienza"},
+      {"text": "Medita con Marco Aurelio i Pensieri scritti durante le campagne militari: lo stoicismo come arte di vivere senza illudersi", "cat": "filosofia"},
+      {"text": "Siediti tra i 50.000 spettatori del Colosseo durante i ludi romani e osserva come il potere usa lo spettacolo per governare", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Study Trajan's Column and its 2,500 spiraling soldiers — the greatest narrative visual storytelling of antiquity", "cat": "arte"},
+      {"text": "Listen to the hydraulis, the water organ invented by Ctesibius of Alexandria, resounding in Roman theatres during performances", "cat": "musica"},
+      {"text": "Read Vitruvius's De Architectura and discover how Romans design baths, theatres and aqueducts with precise geometric calculations", "cat": "scienza"},
+      {"text": "Meditate with Marcus Aurelius on his Meditations written during military campaigns: Stoicism as the art of living without illusions", "cat": "filosofia"},
+      {"text": "Sit among 50,000 spectators at the Colosseum during the Roman ludi and observe how power uses spectacle to govern", "cat": "sport"}
+    ]
+  },
+  "Early_Middle_Ages": {
+    "it": [
+      {"text": "Ammira i mosaici di San Vitale a Ravenna, 547 d.C.: arte longobarda e bizantina si fondono in un capolavoro di colori e oro", "cat": "arte"},
+      {"text": "Ascolta il canto gregoriano risuonare sotto le volte di un'abbazia benedettina: la prima musica scritta e codificata d'Europa", "cat": "musica"},
+      {"text": "Leggi le Etymologiae di Isidoro di Siviglia, 630 d.C.: la prima enciclopedia medievale che conserva il sapere antico per l'Europa", "cat": "scienza"},
+      {"text": "Studia la Consolazione della Filosofia di Boezio, scritta in carcere nel 524 d.C. in attesa dell'esecuzione: il destino e la Provvidenza", "cat": "filosofia"},
+      {"text": "Pratica la falconeria con un nobile longobardo: l'arte di addestrare rapaci diventa il simbolo dello status aristocratico medievale", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Admire the mosaics of San Vitale in Ravenna, 547 AD: Lombard and Byzantine art fuse in a masterpiece of color and gold", "cat": "arte"},
+      {"text": "Listen to Gregorian chant resound beneath the vaults of a Benedictine abbey: Europe's first written and codified music", "cat": "musica"},
+      {"text": "Read Isidore of Seville's Etymologiae, 630 AD: the first medieval encyclopedia that preserves ancient knowledge for Europe", "cat": "scienza"},
+      {"text": "Study Boethius's Consolation of Philosophy, written in prison in 524 AD while awaiting execution: fate and Providence", "cat": "filosofia"},
+      {"text": "Practice falconry with a Lombard nobleman: the art of training raptors becomes the defining symbol of medieval aristocratic status", "cat": "sport"}
+    ]
+  },
+  "Carolingian_Empire": {
+    "it": [
+      {"text": "Esamina gli avori carolingi della Scuola di Palazzo: scene bibliche incise su zanne d'elefante con una raffinatezza senza precedenti", "cat": "arte"},
+      {"text": "Partecipa alla Schola Cantorum di Aquisgrana: Carlo Magno importa il canto antifonale romano per unificare la liturgia in tutto l'Impero", "cat": "musica"},
+      {"text": "Studia astronomia con Alcuino di York alla Scuola Palatina: la rinascita carolingia riscopre Beda e i calcoli del calendario ecclesiastico", "cat": "scienza"},
+      {"text": "Dibatti di teologia carolingia alla corte di Carlo Magno: il rapporto tra ragione e fede nella rinascita del latino classico", "cat": "filosofia"},
+      {"text": "Unisciti alla caccia imperiale di Carlo Magno nelle foreste delle Ardenne: un rito militare e politico oltre che sportivo", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Examine the Carolingian ivory carvings of the Palace School: biblical scenes carved on elephant tusks with unprecedented refinement", "cat": "arte"},
+      {"text": "Join the Schola Cantorum at Aachen: Charlemagne imports Roman antiphonal chant to unify the liturgy throughout the Empire", "cat": "musica"},
+      {"text": "Study astronomy with Alcuin of York at the Palace School: the Carolingian renaissance rediscovers Bede and ecclesiastical calendar calculations", "cat": "scienza"},
+      {"text": "Debate Carolingian theology at Charlemagne's court: the relationship between reason and faith in the revival of classical Latin", "cat": "filosofia"},
+      {"text": "Join Charlemagne's imperial hunt in the Ardennes forests: a military and political ritual as much as a sporting pursuit", "cat": "sport"}
+    ]
+  },
+  "Feudalism": {
+    "it": [
+      {"text": "Studia l'Arazzo di Bayeux, 1070: 70 metri di ricamo narrano la conquista normanna dell'Inghilterra con vivacità cinematografica", "cat": "arte"},
+      {"text": "Ascolta un trovatore occitano intonare una chanson de geste in una corte feudale: l'amor cortese come codice sociale e letterario", "cat": "musica"},
+      {"text": "Osserva la costruzione di un mulino ad acqua: la meccanica applicata all'agricoltura rivoluziona la produzione di farina in Europa", "cat": "scienza"},
+      {"text": "Leggi il Proslogion di Anselmo d'Aosta, 1078: la prova ontologica dell'esistenza di Dio — la filosofia medievale al servizio della fede", "cat": "filosofia"},
+      {"text": "Partecipa a un torneo cavalleresco in Normandia: combattimento collettivo con lance e spade davanti alla corte come spettacolo politico", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Study the Bayeux Tapestry, 1070: 70 meters of embroidery narrate the Norman conquest of England with cinematic vividness", "cat": "arte"},
+      {"text": "Listen to an Occitan troubadour sing a chanson de geste at a feudal court: courtly love as social code and literary form", "cat": "musica"},
+      {"text": "Watch the construction of a watermill: applied mechanics revolutionizes flour production and transforms agricultural Europe", "cat": "scienza"},
+      {"text": "Read Anselm of Aosta's Proslogion, 1078: the ontological proof of God's existence — medieval philosophy in service of faith", "cat": "filosofia"},
+      {"text": "Join a knightly tournament in Normandy: collective combat with lances and swords before the assembled court as political spectacle", "cat": "sport"}
+    ]
+  },
+  "High_Middle_Ages": {
+    "it": [
+      {"text": "Guarda il cantiere di Notre-Dame di Parigi nel 1200: gli archi rampanti sfidano la fisica e portano la luce nelle navate gotiche", "cat": "arte"},
+      {"text": "Ascolta l'Organum di Léonin e Pérotin alla Scuola di Notre Dame: la prima polifonia scritta trasforma la musica sacra in arte pura", "cat": "musica"},
+      {"text": "Studia con Roger Bacon a Oxford nel 1260: lenti, specchi e prismi — la prima scienza sperimentale moderna sfida l'autorità aristotelica", "cat": "scienza"},
+      {"text": "Leggi la Summa Theologiae di Tommaso d'Aquino: la sintesi tra Aristotele e il Vangelo che fonda la filosofia scolastica cristiana", "cat": "filosofia"},
+      {"text": "Partecipa al proto-Calcio storico nelle piazze fiorentine del XIII secolo: squadre di quartiere, nessuna regola, pura forza fisica", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Watch the construction of Notre-Dame de Paris in 1200: flying buttresses defy physics and flood Gothic naves with light", "cat": "arte"},
+      {"text": "Listen to Léonin and Pérotin's Organum at the Notre Dame School: the first written polyphony transforms sacred music into pure art", "cat": "musica"},
+      {"text": "Study with Roger Bacon at Oxford in 1260: lenses, mirrors and prisms — the first modern experimental science challenges Aristotelian authority", "cat": "scienza"},
+      {"text": "Read Thomas Aquinas's Summa Theologiae: the synthesis of Aristotle and the Gospel that founds medieval Christian scholastic philosophy", "cat": "filosofia"},
+      {"text": "Join the proto-Calcio storico in 13th-century Florentine piazzas: neighborhood teams, no rules, pure physical force", "cat": "sport"}
+    ]
+  }
+}

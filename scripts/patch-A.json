@@ -1,0 +1,278 @@
+{
+  "Observable_universe": {
+    "it": [
+      {
+        "text": "Studia la radiazione di Hawking: i buchi neri non sono eterni e lentamente evaporano emettendo particelle quantistiche",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Analizza l'epoca di Planck: nei primi 10⁻⁴³ secondi la gravità e le altre forze fondamentali erano un'unica forza indistinta",
+        "cat": "scienza"
+      },
+      {
+        "text": "Rifletti sul problema del fine-tuning con Nick Bostrom: perché le costanti fisiche dell'universo consentono esattamente la vita?",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Esplora la formazione del Sole 4,6 miliardi di anni fa: una nube di gas e polvere che collassa su sé stessa per gravità",
+        "cat": "geologia"
+      },
+      {
+        "text": "Contempla le nebulae catturate dal James Webb Space Telescope: pilastri di gas e polvere cosmica che formano stelle per milioni di anni",
+        "cat": "arte"
+      }
+    ],
+    "en": [
+      {
+        "text": "Study Hawking radiation: black holes are not eternal and slowly evaporate by emitting quantum particles over billions of years",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Analyze the Planck epoch: in the first 10⁻⁴³ seconds gravity and all other fundamental forces were a single indistinguishable force",
+        "cat": "scienza"
+      },
+      {
+        "text": "Reflect on the fine-tuning problem with Nick Bostrom: why do the universe's physical constants allow exactly for life to exist?",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Explore the Sun's formation 4.6 billion years ago: a cloud of gas and dust collapsing on itself through gravitational attraction",
+        "cat": "geologia"
+      },
+      {
+        "text": "Contemplate nebulae captured by the James Webb Space Telescope: pillars of gas and cosmic dust forming tomorrow's stars",
+        "cat": "arte"
+      }
+    ]
+  },
+  "History_of_Earth": {
+    "it": [
+      {
+        "text": "Osserva il Grande Bombardamento Tardivo 3,9 miliardi di anni fa: migliaia di asteroidi e comete martellano la Terra neonata",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Studia gli stromatoliti di Shark Bay in Australia: le stesse strutture di 3,5 miliardi di anni fa esistono ancora oggi",
+        "cat": "scienza"
+      },
+      {
+        "text": "Medita sull'ipotesi Gaia di James Lovelock: la Terra regola temperatura e chimica atmosferica come un sistema vivente autoorganizzato",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Esplora il supercontinente Rodinia, assemblato 1,1 miliardi di anni fa e poi spaccato dalla deriva dei continenti 200 milioni di anni dopo",
+        "cat": "geologia"
+      },
+      {
+        "text": "Ammira le colonne basaltiche della Chaussée des Géants in Irlanda del Nord: esagoni di lava solidificata larghi 50 cm",
+        "cat": "arte"
+      }
+    ],
+    "en": [
+      {
+        "text": "Observe the Late Heavy Bombardment 3.9 billion years ago: thousands of asteroids and comets hammer the newborn Earth",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Study Shark Bay stromatolites in Australia: the same living structures built by cyanobacteria 3.5 billion years ago still exist today",
+        "cat": "scienza"
+      },
+      {
+        "text": "Meditate on James Lovelock's Gaia hypothesis: Earth self-regulates its temperature and atmospheric chemistry like a living system",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Explore supercontinent Rodinia, assembled 1.1 billion years ago and then split apart by continental drift 200 million years later",
+        "cat": "geologia"
+      },
+      {
+        "text": "Admire the basalt columns of Giant's Causeway in Northern Ireland: perfect hexagons of solidified lava 50 centimeters wide",
+        "cat": "arte"
+      }
+    ]
+  },
+  "Paleozoic": {
+    "it": [
+      {
+        "text": "Osserva il cielo devoniano senza inquinamento luminoso: la Via Lattea splende sulle prime foreste dove respirano i primi vertebrati terrestri",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Studia Tiktaalik roseae, scoperto da Neil Shubin nel 2004: pinne con ossa omologhe alle zampe dei tetrapodi — il fossile di transizione",
+        "cat": "scienza"
+      },
+      {
+        "text": "Rifletti con Stephen Jay Gould: il Burgess Shale mostra che l'evoluzione è contingenza pura, non progresso verso la complessità",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Esplora il supercontinente Gondwana nel Cambriano: oceani tropicali caldi ricchi di trilobiti e le prime barriere coralline della storia",
+        "cat": "geologia"
+      },
+      {
+        "text": "Ammira le geometrie naturali dei coralli rugosi paleozoici: architetture in calcite estinte al Permiano, mai più riprodotte dalla natura",
+        "cat": "arte"
+      }
+    ],
+    "en": [
+      {
+        "text": "Observe the Devonian sky without light pollution: the Milky Way shines over primordial forests where the first land vertebrates breathe",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Study Tiktaalik roseae, discovered by Neil Shubin in 2004: fins with bones homologous to tetrapod limbs — the key transitional fossil",
+        "cat": "scienza"
+      },
+      {
+        "text": "Reflect with Stephen Jay Gould: the Burgess Shale shows evolution is pure contingency, not inevitable progress toward complexity",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Explore supercontinent Gondwana in the Cambrian: warm tropical oceans rich in trilobites and the very first coral reefs in history",
+        "cat": "geologia"
+      },
+      {
+        "text": "Admire the natural geometry of Paleozoic rugose corals: calcite architectures extinct since the Permian, never reproduced by nature again",
+        "cat": "arte"
+      }
+    ]
+  },
+  "Mesozoic": {
+    "it": [
+      {
+        "text": "Osserva il cielo cretaceo notturno: senza inquinamento luminoso, i dinosauri vivono sotto una Via Lattea mille volte più vivida di quella che vediamo noi",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Studia Archeopteryx lithographica scoperto da Huxley nel 1861: penne da uccello, denti da rettile — il legame evolutivo tra dinosauri e avifauna",
+        "cat": "scienza"
+      },
+      {
+        "text": "Rifletti con Stephen Jay Gould: se l'asteroide dello Chicxulub avesse mancato la Terra, i mammiferi sarebbero ancora piccoli insettivori notturni",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Osserva la deriva di Gondwana: l'Atlantico si apre lentamente tra Africa e Sud America, isolando fauna che evolverà separatamente per milioni di anni",
+        "cat": "geologia"
+      },
+      {
+        "text": "Ammira le Dolomiti: ex barriere coralline triassiche spinte a 3.000 metri dalla tettonica, cattedrali di calcare dipinte da Tiziano nei suoi sfondi",
+        "cat": "arte"
+      }
+    ],
+    "en": [
+      {
+        "text": "Observe the Cretaceous night sky: without light pollution, dinosaurs live under a Milky Way a thousand times more vivid than what we see today",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Study Archaeopteryx lithographica discovered by Huxley in 1861: bird feathers, reptile teeth — the evolutionary link between dinosaurs and birds",
+        "cat": "scienza"
+      },
+      {
+        "text": "Reflect with Stephen Jay Gould: if the Chicxulub asteroid had missed Earth, mammals would still be small nocturnal insectivores today",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Observe Gondwana drifting: the Atlantic slowly opens between Africa and South America, isolating fauna that will evolve separately for millions of years",
+        "cat": "geologia"
+      },
+      {
+        "text": "Admire the Dolomites: former Triassic coral reefs pushed to 3,000 meters by tectonics, limestone cathedrals painted by Titian in his backgrounds",
+        "cat": "arte"
+      }
+    ]
+  },
+  "Cenozoic": {
+    "it": [
+      {
+        "text": "Studia i cicli di Milankovitch: le oscillazioni dell'orbita terrestre descritte dal fisico serbo nel 1920 spiegano le glaciazioni del Pleistocene",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Studia l'evoluzione del cavallo con Othniel Marsh: da Eohippus grande come un cane a Equus moderno in 55 milioni di anni di selezione naturale",
+        "cat": "scienza"
+      },
+      {
+        "text": "Medita con Charles Darwin: la selezione naturale dell'Origine delle Specie del 1859 dissolve il concetto di scopo e direzione nella natura",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Esplora la formazione delle Alpi nel Miocene: la collisione tra la placca africana e quella europea solleva montagne che alterano i monsoni asiatici",
+        "cat": "geologia"
+      },
+      {
+        "text": "Ammira le prime incisioni geometriche su ocra di Blombos Cave in Sudafrica: arte astratta creata da Homo sapiens 77.000 anni fa",
+        "cat": "arte"
+      }
+    ],
+    "en": [
+      {
+        "text": "Study Milankovitch cycles: orbital oscillations described by the Serbian physicist in 1920 explain why Pleistocene glaciations repeat every 100,000 years",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Study horse evolution with Othniel Marsh: from dog-sized Eohippus to modern Equus over 55 million years of natural selection",
+        "cat": "scienza"
+      },
+      {
+        "text": "Meditate with Charles Darwin: natural selection in the 1859 Origin of Species dissolves the concept of purpose and direction in nature",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Explore the Alps forming in the Miocene: the collision of the African and European plates raises mountains that alter Asian monsoon patterns",
+        "cat": "geologia"
+      },
+      {
+        "text": "Admire the first geometric engravings on ochre from Blombos Cave in South Africa: abstract art created by Homo sapiens 77,000 years ago",
+        "cat": "arte"
+      }
+    ]
+  },
+  "Prehistory": {
+    "it": [
+      {
+        "text": "Studia Stonehenge nella sua fase neolitica: i megaliti allineati al solstizio d'estate da 5.000 anni dimostrano astronomia pratica avanzata",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Studia il biface acheuleano di Olduvai Gorge: la stessa tecnica di scheggiatura simmetrica usata per un milione di anni testimonia la cognizione umana",
+        "cat": "scienza"
+      },
+      {
+        "text": "Partecipa a un rituale sciamanico del Paleolitico: le figure metà-uomo metà-animale di Lascaux suggeriscono stati alterati di coscienza intenzionali",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Osserva la Doggerland ora sommersa: 10.000 anni fa questa pianura nel Mare del Nord collegava Inghilterra e Danimarca, fertile e popolata",
+        "cat": "geologia"
+      },
+      {
+        "text": "Entra a Chauvet-Pont-d'Arc: le pitture rupestri di 36.000 anni fa mostrano leoni in movimento con prospettiva e maestria paragonabili a Picasso",
+        "cat": "arte"
+      }
+    ],
+    "en": [
+      {
+        "text": "Study Stonehenge in its Neolithic phase: megalith alignments to the summer solstice 5,000 years ago prove advanced prehistoric practical astronomy",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Study the Acheulean handaxe from Olduvai Gorge: the same symmetric flaking technique used for one million years proves advanced human cognition",
+        "cat": "scienza"
+      },
+      {
+        "text": "Participate in a Paleolithic shamanic ritual: half-human half-animal figures in Lascaux suggest intentional altered states of consciousness",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Observe now-submerged Doggerland: 10,000 years ago this North Sea plain connected England to Denmark, fertile and populated with wildlife",
+        "cat": "geologia"
+      },
+      {
+        "text": "Enter Chauvet-Pont-d'Arc: 36,000-year-old cave paintings show lions in motion with perspective and mastery comparable to Picasso",
+        "cat": "arte"
+      }
+    ]
+  }
+}

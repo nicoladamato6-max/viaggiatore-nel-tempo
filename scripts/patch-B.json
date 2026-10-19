@@ -1,0 +1,278 @@
+{
+  "Ancient_history": {
+    "it": [
+      {
+        "text": "Ammira le metope del Partenone scolpite da Fidia ad Atene nel 440 a.C. — marmo bianco che cattura il movimento della battaglia dei Centauri per sempre",
+        "cat": "arte"
+      },
+      {
+        "text": "Ascolta un aedo cantare l'Iliade di Omero al banchetto di un re acheo, accompagnato da una lira a sette corde di budello di bue",
+        "cat": "musica"
+      },
+      {
+        "text": "Studia le tavole astronomiche di Nabu-rimanni a Babilonia: predice le eclissi lunari con precisione al minuto secoli prima di Tolomeo",
+        "cat": "scienza"
+      },
+      {
+        "text": "Discuti con Aristotele nel Liceo di Atene la sua Etica Nicomachea — la prima analisi sistematica della felicità come fine dell'agire umano",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Gareggia ai Giochi Istmici di Corinto con atleti da tutto il Mediterraneo: corsa armata, lotta e pancrazione senza regole di peso",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Admire the metopes of the Parthenon carved by Phidias in Athens, 440 BC — white marble capturing the Centauromachy in eternal motion",
+        "cat": "arte"
+      },
+      {
+        "text": "Listen to an aoidos sing Homer's Iliad at an Achaean king's banquet, accompanied by a seven-string lyre strung with ox gut",
+        "cat": "musica"
+      },
+      {
+        "text": "Study the astronomical tables of Nabu-rimanni in Babylon: he predicts lunar eclipses to the minute, centuries before Ptolemy",
+        "cat": "scienza"
+      },
+      {
+        "text": "Debate with Aristotle in the Lyceum of Athens on his Nicomachean Ethics — the first systematic analysis of happiness as the aim of human action",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Compete in the Isthmian Games at Corinth with athletes from across the Mediterranean: armed racing, wrestling, and no-holds-barred pankration",
+        "cat": "sport"
+      }
+    ]
+  },
+  "Middle_Ages": {
+    "it": [
+      {
+        "text": "Ammira i mosaici dorati di San Vitale a Ravenna, 547 d.C., dove Giustiniano e Teodora dominano le pareti con sguardi immobili e oro divino",
+        "cat": "arte"
+      },
+      {
+        "text": "Ascolta il canto gregoriano nell'abbazia di Cluny nel X secolo — centinaia di voci monacali che riempiono navate di pietra senza alcun strumento",
+        "cat": "musica"
+      },
+      {
+        "text": "Studia il Libro dell'Ottica di Ibn al-Haytham scritto al Cairo nel 1020 — la prima teoria della visione sperimentalmente verificata della storia",
+        "cat": "scienza"
+      },
+      {
+        "text": "Leggi la Summa Theologiae di Tommaso d'Aquino scritta a Parigi nel 1265: la sintesi più ambiziosa di fede aristotelica e rivelazione cristiana",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Partecipa a un torneo cavalleresco in Borgogna nel XIV secolo, dove nobili corazzati si sfidano in giostre per onore, terre e l'occhio di una dama",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Admire the golden mosaics of San Vitale in Ravenna, 547 AD, where Justinian and Theodora dominate the walls with frozen gazes and divine gold",
+        "cat": "arte"
+      },
+      {
+        "text": "Listen to Gregorian chant in the Abbey of Cluny in the 10th century — hundreds of monastic voices filling stone naves without a single instrument",
+        "cat": "musica"
+      },
+      {
+        "text": "Study the Book of Optics by Ibn al-Haytham written in Cairo in 1020 — the first experimentally verified theory of vision in history",
+        "cat": "scienza"
+      },
+      {
+        "text": "Read Thomas Aquinas's Summa Theologiae written in Paris in 1265: the most ambitious synthesis of Aristotelian faith and Christian revelation",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Attend a knightly tournament in Burgundy in the 14th century, where armored nobles joust for honor, land, and a lady's eye",
+        "cat": "sport"
+      }
+    ]
+  },
+  "Early_modern_period": {
+    "it": [
+      {
+        "text": "Ammira la Cappella Sistina di Michelangelo appena completata nel 1512 — 500 metri quadri di affresco dipinti in quattro anni su un ponteggio alto 20 metri",
+        "cat": "arte"
+      },
+      {
+        "text": "Ascolta L'Orfeo di Claudio Monteverdi eseguito a Mantova nel 1607 — la prima opera lirica della storia, con archi, liuti e basso continuo",
+        "cat": "musica"
+      },
+      {
+        "text": "Segui Galileo che punta il cannocchiale verso Giove nel 1610 e scopre quattro lune: la Terra non è più il centro immobile del cosmo",
+        "cat": "scienza"
+      },
+      {
+        "text": "Leggi i Saggi di Montaigne del 1580: il primo filosofo moderno che usa la propria mente come laboratorio e scrive «Que sais-je?»",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Assisti a una partita di calcio fiorentino in Piazza Santa Croce nel 1530 — violento, senza arbitro, tra i quattro quartieri della città in guerra",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Admire Michelangelo's Sistine Chapel ceiling, completed in 1512 — 500 square meters of fresco painted in four years from a 20-meter scaffold",
+        "cat": "arte"
+      },
+      {
+        "text": "Listen to Monteverdi's L'Orfeo performed in Mantua in 1607 — the first opera in history, with strings, lutes, and basso continuo",
+        "cat": "musica"
+      },
+      {
+        "text": "Follow Galileo pointing his telescope at Jupiter in 1610 and discovering four moons: Earth is no longer the immobile center of the cosmos",
+        "cat": "scienza"
+      },
+      {
+        "text": "Read Montaigne's Essays of 1580: the first modern philosopher to use his own mind as a laboratory and write «Que sais-je?»",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Watch a game of calcio fiorentino in Piazza Santa Croce in 1530 — no referee, no weight classes, four city quarters at war on the sand",
+        "cat": "sport"
+      }
+    ]
+  },
+  "Modern_history": {
+    "it": [
+      {
+        "text": "Visita la prima Esposizione degli Impressionisti a Parigi nel 1874, dove Monet, Renoir e Degas rivoluzionano la pittura contro l'accademia",
+        "cat": "arte"
+      },
+      {
+        "text": "Ascolta la prima della Nona Sinfonia di Beethoven a Vienna nel 1824 — il compositore sordo che dirige senza sentire una nota dell'Inno alla Gioia",
+        "cat": "musica"
+      },
+      {
+        "text": "Segui Marie Curie nel suo laboratorio di Parigi mentre isola il polonio e il radio nel 1898 — la prima scienziata a vincere due Nobel in discipline diverse",
+        "cat": "scienza"
+      },
+      {
+        "text": "Leggi il Manifesto del Partito Comunista di Marx ed Engels del 1848: il testo politico più tradotto e discusso dei due secoli successivi",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Vivi le prime Olimpiadi moderne ad Atene nel 1896: 241 atleti da 14 nazioni gareggiano nello Stadio Panatenaico ricostruito in marmo bianco",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Visit the first Impressionist Exhibition in Paris in 1874, where Monet, Renoir and Degas revolutionize painting against the official Academy",
+        "cat": "arte"
+      },
+      {
+        "text": "Listen to the premiere of Beethoven's Ninth Symphony in Vienna in 1824 — the deaf composer conducting without hearing a single note of the Ode to Joy",
+        "cat": "musica"
+      },
+      {
+        "text": "Follow Marie Curie in her Paris laboratory as she isolates polonium and radium in 1898 — the first scientist to win two Nobels in different disciplines",
+        "cat": "scienza"
+      },
+      {
+        "text": "Read the Communist Manifesto by Marx and Engels, 1848: the most translated and debated political text of the following two centuries",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Live the first modern Olympic Games in Athens in 1896: 241 athletes from 14 nations compete in the Panathenaic Stadium rebuilt in white marble",
+        "cat": "sport"
+      }
+    ]
+  },
+  "Lower_Paleolithic": {
+    "it": [
+      {
+        "text": "Osserva Homo erectus scheggiare un'ascia acheuleana simmetrica su entrambi i lati — la simmetria intenzionale è la prima espressione estetica della storia",
+        "cat": "arte"
+      },
+      {
+        "text": "Assisti al primo controllo intenzionale del fuoco nella grotta di Wonderwerk, Sudafrica, 1 milione di anni fa: calore, luce e protezione dai predatori",
+        "cat": "scienza"
+      },
+      {
+        "text": "Esplora la Rift Valley africana: le placche tettoniche si separano lentamente, creando laghi, vulcani e le savane dove evolve il genere Homo",
+        "cat": "geologia"
+      },
+      {
+        "text": "Guarda il cielo notturno africano del Pleistocene senza inquinamento luminoso — la Via Lattea guida i movimenti stagionali dei primi ominidi",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Segui una caccia cooperativa di Homo erectus a un mammut nelle savane del Pleistocene — resistenza fisica, coordinazione e strategia al limite biologico",
+        "cat": "sport"
+      }
+    ],
+    "en": [
+      {
+        "text": "Watch Homo erectus chip a symmetrical Acheulean handaxe on both sides — intentional symmetry is the first aesthetic expression in history",
+        "cat": "arte"
+      },
+      {
+        "text": "Witness the first intentional fire control at Wonderwerk Cave, South Africa, 1 million years ago: heat, light, and protection from predators",
+        "cat": "scienza"
+      },
+      {
+        "text": "Explore the African Rift Valley: tectonic plates slowly pull apart, creating lakes, volcanoes and the savannas where the genus Homo evolves",
+        "cat": "geologia"
+      },
+      {
+        "text": "Watch the Pleistocene African night sky with zero light pollution — the Milky Way guides the seasonal movements of the first hominids",
+        "cat": "cosmo"
+      },
+      {
+        "text": "Follow a cooperative mammoth hunt by Homo erectus on Pleistocene savannas — endurance, coordination and strategy at the biological limit",
+        "cat": "sport"
+      }
+    ]
+  },
+  "Middle_Paleolithic": {
+    "it": [
+      {
+        "text": "Osserva un Neanderthal dipingere a ocra rossa e manganese le pareti della Grotta di Ardales in Spagna, 65.000 anni fa — le prime pitture della storia",
+        "cat": "arte"
+      },
+      {
+        "text": "Studia la tecnica levalloisiana: un Neanderthal prepara un nucleo di selce a forma di tartaruga per ottenere lame standardizzate con pianificazione complessa",
+        "cat": "scienza"
+      },
+      {
+        "text": "Assisti a un rituale funerario neanderthaliano nella grotta di Shanidar, Iraq: fiori pollinici, ocra e utensili deposti intorno al corpo con intenzione simbolica",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Esplora le grotte calcaree karsiche che fungono da rifugi stagionali — stalattiti, stratigrafie di sedimento e le prime architetture abitative della storia",
+        "cat": "geologia"
+      },
+      {
+        "text": "Guarda il cielo durante una notte glaciale europea con un gruppo di Neanderthal — Venere e la Luna probabilmente già osservate nei loro cicli ricorrenti",
+        "cat": "cosmo"
+      }
+    ],
+    "en": [
+      {
+        "text": "Watch a Neanderthal paint red ochre and manganese on the walls of Ardales Cave in Spain, 65,000 years ago — the oldest paintings in history",
+        "cat": "arte"
+      },
+      {
+        "text": "Study the Levallois technique: a Neanderthal prepares a tortoise-shaped flint core to produce standardized blades through complex spatial planning",
+        "cat": "scienza"
+      },
+      {
+        "text": "Witness a Neanderthal funeral ritual in Shanidar Cave, Iraq: pollen flowers, ochre and tools placed around the body with clear symbolic intent",
+        "cat": "filosofia"
+      },
+      {
+        "text": "Explore karstic limestone caves used as seasonal shelters — stalactites, sediment stratigraphy and the first human architectural choices in history",
+        "cat": "geologia"
+      },
+      {
+        "text": "Watch the sky on a glacial European night with a Neanderthal group — Venus and the Moon likely already tracked in their recurring cycles",
+        "cat": "cosmo"
+      }
+    ]
+  }
+}

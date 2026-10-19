@@ -1,0 +1,114 @@
+{
+  "Mesopotamia": {
+    "it": [
+      {"text": "Ammira i sigilli cilindrici di Ur: ogni rotolo in argilla impressa racconta miti di Inanna e divinità sumere in miniatura raffinata", "cat": "arte"},
+      {"text": "Ascolta le lire reali di Ur, con cassa di legno e testa di toro dorata, suonate nei banchetti funebri dei re sumeri", "cat": "musica"},
+      {"text": "Studia le tavole babilonesi di Nippur: radici quadrate e calcoli astronomici in base sessagesimale incisi nell'argilla cruda", "cat": "scienza"},
+      {"text": "Leggi l'Epopea di Gilgamesh, il più antico poema letterario del mondo: un re cerca l'immortalità e scopre che gli dei la negano agli umani", "cat": "filosofia"},
+      {"text": "Osserva le gare di lotta raffigurate nei rilievi assiri di Ninive: atleti nudi si affrontano sotto lo sguardo solenne del re", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Admire the cylinder seals of Ur: each clay impression tells myths of Inanna and Sumerian deities in exquisite miniature craftsmanship", "cat": "arte"},
+      {"text": "Listen to the Royal Lyres of Ur, with wooden bodies and gilded bull's-head soundboxes, played at Sumerian royal funeral banquets", "cat": "musica"},
+      {"text": "Study the Babylonian tablets of Nippur: square roots and astronomical calculations in base sixty inscribed in wet clay", "cat": "scienza"},
+      {"text": "Read the Epic of Gilgamesh, the world's oldest literary poem: a king seeks immortality and discovers the gods deny it to mortals", "cat": "filosofia"},
+      {"text": "Watch wrestling contests depicted in Assyrian reliefs at Nineveh: nude athletes compete before the solemn gaze of the king", "cat": "sport"}
+    ]
+  },
+  "Ancient_Egypt": {
+    "it": [
+      {"text": "Ammira le pitture nella tomba di Nebamun a Tebe: cacciatori e musici dipinti con pigmenti minerali su intonaco bianchissimo", "cat": "arte"},
+      {"text": "Agita il sistro davanti alla statua di Hathor a Dendera: il tintinnio delle lamelle di bronzo purifica il tempio dal male", "cat": "musica"},
+      {"text": "Studia il Papiro di Ebers, 1550 a.C.: 700 rimedi, diagnosi e prescrizioni chirurgiche in geroglifico ieratico, il trattato medico più antico sopravvissuto", "cat": "scienza"},
+      {"text": "Ascolta i sacerdoti recitare il Libro dei Morti: 192 incantesimi guidano l'anima del defunto attraverso il Duat fino a Osiride", "cat": "filosofia"},
+      {"text": "Partecipa alle gare di lotta e nuoto celebrate durante le feste nilotiche: giovani guerrieri si cimentano davanti al faraone a Tebe", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Admire the paintings in Nebamun's Theban tomb: hunters and musicians rendered with mineral pigments on dazzling white plaster", "cat": "arte"},
+      {"text": "Shake the sistrum before Hathor's statue at Dendera: the bronze-blade jingle purifies the temple and drives away evil forces", "cat": "musica"},
+      {"text": "Study the Ebers Papyrus, 1550 BC: 700 remedies, diagnoses and surgical prescriptions in hieratic — the oldest medical treatise to survive", "cat": "scienza"},
+      {"text": "Listen to priests recite the Book of the Dead: 192 spells guide the deceased's soul through the Duat all the way to Osiris", "cat": "filosofia"},
+      {"text": "Compete in wrestling and swimming contests at Nile festivals: young warriors test themselves before the pharaoh in Thebes", "cat": "sport"}
+    ]
+  },
+  "Archaic_Greece": {
+    "it": [
+      {"text": "Ammira un vaso a figure nere di Exekias: Achille e Aiace intenti ai dadi, tratto perfetto su ceramica attica del 540 a.C.", "cat": "arte"},
+      {"text": "Ascolta Saffo di Lesbo cantare le sue odi d'amore accompagnata dalla lira: è la prima poetessa lirica che nomina se stessa nel testo", "cat": "musica"},
+      {"text": "Studia con Talete di Mileto che nel 585 a.C. prevede un'eclissi usando la geometria: è il primo a cercare cause naturali ai fenomeni", "cat": "scienza"},
+      {"text": "Leggi i frammenti di Anassimandro sull'apeiron: la prima teoria cosmologica in prosa che spiega l'universo senza ricorrere agli dei", "cat": "filosofia"},
+      {"text": "Gareggia nel pentathlon delle Olimpiadi arcaiche: corsa, salto, disco, giavellotto e lotta si disputano in un solo giorno", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Admire an Attic black-figure vase by Exekias: Achilles and Ajax playing dice, the brushwork flawless on ceramic fired in Athens around 540 BC", "cat": "arte"},
+      {"text": "Listen to Sappho of Lesbos sing her love odes accompanied by the lyre: she is the first lyric poet to name herself in the text", "cat": "musica"},
+      {"text": "Study with Thales of Miletus who predicts a solar eclipse in 585 BC using geometry: he is first to seek natural causes for phenomena", "cat": "scienza"},
+      {"text": "Read Anaximander's fragments on the apeiron: the first cosmological theory in prose that explains the universe without invoking gods", "cat": "filosofia"},
+      {"text": "Compete in the archaic Olympic pentathlon: running, long jump, discus throw, javelin and wrestling contested in a single day", "cat": "sport"}
+    ]
+  },
+  "Classical_Greece": {
+    "it": [
+      {"text": "Visita il cantiere del Partenone nel 447 a.C. e osserva Fidia sovrintendere le 92 metope e il fregio con centinaia di figure divine", "cat": "arte"},
+      {"text": "Assisti all'Antigone di Sofocle nel teatro di Dioniso: il coro di quindici danzatori canta accompagnato dall'aulos nelle Grandi Dionisie", "cat": "musica"},
+      {"text": "Studia con Ippocrate a Cos: osserva come documenta i sintomi dei malati senza invocare gli dei e redige la prima cartella clinica sistematica", "cat": "scienza"},
+      {"text": "Segui Platone all'Accademia di Atene: insegna che le cose del mondo sono copie imperfette di Forme eterne — l'Idea del Bene è suprema", "cat": "filosofia"},
+      {"text": "Gareggia al pancrazione nelle Olimpiadi del V sec. a.C.: lotta e pugilato combinati senza regole, vietato solo mordere e cavare gli occhi", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Visit the Parthenon construction site in 447 BC and watch Phidias supervise the 92 metopes and frieze with hundreds of carved marble figures", "cat": "arte"},
+      {"text": "Attend Sophocles's Antigone at the Theatre of Dionysus: a chorus of fifteen dancers sings accompanied by the aulos at the Great Dionysia", "cat": "musica"},
+      {"text": "Study with Hippocrates on Cos: watch him document patients' symptoms without invoking gods and write the first systematic clinical case records", "cat": "scienza"},
+      {"text": "Follow Plato at the Academy in Athens: he teaches that worldly things are imperfect copies of eternal Forms — the Idea of the Good is supreme", "cat": "filosofia"},
+      {"text": "Compete in pankration at the 5th-century BC Olympics: wrestling and boxing combined with no rules except no biting or eye-gouging", "cat": "sport"}
+    ]
+  },
+  "Hellenistic_period": {
+    "it": [
+      {"text": "Ammira la Nike di Samotracia, scolpita intorno al 190 a.C.: la dea con ali spiegate cattura il vento sulla prua di una nave di marmo", "cat": "arte"},
+      {"text": "Studia la teoria musicale di Aristosseno di Taranto, allievo di Aristotele: il primo sistema razionale di scale, ritmo e intonazione greca", "cat": "musica"},
+      {"text": "Leggi gli Elementi di Euclide ad Alessandria, 300 a.C.: 465 proposizioni geometriche che rimarranno il fondamento della matematica per duemila anni", "cat": "scienza"},
+      {"text": "Incontra Epicuro nel suo Giardino ad Atene: ti insegna che la felicità è atarassia, assenza di dolore e paura, non piacere sfrenato", "cat": "filosofia"},
+      {"text": "Partecipa ai Giochi Istmici a Corinto, 248 a.C.: atletica, ippica e gare musicali davanti a migliaia di spettatori di tutta la Grecia", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Admire the Winged Victory of Samothrace, carved around 190 BC: the goddess with spread wings captures wind on the prow of a marble ship", "cat": "arte"},
+      {"text": "Study Aristoxenus of Tarentum's music theory, Aristotle's pupil: the first rational system of scales, rhythm and tuning in Greek music", "cat": "musica"},
+      {"text": "Read Euclid's Elements in Alexandria, 300 BC: 465 geometric propositions that will remain the foundation of mathematics for two thousand years", "cat": "scienza"},
+      {"text": "Meet Epicurus in his Garden in Athens: he teaches that happiness is ataraxia — freedom from pain and fear, not unbridled pleasure", "cat": "filosofia"},
+      {"text": "Compete in the Isthmian Games at Corinth, 248 BC: athletic, equestrian and musical events contested before thousands of Greek spectators", "cat": "sport"}
+    ]
+  },
+  "Kingdom_of_Rome": {
+    "it": [
+      {"text": "Osserva i coroplasti etruschi di Veio plasmare antefisse in terracotta: dee alate e guerrieri in tufo decorano i templi del Lazio arcaico", "cat": "arte"},
+      {"text": "Ascolta le tibiae a doppio flauto durante i Lupercalia sul Palatino: il suono avvolge le processioni sacre e scandisce i riti arcaici romani", "cat": "musica"},
+      {"text": "Studia i primi agrimensori romani che tracciano le mura di Roma con groma e corda: la pertica divide i campi in lotti uguali per i coloni", "cat": "scienza"},
+      {"text": "Partecipa ai riti dei Lari e dei Penati nel larario domestico: le divinità protettrici del focolare tengono unita la famiglia latina arcaica", "cat": "filosofia"},
+      {"text": "Assisti ai ludi romani arcaici al Circo Massimo: bighe e gare atletiche celebrate in onore degli dei fin dai tempi leggendari di Romolo", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Watch Etruscan coroplasts from Veii model terracotta antefixes: winged goddesses and warriors in tuff decorate temples across archaic Latium", "cat": "arte"},
+      {"text": "Listen to the double-pipe tibiae during the Lupercalia on the Palatine: the sound envelops sacred processions and marks archaic Roman rites", "cat": "musica"},
+      {"text": "Watch Rome's first surveyors lay out the city walls with groma and rope: the pertica divides land into equal plots for Latin settlers", "cat": "scienza"},
+      {"text": "Participate in the rites of the Lares and Penates at the household shrine: these hearth deities bind the archaic Latin family together", "cat": "filosofia"},
+      {"text": "Attend the archaic Roman ludi at the Circus Maximus: chariot races and athletic events honoring the gods since the legendary time of Romulus", "cat": "sport"}
+    ]
+  },
+  "Roman_Republic": {
+    "it": [
+      {"text": "Osserva un ritrattista della tarda Repubblica scolpire un busto: rughe, naso storto e cicatrici — le imperfezioni del volto narrano una vita", "cat": "arte"},
+      {"text": "Ascolta la musica militare delle legioni: tuba, buccina e cornu bronzeo scandiscono attacchi, ritirate e cambi di guardia durante le campagne", "cat": "musica"},
+      {"text": "Visita il cantiere dell'Acquedotto Appio nel 312 a.C.: ingegneri romani calcolano pendenze precise per far scorrere l'acqua su sedici chilometri", "cat": "scienza"},
+      {"text": "Leggi il De Rerum Natura di Lucrezio: sei libri di esametri spiegano l'universo con soli atomi e vuoto, senza alcun intervento degli dei", "cat": "filosofia"},
+      {"text": "Assisti ai munera gladiatorii nel Foro Romano: un trace con sica affronta un murmillo armato di scudo ovale e grande elmo piumato", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Watch a late-Republican portraitist carve a marble bust: wrinkles, crooked nose and battle scars — physical imperfections mark a virtuous life", "cat": "arte"},
+      {"text": "Listen to legionary military music on campaign: tuba, buccina and bronze cornu mark attacks, retreats and watch-changes with sharp commanding blasts", "cat": "musica"},
+      {"text": "Visit the Aqua Appia construction site in 312 BC: Roman engineers calculate precise gradients to carry water sixteen kilometres underground", "cat": "scienza"},
+      {"text": "Read Lucretius's De Rerum Natura: six books of hexameters explain the universe through atoms and void alone, with no divine intervention", "cat": "filosofia"},
+      {"text": "Watch gladiatorial munera in the Roman Forum: a Thracian armed with a sica faces a murmillo with oval shield and a large plumed helmet", "cat": "sport"}
+    ]
+  }
+}

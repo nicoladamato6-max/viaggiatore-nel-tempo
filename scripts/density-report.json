@@ -1,0 +1,3916 @@
+{
+  "globalStats": {
+    "total": 3968,
+    "totalHistorical": 3957,
+    "totalCosmic": 11,
+    "byCategory": {
+      "cosmo": 26,
+      "geologia": 154,
+      "storia": 2068,
+      "filosofia": 133,
+      "arte": 623,
+      "scienza": 612,
+      "musica": 325,
+      "sport": 27
+    },
+    "byTipo": {
+      "evento": 782,
+      "persona": 1549,
+      "luogo": 52,
+      "scoperta": 616,
+      "opera": 735,
+      "movimento": 201,
+      "organizzazione": 33
+    }
+  },
+  "macroEras": [
+    {
+      "name": "🌍 Terra primordiale",
+      "range": [
+        -4600000000,
+        -541000000
+      ],
+      "total": 12,
+      "byCategory": {
+        "storia": 0,
+        "arte": 0,
+        "musica": 0,
+        "scienza": 0,
+        "geologia": 12,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 0,
+        "evento": 12,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 0,
+        "luogo": 0,
+        "scoperta": 0
+      },
+      "medianPopularity": 4955,
+      "p25Popularity": 1696,
+      "lowPopularityEvents": [
+        {
+          "title": "Le Prime Alghe Rosse — Precursori delle Piante",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -1200000000,
+          "length": 1696,
+          "wikipediaSlug": "Bangiomorpha"
+        },
+        {
+          "title": "Snowball Earth — La Terra Completamente Ghiacciata",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -720000000,
+          "length": 8214,
+          "wikipediaSlug": "Snowball_Earth"
+        }
+      ],
+      "gaps": [
+        "storia assente",
+        "arte assente",
+        "musica assente",
+        "scienza assente",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "🐟 Era Paleozoica",
+      "range": [
+        -541000000,
+        -252000000
+      ],
+      "total": 15,
+      "byCategory": {
+        "storia": 0,
+        "arte": 0,
+        "musica": 0,
+        "scienza": 0,
+        "geologia": 15,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 0,
+        "evento": 15,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 0,
+        "luogo": 0,
+        "scoperta": 0
+      },
+      "medianPopularity": 13579,
+      "p25Popularity": 8029,
+      "lowPopularityEvents": [
+        {
+          "title": "Il Carbonifero — Le Foreste che Diventano Carbone",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -320000000,
+          "length": 1737,
+          "wikipediaSlug": "Carboniferous"
+        },
+        {
+          "title": "I Primi Vertebrati con Mascella — Una Rivoluzione Evolutiva",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -450000000,
+          "length": 7039,
+          "wikipediaSlug": "Gnathostomata"
+        },
+        {
+          "title": "L'Uovo Amniotico — La Conquista della Terra Asciutta",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -312000000,
+          "length": 8029,
+          "wikipediaSlug": "Amniote"
+        },
+        {
+          "title": "Tiktaalik — Il Pesce che Impara a Camminare",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -375000000,
+          "length": 8738,
+          "wikipediaSlug": "Tiktaalik"
+        },
+        {
+          "title": "I Pesci Ossei — Il 96% dei Pesci Attuali",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -420000000,
+          "length": 18420,
+          "wikipediaSlug": "Osteichthyes"
+        }
+      ],
+      "gaps": [
+        "storia assente",
+        "arte assente",
+        "musica assente",
+        "scienza assente",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "🦕 Era Mesozoica",
+      "range": [
+        -252000000,
+        -66000000
+      ],
+      "total": 11,
+      "byCategory": {
+        "storia": 0,
+        "arte": 0,
+        "musica": 0,
+        "scienza": 0,
+        "geologia": 11,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 0,
+        "evento": 11,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 0,
+        "luogo": 0,
+        "scoperta": 0
+      },
+      "medianPopularity": 66308,
+      "p25Popularity": 804,
+      "lowPopularityEvents": [
+        {
+          "title": "La Rottura di Pangea — I Continenti Vanno alla Deriva",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -175000000,
+          "length": 330,
+          "wikipediaSlug": "Pangaea"
+        },
+        {
+          "title": "Comparsa dei Dinosauri",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -240000000,
+          "length": 804,
+          "wikipediaSlug": "Dinosaur"
+        },
+        {
+          "title": "Archaeopteryx — Il Primo Uccello",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -150000000,
+          "length": 65930,
+          "wikipediaSlug": "Archaeopteryx"
+        },
+        {
+          "title": "Il Brachiosaurus — Il Collo più Alto della Terra",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -154000000,
+          "length": 66686,
+          "wikipediaSlug": "Brachiosaurus"
+        },
+        {
+          "title": "Lo Stegosauro — Il Dinosauro con le Piastre",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -155000000,
+          "length": 91357,
+          "wikipediaSlug": "Stegosaurus"
+        }
+      ],
+      "gaps": [
+        "storia assente",
+        "arte assente",
+        "musica assente",
+        "scienza assente",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "🦎 Era Cenozoica",
+      "range": [
+        -66000000,
+        -2500000
+      ],
+      "total": 13,
+      "byCategory": {
+        "storia": 0,
+        "arte": 0,
+        "musica": 0,
+        "scienza": 0,
+        "geologia": 13,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 0,
+        "evento": 13,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 0,
+        "luogo": 0,
+        "scoperta": 0
+      },
+      "medianPopularity": 25385,
+      "p25Popularity": 3426,
+      "lowPopularityEvents": [
+        {
+          "title": "I Primi Primati — I Nostri Antenati sugli Alberi",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -55000000,
+          "length": 337,
+          "wikipediaSlug": "Primate"
+        },
+        {
+          "title": "Ardipithecus — L'Antenato più Antico",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -4400000,
+          "length": 3426,
+          "wikipediaSlug": "Ardipithecus"
+        },
+        {
+          "title": "Paranthropus — La Linea Evolutiva Perduta",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -2700000,
+          "length": 25385,
+          "wikipediaSlug": "Paranthropus"
+        },
+        {
+          "title": "Le Ere Glaciali — Il Mondo Ciclicamente Ghiacciato",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -2600000,
+          "length": 31885,
+          "wikipediaSlug": "Pleistocene"
+        },
+        {
+          "title": "Gigantopithecus — Il Gorilla Gigante",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -9000000,
+          "length": 52862,
+          "wikipediaSlug": "Gigantopithecus"
+        }
+      ],
+      "gaps": [
+        "storia assente",
+        "arte assente",
+        "musica assente",
+        "scienza assente",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "🦴 Preistoria",
+      "range": [
+        -2500000,
+        -3500
+      ],
+      "total": 128,
+      "byCategory": {
+        "storia": 25,
+        "arte": 19,
+        "musica": 10,
+        "scienza": 1,
+        "geologia": 73,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 25,
+        "evento": 73,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 29,
+        "luogo": 0,
+        "scoperta": 1
+      },
+      "medianPopularity": 8573,
+      "p25Popularity": 2278,
+      "lowPopularityEvents": [
+        {
+          "title": "Monte Verde — I più Antichi Americani del Sud",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -14500,
+          "length": 156,
+          "wikipediaSlug": "Monte_Verde"
+        },
+        {
+          "title": "La Patata — Il Tubero delle Ande",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -8000,
+          "length": 349,
+          "wikipediaSlug": "Potato"
+        },
+        {
+          "title": "L'Arpa ad Arco — la Nascita della Musica a Corde",
+          "category": "musica",
+          "tipo": "opera",
+          "year": -4000,
+          "length": 395,
+          "wikipediaSlug": "Harp"
+        },
+        {
+          "title": "I Tamburi Rituali — il Primo Ensemble Musicale",
+          "category": "musica",
+          "tipo": "opera",
+          "year": -5000,
+          "length": 924,
+          "wikipediaSlug": "Drum"
+        },
+        {
+          "title": "Capre e Pecore — I Primi Animali da Allevamento",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -8500,
+          "length": 1304,
+          "wikipediaSlug": "Goat"
+        }
+      ],
+      "gaps": [
+        "scienza sottorappresentato (1)",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "📜 Età Antica",
+      "range": [
+        -3500,
+        476
+      ],
+      "total": 492,
+      "byCategory": {
+        "storia": 337,
+        "arte": 50,
+        "musica": 21,
+        "scienza": 27,
+        "geologia": 16,
+        "cosmo": 0,
+        "filosofia": 32,
+        "sport": 9
+      },
+      "byTipo": {
+        "persona": 255,
+        "evento": 89,
+        "movimento": 4,
+        "organizzazione": 8,
+        "opera": 81,
+        "luogo": 27,
+        "scoperta": 28
+      },
+      "medianPopularity": 10398,
+      "p25Popularity": 1530,
+      "lowPopularityEvents": [
+        {
+          "title": "Eschilo — Nasce la Tragedia Greca",
+          "category": "arte",
+          "tipo": "opera",
+          "year": -472,
+          "length": 88,
+          "wikipediaSlug": "Aeschylus"
+        },
+        {
+          "title": "Erodoto — Il Padre della Storia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -484,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Erodoto — Il Padre della Storiografia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -440,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Erodoto e le Storie",
+          "category": "storia",
+          "tipo": "evento",
+          "year": -440,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Eratostene — Misura la Circonferenza della Terra",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": -240,
+          "length": 211,
+          "wikipediaSlug": "Eratosthenes"
+        }
+      ],
+      "gaps": [
+        "cosmo assente"
+      ]
+    },
+    {
+      "name": "🏰 Medioevo",
+      "range": [
+        476,
+        1492
+      ],
+      "total": 489,
+      "byCategory": {
+        "storia": 307,
+        "arte": 90,
+        "musica": 24,
+        "scienza": 31,
+        "geologia": 0,
+        "cosmo": 1,
+        "filosofia": 31,
+        "sport": 5
+      },
+      "byTipo": {
+        "persona": 222,
+        "evento": 89,
+        "movimento": 13,
+        "organizzazione": 13,
+        "opera": 110,
+        "luogo": 12,
+        "scoperta": 30
+      },
+      "medianPopularity": 15590,
+      "p25Popularity": 4073,
+      "lowPopularityEvents": [
+        {
+          "title": "Rumi — La Mistica Islamica in Versi",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1260,
+          "length": 226,
+          "wikipediaSlug": "Rumi"
+        },
+        {
+          "title": "Donatello — Il David di Bronzo",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "il David di Donatello — il Primo Nudo Maschile Moderno",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "Donatello — il David e la Prima Statua in Bronzo Libera dell'Antichità",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "il David di Donatello — il Primo Grande Nudo Maschile del Rinascimento",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "🎨 Età Moderna",
+      "range": [
+        1492,
+        1789
+      ],
+      "total": 597,
+      "byCategory": {
+        "storia": 252,
+        "arte": 138,
+        "musica": 39,
+        "scienza": 115,
+        "geologia": 2,
+        "cosmo": 2,
+        "filosofia": 47,
+        "sport": 2
+      },
+      "byTipo": {
+        "persona": 198,
+        "evento": 87,
+        "movimento": 21,
+        "organizzazione": 1,
+        "opera": 166,
+        "luogo": 1,
+        "scoperta": 123
+      },
+      "medianPopularity": 19807,
+      "p25Popularity": 5955,
+      "lowPopularityEvents": [
+        {
+          "title": "Velazquez — Las Meninas e il Gioco dello Sguardo",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1656,
+          "length": 298,
+          "wikipediaSlug": "Las_Meninas"
+        },
+        {
+          "title": "Cristoforo Colombo — Scoperta dell'America",
+          "category": "storia",
+          "tipo": "scoperta",
+          "year": 1492,
+          "length": 357,
+          "wikipediaSlug": "Christopher_Columbus"
+        },
+        {
+          "title": "Colombo — La Scoperta dell'America",
+          "category": "storia",
+          "tipo": "scoperta",
+          "year": 1492,
+          "length": 357,
+          "wikipediaSlug": "Christopher_Columbus"
+        },
+        {
+          "title": "Colombo — la Scoperta dell'America che Cambia il Mondo",
+          "category": "storia",
+          "tipo": "scoperta",
+          "year": 1492,
+          "length": 357,
+          "wikipediaSlug": "Christopher_Columbus"
+        },
+        {
+          "title": "Colombo — il 12 Ottobre 1492 e l'Impatto Demografico",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1492,
+          "length": 357,
+          "wikipediaSlug": "Christopher_Columbus"
+        }
+      ],
+      "gaps": [
+        "geologia sottorappresentato (2)",
+        "cosmo sottorappresentato (2)",
+        "sport sottorappresentato (2)"
+      ]
+    },
+    {
+      "name": "⚙️ Età Contemporanea",
+      "range": [
+        1789,
+        2025
+      ],
+      "total": 2199,
+      "byCategory": {
+        "storia": 1147,
+        "arte": 326,
+        "musica": 231,
+        "scienza": 438,
+        "geologia": 6,
+        "cosmo": 18,
+        "filosofia": 22,
+        "sport": 11
+      },
+      "byTipo": {
+        "persona": 848,
+        "evento": 382,
+        "movimento": 163,
+        "organizzazione": 11,
+        "opera": 349,
+        "luogo": 12,
+        "scoperta": 434
+      },
+      "medianPopularity": 33768,
+      "p25Popularity": 15832,
+      "lowPopularityEvents": [
+        {
+          "title": "Frank Lloyd Wright — Fallingwater e l'Architettura Organica",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1937,
+          "length": 186,
+          "wikipediaSlug": "Fallingwater"
+        },
+        {
+          "title": "Frank Lloyd Wright e l'architettura organica",
+          "category": "arte",
+          "tipo": "persona",
+          "year": 1935,
+          "length": 186,
+          "wikipediaSlug": "Fallingwater"
+        },
+        {
+          "title": "Norman Foster — l'High-Tech e la Sostenibilità nell'Architettura",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1986,
+          "length": 206,
+          "wikipediaSlug": "Norman_Foster"
+        },
+        {
+          "title": "La Plastica — Il Materiale del XX Secolo",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": 1938,
+          "length": 251,
+          "wikipediaSlug": "Plastic"
+        },
+        {
+          "title": "Walt Whitman — Foglie d'Erba e la Poesia Americana",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1855,
+          "length": 263,
+          "wikipediaSlug": "Leaves_of_Grass"
+        }
+      ],
+      "gaps": []
+    }
+  ],
+  "subEpochs": [
+    {
+      "name": "Paleolitico Inferiore",
+      "range": [
+        -2500000,
+        -300000
+      ],
+      "total": 10,
+      "byCategory": {
+        "storia": 0,
+        "arte": 0,
+        "musica": 0,
+        "scienza": 0,
+        "geologia": 10,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 0,
+        "evento": 10,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 0,
+        "luogo": 0,
+        "scoperta": 0
+      },
+      "medianPopularity": 12915,
+      "p25Popularity": 9550,
+      "lowPopularityEvents": [
+        {
+          "title": "Dmanisi — Il Primo Homo fuori Africa",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -1800000,
+          "length": 8445,
+          "wikipediaSlug": "Dmanisi"
+        },
+        {
+          "title": "La Grande Barriera Corallina — Formazione",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -500000,
+          "length": 9550,
+          "wikipediaSlug": "Great_Barrier_Reef"
+        },
+        {
+          "title": "Homo ergaster — Il Primo Umano Alto e Snello",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -1900000,
+          "length": 12500,
+          "wikipediaSlug": "Homo_ergaster"
+        },
+        {
+          "title": "Homo habilis — Il Primo Homo",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -2500000,
+          "length": 13330,
+          "wikipediaSlug": "Homo_habilis"
+        },
+        {
+          "title": "Homo heidelbergensis — L'Antenato Comune",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -600000,
+          "length": 15378,
+          "wikipediaSlug": "Homo_heidelbergensis"
+        }
+      ],
+      "gaps": [
+        "storia assente",
+        "arte assente",
+        "musica assente",
+        "scienza assente",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Paleolitico Medio",
+      "range": [
+        -300000,
+        -40000
+      ],
+      "total": 27,
+      "byCategory": {
+        "storia": 1,
+        "arte": 2,
+        "musica": 2,
+        "scienza": 0,
+        "geologia": 22,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 1,
+        "evento": 22,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 4,
+        "luogo": 0,
+        "scoperta": 0
+      },
+      "medianPopularity": 114592,
+      "p25Popularity": 8700,
+      "lowPopularityEvents": [
+        {
+          "title": "L'Uomo di Kabwe — Homo heidelbergensis in Africa",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -300000,
+          "length": 2260,
+          "wikipediaSlug": "Kabwe_1"
+        },
+        {
+          "title": "Lake Mungo — I più Antichi Australiani",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -42000,
+          "length": 8700,
+          "wikipediaSlug": "Lake_Mungo"
+        },
+        {
+          "title": "Homo floresiensis — La Hobbit dell'Isola di Flores",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -50000,
+          "length": 23722,
+          "wikipediaSlug": "Homo_floresiensis"
+        },
+        {
+          "title": "Homo Sapiens",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -300000,
+          "length": 114592,
+          "wikipediaSlug": "Homo_sapiens"
+        },
+        {
+          "title": "Homo sapiens — La Nostra Specie Nasce in Africa",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -300000,
+          "length": 114592,
+          "wikipediaSlug": "Homo_sapiens"
+        }
+      ],
+      "gaps": [
+        "storia sottorappresentato (1)",
+        "arte sottorappresentato (2)",
+        "musica sottorappresentato (2)",
+        "scienza assente",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Paleolitico Superiore",
+      "range": [
+        -40000,
+        -10000
+      ],
+      "total": 19,
+      "byCategory": {
+        "storia": 1,
+        "arte": 5,
+        "musica": 4,
+        "scienza": 0,
+        "geologia": 9,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 1,
+        "evento": 9,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 9,
+        "luogo": 0,
+        "scoperta": 0
+      },
+      "medianPopularity": 1865,
+      "p25Popularity": 1484,
+      "lowPopularityEvents": [
+        {
+          "title": "Monte Verde — I più Antichi Americani del Sud",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -14500,
+          "length": 156,
+          "wikipediaSlug": "Monte_Verde"
+        },
+        {
+          "title": "Lascaux — La Cappella Sistina del Paleolitico",
+          "category": "arte",
+          "tipo": "opera",
+          "year": -17000,
+          "length": 1484,
+          "wikipediaSlug": "Lascaux"
+        },
+        {
+          "title": "Il Bullroarer — il Suono del Tuono nelle Cerimonie Aborigene",
+          "category": "musica",
+          "tipo": "opera",
+          "year": -20000,
+          "length": 1865,
+          "wikipediaSlug": "Bullroarer"
+        },
+        {
+          "title": "Dolní Věstonice — La Prima Ceramica della Storia",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -26000,
+          "length": 2385,
+          "wikipediaSlug": "Dolní_Věstonice"
+        },
+        {
+          "title": "Beringia — Il Ponte di Terra verso le Americhe",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -20000,
+          "length": 14217,
+          "wikipediaSlug": "Beringia"
+        }
+      ],
+      "gaps": [
+        "storia sottorappresentato (1)",
+        "scienza assente",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Mesolitico",
+      "range": [
+        -10000,
+        -8000
+      ],
+      "total": 17,
+      "byCategory": {
+        "storia": 3,
+        "arte": 2,
+        "musica": 0,
+        "scienza": 0,
+        "geologia": 12,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 3,
+        "evento": 12,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 2,
+        "luogo": 0,
+        "scoperta": 0
+      },
+      "medianPopularity": 2415,
+      "p25Popularity": 1352,
+      "lowPopularityEvents": [
+        {
+          "title": "Capre e Pecore — I Primi Animali da Allevamento",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -8500,
+          "length": 1304,
+          "wikipediaSlug": "Goat"
+        },
+        {
+          "title": "Il Mais — La Pianta che Fece le Civiltà Americane",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -9000,
+          "length": 1352,
+          "wikipediaSlug": "Maize"
+        },
+        {
+          "title": "Abu Hureyra — Il Passaggio dalla Caccia all'Agricoltura",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -9700,
+          "length": 1506,
+          "wikipediaSlug": "Abu_Hureyra"
+        },
+        {
+          "title": "Gerico — La Più Antica Città del Mondo",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -9000,
+          "length": 3323,
+          "wikipediaSlug": "Jericho"
+        },
+        {
+          "title": "Göbekli Tepe — Il Primo Tempio dell'Umanità",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -9600,
+          "length": 29184,
+          "wikipediaSlug": "Göbekli_Tepe"
+        }
+      ],
+      "gaps": [
+        "arte sottorappresentato (2)",
+        "musica assente",
+        "scienza assente",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Neolitico",
+      "range": [
+        -8000,
+        -3500
+      ],
+      "total": 55,
+      "byCategory": {
+        "storia": 20,
+        "arte": 10,
+        "musica": 4,
+        "scienza": 1,
+        "geologia": 20,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 20,
+        "evento": 20,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 14,
+        "luogo": 0,
+        "scoperta": 1
+      },
+      "medianPopularity": 7099,
+      "p25Popularity": 3323,
+      "lowPopularityEvents": [
+        {
+          "title": "La Patata — Il Tubero delle Ande",
+          "category": "geologia",
+          "tipo": "evento",
+          "year": -8000,
+          "length": 349,
+          "wikipediaSlug": "Potato"
+        },
+        {
+          "title": "L'Arpa ad Arco — la Nascita della Musica a Corde",
+          "category": "musica",
+          "tipo": "opera",
+          "year": -4000,
+          "length": 395,
+          "wikipediaSlug": "Harp"
+        },
+        {
+          "title": "I Tamburi Rituali — il Primo Ensemble Musicale",
+          "category": "musica",
+          "tipo": "opera",
+          "year": -5000,
+          "length": 924,
+          "wikipediaSlug": "Drum"
+        },
+        {
+          "title": "Susa — L'Alba della Civiltà Elamita",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -4000,
+          "length": 1564,
+          "wikipediaSlug": "Susa"
+        },
+        {
+          "title": "Karanovo — Il Neolitico dei Balcani",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -6200,
+          "length": 1846,
+          "wikipediaSlug": "Karanovo"
+        }
+      ],
+      "gaps": [
+        "scienza sottorappresentato (1)",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Età del Rame",
+      "range": [
+        -4500,
+        -3300
+      ],
+      "total": 24,
+      "byCategory": {
+        "storia": 11,
+        "arte": 4,
+        "musica": 1,
+        "scienza": 1,
+        "geologia": 7,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 11,
+        "evento": 7,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 5,
+        "luogo": 0,
+        "scoperta": 1
+      },
+      "medianPopularity": 18227,
+      "p25Popularity": 1564,
+      "lowPopularityEvents": [
+        {
+          "title": "L'Arpa ad Arco — la Nascita della Musica a Corde",
+          "category": "musica",
+          "tipo": "opera",
+          "year": -4000,
+          "length": 395,
+          "wikipediaSlug": "Harp"
+        },
+        {
+          "title": "Susa — L'Alba della Civiltà Elamita",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -4000,
+          "length": 1564,
+          "wikipediaSlug": "Susa"
+        },
+        {
+          "title": "l'Irrigazione Mesopotamica — Come Nasce la Civilta",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": -4000,
+          "length": 10622,
+          "wikipediaSlug": "Mesopotamia"
+        },
+        {
+          "title": "Uruk — La Prima Vera Città",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -4000,
+          "length": 18227,
+          "wikipediaSlug": "Uruk"
+        },
+        {
+          "title": "Uruk — la Prima Citta della Storia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -3500,
+          "length": 18227,
+          "wikipediaSlug": "Uruk"
+        }
+      ],
+      "gaps": [
+        "musica sottorappresentato (1)",
+        "scienza sottorappresentato (1)",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Età del Bronzo",
+      "range": [
+        -3300,
+        -1200
+      ],
+      "total": 135,
+      "byCategory": {
+        "storia": 97,
+        "arte": 15,
+        "musica": 7,
+        "scienza": 3,
+        "geologia": 11,
+        "cosmo": 0,
+        "filosofia": 1,
+        "sport": 1
+      },
+      "byTipo": {
+        "persona": 73,
+        "evento": 21,
+        "movimento": 0,
+        "organizzazione": 1,
+        "opera": 28,
+        "luogo": 9,
+        "scoperta": 3
+      },
+      "medianPopularity": 19983,
+      "p25Popularity": 8378,
+      "lowPopularityEvents": [
+        {
+          "title": "Invenzione della Scrittura Cuneiforme",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": -3100,
+          "length": 309,
+          "wikipediaSlug": "Cuneiform"
+        },
+        {
+          "title": "La Scrittura Cuneiforme — L'Invenzione della Scrittura",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -3100,
+          "length": 309,
+          "wikipediaSlug": "Cuneiform"
+        },
+        {
+          "title": "la Scrittura Cuneiforme — i Sumeri Inventano la Scrittura",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -3200,
+          "length": 309,
+          "wikipediaSlug": "Cuneiform"
+        },
+        {
+          "title": "Il Papiro — La Prima Carta",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -3100,
+          "length": 526,
+          "wikipediaSlug": "Papyrus"
+        },
+        {
+          "title": "il Papiro — la Tecnologia della Scrittura che fa l'Antico Egitto",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": -3000,
+          "length": 526,
+          "wikipediaSlug": "Papyrus"
+        }
+      ],
+      "gaps": [
+        "cosmo assente",
+        "filosofia sottorappresentato (1)",
+        "sport sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Età del Ferro",
+      "range": [
+        -1200,
+        -600
+      ],
+      "total": 58,
+      "byCategory": {
+        "storia": 41,
+        "arte": 5,
+        "musica": 1,
+        "scienza": 4,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 2,
+        "sport": 5
+      },
+      "byTipo": {
+        "persona": 31,
+        "evento": 12,
+        "movimento": 0,
+        "organizzazione": 0,
+        "opera": 5,
+        "luogo": 5,
+        "scoperta": 5
+      },
+      "medianPopularity": 10181,
+      "p25Popularity": 1724,
+      "lowPopularityEvents": [
+        {
+          "title": "i Fenici — l'Alfabeto e il Commercio nel Mediterraneo",
+          "category": "sport",
+          "tipo": "evento",
+          "year": -1000,
+          "length": 1143,
+          "wikipediaSlug": "Phoenicia"
+        },
+        {
+          "title": "Romolo — La Fondazione di Roma",
+          "category": "storia",
+          "tipo": "luogo",
+          "year": -753,
+          "length": 1390,
+          "wikipediaSlug": "Romulus"
+        },
+        {
+          "title": "Omero — Iliade e Odissea",
+          "category": "arte",
+          "tipo": "opera",
+          "year": -750,
+          "length": 1471,
+          "wikipediaSlug": "Homer"
+        },
+        {
+          "title": "Omero — l'Iliade e l'Odissea, Fondamenti della Cultura Europea",
+          "category": "arte",
+          "tipo": "opera",
+          "year": -700,
+          "length": 1471,
+          "wikipediaSlug": "Homer"
+        },
+        {
+          "title": "Omero e i poemi omerici",
+          "category": "arte",
+          "tipo": "persona",
+          "year": -750,
+          "length": 1471,
+          "wikipediaSlug": "Homer"
+        }
+      ],
+      "gaps": [
+        "musica sottorappresentato (1)",
+        "geologia assente",
+        "cosmo assente",
+        "filosofia sottorappresentato (2)"
+      ]
+    },
+    {
+      "name": "Civiltà Mesopotamiche",
+      "range": [
+        -3500,
+        -539
+      ],
+      "total": 225,
+      "byCategory": {
+        "storia": 155,
+        "arte": 24,
+        "musica": 8,
+        "scienza": 10,
+        "geologia": 15,
+        "cosmo": 0,
+        "filosofia": 6,
+        "sport": 7
+      },
+      "byTipo": {
+        "persona": 120,
+        "evento": 41,
+        "movimento": 1,
+        "organizzazione": 1,
+        "opera": 36,
+        "luogo": 15,
+        "scoperta": 11
+      },
+      "medianPopularity": 12193,
+      "p25Popularity": 5017,
+      "lowPopularityEvents": [
+        {
+          "title": "Invenzione della Scrittura Cuneiforme",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": -3100,
+          "length": 309,
+          "wikipediaSlug": "Cuneiform"
+        },
+        {
+          "title": "La Scrittura Cuneiforme — L'Invenzione della Scrittura",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -3100,
+          "length": 309,
+          "wikipediaSlug": "Cuneiform"
+        },
+        {
+          "title": "la Scrittura Cuneiforme — i Sumeri Inventano la Scrittura",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -3200,
+          "length": 309,
+          "wikipediaSlug": "Cuneiform"
+        },
+        {
+          "title": "Il Papiro — La Prima Carta",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -3100,
+          "length": 526,
+          "wikipediaSlug": "Papyrus"
+        },
+        {
+          "title": "il Papiro — la Tecnologia della Scrittura che fa l'Antico Egitto",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": -3000,
+          "length": 526,
+          "wikipediaSlug": "Papyrus"
+        }
+      ],
+      "gaps": [
+        "cosmo assente"
+      ]
+    },
+    {
+      "name": "Antico Egitto",
+      "range": [
+        -3100,
+        -30
+      ],
+      "total": 361,
+      "byCategory": {
+        "storia": 240,
+        "arte": 39,
+        "musica": 19,
+        "scienza": 25,
+        "geologia": 8,
+        "cosmo": 0,
+        "filosofia": 22,
+        "sport": 8
+      },
+      "byTipo": {
+        "persona": 176,
+        "evento": 65,
+        "movimento": 3,
+        "organizzazione": 6,
+        "opera": 62,
+        "luogo": 23,
+        "scoperta": 26
+      },
+      "medianPopularity": 10568,
+      "p25Popularity": 1476,
+      "lowPopularityEvents": [
+        {
+          "title": "Eschilo — Nasce la Tragedia Greca",
+          "category": "arte",
+          "tipo": "opera",
+          "year": -472,
+          "length": 88,
+          "wikipediaSlug": "Aeschylus"
+        },
+        {
+          "title": "Erodoto — Il Padre della Storia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -484,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Erodoto — Il Padre della Storiografia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -440,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Erodoto e le Storie",
+          "category": "storia",
+          "tipo": "evento",
+          "year": -440,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Eratostene — Misura la Circonferenza della Terra",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": -240,
+          "length": 211,
+          "wikipediaSlug": "Eratosthenes"
+        }
+      ],
+      "gaps": [
+        "cosmo assente"
+      ]
+    },
+    {
+      "name": "Grecia Arcaica",
+      "range": [
+        -800,
+        -500
+      ],
+      "total": 78,
+      "byCategory": {
+        "storia": 50,
+        "arte": 9,
+        "musica": 2,
+        "scienza": 6,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 7,
+        "sport": 4
+      },
+      "byTipo": {
+        "persona": 35,
+        "evento": 17,
+        "movimento": 1,
+        "organizzazione": 2,
+        "opera": 10,
+        "luogo": 6,
+        "scoperta": 7
+      },
+      "medianPopularity": 11691,
+      "p25Popularity": 1476,
+      "lowPopularityEvents": [
+        {
+          "title": "Dario I — La Costruzione di Persepoli",
+          "category": "storia",
+          "tipo": "luogo",
+          "year": -518,
+          "length": 311,
+          "wikipediaSlug": "Persepolis"
+        },
+        {
+          "title": "Persepoli — la Capitale dell'Impero Achemenide",
+          "category": "arte",
+          "tipo": "opera",
+          "year": -520,
+          "length": 311,
+          "wikipediaSlug": "Persepolis"
+        },
+        {
+          "title": "Solone — Le Riforme di Atene",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -594,
+          "length": 969,
+          "wikipediaSlug": "Solon"
+        },
+        {
+          "title": "Solone — le Riforme che Preparano la Democrazia Ateniese",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -594,
+          "length": 969,
+          "wikipediaSlug": "Solon"
+        },
+        {
+          "title": "Solone — le Riforme di Atene e le Radici della Democrazia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -594,
+          "length": 969,
+          "wikipediaSlug": "Solon"
+        }
+      ],
+      "gaps": [
+        "musica sottorappresentato (2)",
+        "geologia assente",
+        "cosmo assente"
+      ]
+    },
+    {
+      "name": "Grecia Classica",
+      "range": [
+        -500,
+        -323
+      ],
+      "total": 70,
+      "byCategory": {
+        "storia": 37,
+        "arte": 15,
+        "musica": 4,
+        "scienza": 6,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 8,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 29,
+        "evento": 14,
+        "movimento": 0,
+        "organizzazione": 1,
+        "opera": 18,
+        "luogo": 2,
+        "scoperta": 6
+      },
+      "medianPopularity": 1513,
+      "p25Popularity": 488,
+      "lowPopularityEvents": [
+        {
+          "title": "Eschilo — Nasce la Tragedia Greca",
+          "category": "arte",
+          "tipo": "opera",
+          "year": -472,
+          "length": 88,
+          "wikipediaSlug": "Aeschylus"
+        },
+        {
+          "title": "Erodoto — Il Padre della Storia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -484,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Erodoto — Il Padre della Storiografia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -440,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Erodoto e le Storie",
+          "category": "storia",
+          "tipo": "evento",
+          "year": -440,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Sofocle e Euripide — la Tragedia Greca e la Psicologia Moderna",
+          "category": "arte",
+          "tipo": "opera",
+          "year": -450,
+          "length": 267,
+          "wikipediaSlug": "Sophocles"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Ellenismo",
+      "range": [
+        -323,
+        -31
+      ],
+      "total": 71,
+      "byCategory": {
+        "storia": 51,
+        "arte": 2,
+        "musica": 5,
+        "scienza": 8,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 4,
+        "sport": 1
+      },
+      "byTipo": {
+        "persona": 35,
+        "evento": 13,
+        "movimento": 2,
+        "organizzazione": 1,
+        "opera": 7,
+        "luogo": 5,
+        "scoperta": 8
+      },
+      "medianPopularity": 5243,
+      "p25Popularity": 1286,
+      "lowPopularityEvents": [
+        {
+          "title": "Eratostene — Misura la Circonferenza della Terra",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": -240,
+          "length": 211,
+          "wikipediaSlug": "Eratosthenes"
+        },
+        {
+          "title": "Eratostene — Misura la Circonferenza della Terra",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": -240,
+          "length": 211,
+          "wikipediaSlug": "Eratosthenes"
+        },
+        {
+          "title": "Polibio — La Storia di Roma",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -200,
+          "length": 274,
+          "wikipediaSlug": "Polybius"
+        },
+        {
+          "title": "Polibio — Il Primo Storico della Storia Universale",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -150,
+          "length": 274,
+          "wikipediaSlug": "Polybius"
+        },
+        {
+          "title": "Pompeo — Conquista Gerusalemme e il Vicino Oriente",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -63,
+          "length": 413,
+          "wikipediaSlug": "Pompey"
+        }
+      ],
+      "gaps": [
+        "arte sottorappresentato (2)",
+        "geologia assente",
+        "cosmo assente",
+        "sport sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Roma Monarchica",
+      "range": [
+        -753,
+        -509
+      ],
+      "total": 71,
+      "byCategory": {
+        "storia": 47,
+        "arte": 9,
+        "musica": 2,
+        "scienza": 5,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 7,
+        "sport": 1
+      },
+      "byTipo": {
+        "persona": 34,
+        "evento": 14,
+        "movimento": 1,
+        "organizzazione": 0,
+        "opera": 10,
+        "luogo": 6,
+        "scoperta": 6
+      },
+      "medianPopularity": 11045,
+      "p25Popularity": 1476,
+      "lowPopularityEvents": [
+        {
+          "title": "Dario I — La Costruzione di Persepoli",
+          "category": "storia",
+          "tipo": "luogo",
+          "year": -518,
+          "length": 311,
+          "wikipediaSlug": "Persepolis"
+        },
+        {
+          "title": "Persepoli — la Capitale dell'Impero Achemenide",
+          "category": "arte",
+          "tipo": "opera",
+          "year": -520,
+          "length": 311,
+          "wikipediaSlug": "Persepolis"
+        },
+        {
+          "title": "Solone — Le Riforme di Atene",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -594,
+          "length": 969,
+          "wikipediaSlug": "Solon"
+        },
+        {
+          "title": "Solone — le Riforme che Preparano la Democrazia Ateniese",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -594,
+          "length": 969,
+          "wikipediaSlug": "Solon"
+        },
+        {
+          "title": "Solone — le Riforme di Atene e le Radici della Democrazia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -594,
+          "length": 969,
+          "wikipediaSlug": "Solon"
+        }
+      ],
+      "gaps": [
+        "musica sottorappresentato (2)",
+        "geologia assente",
+        "cosmo assente",
+        "sport sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Repubblica Romana",
+      "range": [
+        -509,
+        -27
+      ],
+      "total": 145,
+      "byCategory": {
+        "storia": 92,
+        "arte": 17,
+        "musica": 9,
+        "scienza": 14,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 12,
+        "sport": 1
+      },
+      "byTipo": {
+        "persona": 65,
+        "evento": 27,
+        "movimento": 2,
+        "organizzazione": 5,
+        "opera": 25,
+        "luogo": 7,
+        "scoperta": 14
+      },
+      "medianPopularity": 2294,
+      "p25Popularity": 729,
+      "lowPopularityEvents": [
+        {
+          "title": "Eschilo — Nasce la Tragedia Greca",
+          "category": "arte",
+          "tipo": "opera",
+          "year": -472,
+          "length": 88,
+          "wikipediaSlug": "Aeschylus"
+        },
+        {
+          "title": "Erodoto — Il Padre della Storia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -484,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Erodoto — Il Padre della Storiografia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -440,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Erodoto e le Storie",
+          "category": "storia",
+          "tipo": "evento",
+          "year": -440,
+          "length": 208,
+          "wikipediaSlug": "Herodotus"
+        },
+        {
+          "title": "Eratostene — Misura la Circonferenza della Terra",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": -240,
+          "length": 211,
+          "wikipediaSlug": "Eratosthenes"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo assente",
+        "sport sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Impero Romano",
+      "range": [
+        -27,
+        476
+      ],
+      "total": 103,
+      "byCategory": {
+        "storia": 79,
+        "arte": 8,
+        "musica": 2,
+        "scienza": 2,
+        "geologia": 1,
+        "cosmo": 0,
+        "filosofia": 10,
+        "sport": 1
+      },
+      "byTipo": {
+        "persona": 61,
+        "evento": 17,
+        "movimento": 1,
+        "organizzazione": 2,
+        "opera": 16,
+        "luogo": 4,
+        "scoperta": 2
+      },
+      "medianPopularity": 2194,
+      "p25Popularity": 944,
+      "lowPopularityEvents": [
+        {
+          "title": "Caligola — L'Imperatore Folle",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 37,
+          "length": 401,
+          "wikipediaSlug": "Caligula"
+        },
+        {
+          "title": "Caligola — La Follia del Potere Assoluto",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 37,
+          "length": 401,
+          "wikipediaSlug": "Caligula"
+        },
+        {
+          "title": "Galeno — Il Medico dell'Antichità",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": 165,
+          "length": 699,
+          "wikipediaSlug": "Galen"
+        },
+        {
+          "title": "Tito — L'Imperatore Amato",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 79,
+          "length": 813,
+          "wikipediaSlug": "Titus"
+        },
+        {
+          "title": "Augusto — Primo Imperatore Romano",
+          "category": "storia",
+          "tipo": "persona",
+          "year": -27,
+          "length": 944,
+          "wikipediaSlug": "Augustus"
+        }
+      ],
+      "gaps": [
+        "musica sottorappresentato (2)",
+        "scienza sottorappresentato (2)",
+        "geologia sottorappresentato (1)",
+        "cosmo assente",
+        "sport sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Alto Medioevo",
+      "range": [
+        476,
+        1000
+      ],
+      "total": 117,
+      "byCategory": {
+        "storia": 84,
+        "arte": 5,
+        "musica": 11,
+        "scienza": 4,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 12,
+        "sport": 1
+      },
+      "byTipo": {
+        "persona": 65,
+        "evento": 21,
+        "movimento": 0,
+        "organizzazione": 8,
+        "opera": 16,
+        "luogo": 3,
+        "scoperta": 4
+      },
+      "medianPopularity": 8904,
+      "p25Popularity": 1594,
+      "lowPopularityEvents": [
+        {
+          "title": "Bonifacio di Crediton — L'Apostolo dei Germani",
+          "category": "sport",
+          "tipo": "evento",
+          "year": 723,
+          "length": 398,
+          "wikipediaSlug": "Boniface"
+        },
+        {
+          "title": "Beda il Venerabile — Storia Ecclesiastica degli Angli",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 731,
+          "length": 652,
+          "wikipediaSlug": "Bede"
+        },
+        {
+          "title": "Beda il Venerabile — La Storia Ecclesiastica degli Inglesi",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 731,
+          "length": 652,
+          "wikipediaSlug": "Bede"
+        },
+        {
+          "title": "Incoronazione di Carlo Magno",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 800,
+          "length": 778,
+          "wikipediaSlug": "Charlemagne"
+        },
+        {
+          "title": "Carlo Magno — Conquista dei Longobardi",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 774,
+          "length": 778,
+          "wikipediaSlug": "Charlemagne"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo assente",
+        "sport sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Età Carolingia",
+      "range": [
+        800,
+        887
+      ],
+      "total": 25,
+      "byCategory": {
+        "storia": 17,
+        "arte": 1,
+        "musica": 4,
+        "scienza": 2,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 1,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 11,
+        "evento": 6,
+        "movimento": 0,
+        "organizzazione": 1,
+        "opera": 5,
+        "luogo": 0,
+        "scoperta": 2
+      },
+      "medianPopularity": 6579,
+      "p25Popularity": 1661,
+      "lowPopularityEvents": [
+        {
+          "title": "Incoronazione di Carlo Magno",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 800,
+          "length": 778,
+          "wikipediaSlug": "Charlemagne"
+        },
+        {
+          "title": "Incoronazione di Carlo Magno — Renovatio Imperii",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 800,
+          "length": 778,
+          "wikipediaSlug": "Charlemagne"
+        },
+        {
+          "title": "Carlo Magno a Roma — La Renovatio Imperii",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 800,
+          "length": 778,
+          "wikipediaSlug": "Charlemagne"
+        },
+        {
+          "title": "Alfredo il Grande — Il Re Sapiente",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 871,
+          "length": 1661,
+          "wikipediaSlug": "Alfred_the_Great"
+        },
+        {
+          "title": "Re Alfredo il Grande — Padre dell'Inghilterra",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 878,
+          "length": 1661,
+          "wikipediaSlug": "Alfred_the_Great"
+        }
+      ],
+      "gaps": [
+        "arte sottorappresentato (1)",
+        "scienza sottorappresentato (2)",
+        "geologia assente",
+        "cosmo assente",
+        "filosofia sottorappresentato (1)",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Età Feudale",
+      "range": [
+        900,
+        1100
+      ],
+      "total": 75,
+      "byCategory": {
+        "storia": 54,
+        "arte": 6,
+        "musica": 2,
+        "scienza": 7,
+        "geologia": 0,
+        "cosmo": 1,
+        "filosofia": 5,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 39,
+        "evento": 13,
+        "movimento": 0,
+        "organizzazione": 5,
+        "opera": 7,
+        "luogo": 4,
+        "scoperta": 7
+      },
+      "medianPopularity": 15363,
+      "p25Popularity": 7844,
+      "lowPopularityEvents": [
+        {
+          "title": "Costruzione della Torre di Londra",
+          "category": "storia",
+          "tipo": "luogo",
+          "year": 1078,
+          "length": 521,
+          "wikipediaSlug": "Tower_of_London"
+        },
+        {
+          "title": "Athelstan — Il Primo Re d'Inghilterra",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 927,
+          "length": 1257,
+          "wikipediaSlug": "Athelstan"
+        },
+        {
+          "title": "l'Organum — la Prima Polifonia Scritta d'Europa",
+          "category": "musica",
+          "tipo": "opera",
+          "year": 900,
+          "length": 5554,
+          "wikipediaSlug": "Organum"
+        },
+        {
+          "title": "Supernova della Nebulosa del Granchio",
+          "category": "cosmo",
+          "tipo": "evento",
+          "year": 1054,
+          "length": 6368,
+          "wikipediaSlug": "SN_1054"
+        },
+        {
+          "title": "Leif Erikson — I Vichinghi in America",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1000,
+          "length": 7844,
+          "wikipediaSlug": "Leif_Erikson"
+        }
+      ],
+      "gaps": [
+        "musica sottorappresentato (2)",
+        "geologia assente",
+        "cosmo sottorappresentato (1)",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Basso Medioevo",
+      "range": [
+        1000,
+        1492
+      ],
+      "total": 372,
+      "byCategory": {
+        "storia": 223,
+        "arte": 85,
+        "musica": 13,
+        "scienza": 27,
+        "geologia": 0,
+        "cosmo": 1,
+        "filosofia": 19,
+        "sport": 4
+      },
+      "byTipo": {
+        "persona": 157,
+        "evento": 68,
+        "movimento": 13,
+        "organizzazione": 5,
+        "opera": 94,
+        "luogo": 9,
+        "scoperta": 26
+      },
+      "medianPopularity": 23163,
+      "p25Popularity": 4384,
+      "lowPopularityEvents": [
+        {
+          "title": "Rumi — La Mistica Islamica in Versi",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1260,
+          "length": 226,
+          "wikipediaSlug": "Rumi"
+        },
+        {
+          "title": "Donatello — Il David di Bronzo",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "il David di Donatello — il Primo Nudo Maschile Moderno",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "Donatello — il David e la Prima Statua in Bronzo Libera dell'Antichità",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "il David di Donatello — il Primo Grande Nudo Maschile del Rinascimento",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Età Comunale",
+      "range": [
+        1000,
+        1300
+      ],
+      "total": 216,
+      "byCategory": {
+        "storia": 149,
+        "arte": 23,
+        "musica": 9,
+        "scienza": 17,
+        "geologia": 0,
+        "cosmo": 1,
+        "filosofia": 14,
+        "sport": 3
+      },
+      "byTipo": {
+        "persona": 106,
+        "evento": 49,
+        "movimento": 3,
+        "organizzazione": 2,
+        "opera": 34,
+        "luogo": 5,
+        "scoperta": 17
+      },
+      "medianPopularity": 28220,
+      "p25Popularity": 7844,
+      "lowPopularityEvents": [
+        {
+          "title": "Rumi — La Mistica Islamica in Versi",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1260,
+          "length": 226,
+          "wikipediaSlug": "Rumi"
+        },
+        {
+          "title": "la Politica delle Reliquie — il Potere Medievale delle Ossa",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1200,
+          "length": 506,
+          "wikipediaSlug": "Relic"
+        },
+        {
+          "title": "Costruzione della Torre di Londra",
+          "category": "storia",
+          "tipo": "luogo",
+          "year": 1078,
+          "length": 521,
+          "wikipediaSlug": "Tower_of_London"
+        },
+        {
+          "title": "Saladino — La Riconquista di Gerusalemme",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1187,
+          "length": 633,
+          "wikipediaSlug": "Saladin"
+        },
+        {
+          "title": "Saladino — La Riconquista di Gerusalemme",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1187,
+          "length": 633,
+          "wikipediaSlug": "Saladin"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Età delle Crociate",
+      "range": [
+        1096,
+        1291
+      ],
+      "total": 164,
+      "byCategory": {
+        "storia": 115,
+        "arte": 18,
+        "musica": 8,
+        "scienza": 11,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 9,
+        "sport": 3
+      },
+      "byTipo": {
+        "persona": 78,
+        "evento": 40,
+        "movimento": 3,
+        "organizzazione": 1,
+        "opera": 29,
+        "luogo": 2,
+        "scoperta": 11
+      },
+      "medianPopularity": 28631,
+      "p25Popularity": 7974,
+      "lowPopularityEvents": [
+        {
+          "title": "Rumi — La Mistica Islamica in Versi",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1260,
+          "length": 226,
+          "wikipediaSlug": "Rumi"
+        },
+        {
+          "title": "la Politica delle Reliquie — il Potere Medievale delle Ossa",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1200,
+          "length": 506,
+          "wikipediaSlug": "Relic"
+        },
+        {
+          "title": "Saladino — La Riconquista di Gerusalemme",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1187,
+          "length": 633,
+          "wikipediaSlug": "Saladin"
+        },
+        {
+          "title": "Saladino — La Riconquista di Gerusalemme",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1187,
+          "length": 633,
+          "wikipediaSlug": "Saladin"
+        },
+        {
+          "title": "Saladino — La Riconquista di Gerusalemme",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1187,
+          "length": 633,
+          "wikipediaSlug": "Saladin"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo assente"
+      ]
+    },
+    {
+      "name": "Umanesimo",
+      "range": [
+        1350,
+        1492
+      ],
+      "total": 108,
+      "byCategory": {
+        "storia": 49,
+        "arte": 45,
+        "musica": 3,
+        "scienza": 9,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 2,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 38,
+        "evento": 4,
+        "movimento": 8,
+        "organizzazione": 3,
+        "opera": 45,
+        "luogo": 2,
+        "scoperta": 8
+      },
+      "medianPopularity": 25777,
+      "p25Popularity": 10420,
+      "lowPopularityEvents": [
+        {
+          "title": "Donatello — Il David di Bronzo",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "il David di Donatello — il Primo Nudo Maschile Moderno",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "Donatello — il David e la Prima Statua in Bronzo Libera dell'Antichità",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "il David di Donatello — il Primo Grande Nudo Maschile del Rinascimento",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "la Danza Macabra — l'Arte nell'Ombra della Morte",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1350,
+          "length": 2105,
+          "wikipediaSlug": "Danse_Macabre"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo assente",
+        "filosofia sottorappresentato (2)",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Primo Rinascimento",
+      "range": [
+        1400,
+        1492
+      ],
+      "total": 84,
+      "byCategory": {
+        "storia": 39,
+        "arte": 32,
+        "musica": 2,
+        "scienza": 9,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 2,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 28,
+        "evento": 4,
+        "movimento": 8,
+        "organizzazione": 3,
+        "opera": 31,
+        "luogo": 2,
+        "scoperta": 8
+      },
+      "medianPopularity": 32245,
+      "p25Popularity": 8947,
+      "lowPopularityEvents": [
+        {
+          "title": "Donatello — Il David di Bronzo",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "il David di Donatello — il Primo Nudo Maschile Moderno",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "Donatello — il David e la Prima Statua in Bronzo Libera dell'Antichità",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "il David di Donatello — il Primo Grande Nudo Maschile del Rinascimento",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1440,
+          "length": 361,
+          "wikipediaSlug": "David_(Donatello)"
+        },
+        {
+          "title": "Guerra delle Due Rose — York contro Lancaster",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1455,
+          "length": 2581,
+          "wikipediaSlug": "Wars_of_the_Roses"
+        }
+      ],
+      "gaps": [
+        "musica sottorappresentato (2)",
+        "geologia assente",
+        "cosmo assente",
+        "filosofia sottorappresentato (2)",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Rinascimento",
+      "range": [
+        1492,
+        1600
+      ],
+      "total": 211,
+      "byCategory": {
+        "storia": 87,
+        "arte": 66,
+        "musica": 11,
+        "scienza": 16,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 31,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 73,
+        "evento": 29,
+        "movimento": 10,
+        "organizzazione": 1,
+        "opera": 73,
+        "luogo": 0,
+        "scoperta": 25
+      },
+      "medianPopularity": 12909,
+      "p25Popularity": 3554,
+      "lowPopularityEvents": [
+        {
+          "title": "Cristoforo Colombo — Scoperta dell'America",
+          "category": "storia",
+          "tipo": "scoperta",
+          "year": 1492,
+          "length": 357,
+          "wikipediaSlug": "Christopher_Columbus"
+        },
+        {
+          "title": "Colombo — La Scoperta dell'America",
+          "category": "storia",
+          "tipo": "scoperta",
+          "year": 1492,
+          "length": 357,
+          "wikipediaSlug": "Christopher_Columbus"
+        },
+        {
+          "title": "Colombo — la Scoperta dell'America che Cambia il Mondo",
+          "category": "storia",
+          "tipo": "scoperta",
+          "year": 1492,
+          "length": 357,
+          "wikipediaSlug": "Christopher_Columbus"
+        },
+        {
+          "title": "Colombo — il 12 Ottobre 1492 e l'Impatto Demografico",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1492,
+          "length": 357,
+          "wikipediaSlug": "Christopher_Columbus"
+        },
+        {
+          "title": "Martin Lutero — Le 95 Tesi",
+          "category": "filosofia",
+          "tipo": "persona",
+          "year": 1517,
+          "length": 584,
+          "wikipediaSlug": "Reformation"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Riforma Protestante",
+      "range": [
+        1517,
+        1648
+      ],
+      "total": 244,
+      "byCategory": {
+        "storia": 102,
+        "arte": 57,
+        "musica": 15,
+        "scienza": 44,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 26,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 79,
+        "evento": 40,
+        "movimento": 6,
+        "organizzazione": 1,
+        "opera": 68,
+        "luogo": 1,
+        "scoperta": 49
+      },
+      "medianPopularity": 18382,
+      "p25Popularity": 4512,
+      "lowPopularityEvents": [
+        {
+          "title": "Martin Lutero — Le 95 Tesi",
+          "category": "filosofia",
+          "tipo": "persona",
+          "year": 1517,
+          "length": 584,
+          "wikipediaSlug": "Reformation"
+        },
+        {
+          "title": "La Riforma Protestante — Lutero e le 95 Tesi",
+          "category": "filosofia",
+          "tipo": "persona",
+          "year": 1517,
+          "length": 584,
+          "wikipediaSlug": "Reformation"
+        },
+        {
+          "title": "I Puritani e il Massachusetts",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1630,
+          "length": 722,
+          "wikipediaSlug": "Puritan"
+        },
+        {
+          "title": "Tiziano — Il Colore come Linguaggio",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1530,
+          "length": 833,
+          "wikipediaSlug": "Titian"
+        },
+        {
+          "title": "Tiziano — il Colore di Venezia e la Pittura del Potere",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1540,
+          "length": 833,
+          "wikipediaSlug": "Titian"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Controriforma",
+      "range": [
+        1545,
+        1648
+      ],
+      "total": 180,
+      "byCategory": {
+        "storia": 71,
+        "arte": 52,
+        "musica": 14,
+        "scienza": 34,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 9,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 56,
+        "evento": 23,
+        "movimento": 3,
+        "organizzazione": 0,
+        "opera": 62,
+        "luogo": 1,
+        "scoperta": 35
+      },
+      "medianPopularity": 29124,
+      "p25Popularity": 8198,
+      "lowPopularityEvents": [
+        {
+          "title": "I Puritani e il Massachusetts",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1630,
+          "length": 722,
+          "wikipediaSlug": "Puritan"
+        },
+        {
+          "title": "New Amsterdam — l'Olanda fonda New York",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1626,
+          "length": 851,
+          "wikipediaSlug": "New_Amsterdam"
+        },
+        {
+          "title": "Maria Regina di Scozia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1568,
+          "length": 934,
+          "wikipediaSlug": "Mary,_Queen_of_Scots"
+        },
+        {
+          "title": "l'Aminta di Tasso — il Dramma Pastorale e il Sogno Arcadico",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1573,
+          "length": 966,
+          "wikipediaSlug": "Aminta"
+        },
+        {
+          "title": "Potosi — la Montagna d'Argento che Fa il Mondo Moderno",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1545,
+          "length": 973,
+          "wikipediaSlug": "Cerro_Rico"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Monarchie Assolute",
+      "range": [
+        1600,
+        1789
+      ],
+      "total": 386,
+      "byCategory": {
+        "storia": 165,
+        "arte": 72,
+        "musica": 28,
+        "scienza": 99,
+        "geologia": 2,
+        "cosmo": 2,
+        "filosofia": 16,
+        "sport": 2
+      },
+      "byTipo": {
+        "persona": 125,
+        "evento": 58,
+        "movimento": 11,
+        "organizzazione": 0,
+        "opera": 93,
+        "luogo": 1,
+        "scoperta": 98
+      },
+      "medianPopularity": 25854,
+      "p25Popularity": 7558,
+      "lowPopularityEvents": [
+        {
+          "title": "Velazquez — Las Meninas e il Gioco dello Sguardo",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1656,
+          "length": 298,
+          "wikipediaSlug": "Las_Meninas"
+        },
+        {
+          "title": "Scoperta di Urano",
+          "category": "cosmo",
+          "tipo": "evento",
+          "year": 1781,
+          "length": 499,
+          "wikipediaSlug": "Uranus"
+        },
+        {
+          "title": "Pietro il Grande — La Modernizzazione della Russia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1703,
+          "length": 586,
+          "wikipediaSlug": "Peter_the_Great"
+        },
+        {
+          "title": "Pietro il Grande — la Finestra sull'Europa e San Pietroburgo",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1703,
+          "length": 586,
+          "wikipediaSlug": "Peter_the_Great"
+        },
+        {
+          "title": "Pietro il Grande — la Russia verso l'Europa",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1703,
+          "length": 586,
+          "wikipediaSlug": "Peter_the_Great"
+        }
+      ],
+      "gaps": [
+        "geologia sottorappresentato (2)",
+        "cosmo sottorappresentato (2)",
+        "sport sottorappresentato (2)"
+      ]
+    },
+    {
+      "name": "Riv. Scientifica",
+      "range": [
+        1543,
+        1700
+      ],
+      "total": 307,
+      "byCategory": {
+        "storia": 121,
+        "arte": 72,
+        "musica": 17,
+        "scienza": 80,
+        "geologia": 0,
+        "cosmo": 1,
+        "filosofia": 15,
+        "sport": 1
+      },
+      "byTipo": {
+        "persona": 99,
+        "evento": 40,
+        "movimento": 4,
+        "organizzazione": 0,
+        "opera": 82,
+        "luogo": 1,
+        "scoperta": 81
+      },
+      "medianPopularity": 26265,
+      "p25Popularity": 9435,
+      "lowPopularityEvents": [
+        {
+          "title": "Velazquez — Las Meninas e il Gioco dello Sguardo",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1656,
+          "length": 298,
+          "wikipediaSlug": "Las_Meninas"
+        },
+        {
+          "title": "I Puritani e il Massachusetts",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1630,
+          "length": 722,
+          "wikipediaSlug": "Puritan"
+        },
+        {
+          "title": "New Amsterdam — l'Olanda fonda New York",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1626,
+          "length": 851,
+          "wikipediaSlug": "New_Amsterdam"
+        },
+        {
+          "title": "Maria Regina di Scozia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1568,
+          "length": 934,
+          "wikipediaSlug": "Mary,_Queen_of_Scots"
+        },
+        {
+          "title": "l'Aminta di Tasso — il Dramma Pastorale e il Sogno Arcadico",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1573,
+          "length": 966,
+          "wikipediaSlug": "Aminta"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo sottorappresentato (1)",
+        "sport sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Illuminismo",
+      "range": [
+        1715,
+        1789
+      ],
+      "total": 137,
+      "byCategory": {
+        "storia": 57,
+        "arte": 27,
+        "musica": 17,
+        "scienza": 24,
+        "geologia": 2,
+        "cosmo": 1,
+        "filosofia": 9,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 40,
+        "evento": 25,
+        "movimento": 9,
+        "organizzazione": 0,
+        "opera": 40,
+        "luogo": 0,
+        "scoperta": 23
+      },
+      "medianPopularity": 31935,
+      "p25Popularity": 7626,
+      "lowPopularityEvents": [
+        {
+          "title": "Scoperta di Urano",
+          "category": "cosmo",
+          "tipo": "evento",
+          "year": 1781,
+          "length": 499,
+          "wikipediaSlug": "Uranus"
+        },
+        {
+          "title": "Napoleone Bonaparte — Il Conquistatore della Storia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1769,
+          "length": 1693,
+          "wikipediaSlug": "Napoleon"
+        },
+        {
+          "title": "Federico il Grande — L'Illuminismo al Potere",
+          "category": "storia",
+          "tipo": "movimento",
+          "year": 1740,
+          "length": 1867,
+          "wikipediaSlug": "Frederick_the_Great"
+        },
+        {
+          "title": "Federico il Grande — il Re Filosofo della Prussia",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1740,
+          "length": 1867,
+          "wikipediaSlug": "Frederick_the_Great"
+        },
+        {
+          "title": "Federico il Grande e il dispotismo illuminato",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1740,
+          "length": 1867,
+          "wikipediaSlug": "Frederick_the_Great"
+        }
+      ],
+      "gaps": [
+        "geologia sottorappresentato (2)",
+        "cosmo sottorappresentato (1)",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Età delle Rivoluzioni",
+      "range": [
+        1789,
+        1815
+      ],
+      "total": 54,
+      "byCategory": {
+        "storia": 33,
+        "arte": 7,
+        "musica": 1,
+        "scienza": 12,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 1,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 24,
+        "evento": 9,
+        "movimento": 3,
+        "organizzazione": 0,
+        "opera": 6,
+        "luogo": 0,
+        "scoperta": 12
+      },
+      "medianPopularity": 27286,
+      "p25Popularity": 11199,
+      "lowPopularityEvents": [
+        {
+          "title": "Napoleone all'Isola d'Elba",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1814,
+          "length": 2120,
+          "wikipediaSlug": "Elba"
+        },
+        {
+          "title": "Malthus — la Trappola Demografica e la Scarsita",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": 1798,
+          "length": 4957,
+          "wikipediaSlug": "An_Essay_on_the_Principle_of_Population"
+        },
+        {
+          "title": "Il Terrore — Robespierre e la Ghigliottina",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1793,
+          "length": 5860,
+          "wikipediaSlug": "Reign_of_Terror"
+        },
+        {
+          "title": "Danton e la Ghigliottina — il Terrore della Rivoluzione",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1794,
+          "length": 5860,
+          "wikipediaSlug": "Reign_of_Terror"
+        },
+        {
+          "title": "il Terrore — Robespierre e la Rivoluzione che Divora i suoi Figli",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1793,
+          "length": 5860,
+          "wikipediaSlug": "Reign_of_Terror"
+        }
+      ],
+      "gaps": [
+        "musica sottorappresentato (1)",
+        "geologia assente",
+        "cosmo assente",
+        "filosofia sottorappresentato (1)",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Restaurazione",
+      "range": [
+        1815,
+        1848
+      ],
+      "total": 109,
+      "byCategory": {
+        "storia": 37,
+        "arte": 31,
+        "musica": 14,
+        "scienza": 23,
+        "geologia": 1,
+        "cosmo": 1,
+        "filosofia": 2,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 26,
+        "evento": 12,
+        "movimento": 14,
+        "organizzazione": 0,
+        "opera": 36,
+        "luogo": 0,
+        "scoperta": 21
+      },
+      "medianPopularity": 46158,
+      "p25Popularity": 24612,
+      "lowPopularityEvents": [
+        {
+          "title": "il Grande Gioco — Russia e Inghilterra per l'Asia Centrale",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1839,
+          "length": 781,
+          "wikipediaSlug": "The_Great_Game"
+        },
+        {
+          "title": "Poe — il Corvo e i Racconti del Terrore",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1845,
+          "length": 1338,
+          "wikipediaSlug": "The_Raven"
+        },
+        {
+          "title": "Daguerre — la Fotografia e la Fine della Pittura di Ritratto",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1839,
+          "length": 3859,
+          "wikipediaSlug": "Louis_Daguerre"
+        },
+        {
+          "title": "la Fotografia — Daguerre e il Mondo Catturato in un'Immagine",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1839,
+          "length": 3859,
+          "wikipediaSlug": "Louis_Daguerre"
+        },
+        {
+          "title": "Frankenstein — Mary Shelley e il Romanzo Gotico",
+          "category": "arte",
+          "tipo": "movimento",
+          "year": 1818,
+          "length": 3921,
+          "wikipediaSlug": "Frankenstein"
+        }
+      ],
+      "gaps": [
+        "geologia sottorappresentato (1)",
+        "cosmo sottorappresentato (1)",
+        "filosofia sottorappresentato (2)",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Risorgimento",
+      "range": [
+        1815,
+        1871
+      ],
+      "total": 276,
+      "byCategory": {
+        "storia": 125,
+        "arte": 67,
+        "musica": 16,
+        "scienza": 58,
+        "geologia": 1,
+        "cosmo": 1,
+        "filosofia": 7,
+        "sport": 1
+      },
+      "byTipo": {
+        "persona": 82,
+        "evento": 36,
+        "movimento": 26,
+        "organizzazione": 5,
+        "opera": 71,
+        "luogo": 1,
+        "scoperta": 55
+      },
+      "medianPopularity": 28036,
+      "p25Popularity": 13533,
+      "lowPopularityEvents": [
+        {
+          "title": "Walt Whitman — Foglie d'Erba e la Poesia Americana",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1855,
+          "length": 263,
+          "wikipediaSlug": "Leaves_of_Grass"
+        },
+        {
+          "title": "La Ruhr — Il Cuore Industriale d'Europa",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1850,
+          "length": 330,
+          "wikipediaSlug": "Ruhr"
+        },
+        {
+          "title": "Gold Rush — La Corsa all'Oro in California",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1848,
+          "length": 351,
+          "wikipediaSlug": "California_Gold_Rush"
+        },
+        {
+          "title": "la Corsa all'Oro in California — il Sogno Americano",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1849,
+          "length": 351,
+          "wikipediaSlug": "California_Gold_Rush"
+        },
+        {
+          "title": "la Corsa all'Oro — la California e la Migrazione di Massa",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1848,
+          "length": 351,
+          "wikipediaSlug": "California_Gold_Rush"
+        }
+      ],
+      "gaps": [
+        "geologia sottorappresentato (1)",
+        "cosmo sottorappresentato (1)",
+        "sport sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Riv. Industriale",
+      "range": [
+        1760,
+        1914
+      ],
+      "total": 600,
+      "byCategory": {
+        "storia": 262,
+        "arte": 133,
+        "musica": 40,
+        "scienza": 145,
+        "geologia": 3,
+        "cosmo": 2,
+        "filosofia": 13,
+        "sport": 2
+      },
+      "byTipo": {
+        "persona": 178,
+        "evento": 81,
+        "movimento": 58,
+        "organizzazione": 6,
+        "opera": 136,
+        "luogo": 1,
+        "scoperta": 140
+      },
+      "medianPopularity": 27546,
+      "p25Popularity": 12216,
+      "lowPopularityEvents": [
+        {
+          "title": "Walt Whitman — Foglie d'Erba e la Poesia Americana",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1855,
+          "length": 263,
+          "wikipediaSlug": "Leaves_of_Grass"
+        },
+        {
+          "title": "La Ruhr — Il Cuore Industriale d'Europa",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1850,
+          "length": 330,
+          "wikipediaSlug": "Ruhr"
+        },
+        {
+          "title": "Gold Rush — La Corsa all'Oro in California",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1848,
+          "length": 351,
+          "wikipediaSlug": "California_Gold_Rush"
+        },
+        {
+          "title": "la Corsa all'Oro in California — il Sogno Americano",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1849,
+          "length": 351,
+          "wikipediaSlug": "California_Gold_Rush"
+        },
+        {
+          "title": "la Corsa all'Oro — la California e la Migrazione di Massa",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1848,
+          "length": 351,
+          "wikipediaSlug": "California_Gold_Rush"
+        }
+      ],
+      "gaps": [
+        "cosmo sottorappresentato (2)",
+        "sport sottorappresentato (2)"
+      ]
+    },
+    {
+      "name": "Imperialismo",
+      "range": [
+        1870,
+        1914
+      ],
+      "total": 208,
+      "byCategory": {
+        "storia": 71,
+        "arte": 52,
+        "musica": 19,
+        "scienza": 60,
+        "geologia": 2,
+        "cosmo": 0,
+        "filosofia": 3,
+        "sport": 1
+      },
+      "byTipo": {
+        "persona": 54,
+        "evento": 21,
+        "movimento": 27,
+        "organizzazione": 1,
+        "opera": 47,
+        "luogo": 0,
+        "scoperta": 58
+      },
+      "medianPopularity": 30097,
+      "p25Popularity": 17012,
+      "lowPopularityEvents": [
+        {
+          "title": "Cechov — il Giardino dei Ciliegi e il Teatro Moderno",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1904,
+          "length": 499,
+          "wikipediaSlug": "The_Cherry_Orchard"
+        },
+        {
+          "title": "Edvard Munch — l'Urlo e l'Ansia del Moderno",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1893,
+          "length": 619,
+          "wikipediaSlug": "The_Scream"
+        },
+        {
+          "title": "Munch — l'Urlo e la Nascita dell'Espressionismo",
+          "category": "arte",
+          "tipo": "movimento",
+          "year": 1893,
+          "length": 619,
+          "wikipediaSlug": "The_Scream"
+        },
+        {
+          "title": "Stravinsky — La Sagra della Primavera",
+          "category": "musica",
+          "tipo": "opera",
+          "year": 1913,
+          "length": 923,
+          "wikipediaSlug": "The_Rite_of_Spring"
+        },
+        {
+          "title": "Stravinsky — La Sagra della Primavera e la Rivoluzione Musicale",
+          "category": "musica",
+          "tipo": "opera",
+          "year": 1913,
+          "length": 923,
+          "wikipediaSlug": "The_Rite_of_Spring"
+        }
+      ],
+      "gaps": [
+        "geologia sottorappresentato (2)",
+        "cosmo assente",
+        "sport sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "Belle Époque",
+      "range": [
+        1871,
+        1914
+      ],
+      "total": 205,
+      "byCategory": {
+        "storia": 68,
+        "arte": 52,
+        "musica": 19,
+        "scienza": 60,
+        "geologia": 2,
+        "cosmo": 0,
+        "filosofia": 3,
+        "sport": 1
+      },
+      "byTipo": {
+        "persona": 52,
+        "evento": 20,
+        "movimento": 27,
+        "organizzazione": 1,
+        "opera": 47,
+        "luogo": 0,
+        "scoperta": 58
+      },
+      "medianPopularity": 30097,
+      "p25Popularity": 17012,
+      "lowPopularityEvents": [
+        {
+          "title": "Cechov — il Giardino dei Ciliegi e il Teatro Moderno",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1904,
+          "length": 499,
+          "wikipediaSlug": "The_Cherry_Orchard"
+        },
+        {
+          "title": "Edvard Munch — l'Urlo e l'Ansia del Moderno",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1893,
+          "length": 619,
+          "wikipediaSlug": "The_Scream"
+        },
+        {
+          "title": "Munch — l'Urlo e la Nascita dell'Espressionismo",
+          "category": "arte",
+          "tipo": "movimento",
+          "year": 1893,
+          "length": 619,
+          "wikipediaSlug": "The_Scream"
+        },
+        {
+          "title": "Stravinsky — La Sagra della Primavera",
+          "category": "musica",
+          "tipo": "opera",
+          "year": 1913,
+          "length": 923,
+          "wikipediaSlug": "The_Rite_of_Spring"
+        },
+        {
+          "title": "Stravinsky — La Sagra della Primavera e la Rivoluzione Musicale",
+          "category": "musica",
+          "tipo": "opera",
+          "year": 1913,
+          "length": 923,
+          "wikipediaSlug": "The_Rite_of_Spring"
+        }
+      ],
+      "gaps": [
+        "geologia sottorappresentato (2)",
+        "cosmo assente",
+        "sport sottorappresentato (1)"
+      ]
+    },
+    {
+      "name": "I Guerra Mondiale",
+      "range": [
+        1914,
+        1918
+      ],
+      "total": 71,
+      "byCategory": {
+        "storia": 59,
+        "arte": 6,
+        "musica": 1,
+        "scienza": 5,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 38,
+        "evento": 21,
+        "movimento": 2,
+        "organizzazione": 0,
+        "opera": 5,
+        "luogo": 0,
+        "scoperta": 5
+      },
+      "medianPopularity": 28247,
+      "p25Popularity": 729,
+      "lowPopularityEvents": [
+        {
+          "title": "Dada — L'Arte come Nichilismo e Protesta",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1916,
+          "length": 729,
+          "wikipediaSlug": "Dada"
+        },
+        {
+          "title": "Dada — L'Arte che Distrugge l'Arte",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1916,
+          "length": 729,
+          "wikipediaSlug": "Dada"
+        },
+        {
+          "title": "Il Dadaismo a Zurigo",
+          "category": "arte",
+          "tipo": "movimento",
+          "year": 1916,
+          "length": 729,
+          "wikipediaSlug": "Dada"
+        },
+        {
+          "title": "Il Cubismo — Picasso e Braque Rivoluzionano la Pittura",
+          "category": "arte",
+          "tipo": "movimento",
+          "year": 1914,
+          "length": 4820,
+          "wikipediaSlug": "Cubism"
+        },
+        {
+          "title": "L'Insurrezione di Pasqua — Il Grido dell'Irlanda",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1916,
+          "length": 11790,
+          "wikipediaSlug": "Easter_Rising"
+        }
+      ],
+      "gaps": [
+        "musica sottorappresentato (1)",
+        "geologia assente",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Tra le due guerre",
+      "range": [
+        1919,
+        1939
+      ],
+      "total": 320,
+      "byCategory": {
+        "storia": 162,
+        "arte": 78,
+        "musica": 21,
+        "scienza": 52,
+        "geologia": 0,
+        "cosmo": 1,
+        "filosofia": 0,
+        "sport": 6
+      },
+      "byTipo": {
+        "persona": 130,
+        "evento": 39,
+        "movimento": 38,
+        "organizzazione": 1,
+        "opera": 61,
+        "luogo": 1,
+        "scoperta": 50
+      },
+      "medianPopularity": 25527,
+      "p25Popularity": 10124,
+      "lowPopularityEvents": [
+        {
+          "title": "Frank Lloyd Wright — Fallingwater e l'Architettura Organica",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1937,
+          "length": 186,
+          "wikipediaSlug": "Fallingwater"
+        },
+        {
+          "title": "Frank Lloyd Wright e l'architettura organica",
+          "category": "arte",
+          "tipo": "persona",
+          "year": 1935,
+          "length": 186,
+          "wikipediaSlug": "Fallingwater"
+        },
+        {
+          "title": "La Plastica — Il Materiale del XX Secolo",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": 1938,
+          "length": 251,
+          "wikipediaSlug": "Plastic"
+        },
+        {
+          "title": "Il Grande Gatsby — Il Sogno Americano si Spezza",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1925,
+          "length": 346,
+          "wikipediaSlug": "The_Great_Gatsby"
+        },
+        {
+          "title": "Fitzgerald e Il Grande Gatsby",
+          "category": "arte",
+          "tipo": "persona",
+          "year": 1925,
+          "length": 346,
+          "wikipediaSlug": "The_Great_Gatsby"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo sottorappresentato (1)",
+        "filosofia assente"
+      ]
+    },
+    {
+      "name": "II Guerra Mondiale",
+      "range": [
+        1939,
+        1945
+      ],
+      "total": 166,
+      "byCategory": {
+        "storia": 133,
+        "arte": 14,
+        "musica": 5,
+        "scienza": 14,
+        "geologia": 0,
+        "cosmo": 0,
+        "filosofia": 0,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 85,
+        "evento": 48,
+        "movimento": 5,
+        "organizzazione": 0,
+        "opera": 14,
+        "luogo": 0,
+        "scoperta": 14
+      },
+      "medianPopularity": 21379,
+      "p25Popularity": 3194,
+      "lowPopularityEvents": [
+        {
+          "title": "La Battaglia delle Ardenne — L'Ultima Offensiva Tedesca",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1944,
+          "length": 419,
+          "wikipediaSlug": "Battle_of_the_Bulge"
+        },
+        {
+          "title": "Steinbeck e Furore",
+          "category": "arte",
+          "tipo": "persona",
+          "year": 1939,
+          "length": 617,
+          "wikipediaSlug": "The_Grapes_of_Wrath"
+        },
+        {
+          "title": "Battaglia d'Inghilterra — La RAF contro la Luftwaffe",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1940,
+          "length": 825,
+          "wikipediaSlug": "Battle_of_Britain"
+        },
+        {
+          "title": "La Battaglia d'Inghilterra — Il Radar Decide la Guerra",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1940,
+          "length": 825,
+          "wikipediaSlug": "Battle_of_Britain"
+        },
+        {
+          "title": "La Battaglia d'Inghilterra — La RAF Ferma la Luftwaffe",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 1940,
+          "length": 825,
+          "wikipediaSlug": "Battle_of_Britain"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo assente",
+        "filosofia assente",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Guerra Fredda",
+      "range": [
+        1947,
+        1991
+      ],
+      "total": 560,
+      "byCategory": {
+        "storia": 294,
+        "arte": 57,
+        "musica": 99,
+        "scienza": 94,
+        "geologia": 1,
+        "cosmo": 7,
+        "filosofia": 8,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 229,
+        "evento": 89,
+        "movimento": 40,
+        "organizzazione": 1,
+        "opera": 95,
+        "luogo": 10,
+        "scoperta": 96
+      },
+      "medianPopularity": 38100,
+      "p25Popularity": 16120,
+      "lowPopularityEvents": [
+        {
+          "title": "Norman Foster — l'High-Tech e la Sostenibilità nell'Architettura",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1986,
+          "length": 206,
+          "wikipediaSlug": "Norman_Foster"
+        },
+        {
+          "title": "La Corsa allo Spazio — USA vs URSS per la Luna",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": 1961,
+          "length": 499,
+          "wikipediaSlug": "Space_Race"
+        },
+        {
+          "title": "l'Agent Orange — la Guerra Chimica nel Vietnam",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1962,
+          "length": 636,
+          "wikipediaSlug": "Agent_Orange"
+        },
+        {
+          "title": "Il Padrino — il Cinema Americano degli Anni Settanta",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1972,
+          "length": 876,
+          "wikipediaSlug": "The_Godfather"
+        },
+        {
+          "title": "Coppola — Il Padrino",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1972,
+          "length": 876,
+          "wikipediaSlug": "The_Godfather"
+        }
+      ],
+      "gaps": [
+        "geologia sottorappresentato (1)",
+        "sport assente"
+      ]
+    },
+    {
+      "name": "Globalizzazione",
+      "range": [
+        1991,
+        2001
+      ],
+      "total": 141,
+      "byCategory": {
+        "storia": 72,
+        "arte": 11,
+        "musica": 17,
+        "scienza": 37,
+        "geologia": 0,
+        "cosmo": 1,
+        "filosofia": 0,
+        "sport": 3
+      },
+      "byTipo": {
+        "persona": 53,
+        "evento": 28,
+        "movimento": 3,
+        "organizzazione": 1,
+        "opera": 18,
+        "luogo": 0,
+        "scoperta": 38
+      },
+      "medianPopularity": 55187,
+      "p25Popularity": 29844,
+      "lowPopularityEvents": [
+        {
+          "title": "Young British Artists — Damien Hirst",
+          "category": "arte",
+          "tipo": "opera",
+          "year": 1992,
+          "length": 2850,
+          "wikipediaSlug": "Young_British_Artists"
+        },
+        {
+          "title": "il Summit della Terra di Rio — l'Ambiente come Politica Globale",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1992,
+          "length": 4928,
+          "wikipediaSlug": "Earth_Summit"
+        },
+        {
+          "title": "Atal Bihari Vajpayee — L'India Nucleare",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 1998,
+          "length": 6748,
+          "wikipediaSlug": "Atal_Bihari_Vajpayee"
+        },
+        {
+          "title": "Portishead e il trip-hop di Bristol",
+          "category": "musica",
+          "tipo": "persona",
+          "year": 1994,
+          "length": 8116,
+          "wikipediaSlug": "Dummy_(album)"
+        },
+        {
+          "title": "Bangalore — L'India come Potenza dell'Information Technology",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": 1991,
+          "length": 8432,
+          "wikipediaSlug": "Bangalore"
+        }
+      ],
+      "gaps": [
+        "geologia assente",
+        "cosmo sottorappresentato (1)",
+        "filosofia assente"
+      ]
+    },
+    {
+      "name": "Era Digitale",
+      "range": [
+        2001,
+        2025
+      ],
+      "total": 328,
+      "byCategory": {
+        "storia": 143,
+        "arte": 27,
+        "musica": 49,
+        "scienza": 96,
+        "geologia": 2,
+        "cosmo": 8,
+        "filosofia": 3,
+        "sport": 0
+      },
+      "byTipo": {
+        "persona": 122,
+        "evento": 68,
+        "movimento": 15,
+        "organizzazione": 0,
+        "opera": 27,
+        "luogo": 0,
+        "scoperta": 96
+      },
+      "medianPopularity": 57340,
+      "p25Popularity": 20441,
+      "lowPopularityEvents": [
+        {
+          "title": "Adele — la voce del dolore globale",
+          "category": "musica",
+          "tipo": "opera",
+          "year": 2011,
+          "length": 449,
+          "wikipediaSlug": "Adele"
+        },
+        {
+          "title": "PRISM — la Sorveglianza di Massa Rivelata da Snowden",
+          "category": "storia",
+          "tipo": "persona",
+          "year": 2013,
+          "length": 874,
+          "wikipediaSlug": "PRISM"
+        },
+        {
+          "title": "Occupy Wall Street",
+          "category": "storia",
+          "tipo": "evento",
+          "year": 2011,
+          "length": 1989,
+          "wikipediaSlug": "Occupy_Wall_Street"
+        },
+        {
+          "title": "i Vaccini mRNA — la Biotecnologia che Salva il Mondo",
+          "category": "scienza",
+          "tipo": "scoperta",
+          "year": 2020,
+          "length": 3418,
+          "wikipediaSlug": "BioNTech"
+        },
+        {
+          "title": "Olafur Eliasson: arte e crisi climatica a Parigi",
+          "category": "arte",
+          "tipo": "persona",
+          "year": 2015,
+          "length": 3707,
+          "wikipediaSlug": "Olafur_Eliasson"
+        }
+      ],
+      "gaps": [
+        "geologia sottorappresentato (2)",
+        "sport assente"
+      ]
+    }
+  ]
+}

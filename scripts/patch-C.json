@@ -1,0 +1,98 @@
+{
+  "Upper_Paleolithic": {
+    "it": [
+      {"text": "Copia i bisonti e i cervi sulle pareti di Lascaux usando ocra e grasso animale come pigmento", "cat": "arte"},
+      {"text": "Soffia in un flauto ricavato da un osso di avvoltoio — il primo strumento musicale dell'umanità", "cat": "musica"},
+      {"text": "Scheggia selce con la percussione indiretta per ottenere lame affilate come rasoi", "cat": "scienza"},
+      {"text": "Accompagna il defunto nella sepoltura con ocra rossa e ornamenti: il primo rito funebre documentato", "cat": "filosofia"},
+      {"text": "Incidi su un osso i cicli lunari: il tuo calendario a 28 tacche è il più antico strumento astronomico", "cat": "cosmo"}
+    ],
+    "en": [
+      {"text": "Copy bison and deer on Lascaux cave walls using ochre and animal fat mixed into pigment", "cat": "arte"},
+      {"text": "Blow into a flute carved from a vulture bone — humanity's oldest known musical instrument", "cat": "musica"},
+      {"text": "Knap flint with indirect percussion to produce blades as sharp as any modern razor", "cat": "scienza"},
+      {"text": "Lower the dead into a grave lined with red ochre and shell ornaments: the first documented funeral rite", "cat": "filosofia"},
+      {"text": "Carve 28 notches onto a bone to track the lunar cycle — the oldest known astronomical counting device", "cat": "cosmo"}
+    ]
+  },
+  "Mesolithic": {
+    "it": [
+      {"text": "Dipingi scene di caccia collettiva sulle rocce di Cueva de los Caballos con figure dinamiche e stilizzate", "cat": "arte"},
+      {"text": "Assembla microliti di selce su un'asta di legno: la freccia composita che rivoluziona la caccia", "cat": "scienza"},
+      {"text": "Osserva il mare salire di un metro ogni secolo mentre i ghiacciai fondono e inghiottono le coste", "cat": "geologia"},
+      {"text": "Entra in trance al suono del tamburo: lo sciamano media tra il mondo dei vivi e quello degli spiriti", "cat": "filosofia"},
+      {"text": "Tendi l'arco su una canoa scavata nel tronco e aspetta il salmone nelle acque del fiume", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Paint dynamic hunting scenes on the rocks of Cueva de los Caballos with stylised human silhouettes", "cat": "arte"},
+      {"text": "Mount tiny flint microliths onto a wooden shaft to create the composite arrow that transforms hunting", "cat": "scienza"},
+      {"text": "Watch the sea rise one metre per century as glaciers melt and swallow the coastal plains you know", "cat": "geologia"},
+      {"text": "Enter a drumbeat trance: the shaman crosses between the world of the living and the realm of spirits", "cat": "filosofia"},
+      {"text": "Draw your bow aboard a dugout canoe and wait for the salmon to run upstream in the river shallows", "cat": "sport"}
+    ]
+  },
+  "Neolithic": {
+    "it": [
+      {"text": "Modella l'argilla in vasi dipinti con spirali e motivi geometrici — la ceramica di Cucuteni-Trypillia", "cat": "arte"},
+      {"text": "Batti le percussioni di terracotta durante il rito del raccolto per invocare la pioggia nei villaggi", "cat": "musica"},
+      {"text": "Pianta i semi di farro selezionati nella primavera scorsa: la prima agricoltura sistematica del Vicino Oriente", "cat": "scienza"},
+      {"text": "Porta offerte votive alla Dea Madre: statuette di terracotta deposte nei santuari neolitici d'Anatolia", "cat": "filosofia"},
+      {"text": "Sfida un rivale nel combattimento rituale durante la festa del solstizio — vincere significa prestigio sociale", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Shape clay into vessels painted with spirals and chevrons — the tradition of Cucuteni-Trypillia pottery", "cat": "arte"},
+      {"text": "Strike terracotta percussion vessels during the harvest rite to call rain to the village fields", "cat": "musica"},
+      {"text": "Sow the emmer seeds you selected last autumn: systematic agriculture begins in the Fertile Crescent", "cat": "scienza"},
+      {"text": "Place terracotta figurines of the Mother Goddess in Anatolian shrine niches to secure the harvest", "cat": "filosofia"},
+      {"text": "Challenge a rival to ritual combat at the summer solstice festival — victory earns lasting social rank", "cat": "sport"}
+    ]
+  },
+  "Chalcolithic": {
+    "it": [
+      {"text": "Fondi il rame in stampi di argilla per creare asce cerimoniali — i primi oggetti di status metallici", "cat": "arte"},
+      {"text": "Mescola arsenico al rame in fusione e ottieni un metallo più duro: la metallurgia sperimenta le leghe", "cat": "scienza"},
+      {"text": "Pizzica le corde di una lira a cassa di risonanza lignea nelle corti mesopotamiche di Ur", "cat": "musica"},
+      {"text": "Scendi nelle miniere di rame di Timna seguendo i filoni di malachite attraverso la roccia", "cat": "geologia"},
+      {"text": "Invoca Inanna e Enlil davanti al tempio: il primo pantheon divino organizza il cosmo sumero", "cat": "filosofia"}
+    ],
+    "en": [
+      {"text": "Cast copper into clay moulds to produce ceremonial axes — the first metal objects used as status symbols", "cat": "arte"},
+      {"text": "Mix arsenic into molten copper and pour the harder alloy: early metallurgy experiments with composite metals", "cat": "scienza"},
+      {"text": "Pluck the strings of a wooden-box lyre in the courts of Ur — the first resonating instrument on record", "cat": "musica"},
+      {"text": "Descend into the Timna copper mine, following malachite veins deep into the sandstone cliff face", "cat": "geologia"},
+      {"text": "Invoke Inanna and Enlil before the temple steps: the first organised divine pantheon orders the cosmos", "cat": "filosofia"}
+    ]
+  },
+  "Bronze_Age": {
+    "it": [
+      {"text": "Contempla gli affreschi minoici di Akrotiri: delfini e pescatori su pareti bianche prima dell'eruzione", "cat": "arte"},
+      {"text": "Suona il corno di bronzo nelle cerimonie micenee — il metallo trasforma anche il paesaggio sonoro", "cat": "musica"},
+      {"text": "Fondi stagno e rame in proporzione uno a dieci: la lega di bronzo che cambia la storia delle armi", "cat": "scienza"},
+      {"text": "Ascolta l'aedo recitare l'Epopea di Gilgamesh: il primo racconto scritto sulla paura della morte", "cat": "filosofia"},
+      {"text": "Monta sul carro da guerra trainato da cavalli e affronta il nemico nella pianura — tattica dell'Età del Bronzo", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Study the Akrotiri frescoes of Santorini — dolphins and fishermen on white plaster before the eruption", "cat": "arte"},
+      {"text": "Sound a bronze horn at Mycenaean ceremonies — metal transforms the ritual soundscape of the palace", "cat": "musica"},
+      {"text": "Smelt tin and copper in a ratio of one to ten to cast bronze — the alloy that reshapes every weapon", "cat": "scienza"},
+      {"text": "Listen to the aedo chant the Epic of Gilgamesh — humanity's first written meditation on death and fame", "cat": "filosofia"},
+      {"text": "Mount a horse-drawn war chariot and charge across the plain — the defining tactical innovation of the age", "cat": "sport"}
+    ]
+  },
+  "Iron_Age": {
+    "it": [
+      {"text": "Ammira la toreutica celtica: i maestri di La Tène incidono spirali vegetali su cinturoni ed elmi", "cat": "arte"},
+      {"text": "Soffia nel carnyx celtico, il corno di guerra a testa di cinghiale — il suono incute terrore ai romani", "cat": "musica"},
+      {"text": "Alimenta la fucina e trasforma la ghisa in ferro battuto: il metallo più duro cambia l'agricoltura", "cat": "scienza"},
+      {"text": "Siedi ai piedi di Anassimandro a Mileto: l'apeiron come principio illimitato da cui tutto origina", "cat": "filosofia"},
+      {"text": "Gareggia nel pancrazio ai Giochi di Olimpia — il combattimento senza regole che forma il cittadino greco", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Examine La Tène torc work: Celtic masters engrave flowing plant spirals onto iron belts and helmets", "cat": "arte"},
+      {"text": "Blow the carnyx, the Celtic war horn topped with a boar's head — its roar terrifies Roman legions", "cat": "musica"},
+      {"text": "Feed the bellows of the forge and hammer wrought iron into a ploughshare — agriculture accelerates", "cat": "scienza"},
+      {"text": "Sit at Anaximander's feet in Miletus and hear the apeiron named as the boundless source of all things", "cat": "filosofia"},
+      {"text": "Compete in the pankration at Olympia — the no-holds-barred contest that defines Greek civic virtue", "cat": "sport"}
+    ]
+  }
+}

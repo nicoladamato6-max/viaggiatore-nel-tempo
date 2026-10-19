@@ -1,0 +1,114 @@
+{
+  "Italian_city-states": {
+    "it": [
+      {"text": "Visita il Battistero di Firenze e studia le porte bronzee del Ghiberti: ogni formella racconta una storia con profondità spaziale mai vista prima", "cat": "arte"},
+      {"text": "Ascolta l'Ars Nova di Francesco Landini nel Trecento fiorentino: il cieco organista rivoluziona il ritmo della polifonia europea", "cat": "musica"},
+      {"text": "Leggi la Summa de Arithmetica di Luca Pacioli (1494): la partita doppia che inventa la contabilità moderna e rende possibile il capitalismo", "cat": "scienza"},
+      {"text": "Studia l'umanesimo civico di Coluccio Salutati e Leonardo Bruni: la filosofia deve servire la città, non solo contemplare il divino", "cat": "filosofia"},
+      {"text": "Assisti al Calcio Storico Fiorentino in piazza Santa Croce: un gioco di squadra brutale e rituale che si gioca dal 1530 per le strade della città", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Visit the Florence Baptistery and study Ghiberti's bronze doors: each panel depicts a story with spatial depth never seen before", "cat": "arte"},
+      {"text": "Listen to Francesco Landini's Ars Nova in Trecento Florence: the blind organist revolutionizes rhythm in European polyphony", "cat": "musica"},
+      {"text": "Read Luca Pacioli's Summa de Arithmetica (1494): double-entry bookkeeping that invents modern accounting and makes capitalism possible", "cat": "scienza"},
+      {"text": "Study the civic humanism of Coluccio Salutati and Leonardo Bruni: philosophy must serve the city, not merely contemplate the divine", "cat": "filosofia"},
+      {"text": "Watch the Calcio Storico Fiorentino in Piazza Santa Croce: a brutal, ritual team game played since 1530 on the streets of the city", "cat": "sport"}
+    ]
+  },
+  "Crusades": {
+    "it": [
+      {"text": "Esplora le chiese crociata del Santo Sepolcro a Gerusalemme: arte romanica occidentale che si fonde con icone bizantine e arabeschi islamici", "cat": "arte"},
+      {"text": "Ascolta i canti crociati francesi del XII secolo e confrontali con la musica araba che i pellegrini-guerrieri portano in Europa al ritorno", "cat": "musica"},
+      {"text": "Studia come Avicenna entra in Occidente grazie alle Crociate: il Canone della Medicina diventa il testo universitario per tre secoli", "cat": "scienza"},
+      {"text": "Interrogati sulla teologia della guerra santa di Bernardo di Chiaravalle: la spada come strumento di redenzione e la sofferenza come purificazione", "cat": "filosofia"},
+      {"text": "Osserva i cavalieri templari e ospitalieri allenarsi ogni giorno: cavalcata, combattimento e preghiera come disciplina integrale del corpo e dello spirito", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Explore the Crusader churches of the Holy Sepulchre in Jerusalem: Western Romanesque art fused with Byzantine icons and Islamic arabesques", "cat": "arte"},
+      {"text": "Listen to 12th-century French Crusader songs and compare them with the Arabic music that pilgrim-warriors bring back to Europe", "cat": "musica"},
+      {"text": "Study how Avicenna reaches the West through the Crusades: his Canon of Medicine becomes the university textbook for three centuries", "cat": "scienza"},
+      {"text": "Question Bernard of Clairvaux's theology of holy war: the sword as instrument of redemption and suffering as purification", "cat": "filosofia"},
+      {"text": "Watch Templar and Hospitaller knights train daily: riding, combat and prayer as the integrated discipline of body and spirit", "cat": "sport"}
+    ]
+  },
+  "Renaissance_humanism": {
+    "it": [
+      {"text": "Guarda come Petrarca ispira Botticelli: la Primavera e la Nascita di Venere portano il mito classico pagano nel cuore della Firenze cristiana", "cat": "arte"},
+      {"text": "Ascolta le laude di Poliziano messe in musica nel circolo laurenziano: poesia volgare che diventa arte sacra e profana insieme", "cat": "musica"},
+      {"text": "Studia la filologia umanista di Lorenzo Valla che smaschera la Donazione di Costantino come falso medievale: la critica testuale come metodo scientifico", "cat": "scienza"},
+      {"text": "Leggi l'Oratio de hominis dignitate di Pico della Mirandola (1486): l'uomo plasma liberamente sé stesso tra le bestie e gli angeli", "cat": "filosofia"},
+      {"text": "Partecipa a una giostra medicea in piazza Santa Croce: l'equitazione come arte cavalleresca e spettacolo politico al servizio dei Medici", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "See how Petrarch inspires Botticelli: the Primavera and Birth of Venus bring the pagan classical myth into the heart of Christian Florence", "cat": "arte"},
+      {"text": "Listen to Poliziano's laude set to music in the Laurentian circle: vernacular poetry becoming sacred and secular art at once", "cat": "musica"},
+      {"text": "Study Lorenzo Valla's humanist philology exposing the Donation of Constantine as a medieval forgery: textual criticism as scientific method", "cat": "scienza"},
+      {"text": "Read Pico della Mirandola's Oration on the Dignity of Man (1486): humanity freely sculpts itself between beast and angel", "cat": "filosofia"},
+      {"text": "Take part in a Medicean joust in Piazza Santa Croce: horsemanship as chivalric art and political spectacle in the service of the Medici", "cat": "sport"}
+    ]
+  },
+  "Italian_Renaissance": {
+    "it": [
+      {"text": "Osserva Leonardo dipingere l'Ultima Cena a Milano (1498): ogni apostolo esprime una reazione psicologica diversa allo stesso momento di rivelazione", "cat": "arte"},
+      {"text": "Ascolta il madrigale rinascimentale di Josquin des Prez alla corte sforzesca di Milano: polifonia vocale che diventa specchio delle emozioni umane", "cat": "musica"},
+      {"text": "Studia i disegni anatomici di Leonardo da Vinci: 240 fogli di muscoli, vasi e organi osservati direttamente sui cadaveri, cento anni prima di Vesalio", "cat": "scienza"},
+      {"text": "Leggi il Principe di Machiavelli (1513): il potere spiegato senza morale — la politica come scienza autonoma per la prima volta nella storia", "cat": "filosofia"},
+      {"text": "Guarda le giostre medicee in piazza Santa Croce e il Calcio Storico Fiorentino: il corpo come strumento di rappresentanza del potere signorile", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Watch Leonardo paint the Last Supper in Milan (1498): each apostle expresses a different psychological reaction to the same moment of revelation", "cat": "arte"},
+      {"text": "Listen to Josquin des Prez's Renaissance madrigal at the Sforza court in Milan: vocal polyphony becoming a mirror of human emotions", "cat": "musica"},
+      {"text": "Study Leonardo da Vinci's anatomical drawings: 240 sheets of muscles, vessels and organs observed directly on cadavers, a century before Vesalius", "cat": "scienza"},
+      {"text": "Read Machiavelli's The Prince (1513): power explained without morality — politics as autonomous science for the first time in history", "cat": "filosofia"},
+      {"text": "Watch the Medicean jousts in Piazza Santa Croce and Calcio Storico Fiorentino: the body as an instrument of signorial political representation", "cat": "sport"}
+    ]
+  },
+  "Renaissance": {
+    "it": [
+      {"text": "Visita la bottega di Albrecht Dürer a Norimberga: il primo artista nordico a integrare la prospettiva italiana con il dettaglio fiammingo", "cat": "arte"},
+      {"text": "Ascolta il mottetto fiammingo di Josquin des Prez e Palestrina: la polifonia sacra raggiunge il massimo della complessità contrappuntistica", "cat": "musica"},
+      {"text": "Leggi il De revolutionibus di Copernico (1543): il Sole al centro, la Terra in movimento — il modello che rompe mille anni di cosmologia tolemaica", "cat": "scienza"},
+      {"text": "Leggi gli Essais di Montaigne (1580): il dubbio come metodo e il sé come oggetto di studio — nasce la prosa moderna del pensiero scettico", "cat": "filosofia"},
+      {"text": "Partecipa ai tornei cavallereschi europei del Cinquecento: da Londra a Vienna, l'élite continentale compete tra giostre, danze e banchetti spettacolari", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Visit Albrecht Dürer's workshop in Nuremberg: the first northern artist to integrate Italian perspective with Flemish detail", "cat": "arte"},
+      {"text": "Listen to the Flemish motet of Josquin des Prez and Palestrina: sacred polyphony reaches its peak of contrapuntal complexity", "cat": "musica"},
+      {"text": "Read Copernicus's De revolutionibus (1543): the Sun at the center, Earth in motion — the model that breaks a thousand years of Ptolemaic cosmology", "cat": "scienza"},
+      {"text": "Read Montaigne's Essays (1580): doubt as method and the self as object of study — modern prose of skeptical thought is born", "cat": "filosofia"},
+      {"text": "Take part in 16th-century European chivalric tournaments: from London to Vienna, the continental elite competes through jousting, dance and spectacular feasting", "cat": "sport"}
+    ]
+  },
+  "Protestant_Reformation": {
+    "it": [
+      {"text": "Guarda Lucas Cranach il Vecchio illustrare la Bibbia di Lutero: l'arte protestante usa l'immagine per insegnare le Scritture al popolo analfabeta", "cat": "arte"},
+      {"text": "Canta il corale luterano Ein feste Burg di Lutero (1529): la musica congregazionale in lingua volgare sostituisce il canto gregoriano nelle chiese", "cat": "musica"},
+      {"text": "Studia come la stampa di Gutenberg accelera la Riforma: le 95 Tesi di Lutero vengono riprodotte in 300.000 copie in dieci anni — il primo media virale", "cat": "scienza"},
+      {"text": "Leggi La libertà del cristiano di Lutero (1520): la grazia sola salva, le opere umane non bastano — la rivoluzione teologica che spacca l'Europa", "cat": "filosofia"},
+      {"text": "Visita le fiere e i giochi comunitari luterani in Germania: Lutero difende il gioco e la musica come doni di Dio contro i riformatori più intransigenti", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Watch Lucas Cranach the Elder illustrate Luther's Bible: Protestant art uses images to teach Scripture to an illiterate population", "cat": "arte"},
+      {"text": "Sing Luther's chorale Ein feste Burg (1529): congregational music in the vernacular language replaces Gregorian chant in the churches", "cat": "musica"},
+      {"text": "Study how Gutenberg's press accelerates the Reformation: Luther's 95 Theses are reproduced in 300,000 copies in ten years — the first viral media", "cat": "scienza"},
+      {"text": "Read Luther's The Freedom of a Christian (1520): grace alone saves, human works are not enough — the theological revolution that splits Europe", "cat": "filosofia"},
+      {"text": "Visit the Lutheran fairs and community games in Germany: Luther defends play and music as God's gifts against the most intransigent reformers", "cat": "sport"}
+    ]
+  },
+  "Counter-Reformation": {
+    "it": [
+      {"text": "Studia la Vocazione di San Matteo di Caravaggio (1600) in San Luigi dei Francesi a Roma: il realismo drammatico della luce come strumento di conversione", "cat": "arte"},
+      {"text": "Ascolta l'oratorio di Giacomo Carissimi o la musica sacra tridentina di Palestrina: la risposta cattolica che reinventa il suono della devozione", "cat": "musica"},
+      {"text": "Segui il processo a Galileo (1633): la Chiesa condanna l'eliocentrismo, ma i matematici gesuiti continuano a costruire osservatori in tutto il mondo", "cat": "scienza"},
+      {"text": "Pratica gli Esercizi Spirituali di Ignazio di Loyola (1548): meditazione guidata ed esame di coscienza — la soggettività spirituale come metodo rigoroso", "cat": "filosofia"},
+      {"text": "Osserva le grandi processioni della Controriforma a Roma e Siviglia: spettacoli pubblici di devozione che competono con il teatro profano per il popolo", "cat": "sport"}
+    ],
+    "en": [
+      {"text": "Study Caravaggio's Calling of Saint Matthew (1600) in San Luigi dei Francesi in Rome: dramatic realism of light as an instrument of conversion", "cat": "arte"},
+      {"text": "Listen to the oratorio of Giacomo Carissimi or Palestrina's Tridentine sacred music: the Catholic response that reinvents the sound of devotion", "cat": "musica"},
+      {"text": "Follow Galileo's trial (1633): the Church condemns heliocentrism, but Jesuit mathematicians continue building observatories worldwide", "cat": "scienza"},
+      {"text": "Practice Ignatius of Loyola's Spiritual Exercises (1548): guided meditation and examination of conscience — spiritual subjectivity as rigorous method", "cat": "filosofia"},
+      {"text": "Watch the great Counter-Reformation processions in Rome and Seville: public devotional spectacles competing with secular theater for the people", "cat": "sport"}
+    ]
+  }
+}
