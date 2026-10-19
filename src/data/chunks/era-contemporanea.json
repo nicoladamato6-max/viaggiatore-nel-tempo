@@ -34938,5 +34938,29 @@
     "tipo": "evento",
     "wikipediaSlug": "2025_Balkh_earthquake",
     "isCosmic": false
+  },
+  {
+    "id": "davos-world-economic-forum",
+    "title": "Davos — Il Forum Economico Mondiale e la Globalizzazione",
+    "year": 1971,
+    "lat": 46.8132,
+    "lng": 9.8378,
+    "category": "storia",
+    "tipo": "evento",
+    "description": "Il Forum Economico Mondiale di Davos, fondato nel 1971 dall'economista Klaus Schwab, riunisce ogni gennaio i leader mondiali di economia, politica e cultura: la piccola cittadina svizzera e diventata il simbolo della governance globale.",
+    "wikipediaSlug": "World_Economic_Forum",
+    "isCosmic": false
+  },
+  {
+    "id": "primavere-arabe-2010",
+    "title": "Primavere Arabe",
+    "year": 2010,
+    "lat": 33.8869,
+    "lng": 9.5375,
+    "category": "storia",
+    "tipo": "evento",
+    "description": "Le Primavere Arabe furono una serie di rivolte e proteste popolari che scossero il mondo arabo tra il 2010 e il 2012, partendo dalla Tunisia. Twitter e Facebook giocarono un ruolo cruciale. Portarono alla caduta dei regimi in Tunisia, Egitto, Libia e Yemen, ma i risultati a lungo termine rimasero ampiamente deludenti.",
+    "wikipediaSlug": "Arab_Spring",
+    "isCosmic": false
   }
 ]

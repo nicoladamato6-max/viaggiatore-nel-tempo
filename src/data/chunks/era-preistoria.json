@@ -2075,5 +2075,113 @@
     "tipo": "evento",
     "wikipediaSlug": "Alluvione_zancleana",
     "isCosmic": false
+  },
+  {
+    "id": "shanidar-sepoltura-neanderthal",
+    "title": "Shanidar — La Sepoltura dei Neanderthal con Fiori",
+    "year": -60000,
+    "lat": 36.8368,
+    "lng": 44.2183,
+    "category": "storia",
+    "tipo": "evento",
+    "description": "Nella grotta di Shanidar, in Iraq, i Neanderthal seppellirono i loro morti con fiori e offerte, rivelando una capacita di cura e rituale finora insospettata.",
+    "wikipediaSlug": "Shanidar_Cave",
+    "isCosmic": false
+  },
+  {
+    "id": "blombos-cave-ocra",
+    "title": "Blombos Cave — Il Primo Pensiero Simbolico dell'Umanita",
+    "year": -75000,
+    "lat": -34.4164,
+    "lng": 21.2311,
+    "category": "storia",
+    "tipo": "evento",
+    "description": "Nella grotta di Blombos, in Sudafrica, 75.000 anni fa gli esseri umani incidono simboli geometrici sull'ocra rossa: il primo atto conosciuto di pensiero astratto e simbolismo.",
+    "wikipediaSlug": "Blombos_Cave",
+    "isCosmic": false
+  },
+  {
+    "id": "muge-cimiteri-mesolitici",
+    "title": "Muge — I Cimiteri Mesolitici del Portogallo",
+    "year": -6000,
+    "lat": 39.0714,
+    "lng": -8.5833,
+    "category": "storia",
+    "tipo": "evento",
+    "description": "Le conchiglierie mesolitiche di Muge, in Portogallo, conservano i cimiteri di comunita di cacciatori-raccoglitori vissuti lungo il Tago 8.000 anni fa: i piu antichi cimiteri strutturati d'Europa occidentale.",
+    "wikipediaSlug": "Muge_mesolithic_shell_middens",
+    "isCosmic": false
+  },
+  {
+    "id": "star-carr-mesolitico",
+    "title": "Star Carr — Il Villaggio Mesolitico Piu Antico d'Inghilterra",
+    "year": -9000,
+    "lat": 54.2333,
+    "lng": -0.4167,
+    "category": "storia",
+    "tipo": "evento",
+    "description": "Star Carr, nello Yorkshire, e il piu antico insediamento postglaciale d'Inghilterra: i suoi abitanti costruivano canoe, lavoravano corna di cervo e vivevano sulle rive di un lago oggi scomparso.",
+    "wikipediaSlug": "Star_Carr",
+    "isCosmic": false
+  },
+  {
+    "id": "timna-miniere-rame",
+    "title": "Timna — Le Prime Miniere di Rame del Mondo",
+    "year": -5000,
+    "lat": 29.7667,
+    "lng": 34.9833,
+    "category": "storia",
+    "tipo": "evento",
+    "description": "La valle di Timna, nel Negev israeliano, ospita le prime miniere di rame sistematicamente sfruttate al mondo, attive gia 7.000 anni fa: qui la metallurgia umana muove i primi passi.",
+    "wikipediaSlug": "Timna_Valley",
+    "isCosmic": false
+  },
+  {
+    "id": "theia-protopianeta",
+    "title": "Theia",
+    "year": -4500000000,
+    "lat": null,
+    "lng": null,
+    "category": "geologia",
+    "tipo": "evento",
+    "description": "Theia e il nome del protopianeta delle dimensioni di Marte che colpi la giovane Terra circa 4,5 miliardi di anni fa. Il materiale espulso dall'impatto si aggrego in orbita formando la Luna. Senza questo evento catastrofico la Terra avrebbe un asse di rotazione instabile e probabilmente non ospiterebbe vita complessa.",
+    "wikipediaSlug": "Theia_(planet)",
+    "isCosmic": false
+  },
+  {
+    "id": "pterosauri-volo-mesozoico",
+    "title": "Pterosauri",
+    "year": -228000000,
+    "lat": 44.4,
+    "lng": 11.3,
+    "category": "geologia",
+    "tipo": "evento",
+    "description": "I pterosauri furono i primi vertebrati volanti della storia, dominando i cieli del Mesozoico per 160 milioni di anni. Alcuni, come il Quetzalcoatlus, avevano aperture alari fino a 10-11 metri. Non erano dinosauri ma parenti stretti: vissero dal Triassico al Cretaceo e si estinsero con l'impatto di Chicxulub.",
+    "wikipediaSlug": "Pterosaur",
+    "isCosmic": false
+  },
+  {
+    "id": "megalodon-squalo-gigante",
+    "title": "Megalodon",
+    "year": -15000000,
+    "lat": 0,
+    "lng": -30,
+    "category": "geologia",
+    "tipo": "evento",
+    "description": "Il Megalodon (Otodus megalodon) fu il piu grande squalo mai esistito, lungo fino a 18-20 metri. Domino gli oceani del Miocene e del Pliocene per circa 20 milioni di anni. Si estinse circa 3,6 milioni di anni fa.",
+    "wikipediaSlug": "Megalodon",
+    "isCosmic": false
+  },
+  {
+    "id": "istmo-panama-chiusura",
+    "title": "Istmo di Panama",
+    "year": -3000000,
+    "lat": 9,
+    "lng": -79.5,
+    "category": "geologia",
+    "tipo": "evento",
+    "description": "La chiusura dell'Istmo di Panama, avvenuta circa 3 milioni di anni fa, uni le Americhe e separo l'Atlantico dal Pacifico. L'evento ridisegno le correnti oceaniche globali, intensifico il Gulf Stream e avvio il ciclo delle grandi glaciazioni del Pleistocene.",
+    "wikipediaSlug": "Isthmus_of_Panama",
+    "isCosmic": false
   }
 ]

@@ -15452,5 +15452,17 @@
     "tipo": "evento",
     "wikipediaSlug": "1940_Vrancea_earthquake",
     "isCosmic": false
+  },
+  {
+    "id": "processi-mosca-1936",
+    "title": "I Processi di Mosca — Stalin Elimina i Vecchi Bolscevichi",
+    "year": 1936,
+    "lat": 55.7558,
+    "lng": 37.6173,
+    "category": "storia",
+    "tipo": "evento",
+    "description": "I Processi di Mosca del 1936-1938 furono le purghe di Stalin: centinaia di vecchi bolscevichi confessarono crimini impossibili sotto tortura e furono fucilati, eliminando ogni potenziale oppositore al regime.",
+    "wikipediaSlug": "Moscow_trials",
+    "isCosmic": false
   }
 ]
