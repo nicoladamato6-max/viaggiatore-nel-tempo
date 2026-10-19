@@ -209,14 +209,16 @@ export function TimeMachine({ locale, events, currentYear, onNavigate }: Props) 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ year, events: top30, locale }),
       });
-      const json = await res.json() as { ok?: boolean; data?: AiBriefing; error?: string };
+      let json: { ok?: boolean; data?: AiBriefing; error?: string } = {};
+      try { json = await res.json(); } catch { /* body non è JSON */ }
       if (!res.ok || !json.ok || !json.data) {
-        setBriefingError(json.error ?? (it ? 'Errore AI' : 'AI error'));
+        const msg = json.error ?? `Errore server (${res.status})`;
+        setBriefingError(msg);
       } else {
         setBriefing(json.data);
       }
     } catch {
-      setBriefingError(it ? 'Rete non disponibile' : 'Network unavailable');
+      setBriefingError(it ? 'Impossibile raggiungere il server' : 'Server unreachable');
     } finally {
       setBriefingLoad(false);
     }
