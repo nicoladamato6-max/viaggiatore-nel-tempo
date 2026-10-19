@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { type FlyTarget, type Locale, type HistoricalEvent } from '../types';
-import { MACRO_ERAS, SUBCATEGORIES, getCurrentMacroEra } from '../data/historicalPeriods';
+import { type FlyTarget, type Locale, type HistoricalEvent, type EraLaunchData } from '../types';
+import { MACRO_ERAS, SUBCATEGORIES, getCurrentMacroEra, type Period } from '../data/historicalPeriods';
 import epochBriefingsData from '../data/epoch-briefings.json';
 
 interface AiBriefing {
@@ -11,21 +11,26 @@ interface AiBriefing {
 
 type EpochBriefings = Record<string, { it: AiBriefing; en: AiBriefing }>;
 
-function getStaticBriefing(year: number, locale: Locale): AiBriefing | null {
+function getStaticBriefingWithMeta(year: number, locale: Locale): { briefing: AiBriefing; era: Period } | null {
   const briefings = epochBriefingsData as EpochBriefings;
   // Preferisci la sotto-epoca più specifica (span più corto) che copre l'anno
   const activeSubs = SUBCATEGORIES.filter(p => year >= p.start && year <= p.end && !!p.wikipediaSlug);
   if (activeSubs.length > 0) {
     const best = activeSubs.reduce((a, b) => (b.end - b.start) < (a.end - a.start) ? b : a);
     const entry = briefings[best.wikipediaSlug!];
-    if (entry) return entry[locale] ?? entry['it'] ?? null;
+    if (entry) {
+      const briefing = entry[locale] ?? entry['it'];
+      if (briefing) return { briefing, era: best };
+    }
   }
   // Fallback alla macro-era
   const era = getCurrentMacroEra(year);
   if (!era.wikipediaSlug) return null;
   const entry = briefings[era.wikipediaSlug];
   if (!entry) return null;
-  return entry[locale] ?? entry['it'] ?? null;
+  const briefing = entry[locale] ?? entry['it'];
+  if (!briefing) return null;
+  return { briefing, era };
 }
 
 // ── Parser date potenziato ────────────────────────────────────────────────────
@@ -160,10 +165,11 @@ interface Props {
   events: HistoricalEvent[];
   currentYear: number;
   onNavigate: (params: { year?: number; flyTo?: FlyTarget }) => void;
+  onEraLaunched?: (data: EraLaunchData) => void;
 }
 
 // ── Componente ────────────────────────────────────────────────────────────────
-export function TimeMachine({ locale, events: _events, currentYear: _currentYear, onNavigate }: Props) {
+export function TimeMachine({ locale, events: _events, currentYear: _currentYear, onNavigate, onEraLaunched }: Props) {
   const [open,           setOpen]           = useState(false);
   const [yearText,       setYearText]       = useState('');
   const [place,          setPlace]          = useState('');
@@ -258,10 +264,21 @@ export function TimeMachine({ locale, events: _events, currentYear: _currentYear
       launchedYearRef.current = year;
       setLaunched(true);
       onNavigate({ year: year ?? undefined, flyTo });
-      // Mostra subito il briefing pre-generato per la macro-era
+      // Mostra subito il briefing pre-generato per l'era
       if (year !== null) {
-        const staticBriefing = getStaticBriefing(year, locale);
-        if (staticBriefing) setBriefing(staticBriefing);
+        const result = getStaticBriefingWithMeta(year, locale);
+        if (result) {
+          setBriefing(result.briefing);
+          onEraLaunched?.({
+            briefing: result.briefing,
+            eraName:  result.era.name,
+            eraSlug:  result.era.wikipediaSlug ?? '',
+            eraYear:  year,
+            locale,
+            originLat: result.era.originLat,
+            originLng: result.era.originLng,
+          });
+        }
       }
     }
   }

@@ -161,12 +161,14 @@ function useTTS() {
 
 // ── Componente ────────────────────────────────────────────────────────────
 interface Props {
-  event:   HistoricalEvent | null;
-  locale:  Locale;
-  onClose: () => void;
+  event:           HistoricalEvent | null;
+  locale:          Locale;
+  onClose:         () => void;
+  onShowEraGuide?: () => void;
+  eraGuideName?:   string;
 }
 
-export function InfoPanel({ event, locale, onClose }: Props) {
+export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName }: Props) {
   const [width, setWidth] = useState(DEFAULT_W);
   const panelRef   = useRef<HTMLDivElement>(null);
   const wikiBodyRef = useRef<HTMLDivElement>(null);
@@ -245,13 +247,24 @@ export function InfoPanel({ event, locale, onClose }: Props) {
 
       {/* intestazione */}
       <div className="info-panel__header">
-        <span
-          className="category-badge"
-          style={{ background: `${color}22`, color, border: `1px solid ${color}55` }}
-        >
-          {CATEGORY_LABELS[event.category]}
-        </span>
-        <div style={{ display: 'flex', gap: 4, alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 2, overflow: 'hidden', flex: 1 }}>
+          <span
+            className="category-badge"
+            style={{ background: `${color}22`, color, border: `1px solid ${color}55`, alignSelf: 'flex-start' }}
+          >
+            {CATEGORY_LABELS[event.category]}
+          </span>
+          {onShowEraGuide && eraGuideName && (
+            <button
+              className="info-panel__era-back-btn"
+              onClick={onShowEraGuide}
+              title={locale === 'it' ? `Torna alla guida: ${eraGuideName}` : `Back to era guide: ${eraGuideName}`}
+            >
+              ‹ {eraGuideName}
+            </button>
+          )}
+        </div>
+        <div style={{ display: 'flex', gap: 4, alignItems: 'center', flexShrink: 0 }}>
           {window.speechSynthesis && (
             <button
               className={`info-panel__icon-btn${speaking ? ' tts-active' : ''}`}

@@ -569,6 +569,29 @@ body {
   background: rgba(255, 255, 255, 0.08);
 }
 
+/* Bottone "← Torna all'era" nell'InfoPanel (mostrato quando EraGuide è attiva) */
+.info-panel__era-back-btn {
+  background: transparent;
+  border: none;
+  color: #c9a227;
+  font-size: 0.72rem;
+  font-family: monospace;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  opacity: 0.75;
+  transition: opacity 0.15s, color 0.15s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+.info-panel__era-back-btn:hover {
+  opacity: 1;
+  color: #e8d5a0;
+}
+
 /* dati evento: titolo, anno, descrizione */
 .info-panel__meta {
   flex-shrink: 0;

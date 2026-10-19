@@ -5,13 +5,14 @@ import { InfoPanel } from './components/InfoPanel';
 import { TimeControls } from './components/TimeControls';
 import { SearchBar } from './components/SearchBar';
 import { TimeMachine } from './components/TimeMachine';
+import { EraGuide } from './components/EraGuide';
 import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { ProfileModal } from './components/ProfileModal';
 import { MobileNav } from './components/MobileNav';
 import { useAuth } from './hooks/useAuth';
 import { useMobile } from './hooks/useMobile';
-import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker, type MobileTab } from './types';
+import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker, type MobileTab, type EraLaunchData } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 import { MACRO_ERAS, SUBCATEGORIES, type Period } from './data/historicalPeriods';
 
@@ -273,6 +274,8 @@ function AppInner() {
   }, [ALL_EVENTS, searchIndex]);
 
   const [selectedEvent, setSelectedEvent] = useState<HistoricalEvent | null>(null);
+  const [eraGuide,      setEraGuide]      = useState<EraLaunchData | null>(null);
+  const [eraGuideOpen,  setEraGuideOpen]  = useState(false);
   const [mobileGlobeH, setMobileGlobeH] = useState(40); // vh
   const splitDragRef = useRef<{ startY: number; startH: number } | null>(null);
   const [flyTo, setFlyTo]                 = useState<FlyTarget | null>(null);
@@ -580,7 +583,24 @@ function AppInner() {
               }
               if (ft) setFlyTo(ft);
             }}
+            onEraLaunched={(data) => {
+              setEraGuide(data);
+              setEraGuideOpen(true);
+            }}
           />
+          {!isMobile && eraGuide && eraGuideOpen && (
+            <EraGuide
+              data={eraGuide}
+              onClose={() => { setEraGuide(null); setEraGuideOpen(false); }}
+              onNavigate={({ year, flyTo: ft }) => {
+                if (year !== undefined) {
+                  setSliderValue(yearToSlider(year));
+                  setOverrideYear(year);
+                }
+                if (ft) setFlyTo(ft);
+              }}
+            />
+          )}
           <button
             className={`territory-toggle-btn${showTerritories ? ' active' : ''}`}
             onClick={() => setShowTerritories(v => !v)}
@@ -608,7 +628,15 @@ function AppInner() {
             onMouseDown={onSplitDown}
           />
         )}
-        {!isMobile && <InfoPanel event={selectedEvent} locale={locale} onClose={() => setSelectedEvent(null)} />}
+        {!isMobile && (
+          <InfoPanel
+            event={selectedEvent}
+            locale={locale}
+            onClose={() => setSelectedEvent(null)}
+            onShowEraGuide={eraGuide ? () => setEraGuideOpen(true) : undefined}
+            eraGuideName={eraGuide?.eraName}
+          />
+        )}
       </div>
 
       {/* Desktop: controls in basso */}

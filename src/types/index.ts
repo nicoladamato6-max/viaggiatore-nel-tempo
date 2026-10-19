@@ -73,6 +73,16 @@ export interface WikiMarker {
 
 export type MobileTab = 'globe' | 'search' | 'timeline' | 'profile';
 
+export interface EraLaunchData {
+  briefing: { dove: string; top5: string[]; connessioni: string };
+  eraName: string;
+  eraSlug: string;
+  eraYear: number;
+  locale: Locale;
+  originLat?: number;
+  originLng?: number;
+}
+
 export const CATEGORY_LABELS: Record<EventCategory, string> = {
   storia:    'Storia',
   arte:      'Arte',
