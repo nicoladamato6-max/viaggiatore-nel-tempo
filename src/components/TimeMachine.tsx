@@ -171,7 +171,6 @@ export function TimeMachine({ locale, events, currentYear, onNavigate }: Props) 
   const [loading,        setLoading]        = useState(false);
   const [launched,       setLaunched]       = useState(false);
   const [briefing,       setBriefing]       = useState<AiBriefing | null>(null);
-  const [briefingLoad,   setBriefingLoad]   = useState(false);
   const [briefingError,  setBriefingError]  = useState<string | null>(null);
   const launchedYearRef = useRef<number | null>(null);
   const abortRef  = useRef<AbortController | null>(null);
@@ -209,39 +208,6 @@ export function TimeMachine({ locale, events, currentYear, onNavigate }: Props) 
     setBriefingError(null);
     launchedYearRef.current = null;
     setTimeout(() => yearRef.current?.focus(), 50);
-  }
-
-  async function handleDiscover() {
-    const year = launchedYearRef.current ?? currentYear;
-    setBriefingLoad(true);
-    setBriefingError(null);
-    setBriefing(null);
-
-    const top30 = events
-      .slice()
-      .sort((a, b) => Math.abs(a.year - year) - Math.abs(b.year - year))
-      .slice(0, 30)
-      .map(e => ({ title: e.title, year: e.year, category: e.category, description: e.description?.slice(0, 100) }));
-
-    try {
-      const res = await fetch('/api/summarize', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ year, events: top30, locale, place: place.trim() || undefined }),
-      });
-      let json: { ok?: boolean; data?: AiBriefing; error?: string } = {};
-      try { json = await res.json(); } catch { /* body non è JSON */ }
-      if (!res.ok || !json.ok || !json.data) {
-        const msg = json.error ?? `Errore server (${res.status})`;
-        setBriefingError(msg);
-      } else {
-        setBriefing(json.data);
-      }
-    } catch {
-      setBriefingError(it ? 'Impossibile raggiungere il server' : 'Server unreachable');
-    } finally {
-      setBriefingLoad(false);
-    }
   }
 
   async function handleLaunch() {
