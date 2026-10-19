@@ -198,7 +198,7 @@
   gap: 0.4rem;
 }
 
-.era-guide__top5-btn {
+.era-guide__top5-item {
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
@@ -213,14 +213,14 @@
   color: #b8c4d0;
   font-family: 'Georgia', serif;
   font-size: 0.82rem;
-  line-height: 1.45;
+  line-height: 1.55;
 }
-.era-guide__top5-btn:hover {
+.era-guide__top5-item:hover {
   background: #0f1e30;
-  border-color: #c9a22755;
-  color: #e8d5a0;
+  border-color: #c9a22744;
+  color: #c8d4e0;
 }
-.era-guide__top5-btn:hover .era-guide__top5-arrow {
+.era-guide__top5-item:hover .era-guide__top5-arrow {
   color: #c9a227;
 }
 
@@ -229,8 +229,35 @@
   font-family: monospace;
   font-size: 0.8rem;
   flex-shrink: 0;
-  margin-top: 0.05rem;
+  margin-top: 0.1rem;
   transition: color 0.15s;
+}
+
+.era-guide__top5-text {
+  flex: 1;
+}
+
+/* Hyperlink inline per le entità citate nel top5 */
+.era-guide__entity-link {
+  background: none;
+  border: none;
+  color: #c9a227;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: #c9a22766;
+  transition: color 0.15s, text-decoration-color 0.15s;
+  display: inline;
+}
+.era-guide__entity-link:hover {
+  color: #e8d5a0;
+  text-decoration-color: #e8d5a0cc;
 }
 
 /* ── Connessioni ── */

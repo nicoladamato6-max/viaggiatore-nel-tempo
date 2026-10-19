@@ -1,29 +1,120 @@
-import { useState } from 'react';
-import { type FlyTarget, type EraLaunchData } from '../types';
+import { useMemo, useState } from 'react';
+import { type FlyTarget, type EraLaunchData, type HistoricalEvent } from '../types';
 import { parseYear } from './TimeMachine';
 import './EraGuide.css';
 
 interface Props {
   data: EraLaunchData | null;
+  events: HistoricalEvent[];
   onClose: () => void;
   onNavigate: (params: { year?: number; flyTo?: FlyTarget }) => void;
+  onSelectEvent?: (event: HistoricalEvent) => void;
 }
 
-export function EraGuide({ data, onClose, onNavigate }: Props) {
+/** Returns entity matches found in the text, sorted by position, deduplicated. */
+function findEntityLinks(
+  itemText: string,
+  allEvents: HistoricalEvent[],
+): Array<{ phrase: string; event: HistoricalEvent; pos: number }> {
+  const textLower = itemText.toLowerCase();
+  const found: Array<{ phrase: string; event: HistoricalEvent; pos: number }> = [];
+
+  for (const ev of allEvents) {
+    if (ev.isCosmic) continue;
+    // Use base title only (strip em-dash suffix like "— Conquista dell'Asia")
+    const baseTitle = ev.title.split(/\s*[—–]\s*/)[0].trim();
+    if (baseTitle.length < 4) continue;
+
+    const baseLower = baseTitle.toLowerCase();
+    const idx = textLower.indexOf(baseLower);
+    if (idx === -1) continue;
+
+    // Word-boundary check: ensure match is not inside a longer word
+    const charBefore = idx > 0 ? itemText[idx - 1] : null;
+    const charAfter = idx + baseTitle.length < itemText.length
+      ? itemText[idx + baseTitle.length]
+      : null;
+    if (charBefore && /[\wÀ-öø-ÿ]/.test(charBefore)) continue;
+    if (charAfter  && /[\wÀ-öø-ÿ]/.test(charAfter))  continue;
+
+    found.push({ phrase: itemText.slice(idx, idx + baseTitle.length), event: ev, pos: idx });
+  }
+
+  // Sort by position; longest match wins when two overlap at same offset
+  found.sort((a, b) => a.pos - b.pos || b.phrase.length - a.phrase.length);
+
+  // Deduplicate overlapping matches
+  const deduped: typeof found = [];
+  let lastEnd = -1;
+  for (const f of found) {
+    if (f.pos >= lastEnd) {
+      deduped.push(f);
+      lastEnd = f.pos + f.phrase.length;
+    }
+  }
+  return deduped;
+}
+
+/** Splits a top5 sentence into plain-text and entity-link segments. */
+function renderAnnotatedText(
+  text: string,
+  links: Array<{ phrase: string; event: HistoricalEvent; pos: number }>,
+  onLinkClick: (event: HistoricalEvent, e: React.MouseEvent) => void,
+): React.ReactNode {
+  if (links.length === 0) return text;
+
+  const result: React.ReactNode[] = [];
+  let remaining = text;
+  let key = 0;
+
+  for (const { phrase, event } of links) {
+    const idx = remaining.indexOf(phrase);
+    if (idx === -1) continue;
+    if (idx > 0) result.push(<span key={key++}>{remaining.slice(0, idx)}</span>);
+    const yearLabel = event.year > 0 ? `${event.year} d.C.` : `${Math.abs(event.year)} a.C.`;
+    result.push(
+      <button
+        key={key++}
+        className="era-guide__entity-link"
+        onClick={(e) => onLinkClick(event, e)}
+        title={`${event.title} — ${yearLabel}`}
+      >
+        {phrase}
+      </button>
+    );
+    remaining = remaining.slice(idx + phrase.length);
+  }
+  if (remaining) result.push(<span key={key++}>{remaining}</span>);
+  return <>{result}</>;
+}
+
+export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: Props) {
   const [collapsed, setCollapsed] = useState(false);
+
+  // Pre-compute entity links for all top5 items — must be before early return (hooks)
+  const top5Links = useMemo(() => {
+    if (!data) return [];
+    return data.briefing.top5.map(item => findEntityLinks(item, events));
+  }, [data, events]);
 
   if (!data) return null;
 
   const it = data.locale === 'it';
   const { briefing, eraName, eraYear, originLat, originLng } = data;
 
-  function handleTop5Click(itemText: string) {
+  function handleItemClick(itemText: string) {
     const parsedYear = parseYear(itemText) ?? eraYear;
     const flyTo: FlyTarget | undefined =
       originLat != null && originLng != null
         ? { kind: 'geo', lat: originLat, lng: originLng, ts: Date.now(), range: 1_800_000 }
         : undefined;
     onNavigate({ year: parsedYear, flyTo });
+  }
+
+  function handleEntityClick(ev: HistoricalEvent, e: React.MouseEvent) {
+    e.stopPropagation(); // don't also trigger handleItemClick
+    onNavigate({ year: ev.year });
+    onSelectEvent?.(ev);
   }
 
   const collapseLabel = it ? 'Comprimi' : 'Collapse';
@@ -77,14 +168,14 @@ export function EraGuide({ data, onClose, onNavigate }: Props) {
         {/* Dove sei */}
         <div className="era-guide__section">
           <div className="era-guide__section-label">
-            {it ? "L'epoca in cui sei" : 'The era you\'re in'}
+            {it ? "L'epoca in cui sei" : "The era you're in"}
           </div>
           <p className="era-guide__dove">{briefing.dove}</p>
         </div>
 
         <div className="era-guide__divider" />
 
-        {/* Top5 */}
+        {/* Top5 con entity hyperlinks */}
         <div className="era-guide__section">
           <div className="era-guide__section-label">
             {it ? '5 cose da non perdere' : '5 things to experience'}
@@ -92,14 +183,16 @@ export function EraGuide({ data, onClose, onNavigate }: Props) {
           <ol className="era-guide__top5">
             {briefing.top5.map((item, i) => (
               <li key={i}>
-                <button
-                  className="era-guide__top5-btn"
-                  onClick={() => handleTop5Click(item)}
+                <div
+                  className="era-guide__top5-item"
+                  onClick={() => handleItemClick(item)}
                   title={it ? 'Naviga a questo momento' : 'Navigate to this moment'}
                 >
                   <span className="era-guide__top5-arrow">→</span>
-                  <span>{item}</span>
-                </button>
+                  <span className="era-guide__top5-text">
+                    {renderAnnotatedText(item, top5Links[i] ?? [], handleEntityClick)}
+                  </span>
+                </div>
               </li>
             ))}
           </ol>

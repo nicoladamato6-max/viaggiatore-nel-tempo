@@ -591,6 +591,7 @@ function AppInner() {
           {!isMobile && eraGuide && eraGuideOpen && (
             <EraGuide
               data={eraGuide}
+              events={ALL_SEARCHABLE}
               onClose={() => { setEraGuide(null); setEraGuideOpen(false); }}
               onNavigate={({ year, flyTo: ft }) => {
                 if (year !== undefined) {
@@ -599,6 +600,7 @@ function AppInner() {
                 }
                 if (ft) setFlyTo(ft);
               }}
+              onSelectEvent={handleEventClick}
             />
           )}
           <button
