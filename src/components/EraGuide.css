@@ -290,7 +290,102 @@
 }
 .era-guide--collapsed .era-guide__footer { display: none; }
 
-/* ── Mobile: nascondi ── */
+/* ── Mobile bottom sheet handle (hidden on desktop) ── */
+.era-guide__sheet-handle {
+  display: none;
+}
+
+/* ── Mobile: bottom sheet ── */
 @media (max-width: 768px) {
-  .era-guide { display: none; }
+  .era-guide {
+    position: fixed;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 68vh;
+    border-right: none;
+    border-top: 1px solid #1e2d40;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -6px 32px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 95;
+  }
+
+  /* Collapsed: slide down leaving only the handle bar visible */
+  .era-guide--sheet-closed {
+    transform: translateY(calc(100% - 48px));
+  }
+  .era-guide--sheet-open {
+    transform: translateY(0);
+  }
+
+  /* Show the mobile handle, hide the desktop header */
+  .era-guide__sheet-handle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    height: 48px;
+    flex-shrink: 0;
+    cursor: pointer;
+    background: linear-gradient(135deg, #0a1520 0%, #111c2e 100%);
+    border-bottom: 1px solid #1e2d40;
+    border-radius: 16px 16px 0 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .era-guide__sheet-handle:active {
+    background: #0f1e30;
+  }
+  .era-guide__sheet-pip {
+    width: 36px;
+    height: 4px;
+    background: #2e4060;
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-right: 0.25rem;
+  }
+  .era-guide__sheet-title {
+    flex: 1;
+    color: #c9a227;
+    font-size: 0.88rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .era-guide__sheet-chevron {
+    color: #4a6a8a;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  .era-guide__sheet-close {
+    background: transparent;
+    border: none;
+    color: #4a6a8a;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0 0 0 0.5rem;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .era-guide__sheet-close:active { color: #c9a227; }
+
+  /* Hide desktop-only elements */
+  .era-guide__header      { display: none; }
+  .era-guide__footer      { display: none; }
+  .era-guide--collapsed   { width: 100%; } /* reset desktop collapsed width */
+
+  /* Body fills remaining height and scrolls */
+  .era-guide__body {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+  }
 }

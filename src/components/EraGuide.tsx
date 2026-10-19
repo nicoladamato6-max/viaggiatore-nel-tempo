@@ -100,7 +100,8 @@ function renderAnnotatedText(
 }
 
 export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: Props) {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed,     setCollapsed]     = useState(false);
+  const [sheetExpanded, setSheetExpanded] = useState(false); // mobile bottom sheet
 
   // Pre-compute entity links for all items — must be before early return (hooks)
   const top5Links = useMemo(() => {
@@ -123,7 +124,7 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
   }
 
   function handleEntityClick(ev: HistoricalEvent, e: React.MouseEvent) {
-    e.stopPropagation(); // don't also trigger handleItemClick
+    e.stopPropagation();
     onNavigate({ year: ev.year });
     onSelectEvent?.(ev);
   }
@@ -131,10 +132,36 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
   const collapseLabel = it ? 'Comprimi' : 'Collapse';
   const closeLabel    = it ? 'Chiudi guida era' : 'Close era guide';
 
-  return (
-    <div className={`era-guide${collapsed ? ' era-guide--collapsed' : ''}`}>
+  const classes = [
+    'era-guide',
+    collapsed      ? 'era-guide--collapsed'    : '',
+    sheetExpanded  ? 'era-guide--sheet-open'   : 'era-guide--sheet-closed',
+  ].filter(Boolean).join(' ');
 
-      {/* Header sempre visibile */}
+  return (
+    <div className={classes}>
+
+      {/* ── Mobile bottom sheet handle ── */}
+      <div
+        className="era-guide__sheet-handle"
+        onClick={() => setSheetExpanded(v => !v)}
+        title={sheetExpanded
+          ? (it ? 'Riduci' : 'Collapse')
+          : (it ? 'Espandi guida era' : 'Expand era guide')}
+      >
+        <span className="era-guide__sheet-pip" />
+        <span className="era-guide__sheet-title">{eraName}</span>
+        <span className="era-guide__sheet-chevron">
+          {sheetExpanded ? '▾' : '▴'}
+        </span>
+        <button
+          className="era-guide__sheet-close"
+          onClick={(e) => { e.stopPropagation(); onClose(); }}
+          title={closeLabel}
+        >✕</button>
+      </div>
+
+      {/* ── Desktop header (always visible on desktop) ── */}
       <div className="era-guide__header">
         {collapsed ? (
           <>
