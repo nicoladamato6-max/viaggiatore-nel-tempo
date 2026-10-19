@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { type HistoricalEvent, type Locale, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
 
 const MIN_W     = 280;
@@ -159,25 +159,64 @@ function useTTS() {
   return { speaking, speak, stop };
 }
 
-// ── Componente ────────────────────────────────────────────────────────────
-interface Props {
-  event:           HistoricalEvent | null;
-  locale:          Locale;
-  onClose:         () => void;
-  onShowEraGuide?: () => void;
-  eraGuideName?:   string;
+// ── Chat con LLM ─────────────────────────────────────────────────────────
+interface ChatMsg { role: 'user' | 'assistant'; content: string; suggestions?: string[] }
+
+function useSuggestionMatcher(allEvents: HistoricalEvent[]) {
+  return useCallback((name: string): HistoricalEvent | null => {
+    const low = name.toLowerCase();
+    return allEvents.find(ev => ev.title.toLowerCase().includes(low) || low.includes(ev.title.toLowerCase().slice(0, 8))) ?? null;
+  }, [allEvents]);
 }
 
-export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName }: Props) {
+async function sendToEntityChat(
+  entity: HistoricalEvent,
+  question: string,
+  history: ChatMsg[],
+  locale: Locale,
+): Promise<{ answer: string; suggestions: string[] }> {
+  const res = await fetch('/api/entity-chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      entity: { title: entity.title, description: entity.description, year: entity.year, category: entity.category },
+      question,
+      history: history.map(m => ({ role: m.role, content: m.content })),
+      locale,
+    }),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const json = await res.json() as { ok: boolean; data: { answer: string; suggestions: string[] } };
+  return json.data;
+}
+
+// ── Componente ────────────────────────────────────────────────────────────
+interface Props {
+  event:            HistoricalEvent | null;
+  locale:           Locale;
+  onClose:          () => void;
+  onShowEraGuide?:  () => void;
+  eraGuideName?:    string;
+  events?:          HistoricalEvent[];
+  onSelectEvent?:   (ev: HistoricalEvent) => void;
+}
+
+export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName, events = [], onSelectEvent }: Props) {
   const [width, setWidth] = useState(DEFAULT_W);
-  const panelRef   = useRef<HTMLDivElement>(null);
+  const [activeTab, setActiveTab] = useState<'info' | 'chat'>('info');
+  const [chatMsgs, setChatMsgs]   = useState<ChatMsg[]>([]);
+  const [chatInput, setChatInput] = useState('');
+  const [chatBusy, setChatBusy]   = useState(false);
+  const chatEndRef  = useRef<HTMLDivElement>(null);
+  const panelRef    = useRef<HTMLDivElement>(null);
   const wikiBodyRef = useRef<HTMLDivElement>(null);
-  const dragging   = useRef(false);
-  const startX     = useRef(0);
-  const startW     = useRef(0);
+  const dragging    = useRef(false);
+  const startX      = useRef(0);
+  const startW      = useRef(0);
 
   const { body, wikiUrl, wikiBase, loading } = useWikiContent(event?.wikipediaSlug, locale);
   const { speaking, speak, stop } = useTTS();
+  const matchSuggestion = useSuggestionMatcher(events);
 
   // Fix percorsi Wikipedia dopo ogni render del corpo
   useEffect(() => {
@@ -185,6 +224,35 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
       fixWikiPaths(wikiBodyRef.current, wikiBase);
     }
   }, [body, wikiBase]);
+
+  // Reset chat when event changes
+  useEffect(() => {
+    setChatMsgs([]);
+    setChatInput('');
+    setActiveTab('info');
+  }, [event?.id]);
+
+  // Auto-scroll chat
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [chatMsgs]);
+
+  async function handleChatSend() {
+    if (!event || !chatInput.trim() || chatBusy) return;
+    const question = chatInput.trim();
+    setChatInput('');
+    const newMsgs: ChatMsg[] = [...chatMsgs, { role: 'user', content: question }];
+    setChatMsgs(newMsgs);
+    setChatBusy(true);
+    try {
+      const { answer, suggestions } = await sendToEntityChat(event, question, chatMsgs, locale);
+      setChatMsgs([...newMsgs, { role: 'assistant', content: answer, suggestions }]);
+    } catch {
+      setChatMsgs([...newMsgs, { role: 'assistant', content: locale === 'it' ? 'Errore di connessione. Riprova.' : 'Connection error. Please retry.', suggestions: [] }]);
+    } finally {
+      setChatBusy(false);
+    }
+  }
 
   // ── resize handle (desktop) ──────────────────────────────────────────────
   function onHandleMouseDown(e: React.MouseEvent) {
@@ -213,7 +281,6 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
 
   function onHandleDblClick() { setWidth(DEFAULT_W); }
 
-  // ── placeholder quando nessun evento ────────────────────────────────────
   // Ferma TTS quando cambia evento
   useEffect(() => { stop(); }, [event?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -285,7 +352,7 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
         </div>
       </div>
 
-      {/* dati evento + Wikipedia — tutto in un unico contenitore scrollabile */}
+      {/* dati evento + tab Wiki/Chat */}
       <div className="info-panel__scroll">
 
         {/* meta */}
@@ -295,47 +362,114 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
           <p className="info-panel__desc">{event.description}</p>
         </div>
 
-        {/* separatore */}
-        <div className="info-panel__divider"><span>Wikipedia</span></div>
+        {/* tab bar */}
+        <div className="info-panel__tabs">
+          <button
+            className={`info-panel__tab${activeTab === 'info' ? ' info-panel__tab--active' : ''}`}
+            onClick={() => setActiveTab('info')}
+          >📖 {locale === 'it' ? 'Wikipedia' : 'Wikipedia'}</button>
+          <button
+            className={`info-panel__tab${activeTab === 'chat' ? ' info-panel__tab--active' : ''}`}
+            onClick={() => setActiveTab('chat')}
+          >💬 {locale === 'it' ? 'Chiedi' : 'Ask'}</button>
+        </div>
 
-        {/* corpo Wikipedia inline (no iframe) */}
-        <div className="info-panel__wiki-wrap">
-          {loading && (
-            <div className="info-panel__loading">
-              <span className="info-panel__spinner" /> Caricamento Wikipedia…
+        {/* ── Wikipedia tab ── */}
+        {activeTab === 'info' && (
+          <>
+            <div className="info-panel__wiki-wrap">
+              {loading && (
+                <div className="info-panel__loading">
+                  <span className="info-panel__spinner" /> Caricamento Wikipedia…
+                </div>
+              )}
+              {!loading && body && (
+                <div ref={wikiBodyRef} className="wiki-body" dangerouslySetInnerHTML={{ __html: body }} />
+              )}
+              {!loading && !body && (
+                <p style={{ fontSize: '0.72rem', color: '#888', padding: '12px 14px' }}>
+                  Articolo Wikipedia non disponibile.
+                </p>
+              )}
             </div>
-          )}
-          {!loading && body && (
-            <div
-              ref={wikiBodyRef}
-              className="wiki-body"
-              dangerouslySetInnerHTML={{ __html: body }}
-            />
-          )}
-          {!loading && !body && (
-            <p style={{ fontSize: '0.72rem', color: '#888', padding: '12px 14px' }}>
-              Articolo Wikipedia non disponibile.
-            </p>
-          )}
-        </div>
+            <div className="info-panel__footer">
+              <a href={wikiUrl || `https://it.wikipedia.org/wiki/${event.wikipediaSlug}`} target="_blank" rel="noopener noreferrer" className="info-panel__wiki-btn">
+                Apri Wikipedia in una nuova scheda
+              </a>
+              <span className="info-panel__license">
+                Testo da <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a>{', '}licenza{' '}
+                <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>
+              </span>
+            </div>
+          </>
+        )}
 
-        {/* footer */}
-        <div className="info-panel__footer">
-          <a
-            href={wikiUrl || `https://it.wikipedia.org/wiki/${event.wikipediaSlug}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="info-panel__wiki-btn"
-          >
-            Apri Wikipedia in una nuova scheda
-          </a>
-          <span className="info-panel__license">
-            Testo da{' '}
-            <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a>
-            {', '}licenza{' '}
-            <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>
-          </span>
-        </div>
+        {/* ── Chat tab ── */}
+        {activeTab === 'chat' && (
+          <div className="ip-chat">
+            <div className="ip-chat__messages">
+              {chatMsgs.length === 0 && (
+                <p className="ip-chat__hint">
+                  {locale === 'it'
+                    ? `Fai una domanda su "${event.title}" — curiosità, contesto, confronti con altre epoche…`
+                    : `Ask anything about "${event.title}" — curiosities, context, comparisons with other eras…`}
+                </p>
+              )}
+              {chatMsgs.map((msg, i) => (
+                <div key={i} className={`ip-chat__msg ip-chat__msg--${msg.role}`}>
+                  <div className="ip-chat__bubble">{msg.content}</div>
+                  {msg.role === 'assistant' && msg.suggestions && msg.suggestions.length > 0 && (
+                    <div className="ip-chat__suggestions">
+                      <span className="ip-chat__suggestions-label">
+                        {locale === 'it' ? '🔍 Esplora anche:' : '🔍 Explore also:'}
+                      </span>
+                      <div className="ip-chat__chips">
+                        {msg.suggestions.map((s, si) => {
+                          const matched = matchSuggestion(s);
+                          return matched ? (
+                            <button
+                              key={si}
+                              className="ip-chat__chip ip-chat__chip--link"
+                              onClick={() => { onSelectEvent?.(matched); setActiveTab('info'); }}
+                              title={`${matched.title} — ${formatYear(matched.year)}`}
+                            >{s}</button>
+                          ) : (
+                            <span key={si} className="ip-chat__chip">{s}</span>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+              {chatBusy && (
+                <div className="ip-chat__msg ip-chat__msg--assistant">
+                  <div className="ip-chat__bubble ip-chat__bubble--loading">
+                    <span className="ip-chat__dot" /><span className="ip-chat__dot" /><span className="ip-chat__dot" />
+                  </div>
+                </div>
+              )}
+              <div ref={chatEndRef} />
+            </div>
+            <div className="ip-chat__input-row">
+              <input
+                className="ip-chat__input"
+                type="text"
+                value={chatInput}
+                onChange={e => setChatInput(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && handleChatSend()}
+                placeholder={locale === 'it' ? 'Scrivi una domanda…' : 'Ask a question…'}
+                disabled={chatBusy}
+              />
+              <button
+                className="ip-chat__send"
+                onClick={handleChatSend}
+                disabled={chatBusy || !chatInput.trim()}
+                title={locale === 'it' ? 'Invia' : 'Send'}
+              >➤</button>
+            </div>
+          </div>
+        )}
 
       </div>{/* fine info-panel__scroll */}
     </div>

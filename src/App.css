@@ -768,6 +768,160 @@ body {
   color: rgba(168, 200, 255, 0.85);
 }
 
+/* ── InfoPanel tab bar ── */
+.info-panel__tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+.info-panel__tab {
+  flex: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: rgba(168, 200, 255, 0.45);
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  padding: 8px 4px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+.info-panel__tab:hover { color: rgba(168, 200, 255, 0.8); }
+.info-panel__tab--active {
+  color: var(--clr-neon-cyan);
+  border-bottom-color: var(--clr-neon-cyan);
+}
+
+/* ── Chat panel (ip-chat) ── */
+.ip-chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 300px;
+}
+.ip-chat__messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #1e2d40 transparent;
+}
+.ip-chat__hint {
+  font-size: 0.72rem;
+  color: rgba(168, 200, 255, 0.35);
+  font-style: italic;
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+.ip-chat__msg { display: flex; flex-direction: column; gap: 6px; }
+.ip-chat__msg--user { align-items: flex-end; }
+.ip-chat__msg--assistant { align-items: flex-start; }
+.ip-chat__bubble {
+  max-width: 88%;
+  padding: 8px 11px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+.ip-chat__msg--user .ip-chat__bubble {
+  background: rgba(0, 200, 255, 0.1);
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  color: #c8d8ee;
+  border-radius: 10px 10px 2px 10px;
+}
+.ip-chat__msg--assistant .ip-chat__bubble {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #c0cce0;
+  border-radius: 10px 10px 10px 2px;
+}
+.ip-chat__bubble--loading {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 10px 14px;
+}
+.ip-chat__dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(0, 200, 255, 0.5);
+  animation: ip-dot-bounce 1.2s infinite;
+}
+.ip-chat__dot:nth-child(2) { animation-delay: 0.2s; }
+.ip-chat__dot:nth-child(3) { animation-delay: 0.4s; }
+@keyframes ip-dot-bounce {
+  0%, 80%, 100% { transform: scale(0.7); opacity: 0.4; }
+  40%           { transform: scale(1);   opacity: 1; }
+}
+.ip-chat__suggestions { display: flex; flex-direction: column; gap: 4px; max-width: 88%; }
+.ip-chat__suggestions-label {
+  font-size: 0.62rem;
+  color: rgba(168, 200, 255, 0.45);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+}
+.ip-chat__chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.ip-chat__chip {
+  font-size: 0.7rem;
+  padding: 3px 9px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(168, 200, 255, 0.55);
+}
+.ip-chat__chip--link {
+  cursor: pointer;
+  background: rgba(201, 162, 39, 0.1);
+  border-color: rgba(201, 162, 39, 0.3);
+  color: #c9a227;
+  transition: background 0.15s, border-color 0.15s;
+}
+.ip-chat__chip--link:hover {
+  background: rgba(201, 162, 39, 0.2);
+  border-color: rgba(201, 162, 39, 0.55);
+}
+.ip-chat__input-row {
+  display: flex;
+  gap: 6px;
+  padding: 8px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+}
+.ip-chat__input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  border-radius: 6px;
+  color: #c8d8ee;
+  font-size: 0.78rem;
+  padding: 6px 10px;
+  outline: none;
+  font-family: var(--font-body);
+  transition: border-color 0.15s;
+}
+.ip-chat__input:focus { border-color: rgba(0, 200, 255, 0.5); }
+.ip-chat__input::placeholder { color: rgba(168, 200, 255, 0.3); }
+.ip-chat__input:disabled { opacity: 0.5; }
+.ip-chat__send {
+  background: rgba(0, 200, 255, 0.12);
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  border-radius: 6px;
+  color: var(--clr-neon-cyan);
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+.ip-chat__send:hover:not(:disabled) { background: rgba(0, 200, 255, 0.22); }
+.ip-chat__send:disabled { opacity: 0.35; cursor: not-allowed; }
+
 /* ── Toggle mappe storiche ── */
 .territory-toggle-btn {
   position: absolute;

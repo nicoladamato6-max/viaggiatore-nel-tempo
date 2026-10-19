@@ -637,6 +637,8 @@ function AppInner() {
             onClose={() => setSelectedEvent(null)}
             onShowEraGuide={eraGuide ? () => setEraGuideOpen(true) : undefined}
             eraGuideName={eraGuide?.eraName}
+            events={ALL_SEARCHABLE}
+            onSelectEvent={handleEventClick}
           />
         )}
       </div>
