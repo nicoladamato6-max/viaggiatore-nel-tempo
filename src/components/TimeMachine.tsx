@@ -207,7 +207,7 @@ export function TimeMachine({ locale, events, currentYear, onNavigate }: Props) 
       const res = await fetch('/api/summarize', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ year, events: top30, locale }),
+        body: JSON.stringify({ year, events: top30, locale, place: place.trim() || undefined }),
       });
       let json: { ok?: boolean; data?: AiBriefing; error?: string } = {};
       try { json = await res.json(); } catch { /* body non è JSON */ }

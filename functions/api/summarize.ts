@@ -45,35 +45,49 @@ function fmtYear(year: number, it: boolean) {
   return `${abs.toLocaleString('it')} ${era}`;
 }
 
-function buildPrompt(year: number, events: EventSummary[], locale: string): string {
+function buildPrompt(year: number, events: EventSummary[], locale: string, place?: string): string {
   const it = locale === 'it';
   const yearLabel = fmtYear(year, it);
-  const ctx = events.slice(0, 30).map(e => {
+  const ctx = events.slice(0, 25).map(e => {
     const y = fmtYear(e.year, it);
-    return `- ${e.title} (${y}, ${e.category})${e.description ? ': ' + e.description.slice(0, 80) : ''}`;
+    return `- ${e.title} (${y}, ${e.category})`;
   }).join('\n');
 
-  const example = `{"dove":"Sei nel cuore del Rinascimento fiorentino.","top5":["Visita gli Uffizi","Conosci Leonardo da Vinci","Esplora Piazza della Signoria","Leggi il Principe di Machiavelli","Ammira il Duomo di Brunelleschi"],"connessioni":"La prospettiva pittorica inventata qui diventerà la base della fotografia moderna."}`;
+  const placeHint = place
+    ? (it ? ` Il viaggiatore è atterrato vicino a ${place}, ma la panoramica deve coprire l'intera epoca nel mondo.`
+           : ` The traveler landed near ${place}, but the overview must cover the entire era worldwide.`)
+    : '';
+
+  // Esempio neutro e geograficamente vario per non condizionare il modello
+  const example = it
+    ? `{"dove":"Descrizione evocativa dell'era (2-3 frasi, mondo intero, presente indicativo).","top5":["Suggerimento globale 1","Suggerimento locale se rilevante","Suggerimento interdisciplinare 3","Suggerimento 4","Suggerimento 5"],"connessioni":"Come questi eventi hanno influenzato il futuro (2-3 frasi, prospettiva mondiale)."}`
+    : `{"dove":"Evocative description of the era (2-3 sentences, worldwide, present tense).","top5":["Global suggestion 1","Local suggestion if relevant","Interdisciplinary suggestion 3","Suggestion 4","Suggestion 5"],"connessioni":"How these events shaped the future (2-3 sentences, global perspective)."}`;
 
   return it
-    ? `Sei un narratore storico. L'anno è ${yearLabel}.
+    ? `Sei un narratore storico globale. L'anno è ${yearLabel}.${placeHint}
 
-Eventi disponibili:
+Regole:
+- "dove": descrivi l'era nel suo complesso a livello mondiale, non solo un luogo
+- "top5": 5 esperienze imperdibili sparpagliate per il mondo (max 1 sul luogo locale se rilevante)
+- "connessioni": come questa epoca ha plasmato il futuro in modo non ovvio
+
+Eventi di riferimento:
 ${ctx}
 
-Rispondi SOLO con JSON nel seguente formato (no markdown, no testo extra):
-${example}
+Rispondi SOLO con JSON valido, nessun testo prima o dopo, nessun markdown:
+${example}`
+    : `You are a global historical narrator. The year is ${yearLabel}.${placeHint}
 
-Ora scrivi il JSON per l'anno ${yearLabel}:`
-    : `You are a historical narrator. The year is ${yearLabel}.
+Rules:
+- "dove": describe the era as a whole worldwide, not just one location
+- "top5": 5 unmissable experiences spread across the world (max 1 local if relevant)
+- "connessioni": how this era shaped the future in non-obvious ways
 
-Available events:
+Reference events:
 ${ctx}
 
-Reply ONLY with JSON in this exact format (no markdown, no extra text):
-${example}
-
-Now write the JSON for the year ${yearLabel}:`;
+Reply ONLY with valid JSON, no text before or after, no markdown:
+${example}`;
 }
 
 async function callCloudflareAI(env: SummarizeEnv, prompt: string): Promise<string> {
@@ -83,7 +97,7 @@ async function callCloudflareAI(env: SummarizeEnv, prompt: string): Promise<stri
       { role: 'system', content: 'You are a JSON API. Output only raw JSON, no markdown fences, no explanation.' },
       { role: 'user', content: prompt },
     ],
-    max_tokens: 800,
+    max_tokens: 1400,
   });
   return result.response ?? result.generated_text ?? '';
 }
@@ -147,19 +161,19 @@ function extractJSON(raw: string): Record<string, unknown> {
 export const onRequestOptions = async (): Promise<Response> => cors();
 
 export const onRequestPost = async (context: PagesContext): Promise<Response> => {
-  let body: { year?: number; events?: EventSummary[]; locale?: string };
+  let body: { year?: number; events?: EventSummary[]; locale?: string; place?: string };
   try {
     body = await context.request.json() as typeof body;
   } catch {
     return jsonRes({ error: 'Invalid JSON body' }, 400);
   }
 
-  const { year, events = [], locale = 'it' } = body;
+  const { year, events = [], locale = 'it', place } = body;
   if (year === undefined || !Number.isFinite(year)) {
     return jsonRes({ error: 'year is required' }, 400);
   }
 
-  const prompt = buildPrompt(year, events, locale);
+  const prompt = buildPrompt(year, events, locale, place);
   const model  = context.env.AI_MODEL ?? 'cloudflare-ai';
 
   let raw: string;
