@@ -2,3 +2,6 @@
 # I binding (KV, JWT_SECRET) restano nel pannello Settings > Environment variables
 name = "viaggiatore-nel-tempo"
 compatibility_date = "2025-01-01"
+
+[ai]
+binding = "AI"

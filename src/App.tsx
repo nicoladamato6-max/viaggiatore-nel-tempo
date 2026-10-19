@@ -571,6 +571,8 @@ function AppInner() {
           />
           <TimeMachine
             locale={locale}
+            events={visibleEvents}
+            currentYear={currentYear}
             onNavigate={({ year, flyTo: ft }) => {
               if (year !== undefined) {
                 setSliderValue(yearToSlider(year));

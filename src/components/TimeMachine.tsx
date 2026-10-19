@@ -1,6 +1,12 @@
 import { useState, useRef, useEffect } from 'react';
-import { type FlyTarget, type Locale } from '../types';
+import { type FlyTarget, type Locale, type HistoricalEvent } from '../types';
 import { MACRO_ERAS, SUBCATEGORIES } from '../data/historicalPeriods';
+
+interface AiBriefing {
+  dove: string;
+  top5: string[];
+  connessioni: string;
+}
 
 // ── Parser date potenziato ────────────────────────────────────────────────────
 const IT_MONTHS: Record<string, number> = {
@@ -131,28 +137,36 @@ function displayYear(year: number, it: boolean): string {
 // ── Props ─────────────────────────────────────────────────────────────────────
 interface Props {
   locale: Locale;
+  events: HistoricalEvent[];
+  currentYear: number;
   onNavigate: (params: { year?: number; flyTo?: FlyTarget }) => void;
 }
 
 // ── Componente ────────────────────────────────────────────────────────────────
-export function TimeMachine({ locale, onNavigate }: Props) {
-  const [open,      setOpen]      = useState(false);
-  const [yearText,  setYearText]  = useState('');
-  const [place,     setPlace]     = useState('');
-  const [log,       setLog]       = useState<string[]>([]);
-  const [loading,   setLoading]   = useState(false);
-  const [launched,  setLaunched]  = useState(false);
+export function TimeMachine({ locale, events, currentYear, onNavigate }: Props) {
+  const [open,           setOpen]           = useState(false);
+  const [yearText,       setYearText]       = useState('');
+  const [place,          setPlace]          = useState('');
+  const [log,            setLog]            = useState<string[]>([]);
+  const [loading,        setLoading]        = useState(false);
+  const [launched,       setLaunched]       = useState(false);
+  const [briefing,       setBriefing]       = useState<AiBriefing | null>(null);
+  const [briefingLoad,   setBriefingLoad]   = useState(false);
+  const [briefingError,  setBriefingError]  = useState<string | null>(null);
+  const launchedYearRef = useRef<number | null>(null);
   const abortRef  = useRef<AbortController | null>(null);
   const yearRef   = useRef<HTMLInputElement>(null);
   const it = locale === 'it';
 
-  // Opzione B: reset completo alla riapertura della console
+  // Reset completo alla riapertura della console
   useEffect(() => {
     if (open) {
       setLaunched(false);
       setLog([]);
       setYearText('');
       setPlace('');
+      setBriefing(null);
+      setBriefingError(null);
       setTimeout(() => yearRef.current?.focus(), 50);
     }
   }, [open]);
@@ -171,7 +185,41 @@ export function TimeMachine({ locale, onNavigate }: Props) {
   function handleReset() {
     setLaunched(false);
     setLog([]);
+    setBriefing(null);
+    setBriefingError(null);
+    launchedYearRef.current = null;
     setTimeout(() => yearRef.current?.focus(), 50);
+  }
+
+  async function handleDiscover() {
+    const year = launchedYearRef.current ?? currentYear;
+    setBriefingLoad(true);
+    setBriefingError(null);
+    setBriefing(null);
+
+    const top30 = events
+      .slice()
+      .sort((a, b) => Math.abs(a.year - year) - Math.abs(b.year - year))
+      .slice(0, 30)
+      .map(e => ({ title: e.title, year: e.year, category: e.category, description: e.description?.slice(0, 100) }));
+
+    try {
+      const res = await fetch('/api/summarize', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ year, events: top30, locale }),
+      });
+      const json = await res.json() as { ok?: boolean; data?: AiBriefing; error?: string };
+      if (!res.ok || !json.ok || !json.data) {
+        setBriefingError(json.error ?? (it ? 'Errore AI' : 'AI error'));
+      } else {
+        setBriefing(json.data);
+      }
+    } catch {
+      setBriefingError(it ? 'Rete non disponibile' : 'Network unavailable');
+    } finally {
+      setBriefingLoad(false);
+    }
   }
 
   async function handleLaunch() {
@@ -219,9 +267,9 @@ export function TimeMachine({ locale, onNavigate }: Props) {
 
     if (year !== null || flyTo) {
       addLog(it ? '⚡ PROPULSIONE ATTIVATA — buon viaggio.' : '⚡ PROPULSION ACTIVATED — safe travels.');
+      launchedYearRef.current = year;
       setLaunched(true);
       onNavigate({ year: year ?? undefined, flyTo });
-      // Opzione A: la console rimane aperta per consentire un nuovo salto
     }
   }
 
@@ -333,6 +381,51 @@ export function TimeMachine({ locale, onNavigate }: Props) {
                   </button>
                 )}
               </div>
+
+              {/* Bottone AI briefing */}
+              {launched && !briefing && (
+                <button
+                  className={`tm-discover${briefingLoad ? ' tm-discover--loading' : ''}`}
+                  onClick={handleDiscover}
+                  disabled={briefingLoad}
+                >
+                  {briefingLoad
+                    ? (it ? '◌ CONNESSIONE AI…' : '◌ AI CONNECTING…')
+                    : (it ? '🔭 SCOPRI QUEST\'EPOCA' : '🔭 EXPLORE THIS ERA')}
+                </button>
+              )}
+
+              {briefingError && (
+                <div className="tm-briefing-error">⚠ {briefingError}</div>
+              )}
+
+              {/* Briefing AI */}
+              {briefing && (
+                <div className="tm-briefing">
+                  <div className="tm-briefing__section">
+                    <div className="tm-briefing__label">
+                      {it ? '▸ DOVE SEI ATTERRATO' : '▸ WHERE YOU LANDED'}
+                    </div>
+                    <p className="tm-briefing__text">{briefing.dove}</p>
+                  </div>
+                  <div className="tm-briefing__section">
+                    <div className="tm-briefing__label">
+                      {it ? '▸ 5 COSE DA NON PERDERE' : '▸ 5 THINGS TO EXPERIENCE'}
+                    </div>
+                    <ol className="tm-briefing__list">
+                      {(briefing.top5 ?? []).map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ol>
+                  </div>
+                  <div className="tm-briefing__section">
+                    <div className="tm-briefing__label">
+                      {it ? '▸ CONNESSIONI SORPRENDENTI' : '▸ SURPRISING CONNECTIONS'}
+                    </div>
+                    <p className="tm-briefing__text">{briefing.connessioni}</p>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Footer */}
