@@ -5,6 +5,7 @@ import { PLANETS, getMoonPosition, getPlanetPosition, toPlanetCard } from '../ut
 import { getBestMap, featureName, colorForTerritory, getCentroid } from '../data/historicalMaps';
 import { translateTerritoryNames } from '../data/wikiTranslate';
 import { type Locale } from '../types';
+import { CITIES } from '../data/cities';
 
 // MapTiler fornisce terrain quantized-mesh e imagery satellite compatibili con Cesium.
 // Nessun token Ion richiesto: zero costi di licenza Cesium Ion per uso commerciale.
@@ -118,6 +119,7 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
   const gplatesCacheRef = useRef<Map<number, object>>(new Map());
   const gplatesAbortRef = useRef<AbortController | null>(null);
   const lgmDSRef        = useRef<Cesium.GeoJsonDataSource | null>(null);
+  const cityLabelsDSRef = useRef<Cesium.CustomDataSource | null>(null);
 
   eventsRef.current      = events;
   onClickRef.current     = onEventClick;
@@ -256,6 +258,41 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
         }),
       }));
     }
+
+    // ── Etichette città (sempre presenti, visibilità gestita da useEffect) ──
+    const cityDS = new Cesium.CustomDataSource('city-labels');
+    const DIST_T1 = new Cesium.DistanceDisplayCondition(0, 10_000_000);
+    const DIST_T2 = new Cesium.DistanceDisplayCondition(0, 5_000_000);
+    const DIST_T3 = new Cesium.DistanceDisplayCondition(0, 2_000_000);
+    for (const city of CITIES) {
+      const dist = city.tier === 1 ? DIST_T1 : city.tier === 2 ? DIST_T2 : DIST_T3;
+      cityDS.entities.add({
+        position: Cesium.Cartesian3.fromDegrees(city.lng, city.lat, 0),
+        label: new Cesium.LabelGraphics({
+          text: city.name,
+          font: city.tier === 1 ? 'bold 13px system-ui' : city.tier === 2 ? '12px system-ui' : '11px system-ui',
+          fillColor: city.tier === 1 ? Cesium.Color.WHITE : city.tier === 2 ? new Cesium.Color(0.92, 0.92, 0.92, 1) : new Cesium.Color(0.82, 0.82, 0.82, 1),
+          style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+          outlineWidth: city.tier === 1 ? 2.5 : 2,
+          outlineColor: Cesium.Color.BLACK,
+          verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+          pixelOffset: new Cesium.Cartesian2(0, -4),
+          distanceDisplayCondition: dist,
+          disableDepthTestDistance: Number.POSITIVE_INFINITY,
+          scaleByDistance: new Cesium.NearFarScalar(100_000, 1.2, 5_000_000, 0.7),
+        }),
+        point: new Cesium.PointGraphics({
+          color: city.tier === 1 ? new Cesium.Color(1, 0.95, 0.4, 1) : new Cesium.Color(1, 1, 1, 0.85),
+          outlineColor: Cesium.Color.BLACK,
+          outlineWidth: 1,
+          pixelSize: city.tier === 1 ? 5 : city.tier === 2 ? 4 : 3,
+          distanceDisplayCondition: dist,
+          disableDepthTestDistance: Number.POSITIVE_INFINITY,
+        }),
+      });
+    }
+    viewer.dataSources.add(cityDS);
+    cityLabelsDSRef.current = cityDS;
 
     // ── Click handler ────────────────────────────────────────────────────
     const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
@@ -426,13 +463,21 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
       handler.destroy();
       viewer.destroy();
       viewerRef.current = null;
-      pinsRef.current       = null;
-      cawmLayerRef.current  = null;
-      dareLayerRef.current  = null;
-      gplatesDSRef.current  = null;
-      lgmDSRef.current      = null;
+      pinsRef.current         = null;
+      cawmLayerRef.current    = null;
+      dareLayerRef.current    = null;
+      gplatesDSRef.current    = null;
+      lgmDSRef.current        = null;
+      cityLabelsDSRef.current = null;
     };
   }, []);
+
+  // ── Visibilità etichette città — nascoste in cosmic view ────────────────
+  useEffect(() => {
+    if (cityLabelsDSRef.current) {
+      cityLabelsDSRef.current.show = !isCosmicView;
+    }
+  }, [isCosmicView]);
 
   // ── Livello 1 & 2: cambio layer in base all'anno corrente ───────────────
   useEffect(() => {
