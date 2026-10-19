@@ -953,6 +953,37 @@ body {
   color: var(--clr-neon-cyan);
 }
 
+/* ── Toggle modalità cosmica ── */
+.cosmic-toggle-btn {
+  position: absolute;
+  top: 52px;
+  left: 12px;
+  z-index: 10;
+  padding: 5px 11px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 210, 60, 0.30);
+  background: rgba(5, 8, 20, 0.85);
+  color: rgba(255, 220, 100, 0.75);
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: var(--transition-ui);
+  white-space: nowrap;
+}
+.cosmic-toggle-btn.active {
+  background: rgba(255, 210, 60, 0.12);
+  border-color: #ffd700;
+  color: #ffd700;
+  box-shadow: 0 0 12px rgba(255, 210, 0, 0.35);
+}
+.cosmic-toggle-btn:hover {
+  background: rgba(255, 210, 60, 0.08);
+  border-color: rgba(255, 210, 60, 0.6);
+  color: #ffe060;
+}
+
 /* ── Toggle lingua (header) ── */
 .locale-toggle-btn {
   margin-left: auto;

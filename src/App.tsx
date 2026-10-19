@@ -610,6 +610,25 @@ function AppInner() {
           >
             {showTerritories ? '🌐 ON' : '🌐'}
           </button>
+          <button
+            className={`cosmic-toggle-btn${isCosmicView ? ' active' : ''}`}
+            onClick={() => {
+              if (isCosmicView) {
+                setOverrideYear(null);
+                setSliderValue(yearToSlider(0));
+              } else {
+                const cosmicYear = -9_000_000_000;
+                setOverrideYear(cosmicYear);
+                setSliderValue(yearToSlider(cosmicYear));
+              }
+            }}
+            title={locale === 'it'
+              ? (isCosmicView ? 'Ritorna alla Terra' : 'Esplora il cosmo')
+              : (isCosmicView ? 'Return to Earth' : 'Explore the cosmos')
+            }
+          >
+            {isCosmicView ? '🌍' : '🚀'}
+          </button>
           <AdminPanel
             locale={locale}
             open={adminOpen}

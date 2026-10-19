@@ -421,7 +421,7 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
                   {msg.role === 'assistant' && msg.suggestions && msg.suggestions.length > 0 && (
                     <div className="ip-chat__suggestions">
                       <span className="ip-chat__suggestions-label">
-                        {locale === 'it' ? '🔍 Esplora anche:' : '🔍 Explore also:'}
+                        {locale === 'it' ? '🔗 Naviga le connessioni:' : '🔗 Navigate connections:'}
                       </span>
                       <div className="ip-chat__chips">
                         {msg.suggestions.map((s, si) => {

@@ -39,6 +39,29 @@ function fmtYearHUD(year: number): string {
 const SUN_RADIUS = 696_000_000;
 const SUN_DIST   = 149_600_000_000;
 
+// ── Navigazione cosmica — zone di scala ─────────────────────────────────────
+const COSMIC_ZONES = [
+  { max: 2e7,      it: '🌍 Orbita terrestre',        en: '🌍 Earth orbit' },
+  { max: 5e8,      it: '🌕 Sistema Terra-Luna',      en: '🌕 Earth–Moon system' },
+  { max: 4e11,     it: '☀️ Sistema Solare interno',  en: '☀️ Inner Solar System' },
+  { max: 7e12,     it: '🪐 Sistema Solare esterno',  en: '🪐 Outer Solar System' },
+  { max: 2e13,     it: '❄️ Fascia di Kuiper',        en: '❄️ Kuiper Belt' },
+  { max: Infinity, it: '⭐ Spazio interstellare',    en: '⭐ Interstellar space' },
+] as const;
+
+function getCosmicZone(altMeters: number, locale: string): string {
+  const zone = COSMIC_ZONES.find(z => altMeters < z.max) ?? COSMIC_ZONES[COSMIC_ZONES.length - 1];
+  return locale === 'en' ? zone.en : zone.it;
+}
+
+const SCALE_JUMPS = [
+  { icon: '🌍', label: 'Terra',    labelEn: 'Earth',   alt: 1.5e7  },
+  { icon: '🌕', label: 'Luna',     labelEn: 'Moon',    alt: 4e8    },
+  { icon: '☀️', label: 'Sole',    labelEn: 'Sun',     alt: 1.6e11 },
+  { icon: '🪐', label: 'Saturno', labelEn: 'Saturn',  alt: 1.5e12 },
+  { icon: '❄️', label: 'Kuiper',  labelEn: 'Kuiper',  alt: 6.5e12 },
+] as const;
+
 // Card per clic diretto su Luna e Sole (ID diverso da 'luna'/'sole' per non innescare flyTo da App)
 const MOON_CARD: HistoricalEvent = {
   id: 'luna-body', title: 'La Luna', year: -4_500_000_000,
@@ -87,6 +110,7 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
   const hudAltRef    = useRef<HTMLSpanElement>(null);
   const hudCoordsRef = useRef<HTMLSpanElement>(null);
   const isCosmicRef  = useRef(isCosmicView);
+  const localeRef    = useRef(locale);
   // Paleogeografia — L1 GPlates + L2 CAWM/DARE + L3 Era Glaciale (piattaforma continentale LGM)
   const cawmLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
   const dareLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
@@ -99,6 +123,7 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
   onClickRef.current     = onEventClick;
   currentYearRef.current = currentYear;
   isCosmicRef.current    = isCosmicView;
+  localeRef.current      = locale;
 
   // ── Inizializzazione viewer (una volta sola) ──────────────────────────────
   useEffect(() => {
@@ -324,7 +349,7 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
       if (hudAltRef.current) hudAltRef.current.textContent = fmtAlt(pos.height);
       if (hudCoordsRef.current) {
         hudCoordsRef.current.textContent = isCosmicRef.current
-          ? '⊙ Sistema Solare'
+          ? getCosmicZone(pos.height, localeRef.current)
           : `${fmtDMS(Cesium.Math.toDegrees(pos.latitude), 'N', 'S')}  ${fmtDMS(Cesium.Math.toDegrees(pos.longitude), 'E', 'O')}`;
       }
     });
@@ -792,7 +817,27 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
       <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
-      {isCosmicView && <CosmicOverlay events={events} onEventClick={onEventClick} />}
+      {isCosmicView && (
+        <CosmicOverlay
+          events={events}
+          onEventClick={onEventClick}
+          locale={locale}
+          onJumpTo={(alt) => {
+            const v = viewerRef.current;
+            if (!v || v.isDestroyed()) return;
+            const { longitude, latitude } = v.camera.positionCartographic;
+            v.camera.flyTo({
+              destination: Cesium.Cartesian3.fromDegrees(
+                Cesium.Math.toDegrees(longitude),
+                Cesium.Math.toDegrees(latitude),
+                alt,
+              ),
+              duration: 2,
+              easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
+            });
+          }}
+        />
+      )}
       <div className="globe-hud" aria-hidden="true">
         <div className="globe-hud__row">
           <span className="globe-hud__lbl">ALT</span>
@@ -813,25 +858,72 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
 
 // ── Overlay eventi cosmici pre-terrestri ────────────────────────────────────
 
-function CosmicOverlay({ events, onEventClick }: { events: HistoricalEvent[]; onEventClick: (e: HistoricalEvent) => void }) {
+function CosmicOverlay({ events, onEventClick, locale, onJumpTo }: {
+  events: HistoricalEvent[];
+  onEventClick: (e: HistoricalEvent) => void;
+  locale: Locale;
+  onJumpTo: (altMeters: number) => void;
+}) {
+  const it = locale === 'it';
   return (
     <div style={{
       position: 'absolute', inset: 0,
       background: 'linear-gradient(to right, rgba(0,0,10,0.7) 0%, transparent 45%)',
       pointerEvents: 'none',
     }}>
+      {/* Left: cosmic events */}
       <div style={{
         position: 'absolute', left: 16, top: 16, bottom: 16,
         display: 'flex', flexDirection: 'column', gap: 8,
         overflowY: 'auto', maxWidth: 280, pointerEvents: 'all',
       }}>
         <p style={{ color: '#1abc9c99', fontSize: '0.65rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>
-          🌌 Universo primordiale
+          🌌 {it ? 'Universo primordiale' : 'Primordial universe'}
         </p>
         {events.length === 0
-          ? <p style={{ color: '#555577', fontSize: '0.75rem' }}>Sposta lo slider verso sinistra per esplorare l'universo primordiale</p>
+          ? <p style={{ color: '#555577', fontSize: '0.75rem' }}>
+              {it ? 'Sposta lo slider verso sinistra per esplorare l\'universo primordiale' : 'Move the slider left to explore the primordial universe'}
+            </p>
           : events.map(e => <CosmicEventButton key={e.id} event={e} onClick={onEventClick} />)
         }
+      </div>
+
+      {/* Right: scale navigation ladder */}
+      <div style={{
+        position: 'absolute', right: 16, top: 16,
+        display: 'flex', flexDirection: 'column', gap: 6,
+        pointerEvents: 'all', alignItems: 'flex-end',
+      }}>
+        <p style={{ color: '#1abc9c99', fontSize: '0.6rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4, textAlign: 'right' }}>
+          {it ? '🔭 Navigazione' : '🔭 Navigate'}
+        </p>
+        {SCALE_JUMPS.map(jump => (
+          <button
+            key={jump.label}
+            onClick={() => onJumpTo(jump.alt)}
+            title={`${it ? jump.label : jump.labelEn} — ${fmtAlt(jump.alt)}`}
+            style={{
+              background: 'rgba(0,20,40,0.72)',
+              border: '1px solid rgba(100,180,255,0.22)',
+              borderRadius: 8,
+              padding: '6px 10px',
+              color: '#a0d8f0',
+              cursor: 'pointer',
+              fontSize: '0.72rem',
+              textAlign: 'right',
+              lineHeight: 1.3,
+              backdropFilter: 'blur(8px)',
+              transition: 'border-color 0.18s, color 0.18s',
+              minWidth: 110,
+            }}
+            onMouseEnter={ev => { ev.currentTarget.style.borderColor = 'rgba(100,180,255,0.65)'; ev.currentTarget.style.color = '#e0f4ff'; }}
+            onMouseLeave={ev => { ev.currentTarget.style.borderColor = 'rgba(100,180,255,0.22)'; ev.currentTarget.style.color = '#a0d8f0'; }}
+          >
+            <span style={{ fontSize: '0.88rem' }}>{jump.icon}</span>{' '}
+            {it ? jump.label : jump.labelEn}
+            <div style={{ color: '#4a8aaa', fontSize: '0.6rem', marginTop: 1 }}>{fmtAlt(jump.alt)}</div>
+          </button>
+        ))}
       </div>
     </div>
   );
