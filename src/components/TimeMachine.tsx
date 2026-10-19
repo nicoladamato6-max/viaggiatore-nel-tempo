@@ -163,7 +163,7 @@ interface Props {
 }
 
 // ── Componente ────────────────────────────────────────────────────────────────
-export function TimeMachine({ locale, events, currentYear, onNavigate }: Props) {
+export function TimeMachine({ locale, events: _events, currentYear: _currentYear, onNavigate }: Props) {
   const [open,           setOpen]           = useState(false);
   const [yearText,       setYearText]       = useState('');
   const [place,          setPlace]          = useState('');
