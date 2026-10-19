@@ -73,8 +73,15 @@ export interface WikiMarker {
 
 export type MobileTab = 'globe' | 'search' | 'timeline' | 'profile';
 
+export type EraGuideCategory = 'storia' | 'arte' | 'musica' | 'scienza' | 'filosofia' | 'geologia' | 'cosmo' | 'sport';
+
+export interface EraGuideItem {
+  text: string;
+  cat: EraGuideCategory;
+}
+
 export interface EraLaunchData {
-  briefing: { dove: string; top5: string[]; connessioni: string };
+  briefing: { dove: string; items: EraGuideItem[]; connessioni: string };
   eraName: string;
   eraSlug: string;
   eraYear: number;

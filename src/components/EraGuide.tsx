@@ -3,6 +3,17 @@ import { type FlyTarget, type EraLaunchData, type HistoricalEvent } from '../typ
 import { parseYear } from './TimeMachine';
 import './EraGuide.css';
 
+const CAT_ICON: Record<string, string> = {
+  storia:    '📜',
+  arte:      '🎨',
+  musica:    '🎵',
+  scienza:   '🔭',
+  filosofia: '🧠',
+  geologia:  '⛰️',
+  cosmo:     '🌌',
+  sport:     '🏆',
+};
+
 interface Props {
   data: EraLaunchData | null;
   events: HistoricalEvent[];
@@ -91,10 +102,10 @@ function renderAnnotatedText(
 export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: Props) {
   const [collapsed, setCollapsed] = useState(false);
 
-  // Pre-compute entity links for all top5 items — must be before early return (hooks)
+  // Pre-compute entity links for all items — must be before early return (hooks)
   const top5Links = useMemo(() => {
     if (!data) return [];
-    return data.briefing.top5.map(item => findEntityLinks(item, events));
+    return data.briefing.items.map(item => findEntityLinks(item.text, events));
   }, [data, events]);
 
   if (!data) return null;
@@ -175,22 +186,25 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
 
         <div className="era-guide__divider" />
 
-        {/* Top5 con entity hyperlinks */}
+        {/* 10 esperienze con categoria e entity hyperlinks */}
         <div className="era-guide__section">
           <div className="era-guide__section-label">
-            {it ? '5 cose da non perdere' : '5 things to experience'}
+            {it ? '10 esperienze imperdibili' : '10 must-see experiences'}
           </div>
           <ol className="era-guide__top5">
-            {briefing.top5.map((item, i) => (
+            {briefing.items.map((item, i) => (
               <li key={i}>
                 <div
                   className="era-guide__top5-item"
-                  onClick={() => handleItemClick(item)}
+                  onClick={() => handleItemClick(item.text)}
                   title={it ? 'Naviga a questo momento' : 'Navigate to this moment'}
                 >
+                  <span className="era-guide__item-cat" title={item.cat}>
+                    {CAT_ICON[item.cat] ?? '📌'}
+                  </span>
                   <span className="era-guide__top5-arrow">→</span>
                   <span className="era-guide__top5-text">
-                    {renderAnnotatedText(item, top5Links[i] ?? [], handleEntityClick)}
+                    {renderAnnotatedText(item.text, top5Links[i] ?? [], handleEntityClick)}
                   </span>
                 </div>
               </li>

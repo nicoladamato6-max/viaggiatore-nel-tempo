@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
-import { type FlyTarget, type Locale, type HistoricalEvent, type EraLaunchData } from '../types';
+import { type FlyTarget, type Locale, type HistoricalEvent, type EraLaunchData, type EraGuideItem } from '../types';
 import { MACRO_ERAS, SUBCATEGORIES, getCurrentMacroEra, type Period } from '../data/historicalPeriods';
 import epochBriefingsData from '../data/epoch-briefings.json';
 
 interface AiBriefing {
   dove: string;
-  top5: string[];
+  items: EraGuideItem[];
   connessioni: string;
 }
 
@@ -407,11 +407,11 @@ export function TimeMachine({ locale, events: _events, currentYear: _currentYear
                   </div>
                   <div className="tm-briefing__section">
                     <div className="tm-briefing__label">
-                      {it ? '▸ 5 COSE DA NON PERDERE' : '▸ 5 THINGS TO EXPERIENCE'}
+                      {it ? '▸ 10 ESPERIENZE IMPERDIBILI' : '▸ 10 MUST-SEE EXPERIENCES'}
                     </div>
                     <ol className="tm-briefing__list">
-                      {(briefing.top5 ?? []).map((item, i) => (
-                        <li key={i}>{item}</li>
+                      {(briefing.items ?? []).map((item, i) => (
+                        <li key={i}>{item.text}</li>
                       ))}
                     </ol>
                   </div>

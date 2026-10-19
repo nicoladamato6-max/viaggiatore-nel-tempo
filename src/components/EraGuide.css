@@ -224,6 +224,13 @@
   color: #c9a227;
 }
 
+.era-guide__item-cat {
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  opacity: 0.8;
+}
+
 .era-guide__top5-arrow {
   color: #4a6a8a;
   font-family: monospace;
