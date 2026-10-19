@@ -53,31 +53,37 @@ function buildPrompt(year: number, events: EventSummary[], locale: string): stri
     return `- ${e.title} (${y}, ${e.category})${e.description ? ': ' + e.description.slice(0, 80) : ''}`;
   }).join('\n');
 
+  const example = `{"dove":"Sei nel cuore del Rinascimento fiorentino.","top5":["Visita gli Uffizi","Conosci Leonardo da Vinci","Esplora Piazza della Signoria","Leggi il Principe di Machiavelli","Ammira il Duomo di Brunelleschi"],"connessioni":"La prospettiva pittorica inventata qui diventerà la base della fotografia moderna."}`;
+
   return it
-    ? `Sei un narratore storico appassionato. Un viaggiatore del tempo è appena atterrato nell'anno ${yearLabel}.
+    ? `Sei un narratore storico. L'anno è ${yearLabel}.
 
-Contesto — eventi storici di quell'epoca (usa solo questi, non inventare):
+Eventi disponibili:
 ${ctx}
 
-Rispondi SOLO con un oggetto JSON valido, senza markdown, senza commenti:
-{"dove":"2-3 frasi evocative in italiano su dove sei atterrato. Tono cinematografico, presente indicativo.","top5":["cosa da vedere/vivere 1 (max 20 parole)","cosa 2","cosa 3","cosa 4","cosa 5"],"connessioni":"2-3 frasi sorprendenti su come questi eventi hanno plasmato il futuro. Qualcosa di non ovvio."}`
-    : `You are a passionate historical narrator. A time traveler just landed in the year ${yearLabel}.
+Rispondi SOLO con JSON nel seguente formato (no markdown, no testo extra):
+${example}
 
-Context — historical events of that era (use only these, don't invent):
+Ora scrivi il JSON per l'anno ${yearLabel}:`
+    : `You are a historical narrator. The year is ${yearLabel}.
+
+Available events:
 ${ctx}
 
-Reply ONLY with valid JSON, no markdown, no comments:
-{"dove":"2-3 evocative sentences in English about where you landed. Cinematic tone, present tense.","top5":["thing to see/experience 1 (max 20 words)","thing 2","thing 3","thing 4","thing 5"],"connessioni":"2-3 surprising sentences on how these events shaped the future. Something non-obvious."}`;
+Reply ONLY with JSON in this exact format (no markdown, no extra text):
+${example}
+
+Now write the JSON for the year ${yearLabel}:`;
 }
 
 async function callCloudflareAI(env: SummarizeEnv, prompt: string): Promise<string> {
   if (!env.AI) throw new Error('AI binding not configured');
-  const result = await env.AI.run('@cf/meta/llama-3.2-3b-instruct', {
+  const result = await env.AI.run('@cf/meta/llama-3.1-8b-instruct-fp8', {
     messages: [
-      { role: 'system', content: 'Respond only with valid JSON. No markdown. No explanation.' },
+      { role: 'system', content: 'You are a JSON API. Output only raw JSON, no markdown fences, no explanation.' },
       { role: 'user', content: prompt },
     ],
-    max_tokens: 700,
+    max_tokens: 800,
   });
   return result.response ?? result.generated_text ?? '';
 }
@@ -124,10 +130,18 @@ async function callGPT4oMini(env: SummarizeEnv, prompt: string): Promise<string>
 }
 
 function extractJSON(raw: string): Record<string, unknown> {
-  // Estrae il primo oggetto JSON dal testo (alcuni modelli aggiungono testo prima/dopo)
-  const match = raw.match(/\{[\s\S]*\}/);
+  // Rimuove eventuali fence markdown ```json ... ```
+  const stripped = raw.replace(/```(?:json)?\s*/gi, '').replace(/```/g, '').trim();
+  // Estrae il primo oggetto JSON (alcuni modelli aggiungono testo prima/dopo)
+  const match = stripped.match(/\{[\s\S]*\}/);
   if (!match) throw new Error('No JSON found in response');
-  return JSON.parse(match[0]);
+  try {
+    return JSON.parse(match[0]);
+  } catch {
+    // Tenta di correggere virgole finali prima di rilanciare
+    const fixed = match[0].replace(/,\s*([}\]])/g, '$1');
+    return JSON.parse(fixed);
+  }
 }
 
 export const onRequestOptions = async (): Promise<Response> => cors();
