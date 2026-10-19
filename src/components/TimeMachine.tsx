@@ -1,11 +1,22 @@
 import { useState, useRef, useEffect } from 'react';
 import { type FlyTarget, type Locale, type HistoricalEvent } from '../types';
-import { MACRO_ERAS, SUBCATEGORIES } from '../data/historicalPeriods';
+import { MACRO_ERAS, SUBCATEGORIES, getCurrentMacroEra } from '../data/historicalPeriods';
+import epochBriefingsData from '../data/epoch-briefings.json';
 
 interface AiBriefing {
   dove: string;
   top5: string[];
   connessioni: string;
+}
+
+type EpochBriefings = Record<string, { it: AiBriefing; en: AiBriefing }>;
+
+function getStaticBriefing(year: number, locale: Locale): AiBriefing | null {
+  const era = getCurrentMacroEra(year);
+  if (!era.wikipediaSlug) return null;
+  const entry = (epochBriefingsData as EpochBriefings)[era.wikipediaSlug];
+  if (!entry) return null;
+  return entry[locale] ?? entry['it'] ?? null;
 }
 
 // ── Parser date potenziato ────────────────────────────────────────────────────
@@ -272,6 +283,11 @@ export function TimeMachine({ locale, events, currentYear, onNavigate }: Props) 
       launchedYearRef.current = year;
       setLaunched(true);
       onNavigate({ year: year ?? undefined, flyTo });
+      // Mostra subito il briefing pre-generato per la macro-era
+      if (year !== null) {
+        const staticBriefing = getStaticBriefing(year, locale);
+        if (staticBriefing) setBriefing(staticBriefing);
+      }
     }
   }
 
@@ -384,29 +400,16 @@ export function TimeMachine({ locale, events, currentYear, onNavigate }: Props) 
                 )}
               </div>
 
-              {/* Bottone AI briefing */}
-              {launched && !briefing && (
-                <button
-                  className={`tm-discover${briefingLoad ? ' tm-discover--loading' : ''}`}
-                  onClick={handleDiscover}
-                  disabled={briefingLoad}
-                >
-                  {briefingLoad
-                    ? (it ? '◌ CONNESSIONE AI…' : '◌ AI CONNECTING…')
-                    : (it ? '🔭 SCOPRI QUEST\'EPOCA' : '🔭 EXPLORE THIS ERA')}
-                </button>
-              )}
-
               {briefingError && (
                 <div className="tm-briefing-error">⚠ {briefingError}</div>
               )}
 
-              {/* Briefing AI */}
+              {/* Briefing dell'epoca */}
               {briefing && (
                 <div className="tm-briefing">
                   <div className="tm-briefing__section">
                     <div className="tm-briefing__label">
-                      {it ? '▸ DOVE SEI ATTERRATO' : '▸ WHERE YOU LANDED'}
+                      {it ? '▸ L\'EPOCA IN CUI SEI' : '▸ THE ERA YOU\'RE IN'}
                     </div>
                     <p className="tm-briefing__text">{briefing.dove}</p>
                   </div>

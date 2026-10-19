@@ -1,0 +1,242 @@
+{
+  "Observable_universe": {
+    "it": {
+      "dove": "Sei all'inizio di tutto. Il Big Bang è avvenuto 13,8 miliardi di anni fa e l'universo è ancora giovane, caldo, cieco. Le prime stelle non si sono ancora accese — non c'è buio perché non c'è luce, solo il rumore sordo della materia che si raffredda e si aggrega.",
+      "top5": [
+        "Osserva il fondo cosmico a microonde: l'eco del Big Bang, ancora visibile oggi come un brusio di radiazioni",
+        "Assisti alla formazione delle prime stelle, 200 milioni di anni dopo il Big Bang — l'universo si accende per la prima volta",
+        "Vivi la nucleosintesi primordiale: idrogeno ed elio si formano nei primissimi minuti dell'universo",
+        "Guarda le prime galassie aggregarsi in filamenti cosmici lunghi centinaia di milioni di anni luce",
+        "Senti l'espansione dello spazio accelerare intorno a te — non è il contenuto che si muove, è il contenitore che cresce"
+      ],
+      "connessioni": "Ogni atomo di ferro nel tuo sangue non esiste ancora. Sarà forgiato dentro stelle che non sono ancora nate, in supernove che non esploderanno per miliardi di anni. L'universo deve prima imparare a morire prima di poterti costruire."
+    },
+    "en": {
+      "dove": "You are at the beginning of everything. The Big Bang happened 13.8 billion years ago and the universe is still young, hot, and blind. The first stars have not yet ignited — there is no darkness because there is no light, only the deep roar of matter cooling and coalescing.",
+      "top5": [
+        "Observe the cosmic microwave background: the echo of the Big Bang, still visible today as a faint radiation hiss",
+        "Witness the formation of the first stars, 200 million years after the Big Bang — the universe lights up for the first time",
+        "Experience primordial nucleosynthesis: hydrogen and helium form in the very first minutes of the universe",
+        "Watch the first galaxies aggregate into cosmic filaments hundreds of millions of light-years long",
+        "Feel space itself expanding around you — it is not the contents moving, it is the container growing"
+      ],
+      "connessioni": "Every iron atom in your blood does not yet exist. It will be forged inside stars that haven't been born yet, in supernovae that won't explode for billions of years. The universe must first learn to die before it can build you."
+    }
+  },
+  "History_of_Earth": {
+    "it": {
+      "dove": "La Terra è un pianeta appena sfornato dal caos. L'oceano primordiale copre quasi tutto, il cielo è arancione per l'assenza di ossigeno libero, e la Luna è dieci volte più vicina di adesso. Ogni giorno dura appena sei ore. Non c'è niente che assomigli alla terraferma che conosci.",
+      "top5": [
+        "Assisti all'impatto di Theia, il protopianeta che collide con la Terra e genera la Luna 4,5 miliardi di anni fa",
+        "Osserva i cianobatteri inventare la fotosintesi ossigenica e avvelenare l'atmosfera con l'ossigeno — il primo grande inquinamento della storia",
+        "Vivi la Grande Ossidazione, 2,4 miliardi di anni fa: l'atmosfera cambia composizione per sempre e stermina la vita anaerobica",
+        "Esplora i primi oceani, dove la vita emerge come semplici cellule procariote 3,8 miliardi di anni fa",
+        "Guarda i continenti unirsi in supercontinenti e ridividersi in cicli da centinaia di milioni di anni"
+      ],
+      "connessioni": "L'ossigeno prodotto dai cianobatteri fu il primo grande disastro ecologico della storia: uccise quasi tutta la vita anaerobica che dominava la Terra. Quel 'veleno' è l'aria che respiri adesso. Ogni respiro che fai è il risultato di un'estinzione di massa."
+    },
+    "en": {
+      "dove": "Earth is a planet freshly forged from chaos. The primordial ocean covers almost everything, the sky is orange from the absence of free oxygen, and the Moon is ten times closer than it is now. Each day lasts barely six hours. Nothing resembles the land you know.",
+      "top5": [
+        "Witness the Theia impact, the protoplanet that collides with Earth and generates the Moon 4.5 billion years ago",
+        "Watch cyanobacteria invent oxygenic photosynthesis and poison the atmosphere with oxygen — the first great pollution in history",
+        "Live through the Great Oxidation Event 2.4 billion years ago: the atmosphere changes composition forever and wipes out anaerobic life",
+        "Explore the first oceans, where life emerges as simple prokaryotic cells 3.8 billion years ago",
+        "Watch continents join into supercontinents and split apart again in cycles spanning hundreds of millions of years"
+      ],
+      "connessioni": "The oxygen produced by cyanobacteria was the first great ecological disaster in history: it killed almost all the anaerobic life that dominated Earth. That 'poison' is the air you breathe now. Every breath you take is the result of a mass extinction."
+    }
+  },
+  "Paleozoic": {
+    "it": {
+      "dove": "La vita ha appena deciso di complicarsi. L'esplosione Cambriana ha prodotto in pochi milioni di anni più piani corporei di quanti ne esistessero nei tre miliardi precedenti. I mari brulicano di creature senza precedenti — alcune con occhi composti, altre con esoscheletri, altre ancora con sembianze che non hanno analoghi nel mondo moderno.",
+      "top5": [
+        "Assisti all'esplosione Cambriana e incontra i trilobiti: i dominatori dei fondali oceanici per 250 milioni di anni",
+        "Vivi la prima colonizzazione della terraferma da parte delle piante, 475 milioni di anni fa — trasformano il suolo nudo in ecosistema",
+        "Osserva i primi vertebrati uscire dall'acqua 375 milioni di anni fa, con pinne che diventeranno zampe",
+        "Esplora le gigantesche foreste carbonifere, dove libellule con apertura alare di 70 cm volano nell'aria ricca di ossigeno",
+        "Sii presente alla grande estinzione del Permiano: il 96% delle specie marine scompare in meno di 60.000 anni"
+      ],
+      "connessioni": "Le foreste carbonifere non venivano decomposte da nessun fungo — la lignina era troppo nuova per avere predatori batterici. Così la biomassa si accumulò per milioni di anni, compressa in strati di carbone. Quel legno mai digerito ha alimentato la rivoluzione industriale del XIX secolo. Bruciamo ancora quegli alberi."
+    },
+    "en": {
+      "dove": "Life has just decided to get complicated. The Cambrian Explosion produced more body plans in a few million years than had existed in the previous three billion. The seas teem with unprecedented creatures — some with compound eyes, others with exoskeletons, others still with forms that have no modern analogue.",
+      "top5": [
+        "Witness the Cambrian Explosion and meet trilobites: the rulers of the ocean floor for 250 million years",
+        "Live through the first colonization of land by plants, 475 million years ago — they transform bare soil into ecosystem",
+        "Watch the first vertebrates leave the water 375 million years ago, with fins becoming limbs",
+        "Explore the giant Carboniferous forests, where dragonflies with 70 cm wingspans fly in oxygen-rich air",
+        "Be present at the Permian extinction: 96% of marine species vanish in less than 60,000 years"
+      ],
+      "connessioni": "Carboniferous forests were not decomposed by any fungus — lignin was too new to have bacterial predators. So the biomass accumulated for millions of years, compressed into coal seams. That undigested wood powered the 19th-century Industrial Revolution. We are still burning those trees."
+    }
+  },
+  "Mesozoic": {
+    "it": {
+      "dove": "I dinosauri regnano da 180 milioni di anni. L'aria ha più ossigeno di adesso, fa caldo anche ai poli — non esiste ghiaccio permanente da nessuna parte sul pianeta. I continenti stanno lentamente separandosi: Pangea si spacca e gli oceani avanzano nelle crepe. Il mondo che vedi non assomiglia a nessuna mappa moderna.",
+      "top5": [
+        "Vola con i Pterosauri — alcuni con apertura alare di 10 metri — sopra la Tetide, l'oceano che separava Europa e Africa",
+        "Incontra un T-Rex nel Cretaceo nordamericano: alto come un palazzo di quattro piani, veloce quanto un ciclista",
+        "Osserva i primi fiori comparire 130 milioni di anni fa, rivoluzionando il rapporto tra piante e insetti per sempre",
+        "Assisti alla separazione del Gondwana: Africa, Sud America e Australia si allontanano, isolando le specie su ciascun frammento",
+        "Vivi l'impatto dello Chicxulub: l'asteroide di 10 km che termina il Mesozoico in un'estate nucleare durata anni"
+      ],
+      "connessioni": "I mammiferi esistevano già durante il Mesozoico da 160 milioni di anni, ma erano piccoli, notturni e marginali. Solo quando i dinosauri si estinsero, i nostri antenati poterono colonizzare ogni nicchia ecologica disponibile. Siamo figli di quell'asteroide — senza di lui, non esisteremmo."
+    },
+    "en": {
+      "dove": "Dinosaurs have ruled for 180 million years. The air has more oxygen than now, it is warm even at the poles — there is no permanent ice anywhere on the planet. The continents are slowly separating: Pangea splits and the oceans advance into the cracks. The world you see resembles no modern map.",
+      "top5": [
+        "Fly with Pterosaurs — some with 10-meter wingspans — above the Tethys Ocean that separated Europe and Africa",
+        "Meet a T-Rex in Cretaceous North America: as tall as a four-story building, as fast as a cyclist",
+        "Watch the first flowers appear 130 million years ago, revolutionizing the relationship between plants and insects forever",
+        "Witness the breakup of Gondwana: Africa, South America and Australia drift apart, isolating species on each fragment",
+        "Live the Chicxulub impact: the 10 km asteroid that ends the Mesozoic in a nuclear summer that lasted years"
+      ],
+      "connessioni": "Mammals had already existed for 160 million years during the Mesozoic, but they were small, nocturnal and marginal. Only when the dinosaurs went extinct could our ancestors colonize every available ecological niche. We are children of that asteroid — without it, we would not exist."
+    }
+  },
+  "Cenozoic": {
+    "it": {
+      "dove": "Il mondo si raffredda e i mammiferi — finalmente liberi dalla pressione dei dinosauri — esplodono in migliaia di forme. Compaiono cavalli grandi come volpi, balene che tornano in mare da animali terrestri, e nel corso di milioni di anni le foreste di sequoie coprono anche l'Antartide. Il pianeta è ancora riconoscibile, ma appena.",
+      "top5": [
+        "Assisti all'evoluzione delle balene dalla terraferma all'oceano nel corso di 15 milioni di anni: una delle transizioni più documentate nella storia della vita",
+        "Incontra il Megalodon, lo squalo lungo fino a 18 metri che domina gli oceani del Miocene",
+        "Osserva i primi ominidi comparire nelle savane africane 7 milioni di anni fa, camminare eretti e fabbricare strumenti",
+        "Vivi l'era glaciale del Pleistocene: i mammut percorrono l'Europa, i leoni di caverna abitano le Alpi",
+        "Guarda la chiusura dell'istmo di Panamá 3 milioni di anni fa — un evento che cambierà il clima globale"
+      ],
+      "connessioni": "Quando l'istmo di Panamá si chiuse 3 milioni di anni fa, le correnti oceaniche si ridisegnarono. Il Golfo Stream si intensificò, l'Europa si scaldò, le Americhe si unirono — e il ciclo delle glaciazioni iniziò. Una stretta di terra larga 80 km ha cambiato il clima di tutto il pianeta."
+    },
+    "en": {
+      "dove": "The world is cooling and mammals — finally free from dinosaur pressure — explode into thousands of forms. Horses the size of foxes appear, whales return to the sea from land animals, and over millions of years sequoia forests cover even Antarctica. The planet is still recognizable, but barely.",
+      "top5": [
+        "Witness whale evolution from land to ocean over 15 million years: one of the most documented transitions in the history of life",
+        "Meet the Megalodon, the shark up to 18 meters long that dominates Miocene oceans",
+        "Watch the first hominids appear in African savannas 7 million years ago, walk upright and fashion tools",
+        "Live the Pleistocene ice age: mammoths roam Europe, cave lions inhabit the Alps",
+        "Watch the closure of the Isthmus of Panama 3 million years ago — an event that will reshape global climate"
+      ],
+      "connessioni": "When the Isthmus of Panama closed 3 million years ago, ocean currents were redrawn. The Gulf Stream intensified, Europe warmed, the Americas were joined — and the glacial cycle began. A strip of land 80 km wide changed the climate of the entire planet."
+    }
+  },
+  "Prehistory": {
+    "it": {
+      "dove": "Gli esseri umani esistono, ma non hanno ancora inventato la scrittura — quindi non esiste ancora la storia. Sei in un mondo dove il linguaggio è giovane, il fuoco è uno strumento recente, e le migrazioni portano il genere Homo in ogni angolo del pianeta. Ogni gruppo umano è il confine del mondo conosciuto.",
+      "top5": [
+        "Vivi con i Neanderthal in Europa 50.000 anni fa — seppelliscono i propri morti con fiori e ocra, curano i feriti",
+        "Osserva le pitture rupestri di Lascaux in Francia, 17.000 anni fa: bisonti, cervi e cavalli in movimento sulla roccia",
+        "Attraversa la Beringia asciutta 15.000 anni fa e vedi i primi umani raggiungere le Americhe per la prima volta",
+        "Assisti alla domesticazione del cane, 15.000 anni fa: la prima alleanza inter-specie nella storia della vita",
+        "Vivi la rivoluzione neolitica a Gerico, 10.000 anni fa: l'invenzione dell'agricoltura che trasforma nomadi in stanziali"
+      ],
+      "connessioni": "La domesticazione dei cereali 10.000 anni fa creò le prime eccedenze alimentari stabili. Le eccedenze permisero la specializzazione del lavoro. La specializzazione generò le città, le città generarono la politica, la scrittura e la guerra organizzata. Tutto il mondo moderno parte da un chicco di grano."
+    },
+    "en": {
+      "dove": "Humans exist, but writing has not yet been invented — so history does not yet exist. You are in a world where language is young, fire is a recent tool, and migrations are carrying the genus Homo to every corner of the planet. Every human group is the edge of the known world.",
+      "top5": [
+        "Live with Neanderthals in Europe 50,000 years ago — they bury their dead with flowers and ochre, care for their wounded",
+        "Observe the Lascaux cave paintings in France, 17,000 years ago: bison, deer and horses in motion on the rock",
+        "Cross dry Beringia 15,000 years ago and witness the first humans reaching the Americas for the first time",
+        "Witness the domestication of the dog, 15,000 years ago: the first inter-species alliance in the history of life",
+        "Live the Neolithic Revolution in Jericho, 10,000 years ago: the invention of agriculture that transforms nomads into settlers"
+      ],
+      "connessioni": "The domestication of cereals 10,000 years ago created the first stable food surpluses. Surpluses allowed labor specialization. Specialization generated cities, cities generated politics, writing and organized war. The entire modern world starts from a grain of wheat."
+    }
+  },
+  "Ancient_history": {
+    "it": {
+      "dove": "La scrittura è appena nata in Mesopotamia e in Egitto. Per la prima volta nella storia, i pensieri possono sopravvivere alla morte di chi li ha avuti. Le prime città-stato sorgono lungo i grandi fiumi — il Tigri, l'Eufrate, il Nilo — dove l'irrigazione produce abbondanza e l'abbondanza genera gerarchia, leggi e monumenti.",
+      "top5": [
+        "Visita Babilonia al tempo di Hammurabi e leggi il primo codice di leggi scritto al mondo, inciso su una stele di diorite",
+        "Cammina ad Alessandria d'Egitto nel III secolo a.C.: la Biblioteca raccoglie 700.000 rotoli, il più grande archivio mai assemblato",
+        "Incontra Confucio, Buddha e Socrate: nel V secolo a.C., tre continenti generano simultaneamente la filosofia razionale",
+        "Assisti ai Giochi Olimpici dell'antica Grecia, dove le guerre tra città-stato si sospendono per la tregua olimpica",
+        "Vivi Roma nel I secolo d.C., la prima città a raggiungere un milione di abitanti — non accadrà di nuovo per mille anni"
+      ],
+      "connessioni": "I Greci del V secolo a.C. inventarono la democrazia, la filosofia razionale e il teatro — ma possedevano schiavi e escludevano le donne dal voto. Quella contraddizione non è un dettaglio di colore: è la tensione che ha guidato duemila anni di storia politica occidentale, e non è ancora risolta."
+    },
+    "en": {
+      "dove": "Writing has just been born in Mesopotamia and Egypt. For the first time in history, thoughts can survive the death of whoever had them. The first city-states rise along the great rivers — the Tigris, the Euphrates, the Nile — where irrigation produces abundance and abundance generates hierarchy, laws and monuments.",
+      "top5": [
+        "Visit Babylon at the time of Hammurabi and read the first written legal code in the world, carved on a diorite stele",
+        "Walk through Alexandria in Egypt in the 3rd century BC: the Library holds 700,000 scrolls, the largest archive ever assembled",
+        "Meet Confucius, Buddha and Socrates: in the 5th century BC, three continents simultaneously generate rational philosophy",
+        "Witness the Olympic Games of ancient Greece, where wars between city-states are suspended for the Olympic truce",
+        "Live in Rome in the 1st century AD, the first city to reach one million inhabitants — it won't happen again for a thousand years"
+      ],
+      "connessioni": "The Greeks of the 5th century BC invented democracy, rational philosophy and theater — but they owned slaves and excluded women from voting. That contradiction is not a colorful footnote: it is the tension that has driven two thousand years of Western political history, and it is not yet resolved."
+    }
+  },
+  "Middle_Ages": {
+    "it": {
+      "dove": "Roma è caduta, ma la sua ombra copre ancora tutto. La Chiesa conserva il sapere in latino nelle abbazie, le università nascono nelle cattedrali, e in Oriente Bisanzio e il Califfato abbaside custodiscono Aristotele mentre l'Europa lo ha dimenticato. Il mondo è frammentato ma più connesso di quanto sembri — le carovane percorrono la Via della Seta, le navi vichinghe toccano il Canada.",
+      "top5": [
+        "Visita Baghdad nel IX secolo d.C.: la città più colta del mondo, dove algebra, ottica e medicina fioriscono sotto i califfi abbasidi",
+        "Cammina il Cammino di Santiago e incontra pellegrini da ogni angolo d'Europa che condividono strade, pericoli e devozione",
+        "Vivi la costruzione di Notre-Dame a Parigi: pietra che si eleva verso il cielo senza cemento armato, solo archi rampanti e fede geometrica",
+        "Assisti alla firma della Magna Carta nel 1215: il primo documento scritto che limita il potere assoluto di un re",
+        "Esplora Timbuktu nel XIV secolo: crocevia del commercio aureo e custode del sapere islamico nel cuore del Sahara"
+      ],
+      "connessioni": "La Peste Nera del 1347-51 uccise un terzo dell'Europa. Paradossalmente, i sopravvissuti ottennero salari più alti, più libertà di movimento e meno vincoli feudali. La crisi demografica devastante accelerò la fine del feudalesimo e aprì la strada al Rinascimento — la morte di massa come involontario motore del progresso."
+    },
+    "en": {
+      "dove": "Rome has fallen, but its shadow still covers everything. The Church preserves knowledge in Latin in abbeys, universities are born in cathedrals, and in the East Byzantium and the Abbasid Caliphate are safeguarding Aristotle while Europe has forgotten him. The world is fragmented but more connected than it seems — caravans travel the Silk Road, Viking ships reach Canada.",
+      "top5": [
+        "Visit Baghdad in the 9th century AD: the most learned city in the world, where algebra, optics and medicine flourish under Abbasid caliphs",
+        "Walk the Camino de Santiago and meet pilgrims from every corner of Europe sharing roads, dangers and devotion",
+        "Experience the construction of Notre-Dame in Paris: stone rising toward the sky without reinforced concrete, only flying buttresses and geometric faith",
+        "Witness the signing of the Magna Carta in 1215: the first written document limiting the absolute power of a king",
+        "Explore Timbuktu in the 14th century: crossroads of gold trade and keeper of Islamic scholarship in the heart of the Sahara"
+      ],
+      "connessioni": "The Black Death of 1347-51 killed a third of Europe. Paradoxically, the survivors gained higher wages, more freedom of movement and fewer feudal constraints. The devastating demographic crisis accelerated the end of feudalism and paved the way for the Renaissance — mass death as an involuntary engine of progress."
+    }
+  },
+  "Early_modern_period": {
+    "it": {
+      "dove": "Il mondo si è appena allargato in modo irreversibile. Colombo ha raggiunto le Americhe, la stampa di Gutenberg ha democratizzato il sapere, e Copernico ha tolto la Terra dal centro dell'universo. Per la prima volta nella storia, idee pericolose possono moltiplicarsi prima che l'autorità le censuri — il pamphlet arriva prima del censore.",
+      "top5": [
+        "Vivi Firenze nel 1490 e incontra Leonardo, Botticelli e Lorenzo de' Medici che gravitano nello stesso spazio culturale",
+        "Assisti al viaggio di Magellano-Elcano (1519-22): la prima circumnavigazione del globo che prova definitivamente la sfericità della Terra",
+        "Vivi la Rivoluzione Scientifica con Galileo, Keplero e Newton che trasformano l'osservazione in equazione",
+        "Esplora Edo (Tokyo) nel XVII secolo: un milione di abitanti, la città più popolosa del mondo, invisibile all'Europa",
+        "Percorri la Via della Seta e vivi i traffici tra Cina, Persia, India e Venezia prima che le rotte oceaniche le soppiantino"
+      ],
+      "connessioni": "La stampa a caratteri mobili di Gutenberg (1450) rese impossibile bruciare tutte le copie di un libro: in 50 anni moltiplicò la produzione libraria europea per mille. Internet ha fatto la stessa cosa nel 1995. Ogni volta che l'informazione sfugge al controllo centralizzato, il potere politico si ridistribuisce."
+    },
+    "en": {
+      "dove": "The world has just expanded irreversibly. Columbus has reached the Americas, Gutenberg's press has democratized knowledge, and Copernicus has removed Earth from the center of the universe. For the first time in history, dangerous ideas can multiply before authority can censor them — the pamphlet arrives before the censor.",
+      "top5": [
+        "Live Florence in 1490 and encounter Leonardo, Botticelli and Lorenzo de' Medici gravitating in the same cultural space",
+        "Witness the Magellan-Elcano voyage (1519-22): the first circumnavigation of the globe definitively proving Earth is round",
+        "Live the Scientific Revolution with Galileo, Kepler and Newton transforming observation into equation",
+        "Explore Edo (Tokyo) in the 17th century: one million inhabitants, the world's most populous city, invisible to Europe",
+        "Travel the Silk Road and experience the traffic between China, Persia, India and Venice before ocean routes replace them"
+      ],
+      "connessioni": "Gutenberg's movable type press (1450) made it impossible to burn all copies of a book: in 50 years it multiplied European book production a thousandfold. The internet did the same thing in 1995. Every time information escapes centralized control, political power redistributes."
+    }
+  },
+  "Modern_history": {
+    "it": {
+      "dove": "Sei nell'era delle rivoluzioni permanenti. Quella francese ha introdotto l'idea che il potere venga dal popolo. Quella industriale ha trasferito la forza muscolare alle macchine. Quella digitale ha trasferito la memoria e il ragionamento ai computer. Ogni generazione eredita un mondo radicalmente diverso da quello in cui sono nati i propri genitori.",
+      "top5": [
+        "Vivi Parigi nel 1789 e assisti alla presa della Bastiglia: il giorno in cui il simbolo del potere assoluto crolla fisicamente",
+        "Osserva la nascita della fotografia nel 1839: per la prima volta nella storia, il tempo viene fermato con precisione meccanica",
+        "Vivi il 1969: l'uomo sbarca sulla Luna il 20 luglio e Woodstock raduna 400.000 persone tre settimane dopo",
+        "Assisti al crollo del Muro di Berlino la sera del 9 novembre 1989: la Guerra Fredda finisce in diretta televisiva",
+        "Vivi il 2007: iPhone, Twitter, la crisi finanziaria globale — tre rivoluzioni in dodici mesi che ridisegnano il mondo"
+      ],
+      "connessioni": "La scoperta degli antibiotici nel 1928 ha più che raddoppiato l'aspettativa di vita in un secolo. La penicillina ha reso sopravvivibili ferite, infezioni e operazioni che in ogni epoca precedente erano quasi sempre fatali. Nessuna singola molecola ha cambiato più profondamente l'evoluzione demografica della nostra specie."
+    },
+    "en": {
+      "dove": "You are in the era of permanent revolutions. The French one introduced the idea that power comes from the people. The Industrial one transferred muscular force to machines. The Digital one has transferred memory and reasoning to computers. Every generation inherits a world radically different from the one their parents were born into.",
+      "top5": [
+        "Live Paris in 1789 and witness the storming of the Bastille: the day the symbol of absolute power physically collapses",
+        "Observe the birth of photography in 1839: for the first time in history, time is stopped with mechanical precision",
+        "Live 1969: man lands on the Moon on July 20th and Woodstock gathers 400,000 people three weeks later",
+        "Witness the fall of the Berlin Wall on the evening of November 9, 1989: the Cold War ends on live television",
+        "Live 2007: iPhone, Twitter, the global financial crisis — three revolutions in twelve months that reshape the world"
+      ],
+      "connessioni": "The discovery of antibiotics in 1928 more than doubled life expectancy in a century. Penicillin made survivable the wounds, infections and operations that in every previous era were almost always fatal. No single molecule has more profoundly changed the demographic evolution of our species."
+    }
+  }
+}
