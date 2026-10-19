@@ -72,7 +72,7 @@ Reply ONLY with valid JSON, no markdown, no comments:
 
 async function callCloudflareAI(env: SummarizeEnv, prompt: string): Promise<string> {
   if (!env.AI) throw new Error('AI binding not configured');
-  const result = await env.AI.run('@cf/meta/llama-3-8b-instruct', {
+  const result = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
     messages: [
       { role: 'system', content: 'Respond only with valid JSON. No markdown. No explanation.' },
       { role: 'user', content: prompt },
