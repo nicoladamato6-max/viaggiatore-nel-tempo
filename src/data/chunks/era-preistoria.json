@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "vita-terra",
     "title": "Prime forme di vita sulla Terra",
@@ -2182,6 +2182,54 @@
     "tipo": "evento",
     "description": "La chiusura dell'Istmo di Panama, avvenuta circa 3 milioni di anni fa, uni le Americhe e separo l'Atlantico dal Pacifico. L'evento ridisegno le correnti oceaniche globali, intensifico il Gulf Stream e avvio il ciclo delle grandi glaciazioni del Pleistocene.",
     "wikipediaSlug": "Isthmus_of_Panama",
+    "isCosmic": false
+  },
+  {
+    "id": "fondazione-gerico",
+    "title": "Fondazione di Gerico",
+    "year": -9000,
+    "lat": 31.87,
+    "lng": 35.44,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Gerico, situata nella Valle del Giordano, Ã¨ considerata una delle cittÃ  piÃ¹ antiche del mondo, con tracce di insediamento permanente risalenti al 9000 a.C. circa. Fondata in un'oasi ricca d'acqua vicino alla sorgente di Ain es-Sultan, divenne un centro neolitico prospero grazie all'agricoltura irrigua e al commercio dell'ossidiana. Le imponenti mura e la torre in pietra costruite intorno al 7000 a.C. testimoniano un'organizzazione sociale giÃ  evoluta, secoli prima di qualsiasi altra cittÃ  conosciuta.",
+    "wikipediaSlug": "Jericho",
+    "isCosmic": false
+  },
+  {
+    "id": "fondazione-catalhoyuk",
+    "title": "Fondazione di Ã‡atalhÃ¶yÃ¼k",
+    "year": -7500,
+    "lat": 37.67,
+    "lng": 32.83,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Ã‡atalhÃ¶yÃ¼k, fondata intorno al 7500 a.C. in Anatolia centrale (odierna Turchia), fu uno degli insediamenti urbani piÃ¹ grandi del Neolitico con una popolazione stimata tra 5.000 e 10.000 abitanti. Le case erano costruite una accanto all'altra senza strade, e vi si accedeva attraverso aperture nel tetto mediante scale di legno. La cittÃ  si caratterizzava per elaborate pitture murali, culti della fertilitÃ  e una struttura sociale sorprendentemente egualitaria senza chiare gerarchie di potere.",
+    "wikipediaSlug": "Ã‡atalhÃ¶yÃ¼k",
+    "isCosmic": false
+  },
+  {
+    "id": "fondazione-uruk",
+    "title": "Fondazione di Uruk",
+    "year": -4500,
+    "lat": 31.32,
+    "lng": 45.63,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Uruk, fondata intorno al 4500 a.C. in Mesopotamia (odierno Iraq meridionale), Ã¨ considerata la prima vera cittÃ  della storia e raggiunse nel 3000 a.C. una popolazione di circa 50.000 abitanti. Fu il centro della cosiddetta 'Rivoluzione Uruk', che vide l'invenzione della scrittura cuneiforme, della ruota per la ceramica e di una burocrazia amministrativa complessa. La leggendaria figura di Gilgamesh, protagonista dell'epopea piÃ¹ antica della letteratura mondiale, era re di Uruk.",
+    "wikipediaSlug": "Uruk",
+    "isCosmic": false
+  },
+  {
+    "id": "fondazione-ur",
+    "title": "Fondazione di Ur",
+    "year": -3800,
+    "lat": 30.96,
+    "lng": 46.10,
+    "category": "storia",
+    "tipo": "luogo",
+    "description": "Ur, sorta intorno al 3800 a.C. in Mesopotamia (odierno Iraq meridionale), fu una delle piÃ¹ potenti cittÃ -stato sumere e raggiunse il suo apice durante la Terza Dinastia di Ur (2112â€“2004 a.C.), quando dominÃ² gran parte della Mesopotamia. Famosa per lo spettacolare Ziggurat di Ur e per le 'Tombe Reali' ricchissime di corredi funebri, scoperte da Leonard Woolley negli anni '20, fu anche la cittÃ  di origine del patriarca biblico Abramo secondo la tradizione ebraica. La cittÃ  declinÃ² dopo la conquista amorrea e le incursioni elamite nel XXI secolo a.C.",
+    "wikipediaSlug": "Ur",
     "isCosmic": false
   }
 ]
