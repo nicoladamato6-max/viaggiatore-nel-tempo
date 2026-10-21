@@ -1,7 +1,7 @@
-import { useEffect, useRef, useCallback } from 'react';
+import { useEffect, useRef } from 'react';
 import * as Cesium from 'cesium';
 import { type HistoricalEvent, type FlyTarget, type WikiMarker, CATEGORY_COLORS } from '../types';
-import { PLANETS, getMoonPosition, getPlanetPosition, toPlanetCard } from '../utils/celestialMechanics';
+import { PLANETS } from '../utils/celestialMechanics';
 import { getBestMap, featureName, colorForTerritory, getCentroid } from '../data/historicalMaps';
 import { translateTerritoryNames } from '../data/wikiTranslate';
 import { type Locale } from '../types';
@@ -37,47 +37,6 @@ function fmtYearHUD(year: number): string {
   return `${year.toLocaleString('it-IT')} d.C.`;
 }
 
-const SUN_RADIUS = 696_000_000;
-const SUN_DIST   = 149_600_000_000;
-
-// ── Navigazione cosmica — zone di scala ─────────────────────────────────────
-const COSMIC_ZONES = [
-  { max: 2e7,      it: '🌍 Orbita terrestre',        en: '🌍 Earth orbit' },
-  { max: 5e8,      it: '🌕 Sistema Terra-Luna',      en: '🌕 Earth–Moon system' },
-  { max: 4e11,     it: '☀️ Sistema Solare interno',  en: '☀️ Inner Solar System' },
-  { max: 7e12,     it: '🪐 Sistema Solare esterno',  en: '🪐 Outer Solar System' },
-  { max: 2e13,     it: '❄️ Fascia di Kuiper',        en: '❄️ Kuiper Belt' },
-  { max: Infinity, it: '⭐ Spazio interstellare',    en: '⭐ Interstellar space' },
-] as const;
-
-function getCosmicZone(altMeters: number, locale: string): string {
-  const zone = COSMIC_ZONES.find(z => altMeters < z.max) ?? COSMIC_ZONES[COSMIC_ZONES.length - 1];
-  return locale === 'en' ? zone.en : zone.it;
-}
-
-const SCALE_JUMPS = [
-  { icon: '🌍', label: 'Terra',    labelEn: 'Earth',   alt: 1.5e7  },
-  { icon: '🌕', label: 'Luna',     labelEn: 'Moon',    alt: 4e8    },
-  { icon: '☀️', label: 'Sole',    labelEn: 'Sun',     alt: 1.6e11 },
-  { icon: '🪐', label: 'Saturno', labelEn: 'Saturn',  alt: 1.5e12 },
-  { icon: '❄️', label: 'Kuiper',  labelEn: 'Kuiper',  alt: 6.5e12 },
-] as const;
-
-// Card per clic diretto su Luna e Sole (ID diverso da 'luna'/'sole' per non innescare flyTo da App)
-const MOON_CARD: HistoricalEvent = {
-  id: 'luna-body', title: 'La Luna', year: -4_500_000_000,
-  category: 'cosmo', isCosmic: true,
-  description: 'Il satellite naturale della Terra a ~384.400 km. Formatasi ~4,5 miliardi di anni fa dall\'impatto di Theia. L\'Apollo 11 vi allunò il 20 luglio 1969. L\'Apollo 17 portò l\'ultimo essere umano nel 1972.',
-  wikipediaSlug: 'Moon',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/240px-FullMoon2010.jpg',
-};
-const SUN_CARD: HistoricalEvent = {
-  id: 'sole-body', title: 'Il Sole', year: -4_600_000_000,
-  category: 'cosmo', isCosmic: true,
-  description: 'La stella al centro del Sistema Solare, distante 149,6 milioni di km dalla Terra (1 UA). La luce impiega 8 minuti a raggiungerci. Contiene il 99,8% della massa del Sistema Solare.',
-  wikipediaSlug: 'Sun',
-  imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg/240px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg',
-};
 
 
 interface Props {
@@ -197,68 +156,6 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
       prevCanvasH = viewer.scene.canvas.clientHeight; // altezza canvas nel primo orientamento
     });
 
-    // Tessellazione ridotta per i corpi celesti (default è 64×64 = ~8K tri; qui 16×16 = ~512 tri)
-    const LOW_TESS = { stackPartitions: 16, slicePartitions: 16 };
-
-    // ── Luna (posizione reale da Chapront) ───────────────────────────────
-    const moonPos = new Cesium.Cartesian3(...getMoonPosition());
-    viewer.entities.add(new Cesium.Entity({
-      id: 'luna', position: moonPos,
-      ellipsoid: new Cesium.EllipsoidGraphics({
-        radii: new Cesium.Cartesian3(1_737_400, 1_737_400, 1_737_400),
-        material: new Cesium.ColorMaterialProperty(new Cesium.Color(0.72, 0.72, 0.72, 1)),
-        ...LOW_TESS,
-      }),
-      label: new Cesium.LabelGraphics({
-        text: '🌕 Luna', font: '13px system-ui', fillColor: Cesium.Color.WHITE,
-        style: Cesium.LabelStyle.FILL_AND_OUTLINE, outlineWidth: 2, outlineColor: Cesium.Color.BLACK,
-        verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-        distanceDisplayCondition: new Cesium.DistanceDisplayCondition(2_000_000, 1_500_000_000),
-      }),
-    }));
-
-    // ── Sole ─────────────────────────────────────────────────────────────
-    const sunPos = new Cesium.Cartesian3(SUN_DIST * 0.940, SUN_DIST * 0.342, 0);
-    viewer.entities.add(new Cesium.Entity({
-      id: 'sole', position: sunPos,
-      ellipsoid: new Cesium.EllipsoidGraphics({
-        radii: new Cesium.Cartesian3(SUN_RADIUS, SUN_RADIUS, SUN_RADIUS),
-        material: new Cesium.ColorMaterialProperty(new Cesium.Color(1.0, 0.85, 0.10, 1.0)),
-        ...LOW_TESS,
-      }),
-      label: new Cesium.LabelGraphics({
-        text: '☀️ Sole', font: '14px system-ui', fillColor: Cesium.Color.YELLOW,
-        style: Cesium.LabelStyle.FILL_AND_OUTLINE, outlineWidth: 2, outlineColor: Cesium.Color.BLACK,
-        verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-        distanceDisplayCondition: new Cesium.DistanceDisplayCondition(10_000_000, 4e11),
-      }),
-    }));
-
-    // ── Pianeti (posizioni Kepleriane reali) ─────────────────────────────
-    for (const planet of PLANETS) {
-      const [px, py, pz] = getPlanetPosition(planet);
-      const pos  = new Cesium.Cartesian3(px, py, pz);
-      const dist = Math.sqrt(px*px + py*py + pz*pz);
-
-      viewer.entities.add(new Cesium.Entity({
-        id: `planet-${planet.id}`, position: pos,
-        ellipsoid: new Cesium.EllipsoidGraphics({
-          radii: new Cesium.Cartesian3(planet.radius, planet.radius, planet.radius),
-          material: new Cesium.ColorMaterialProperty(Cesium.Color.fromCssColorString(planet.color)),
-          ...LOW_TESS,
-        }),
-        label: new Cesium.LabelGraphics({
-          text: planet.name, font: '13px system-ui', fillColor: Cesium.Color.WHITE,
-          style: Cesium.LabelStyle.FILL_AND_OUTLINE, outlineWidth: 2, outlineColor: Cesium.Color.BLACK,
-          verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-          distanceDisplayCondition: new Cesium.DistanceDisplayCondition(
-            Math.max(10_000_000, planet.radius * 50),
-            dist * 5,
-          ),
-        }),
-      }));
-    }
-
     // ── Etichette città (sempre presenti, visibilità gestita da useEffect) ──
     const cityDS = new Cesium.CustomDataSource('city-labels');
     const DIST_T1 = new Cesium.DistanceDisplayCondition(0, 10_000_000);
@@ -299,31 +196,6 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
     handler.setInputAction((click: { position: Cesium.Cartesian2 }) => {
       const picked = viewer.scene.pick(click.position);
       if (!Cesium.defined(picked)) return;
-
-      // Entità CesiumJS (Luna, Sole, pianeti)
-      if (picked.id instanceof Cesium.Entity) {
-        const entityId = picked.id.id as string;
-        const entity   = picked.id as Cesium.Entity;
-
-        if (entityId === 'luna') {
-          viewer.flyTo(entity, { duration: 3, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 6, 1_737_400 * 6) });
-          onClickRef.current(MOON_CARD);
-          return;
-        }
-        if (entityId === 'sole') {
-          viewer.flyTo(entity, { duration: 6, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 6, SUN_RADIUS * 3) });
-          onClickRef.current(SUN_CARD);
-          return;
-        }
-        if (entityId.startsWith('planet-')) {
-          const planet = PLANETS.find(p => `planet-${p.id}` === entityId);
-          if (planet) {
-            viewer.flyTo(entity, { duration: 4, offset: new Cesium.HeadingPitchRange(0, -Math.PI / 6, planet.radius * 5) });
-            onClickRef.current(toPlanetCard(planet));
-          }
-          return;
-        }
-      }
 
       // PointPrimitive (eventi storici) — picked.id è la stringa dell'evento
       if (typeof picked.id === 'string') {
@@ -385,9 +257,7 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
       const pos = viewer.camera.positionCartographic;
       if (hudAltRef.current) hudAltRef.current.textContent = fmtAlt(pos.height);
       if (hudCoordsRef.current) {
-        hudCoordsRef.current.textContent = isCosmicRef.current
-          ? getCosmicZone(pos.height, localeRef.current)
-          : `${fmtDMS(Cesium.Math.toDegrees(pos.latitude), 'N', 'S')}  ${fmtDMS(Cesium.Math.toDegrees(pos.longitude), 'E', 'O')}`;
+        hudCoordsRef.current.textContent = `${fmtDMS(Cesium.Math.toDegrees(pos.latitude), 'N', 'S')}  ${fmtDMS(Cesium.Math.toDegrees(pos.longitude), 'E', 'O')}`;
       }
     });
 
@@ -809,8 +679,7 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
     if (!entity) return;
 
     let radius = 10_000_000;
-    if      (flyTo.entityId === 'luna') radius = 1_737_400;
-    else if (flyTo.entityId === 'sole') radius = SUN_RADIUS;
+    if (flyTo.entityId === 'luna') radius = 1_737_400;
     else {
       const p = PLANETS.find(pl => `planet-${pl.id}` === flyTo.entityId);
       if (p) radius = p.radius;
@@ -862,27 +731,6 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
       <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
-      {isCosmicView && (
-        <CosmicOverlay
-          events={events}
-          onEventClick={onEventClick}
-          locale={locale}
-          onJumpTo={(alt) => {
-            const v = viewerRef.current;
-            if (!v || v.isDestroyed()) return;
-            const { longitude, latitude } = v.camera.positionCartographic;
-            v.camera.flyTo({
-              destination: Cesium.Cartesian3.fromDegrees(
-                Cesium.Math.toDegrees(longitude),
-                Cesium.Math.toDegrees(latitude),
-                alt,
-              ),
-              duration: 2,
-              easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
-            });
-          }}
-        />
-      )}
       <div className="globe-hud" aria-hidden="true">
         <div className="globe-hud__row">
           <span className="globe-hud__lbl">ALT</span>
@@ -901,97 +749,3 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
   );
 }
 
-// ── Overlay eventi cosmici pre-terrestri ────────────────────────────────────
-
-function CosmicOverlay({ events, onEventClick, locale, onJumpTo }: {
-  events: HistoricalEvent[];
-  onEventClick: (e: HistoricalEvent) => void;
-  locale: Locale;
-  onJumpTo: (altMeters: number) => void;
-}) {
-  const it = locale === 'it';
-  return (
-    <div style={{
-      position: 'absolute', inset: 0,
-      background: 'linear-gradient(to right, rgba(0,0,10,0.7) 0%, transparent 45%)',
-      pointerEvents: 'none',
-    }}>
-      {/* Left: cosmic events */}
-      <div style={{
-        position: 'absolute', left: 16, top: 16, bottom: 16,
-        display: 'flex', flexDirection: 'column', gap: 8,
-        overflowY: 'auto', maxWidth: 280, pointerEvents: 'all',
-      }}>
-        <p style={{ color: '#1abc9c99', fontSize: '0.65rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>
-          🌌 {it ? 'Universo primordiale' : 'Primordial universe'}
-        </p>
-        {events.length === 0
-          ? <p style={{ color: '#555577', fontSize: '0.75rem' }}>
-              {it ? 'Sposta lo slider verso sinistra per esplorare l\'universo primordiale' : 'Move the slider left to explore the primordial universe'}
-            </p>
-          : events.map(e => <CosmicEventButton key={e.id} event={e} onClick={onEventClick} />)
-        }
-      </div>
-
-      {/* Right: scale navigation ladder */}
-      <div style={{
-        position: 'absolute', right: 16, top: 16,
-        display: 'flex', flexDirection: 'column', gap: 6,
-        pointerEvents: 'all', alignItems: 'flex-end',
-      }}>
-        <p style={{ color: '#1abc9c99', fontSize: '0.6rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4, textAlign: 'right' }}>
-          {it ? '🔭 Navigazione' : '🔭 Navigate'}
-        </p>
-        {SCALE_JUMPS.map(jump => (
-          <button
-            key={jump.label}
-            onClick={() => onJumpTo(jump.alt)}
-            title={`${it ? jump.label : jump.labelEn} — ${fmtAlt(jump.alt)}`}
-            style={{
-              background: 'rgba(0,20,40,0.72)',
-              border: '1px solid rgba(100,180,255,0.22)',
-              borderRadius: 8,
-              padding: '6px 10px',
-              color: '#a0d8f0',
-              cursor: 'pointer',
-              fontSize: '0.72rem',
-              textAlign: 'right',
-              lineHeight: 1.3,
-              backdropFilter: 'blur(8px)',
-              transition: 'border-color 0.18s, color 0.18s',
-              minWidth: 110,
-            }}
-            onMouseEnter={ev => { ev.currentTarget.style.borderColor = 'rgba(100,180,255,0.65)'; ev.currentTarget.style.color = '#e0f4ff'; }}
-            onMouseLeave={ev => { ev.currentTarget.style.borderColor = 'rgba(100,180,255,0.22)'; ev.currentTarget.style.color = '#a0d8f0'; }}
-          >
-            <span style={{ fontSize: '0.88rem' }}>{jump.icon}</span>{' '}
-            {it ? jump.label : jump.labelEn}
-            <div style={{ color: '#4a8aaa', fontSize: '0.6rem', marginTop: 1 }}>{fmtAlt(jump.alt)}</div>
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function CosmicEventButton({ event, onClick }: { event: HistoricalEvent; onClick: (e: HistoricalEvent) => void }) {
-  const color       = CATEGORY_COLORS[event.category];
-  const handleClick = useCallback(() => onClick(event), [event, onClick]);
-
-  function fmt(y: number): string {
-    if (Math.abs(y) >= 1_000_000_000) return `${(Math.abs(y) / 1_000_000_000).toFixed(1)} mld a.C.`;
-    if (Math.abs(y) >= 1_000_000)     return `${(Math.abs(y) / 1_000_000).toFixed(0)} mln a.C.`;
-    return `${Math.abs(y)} a.C.`;
-  }
-
-  return (
-    <button onClick={handleClick}
-      style={{ background: `${color}18`, border: `1px solid ${color}55`, borderRadius: 10, padding: '8px 12px', color: '#e8e8f0', cursor: 'pointer', fontSize: '0.78rem', textAlign: 'left', transition: 'background 0.2s', lineHeight: 1.35 }}
-      onMouseEnter={ev => (ev.currentTarget.style.background = `${color}35`)}
-      onMouseLeave={ev => (ev.currentTarget.style.background = `${color}18`)}
-    >
-      <div style={{ color, fontWeight: 600, marginBottom: 2 }}>{event.title}</div>
-      <div style={{ color: '#ffd16699', fontSize: '0.65rem' }}>{fmt(event.year)}</div>
-    </button>
-  );
-}

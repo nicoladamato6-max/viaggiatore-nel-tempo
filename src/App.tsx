@@ -1,6 +1,7 @@
 import { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import './App.css';
 import { GlobeView } from './components/GlobeView';
+import { CosmicScene } from './components/CosmicScene';
 import { InfoPanel } from './components/InfoPanel';
 import { TimeControls } from './components/TimeControls';
 import { SearchBar } from './components/SearchBar';
@@ -333,6 +334,10 @@ function AppInner() {
     }
 
     if (BODY_IDS.has(event.id)) {
+      // Corpi celesti → sempre in modalità cosmica prima del flyTo
+      const cosmicYear = -9_000_000_000;
+      setOverrideYear(cosmicYear);
+      setSliderValue(yearToSlider(cosmicYear));
       setFlyTo({ kind: 'body', entityId: event.id, ts: Date.now() });
       return;
     }
@@ -561,17 +566,26 @@ function AppInner() {
           className="globe-wrapper"
           style={selectedEvent && !isMobile ? { '--mobile-globe-h': `${mobileGlobeH}vh` } as React.CSSProperties : undefined}
         >
-          <GlobeView
-            events={visibleEvents}
-            selectedEventId={selectedEvent?.id ?? null}
-            isCosmicView={isCosmicView}
-            flyTo={flyTo}
-            wikiMarker={wikiMarker}
-            currentYear={currentYear}
-            showTerritories={showTerritories}
-            locale={locale}
-            onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
-          />
+          {isCosmicView
+            ? <CosmicScene
+                events={visibleEvents}
+                locale={locale}
+                currentYear={currentYear}
+                flyTo={flyTo}
+                onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
+              />
+            : <GlobeView
+                events={visibleEvents}
+                selectedEventId={selectedEvent?.id ?? null}
+                isCosmicView={isCosmicView}
+                flyTo={flyTo}
+                wikiMarker={wikiMarker}
+                currentYear={currentYear}
+                showTerritories={showTerritories}
+                locale={locale}
+                onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
+              />
+          }
           <TimeMachine
             locale={locale}
             events={visibleEvents}
