@@ -229,7 +229,9 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
   function Btn({ code, label }: { code: string; label: string }) {
     return (
       <button
-        onPointerDown={() => press(code)} onPointerUp={() => release(code)} onPointerLeave={() => release(code)}
+        onPointerDown={e => { e.stopPropagation(); press(code); }}
+        onPointerUp={e => { e.stopPropagation(); release(code); }}
+        onPointerLeave={() => release(code)}
         style={btnStyle}
       >
         {label}
@@ -238,7 +240,7 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
   }
 
   return (
-    <div style={{ position: 'absolute', bottom: 90, left: 16, display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'center' }}>
+    <div style={{ position: 'absolute', bottom: 12, left: '50%', transform: 'translateX(-50%)', zIndex: 200, pointerEvents: 'all', display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'center', background: 'rgba(0,8,20,0.70)', border: '1px solid rgba(100,180,255,0.18)', borderRadius: 12, padding: '8px 12px', backdropFilter: 'blur(10px)' }}>
       <div style={{ color: '#33445577', fontSize: '0.58rem', marginBottom: 2 }}>
         ~{fmtSpeed(speedMS)} · Shift ×5
       </div>
@@ -453,10 +455,8 @@ export function CosmicScene({ events, locale, flyTo, onEventClick }: CosmicScene
       <NavPad navKeysRef={navKeysRef} locale={locale} distAU={distAURef.current} />
 
       {/* Hint comandi */}
-      <div style={{ position: 'absolute', bottom: 8, left: '50%', transform: 'translateX(-50%)', color: '#2a3a4a', fontSize: '0.58rem', pointerEvents: 'none', textAlign: 'center', whiteSpace: 'nowrap' }}>
-        {it
-          ? 'WASD · Frecce · Q/E su/giù · Shift ×5 · Trascina per ruotare la vista'
-          : 'WASD · Arrows · Q/E up/down · Shift ×5 · Drag to look around'}
+      <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', color: '#2a3a4a', fontSize: '0.55rem', pointerEvents: 'none', textAlign: 'center', whiteSpace: 'nowrap', zIndex: 10 }}>
+        {it ? 'Tieni premuto un bottone · Scorri con dito per ruotare' : 'Hold a button · Swipe to look around'}
       </div>
     </div>
   );
