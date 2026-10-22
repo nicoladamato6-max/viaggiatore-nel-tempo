@@ -186,6 +186,8 @@ function AppInner() {
   // Slider e anno — dichiarati prima del chunk loading (currentEraKey li usa)
   const [sliderValue, setSliderValue] = useState(yearToSlider(-753));
   const [overrideYear, setOverrideYear] = useState<number | null>(null);
+  const [altitudeCosmic, setAltitudeCosmic] = useState(false);
+  const [cesiumAltKm,    setCesiumAltKm]    = useState(0);
 
   // ── Chunk loading (Opzione C) ───────────────────────────────────────────────
   const chunkCacheRef = useRef<Map<EraKey, HistoricalEvent[]>>(new Map());
@@ -291,7 +293,7 @@ function AppInner() {
   );
 
   const currentYear  = overrideYear !== null ? overrideYear : sliderToYear(sliderValue);
-  const isCosmicView = currentYear < -4_500_000_000;
+  const isCosmicView = currentYear < -4_500_000_000 || altitudeCosmic;
   const timeWindow   = useMemo(() => getTimeWindow(currentYear), [currentYear]);
 
   const visibleEvents = useMemo(() =>
@@ -573,6 +575,8 @@ function AppInner() {
                 currentYear={currentYear}
                 flyTo={flyTo}
                 onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
+                initialAltKm={altitudeCosmic ? cesiumAltKm : 0}
+                onEarthApproach={() => { setAltitudeCosmic(false); setCesiumAltKm(0); }}
               />
             : <GlobeView
                 events={visibleEvents}
@@ -584,6 +588,10 @@ function AppInner() {
                 showTerritories={showTerritories}
                 locale={locale}
                 onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
+                onAltitudeChange={(altKm) => {
+                  setCesiumAltKm(altKm);
+                  if (altKm > 500_000) setAltitudeCosmic(true);
+                }}
               />
           }
           <TimeMachine

@@ -49,9 +49,10 @@ interface Props {
   showTerritories: boolean;
   locale: Locale;
   onEventClick: (event: HistoricalEvent) => void;
+  onAltitudeChange?: (altKm: number) => void;
 }
 
-export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMarker, currentYear, showTerritories, locale, onEventClick }: Props) {
+export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMarker, currentYear, showTerritories, locale, onEventClick, onAltitudeChange }: Props) {
   const containerRef  = useRef<HTMLDivElement>(null);
   const viewerRef     = useRef<Cesium.Viewer | null>(null);
   // PointPrimitiveCollection per i pin degli eventi storici — molto più veloce delle Entity
@@ -70,7 +71,10 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
   const hudAltRef    = useRef<HTMLSpanElement>(null);
   const hudCoordsRef = useRef<HTMLSpanElement>(null);
   const isCosmicRef  = useRef(isCosmicView);
-  const localeRef    = useRef(locale);
+  const localeRef              = useRef(locale);
+  const onAltitudeChangeRef    = useRef(onAltitudeChange);
+  const lastReportedAltKmRef   = useRef(0);
+  onAltitudeChangeRef.current  = onAltitudeChange;
   // Paleogeografia — L1 GPlates + L2 CAWM/DARE + L3 Era Glaciale (piattaforma continentale LGM)
   const cawmLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
   const dareLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
@@ -258,6 +262,11 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
       if (hudAltRef.current) hudAltRef.current.textContent = fmtAlt(pos.height);
       if (hudCoordsRef.current) {
         hudCoordsRef.current.textContent = `${fmtDMS(Cesium.Math.toDegrees(pos.latitude), 'N', 'S')}  ${fmtDMS(Cesium.Math.toDegrees(pos.longitude), 'E', 'O')}`;
+      }
+      const altKm = pos.height / 1000;
+      if (Math.abs(altKm - lastReportedAltKmRef.current) > Math.max(5000, lastReportedAltKmRef.current * 0.15)) {
+        lastReportedAltKmRef.current = altKm;
+        onAltitudeChangeRef.current?.(altKm);
       }
     });
 

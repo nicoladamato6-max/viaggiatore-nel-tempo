@@ -53,6 +53,9 @@ const SCALE_JUMPS = [
 // ── Sizing ──────────────────────────────────────────────────────────────────
 const SUN_VR  = 0.065;   // UA visive
 const MOON_VR = 0.004;   // UA visive
+const EARTH_VR = 0.004;  // UA visive
+const EARTH_APPROACH_AU = 50_000 * 1_000 * M_TO_AU;  // 50.000 km in AU
+
 function getVisualRadius(radiusM: number): number {
   return Math.max(0.004, radiusM * M_TO_AU * 60);
 }
@@ -71,6 +74,12 @@ const MOON_CARD: HistoricalEvent = {
   description: "Il satellite naturale della Terra a ~384.400 km. Formatasi ~4,5 miliardi di anni fa dall'impatto di Theia. L'Apollo 11 vi allunò il 20 luglio 1969.",
   wikipediaSlug: 'Moon',
   imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/240px-FullMoon2010.jpg',
+};
+const EARTH_CARD: HistoricalEvent = {
+  id: 'terra-body', title: 'La Terra', year: -4_500_000_000,
+  category: 'cosmo', isCosmic: true,
+  description: 'Il nostro pianeta. Raggio: 6.371 km. Distanza dal Sole: 1 UA = 149,6 mln km. Unico pianeta noto ad ospitare vita.',
+  wikipediaSlug: 'Earth',
 };
 
 // ── Disco della Via Lattea (particelle) ────────────────────────────────────
@@ -104,23 +113,28 @@ function MilkyWayDisk() {
 
 // ── CameraRig (dentro Canvas) ─────────────────────────────────────────────
 interface CameraRigProps {
-  navKeysRef:    React.RefObject<Set<string>>;
-  yawRef:        React.RefObject<number>;
-  pitchRef:      React.RefObject<number>;
-  jumpRef:       React.RefObject<THREE.Vector3 | null>;
-  cameraPosRef:  React.RefObject<THREE.Vector3>;
-  hudAltRef:     React.RefObject<HTMLSpanElement | null>;
-  hudZoneRef:    React.RefObject<HTMLSpanElement | null>;
-  locale:        Locale;
+  navKeysRef:         React.RefObject<Set<string>>;
+  yawRef:             React.RefObject<number>;
+  pitchRef:           React.RefObject<number>;
+  jumpRef:            React.RefObject<THREE.Vector3 | null>;
+  cameraPosRef:       React.RefObject<THREE.Vector3>;
+  hudAltRef:          React.RefObject<HTMLSpanElement | null>;
+  hudZoneRef:         React.RefObject<HTMLSpanElement | null>;
+  locale:             Locale;
+  wheelRef:           React.RefObject<number>;
+  initialAltKm:       number;
+  onEarthApproachRef: React.RefObject<(() => void) | null>;
+  nearEarthRef:       React.RefObject<boolean>;
 }
 
-function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAltRef, hudZoneRef, locale }: CameraRigProps) {
+function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAltRef, hudZoneRef, locale, wheelRef, initialAltKm, onEarthApproachRef, nearEarthRef }: CameraRigProps) {
   const { camera } = useThree();
 
   useEffect(() => {
     camera.rotation.order = 'YXZ';
-    camera.position.set(0, 0.05, 0);
-  }, [camera]);
+    const altAU = initialAltKm > 0 ? initialAltKm * 1_000 * M_TO_AU : 0.05;
+    camera.position.set(0, altAU, 0);
+  }, [camera]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useFrame(() => {
     const dist  = camera.position.length();
@@ -129,7 +143,7 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     camera.rotation.y = yawRef.current!;
     camera.rotation.x = pitchRef.current!;
 
-    const dir   = new THREE.Vector3(0, 0, -1).applyEuler(camera.rotation).normalize();
+    const dir    = new THREE.Vector3(0, 0, -1).applyEuler(camera.rotation).normalize();
     const right  = new THREE.Vector3(1, 0, 0).applyEuler(camera.rotation).normalize();
     const worldUp = new THREE.Vector3(0, 1, 0);
 
@@ -149,11 +163,28 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
       if (camera.position.distanceTo(jt) < speed * 0.3) (jumpRef as React.MutableRefObject<THREE.Vector3 | null>).current = null;
     }
 
+    // Scroll wheel: forward/back along camera direction
+    const wd = wheelRef.current;
+    if (wd !== 0) {
+      camera.position.addScaledVector(dir, -wd * speed * 5);
+      (wheelRef as React.MutableRefObject<number>).current = 0;
+    }
+
     cameraPosRef.current!.copy(camera.position);
 
     const newDist = camera.position.length();
     if (hudAltRef.current)  hudAltRef.current.textContent  = fmtDist(newDist);
     if (hudZoneRef.current) hudZoneRef.current.textContent = getZone(newDist, locale);
+
+    // Earth approach detection: trigger return to Cesium when close enough
+    if (newDist < EARTH_APPROACH_AU) {
+      if (!nearEarthRef.current) {
+        (nearEarthRef as React.MutableRefObject<boolean>).current = true;
+        onEarthApproachRef.current?.();
+      }
+    } else {
+      (nearEarthRef as React.MutableRefObject<boolean>).current = false;
+    }
   });
 
   return null;
@@ -165,6 +196,15 @@ function SunSphere({ onClick }: { onClick: () => void }) {
     <mesh position={SUN_POS} onClick={e => { e.stopPropagation(); onClick(); }}>
       <sphereGeometry args={[SUN_VR, 24, 24]} />
       <meshStandardMaterial color="#ffe040" emissive="#ff8800" emissiveIntensity={3} roughness={1} metalness={0} />
+    </mesh>
+  );
+}
+
+function EarthSphere({ onClick }: { onClick: () => void }) {
+  return (
+    <mesh position={[0, 0, 0]} onClick={e => { e.stopPropagation(); onClick(); }}>
+      <sphereGeometry args={[EARTH_VR, 24, 24]} />
+      <meshStandardMaterial color="#1e5fa8" roughness={0.75} metalness={0.1} emissive="#0a1a40" emissiveIntensity={0.3} />
     </mesh>
   );
 }
@@ -232,6 +272,7 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
         onPointerDown={e => { e.stopPropagation(); press(code); }}
         onPointerUp={e => { e.stopPropagation(); release(code); }}
         onPointerLeave={() => release(code)}
+        onMouseDown={e => e.stopPropagation()}
         style={btnStyle}
       >
         {label}
@@ -240,8 +281,12 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
   }
 
   return (
-    <div style={{ position: 'absolute', bottom: 12, left: '50%', transform: 'translateX(-50%)', zIndex: 200, pointerEvents: 'all', display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'center', background: 'rgba(0,8,20,0.70)', border: '1px solid rgba(100,180,255,0.18)', borderRadius: 12, padding: '8px 12px', backdropFilter: 'blur(10px)' }}>
-      <div style={{ color: '#33445577', fontSize: '0.58rem', marginBottom: 2 }}>
+    <div
+      style={{ position: 'absolute', bottom: 12, left: '50%', transform: 'translateX(-50%)', zIndex: 200, pointerEvents: 'all', display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'center', background: 'rgba(0,8,20,0.70)', border: '1px solid rgba(100,180,255,0.18)', borderRadius: 12, padding: '8px 12px', backdropFilter: 'blur(10px)' }}
+      onMouseDown={e => e.stopPropagation()}
+      onTouchStart={e => e.stopPropagation()}
+    >
+      <div style={{ color: '#4a6680', fontSize: '0.55rem', marginBottom: 2 }}>
         ~{fmtSpeed(speedMS)} · Shift ×5
       </div>
       <div style={{ display: 'flex', gap: 4 }}>
@@ -255,7 +300,7 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
         <Btn code="KeyA" label="◀" />
         <Btn code="KeyD" label="▶" />
       </div>
-      <div style={{ color: '#223344', fontSize: '0.55rem', marginTop: 2 }}>
+      <div style={{ color: '#2a3a4a', fontSize: '0.52rem', marginTop: 2 }}>
         {locale === 'it' ? '▲▼=avanti/indietro · ⬆⬇=alto/basso' : '▲▼=fwd/back · ⬆⬇=up/dn'}
       </div>
     </div>
@@ -285,23 +330,31 @@ function CosmicEventButton({ event, onClick }: { event: HistoricalEvent; onClick
 
 // ── Componente principale ───────────────────────────────────────────────────
 interface CosmicSceneProps {
-  events:       HistoricalEvent[];
-  locale:       Locale;
-  currentYear:  number;
-  flyTo:        FlyTarget | null;
-  onEventClick: (event: HistoricalEvent) => void;
+  events:          HistoricalEvent[];
+  locale:          Locale;
+  currentYear:     number;
+  flyTo:           FlyTarget | null;
+  onEventClick:    (event: HistoricalEvent) => void;
+  initialAltKm?:   number;
+  onEarthApproach?: () => void;
 }
 
-export function CosmicScene({ events, locale, flyTo, onEventClick }: CosmicSceneProps) {
-  const navKeysRef   = useRef(new Set<string>());
-  const yawRef       = useRef(-Math.PI / 2);  // guarda verso X+ (circa direzione Sole)
-  const pitchRef     = useRef(-0.12);
-  const jumpRef      = useRef<THREE.Vector3 | null>(null);
-  const cameraPosRef = useRef(new THREE.Vector3(0, 0.05, 0));
-  const mouseRef     = useRef({ down: false, lastX: 0, lastY: 0 });
-  const hudAltRef    = useRef<HTMLSpanElement | null>(null);
-  const hudZoneRef   = useRef<HTMLSpanElement | null>(null);
-  const distAURef    = useRef(0.05);
+export function CosmicScene({ events, locale, flyTo, onEventClick, initialAltKm = 0, onEarthApproach }: CosmicSceneProps) {
+  const navKeysRef        = useRef(new Set<string>());
+  const yawRef            = useRef(-Math.PI / 2);
+  const pitchRef          = useRef(-0.12);
+  const jumpRef           = useRef<THREE.Vector3 | null>(null);
+  const cameraPosRef      = useRef(new THREE.Vector3(0, 0.05, 0));
+  const mouseRef          = useRef({ down: false, lastX: 0, lastY: 0 });
+  const hudAltRef         = useRef<HTMLSpanElement | null>(null);
+  const hudZoneRef        = useRef<HTMLSpanElement | null>(null);
+  const distAURef         = useRef(0.05);
+  const wheelRef          = useRef(0);
+  const onEarthApproachRef = useRef<(() => void) | null>(onEarthApproach ?? null);
+  const nearEarthRef      = useRef(false);
+
+  // Keep callback ref current on every render
+  onEarthApproachRef.current = onEarthApproach ?? null;
 
   // Tastiera
   useEffect(() => {
@@ -387,6 +440,10 @@ export function CosmicScene({ events, locale, flyTo, onEventClick }: CosmicScene
         if (e.button !== 0) return;
         mouseRef.current = { down: true, lastX: e.clientX, lastY: e.clientY };
       }}
+      onWheel={e => {
+        e.preventDefault();
+        (wheelRef as React.MutableRefObject<number>).current += e.deltaY * 0.001;
+      }}
     >
       <Canvas
         gl={{ antialias: true, logarithmicDepthBuffer: true }}
@@ -399,6 +456,7 @@ export function CosmicScene({ events, locale, flyTo, onEventClick }: CosmicScene
         <Stars radius={800} depth={120} count={8000} factor={4} saturation={0.25} fade />
         <MilkyWayDisk />
         <SunSphere  onClick={() => onEventClick(SUN_CARD)} />
+        <EarthSphere onClick={() => onEventClick(EARTH_CARD)} />
         <MoonSphere onClick={() => onEventClick(MOON_CARD)} />
         {PLANETS.map(p => (
           <PlanetSphere key={p.id} planet={p} onClick={() => onEventClick(toPlanetCard(p))} />
@@ -413,6 +471,10 @@ export function CosmicScene({ events, locale, flyTo, onEventClick }: CosmicScene
           hudAltRef={hudAltRef}
           hudZoneRef={hudZoneRef}
           locale={locale}
+          wheelRef={wheelRef}
+          initialAltKm={initialAltKm}
+          onEarthApproachRef={onEarthApproachRef}
+          nearEarthRef={nearEarthRef}
         />
       </Canvas>
 
@@ -451,7 +513,7 @@ export function CosmicScene({ events, locale, flyTo, onEventClick }: CosmicScene
         <div><span style={{ color: '#334455' }}>POS </span><span ref={hudZoneRef} style={{ color: '#aaccee' }}>—</span></div>
       </div>
 
-      {/* Plancia di navigazione (basso-sinistra) */}
+      {/* Plancia di navigazione (basso-centro) */}
       <NavPad navKeysRef={navKeysRef} locale={locale} distAU={distAURef.current} />
 
       {/* Hint comandi */}
