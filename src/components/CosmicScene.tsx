@@ -50,14 +50,37 @@ const SCALE_JUMPS = [
   { icon: '❄️', label: 'Kuiper',  labelEn: 'Kuiper',  altM: 6.5e12 },
 ] as const;
 
-// ── Sizing ──────────────────────────────────────────────────────────────────
-const SUN_VR  = 0.065;   // UA visive
-const MOON_VR = 0.004;   // UA visive
-const EARTH_VR = 0.004;  // UA visive
+// ── Sizing (radii visivi corretti — Luna a 0.00257 AU da Terra) ──────────────
+const SUN_VR   = 0.025;   // UA visive (era 0.065)
+const MOON_VR  = 0.0006;  // UA visive (era 0.004 — troppo grande, nascondeva la Luna nella Terra)
+const EARTH_VR = 0.0015;  // UA visive (era 0.004)
 const EARTH_APPROACH_AU = 50_000 * 1_000 * M_TO_AU;  // 50.000 km in AU
 
 function getVisualRadius(radiusM: number): number {
-  return Math.max(0.004, radiusM * M_TO_AU * 60);
+  return Math.max(0.0006, radiusM * M_TO_AU * 20); // era 60x, ora 20x
+}
+
+// ── Texture NASA (Wikimedia Commons — public domain) ─────────────────────────
+const PLANET_TEXTURES: Record<string, string> = {
+  terra:    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Earthmap1000x500.jpg/1024px-Earthmap1000x500.jpg',
+  luna:     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Lunar_Nearside_LRO_color_mosaic.png/1024px-Lunar_Nearside_LRO_color_mosaic.png',
+  marte:    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Mars_topography_%28MOLA_dataset%29_HiRes.jpg/1024px-Mars_topography_%28MOLA_dataset%29_HiRes.jpg',
+  giove:    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg/1024px-Jupiter_and_its_shrunken_Great_Red_Spot.jpg',
+  saturno:  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/1024px-Saturn_during_Equinox.jpg',
+  venere:   'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Venus-real_color.jpg/1024px-Venus-real_color.jpg',
+  mercurio: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mercury_in_color_-_Prockter07_edit.jpg/1024px-Mercury_in_color_-_Prockter07_edit.jpg',
+  urano:    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/1024px-Uranus2.jpg',
+  nettuno:  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg/1024px-Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg',
+};
+
+function applyTexture(mesh: THREE.Mesh | null, url: string) {
+  if (!mesh) return;
+  new THREE.TextureLoader().load(url, (tex) => {
+    const mat = mesh.material as THREE.MeshStandardMaterial;
+    mat.map = tex;
+    mat.color.set(0xffffff);
+    mat.needsUpdate = true;
+  });
 }
 
 // ── Cards per InfoPanel ─────────────────────────────────────────────────────
@@ -111,6 +134,70 @@ function MilkyWayDisk() {
   );
 }
 
+// ── Galassie distanti: Andromeda, LMC, SMC (posizioni simboliche) ─────────────
+function DistantGalaxies() {
+  return (
+    <>
+      {/* Andromeda — spirale ovale a ~3000 UA scala simbolica */}
+      <group position={[2800, 200, 800]} rotation={[0.3, 0.5, 0.2]}>
+        <mesh>
+          <sphereGeometry args={[80, 8, 8]} />
+          <meshBasicMaterial color="#aabbff" transparent opacity={0.04} side={THREE.BackSide} />
+        </mesh>
+        <mesh>
+          <sphereGeometry args={[20, 8, 8]} />
+          <meshBasicMaterial color="#ffeecc" transparent opacity={0.15} />
+        </mesh>
+      </group>
+      {/* LMC — Grande Nube di Magellano */}
+      <group position={[-1200, -150, 600]}>
+        <mesh>
+          <sphereGeometry args={[35, 8, 8]} />
+          <meshBasicMaterial color="#aad4ff" transparent opacity={0.06} />
+        </mesh>
+      </group>
+      {/* SMC — Piccola Nube di Magellano */}
+      <group position={[-950, -120, 800]}>
+        <mesh>
+          <sphereGeometry args={[20, 6, 6]} />
+          <meshBasicMaterial color="#99bbff" transparent opacity={0.05} />
+        </mesh>
+      </group>
+    </>
+  );
+}
+
+// ── Big Bang visual (attivo per year < -13.5B) ────────────────────────────────
+function BigBangVisual({ year }: { year: number }) {
+  if (year > -13_500_000_000) return null;
+
+  const t = Math.max(0, Math.min(1, (year - (-13_800_000_000)) / 300_000_000));
+  // t=0 al Big Bang, t=1 a -13.5B anni
+  const coreRadius   = 0.8 + t * 80;
+  const shellRadius  = t * 300;
+  const coreOpacity  = 0.9 - t * 0.6;
+  const shellOpacity = t < 0.05 ? t * 10 * 0.4 : (1 - t) * 0.25;
+  const hue          = t * 0.07;
+  const coreColor    = new THREE.Color().setHSL(hue, 0.8, 0.8);
+  const shellColor   = new THREE.Color().setHSL(hue + 0.02, 0.7, 0.6);
+
+  return (
+    <>
+      <mesh>
+        <sphereGeometry args={[coreRadius, 16, 16]} />
+        <meshBasicMaterial color={coreColor} transparent opacity={coreOpacity} />
+      </mesh>
+      {shellRadius > 1 && (
+        <mesh>
+          <sphereGeometry args={[shellRadius, 16, 16]} />
+          <meshBasicMaterial color={shellColor} transparent opacity={shellOpacity} side={THREE.BackSide} />
+        </mesh>
+      )}
+      <ambientLight intensity={Math.max(0, (1 - t) * 3)} color={coreColor} />
+    </>
+  );
+}
+
 // ── CameraRig (dentro Canvas) ─────────────────────────────────────────────
 interface CameraRigProps {
   navKeysRef:         React.RefObject<Set<string>>;
@@ -134,6 +221,11 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     camera.rotation.order = 'YXZ';
     const altAU = initialAltKm > 0 ? initialAltKm * 1_000 * M_TO_AU : 0.05;
     camera.position.set(0, altAU, 0);
+    if (initialAltKm > 0) {
+      // Camera posizionata a (0, altAU, 0): guardare verso Terra (origine) = pitch -π/2
+      (yawRef   as React.MutableRefObject<number>).current = 0;
+      (pitchRef as React.MutableRefObject<number>).current = -Math.PI / 2 + 0.15;
+    }
   }, [camera]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useFrame(() => {
@@ -201,38 +293,45 @@ function SunSphere({ onClick }: { onClick: () => void }) {
 }
 
 function EarthSphere({ onClick }: { onClick: () => void }) {
+  const meshRef = useRef<THREE.Mesh | null>(null);
+  useEffect(() => { applyTexture(meshRef.current, PLANET_TEXTURES.terra); }, []);
   return (
-    <mesh position={[0, 0, 0]} onClick={e => { e.stopPropagation(); onClick(); }}>
-      <sphereGeometry args={[EARTH_VR, 24, 24]} />
-      <meshStandardMaterial color="#1e5fa8" roughness={0.75} metalness={0.1} emissive="#0a1a40" emissiveIntensity={0.3} />
+    <mesh ref={meshRef} position={[0, 0, 0]} onClick={e => { e.stopPropagation(); onClick(); }}>
+      <sphereGeometry args={[EARTH_VR, 32, 32]} />
+      <meshStandardMaterial color="#1e5fa8" roughness={0.7} metalness={0} />
     </mesh>
   );
 }
 
 function MoonSphere({ onClick }: { onClick: () => void }) {
+  const meshRef = useRef<THREE.Mesh | null>(null);
   const pos = useMemo<[number, number, number]>(() => {
     const [mx, my, mz] = getMoonPosition();
     return [mx * M_TO_AU, my * M_TO_AU, mz * M_TO_AU];
   }, []);
+  useEffect(() => { applyTexture(meshRef.current, PLANET_TEXTURES.luna); }, []);
   return (
-    <mesh position={pos} onClick={e => { e.stopPropagation(); onClick(); }}>
-      <sphereGeometry args={[MOON_VR, 20, 20]} />
+    <mesh ref={meshRef} position={pos} onClick={e => { e.stopPropagation(); onClick(); }}>
+      <sphereGeometry args={[MOON_VR, 24, 24]} />
       <meshStandardMaterial color="#b8b8b8" roughness={1} metalness={0} />
     </mesh>
   );
 }
 
 function PlanetSphere({ planet, onClick }: { planet: typeof PLANETS[0]; onClick: () => void }) {
+  const meshRef = useRef<THREE.Mesh | null>(null);
   const pos = useMemo<[number, number, number]>(() => {
     const [px, py, pz] = getPlanetPosition(planet);
     return [px * M_TO_AU, py * M_TO_AU, pz * M_TO_AU];
   }, [planet]);
   const vr = getVisualRadius(planet.radius);
   const isSaturn = planet.id === 'saturno';
+  const texUrl = PLANET_TEXTURES[planet.id];
+  useEffect(() => { if (texUrl) applyTexture(meshRef.current, texUrl); }, [texUrl]);
   return (
     <group position={pos}>
-      <mesh onClick={e => { e.stopPropagation(); onClick(); }}>
-        <sphereGeometry args={[vr, 20, 20]} />
+      <mesh ref={meshRef} onClick={e => { e.stopPropagation(); onClick(); }}>
+        <sphereGeometry args={[vr, 24, 24]} />
         <meshStandardMaterial color={planet.color} roughness={0.85} metalness={0.05} />
       </mesh>
       {isSaturn && (
@@ -330,30 +429,30 @@ function CosmicEventButton({ event, onClick }: { event: HistoricalEvent; onClick
 
 // ── Componente principale ───────────────────────────────────────────────────
 interface CosmicSceneProps {
-  events:          HistoricalEvent[];
-  locale:          Locale;
-  currentYear:     number;
-  flyTo:           FlyTarget | null;
-  onEventClick:    (event: HistoricalEvent) => void;
-  initialAltKm?:   number;
+  events:           HistoricalEvent[];
+  locale:           Locale;
+  currentYear:      number;
+  flyTo:            FlyTarget | null;
+  onEventClick:     (event: HistoricalEvent) => void;
+  initialAltKm?:    number;
   onEarthApproach?: () => void;
 }
 
-export function CosmicScene({ events, locale, flyTo, onEventClick, initialAltKm = 0, onEarthApproach }: CosmicSceneProps) {
-  const navKeysRef        = useRef(new Set<string>());
-  const yawRef            = useRef(-Math.PI / 2);
-  const pitchRef          = useRef(-0.12);
-  const jumpRef           = useRef<THREE.Vector3 | null>(null);
-  const cameraPosRef      = useRef(new THREE.Vector3(0, 0.05, 0));
-  const mouseRef          = useRef({ down: false, lastX: 0, lastY: 0 });
-  const lastTXRef         = useRef(0);
-  const lastTYRef         = useRef(0);
-  const hudAltRef         = useRef<HTMLSpanElement | null>(null);
-  const hudZoneRef        = useRef<HTMLSpanElement | null>(null);
-  const distAURef         = useRef(0.05);
-  const wheelRef          = useRef(0);
+export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, initialAltKm = 0, onEarthApproach }: CosmicSceneProps) {
+  const navKeysRef         = useRef(new Set<string>());
+  const yawRef             = useRef(-Math.PI / 2);
+  const pitchRef           = useRef(-0.12);
+  const jumpRef            = useRef<THREE.Vector3 | null>(null);
+  const cameraPosRef       = useRef(new THREE.Vector3(0, 0.05, 0));
+  const mouseRef           = useRef({ down: false, lastX: 0, lastY: 0 });
+  const lastTXRef          = useRef(0);
+  const lastTYRef          = useRef(0);
+  const hudAltRef          = useRef<HTMLSpanElement | null>(null);
+  const hudZoneRef         = useRef<HTMLSpanElement | null>(null);
+  const distAURef          = useRef(0.05);
+  const wheelRef           = useRef(0);
   const onEarthApproachRef = useRef<(() => void) | null>(onEarthApproach ?? null);
-  const nearEarthRef      = useRef(false);
+  const nearEarthRef       = useRef(false);
 
   // Keep callback ref current on every render
   onEarthApproachRef.current = onEarthApproach ?? null;
@@ -449,14 +548,17 @@ export function CosmicScene({ events, locale, flyTo, onEventClick, initialAltKm 
     >
       <Canvas
         gl={{ antialias: true, logarithmicDepthBuffer: true }}
-        camera={{ fov: 70, near: 1e-5, far: 2000, position: [0, 0.05, 0] }}
+        camera={{ fov: 70, near: 1e-5, far: 50000, position: [0, 0.05, 0] }}
         style={{ background: '#00000a' }}
       >
-        <ambientLight intensity={0.05} />
+        <ambientLight intensity={0.15} />
+        <hemisphereLight args={['#112244', '#000010', 0.3]} />
         <pointLight position={SUN_POS} intensity={2.5} color="#ffe0a0" decay={0} />
 
         <Stars radius={800} depth={120} count={8000} factor={4} saturation={0.25} fade />
         <MilkyWayDisk />
+        <DistantGalaxies />
+        <BigBangVisual year={currentYear} />
         <SunSphere  onClick={() => onEventClick(SUN_CARD)} />
         <EarthSphere onClick={() => onEventClick(EARTH_CARD)} />
         <MoonSphere onClick={() => onEventClick(MOON_CARD)} />
