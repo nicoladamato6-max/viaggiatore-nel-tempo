@@ -2,7 +2,7 @@
 // Fornisce navigazione free-flight, stelle/Via Lattea, pianeti con textures procedurali.
 import { useRef, useEffect, useMemo, useCallback } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Stars } from '@react-three/drei';
+import { Stars, Html } from '@react-three/drei';
 import * as THREE from 'three';
 import { type HistoricalEvent, type Locale, type FlyTarget, CATEGORY_COLORS } from '../types';
 import { PLANETS, getMoonPosition, getPlanetPosition, toPlanetCard } from '../utils/celestialMechanics';
@@ -60,14 +60,15 @@ function getVisualRadius(radiusM: number): number {
   return Math.max(0.0006, radiusM * M_TO_AU * 20); // era 60x, ora 20x
 }
 
-// ── Texture via jsDelivr CDN (three.js bundle — CORS OK, nessun login) ────────
-const _TEX = 'https://cdn.jsdelivr.net/npm/three/examples/textures/planets/';
+// ── Texture — GitHub raw (CORS *, file stabili da anni nel repo three.js) ─────
+// jsDelivr non distribuisce /examples/ nell'npm bundle → 404
+const _TEX = 'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/';
 const PLANET_TEXTURES: Record<string, string> = {
   terra:   _TEX + 'earth_atmos_2048.jpg',
   luna:    _TEX + 'moon_1024.jpg',
   marte:   _TEX + 'mars_1k_color.jpg',
   giove:   _TEX + 'jupiter2_1k.jpg',
-  // Saturno, Venere, Mercurio, Urano, Nettuno: non presenti nel bundle three.js
+  // Saturno, Venere, Mercurio, Urano, Nettuno: non presenti nel repo three.js
 };
 
 function applyTexture(mesh: THREE.Mesh | null, url: string) {
@@ -128,6 +129,48 @@ function MilkyWayDisk() {
     <points geometry={geo} rotation={[0.48, 0, 0.28]}>
       <pointsMaterial size={1.1} sizeAttenuation={false} vertexColors transparent opacity={0.5} />
     </points>
+  );
+}
+
+const GALAXY_LABEL_STYLE: React.CSSProperties = {
+  color: '#ccaaff', fontSize: '10px', fontFamily: 'monospace',
+  background: 'rgba(0,0,0,0.5)', padding: '1px 4px', borderRadius: 3,
+  pointerEvents: 'none', whiteSpace: 'nowrap', userSelect: 'none',
+};
+
+// Galassia ellittica semplice con etichetta — riutilizzabile per galassie nominate
+function EllipGalaxy({ pos, rx, ry, rz, rot, color, n, label }:
+  { pos: [number,number,number]; rx: number; ry: number; rz: number;
+    rot: [number,number,number]; color: string; n: number; label: string }) {
+  const geo = useMemo(() => {
+    const c = new THREE.Color(color);
+    const positions = new Float32Array(n * 3);
+    const colors    = new Float32Array(n * 3);
+    for (let i = 0; i < n; i++) {
+      const r     = Math.pow(Math.random(), 0.5);
+      const theta = Math.random() * Math.PI * 2;
+      const phi   = Math.acos(2 * Math.random() - 1);
+      positions[i*3]   = rx * r * Math.sin(phi) * Math.cos(theta);
+      positions[i*3+1] = ry * r * Math.sin(phi) * Math.sin(theta);
+      positions[i*3+2] = rz * r * Math.cos(phi);
+      const t = r;
+      colors[i*3]   = Math.min(1, c.r + (1 - t) * 0.25);
+      colors[i*3+1] = Math.min(1, c.g + (1 - t) * 0.15);
+      colors[i*3+2] = Math.min(1, c.b + (1 - t) * 0.05);
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    g.setAttribute('color',    new THREE.Float32BufferAttribute(colors,    3));
+    return g;
+  }, [n, rx, ry, rz, color]);  // eslint-disable-line react-hooks/exhaustive-deps
+
+  return (
+    <group position={pos} rotation={rot}>
+      <points geometry={geo}>
+        <pointsMaterial size={1.6} sizeAttenuation={false} vertexColors transparent opacity={0.72} />
+      </points>
+      <Html center position={[0, ry * 1.4, 0]} style={GALAXY_LABEL_STYLE}>{label}</Html>
+    </group>
   );
 }
 
@@ -214,24 +257,36 @@ function DistantGalaxies() {
       </group>
 
       {/* LMC — Grande Nube di Magellano, a sud */}
-      <group position={[-750, -2900, 500]}>
-        <mesh>
-          <sphereGeometry args={[28, 8, 8]} />
-          <meshBasicMaterial color="#aaddff" transparent opacity={0.4} />
-        </mesh>
-        <mesh>
-          <sphereGeometry args={[10, 6, 6]} />
-          <meshBasicMaterial color="#ffffff" transparent opacity={0.5} />
-        </mesh>
-      </group>
+      <EllipGalaxy pos={[-750,-2900,500]} rot={[0.2,0.1,0.3]}
+        rx={32} ry={18} rz={28} color="#aaddff" n={1800} label="LMC — Grande Nube di Magellano" />
 
-      {/* SMC — Piccola Nube di Magellano, a sud */}
-      <group position={[-950, -2600, 750]}>
-        <mesh>
-          <sphereGeometry args={[16, 6, 6]} />
-          <meshBasicMaterial color="#99ccff" transparent opacity={0.38} />
-        </mesh>
-      </group>
+      {/* SMC — Piccola Nube di Magellano */}
+      <EllipGalaxy pos={[-1050,-2650,820]} rot={[0.1,-0.2,0.15]}
+        rx={18} ry={12} rz={16} color="#99ccee" n={1000} label="SMC — Piccola Nube di Magellano" />
+
+      {/* M33 — Triangolo (spirale vicina ad Andromeda) */}
+      <EllipGalaxy pos={[2200,3100,-1800]} rot={[0.8,0.4,1.1]}
+        rx={55} ry={6} rz={40} color="#99aaff" n={2500} label="M33 — Triangolo" />
+
+      {/* M87 — Virgo A, gigante ellittica con jet */}
+      <EllipGalaxy pos={[5800,-1200,3200]} rot={[0.3,0.7,0.2]}
+        rx={90} ry={75} rz={80} color="#ffdd99" n={3000} label="M87 — Vergine A" />
+
+      {/* NGC 1300 — spirale barrata iconica */}
+      <EllipGalaxy pos={[-4200,800,-5500]} rot={[1.2,0.3,0.6]}
+        rx={65} ry={7} rz={50} color="#aabbdd" n={2000} label="NGC 1300 — Spirale barrata" />
+
+      {/* Sombrero (M104) */}
+      <EllipGalaxy pos={[3500,-4800,1200]} rot={[0.05,0.2,0.1]}
+        rx={70} ry={8} rz={52} color="#ddccaa" n={2500} label="M104 — Sombrero" />
+
+      {/* Occhio del Gatto (M64 — Black Eye) */}
+      <EllipGalaxy pos={[-1800,5200,2400]} rot={[0.4,-0.5,0.9]}
+        rx={50} ry={6} rz={38} color="#bbccff" n={1800} label="M64 — Black Eye" />
+
+      {/* Whirlpool (M51) — spirale con satellite */}
+      <EllipGalaxy pos={[700,6500,-800]} rot={[1.5,0.2,0.4]}
+        rx={60} ry={5} rz={45} color="#aaccff" n={2200} label="M51 — Whirlpool" />
 
       {/* Campo di galassie distanti (2500–14000 UA) */}
       <points geometry={fieldGeo}>
@@ -247,32 +302,34 @@ function DistantGalaxies() {
 }
 
 // ── Big Bang visual (attivo per year < -13.5B) ────────────────────────────────
+// La camera parte a 0.05 AU → è DENTRO la sfera → serve THREE.BackSide
 function BigBangVisual({ year }: { year: number }) {
   if (year > -13_500_000_000) return null;
 
   const t = Math.max(0, Math.min(1, (year - (-13_800_000_000)) / 300_000_000));
-  // t=0 al Big Bang, t=1 a -13.5B anni
-  const coreRadius   = 0.8 + t * 80;
-  const shellRadius  = t * 300;
-  const coreOpacity  = 0.9 - t * 0.6;
-  const shellOpacity = t < 0.05 ? t * 10 * 0.4 : (1 - t) * 0.25;
-  const hue          = t * 0.07;
-  const coreColor    = new THREE.Color().setHSL(hue, 0.8, 0.8);
-  const shellColor   = new THREE.Color().setHSL(hue + 0.02, 0.7, 0.6);
+  // t=0 = Big Bang puro (calore massimo), t=1 = -13.5 mld (universo giovane)
+  const coreRadius   = 4 + t * 280;           // parte grande: camera dentro alla nascita
+  const shellRadius  = t * 700;
+  const coreOpacity  = Math.max(0.08, 0.92 - t * 0.72);
+  const shellOpacity = t < 0.05 ? t * 12 * 0.4 : (1 - t) * 0.28;
+  const hue          = t * 0.08;              // rosso/bianco → arancio
+  const coreColor    = new THREE.Color().setHSL(hue, 1.0, 0.75 + (1 - t) * 0.25);
+  const shellColor   = new THREE.Color().setHSL(hue + 0.03, 0.8, 0.65);
 
   return (
     <>
+      {/* BackSide: visibile da dentro (camera immersa nel Big Bang) */}
       <mesh>
-        <sphereGeometry args={[coreRadius, 16, 16]} />
-        <meshBasicMaterial color={coreColor} transparent opacity={coreOpacity} />
+        <sphereGeometry args={[coreRadius, 24, 24]} />
+        <meshBasicMaterial color={coreColor} transparent opacity={coreOpacity} side={THREE.BackSide} />
       </mesh>
-      {shellRadius > 1 && (
+      {shellRadius > 3 && (
         <mesh>
           <sphereGeometry args={[shellRadius, 16, 16]} />
           <meshBasicMaterial color={shellColor} transparent opacity={shellOpacity} side={THREE.BackSide} />
         </mesh>
       )}
-      <ambientLight intensity={Math.max(0, (1 - t) * 3)} color={coreColor} />
+      <ambientLight intensity={Math.max(0, (1 - t) * 6)} color={coreColor} />
     </>
   );
 }
@@ -362,12 +419,22 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
 }
 
 // ── Corpi celesti ─────────────────────────────────────────────────────────
+const LABEL_STYLE: React.CSSProperties = {
+  color: '#aaddff', fontSize: '11px', fontFamily: 'monospace',
+  background: 'rgba(0,0,0,0.55)', padding: '1px 5px', borderRadius: 4,
+  pointerEvents: 'none', whiteSpace: 'nowrap', userSelect: 'none',
+  border: '1px solid rgba(100,180,255,0.25)',
+};
+
 function SunSphere({ onClick }: { onClick: () => void }) {
   return (
-    <mesh position={SUN_POS} onClick={e => { e.stopPropagation(); onClick(); }}>
-      <sphereGeometry args={[SUN_VR, 24, 24]} />
-      <meshStandardMaterial color="#ffe040" emissive="#ff8800" emissiveIntensity={3} roughness={1} metalness={0} />
-    </mesh>
+    <group position={SUN_POS}>
+      <mesh onClick={e => { e.stopPropagation(); onClick(); }}>
+        <sphereGeometry args={[SUN_VR, 24, 24]} />
+        <meshStandardMaterial color="#ffe040" emissive="#ff8800" emissiveIntensity={3} roughness={1} metalness={0} />
+      </mesh>
+      <Html center position={[0, SUN_VR * 1.6, 0]} style={LABEL_STYLE}>☀️ Sole</Html>
+    </group>
   );
 }
 
@@ -375,10 +442,13 @@ function EarthSphere({ onClick }: { onClick: () => void }) {
   const meshRef = useRef<THREE.Mesh | null>(null);
   useEffect(() => { applyTexture(meshRef.current, PLANET_TEXTURES.terra); }, []);
   return (
-    <mesh ref={meshRef} position={[0, 0, 0]} onClick={e => { e.stopPropagation(); onClick(); }}>
-      <sphereGeometry args={[EARTH_VR, 32, 32]} />
-      <meshStandardMaterial color="#1e5fa8" roughness={0.7} metalness={0} />
-    </mesh>
+    <group position={[0, 0, 0]}>
+      <mesh ref={meshRef} onClick={e => { e.stopPropagation(); onClick(); }}>
+        <sphereGeometry args={[EARTH_VR, 32, 32]} />
+        <meshStandardMaterial color="#1e5fa8" roughness={0.7} metalness={0} />
+      </mesh>
+      <Html center position={[0, EARTH_VR * 1.8, 0]} style={LABEL_STYLE}>🌍 Terra</Html>
+    </group>
   );
 }
 
@@ -390,10 +460,13 @@ function MoonSphere({ onClick }: { onClick: () => void }) {
   }, []);
   useEffect(() => { applyTexture(meshRef.current, PLANET_TEXTURES.luna); }, []);
   return (
-    <mesh ref={meshRef} position={pos} onClick={e => { e.stopPropagation(); onClick(); }}>
-      <sphereGeometry args={[MOON_VR, 24, 24]} />
-      <meshStandardMaterial color="#b8b8b8" roughness={1} metalness={0} />
-    </mesh>
+    <group position={pos}>
+      <mesh ref={meshRef} onClick={e => { e.stopPropagation(); onClick(); }}>
+        <sphereGeometry args={[MOON_VR, 24, 24]} />
+        <meshStandardMaterial color="#b8b8b8" roughness={1} metalness={0} />
+      </mesh>
+      <Html center position={[0, MOON_VR * 2, 0]} style={LABEL_STYLE}>🌕 Luna</Html>
+    </group>
   );
 }
 
@@ -407,6 +480,10 @@ function PlanetSphere({ planet, onClick }: { planet: typeof PLANETS[0]; onClick:
   const isSaturn = planet.id === 'saturno';
   const texUrl = PLANET_TEXTURES[planet.id];
   useEffect(() => { if (texUrl) applyTexture(meshRef.current, texUrl); }, [texUrl]);
+  const PLANET_ICONS: Record<string, string> = {
+    mercurio: '🪨', venere: '🌫️', marte: '🔴', giove: '🪐', saturno: '💫',
+    urano: '🔵', nettuno: '🌊',
+  };
   return (
     <group position={pos}>
       <mesh ref={meshRef} onClick={e => { e.stopPropagation(); onClick(); }}>
@@ -419,6 +496,9 @@ function PlanetSphere({ planet, onClick }: { planet: typeof PLANETS[0]; onClick:
           <meshStandardMaterial color="#c8b570" transparent opacity={0.65} roughness={1} />
         </mesh>
       )}
+      <Html center position={[0, vr * 1.8, 0]} style={LABEL_STYLE}>
+        {PLANET_ICONS[planet.id] ?? '🪐'} {planet.name}
+      </Html>
     </group>
   );
 }
