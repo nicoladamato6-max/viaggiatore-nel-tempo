@@ -60,17 +60,14 @@ function getVisualRadius(radiusM: number): number {
   return Math.max(0.0006, radiusM * M_TO_AU * 20); // era 60x, ora 20x
 }
 
-// ── Texture NASA (Wikimedia Commons — public domain) ─────────────────────────
+// ── Texture via jsDelivr CDN (three.js bundle — CORS OK, nessun login) ────────
+const _TEX = 'https://cdn.jsdelivr.net/npm/three/examples/textures/planets/';
 const PLANET_TEXTURES: Record<string, string> = {
-  terra:    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Earthmap1000x500.jpg/1024px-Earthmap1000x500.jpg',
-  luna:     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Lunar_Nearside_LRO_color_mosaic.png/1024px-Lunar_Nearside_LRO_color_mosaic.png',
-  marte:    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Mars_topography_%28MOLA_dataset%29_HiRes.jpg/1024px-Mars_topography_%28MOLA_dataset%29_HiRes.jpg',
-  giove:    'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Jupiter_and_its_shrunken_Great_Red_Spot.jpg/1024px-Jupiter_and_its_shrunken_Great_Red_Spot.jpg',
-  saturno:  'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/1024px-Saturn_during_Equinox.jpg',
-  venere:   'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Venus-real_color.jpg/1024px-Venus-real_color.jpg',
-  mercurio: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Mercury_in_color_-_Prockter07_edit.jpg/1024px-Mercury_in_color_-_Prockter07_edit.jpg',
-  urano:    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Uranus2.jpg/1024px-Uranus2.jpg',
-  nettuno:  'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg/1024px-Neptune_-_Voyager_2_%2829347980845%29_flatten_crop.jpg',
+  terra:   _TEX + 'earth_atmos_2048.jpg',
+  luna:    _TEX + 'moon_1024.jpg',
+  marte:   _TEX + 'mars_1k_color.jpg',
+  giove:   _TEX + 'jupiter2_1k.jpg',
+  // Saturno, Venere, Mercurio, Urano, Nettuno: non presenti nel bundle three.js
 };
 
 function applyTexture(mesh: THREE.Mesh | null, url: string) {
@@ -134,35 +131,117 @@ function MilkyWayDisk() {
   );
 }
 
-// ── Galassie distanti: Andromeda, LMC, SMC (posizioni simboliche) ─────────────
+// ── Galassie distanti — sistema a particelle (ispirato a Google Sky) ──────────
 function DistantGalaxies() {
+  // Andromeda: disco a spirale ellittica, 8000 particelle, posizione simbolica ~4000 UA
+  const androGeo = useMemo(() => {
+    const N = 8000;
+    const pos = new Float32Array(N * 3);
+    const col = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) {
+      const arm   = Math.floor(Math.random() * 2) * Math.PI; // 2 bracci
+      const r     = Math.pow(Math.random(), 0.4) * 160;
+      const theta = arm + Math.random() * Math.PI * 2 + r * 0.04;
+      const thick = Math.max(0.5, 18 * (1 - r / 160));
+      pos[i * 3]     = r * Math.cos(theta);
+      pos[i * 3 + 1] = (Math.random() - 0.5) * thick;
+      pos[i * 3 + 2] = r * Math.sin(theta) * 0.38; // ellittica (M31 inclinata 77°)
+      const t = r / 160;
+      if (t < 0.25) { col[i*3]=1.0; col[i*3+1]=0.90; col[i*3+2]=0.70; }   // nucleo caldo
+      else if (t < 0.6) { col[i*3]=0.90; col[i*3+1]=0.90; col[i*3+2]=1.0; } // disco neutro
+      else { col[i*3]=0.70; col[i*3+1]=0.80; col[i*3+2]=1.0; }             // bordo blu
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    g.setAttribute('color',    new THREE.Float32BufferAttribute(col, 3));
+    return g;
+  }, []);
+
+  // Campo di galassie distanti: 5000 punti tra 2500 e 14000 UA
+  const fieldGeo = useMemo(() => {
+    const N = 5000;
+    const pos = new Float32Array(N * 3);
+    const col = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) {
+      const theta = Math.random() * Math.PI * 2;
+      const phi   = Math.acos(2 * Math.random() - 1);
+      const r     = 2500 + Math.pow(Math.random(), 0.55) * 11500;
+      pos[i*3]   = r * Math.sin(phi) * Math.cos(theta);
+      pos[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
+      pos[i*3+2] = r * Math.cos(phi);
+      const t = Math.random();
+      if (t < 0.35) { col[i*3]=1.0; col[i*3+1]=0.82; col[i*3+2]=0.60; }  // ellittica arancio
+      else if (t < 0.70) { col[i*3]=0.82; col[i*3+1]=0.90; col[i*3+2]=1.0; } // spirale blu-bianco
+      else { col[i*3]=1.0; col[i*3+1]=1.0; col[i*3+2]=0.95; }             // lenticolare bianco
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    g.setAttribute('color',    new THREE.Float32BufferAttribute(col, 3));
+    return g;
+  }, []);
+
+  // Ragnatela cosmica: 1800 punti tra 13000 e 46000 UA — grande struttura
+  const webGeo = useMemo(() => {
+    const N = 1800;
+    const pos = new Float32Array(N * 3);
+    const col = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) {
+      const theta = Math.random() * Math.PI * 2;
+      const phi   = Math.acos(2 * Math.random() - 1);
+      const r     = 13000 + Math.random() * 33000;
+      pos[i*3]   = r * Math.sin(phi) * Math.cos(theta);
+      pos[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
+      pos[i*3+2] = r * Math.cos(phi);
+      col[i*3]=0.88; col[i*3+1]=0.85; col[i*3+2]=1.0;
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    g.setAttribute('color',    new THREE.Float32BufferAttribute(col, 3));
+    return g;
+  }, []);
+
   return (
     <>
-      {/* Andromeda — spirale ovale a ~3000 UA scala simbolica */}
-      <group position={[2800, 200, 800]} rotation={[0.3, 0.5, 0.2]}>
+      {/* Andromeda — spirale ellittica con nucleo luminoso, ~4000 UA a nord-est */}
+      <group position={[1800, 3200, -1200]} rotation={[1.35, -0.25, 0.5]}>
+        <points geometry={androGeo}>
+          <pointsMaterial size={1.8} sizeAttenuation={false} vertexColors transparent opacity={0.78} />
+        </points>
         <mesh>
-          <sphereGeometry args={[80, 8, 8]} />
-          <meshBasicMaterial color="#aabbff" transparent opacity={0.04} side={THREE.BackSide} />
-        </mesh>
-        <mesh>
-          <sphereGeometry args={[20, 8, 8]} />
-          <meshBasicMaterial color="#ffeecc" transparent opacity={0.15} />
-        </mesh>
-      </group>
-      {/* LMC — Grande Nube di Magellano */}
-      <group position={[-1200, -150, 600]}>
-        <mesh>
-          <sphereGeometry args={[35, 8, 8]} />
-          <meshBasicMaterial color="#aad4ff" transparent opacity={0.06} />
+          <sphereGeometry args={[9, 8, 8]} />
+          <meshBasicMaterial color="#ffe6b0" transparent opacity={0.75} />
         </mesh>
       </group>
-      {/* SMC — Piccola Nube di Magellano */}
-      <group position={[-950, -120, 800]}>
+
+      {/* LMC — Grande Nube di Magellano, a sud */}
+      <group position={[-750, -2900, 500]}>
         <mesh>
-          <sphereGeometry args={[20, 6, 6]} />
-          <meshBasicMaterial color="#99bbff" transparent opacity={0.05} />
+          <sphereGeometry args={[28, 8, 8]} />
+          <meshBasicMaterial color="#aaddff" transparent opacity={0.4} />
+        </mesh>
+        <mesh>
+          <sphereGeometry args={[10, 6, 6]} />
+          <meshBasicMaterial color="#ffffff" transparent opacity={0.5} />
         </mesh>
       </group>
+
+      {/* SMC — Piccola Nube di Magellano, a sud */}
+      <group position={[-950, -2600, 750]}>
+        <mesh>
+          <sphereGeometry args={[16, 6, 6]} />
+          <meshBasicMaterial color="#99ccff" transparent opacity={0.38} />
+        </mesh>
+      </group>
+
+      {/* Campo di galassie distanti (2500–14000 UA) */}
+      <points geometry={fieldGeo}>
+        <pointsMaterial size={2} sizeAttenuation={false} vertexColors transparent opacity={0.68} />
+      </points>
+
+      {/* Ragnatela cosmica (13000–46000 UA) */}
+      <points geometry={webGeo}>
+        <pointsMaterial size={2.5} sizeAttenuation={false} vertexColors transparent opacity={0.42} />
+      </points>
     </>
   );
 }
@@ -548,14 +627,17 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
     >
       <Canvas
         gl={{ antialias: true, logarithmicDepthBuffer: true }}
-        camera={{ fov: 70, near: 1e-5, far: 50000, position: [0, 0.05, 0] }}
+        camera={{ fov: 70, near: 1e-5, far: 100000, position: [0, 0.05, 0] }}
         style={{ background: '#00000a' }}
       >
         <ambientLight intensity={0.15} />
         <hemisphereLight args={['#112244', '#000010', 0.3]} />
         <pointLight position={SUN_POS} intensity={2.5} color="#ffe0a0" decay={0} />
 
-        <Stars radius={800} depth={120} count={8000} factor={4} saturation={0.25} fade />
+        {/* Stelle su scale multiple: sistema solare → Via Lattea → intergalattico */}
+        <Stars radius={800}  depth={120} count={8000} factor={4}   saturation={0.25} fade />
+        <Stars radius={2500} depth={500} count={3000} factor={5}   saturation={0.15} fade />
+        <Stars radius={9000} depth={800} count={1500} factor={6.5} saturation={0.10} fade />
         <MilkyWayDisk />
         <DistantGalaxies />
         <BigBangVisual year={currentYear} />
