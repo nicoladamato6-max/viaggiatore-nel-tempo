@@ -319,6 +319,60 @@ function BigBangBackground({ year }: { year: number }) {
   return null;
 }
 
+// BigBangExpansion: fireball espandente + particelle di materia primordiale
+// La geometria è computata una sola volta; solo la scala del gruppo varia con t.
+function BigBangExpansion({ year }: { year: number }) {
+  if (year > -13_500_000_000) return null;
+  const t = Math.max(0, Math.min(1, (year - (-13_800_000_000)) / 300_000_000));
+
+  // Particelle distribuite sulla sfera unitaria — scala applicata al gruppo
+  const geo = useMemo(() => {
+    const N = 5000;
+    const pos = new Float32Array(N * 3);
+    const col = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) {
+      const theta = Math.random() * Math.PI * 2;
+      const phi   = Math.acos(2 * Math.random() - 1);
+      const r     = Math.pow(Math.random(), 0.25); // concentrato verso la superficie
+      pos[i*3]   = r * Math.sin(phi) * Math.cos(theta);
+      pos[i*3+1] = r * Math.sin(phi) * Math.sin(theta);
+      pos[i*3+2] = r * Math.cos(phi);
+      const heat = 1 - r * 0.6;
+      const hue  = (1 - heat) * 0.09; // bianco→giallo→arancio→rosso
+      const c    = new THREE.Color().setHSL(hue, 1.0, 0.65 + heat * 0.35);
+      col[i*3] = c.r; col[i*3+1] = c.g; col[i*3+2] = c.b;
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    g.setAttribute('color',    new THREE.Float32BufferAttribute(col, 3));
+    return g;
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // t=0: palla da 0.003 UA (camera a 0.05 UA, vista dall'esterno)
+  // t→1: espansione a 450 UA — la camera è immersa nell'esplosione
+  const scale  = 0.003 + t * 450;
+  const pOpac  = Math.max(0, 0.92 - t * 0.75);
+  const coreR  = scale * 0.12;
+  const coreHue = t * 0.06;
+  const coreColor = new THREE.Color().setHSL(coreHue, 1.0, Math.max(0.5, 0.95 - t * 0.45));
+
+  return (
+    <>
+      {/* Nube di materia primordiale in espansione */}
+      <group scale={[scale, scale, scale]}>
+        <points geometry={geo}>
+          <pointsMaterial size={2} sizeAttenuation={false} vertexColors transparent opacity={pOpac} />
+        </points>
+      </group>
+      {/* Nucleo denso centrale: DoubleSide per essere visibile da dentro e da fuori */}
+      <mesh>
+        <sphereGeometry args={[coreR, 20, 20]} />
+        <meshBasicMaterial color={coreColor} transparent opacity={Math.max(0, 0.95 - t * 0.80)} side={THREE.DoubleSide} />
+      </mesh>
+    </>
+  );
+}
+
 // ── CameraRig (dentro Canvas) ─────────────────────────────────────────────
 interface CameraRigProps {
   navKeysRef:         React.RefObject<Set<string>>;
@@ -841,25 +895,42 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
       >
         <ambientLight intensity={0.15} />
         <hemisphereLight args={['#112244', '#000010', 0.3]} />
-        <pointLight position={SUN_POS} intensity={2.5} color="#ffe0a0" decay={0} />
+        {currentYear >= -4_600_000_000 && <pointLight position={SUN_POS} intensity={2.5} color="#ffe0a0" decay={0} />}
 
-        {/* Stelle su scale multiple: sistema solare → Via Lattea → intergalattico */}
-        <Stars radius={800}  depth={120} count={8000} factor={4}   saturation={0.25} fade />
-        <Stars radius={2500} depth={500} count={3000} factor={5}   saturation={0.15} fade />
-        <Stars radius={9000} depth={800} count={1500} factor={6.5} saturation={0.10} fade />
-        <MilkyWayDisk />
-        <DistantGalaxies />
+        {/* Big Bang: visuale primordiale (attivo solo prima di -13.5 mld a.C.) */}
         <BigBangBackground year={currentYear} />
-        <SunSphere  onClick={() => onEventClick(SUN_CARD)}  flyTo={flyToBody} />
-        <EarthSphere onClick={() => onEventClick(EARTH_CARD)} flyTo={flyToBody} />
-        <MoonSphere onClick={() => onEventClick(MOON_CARD)}  flyTo={flyToBody} />
-        {PLANETS.map(p => (
-          <PlanetSphere key={p.id} planet={p} onClick={() => onEventClick(toPlanetCard(p))} flyTo={flyToBody} />
-        ))}
-        <AsteroidBelt />
-        <KuiperBelt />
-        {NEARBY_STARS.map(s => <NearbyStar key={s.name} {...s} />)}
-        {DWARF_PLANETS.map(d => <DwarfPlanetSphere key={d.id} dwarf={d} flyTo={flyToBody} />)}
+        <BigBangExpansion year={currentYear} />
+
+        {/* Galassie distanti: formazione ~13.2 mld a.C. */}
+        {currentYear >= -13_200_000_000 && <DistantGalaxies />}
+
+        {/* Via Lattea e stelle di sfondo: formazione ~13 mld a.C. */}
+        {currentYear >= -13_000_000_000 && (
+          <>
+            <Stars radius={800}  depth={120} count={8000} factor={4}   saturation={0.25} fade />
+            <Stars radius={2500} depth={500} count={3000} factor={5}   saturation={0.15} fade />
+            <Stars radius={9000} depth={800} count={1500} factor={6.5} saturation={0.10} fade />
+            <MilkyWayDisk />
+          </>
+        )}
+
+        {/* Stelle vicine: formate ~5 mld a.C. */}
+        {currentYear >= -5_000_000_000 && NEARBY_STARS.map(s => <NearbyStar key={s.name} {...s} />)}
+
+        {/* Sistema Solare completo: formazione ~4.6 mld a.C. */}
+        {currentYear >= -4_600_000_000 && (
+          <>
+            <SunSphere  onClick={() => onEventClick(SUN_CARD)}  flyTo={flyToBody} />
+            <EarthSphere onClick={() => onEventClick(EARTH_CARD)} flyTo={flyToBody} />
+            <MoonSphere onClick={() => onEventClick(MOON_CARD)}  flyTo={flyToBody} />
+            {PLANETS.map(p => (
+              <PlanetSphere key={p.id} planet={p} onClick={() => onEventClick(toPlanetCard(p))} flyTo={flyToBody} />
+            ))}
+            <AsteroidBelt />
+            <KuiperBelt />
+            {DWARF_PLANETS.map(d => <DwarfPlanetSphere key={d.id} dwarf={d} flyTo={flyToBody} />)}
+          </>
+        )}
 
         <CameraRig
           navKeysRef={navKeysRef}
