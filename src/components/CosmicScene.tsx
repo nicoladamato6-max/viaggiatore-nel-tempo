@@ -301,37 +301,22 @@ function DistantGalaxies() {
   );
 }
 
-// ── Big Bang visual (attivo per year < -13.5B) ────────────────────────────────
-// La camera parte a 0.05 AU → è DENTRO la sfera → serve THREE.BackSide
-function BigBangVisual({ year }: { year: number }) {
-  if (year > -13_500_000_000) return null;
-
-  const t = Math.max(0, Math.min(1, (year - (-13_800_000_000)) / 300_000_000));
-  // t=0 = Big Bang puro (calore massimo), t=1 = -13.5 mld (universo giovane)
-  const coreRadius   = 4 + t * 280;           // parte grande: camera dentro alla nascita
-  const shellRadius  = t * 700;
-  const coreOpacity  = Math.max(0.08, 0.92 - t * 0.72);
-  const shellOpacity = t < 0.05 ? t * 12 * 0.4 : (1 - t) * 0.28;
-  const hue          = t * 0.08;              // rosso/bianco → arancio
-  const coreColor    = new THREE.Color().setHSL(hue, 1.0, 0.75 + (1 - t) * 0.25);
-  const shellColor   = new THREE.Color().setHSL(hue + 0.03, 0.8, 0.65);
-
-  return (
-    <>
-      {/* BackSide: visibile da dentro (camera immersa nel Big Bang) */}
-      <mesh>
-        <sphereGeometry args={[coreRadius, 24, 24]} />
-        <meshBasicMaterial color={coreColor} transparent opacity={coreOpacity} side={THREE.BackSide} />
-      </mesh>
-      {shellRadius > 3 && (
-        <mesh>
-          <sphereGeometry args={[shellRadius, 16, 16]} />
-          <meshBasicMaterial color={shellColor} transparent opacity={shellOpacity} side={THREE.BackSide} />
-        </mesh>
-      )}
-      <ambientLight intensity={Math.max(0, (1 - t) * 6)} color={coreColor} />
-    </>
-  );
+// BigBangBackground: cambia il colore del cielo quando siamo all'inizio del tempo
+function BigBangBackground({ year }: { year: number }) {
+  const { scene } = useThree();
+  useEffect(() => () => { scene.background = new THREE.Color(0x00000a); }, [scene]);
+  useFrame(() => {
+    if (year > -13_500_000_000) {
+      scene.background = new THREE.Color(0x00000a);
+      return;
+    }
+    const t = Math.max(0, Math.min(1, (year - (-13_800_000_000)) / 300_000_000));
+    const hue = t * 0.07;
+    const l   = 0.70 + (1 - t) * 0.30;
+    const sat = Math.max(0.25, 1.0 - t * 0.75);
+    scene.background = new THREE.Color().setHSL(hue, sat, l);
+  });
+  return null;
 }
 
 // ── CameraRig (dentro Canvas) ─────────────────────────────────────────────
@@ -348,63 +333,91 @@ interface CameraRigProps {
   initialAltKm:       number;
   onEarthApproachRef: React.RefObject<(() => void) | null>;
   nearEarthRef:       React.RefObject<boolean>;
+  flyToRef:           React.RefObject<((pos: THREE.Vector3, radius: number) => void) | null>;
 }
 
-function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAltRef, hudZoneRef, locale, wheelRef, initialAltKm, onEarthApproachRef, nearEarthRef }: CameraRigProps) {
+function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAltRef, hudZoneRef, locale, wheelRef, initialAltKm, onEarthApproachRef, nearEarthRef, flyToRef }: CameraRigProps) {
   const { camera } = useThree();
+  const velRef = useRef(new THREE.Vector3());
 
   useEffect(() => {
     camera.rotation.order = 'YXZ';
     const altAU = initialAltKm > 0 ? initialAltKm * 1_000 * M_TO_AU : 0.05;
     camera.position.set(0, altAU, 0);
     if (initialAltKm > 0) {
-      // Camera posizionata a (0, altAU, 0): guardare verso Terra (origine) = pitch -π/2
       (yawRef   as React.MutableRefObject<number>).current = 0;
       (pitchRef as React.MutableRefObject<number>).current = -Math.PI / 2 + 0.15;
     }
   }, [camera]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  useFrame(() => {
-    const dist  = camera.position.length();
-    const speed = Math.max(4e-7, dist * 0.004);
+  useFrame((_, delta) => {
+    const dist    = camera.position.length();
+    const maxSpd  = Math.max(8e-7, dist * 0.025);
+    const keys    = navKeysRef.current!;
+    const boost   = keys.has('ShiftLeft') || keys.has('ShiftRight') ? 8 : 1;
+    const accel   = maxSpd * 5 * boost;
+    const friction = Math.exp(-delta / 0.18);
 
     camera.rotation.y = yawRef.current!;
     camera.rotation.x = pitchRef.current!;
 
-    const dir    = new THREE.Vector3(0, 0, -1).applyEuler(camera.rotation).normalize();
-    const right  = new THREE.Vector3(1, 0, 0).applyEuler(camera.rotation).normalize();
-    const worldUp = new THREE.Vector3(0, 1, 0);
+    const dir   = new THREE.Vector3(0, 0, -1).applyEuler(camera.rotation).normalize();
+    const right = new THREE.Vector3(1, 0, 0).applyEuler(camera.rotation).normalize();
+    const up    = new THREE.Vector3(0, 1, 0);
+    let hasInput = false;
 
-    const keys  = navKeysRef.current!;
-    const boost = keys.has('ShiftLeft') || keys.has('ShiftRight') ? 5 : 1;
+    if (keys.has('Space')) velRef.current.set(0, 0, 0);
 
-    if (keys.has('KeyW') || keys.has('ArrowUp'))    camera.position.addScaledVector(dir,      speed * boost);
-    if (keys.has('KeyS') || keys.has('ArrowDown'))  camera.position.addScaledVector(dir,     -speed * boost);
-    if (keys.has('KeyA') || keys.has('ArrowLeft'))  camera.position.addScaledVector(right,   -speed * boost);
-    if (keys.has('KeyD') || keys.has('ArrowRight')) camera.position.addScaledVector(right,    speed * boost);
-    if (keys.has('KeyQ') || keys.has('PageUp'))     camera.position.addScaledVector(worldUp,  speed * boost);
-    if (keys.has('KeyE') || keys.has('PageDown'))   camera.position.addScaledVector(worldUp, -speed * boost);
+    if (keys.has('KeyW') || keys.has('ArrowUp'))   { velRef.current.addScaledVector(dir,    accel * delta); hasInput = true; }
+    if (keys.has('KeyS') || keys.has('ArrowDown'))  { velRef.current.addScaledVector(dir,   -accel * delta); hasInput = true; }
+    if (keys.has('KeyA') || keys.has('ArrowLeft'))  { velRef.current.addScaledVector(right, -accel * delta); hasInput = true; }
+    if (keys.has('KeyD') || keys.has('ArrowRight')) { velRef.current.addScaledVector(right,  accel * delta); hasInput = true; }
+    if (keys.has('KeyQ') || keys.has('PageUp'))     { velRef.current.addScaledVector(up,     accel * delta); hasInput = true; }
+    if (keys.has('KeyE') || keys.has('PageDown'))   { velRef.current.addScaledVector(up,    -accel * delta); hasInput = true; }
 
-    const jt = jumpRef.current;
-    if (jt) {
-      camera.position.lerp(jt, 0.07);
-      if (camera.position.distanceTo(jt) < speed * 0.3) (jumpRef as React.MutableRefObject<THREE.Vector3 | null>).current = null;
-    }
+    const curSpd = velRef.current.length();
+    const maxAllowed = maxSpd * boost;
+    if (curSpd > maxAllowed) velRef.current.multiplyScalar(maxAllowed / curSpd);
+    if (!hasInput) velRef.current.multiplyScalar(friction);
 
-    // Scroll wheel: forward/back along camera direction
     const wd = wheelRef.current;
     if (wd !== 0) {
-      camera.position.addScaledVector(dir, -wd * speed * 15);
+      velRef.current.addScaledVector(dir, -wd * maxSpd * 0.8);
       (wheelRef as React.MutableRefObject<number>).current = 0;
     }
 
-    cameraPosRef.current!.copy(camera.position);
+    const jt = jumpRef.current;
+    if (jt) {
+      velRef.current.set(0, 0, 0);
+      camera.position.lerp(jt, 0.06);
+      if (camera.position.distanceTo(jt) < Math.max(1e-6, jt.length() * 0.001)) {
+        (jumpRef as React.MutableRefObject<THREE.Vector3 | null>).current = null;
+      }
+    } else {
+      camera.position.add(velRef.current);
+    }
 
+    // flyTo: aggiornato ogni frame per catturare posizione camera corrente
+    flyToRef.current = (targetPos: THREE.Vector3, radius: number) => {
+      (velRef as React.MutableRefObject<THREE.Vector3>).current.set(0, 0, 0);
+      const toTarget = targetPos.clone().sub(camera.position);
+      const d = toTarget.length();
+      if (d < 1e-8) return;
+      const approachDist = Math.max(radius * 8, 0.0005);
+      const newPos = d > approachDist
+        ? targetPos.clone().sub(toTarget.clone().normalize().multiplyScalar(approachDist))
+        : camera.position.clone();
+      (jumpRef as React.MutableRefObject<THREE.Vector3 | null>).current = newPos;
+      const lookDir = targetPos.clone().sub(newPos).normalize();
+      (yawRef   as React.MutableRefObject<number>).current = Math.atan2(lookDir.x, -lookDir.z);
+      (pitchRef as React.MutableRefObject<number>).current = Math.asin(Math.max(-1, Math.min(1, lookDir.y)));
+    };
+
+    cameraPosRef.current!.copy(camera.position);
     const newDist = camera.position.length();
     if (hudAltRef.current)  hudAltRef.current.textContent  = fmtDist(newDist);
     if (hudZoneRef.current) hudZoneRef.current.textContent = getZone(newDist, locale);
 
-    // Earth approach detection: trigger return to Cesium when close enough
     if (newDist < EARTH_APPROACH_AU) {
       if (!nearEarthRef.current) {
         (nearEarthRef as React.MutableRefObject<boolean>).current = true;
@@ -422,23 +435,29 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
 const LABEL_STYLE: React.CSSProperties = {
   color: '#aaddff', fontSize: '11px', fontFamily: 'monospace',
   background: 'rgba(0,0,0,0.55)', padding: '1px 5px', borderRadius: 4,
-  pointerEvents: 'none', whiteSpace: 'nowrap', userSelect: 'none',
+  whiteSpace: 'nowrap', userSelect: 'none',
   border: '1px solid rgba(100,180,255,0.25)',
+  cursor: 'pointer',
 };
 
-function SunSphere({ onClick }: { onClick: () => void }) {
+type FlyToFn = (pos: THREE.Vector3, radius: number) => void;
+
+function SunSphere({ onClick, flyTo }: { onClick: () => void; flyTo: FlyToFn }) {
   return (
     <group position={SUN_POS}>
       <mesh onClick={e => { e.stopPropagation(); onClick(); }}>
         <sphereGeometry args={[SUN_VR, 24, 24]} />
         <meshStandardMaterial color="#ffe040" emissive="#ff8800" emissiveIntensity={3} roughness={1} metalness={0} />
       </mesh>
-      <Html center position={[0, SUN_VR * 1.6, 0]} style={LABEL_STYLE}>☀️ Sole</Html>
+      <Html center position={[0, SUN_VR * 1.6, 0]} style={LABEL_STYLE}
+        onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...SUN_POS), SUN_VR); }}>
+        ☀️ Sole
+      </Html>
     </group>
   );
 }
 
-function EarthSphere({ onClick }: { onClick: () => void }) {
+function EarthSphere({ onClick, flyTo }: { onClick: () => void; flyTo: FlyToFn }) {
   const meshRef = useRef<THREE.Mesh | null>(null);
   useEffect(() => { applyTexture(meshRef.current, PLANET_TEXTURES.terra); }, []);
   return (
@@ -447,12 +466,15 @@ function EarthSphere({ onClick }: { onClick: () => void }) {
         <sphereGeometry args={[EARTH_VR, 32, 32]} />
         <meshStandardMaterial color="#1e5fa8" roughness={0.7} metalness={0} />
       </mesh>
-      <Html center position={[0, EARTH_VR * 1.8, 0]} style={LABEL_STYLE}>🌍 Terra</Html>
+      <Html center position={[0, EARTH_VR * 1.8, 0]} style={LABEL_STYLE}
+        onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(0, 0, 0), EARTH_VR); }}>
+        🌍 Terra
+      </Html>
     </group>
   );
 }
 
-function MoonSphere({ onClick }: { onClick: () => void }) {
+function MoonSphere({ onClick, flyTo }: { onClick: () => void; flyTo: FlyToFn }) {
   const meshRef = useRef<THREE.Mesh | null>(null);
   const pos = useMemo<[number, number, number]>(() => {
     const [mx, my, mz] = getMoonPosition();
@@ -465,12 +487,15 @@ function MoonSphere({ onClick }: { onClick: () => void }) {
         <sphereGeometry args={[MOON_VR, 24, 24]} />
         <meshStandardMaterial color="#b8b8b8" roughness={1} metalness={0} />
       </mesh>
-      <Html center position={[0, MOON_VR * 2, 0]} style={LABEL_STYLE}>🌕 Luna</Html>
+      <Html center position={[0, MOON_VR * 2, 0]} style={LABEL_STYLE}
+        onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...pos), MOON_VR); }}>
+        🌕 Luna
+      </Html>
     </group>
   );
 }
 
-function PlanetSphere({ planet, onClick }: { planet: typeof PLANETS[0]; onClick: () => void }) {
+function PlanetSphere({ planet, onClick, flyTo }: { planet: typeof PLANETS[0]; onClick: () => void; flyTo: FlyToFn }) {
   const meshRef = useRef<THREE.Mesh | null>(null);
   const pos = useMemo<[number, number, number]>(() => {
     const [px, py, pz] = getPlanetPosition(planet);
@@ -496,8 +521,106 @@ function PlanetSphere({ planet, onClick }: { planet: typeof PLANETS[0]; onClick:
           <meshStandardMaterial color="#c8b570" transparent opacity={0.65} roughness={1} />
         </mesh>
       )}
-      <Html center position={[0, vr * 1.8, 0]} style={LABEL_STYLE}>
+      <Html center position={[0, vr * 1.8, 0]} style={LABEL_STYLE}
+        onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...pos), vr); }}>
         {PLANET_ICONS[planet.id] ?? '🪐'} {planet.name}
+      </Html>
+    </group>
+  );
+}
+
+// ── Cintura degli asteroidi (Marte–Giove, 2.2–3.3 UA) ─────────────────────────
+function AsteroidBelt() {
+  const geo = useMemo(() => {
+    const N = 4000;
+    const pos = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) {
+      const r     = 2.2 + Math.random() * 1.1;
+      const theta = Math.random() * Math.PI * 2;
+      const incl  = (Math.random() - 0.5) * 0.12;
+      pos[i*3]   = r * Math.cos(theta);
+      pos[i*3+1] = incl;
+      pos[i*3+2] = r * Math.sin(theta);
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    return g;
+  }, []);
+  return (
+    <points geometry={geo}>
+      <pointsMaterial size={0.8} sizeAttenuation={false} color="#9a9080" transparent opacity={0.55} />
+    </points>
+  );
+}
+
+// ── Cintura di Kuiper (30–55 UA) ──────────────────────────────────────────────
+function KuiperBelt() {
+  const geo = useMemo(() => {
+    const N = 2500;
+    const pos = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) {
+      const r     = 30 + Math.random() * 25;
+      const theta = Math.random() * Math.PI * 2;
+      const incl  = (Math.random() - 0.5) * 0.3;
+      pos[i*3]   = r * Math.cos(theta);
+      pos[i*3+1] = incl;
+      pos[i*3+2] = r * Math.sin(theta);
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+    return g;
+  }, []);
+  return (
+    <points geometry={geo}>
+      <pointsMaterial size={0.7} sizeAttenuation={false} color="#7a8898" transparent opacity={0.45} />
+    </points>
+  );
+}
+
+// ── Stelle vicine (simboliche — scala compressa per visibilità) ───────────────
+const NEARBY_STARS = [
+  { name: 'Proxima Centauri', pos: [-320,  50,  180] as [number,number,number], color: '#ff9980' },
+  { name: 'Alpha Centauri',   pos: [-310,  55,  190] as [number,number,number], color: '#ffffaa' },
+  { name: 'Stella di Barnard',pos: [  80, -200,  350] as [number,number,number], color: '#ffaa88' },
+  { name: 'Sirius',           pos: [ 450, -120,  -60] as [number,number,number], color: '#aaccff' },
+  { name: 'Vega',             pos: [-120,  380, -200] as [number,number,number], color: '#bbccff' },
+  { name: 'Betelgeuse',       pos: [ 600,  140,  300] as [number,number,number], color: '#ff6633' },
+  { name: 'Rigel',            pos: [ 580,  -80, -320] as [number,number,number], color: '#aabbff' },
+];
+
+function NearbyStar({ name, pos, color }: { name: string; pos: [number,number,number]; color: string }) {
+  return (
+    <group position={pos}>
+      <mesh>
+        <sphereGeometry args={[0.8, 8, 8]} />
+        <meshBasicMaterial color={color} />
+      </mesh>
+      <Html center position={[0, 1.2, 0]} style={GALAXY_LABEL_STYLE}>{name}</Html>
+    </group>
+  );
+}
+
+// ── Pianeti nani ──────────────────────────────────────────────────────────────
+interface DwarfData { id: string; name: string; color: string; radiusM: number; pos: [number,number,number] }
+const DWARF_PLANETS: DwarfData[] = [
+  { id: 'plutone',  name: 'Plutone',  color: '#c5a87a', radiusM: 1_188_000, pos: [39.5,  0.5,  0]   },
+  { id: 'eris',     name: 'Eris',     color: '#e8e8e0', radiusM: 1_163_000, pos: [-67,  -1.2, 18]   },
+  { id: 'cerere',   name: 'Cerere',   color: '#9a9690', radiusM:   476_000, pos: [2.77,  0.15, 0.1] },
+  { id: 'makemake', name: 'Makemake', color: '#d4a870', radiusM:   715_000, pos: [45.8, -0.4,  8]   },
+  { id: 'haumea',   name: 'Haumea',   color: '#e0ddd8', radiusM:   620_000, pos: [43.1,  0.6, -12]  },
+];
+
+function DwarfPlanetSphere({ dwarf, flyTo }: { dwarf: DwarfData; flyTo: FlyToFn }) {
+  const vr = Math.max(0.0004, dwarf.radiusM * M_TO_AU * 20);
+  return (
+    <group position={dwarf.pos}>
+      <mesh>
+        <sphereGeometry args={[vr, 14, 14]} />
+        <meshStandardMaterial color={dwarf.color} roughness={0.9} metalness={0.02} />
+      </mesh>
+      <Html center position={[0, vr * 2, 0]} style={LABEL_STYLE}
+        onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...dwarf.pos), vr); }}>
+        ⚫ {dwarf.name}
       </Html>
     </group>
   );
@@ -557,6 +680,7 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
       <div style={{ display: 'flex', gap: 4 }}>
         <Btn code="KeyA" label="◀" />
         <Btn code="KeyD" label="▶" />
+        <Btn code="Space" label="⏹" />
       </div>
       <div style={{ color: '#2a3a4a', fontSize: '0.52rem', marginTop: 2 }}>
         {locale === 'it' ? '▲▼=avanti/indietro · ⬆⬇=alto/basso' : '▲▼=fwd/back · ⬆⬇=up/dn'}
@@ -612,9 +736,14 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
   const wheelRef           = useRef(0);
   const onEarthApproachRef = useRef<(() => void) | null>(onEarthApproach ?? null);
   const nearEarthRef       = useRef(false);
+  const flyToRef           = useRef<((pos: THREE.Vector3, radius: number) => void) | null>(null);
 
   // Keep callback ref current on every render
   onEarthApproachRef.current = onEarthApproach ?? null;
+
+  const flyToBody = useCallback((pos: THREE.Vector3, radius: number) => {
+    flyToRef.current?.(pos, radius);
+  }, []);
 
   // Tastiera
   useEffect(() => {
@@ -720,13 +849,17 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         <Stars radius={9000} depth={800} count={1500} factor={6.5} saturation={0.10} fade />
         <MilkyWayDisk />
         <DistantGalaxies />
-        <BigBangVisual year={currentYear} />
-        <SunSphere  onClick={() => onEventClick(SUN_CARD)} />
-        <EarthSphere onClick={() => onEventClick(EARTH_CARD)} />
-        <MoonSphere onClick={() => onEventClick(MOON_CARD)} />
+        <BigBangBackground year={currentYear} />
+        <SunSphere  onClick={() => onEventClick(SUN_CARD)}  flyTo={flyToBody} />
+        <EarthSphere onClick={() => onEventClick(EARTH_CARD)} flyTo={flyToBody} />
+        <MoonSphere onClick={() => onEventClick(MOON_CARD)}  flyTo={flyToBody} />
         {PLANETS.map(p => (
-          <PlanetSphere key={p.id} planet={p} onClick={() => onEventClick(toPlanetCard(p))} />
+          <PlanetSphere key={p.id} planet={p} onClick={() => onEventClick(toPlanetCard(p))} flyTo={flyToBody} />
         ))}
+        <AsteroidBelt />
+        <KuiperBelt />
+        {NEARBY_STARS.map(s => <NearbyStar key={s.name} {...s} />)}
+        {DWARF_PLANETS.map(d => <DwarfPlanetSphere key={d.id} dwarf={d} flyTo={flyToBody} />)}
 
         <CameraRig
           navKeysRef={navKeysRef}
@@ -741,6 +874,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
           initialAltKm={initialAltKm}
           onEarthApproachRef={onEarthApproachRef}
           nearEarthRef={nearEarthRef}
+          flyToRef={flyToRef}
         />
       </Canvas>
 
