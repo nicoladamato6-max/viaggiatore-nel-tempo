@@ -166,7 +166,7 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     // Scroll wheel: forward/back along camera direction
     const wd = wheelRef.current;
     if (wd !== 0) {
-      camera.position.addScaledVector(dir, -wd * speed * 5);
+      camera.position.addScaledVector(dir, -wd * speed * 15);
       (wheelRef as React.MutableRefObject<number>).current = 0;
     }
 
@@ -346,6 +346,8 @@ export function CosmicScene({ events, locale, flyTo, onEventClick, initialAltKm 
   const jumpRef           = useRef<THREE.Vector3 | null>(null);
   const cameraPosRef      = useRef(new THREE.Vector3(0, 0.05, 0));
   const mouseRef          = useRef({ down: false, lastX: 0, lastY: 0 });
+  const lastTXRef         = useRef(0);
+  const lastTYRef         = useRef(0);
   const hudAltRef         = useRef<HTMLSpanElement | null>(null);
   const hudZoneRef        = useRef<HTMLSpanElement | null>(null);
   const distAURef         = useRef(0.05);
@@ -382,21 +384,8 @@ export function CosmicScene({ events, locale, flyTo, onEventClick, initialAltKm 
     return () => { window.removeEventListener('mousemove', move); window.removeEventListener('mouseup', up); };
   }, []);
 
-  // Touch drag (mobile)
-  useEffect(() => {
-    let lastTX = 0, lastTY = 0;
-    const ts = (e: TouchEvent) => { lastTX = e.touches[0].clientX; lastTY = e.touches[0].clientY; };
-    const tm = (e: TouchEvent) => {
-      const dx = e.touches[0].clientX - lastTX;
-      const dy = e.touches[0].clientY - lastTY;
-      lastTX = e.touches[0].clientX; lastTY = e.touches[0].clientY;
-      yawRef.current   -= dx * 0.004;
-      pitchRef.current  = Math.max(-1.5, Math.min(1.5, pitchRef.current - dy * 0.004));
-    };
-    window.addEventListener('touchstart', ts, { passive: true });
-    window.addEventListener('touchmove',  tm, { passive: true });
-    return () => { window.removeEventListener('touchstart', ts); window.removeEventListener('touchmove', tm); };
-  }, []);
+  // Touch drag gestito via React onTouchStart/onTouchMove sull'outer div,
+  // così NavPad.onTouchStart con stopPropagation() previene correttamente il drag.
 
   // FlyTo da App (ricerca pianeta/luna/sole)
   useEffect(() => {
@@ -441,8 +430,21 @@ export function CosmicScene({ events, locale, flyTo, onEventClick, initialAltKm 
         mouseRef.current = { down: true, lastX: e.clientX, lastY: e.clientY };
       }}
       onWheel={e => {
-        e.preventDefault();
-        (wheelRef as React.MutableRefObject<number>).current += e.deltaY * 0.001;
+        (wheelRef as React.MutableRefObject<number>).current += Math.sign(e.deltaY);
+      }}
+      onTouchStart={e => {
+        if (e.touches.length === 0) return;
+        lastTXRef.current = e.touches[0].clientX;
+        lastTYRef.current = e.touches[0].clientY;
+      }}
+      onTouchMove={e => {
+        if (e.touches.length === 0) return;
+        const dx = e.touches[0].clientX - lastTXRef.current;
+        const dy = e.touches[0].clientY - lastTYRef.current;
+        lastTXRef.current = e.touches[0].clientX;
+        lastTYRef.current = e.touches[0].clientY;
+        yawRef.current   -= dx * 0.004;
+        pitchRef.current  = Math.max(-1.5, Math.min(1.5, pitchRef.current - dy * 0.004));
       }}
     >
       <Canvas
