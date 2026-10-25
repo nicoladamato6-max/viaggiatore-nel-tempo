@@ -53,15 +53,12 @@ function getVisualRadius(radiusM: number): number {
   return Math.max(0.0006, radiusM * M_TO_AU * 20); // era 60x, ora 20x
 }
 
-// ── Texture — GitHub raw (CORS *, file stabili da anni nel repo three.js) ─────
-// jsDelivr non distribuisce /examples/ nell'npm bundle → 404
+// ── Texture — GitHub raw (solo terra/luna disponibili nel repo three.js) ────────
 const _TEX = 'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/';
 const PLANET_TEXTURES: Record<string, string> = {
-  terra:   _TEX + 'earth_atmos_2048.jpg',
-  luna:    _TEX + 'moon_1024.jpg',
-  marte:   _TEX + 'mars_1k_color.jpg',
-  giove:   _TEX + 'jupiter2_1k.jpg',
-  // Saturno, Venere, Mercurio, Urano, Nettuno: non presenti nel repo three.js
+  terra: _TEX + 'earth_atmos_2048.jpg',
+  luna:  _TEX + 'moon_1024.jpg',
+  // altri pianeti: texture procedurali via canvas (vedi PROC_TEXTURES)
 };
 
 function applyTexture(mesh: THREE.Mesh | null, url: string) {
@@ -72,6 +69,76 @@ function applyTexture(mesh: THREE.Mesh | null, url: string) {
     mat.color.set(0xffffff);
     mat.needsUpdate = true;
   });
+}
+
+// ── Texture procedurali su canvas per i 7 pianeti ─────────────────────────────
+function _makeProc(w: number, h: number, fn: (ctx: CanvasRenderingContext2D) => void): THREE.CanvasTexture {
+  const c = document.createElement('canvas');
+  c.width = w; c.height = h;
+  fn(c.getContext('2d')!);
+  return new THREE.CanvasTexture(c);
+}
+
+const _procCache: Record<string, THREE.CanvasTexture> = {};
+const PROC_TEX_FNS: Record<string, () => THREE.CanvasTexture> = {
+  mercurio: () => _makeProc(256, 128, ctx => {
+    ctx.fillStyle = '#888077'; ctx.fillRect(0, 0, 256, 128);
+    for (let i = 0; i < 400; i++) {
+      const x = Math.random() * 256, y = Math.random() * 128, r = Math.random() * 4 + 1;
+      const s = Math.floor(80 + Math.random() * 60);
+      ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgb(${s},${s - 10},${s - 15})`; ctx.fill();
+    }
+  }),
+  venere: () => _makeProc(512, 256, ctx => {
+    const g = ctx.createLinearGradient(0, 0, 0, 256);
+    g.addColorStop(0, '#e8c070'); g.addColorStop(0.5, '#d4a040'); g.addColorStop(1, '#e8c070');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, 512, 256);
+    for (let i = 0; i < 20; i++) {
+      const y = Math.random() * 256;
+      ctx.fillStyle = `rgba(${Math.floor(180 + Math.random()*40)},${Math.floor(110 + Math.random()*30)},30,0.3)`;
+      ctx.fillRect(0, y, 512, 3 + Math.random() * 7);
+    }
+  }),
+  marte: () => _makeProc(512, 256, ctx => {
+    ctx.fillStyle = '#b04422'; ctx.fillRect(0, 0, 512, 256);
+    ctx.fillStyle = '#e8ddd0'; ctx.fillRect(0, 0, 512, 20); ctx.fillRect(0, 236, 512, 20);
+    for (let i = 0; i < 8; i++) {
+      ctx.fillStyle = `rgba(60,20,10,${0.2 + Math.random() * 0.35})`;
+      ctx.fillRect(Math.random() * 400, Math.random() * 180 + 28, 80 + Math.random() * 120, 25 + Math.random() * 55);
+    }
+  }),
+  giove: () => _makeProc(512, 256, ctx => {
+    const bands = ['#c8a87a','#e0c090','#b8906a','#d4b880','#c89060','#e8d0a0','#b87840','#d0a060'];
+    const bh = 256 / bands.length;
+    bands.forEach((col, i) => { ctx.fillStyle = col; ctx.fillRect(0, i * bh, 512, bh + 1); });
+    ctx.fillStyle = '#b84828'; ctx.beginPath(); ctx.ellipse(170, 145, 38, 22, 0, 0, Math.PI * 2); ctx.fill();
+  }),
+  saturno: () => _makeProc(512, 256, ctx => {
+    ctx.fillStyle = '#d8c898'; ctx.fillRect(0, 0, 512, 256);
+    for (let i = 0; i < 14; i++) {
+      const y = 14 + i * 16;
+      ctx.fillStyle = `rgba(175,148,75,${0.12 + Math.random() * 0.22})`;
+      ctx.fillRect(0, y, 512, 6 + Math.random() * 8);
+    }
+  }),
+  urano: () => _makeProc(256, 128, ctx => {
+    const g = ctx.createLinearGradient(0, 0, 256, 0);
+    g.addColorStop(0, '#5accd8'); g.addColorStop(1, '#8aeaf2');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, 256, 128);
+  }),
+  nettuno: () => _makeProc(256, 128, ctx => {
+    const g = ctx.createLinearGradient(0, 0, 0, 128);
+    g.addColorStop(0, '#1a3ae0'); g.addColorStop(0.5, '#2050c8'); g.addColorStop(1, '#1020a8');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, 256, 128);
+    ctx.fillStyle = 'rgba(210,220,255,0.35)'; ctx.fillRect(0, 46, 256, 10);
+  }),
+};
+
+function getProcTex(id: string): THREE.CanvasTexture | null {
+  if (!PROC_TEX_FNS[id]) return null;
+  if (!_procCache[id]) _procCache[id] = PROC_TEX_FNS[id]();
+  return _procCache[id];
 }
 
 // ── Cards per InfoPanel ─────────────────────────────────────────────────────
@@ -401,11 +468,11 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
 
   useFrame((_, delta) => {
     const dist    = camera.position.length();
-    const maxSpd  = Math.max(8e-7, dist * 0.025);
+    const maxSpd  = Math.max(8e-8, dist * 0.006);
     const keys    = navKeysRef.current!;
-    const boost   = keys.has('ShiftLeft') || keys.has('ShiftRight') ? 8 : 1;
-    const accel   = maxSpd * 5 * boost;
-    const friction = Math.exp(-delta / 0.18);
+    const boost   = keys.has('ShiftLeft') || keys.has('ShiftRight') ? 5 : 1;
+    const accel   = maxSpd * 3 * boost;
+    const friction = Math.exp(-delta / 0.07);
 
     camera.rotation.y = yawRef.current!;
     camera.rotation.x = pitchRef.current!;
@@ -416,6 +483,7 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     let hasInput = false;
 
     if (keys.has('Space')) velRef.current.set(0, 0, 0);
+    if (keys.has('BrakePad') || keys.has('KeyF')) velRef.current.multiplyScalar(Math.pow(0.04, delta));
 
     if (keys.has('KeyW') || keys.has('ArrowUp'))   { velRef.current.addScaledVector(dir,    accel * delta); hasInput = true; }
     if (keys.has('KeyS') || keys.has('ArrowDown'))  { velRef.current.addScaledVector(dir,   -accel * delta); hasInput = true; }
@@ -553,7 +621,17 @@ function PlanetSphere({ planet, onClick, flyTo, show = true }: { planet: typeof 
   const vr = getVisualRadius(planet.radius);
   const isSaturn = planet.id === 'saturno';
   const texUrl = PLANET_TEXTURES[planet.id];
-  useEffect(() => { if (texUrl) applyTexture(meshRef.current, texUrl); }, [texUrl]);
+  useEffect(() => {
+    if (texUrl) {
+      applyTexture(meshRef.current, texUrl);
+    } else {
+      const proc = getProcTex(planet.id);
+      if (proc && meshRef.current) {
+        const mat = meshRef.current.material as THREE.MeshStandardMaterial;
+        mat.map = proc; mat.color.set(0xffffff); mat.needsUpdate = true;
+      }
+    }
+  }, [texUrl, planet.id]); // eslint-disable-line react-hooks/exhaustive-deps
   const PLANET_ICONS: Record<string, string> = {
     mercurio: '🪨', venere: '🌫️', marte: '🔴', giove: '🪐', saturno: '💫',
     urano: '🔵', nettuno: '🌊',
@@ -680,7 +758,7 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
   const press   = (code: string) => navKeysRef.current!.add(code);
   const release = (code: string) => navKeysRef.current!.delete(code);
 
-  const speedMS = distAU * AU * 0.004;
+  const speedMS = distAU * AU * 0.006;
   function fmtSpeed(ms: number): string {
     const c = 299_792_458;
     if (ms >= c * 0.001) return `${(ms / c * 100).toFixed(2)}% c`;
@@ -712,13 +790,14 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
 
   return (
     <div
-      style={{ position: 'absolute', bottom: 12, left: '50%', transform: 'translateX(-50%)', zIndex: 200, pointerEvents: 'all', display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'center', background: 'rgba(0,8,20,0.70)', border: '1px solid rgba(100,180,255,0.18)', borderRadius: 12, padding: '8px 12px', backdropFilter: 'blur(10px)' }}
+      style={{ position: 'absolute', bottom: 12, left: '50%', transform: 'translateX(-50%)', zIndex: 200, pointerEvents: 'all', display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'center', background: 'rgba(0,8,20,0.72)', border: '1px solid rgba(100,180,255,0.18)', borderRadius: 12, padding: '8px 14px', backdropFilter: 'blur(10px)' }}
       onMouseDown={e => e.stopPropagation()}
       onTouchStart={e => e.stopPropagation()}
     >
       <div style={{ color: '#4a6680', fontSize: '0.55rem', marginBottom: 2 }}>
-        ~{fmtSpeed(speedMS)} · Shift ×5
+        ~{fmtSpeed(speedMS)}
       </div>
+      {/* Direzionali */}
       <div style={{ display: 'flex', gap: 4 }}>
         <Btn code="KeyW" label="▲" />
         <Btn code="KeyS" label="▼" />
@@ -729,10 +808,17 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
       <div style={{ display: 'flex', gap: 4 }}>
         <Btn code="KeyA" label="◀" />
         <Btn code="KeyD" label="▶" />
-        <Btn code="Space" label="⏹" />
       </div>
-      <div style={{ color: '#2a3a4a', fontSize: '0.52rem', marginTop: 2 }}>
-        {locale === 'it' ? '▲▼=avanti/indietro · ⬆⬇=alto/basso' : '▲▼=fwd/back · ⬆⬇=up/dn'}
+      {/* Velocità */}
+      <div style={{ display: 'flex', gap: 4, marginTop: 2 }}>
+        <Btn code="BrakePad"  label="🐢" />
+        <Btn code="Space"     label="⏹" />
+        <Btn code="ShiftLeft" label="⚡" />
+      </div>
+      <div style={{ color: '#3a4a5a', fontSize: '0.50rem', display: 'flex', gap: 8 }}>
+        <span>{locale === 'it' ? 'Frena' : 'Brake'}</span>
+        <span>Stop</span>
+        <span>Turbo</span>
       </div>
     </div>
   );
@@ -865,33 +951,44 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
   useEffect(() => {
     if (!flyTo || flyTo.kind !== 'body') return;
     const eid = flyTo.entityId;
+
+    function orient(dest: THREE.Vector3, target: THREE.Vector3) {
+      const d = target.clone().sub(dest).normalize();
+      (yawRef as React.MutableRefObject<number>).current = Math.atan2(d.x, -d.z);
+      (pitchRef as React.MutableRefObject<number>).current = Math.asin(Math.max(-1, Math.min(1, d.y)));
+    }
+
     if (eid === 'luna') {
       const [mx, my, mz] = getMoonPosition();
-      const moonAU = new THREE.Vector3(mx * M_TO_AU, my * M_TO_AU, mz * M_TO_AU);
-      const off    = moonAU.clone().normalize().multiplyScalar(MOON_VR * 8);
-      jumpRef.current = moonAU.clone().sub(off);
+      const target = new THREE.Vector3(mx * M_TO_AU, my * M_TO_AU, mz * M_TO_AU);
+      const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(MOON_VR * 8));
+      jumpRef.current = dest;
+      orient(dest, target);
     } else if (eid === 'sole') {
-      const sunV = new THREE.Vector3(...SUN_POS);
-      const off  = sunV.clone().normalize().multiplyScalar(SUN_VR * 4);
-      jumpRef.current = sunV.sub(off);
+      const target = new THREE.Vector3(...SUN_POS);
+      const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(SUN_VR * 4));
+      jumpRef.current = dest;
+      orient(dest, target);
     } else if (eid.startsWith('planet-')) {
       const pid = eid.replace('planet-', '');
       const pl  = PLANETS.find(p => p.id === pid);
       if (pl) {
         const [px, py, pz] = getPlanetPosition(pl);
-        const pAU = new THREE.Vector3(px * M_TO_AU, py * M_TO_AU, pz * M_TO_AU);
-        const vr  = getVisualRadius(pl.radius);
-        const off = pAU.clone().normalize().multiplyScalar(vr * 6);
-        jumpRef.current = pAU.sub(off);
+        const target = new THREE.Vector3(px * M_TO_AU, py * M_TO_AU, pz * M_TO_AU);
+        const vr     = getVisualRadius(pl.radius);
+        const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(vr * 6));
+        jumpRef.current = dest;
+        orient(dest, target);
       }
     } else if (eid.startsWith('dwarf-')) {
       const dwarfId = eid.replace('dwarf-', '');
       const dw = DWARF_PLANETS.find(d => d.id === dwarfId);
       if (dw) {
-        const dAU = new THREE.Vector3(...dw.pos);
-        const vr  = Math.max(0.0004, dw.radiusM * M_TO_AU * 20);
-        const off = dAU.clone().normalize().multiplyScalar(vr * 8);
-        jumpRef.current = dAU.clone().sub(off);
+        const target = new THREE.Vector3(...dw.pos);
+        const vr     = Math.max(0.0004, dw.radiusM * M_TO_AU * 20);
+        const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(vr * 8));
+        jumpRef.current = dest;
+        orient(dest, target);
       }
     } else if (eid.startsWith('star-')) {
       const slug = eid.replace('star-', '');
@@ -906,9 +1003,10 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
       };
       const star = NEARBY_STARS.find(s => s.name === slugMap[slug]);
       if (star) {
-        const sAU = new THREE.Vector3(...star.pos);
-        const off = sAU.clone().normalize().multiplyScalar(5);
-        jumpRef.current = sAU.clone().sub(off);
+        const target = new THREE.Vector3(...star.pos);
+        const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(5));
+        jumpRef.current = dest;
+        orient(dest, target);
       }
     }
   }, [flyTo]);
