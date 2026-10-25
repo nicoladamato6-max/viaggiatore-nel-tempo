@@ -380,17 +380,33 @@ function EllipGalaxy({ pos, rx, ry, rz, rot, color, n, label, galaxyId, show = t
     return g;
   }, [n, rx, ry, rz, color]);  // eslint-disable-line react-hooks/exhaustive-deps
 
-  const handleClick = (galaxyId && onLabelClick)
-    ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick(galaxyId); }
+  const onGalaxyClick = (galaxyId && onLabelClick)
+    ? () => { onLabelClick(galaxyId); }
     : undefined;
+  const handleLabelClick = onGalaxyClick
+    ? (e: React.MouseEvent) => { e.stopPropagation(); onGalaxyClick(); }
+    : undefined;
+  // Label Y offset: for very flat galaxies (small ry) the label sits inside the disk when viewed edge-on;
+  // use rx as a fallback to place the label clearly above the visual extent.
+  const labelY = Math.max(ry * 1.5, rx * 0.35, 15);
+  // Click radius: largest semi-axis for reliable Three.js raycasting click target
+  const clickR = Math.max(rx, ry, rz) * 0.85;
   return (
     <group position={pos} rotation={rot} visible={show}>
       <points geometry={geo}>
         <pointsMaterial size={1.6} sizeAttenuation={false} vertexColors transparent opacity={0.72} />
       </points>
-      <Html center position={[0, ry * 1.4, 0]}
-        style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none', ...(handleClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
-        onClick={handleClick}
+      {/* Invisible sphere — Three.js raycasting click target (more reliable than Html pointer-events) */}
+      {onGalaxyClick && (
+        <mesh onClick={(e) => { e.stopPropagation(); onGalaxyClick(); }}>
+          <sphereGeometry args={[clickR, 8, 8]} />
+          <meshBasicMaterial transparent opacity={0} depthWrite={false} />
+        </mesh>
+      )}
+      <Html center position={[0, labelY, 0]}
+        style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none',
+          ...(handleLabelClick ? { pointerEvents: 'auto', cursor: 'pointer', zIndex: 10 } : {}) }}
+        onClick={handleLabelClick}
       >
         {label}
       </Html>
@@ -474,12 +490,20 @@ function DistantGalaxies({ show = true, onLabelClick }: { show?: boolean; onLabe
         <points geometry={androGeo}>
           <pointsMaterial size={1.8} sizeAttenuation={false} vertexColors transparent opacity={0.78} />
         </points>
-        <mesh>
+        <mesh onClick={onLabelClick ? (e) => { e.stopPropagation(); onLabelClick('galaxy-andromeda'); } : undefined}>
           <sphereGeometry args={[9, 8, 8]} />
           <meshBasicMaterial color="#ffe6b0" transparent opacity={0.75} />
         </mesh>
-        <Html center position={[0, 20, 0]}
-          style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none', ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
+        {/* Invisible large sphere for reliable click detection */}
+        {onLabelClick && (
+          <mesh onClick={(e) => { e.stopPropagation(); onLabelClick('galaxy-andromeda'); }}>
+            <sphereGeometry args={[180, 8, 8]} />
+            <meshBasicMaterial transparent opacity={0} depthWrite={false} />
+          </mesh>
+        )}
+        <Html center position={[0, 200, 0]}
+          style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none',
+            ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer', zIndex: 10 } : {}) }}
           onClick={onLabelClick ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick('galaxy-andromeda'); } : undefined}
         >
           Galassia di Andromeda (M31)
