@@ -166,10 +166,11 @@ interface Props {
   currentYear: number;
   onNavigate: (params: { year?: number; flyTo?: FlyTarget }) => void;
   onEraLaunched?: (data: EraLaunchData) => void;
+  bodyItems?: HistoricalEvent[];
 }
 
 // ── Componente ────────────────────────────────────────────────────────────────
-export function TimeMachine({ locale, events: _events, currentYear: _currentYear, onNavigate, onEraLaunched }: Props) {
+export function TimeMachine({ locale, events: _events, currentYear: _currentYear, onNavigate, onEraLaunched, bodyItems = [] }: Props) {
   const [open,           setOpen]           = useState(false);
   const [yearText,       setYearText]       = useState('');
   const [place,          setPlace]          = useState('');
@@ -241,19 +242,40 @@ export function TimeMachine({ locale, events: _events, currentYear: _currentYear
 
     if (hasPlace) {
       addLog(it ? '▸ Triangolazione coordinate spaziali…' : '▸ Triangulating spatial coordinates…');
-      try {
-        const geo = await geocode(place.trim(), ctrl.signal);
-        if (geo) {
-          // 20 000m = zoom livello 12-13, affidabile ovunque su MapTiler satellite free tier
-          flyTo = { kind: 'geo', lat: geo.lat, lng: geo.lng, ts: Date.now(), range: 20_000 };
-          const shortName = geo.name.split(',')[0];
-          addLog(`▸ ${it ? 'Destinazione confermata' : 'Destination confirmed'}: ${shortName}`);
-        } else {
-          addLog(it ? '✗ Destinazione non rilevata nel database spaziale.' : '✗ Destination not found in spatial database.');
+
+      // Controlla prima se il testo corrisponde a un corpo celeste noto
+      const query = place.trim().toLowerCase();
+      const bodyMatch = bodyItems.find(b => b.title.toLowerCase() === query);
+      if (bodyMatch) {
+        const isSolarSystem =
+          bodyMatch.id === 'luna' || bodyMatch.id === 'sole' ||
+          bodyMatch.id.startsWith('planet-') || bodyMatch.id.startsWith('moon-') ||
+          bodyMatch.id.startsWith('dwarf-') || bodyMatch.id.startsWith('star-');
+        flyTo = { kind: 'body', entityId: bodyMatch.id, ts: Date.now() };
+        // Se l'anno non è specificato, imposta quello ottimale per la visibilità del corpo
+        const bodyYear = isSolarSystem ? -4_550_000_000 : -9_000_000_000;
+        if (year === null) onNavigate({ year: bodyYear, flyTo });
+        else onNavigate({ year, flyTo });
+        addLog(`▸ ${it ? 'Corpo celeste rilevato' : 'Celestial body detected'}: ${bodyMatch.title}`);
+        addLog(it ? '⚡ PROPULSIONE ATTIVATA — buon viaggio.' : '⚡ PROPULSION ACTIVATED — safe travels.');
+        setLaunched(true);
+        setLoading(false);
+        return;
+      } else {
+        try {
+          const geo = await geocode(place.trim(), ctrl.signal);
+          if (geo) {
+            // 20 000m = zoom livello 12-13, affidabile ovunque su MapTiler satellite free tier
+            flyTo = { kind: 'geo', lat: geo.lat, lng: geo.lng, ts: Date.now(), range: 20_000 };
+            const shortName = geo.name.split(',')[0];
+            addLog(`▸ ${it ? 'Destinazione confermata' : 'Destination confirmed'}: ${shortName}`);
+          } else {
+            addLog(it ? '✗ Destinazione non rilevata nel database spaziale.' : '✗ Destination not found in spatial database.');
+          }
+        } catch {
+          if (!ctrl.signal.aborted)
+            addLog(it ? '✗ Errore di triangolazione.' : '✗ Triangulation error.');
         }
-      } catch {
-        if (!ctrl.signal.aborted)
-          addLog(it ? '✗ Errore di triangolazione.' : '✗ Triangulation error.');
       }
     }
 

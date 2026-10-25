@@ -61,11 +61,57 @@ const SUN_SEARCH: HistoricalEvent = {
 const PLANET_SEARCH_ITEMS = PLANETS.map(toPlanetSearchItem);
 const MOON_SEARCH_ITEMS   = MOONS.map(toMoonSearchItem);
 
+// Pianeti nani — cercabili come corpi celesti (id: dwarf-<id>)
+const DWARF_PLANET_SEARCHES: HistoricalEvent[] = [
+  { id: 'dwarf-plutone',  title: 'Plutone',  year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Pianeta nano nella Cintura di Kuiper. Scoperto nel 1930, reclassificato nel 2006. Diametro 2.376 km, 5 lune (Caronte è la più grande).',
+    wikipediaSlug: 'Pluto' },
+  { id: 'dwarf-eris',     title: 'Eris',     year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Pianeta nano oltre Nettuno, più massiccio di Plutone. Scoperto nel 2005, la sua scoperta portò alla reclassificazione di Plutone.',
+    wikipediaSlug: 'Eris_(dwarf_planet)' },
+  { id: 'dwarf-cerere',   title: 'Cerere',   year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Il più grande oggetto della Cintura degli asteroidi, diametro 945 km. Unico pianeta nano nel Sistema Solare interno.',
+    wikipediaSlug: 'Ceres_(dwarf_planet)' },
+  { id: 'dwarf-makemake', title: 'Makemake', year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Pianeta nano nella Cintura di Kuiper. Ha una piccola luna scoperta nel 2016. Superficie di ghiaccio di metano e azoto.',
+    wikipediaSlug: 'Makemake' },
+  { id: 'dwarf-haumea',   title: 'Haumea',   year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Pianeta nano dalla forma allungata (rotazione rapida di 3,9 ore). Ha un anello e due lune, Hi\'iaka e Namaka.',
+    wikipediaSlug: 'Haumea' },
+];
+
+// Stelle vicine — cercabili come corpi celesti (id: star-<slug>)
+const NEARBY_STAR_SEARCHES: HistoricalEvent[] = [
+  { id: 'star-proxima',       title: 'Proxima Centauri', year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'La stella più vicina al Sole, a 4,24 anni luce. Nana rossa con un pianeta potenzialmente abitabile (Proxima b) nella zona abitabile.',
+    wikipediaSlug: 'Proxima_Centauri' },
+  { id: 'star-alpha-centauri', title: 'Alpha Centauri',  year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Sistema stellare triplo a 4,37 anni luce. Alpha Centauri A e B sono simili al Sole. La stella più brillante del cielo australe.',
+    wikipediaSlug: 'Alpha_Centauri' },
+  { id: 'star-barnard',        title: 'Stella di Barnard', year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Nana rossa a 5,96 anni luce, la stella singola più vicina al Sole. Ha il moto proprio più alto osservato di qualsiasi stella.',
+    wikipediaSlug: 'Barnard\'s_Star' },
+  { id: 'star-sirius',         title: 'Sirio',            year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'La stella più luminosa del cielo notturno, a 8,6 anni luce. Sistema binario: Sirio A e Sirio B (nana bianca). Sacra per gli antichi Egizi.',
+    wikipediaSlug: 'Sirius' },
+  { id: 'star-vega',           title: 'Vega',             year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Stella brillante nella costellazione della Lira, a 25 anni luce. Stella di riferimento per la scala delle magnitudini. Era il polo nord celeste 12.000 anni fa.',
+    wikipediaSlug: 'Vega' },
+  { id: 'star-betelgeuse',     title: 'Betelgeuse',       year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Supergigante rossa nell\'Orione, a ~700 anni luce. Una delle stelle più grandi conosciute — se sostituisse il Sole arriverebbe fino a Giove. Esploderà come supernova.',
+    wikipediaSlug: 'Betelgeuse' },
+  { id: 'star-rigel',          title: 'Rigel',            year: -4_600_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Supergigante blu-bianca nell\'Orione, a ~860 anni luce. 7a stella più luminosa del cielo, con luminosità 120.000 volte quella del Sole.',
+    wikipediaSlug: 'Rigel' },
+];
+
 // ID dei corpi celesti (matchano gli ID entità CesiumJS o lune che volano verso il genitore)
 const BODY_IDS = new Set([
   'luna', 'sole',
   ...PLANETS.map(p => `planet-${p.id}`),
   ...MOONS.map(m => `moon-${m.id}`),
+  ...DWARF_PLANET_SEARCHES.map(d => d.id),
+  ...NEARBY_STAR_SEARCHES.map(s => s.id),
 ]);
 
 // ── Scala piecewise ridistribuita per densità informativa ────────────────────
@@ -273,7 +319,12 @@ function AppInner() {
   const ALL_SEARCHABLE = useMemo(() => {
     const loadedIds = new Set(ALL_EVENTS.map(e => e.id));
     const indexOnly = searchIndex.filter(e => !loadedIds.has(e.id));
-    return [...ALL_EVENTS, ...indexOnly, MOON_SEARCH, SUN_SEARCH, ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS];
+    return [
+      ...ALL_EVENTS, ...indexOnly,
+      MOON_SEARCH, SUN_SEARCH,
+      ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS,
+      ...DWARF_PLANET_SEARCHES, ...NEARBY_STAR_SEARCHES,
+    ];
   }, [ALL_EVENTS, searchIndex]);
 
   const [selectedEvent, setSelectedEvent] = useState<HistoricalEvent | null>(null);
@@ -336,8 +387,13 @@ function AppInner() {
     }
 
     if (BODY_IDS.has(event.id)) {
-      // Corpi celesti → sempre in modalità cosmica prima del flyTo
-      const cosmicYear = -9_000_000_000;
+      // Corpi celesti → modalità cosmica; -4.55B è l'unico range dove:
+      // (a) year < -4.5B → isCosmicView=true  (b) year >= -4.6B → solar system visible
+      const isSolarSystemBody =
+        event.id === 'luna' || event.id === 'sole' ||
+        event.id.startsWith('planet-') || event.id.startsWith('moon-') ||
+        event.id.startsWith('dwarf-') || event.id.startsWith('star-');
+      const cosmicYear = isSolarSystemBody ? -4_550_000_000 : -9_000_000_000;
       setOverrideYear(cosmicYear);
       setSliderValue(yearToSlider(cosmicYear));
       setFlyTo({ kind: 'body', entityId: event.id, ts: Date.now() });
@@ -598,6 +654,7 @@ function AppInner() {
             locale={locale}
             events={visibleEvents}
             currentYear={currentYear}
+            bodyItems={[...DWARF_PLANET_SEARCHES, ...NEARBY_STAR_SEARCHES, ...PLANET_SEARCH_ITEMS, MOON_SEARCH, SUN_SEARCH]}
             onNavigate={({ year, flyTo: ft }) => {
               if (year !== undefined) {
                 setSliderValue(yearToSlider(year));

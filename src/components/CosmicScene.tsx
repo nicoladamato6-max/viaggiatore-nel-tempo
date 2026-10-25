@@ -894,6 +894,32 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         const off = pAU.clone().normalize().multiplyScalar(vr * 6);
         jumpRef.current = pAU.sub(off);
       }
+    } else if (eid.startsWith('dwarf-')) {
+      const dwarfId = eid.replace('dwarf-', '');
+      const dw = DWARF_PLANETS.find(d => d.id === dwarfId);
+      if (dw) {
+        const dAU = new THREE.Vector3(...dw.pos);
+        const vr  = Math.max(0.0004, dw.radiusM * M_TO_AU * 20);
+        const off = dAU.clone().normalize().multiplyScalar(vr * 8);
+        jumpRef.current = dAU.clone().sub(off);
+      }
+    } else if (eid.startsWith('star-')) {
+      const slug = eid.replace('star-', '');
+      const slugMap: Record<string, string> = {
+        'proxima':        'Proxima Centauri',
+        'alpha-centauri': 'Alpha Centauri',
+        'barnard':        'Stella di Barnard',
+        'sirius':         'Sirio',
+        'vega':           'Vega',
+        'betelgeuse':     'Betelgeuse',
+        'rigel':          'Rigel',
+      };
+      const star = NEARBY_STARS.find(s => s.name === slugMap[slug]);
+      if (star) {
+        const sAU = new THREE.Vector3(...star.pos);
+        const off = sAU.clone().normalize().multiplyScalar(5);
+        jumpRef.current = sAU.clone().sub(off);
+      }
     }
   }, [flyTo]);
 
