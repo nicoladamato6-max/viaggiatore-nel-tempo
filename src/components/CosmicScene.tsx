@@ -137,6 +137,59 @@ const PROC_TEX_FNS: Record<string, () => THREE.CanvasTexture> = {
     ctx.fillStyle = g; ctx.fillRect(0, 0, 256, 128);
     ctx.fillStyle = 'rgba(210,220,255,0.35)'; ctx.fillRect(0, 46, 256, 10);
   }),
+  sole: () => _makeProc(512, 256, ctx => {
+    // Fotosfera: gradiente di plasma caldo
+    const base = ctx.createLinearGradient(0, 0, 512, 256);
+    base.addColorStop(0,    '#fff2a0');
+    base.addColorStop(0.25, '#ffdd00');
+    base.addColorStop(0.6,  '#ffa000');
+    base.addColorStop(1,    '#ff6600');
+    ctx.fillStyle = base; ctx.fillRect(0, 0, 512, 256);
+
+    // Granulazione: 700 celle di convezione con luminosità variabile
+    let sr = 0xDEAD_BEEF >>> 0; // LCG deterministico
+    const rng = () => { sr = Math.imul(sr ^ (sr >>> 16), 0x45d9f3b) >>> 0; return sr / 4294967296; };
+    for (let i = 0; i < 700; i++) {
+      const x = rng() * 512, y = rng() * 256, r = 3 + rng() * 13;
+      const b = rng();
+      const gr = ctx.createRadialGradient(x, y, 0, x, y, r);
+      gr.addColorStop(0, b > 0.6
+        ? `rgba(255,255,${Math.floor(b * 190)},0.5)`
+        : `rgba(210,${Math.floor(40 + b * 70)},0,0.38)`);
+      gr.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    }
+
+    // 3 gruppi di macchie solari con penombra + ombra
+    for (let g = 0; g < 3; g++) {
+      const gx = (0.15 + rng() * 0.7) * 512, gy = (0.2 + rng() * 0.6) * 256;
+      for (let j = 0, n = 2 + Math.floor(rng() * 3); j < n; j++) {
+        const x = gx + (rng() - 0.5) * 55, y = gy + (rng() - 0.5) * 22, r = 7 + rng() * 13;
+        const pen = ctx.createRadialGradient(x, y, r * 0.25, x, y, r * 2.4);
+        pen.addColorStop(0, 'rgba(55,12,0,0.78)'); pen.addColorStop(1, 'rgba(170,60,0,0)');
+        ctx.fillStyle = pen; ctx.beginPath(); ctx.arc(x, y, r * 2.4, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = 'rgba(12,2,0,0.90)';
+        ctx.beginPath(); ctx.arc(x, y, r * 0.5, 0, Math.PI * 2); ctx.fill();
+      }
+    }
+
+    // Faculae: zone brillanti vicino ai poli
+    for (let i = 0; i < 20; i++) {
+      const x = rng() * 512, r = 12 + rng() * 24;
+      const y = rng() < 0.5 ? rng() * 256 * 0.2 : 256 * 0.8 + rng() * 256 * 0.2;
+      const fac = ctx.createRadialGradient(x, y, 0, x, y, r);
+      fac.addColorStop(0, 'rgba(255,255,200,0.48)'); fac.addColorStop(1, 'rgba(255,210,80,0)');
+      ctx.fillStyle = fac; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    }
+
+    // Oscuramento ai limbi (poli nell'equirettangolare)
+    const dk1 = ctx.createLinearGradient(0, 0, 0, 256 * 0.28);
+    dk1.addColorStop(0, 'rgba(35,6,0,0.65)'); dk1.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = dk1; ctx.fillRect(0, 0, 512, 256);
+    const dk2 = ctx.createLinearGradient(0, 256, 0, 256 * 0.72);
+    dk2.addColorStop(0, 'rgba(35,6,0,0.65)'); dk2.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = dk2; ctx.fillRect(0, 0, 512, 256);
+  }),
 };
 
 function getProcTex(id: string): THREE.CanvasTexture | null {
@@ -576,11 +629,46 @@ const LABEL_STYLE: React.CSSProperties = {
 type FlyToFn = (pos: THREE.Vector3, radius: number) => void;
 
 function SunSphere({ onClick, flyTo, show = true }: { onClick: () => void; flyTo: FlyToFn; show?: boolean }) {
+  const meshRef = useRef<THREE.Mesh | null>(null);
+
+  useEffect(() => {
+    const tex = getProcTex('sole');
+    if (!tex || !meshRef.current) return;
+    tex.wrapS = THREE.RepeatWrapping;
+    const mat = meshRef.current.material as THREE.MeshStandardMaterial;
+    mat.map = tex;
+    mat.emissiveMap = tex;
+    mat.needsUpdate = true;
+  }, []);
+
+  useFrame((_, delta) => {
+    // Rotazione solare lenta (simulazione periodo ~27 giorni)
+    const tex = getProcTex('sole');
+    if (tex) { tex.offset.x += delta * 0.003; tex.needsUpdate = false; }
+  });
+
   return (
     <group position={SUN_POS} visible={show}>
-      <mesh onClick={e => { e.stopPropagation(); onClick(); }}>
-        <sphereGeometry args={[SUN_VR, 24, 24]} />
-        <meshStandardMaterial color="#ffe040" emissive="#ff8800" emissiveIntensity={3} roughness={1} metalness={0} />
+      {/* Corona esterna — alone semi-trasparente */}
+      <mesh>
+        <sphereGeometry args={[SUN_VR * 2.4, 16, 16]} />
+        <meshBasicMaterial color="#ff5500" transparent opacity={0.055} side={THREE.BackSide} depthWrite={false} />
+      </mesh>
+      {/* Corona interna */}
+      <mesh>
+        <sphereGeometry args={[SUN_VR * 1.35, 16, 16]} />
+        <meshBasicMaterial color="#ffaa00" transparent opacity={0.10} side={THREE.BackSide} depthWrite={false} />
+      </mesh>
+      {/* Fotosfera con texture granulazione */}
+      <mesh ref={meshRef} onClick={e => { e.stopPropagation(); onClick(); }}>
+        <sphereGeometry args={[SUN_VR, 32, 32]} />
+        <meshStandardMaterial
+          color="#ff9900"
+          emissive="#ff6600"
+          emissiveIntensity={2.2}
+          roughness={1}
+          metalness={0}
+        />
       </mesh>
       <Html center position={[0, SUN_VR * 1.6, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
         onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...SUN_POS), SUN_VR); }}>
