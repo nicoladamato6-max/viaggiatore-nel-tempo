@@ -324,9 +324,10 @@ const GALAXY_LABEL_STYLE: React.CSSProperties = {
 };
 
 // Galassia ellittica semplice con etichetta — riutilizzabile per galassie nominate
-function EllipGalaxy({ pos, rx, ry, rz, rot, color, n, label, show = true }:
+function EllipGalaxy({ pos, rx, ry, rz, rot, color, n, label, galaxyId, show = true, onLabelClick }:
   { pos: [number,number,number]; rx: number; ry: number; rz: number;
-    rot: [number,number,number]; color: string; n: number; label: string; show?: boolean }) {
+    rot: [number,number,number]; color: string; n: number; label: string;
+    galaxyId?: string; show?: boolean; onLabelClick?: (id: string) => void }) {
   const geo = useMemo(() => {
     const c = new THREE.Color(color);
     const positions = new Float32Array(n * 3);
@@ -349,18 +350,26 @@ function EllipGalaxy({ pos, rx, ry, rz, rot, color, n, label, show = true }:
     return g;
   }, [n, rx, ry, rz, color]);  // eslint-disable-line react-hooks/exhaustive-deps
 
+  const handleClick = (galaxyId && onLabelClick)
+    ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick(galaxyId); }
+    : undefined;
   return (
     <group position={pos} rotation={rot} visible={show}>
       <points geometry={geo}>
         <pointsMaterial size={1.6} sizeAttenuation={false} vertexColors transparent opacity={0.72} />
       </points>
-      <Html center position={[0, ry * 1.4, 0]} style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none' }}>{label}</Html>
+      <Html center position={[0, ry * 1.4, 0]}
+        style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none', ...(handleClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
+        onClick={handleClick}
+      >
+        {label}
+      </Html>
     </group>
   );
 }
 
 // ── Galassie distanti — sistema a particelle (ispirato a Google Sky) ──────────
-function DistantGalaxies({ show = true }: { show?: boolean }) {
+function DistantGalaxies({ show = true, onLabelClick }: { show?: boolean; onLabelClick?: (id: string) => void }) {
   // Andromeda: disco a spirale ellittica, 8000 particelle, posizione simbolica ~4000 UA
   const androGeo = useMemo(() => {
     const N = 8000;
@@ -439,39 +448,53 @@ function DistantGalaxies({ show = true }: { show?: boolean }) {
           <sphereGeometry args={[9, 8, 8]} />
           <meshBasicMaterial color="#ffe6b0" transparent opacity={0.75} />
         </mesh>
+        <Html center position={[0, 20, 0]}
+          style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none', ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
+          onClick={onLabelClick ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick('galaxy-andromeda'); } : undefined}
+        >
+          Galassia di Andromeda (M31)
+        </Html>
       </group>
 
       {/* LMC — Grande Nube di Magellano, a sud */}
       <EllipGalaxy show={show} pos={[-750,-2900,500]} rot={[0.2,0.1,0.3]}
-        rx={32} ry={18} rz={28} color="#aaddff" n={1800} label="LMC — Grande Nube di Magellano" />
+        rx={32} ry={18} rz={28} color="#aaddff" n={1800} label="LMC — Grande Nube di Magellano"
+        galaxyId="galaxy-lmc" onLabelClick={onLabelClick} />
 
       {/* SMC — Piccola Nube di Magellano */}
       <EllipGalaxy show={show} pos={[-1050,-2650,820]} rot={[0.1,-0.2,0.15]}
-        rx={18} ry={12} rz={16} color="#99ccee" n={1000} label="SMC — Piccola Nube di Magellano" />
+        rx={18} ry={12} rz={16} color="#99ccee" n={1000} label="SMC — Piccola Nube di Magellano"
+        galaxyId="galaxy-smc" onLabelClick={onLabelClick} />
 
       {/* M33 — Triangolo (spirale vicina ad Andromeda) */}
       <EllipGalaxy show={show} pos={[2200,3100,-1800]} rot={[0.8,0.4,1.1]}
-        rx={55} ry={6} rz={40} color="#99aaff" n={2500} label="M33 — Triangolo" />
+        rx={55} ry={6} rz={40} color="#99aaff" n={2500} label="M33 — Triangolo"
+        galaxyId="galaxy-m33" onLabelClick={onLabelClick} />
 
       {/* M87 — Virgo A, gigante ellittica con jet */}
       <EllipGalaxy show={show} pos={[5800,-1200,3200]} rot={[0.3,0.7,0.2]}
-        rx={90} ry={75} rz={80} color="#ffdd99" n={3000} label="M87 — Vergine A" />
+        rx={90} ry={75} rz={80} color="#ffdd99" n={3000} label="M87 — Vergine A"
+        galaxyId="galaxy-m87" onLabelClick={onLabelClick} />
 
       {/* NGC 1300 — spirale barrata iconica */}
       <EllipGalaxy show={show} pos={[-4200,800,-5500]} rot={[1.2,0.3,0.6]}
-        rx={65} ry={7} rz={50} color="#aabbdd" n={2000} label="NGC 1300 — Spirale barrata" />
+        rx={65} ry={7} rz={50} color="#aabbdd" n={2000} label="NGC 1300 — Spirale barrata"
+        galaxyId="galaxy-ngc1300" onLabelClick={onLabelClick} />
 
       {/* Sombrero (M104) */}
       <EllipGalaxy show={show} pos={[3500,-4800,1200]} rot={[0.05,0.2,0.1]}
-        rx={70} ry={8} rz={52} color="#ddccaa" n={2500} label="M104 — Sombrero" />
+        rx={70} ry={8} rz={52} color="#ddccaa" n={2500} label="M104 — Sombrero"
+        galaxyId="galaxy-m104" onLabelClick={onLabelClick} />
 
       {/* Occhio del Gatto (M64 — Black Eye) */}
       <EllipGalaxy show={show} pos={[-1800,5200,2400]} rot={[0.4,-0.5,0.9]}
-        rx={50} ry={6} rz={38} color="#bbccff" n={1800} label="M64 — Black Eye" />
+        rx={50} ry={6} rz={38} color="#bbccff" n={1800} label="M64 — Black Eye"
+        galaxyId="galaxy-m64" onLabelClick={onLabelClick} />
 
       {/* Whirlpool (M51) — spirale con satellite */}
       <EllipGalaxy show={show} pos={[700,6500,-800]} rot={[1.5,0.2,0.4]}
-        rx={60} ry={5} rz={45} color="#aaccff" n={2200} label="M51 — Whirlpool" />
+        rx={60} ry={5} rz={45} color="#aaccff" n={2200} label="M51 — Whirlpool"
+        galaxyId="galaxy-m51" onLabelClick={onLabelClick} />
 
       {/* Campo di galassie distanti (2500–14000 UA) */}
       <points geometry={fieldGeo} visible={show}>
@@ -933,23 +956,44 @@ function KuiperBelt() {
 
 // ── Stelle vicine (simboliche — scala compressa per visibilità) ───────────────
 const NEARBY_STARS = [
-  { name: 'Proxima Centauri', pos: [-320,  50,  180] as [number,number,number], color: '#ff9980' },
-  { name: 'Alpha Centauri',   pos: [-310,  55,  190] as [number,number,number], color: '#ffffaa' },
-  { name: 'Stella di Barnard',pos: [  80, -200,  350] as [number,number,number], color: '#ffaa88' },
-  { name: 'Sirius',           pos: [ 450, -120,  -60] as [number,number,number], color: '#aaccff' },
-  { name: 'Vega',             pos: [-120,  380, -200] as [number,number,number], color: '#bbccff' },
-  { name: 'Betelgeuse',       pos: [ 600,  140,  300] as [number,number,number], color: '#ff6633' },
-  { name: 'Rigel',            pos: [ 580,  -80, -320] as [number,number,number], color: '#aabbff' },
+  { id: 'star-proxima',        name: 'Proxima Centauri', pos: [-320,  50,  180] as [number,number,number], color: '#ff9980' },
+  { id: 'star-alpha-centauri', name: 'Alpha Centauri',   pos: [-310,  55,  190] as [number,number,number], color: '#ffffaa' },
+  { id: 'star-barnard',        name: 'Stella di Barnard',pos: [  80, -200,  350] as [number,number,number], color: '#ffaa88' },
+  { id: 'star-sirius',         name: 'Sirio',            pos: [ 450, -120,  -60] as [number,number,number], color: '#aaccff' },
+  { id: 'star-vega',           name: 'Vega',             pos: [-120,  380, -200] as [number,number,number], color: '#bbccff' },
+  { id: 'star-betelgeuse',     name: 'Betelgeuse',       pos: [ 600,  140,  300] as [number,number,number], color: '#ff6633' },
+  { id: 'star-rigel',          name: 'Rigel',            pos: [ 580,  -80, -320] as [number,number,number], color: '#aabbff' },
 ];
 
-function NearbyStar({ name, pos, color, show = true }: { name: string; pos: [number,number,number]; color: string; show?: boolean }) {
+const GALAXY_POSITIONS: Record<string, [number, number, number]> = {
+  'galaxy-andromeda': [1800,  3200, -1200],
+  'galaxy-lmc':       [-750, -2900,   500],
+  'galaxy-smc':       [-1050,-2650,   820],
+  'galaxy-m33':       [2200,  3100, -1800],
+  'galaxy-m87':       [5800, -1200,  3200],
+  'galaxy-ngc1300':   [-4200,  800, -5500],
+  'galaxy-m104':      [3500, -4800,  1200],
+  'galaxy-m64':       [-1800, 5200,  2400],
+  'galaxy-m51':       [  700, 6500,  -800],
+};
+
+function NearbyStar({ id, name, pos, color, show = true, onLabelClick }: {
+  id: string; name: string; pos: [number,number,number]; color: string;
+  show?: boolean; onLabelClick?: (id: string) => void;
+}) {
+  const handleClick = onLabelClick ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick(id); } : undefined;
   return (
     <group position={pos} visible={show}>
-      <mesh>
+      <mesh onClick={onLabelClick ? () => onLabelClick(id) : undefined}>
         <sphereGeometry args={[0.8, 8, 8]} />
         <meshBasicMaterial color={color} />
       </mesh>
-      <Html center position={[0, 1.2, 0]} style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none' }}>{name}</Html>
+      <Html center position={[0, 1.2, 0]}
+        style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none', ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
+        onClick={handleClick}
+      >
+        {name}
+      </Html>
     </group>
   );
 }
@@ -1094,16 +1138,17 @@ function CosmicEventButton({ event, onClick }: { event: HistoricalEvent; onClick
 
 // ── Componente principale ───────────────────────────────────────────────────
 interface CosmicSceneProps {
-  events:           HistoricalEvent[];
-  locale:           Locale;
-  currentYear:      number;
-  flyTo:            FlyTarget | null;
-  onEventClick:     (event: HistoricalEvent) => void;
-  initialAltKm?:    number;
-  onEarthApproach?: () => void;
+  events:              HistoricalEvent[];
+  locale:              Locale;
+  currentYear:         number;
+  flyTo:               FlyTarget | null;
+  onEventClick:        (event: HistoricalEvent) => void;
+  onBodyLabelClick?:   (entityId: string) => void;
+  initialAltKm?:       number;
+  onEarthApproach?:    () => void;
 }
 
-export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, initialAltKm = 0, onEarthApproach }: CosmicSceneProps) {
+export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, onBodyLabelClick, initialAltKm = 0, onEarthApproach }: CosmicSceneProps) {
   const navKeysRef         = useRef(new Set<string>());
   const yawRef             = useRef(-Math.PI / 2);
   const pitchRef           = useRef(-0.12);
@@ -1258,19 +1303,19 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
       }
     } else if (eid.startsWith('star-')) {
       const slug = eid.replace('star-', '');
-      const slugMap: Record<string, string> = {
-        'proxima':        'Proxima Centauri',
-        'alpha-centauri': 'Alpha Centauri',
-        'barnard':        'Stella di Barnard',
-        'sirius':         'Sirio',
-        'vega':           'Vega',
-        'betelgeuse':     'Betelgeuse',
-        'rigel':          'Rigel',
-      };
-      const star = NEARBY_STARS.find(s => s.name === slugMap[slug]);
+      const star = NEARBY_STARS.find(s => s.id === eid || s.id === `star-${slug}`);
       if (star) {
         const target = new THREE.Vector3(...star.pos);
         const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(5));
+        jumpRef.current = dest;
+        orient(dest, target);
+      }
+    } else if (eid.startsWith('galaxy-')) {
+      const gpos = GALAXY_POSITIONS[eid];
+      if (gpos) {
+        const target = new THREE.Vector3(...gpos);
+        const dist   = Math.max(10, target.length() * 0.01);
+        const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(dist));
         jumpRef.current = dest;
         orient(dest, target);
       }
@@ -1318,7 +1363,11 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         <BigBangExpansion year={currentYear} />
 
         {/* Galassie distanti: sempre montate per evitare crash removeChild su Html */}
-        <DistantGalaxies show={currentYear >= -13_200_000_000} />
+        <DistantGalaxies show={currentYear >= -13_200_000_000} onLabelClick={onBodyLabelClick ? (id) => {
+          const gpos = GALAXY_POSITIONS[id];
+          if (gpos) flyToRef.current?.(new THREE.Vector3(...gpos), 10);
+          onBodyLabelClick(id);
+        } : undefined} />
 
         {/* Via Lattea e stelle di sfondo: formazione ~13 mld a.C. (no Html, ok con mount condizionale) */}
         {currentYear >= -13_000_000_000 && (
@@ -1331,7 +1380,14 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         )}
 
         {/* Stelle vicine: sempre montate per evitare crash removeChild su Html */}
-        {NEARBY_STARS.map(s => <NearbyStar key={s.name} {...s} show={currentYear >= -5_000_000_000} />)}
+        {NEARBY_STARS.map(s => (
+          <NearbyStar key={s.name} {...s} show={currentYear >= -5_000_000_000}
+            onLabelClick={onBodyLabelClick ? (id) => {
+              flyToRef.current?.(new THREE.Vector3(...s.pos), 3);
+              onBodyLabelClick(id);
+            } : undefined}
+          />
+        ))}
 
         {/* Sole, Terra, Luna, pianeti, pianeti nani: sempre montati per evitare crash removeChild */}
         <SunSphere   onClick={() => onEventClick(SUN_CARD)}   flyTo={flyToBody} show={currentYear >= -4_600_000_000} />

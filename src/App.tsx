@@ -89,10 +89,10 @@ const NEARBY_STAR_SEARCHES: HistoricalEvent[] = [
     description: 'Sistema stellare triplo a 4,37 anni luce. Alpha Centauri A e B sono simili al Sole. La stella più brillante del cielo australe.',
     wikipediaSlug: 'Alpha_Centauri' },
   { id: 'star-barnard',        title: 'Stella di Barnard', year: -4_600_000_000, category: 'cosmo', isCosmic: true,
-    description: 'Nana rossa a 5,96 anni luce, la stella singola più vicina al Sole. Ha il moto proprio più alto osservato di qualsiasi stella.',
+    description: 'Nana rossa a 5,96 anni luce, la stella singola più vicina al Sole. Ha il moto proprio più alto osservato di qualsiasi stella. (Barnard\'s Star)',
     wikipediaSlug: 'Barnard\'s_Star' },
   { id: 'star-sirius',         title: 'Sirio',            year: -4_600_000_000, category: 'cosmo', isCosmic: true,
-    description: 'La stella più luminosa del cielo notturno, a 8,6 anni luce. Sistema binario: Sirio A e Sirio B (nana bianca). Sacra per gli antichi Egizi.',
+    description: 'Sirius — la stella più luminosa del cielo notturno, a 8,6 anni luce. Sistema binario: Sirio A e Sirio B (nana bianca). Sacra per gli antichi Egizi.',
     wikipediaSlug: 'Sirius' },
   { id: 'star-vega',           title: 'Vega',             year: -4_600_000_000, category: 'cosmo', isCosmic: true,
     description: 'Stella brillante nella costellazione della Lira, a 25 anni luce. Stella di riferimento per la scala delle magnitudini. Era il polo nord celeste 12.000 anni fa.',
@@ -105,6 +105,37 @@ const NEARBY_STAR_SEARCHES: HistoricalEvent[] = [
     wikipediaSlug: 'Rigel' },
 ];
 
+// Galassie visibili durante la navigazione cosmica — cercabili (id: galaxy-<slug>)
+const GALAXY_SEARCHES: HistoricalEvent[] = [
+  { id: 'galaxy-andromeda', title: 'Andromeda', year: -13_200_000_000, category: 'cosmo', isCosmic: true,
+    description: 'M31 — la galassia a spirale più vicina alla Via Lattea, a 2,5 milioni di anni luce. Contiene ~1 trilione di stelle. Visibile a occhio nudo. Fra ~4,5 mld di anni entrerà in collisione con la Via Lattea.',
+    wikipediaSlug: 'Andromeda_Galaxy' },
+  { id: 'galaxy-lmc', title: 'Grande Nube di Magellano', year: -13_200_000_000, category: 'cosmo', isCosmic: true,
+    description: 'LMC — galassia satellite della Via Lattea a 163.000 anni luce. Visibile a occhio nudo nell\'emisfero australe. Ospita la Nebulosa Tarantola, una delle più attive regioni di formazione stellare.',
+    wikipediaSlug: 'Large_Magellanic_Cloud' },
+  { id: 'galaxy-smc', title: 'Piccola Nube di Magellano', year: -13_200_000_000, category: 'cosmo', isCosmic: true,
+    description: 'SMC — galassia satellite irregolare a 197.000 anni luce. Coppia con la Grande Nube di Magellano, visibili insieme nell\'emisfero sud. Contiene oltre 300 milioni di stelle.',
+    wikipediaSlug: 'Small_Magellanic_Cloud' },
+  { id: 'galaxy-m33', title: 'Galassia del Triangolo', year: -13_200_000_000, category: 'cosmo', isCosmic: true,
+    description: 'M33 — galassia a spirale a 2,73 milioni di anni luce nel Gruppo Locale. Terza galassia più grande dopo Via Lattea e Andromeda. L\'oggetto più distante visibile a occhio nudo.',
+    wikipediaSlug: 'Triangulum_Galaxy' },
+  { id: 'galaxy-m87', title: 'M87 — Vergine A', year: -13_200_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Galassia ellittica gigante a 53 milioni di anni luce nel Gruppo della Vergine. Ha un buco nero supermassiccio da 6,5 miliardi di masse solari — il primo fotografato dall\'Event Horizon Telescope nel 2019.',
+    wikipediaSlug: 'Messier_87' },
+  { id: 'galaxy-ngc1300', title: 'NGC 1300 — Spirale barrata', year: -13_200_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Galassia a spirale barrata a 61 milioni di anni luce nell\'Eridano. Prototipo delle galassie a spirale barrata: la barra centrale misura 33.000 anni luce.',
+    wikipediaSlug: 'NGC_1300' },
+  { id: 'galaxy-m104', title: 'M104 — Sombrero', year: -13_200_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Galassia ellittica lenticolare a 31 milioni di anni luce. L\'anello di polvere sul bordo le dà la forma di un cappello sombrero. Contiene circa 800 miliardi di stelle.',
+    wikipediaSlug: 'Sombrero_Galaxy' },
+  { id: 'galaxy-m64', title: 'M64 — Black Eye', year: -13_200_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Galassia a spirale a 17 milioni di anni luce. Il disco interno ruota in senso opposto a quello esterno, creando un banco scuro di polvere — il suo "occhio nero".',
+    wikipediaSlug: 'Black_Eye_Galaxy' },
+  { id: 'galaxy-m51', title: 'M51 — Whirlpool', year: -13_200_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Galassia a spirale a 23 milioni di anni luce. Prima galassia a cui fu riconosciuta la struttura a spirale (Lord Rosse, 1845). In interazione gravitazionale con la satellite NGC 5195.',
+    wikipediaSlug: 'Whirlpool_Galaxy' },
+];
+
 // ID dei corpi celesti (matchano gli ID entità CesiumJS o lune che volano verso il genitore)
 const BODY_IDS = new Set([
   'luna', 'sole',
@@ -112,6 +143,7 @@ const BODY_IDS = new Set([
   ...MOONS.map(m => `moon-${m.id}`),
   ...DWARF_PLANET_SEARCHES.map(d => d.id),
   ...NEARBY_STAR_SEARCHES.map(s => s.id),
+  ...GALAXY_SEARCHES.map(g => g.id),
 ]);
 
 // ── Scala piecewise ridistribuita per densità informativa ────────────────────
@@ -324,6 +356,7 @@ function AppInner() {
       MOON_SEARCH, SUN_SEARCH,
       ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS,
       ...DWARF_PLANET_SEARCHES, ...NEARBY_STAR_SEARCHES,
+      ...GALAXY_SEARCHES,
     ];
   }, [ALL_EVENTS, searchIndex]);
 
@@ -393,7 +426,8 @@ function AppInner() {
         event.id === 'luna' || event.id === 'sole' ||
         event.id.startsWith('planet-') || event.id.startsWith('moon-') ||
         event.id.startsWith('dwarf-') || event.id.startsWith('star-');
-      const cosmicYear = isSolarSystemBody ? -4_550_000_000 : -9_000_000_000;
+      const isGalaxy = event.id.startsWith('galaxy-');
+      const cosmicYear = isSolarSystemBody ? -4_550_000_000 : isGalaxy ? -13_000_000_000 : -9_000_000_000;
       setOverrideYear(cosmicYear);
       setSliderValue(yearToSlider(cosmicYear));
       setFlyTo({ kind: 'body', entityId: event.id, ts: Date.now() });
@@ -631,6 +665,13 @@ function AppInner() {
                 currentYear={currentYear}
                 flyTo={flyTo}
                 onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
+                onBodyLabelClick={(entityId) => {
+                  const ev = [
+                    ...NEARBY_STAR_SEARCHES, ...DWARF_PLANET_SEARCHES, ...GALAXY_SEARCHES,
+                    MOON_SEARCH, SUN_SEARCH, ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS,
+                  ].find(e => e.id === entityId);
+                  if (ev) handleSearchSelect(ev);
+                }}
                 initialAltKm={altitudeCosmic ? cesiumAltKm : 0}
                 onEarthApproach={() => { setAltitudeCosmic(false); setCesiumAltKm(0); }}
               />
