@@ -47,7 +47,11 @@ const SUN_POS: [number, number, number] = [
 const SUN_VR   = 0.025;   // UA visive (era 0.065)
 const MOON_VR  = 0.0006;  // UA visive (era 0.004 — troppo grande, nascondeva la Luna nella Terra)
 const EARTH_VR = 0.0015;  // UA visive (era 0.004)
-const EARTH_APPROACH_AU = 50_000 * 1_000 * M_TO_AU;  // 50.000 km in AU
+// Soglia di ritorno a Cesium: equivalente visivo di ~19.000 km di altitudine fisica.
+// La formula visiva è EARTH_VR * (R_earth + h) / R_earth per far sembrare
+// la Terra della stessa dimensione angolare in Three.js e in Cesium allo stesso h.
+// Hysteresis: switch a Cesium→Cosmos a 30.000 km, ritorno a Cesium a ~19.000 km.
+const EARTH_APPROACH_AU = 0.006;  // ≈ 19.000 km di altitudine fisica (scala visiva)
 
 function getVisualRadius(radiusM: number): number {
   return Math.max(0.0006, radiusM * M_TO_AU * 20); // era 60x, ora 20x
@@ -459,7 +463,16 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
 
   useEffect(() => {
     camera.rotation.order = 'YXZ';
-    const altAU = initialAltKm > 0 ? initialAltKm * 1_000 * M_TO_AU : 0.05;
+    let altAU: number;
+    if (initialAltKm > 0) {
+      // Scaling visivo: la Terra in Three.js ha raggio EARTH_VR >> reale.
+      // Per avere la stessa dimensione angolare in Cesium e Three.js allo stesso h fisico:
+      //   d_visivo = EARTH_VR * (R_terra + h) / R_terra
+      const R_EARTH_KM = 6_371;
+      altAU = EARTH_VR * (R_EARTH_KM + initialAltKm) / R_EARTH_KM;
+    } else {
+      altAU = 0.05;
+    }
     camera.position.set(0, altAU, 0);
     if (initialAltKm > 0) {
       (yawRef   as React.MutableRefObject<number>).current = 0;
@@ -472,14 +485,14 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     const keys = navKeysRef.current!;
     const rot  = delta * 1.5; // rotazione vista (rad/s)
 
-    // Rotazione punto di vista dai tasti direzionali
+    // Rotazione punto di vista: tasti direzionali (WASD + frecce) e Q/E
     if (keys.has('KeyA') || keys.has('ArrowLeft'))
       (yawRef   as React.MutableRefObject<number>).current += rot;
     if (keys.has('KeyD') || keys.has('ArrowRight'))
       (yawRef   as React.MutableRefObject<number>).current -= rot;
-    if (keys.has('KeyQ') || keys.has('PageUp'))
+    if (keys.has('KeyQ') || keys.has('ArrowUp'))
       (pitchRef as React.MutableRefObject<number>).current = Math.max(-1.5, pitchRef.current! + rot);
-    if (keys.has('KeyE') || keys.has('PageDown'))
+    if (keys.has('KeyE') || keys.has('ArrowDown'))
       (pitchRef as React.MutableRefObject<number>).current = Math.min(1.5, pitchRef.current! - rot);
 
     camera.rotation.y = yawRef.current!;
@@ -487,10 +500,11 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
 
     const dir    = new THREE.Vector3(0, 0, -1).applyEuler(camera.rotation).normalize();
     // Thrust: piccolo incremento costante — velocità inerziale (nessun attrito al rilascio)
+    // Tastiera: W / Numpad+ = avanti, S / Numpad- = indietro
     const thrust = Math.max(1e-8, dist * 0.001) * delta;
 
-    if (keys.has('KeyW') || keys.has('ArrowUp'))   velRef.current.addScaledVector(dir,  thrust);
-    if (keys.has('KeyS') || keys.has('ArrowDown'))  velRef.current.addScaledVector(dir, -thrust);
+    if (keys.has('KeyW') || keys.has('NumpadAdd'))      velRef.current.addScaledVector(dir,  thrust);
+    if (keys.has('KeyS') || keys.has('NumpadSubtract')) velRef.current.addScaledVector(dir, -thrust);
     if (keys.has('Space'))                          velRef.current.set(0, 0, 0);
 
     // Cap velocità massima (30% della distanza/s) per evitare runaway
@@ -500,7 +514,8 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
 
     const wd = wheelRef.current;
     if (wd !== 0) {
-      velRef.current.addScaledVector(dir, -wd * Math.max(1e-8, dist * 0.01));
+      // Stessa granularità del thrust: ogni tick = ~0.3 secondi di pressione tasto
+      velRef.current.addScaledVector(dir, -wd * Math.max(1e-8, dist * 0.0003));
       (wheelRef as React.MutableRefObject<number>).current = 0;
     }
 
@@ -802,10 +817,10 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
         ±{fmtSpeed(thrustMS)}/s
       </div>
 
-      {/* Croce rotazione vista (3×3 grid) */}
+      {/* Croce rotazione vista (3×3 grid) — tutti triangoli pieni ▲▼◀▶ */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 40px)', gridTemplateRows: 'repeat(3, 40px)', gap: 4 }}>
         <div style={cell} />
-        <Btn code="KeyQ" label="⬆" />
+        <Btn code="KeyQ" label="▲" />
         <div style={cell} />
         <Btn code="KeyA" label="◀" />
         <div style={{ ...cell, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -813,15 +828,15 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
         </div>
         <Btn code="KeyD" label="▶" />
         <div style={cell} />
-        <Btn code="KeyE" label="⬇" />
+        <Btn code="KeyE" label="▼" />
         <div style={cell} />
       </div>
 
-      {/* Propulsione + Stop */}
+      {/* Propulsione + Stop — frecce outline ⬆⬇ distinte dalla croce */}
       <div style={{ display: 'flex', gap: 4 }}>
-        <Btn code="KeyW" label="▲" />
+        <Btn code="KeyW" label="⬆" />
         <Btn code="Space" label="⏹" />
-        <Btn code="KeyS" label="▼" />
+        <Btn code="KeyS" label="⬇" />
       </div>
       <div style={{ color: '#3a4a5a', fontSize: '0.50rem', display: 'flex', gap: 16 }}>
         <span>{locale === 'it' ? 'Acc' : 'Fwd'}</span>
@@ -1127,7 +1142,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
 
       {/* Hint comandi */}
       <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', color: '#2a3a4a', fontSize: '0.55rem', pointerEvents: 'none', textAlign: 'center', whiteSpace: 'nowrap', zIndex: 10 }}>
-        {it ? '▲▼ accelera/decelera · ◀▶⬆⬇ ruota vista · ⏹ stop' : '▲▼ thrust · ◀▶⬆⬇ rotate view · ⏹ stop'}
+        {it ? '⬆⬇ accelera/decelera · ▲▼◀▶ ruota vista · ⏹ stop · +/− tastierino' : '⬆⬇ thrust · ▲▼◀▶ rotate view · ⏹ stop · numpad +/−'}
       </div>
     </div>
   );

@@ -646,7 +646,7 @@ function AppInner() {
                 onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
                 onAltitudeChange={(altKm) => {
                   setCesiumAltKm(altKm);
-                  if (altKm > 500_000) setAltitudeCosmic(true);
+                  if (altKm > 30_000) setAltitudeCosmic(true);
                 }}
               />
           }
