@@ -57,12 +57,21 @@ function getVisualRadius(radiusM: number): number {
   return Math.max(0.0006, radiusM * M_TO_AU * 20); // era 60x, ora 20x
 }
 
-// ── Texture — GitHub raw (solo terra/luna disponibili nel repo three.js) ────────
+// ── Texture ───────────────────────────────────────────────────────────────────
 const _TEX = 'https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/planets/';
 const PLANET_TEXTURES: Record<string, string> = {
-  terra: _TEX + 'earth_atmos_2048.jpg',
-  luna:  _TEX + 'moon_1024.jpg',
-  // altri pianeti: texture procedurali via canvas (vedi PROC_TEXTURES)
+  terra:    _TEX + 'earth_atmos_2048.jpg',
+  luna:     _TEX + 'moon_1024.jpg',
+  mercurio: '/textures/mercury.jpg',
+  venere:   '/textures/venus.jpg',
+  marte:    '/textures/mars.jpg',
+  giove:    '/textures/jupiter.jpg',
+  saturno:  '/textures/saturn.jpg',
+  urano:    '/textures/uranus.jpg',
+  nettuno:  '/textures/neptune.jpg',
+};
+const DWARF_TEXTURES: Record<string, string> = {
+  cerere: '/textures/ceres.jpg',
 };
 
 function applyTexture(mesh: THREE.Mesh | null, url: string) {
@@ -136,6 +145,65 @@ const PROC_TEX_FNS: Record<string, () => THREE.CanvasTexture> = {
     g.addColorStop(0, '#1a3ae0'); g.addColorStop(0.5, '#2050c8'); g.addColorStop(1, '#1020a8');
     ctx.fillStyle = g; ctx.fillRect(0, 0, 256, 128);
     ctx.fillStyle = 'rgba(210,220,255,0.35)'; ctx.fillRect(0, 46, 256, 10);
+  }),
+  plutone: () => _makeProc(512, 256, ctx => {
+    // Base: rosso-marrone scuro (tholins)
+    ctx.fillStyle = '#7a4828'; ctx.fillRect(0, 0, 512, 256);
+    // Cthulhu Macula: fascia equatoriale molto scura a sinistra
+    const cthu = ctx.createRadialGradient(90, 140, 10, 90, 140, 130);
+    cthu.addColorStop(0, 'rgba(18,6,2,0.92)'); cthu.addColorStop(1, 'rgba(18,6,2,0)');
+    ctx.fillStyle = cthu; ctx.fillRect(0, 0, 512, 256);
+    // Tombaugh Regio — lobo sinistro (Sputnik Planitia, ghiaccio di azoto)
+    const sp = ctx.createRadialGradient(330, 148, 0, 330, 148, 75);
+    sp.addColorStop(0,   'rgba(242,232,200,0.96)');
+    sp.addColorStop(0.65,'rgba(235,220,185,0.85)');
+    sp.addColorStop(1,   'rgba(235,220,185,0)');
+    ctx.fillStyle = sp; ctx.fillRect(0, 0, 512, 256);
+    // Lobo destro del cuore (più mosso, misto)
+    const rh = ctx.createRadialGradient(420, 112, 0, 420, 112, 50);
+    rh.addColorStop(0, 'rgba(225,210,175,0.72)'); rh.addColorStop(1, 'rgba(225,210,175,0)');
+    ctx.fillStyle = rh; ctx.fillRect(0, 0, 512, 256);
+    // Polo nord: leggermente più chiaro
+    ctx.fillStyle = 'rgba(160,110,75,0.4)'; ctx.fillRect(0, 0, 512, 38);
+    // Grana superficiale
+    for (let i = 0; i < 400; i++) {
+      const x = Math.random() * 512, y = Math.random() * 256;
+      const s = Math.floor(50 + Math.random() * 50);
+      ctx.fillStyle = `rgba(${s+20},${s},${s-10},0.07)`;
+      ctx.fillRect(x, y, 2 + Math.random() * 7, 1 + Math.random() * 4);
+    }
+  }),
+  eris: () => _makeProc(256, 128, ctx => {
+    // Eris: grigio chiaro, superficie ghiacciata di metano
+    ctx.fillStyle = '#d8d8d4'; ctx.fillRect(0, 0, 256, 128);
+    for (let i = 0; i < 200; i++) {
+      const x = Math.random() * 256, y = Math.random() * 128, r = Math.random() * 3 + 0.5;
+      const s = Math.floor(170 + Math.random() * 60);
+      ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${s},${s},${s-5},0.12)`; ctx.fill();
+    }
+  }),
+  makemake: () => _makeProc(256, 128, ctx => {
+    // Makemake: rosso-arancio scuro (tholins)
+    ctx.fillStyle = '#c87840'; ctx.fillRect(0, 0, 256, 128);
+    for (let i = 0; i < 180; i++) {
+      const x = Math.random() * 256, y = Math.random() * 128;
+      ctx.fillStyle = `rgba(${Math.floor(80+Math.random()*60)},${Math.floor(30+Math.random()*40)},5,0.1)`;
+      ctx.fillRect(x, y, 2 + Math.random() * 8, 1 + Math.random() * 5);
+    }
+  }),
+  haumea: () => _makeProc(256, 128, ctx => {
+    // Haumea: forma allungata (ellissoide), grigio-bianco con chiazza rossa
+    ctx.fillStyle = '#d0cdc8'; ctx.fillRect(0, 0, 256, 128);
+    // Macchia rossa (Macula Fienga)
+    const spot = ctx.createRadialGradient(130, 70, 0, 130, 70, 28);
+    spot.addColorStop(0, 'rgba(160,40,20,0.75)'); spot.addColorStop(1, 'rgba(160,40,20,0)');
+    ctx.fillStyle = spot; ctx.fillRect(0, 0, 256, 128);
+    for (let i = 0; i < 150; i++) {
+      const s = Math.floor(180 + Math.random() * 50);
+      ctx.fillStyle = `rgba(${s},${s},${s},0.08)`;
+      ctx.fillRect(Math.random()*256, Math.random()*128, 2+Math.random()*6, 1+Math.random()*4);
+    }
   }),
   sole: () => _makeProc(512, 256, ctx => {
     // Fotosfera: gradiente di plasma caldo
@@ -602,23 +670,23 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     }
 
     const dir = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion).normalize();
-    // Thrust: piccolo incremento costante — velocità inerziale (nessun attrito al rilascio)
+    // Thrust: incremento fine — velocità inerziale (nessun attrito al rilascio)
     // Tastiera: W / Numpad+ = avanti, S / Numpad- = indietro
-    const thrust = Math.max(1e-8, dist * 0.001) * delta;
+    const thrust = Math.max(1e-10, dist * 0.0002) * delta;
 
     if (keys.has('KeyW') || keys.has('NumpadAdd'))      velRef.current.addScaledVector(dir,  thrust);
     if (keys.has('KeyS') || keys.has('NumpadSubtract')) velRef.current.addScaledVector(dir, -thrust);
     if (keys.has('Space'))                          velRef.current.set(0, 0, 0);
 
-    // Cap velocità massima (30% della distanza/s) per evitare runaway
+    // Cap velocità massima (20% della distanza/s) per evitare runaway
     const curSpd     = velRef.current.length();
-    const maxAllowed = Math.max(1e-8, dist * 0.3);
+    const maxAllowed = Math.max(1e-10, dist * 0.2);
     if (curSpd > maxAllowed) velRef.current.multiplyScalar(maxAllowed / curSpd);
 
     const wd = wheelRef.current;
     if (wd !== 0) {
-      // Stessa granularità del thrust: ogni tick = ~0.3 secondi di pressione tasto
-      velRef.current.addScaledVector(dir, -wd * Math.max(1e-8, dist * 0.0003));
+      // Ogni tick rotella = ~0.3 s di pressione tasto
+      velRef.current.addScaledVector(dir, -wd * Math.max(1e-10, dist * 0.00006));
       (wheelRef as React.MutableRefObject<number>).current = 0;
     }
 
@@ -626,7 +694,7 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     if (jt) {
       velRef.current.set(0, 0, 0);
       camera.position.lerp(jt, 0.06);
-      if (camera.position.distanceTo(jt) < Math.max(1e-6, jt.length() * 0.001)) {
+      if (camera.position.distanceTo(jt) < 1e-4) {  // threshold fisso: 0.0001 UA ≈ 15.000 km
         (jumpRef as React.MutableRefObject<THREE.Vector3 | null>).current = null;
       }
     } else {
@@ -639,7 +707,11 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
       const toTarget = targetPos.clone().sub(camera.position);
       const d = toTarget.length();
       if (d < 1e-8) return;
-      const approachDist = Math.max(radius * 8, 0.0005);
+      // Avvicinamento ravvicinato: corpo occupa ~60% del FOV (70°)
+      // Per Terra/Luna: mantieni distanza > EARTH_APPROACH_AU per non triggherare il switch a Cesium
+      const nearOrigin   = targetPos.length() < 0.05;
+      const minDist      = nearOrigin ? 0.008 : 0.0003;
+      const approachDist = Math.max(radius * 2.5, minDist);
       const newPos = d > approachDist
         ? targetPos.clone().sub(toTarget.clone().normalize().multiplyScalar(approachDist))
         : camera.position.clone();
@@ -893,11 +965,24 @@ const DWARF_PLANETS: DwarfData[] = [
 ];
 
 function DwarfPlanetSphere({ dwarf, flyTo, show = true }: { dwarf: DwarfData; flyTo: FlyToFn; show?: boolean }) {
+  const meshRef = useRef<THREE.Mesh | null>(null);
   const vr = Math.max(0.0004, dwarf.radiusM * M_TO_AU * 20);
+  useEffect(() => {
+    const texUrl = DWARF_TEXTURES[dwarf.id];
+    if (texUrl) {
+      applyTexture(meshRef.current, texUrl);
+    } else {
+      const proc = getProcTex(dwarf.id);
+      if (proc && meshRef.current) {
+        const mat = meshRef.current.material as THREE.MeshStandardMaterial;
+        mat.map = proc; mat.color.set(0xffffff); mat.needsUpdate = true;
+      }
+    }
+  }, [dwarf.id]); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <group position={dwarf.pos} visible={show}>
-      <mesh>
-        <sphereGeometry args={[vr, 14, 14]} />
+      <mesh ref={meshRef} onClick={e => { e.stopPropagation(); flyTo(new THREE.Vector3(...dwarf.pos), vr); }}>
+        <sphereGeometry args={[vr, 18, 18]} />
         <meshStandardMaterial color={dwarf.color} roughness={0.9} metalness={0.02} />
       </mesh>
       <Html center position={[0, vr * 2, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
@@ -1131,15 +1216,23 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
       (pendingOrientRef as React.MutableRefObject<boolean>).current = true;
     }
 
+    // Helper: distanza di avvicinamento uniforme (corpo ~60% del FOV 70°)
+    function approach(target: THREE.Vector3, vr: number): THREE.Vector3 {
+      const nearEarth = target.length() < 0.05; // Terra/Luna: non incrociare la soglia Cesium
+      const minD = nearEarth ? 0.008 : 0.0003;
+      const dist  = Math.max(vr * 2.5, minD);
+      return target.clone().sub(target.clone().normalize().multiplyScalar(dist));
+    }
+
     if (eid === 'luna') {
       const [mx, my, mz] = getMoonPosition();
       const target = new THREE.Vector3(mx * M_TO_AU, my * M_TO_AU, mz * M_TO_AU);
-      const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(MOON_VR * 8));
+      const dest   = approach(target, MOON_VR);
       jumpRef.current = dest;
       orient(dest, target);
     } else if (eid === 'sole') {
       const target = new THREE.Vector3(...SUN_POS);
-      const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(SUN_VR * 4));
+      const dest   = approach(target, SUN_VR);
       jumpRef.current = dest;
       orient(dest, target);
     } else if (eid.startsWith('planet-')) {
@@ -1149,7 +1242,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         const [px, py, pz] = getPlanetPosition(pl);
         const target = new THREE.Vector3(px * M_TO_AU, py * M_TO_AU, pz * M_TO_AU);
         const vr     = getVisualRadius(pl.radius);
-        const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(vr * 6));
+        const dest   = approach(target, vr);
         jumpRef.current = dest;
         orient(dest, target);
       }
@@ -1159,7 +1252,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
       if (dw) {
         const target = new THREE.Vector3(...dw.pos);
         const vr     = Math.max(0.0004, dw.radiusM * M_TO_AU * 20);
-        const dest   = target.clone().sub(target.clone().normalize().multiplyScalar(vr * 8));
+        const dest   = approach(target, vr);
         jumpRef.current = dest;
         orient(dest, target);
       }
