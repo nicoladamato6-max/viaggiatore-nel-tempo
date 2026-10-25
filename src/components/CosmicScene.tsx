@@ -258,6 +258,36 @@ const PROC_TEX_FNS: Record<string, () => THREE.CanvasTexture> = {
     dk2.addColorStop(0, 'rgba(35,6,0,0.65)'); dk2.addColorStop(1, 'rgba(0,0,0,0)');
     ctx.fillStyle = dk2; ctx.fillRect(0, 0, 512, 256);
   }),
+  // Betelgeuse: supergigante rossa con immagini reali della superficie (ESO/VLTI SPHERE 2019-2020)
+  // Grande cella di convezione nel quadrante sud-ovest, oscuramento al limbo spiccato
+  'star-betelgeuse': () => _makeProc(512, 256, ctx => {
+    ctx.fillStyle = '#b83808'; ctx.fillRect(0, 0, 512, 256);
+    // Celle convettive — la più grande (~60% del raggio) ha causato la "grande attenuazione"
+    const cells = [
+      { x: 190, y: 155, r: 105, a: 0.52 },  // cella convettiva dominante (sud-ovest)
+      { x: 340, y: 90,  r:  60, a: 0.38 },
+      { x: 100, y:  75, r:  45, a: 0.30 },
+      { x: 420, y: 175, r:  48, a: 0.28 },
+      { x: 270, y: 195, r:  38, a: 0.22 },
+    ];
+    for (const c of cells) {
+      const g = ctx.createRadialGradient(c.x, c.y, 0, c.x, c.y, c.r);
+      g.addColorStop(0, `rgba(255,145,45,${c.a})`);
+      g.addColorStop(0.5, `rgba(230,80,10,${c.a * 0.4})`);
+      g.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = g; ctx.fillRect(0, 0, 512, 256);
+    }
+    // Zona di polvere fredda nel quadrante sud (causa dell'attenuazione 2019-2020)
+    const dust = ctx.createRadialGradient(200, 175, 0, 200, 175, 90);
+    dust.addColorStop(0, 'rgba(20,4,0,0.55)'); dust.addColorStop(1, 'rgba(20,4,0,0)');
+    ctx.fillStyle = dust; ctx.fillRect(0, 0, 512, 256);
+    // Oscuramento al limbo (pronunciato nelle supergiganti rosse)
+    const limb = ctx.createRadialGradient(256, 128, 60, 256, 128, 260);
+    limb.addColorStop(0, 'rgba(0,0,0,0)');
+    limb.addColorStop(0.7, 'rgba(0,0,0,0.1)');
+    limb.addColorStop(1, 'rgba(0,0,0,0.78)');
+    ctx.fillStyle = limb; ctx.fillRect(0, 0, 512, 256);
+  }),
 };
 
 function getProcTex(id: string): THREE.CanvasTexture | null {
@@ -981,11 +1011,19 @@ function NearbyStar({ id, name, pos, color, show = true, onLabelClick }: {
   id: string; name: string; pos: [number,number,number]; color: string;
   show?: boolean; onLabelClick?: (id: string) => void;
 }) {
+  const meshRef = useRef<THREE.Mesh | null>(null);
+  useEffect(() => {
+    const tex = getProcTex(id);
+    if (tex && meshRef.current) {
+      const mat = meshRef.current.material as THREE.MeshBasicMaterial;
+      mat.map = tex; mat.color.set(0xffffff); mat.needsUpdate = true;
+    }
+  }, [id]);
   const handleClick = onLabelClick ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick(id); } : undefined;
   return (
     <group position={pos} visible={show}>
-      <mesh onClick={onLabelClick ? () => onLabelClick(id) : undefined}>
-        <sphereGeometry args={[0.8, 8, 8]} />
+      <mesh ref={meshRef} onClick={onLabelClick ? () => onLabelClick(id) : undefined}>
+        <sphereGeometry args={[0.8, 16, 16]} />
         <meshBasicMaterial color={color} />
       </mesh>
       <Html center position={[0, 1.2, 0]}
