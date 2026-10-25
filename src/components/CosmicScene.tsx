@@ -43,11 +43,16 @@ const SUN_POS: [number, number, number] = [
 ];
 
 const SCALE_JUMPS = [
-  { icon: '🌍', label: 'Terra',    labelEn: 'Earth',   altM: 1.5e7  },
-  { icon: '🌕', label: 'Luna',     labelEn: 'Moon',    altM: 4e8    },
-  { icon: '☀️', label: 'Sole',    labelEn: 'Sun',     altM: 1.6e11 },
-  { icon: '🪐', label: 'Saturno', labelEn: 'Saturn',  altM: 1.5e12 },
-  { icon: '❄️', label: 'Kuiper',  labelEn: 'Kuiper',  altM: 6.5e12 },
+  { icon: '🌍', label: 'Terra',     labelEn: 'Earth',     altM: 1.5e7  },
+  { icon: '🌕', label: 'Luna',      labelEn: 'Moon',      altM: 4e8    },
+  { icon: '☀️', label: 'Sole',     labelEn: 'Sun',       altM: 1.6e11 },
+  { icon: '🔴', label: 'Marte',     labelEn: 'Mars',      altM: 2.5e11 },
+  { icon: '🪐', label: 'Giove',     labelEn: 'Jupiter',   altM: 8e11   },
+  { icon: '💫', label: 'Saturno',   labelEn: 'Saturn',    altM: 1.5e12 },
+  { icon: '⚫', label: 'Plutone',   labelEn: 'Pluto',     altM: 6e12   },
+  { icon: '❄️', label: 'Kuiper',   labelEn: 'Kuiper',    altM: 7e12   },
+  { icon: '⭐', label: 'Proxima',   labelEn: 'Proxima',   altM: 4.5e16 },
+  { icon: '🌌', label: 'Andromeda', labelEn: 'Andromeda', altM: 2.2e22 },
 ] as const;
 
 // ── Sizing (radii visivi corretti — Luna a 0.00257 AU da Terra) ──────────────
@@ -139,9 +144,9 @@ const GALAXY_LABEL_STYLE: React.CSSProperties = {
 };
 
 // Galassia ellittica semplice con etichetta — riutilizzabile per galassie nominate
-function EllipGalaxy({ pos, rx, ry, rz, rot, color, n, label }:
+function EllipGalaxy({ pos, rx, ry, rz, rot, color, n, label, show = true }:
   { pos: [number,number,number]; rx: number; ry: number; rz: number;
-    rot: [number,number,number]; color: string; n: number; label: string }) {
+    rot: [number,number,number]; color: string; n: number; label: string; show?: boolean }) {
   const geo = useMemo(() => {
     const c = new THREE.Color(color);
     const positions = new Float32Array(n * 3);
@@ -165,17 +170,17 @@ function EllipGalaxy({ pos, rx, ry, rz, rot, color, n, label }:
   }, [n, rx, ry, rz, color]);  // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <group position={pos} rotation={rot}>
+    <group position={pos} rotation={rot} visible={show}>
       <points geometry={geo}>
         <pointsMaterial size={1.6} sizeAttenuation={false} vertexColors transparent opacity={0.72} />
       </points>
-      <Html center position={[0, ry * 1.4, 0]} style={GALAXY_LABEL_STYLE}>{label}</Html>
+      <Html center position={[0, ry * 1.4, 0]} style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none' }}>{label}</Html>
     </group>
   );
 }
 
 // ── Galassie distanti — sistema a particelle (ispirato a Google Sky) ──────────
-function DistantGalaxies() {
+function DistantGalaxies({ show = true }: { show?: boolean }) {
   // Andromeda: disco a spirale ellittica, 8000 particelle, posizione simbolica ~4000 UA
   const androGeo = useMemo(() => {
     const N = 8000;
@@ -246,7 +251,7 @@ function DistantGalaxies() {
   return (
     <>
       {/* Andromeda — spirale ellittica con nucleo luminoso, ~4000 UA a nord-est */}
-      <group position={[1800, 3200, -1200]} rotation={[1.35, -0.25, 0.5]}>
+      <group position={[1800, 3200, -1200]} rotation={[1.35, -0.25, 0.5]} visible={show}>
         <points geometry={androGeo}>
           <pointsMaterial size={1.8} sizeAttenuation={false} vertexColors transparent opacity={0.78} />
         </points>
@@ -257,44 +262,44 @@ function DistantGalaxies() {
       </group>
 
       {/* LMC — Grande Nube di Magellano, a sud */}
-      <EllipGalaxy pos={[-750,-2900,500]} rot={[0.2,0.1,0.3]}
+      <EllipGalaxy show={show} pos={[-750,-2900,500]} rot={[0.2,0.1,0.3]}
         rx={32} ry={18} rz={28} color="#aaddff" n={1800} label="LMC — Grande Nube di Magellano" />
 
       {/* SMC — Piccola Nube di Magellano */}
-      <EllipGalaxy pos={[-1050,-2650,820]} rot={[0.1,-0.2,0.15]}
+      <EllipGalaxy show={show} pos={[-1050,-2650,820]} rot={[0.1,-0.2,0.15]}
         rx={18} ry={12} rz={16} color="#99ccee" n={1000} label="SMC — Piccola Nube di Magellano" />
 
       {/* M33 — Triangolo (spirale vicina ad Andromeda) */}
-      <EllipGalaxy pos={[2200,3100,-1800]} rot={[0.8,0.4,1.1]}
+      <EllipGalaxy show={show} pos={[2200,3100,-1800]} rot={[0.8,0.4,1.1]}
         rx={55} ry={6} rz={40} color="#99aaff" n={2500} label="M33 — Triangolo" />
 
       {/* M87 — Virgo A, gigante ellittica con jet */}
-      <EllipGalaxy pos={[5800,-1200,3200]} rot={[0.3,0.7,0.2]}
+      <EllipGalaxy show={show} pos={[5800,-1200,3200]} rot={[0.3,0.7,0.2]}
         rx={90} ry={75} rz={80} color="#ffdd99" n={3000} label="M87 — Vergine A" />
 
       {/* NGC 1300 — spirale barrata iconica */}
-      <EllipGalaxy pos={[-4200,800,-5500]} rot={[1.2,0.3,0.6]}
+      <EllipGalaxy show={show} pos={[-4200,800,-5500]} rot={[1.2,0.3,0.6]}
         rx={65} ry={7} rz={50} color="#aabbdd" n={2000} label="NGC 1300 — Spirale barrata" />
 
       {/* Sombrero (M104) */}
-      <EllipGalaxy pos={[3500,-4800,1200]} rot={[0.05,0.2,0.1]}
+      <EllipGalaxy show={show} pos={[3500,-4800,1200]} rot={[0.05,0.2,0.1]}
         rx={70} ry={8} rz={52} color="#ddccaa" n={2500} label="M104 — Sombrero" />
 
       {/* Occhio del Gatto (M64 — Black Eye) */}
-      <EllipGalaxy pos={[-1800,5200,2400]} rot={[0.4,-0.5,0.9]}
+      <EllipGalaxy show={show} pos={[-1800,5200,2400]} rot={[0.4,-0.5,0.9]}
         rx={50} ry={6} rz={38} color="#bbccff" n={1800} label="M64 — Black Eye" />
 
       {/* Whirlpool (M51) — spirale con satellite */}
-      <EllipGalaxy pos={[700,6500,-800]} rot={[1.5,0.2,0.4]}
+      <EllipGalaxy show={show} pos={[700,6500,-800]} rot={[1.5,0.2,0.4]}
         rx={60} ry={5} rz={45} color="#aaccff" n={2200} label="M51 — Whirlpool" />
 
       {/* Campo di galassie distanti (2500–14000 UA) */}
-      <points geometry={fieldGeo}>
+      <points geometry={fieldGeo} visible={show}>
         <pointsMaterial size={2} sizeAttenuation={false} vertexColors transparent opacity={0.68} />
       </points>
 
       {/* Ragnatela cosmica (13000–46000 UA) */}
-      <points geometry={webGeo}>
+      <points geometry={webGeo} visible={show}>
         <pointsMaterial size={2.5} sizeAttenuation={false} vertexColors transparent opacity={0.42} />
       </points>
     </>
@@ -496,14 +501,14 @@ const LABEL_STYLE: React.CSSProperties = {
 
 type FlyToFn = (pos: THREE.Vector3, radius: number) => void;
 
-function SunSphere({ onClick, flyTo }: { onClick: () => void; flyTo: FlyToFn }) {
+function SunSphere({ onClick, flyTo, show = true }: { onClick: () => void; flyTo: FlyToFn; show?: boolean }) {
   return (
-    <group position={SUN_POS}>
+    <group position={SUN_POS} visible={show}>
       <mesh onClick={e => { e.stopPropagation(); onClick(); }}>
         <sphereGeometry args={[SUN_VR, 24, 24]} />
         <meshStandardMaterial color="#ffe040" emissive="#ff8800" emissiveIntensity={3} roughness={1} metalness={0} />
       </mesh>
-      <Html center position={[0, SUN_VR * 1.6, 0]} style={LABEL_STYLE}
+      <Html center position={[0, SUN_VR * 1.6, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
         onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...SUN_POS), SUN_VR); }}>
         ☀️ Sole
       </Html>
@@ -511,16 +516,16 @@ function SunSphere({ onClick, flyTo }: { onClick: () => void; flyTo: FlyToFn }) 
   );
 }
 
-function EarthSphere({ onClick, flyTo }: { onClick: () => void; flyTo: FlyToFn }) {
+function EarthSphere({ onClick, flyTo, show = true }: { onClick: () => void; flyTo: FlyToFn; show?: boolean }) {
   const meshRef = useRef<THREE.Mesh | null>(null);
   useEffect(() => { applyTexture(meshRef.current, PLANET_TEXTURES.terra); }, []);
   return (
-    <group position={[0, 0, 0]}>
+    <group position={[0, 0, 0]} visible={show}>
       <mesh ref={meshRef} onClick={e => { e.stopPropagation(); onClick(); }}>
         <sphereGeometry args={[EARTH_VR, 32, 32]} />
         <meshStandardMaterial color="#1e5fa8" roughness={0.7} metalness={0} />
       </mesh>
-      <Html center position={[0, EARTH_VR * 1.8, 0]} style={LABEL_STYLE}
+      <Html center position={[0, EARTH_VR * 1.8, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
         onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(0, 0, 0), EARTH_VR); }}>
         🌍 Terra
       </Html>
@@ -528,7 +533,7 @@ function EarthSphere({ onClick, flyTo }: { onClick: () => void; flyTo: FlyToFn }
   );
 }
 
-function MoonSphere({ onClick, flyTo }: { onClick: () => void; flyTo: FlyToFn }) {
+function MoonSphere({ onClick, flyTo, show = true }: { onClick: () => void; flyTo: FlyToFn; show?: boolean }) {
   const meshRef = useRef<THREE.Mesh | null>(null);
   const pos = useMemo<[number, number, number]>(() => {
     const [mx, my, mz] = getMoonPosition();
@@ -536,12 +541,12 @@ function MoonSphere({ onClick, flyTo }: { onClick: () => void; flyTo: FlyToFn })
   }, []);
   useEffect(() => { applyTexture(meshRef.current, PLANET_TEXTURES.luna); }, []);
   return (
-    <group position={pos}>
+    <group position={pos} visible={show}>
       <mesh ref={meshRef} onClick={e => { e.stopPropagation(); onClick(); }}>
         <sphereGeometry args={[MOON_VR, 24, 24]} />
         <meshStandardMaterial color="#b8b8b8" roughness={1} metalness={0} />
       </mesh>
-      <Html center position={[0, MOON_VR * 2, 0]} style={LABEL_STYLE}
+      <Html center position={[0, MOON_VR * 2, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
         onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...pos), MOON_VR); }}>
         🌕 Luna
       </Html>
@@ -549,7 +554,7 @@ function MoonSphere({ onClick, flyTo }: { onClick: () => void; flyTo: FlyToFn })
   );
 }
 
-function PlanetSphere({ planet, onClick, flyTo }: { planet: typeof PLANETS[0]; onClick: () => void; flyTo: FlyToFn }) {
+function PlanetSphere({ planet, onClick, flyTo, show = true }: { planet: typeof PLANETS[0]; onClick: () => void; flyTo: FlyToFn; show?: boolean }) {
   const meshRef = useRef<THREE.Mesh | null>(null);
   const pos = useMemo<[number, number, number]>(() => {
     const [px, py, pz] = getPlanetPosition(planet);
@@ -564,7 +569,7 @@ function PlanetSphere({ planet, onClick, flyTo }: { planet: typeof PLANETS[0]; o
     urano: '🔵', nettuno: '🌊',
   };
   return (
-    <group position={pos}>
+    <group position={pos} visible={show}>
       <mesh ref={meshRef} onClick={e => { e.stopPropagation(); onClick(); }}>
         <sphereGeometry args={[vr, 24, 24]} />
         <meshStandardMaterial color={planet.color} roughness={0.85} metalness={0.05} />
@@ -575,7 +580,7 @@ function PlanetSphere({ planet, onClick, flyTo }: { planet: typeof PLANETS[0]; o
           <meshStandardMaterial color="#c8b570" transparent opacity={0.65} roughness={1} />
         </mesh>
       )}
-      <Html center position={[0, vr * 1.8, 0]} style={LABEL_STYLE}
+      <Html center position={[0, vr * 1.8, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
         onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...pos), vr); }}>
         {PLANET_ICONS[planet.id] ?? '🪐'} {planet.name}
       </Html>
@@ -642,14 +647,14 @@ const NEARBY_STARS = [
   { name: 'Rigel',            pos: [ 580,  -80, -320] as [number,number,number], color: '#aabbff' },
 ];
 
-function NearbyStar({ name, pos, color }: { name: string; pos: [number,number,number]; color: string }) {
+function NearbyStar({ name, pos, color, show = true }: { name: string; pos: [number,number,number]; color: string; show?: boolean }) {
   return (
-    <group position={pos}>
+    <group position={pos} visible={show}>
       <mesh>
         <sphereGeometry args={[0.8, 8, 8]} />
         <meshBasicMaterial color={color} />
       </mesh>
-      <Html center position={[0, 1.2, 0]} style={GALAXY_LABEL_STYLE}>{name}</Html>
+      <Html center position={[0, 1.2, 0]} style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none' }}>{name}</Html>
     </group>
   );
 }
@@ -664,15 +669,15 @@ const DWARF_PLANETS: DwarfData[] = [
   { id: 'haumea',   name: 'Haumea',   color: '#e0ddd8', radiusM:   620_000, pos: [43.1,  0.6, -12]  },
 ];
 
-function DwarfPlanetSphere({ dwarf, flyTo }: { dwarf: DwarfData; flyTo: FlyToFn }) {
+function DwarfPlanetSphere({ dwarf, flyTo, show = true }: { dwarf: DwarfData; flyTo: FlyToFn; show?: boolean }) {
   const vr = Math.max(0.0004, dwarf.radiusM * M_TO_AU * 20);
   return (
-    <group position={dwarf.pos}>
+    <group position={dwarf.pos} visible={show}>
       <mesh>
         <sphereGeometry args={[vr, 14, 14]} />
         <meshStandardMaterial color={dwarf.color} roughness={0.9} metalness={0.02} />
       </mesh>
-      <Html center position={[0, vr * 2, 0]} style={LABEL_STYLE}
+      <Html center position={[0, vr * 2, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
         onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...dwarf.pos), vr); }}>
         ⚫ {dwarf.name}
       </Html>
@@ -791,6 +796,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
   const onEarthApproachRef = useRef<(() => void) | null>(onEarthApproach ?? null);
   const nearEarthRef       = useRef(false);
   const flyToRef           = useRef<((pos: THREE.Vector3, radius: number) => void) | null>(null);
+  const prevEraRef         = useRef('solar');
 
   // Keep callback ref current on every render
   onEarthApproachRef.current = onEarthApproach ?? null;
@@ -827,6 +833,43 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
 
   // Touch drag gestito via React onTouchStart/onTouchMove sull'outer div,
   // così NavPad.onTouchStart con stopPropagation() previene correttamente il drag.
+
+  // Posizionamento automatico camera al cambio di era cosmica
+  useEffect(() => {
+    function getEra(y: number): string {
+      if (y <= -13_700_000_000) return 'bigbang';
+      if (y <= -13_500_000_000) return 'plasma';
+      if (y <= -13_200_000_000) return 'darkages';
+      if (y <= -13_000_000_000) return 'firstgal';
+      if (y <= -5_000_000_000)  return 'galactic';
+      if (y <= -4_600_000_000)  return 'stellar';
+      return 'solar';
+    }
+    const ERA_POS: Record<string, [number, number, number]> = {
+      bigbang:  [0,  25,  0],
+      plasma:   [0, 180,  0],
+      darkages: [0, 700,  0],
+      firstgal: [0, 1200, 0],
+      galactic: [0, 900,  0],
+      stellar:  [0, 350,  0],
+    };
+    const ERA_PITCH: Record<string, number> = {
+      bigbang:  -Math.PI / 2 + 0.05,
+      plasma:   -Math.PI / 2 + 0.1,
+      darkages: -0.35,
+      firstgal: -0.25,
+      galactic: -0.2,
+      stellar:  -0.15,
+    };
+    const era = getEra(currentYear);
+    if (era === prevEraRef.current) return;
+    prevEraRef.current = era;
+    const pos = ERA_POS[era];
+    if (pos) {
+      (jumpRef as React.MutableRefObject<THREE.Vector3 | null>).current = new THREE.Vector3(...pos);
+      (pitchRef as React.MutableRefObject<number>).current = ERA_PITCH[era] ?? -0.12;
+    }
+  }, [currentYear]);
 
   // FlyTo da App (ricerca pianeta/luna/sole)
   useEffect(() => {
@@ -901,10 +944,10 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         <BigBangBackground year={currentYear} />
         <BigBangExpansion year={currentYear} />
 
-        {/* Galassie distanti: formazione ~13.2 mld a.C. */}
-        {currentYear >= -13_200_000_000 && <DistantGalaxies />}
+        {/* Galassie distanti: sempre montate per evitare crash removeChild su Html */}
+        <DistantGalaxies show={currentYear >= -13_200_000_000} />
 
-        {/* Via Lattea e stelle di sfondo: formazione ~13 mld a.C. */}
+        {/* Via Lattea e stelle di sfondo: formazione ~13 mld a.C. (no Html, ok con mount condizionale) */}
         {currentYear >= -13_000_000_000 && (
           <>
             <Stars radius={800}  depth={120} count={8000} factor={4}   saturation={0.25} fade />
@@ -914,23 +957,21 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
           </>
         )}
 
-        {/* Stelle vicine: formate ~5 mld a.C. */}
-        {currentYear >= -5_000_000_000 && NEARBY_STARS.map(s => <NearbyStar key={s.name} {...s} />)}
+        {/* Stelle vicine: sempre montate per evitare crash removeChild su Html */}
+        {NEARBY_STARS.map(s => <NearbyStar key={s.name} {...s} show={currentYear >= -5_000_000_000} />)}
 
-        {/* Sistema Solare completo: formazione ~4.6 mld a.C. */}
-        {currentYear >= -4_600_000_000 && (
-          <>
-            <SunSphere  onClick={() => onEventClick(SUN_CARD)}  flyTo={flyToBody} />
-            <EarthSphere onClick={() => onEventClick(EARTH_CARD)} flyTo={flyToBody} />
-            <MoonSphere onClick={() => onEventClick(MOON_CARD)}  flyTo={flyToBody} />
-            {PLANETS.map(p => (
-              <PlanetSphere key={p.id} planet={p} onClick={() => onEventClick(toPlanetCard(p))} flyTo={flyToBody} />
-            ))}
-            <AsteroidBelt />
-            <KuiperBelt />
-            {DWARF_PLANETS.map(d => <DwarfPlanetSphere key={d.id} dwarf={d} flyTo={flyToBody} />)}
-          </>
-        )}
+        {/* Sole, Terra, Luna, pianeti, pianeti nani: sempre montati per evitare crash removeChild */}
+        <SunSphere   onClick={() => onEventClick(SUN_CARD)}   flyTo={flyToBody} show={currentYear >= -4_600_000_000} />
+        <EarthSphere onClick={() => onEventClick(EARTH_CARD)} flyTo={flyToBody} show={currentYear >= -4_600_000_000} />
+        <MoonSphere  onClick={() => onEventClick(MOON_CARD)}  flyTo={flyToBody} show={currentYear >= -4_600_000_000} />
+        {PLANETS.map(p => (
+          <PlanetSphere key={p.id} planet={p} onClick={() => onEventClick(toPlanetCard(p))} flyTo={flyToBody} show={currentYear >= -4_600_000_000} />
+        ))}
+        {DWARF_PLANETS.map(d => <DwarfPlanetSphere key={d.id} dwarf={d} flyTo={flyToBody} show={currentYear >= -4_600_000_000} />)}
+
+        {/* Cinture: no Html, ok con mount condizionale */}
+        {currentYear >= -4_600_000_000 && <AsteroidBelt />}
+        {currentYear >= -4_600_000_000 && <KuiperBelt />}
 
         <CameraRig
           navKeysRef={navKeysRef}
