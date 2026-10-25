@@ -384,7 +384,7 @@ function BigBangBackground({ year }: { year: number }) {
 // BigBangExpansion: fireball espandente + particelle di materia primordiale
 // La geometria è computata una sola volta; solo la scala del gruppo varia con t.
 function BigBangExpansion({ year }: { year: number }) {
-  if (year > -13_500_000_000) return null;
+  const visible = year <= -13_500_000_000;
   const t = Math.max(0, Math.min(1, (year - (-13_800_000_000)) / 300_000_000));
 
   // Particelle distribuite sulla sfera unitaria — scala applicata al gruppo
@@ -418,6 +418,7 @@ function BigBangExpansion({ year }: { year: number }) {
   const coreHue = t * 0.06;
   const coreColor = new THREE.Color().setHSL(coreHue, 1.0, Math.max(0.5, 0.95 - t * 0.45));
 
+  if (!visible) return null;
   return (
     <>
       {/* Nube di materia primordiale in espansione */}
@@ -470,7 +471,7 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     const dist    = camera.position.length();
     const maxSpd  = Math.max(8e-8, dist * 0.006);
     const keys    = navKeysRef.current!;
-    const boost   = keys.has('ShiftLeft') || keys.has('ShiftRight') ? 5 : 1;
+    const boost   = keys.has('ShiftLeft') || keys.has('ShiftRight') || keys.has('TurboFwd') ? 5 : 1;
     const accel   = maxSpd * 3 * boost;
     const friction = Math.exp(-delta / 0.07);
 
@@ -483,10 +484,11 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     let hasInput = false;
 
     if (keys.has('Space')) velRef.current.set(0, 0, 0);
-    if (keys.has('BrakePad') || keys.has('KeyF')) velRef.current.multiplyScalar(Math.pow(0.04, delta));
+    if (keys.has('BrakePad') || keys.has('KeyF')) velRef.current.multiplyScalar(Math.max(0, 1 - delta * 20));
 
     if (keys.has('KeyW') || keys.has('ArrowUp'))   { velRef.current.addScaledVector(dir,    accel * delta); hasInput = true; }
     if (keys.has('KeyS') || keys.has('ArrowDown'))  { velRef.current.addScaledVector(dir,   -accel * delta); hasInput = true; }
+    if (keys.has('TurboFwd'))                       { velRef.current.addScaledVector(dir,    accel * delta); hasInput = true; }
     if (keys.has('KeyA') || keys.has('ArrowLeft'))  { velRef.current.addScaledVector(right, -accel * delta); hasInput = true; }
     if (keys.has('KeyD') || keys.has('ArrowRight')) { velRef.current.addScaledVector(right,  accel * delta); hasInput = true; }
     if (keys.has('KeyQ') || keys.has('PageUp'))     { velRef.current.addScaledVector(up,     accel * delta); hasInput = true; }
@@ -526,7 +528,7 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
         : camera.position.clone();
       (jumpRef as React.MutableRefObject<THREE.Vector3 | null>).current = newPos;
       const lookDir = targetPos.clone().sub(newPos).normalize();
-      (yawRef   as React.MutableRefObject<number>).current = Math.atan2(lookDir.x, -lookDir.z);
+      (yawRef   as React.MutableRefObject<number>).current = Math.atan2(-lookDir.x, -lookDir.z);
       (pitchRef as React.MutableRefObject<number>).current = Math.asin(Math.max(-1, Math.min(1, lookDir.y)));
     };
 
@@ -813,7 +815,7 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
       <div style={{ display: 'flex', gap: 4, marginTop: 2 }}>
         <Btn code="BrakePad"  label="🐢" />
         <Btn code="Space"     label="⏹" />
-        <Btn code="ShiftLeft" label="⚡" />
+        <Btn code="TurboFwd"  label="⚡" />
       </div>
       <div style={{ color: '#3a4a5a', fontSize: '0.50rem', display: 'flex', gap: 8 }}>
         <span>{locale === 'it' ? 'Frena' : 'Brake'}</span>
@@ -954,7 +956,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
 
     function orient(dest: THREE.Vector3, target: THREE.Vector3) {
       const d = target.clone().sub(dest).normalize();
-      (yawRef as React.MutableRefObject<number>).current = Math.atan2(d.x, -d.z);
+      (yawRef as React.MutableRefObject<number>).current = Math.atan2(-d.x, -d.z);
       (pitchRef as React.MutableRefObject<number>).current = Math.asin(Math.max(-1, Math.min(1, d.y)));
     }
 
