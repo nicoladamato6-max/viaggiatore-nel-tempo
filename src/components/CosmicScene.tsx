@@ -468,40 +468,39 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
   }, [camera]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useFrame((_, delta) => {
-    const dist    = camera.position.length();
-    const maxSpd  = Math.max(8e-8, dist * 0.006);
-    const keys    = navKeysRef.current!;
-    const boost   = keys.has('ShiftLeft') || keys.has('ShiftRight') || keys.has('TurboFwd') ? 5 : 1;
-    const accel   = maxSpd * 3 * boost;
-    const friction = Math.exp(-delta / 0.07);
+    const dist = camera.position.length();
+    const keys = navKeysRef.current!;
+    const rot  = delta * 1.5; // rotazione vista (rad/s)
+
+    // Rotazione punto di vista dai tasti direzionali
+    if (keys.has('KeyA') || keys.has('ArrowLeft'))
+      (yawRef   as React.MutableRefObject<number>).current += rot;
+    if (keys.has('KeyD') || keys.has('ArrowRight'))
+      (yawRef   as React.MutableRefObject<number>).current -= rot;
+    if (keys.has('KeyQ') || keys.has('PageUp'))
+      (pitchRef as React.MutableRefObject<number>).current = Math.max(-1.5, pitchRef.current! + rot);
+    if (keys.has('KeyE') || keys.has('PageDown'))
+      (pitchRef as React.MutableRefObject<number>).current = Math.min(1.5, pitchRef.current! - rot);
 
     camera.rotation.y = yawRef.current!;
     camera.rotation.x = pitchRef.current!;
 
-    const dir   = new THREE.Vector3(0, 0, -1).applyEuler(camera.rotation).normalize();
-    const right = new THREE.Vector3(1, 0, 0).applyEuler(camera.rotation).normalize();
-    const up    = new THREE.Vector3(0, 1, 0);
-    let hasInput = false;
+    const dir    = new THREE.Vector3(0, 0, -1).applyEuler(camera.rotation).normalize();
+    // Thrust: piccolo incremento costante — velocità inerziale (nessun attrito al rilascio)
+    const thrust = Math.max(1e-8, dist * 0.001) * delta;
 
-    if (keys.has('Space')) velRef.current.set(0, 0, 0);
-    if (keys.has('BrakePad') || keys.has('KeyF')) velRef.current.multiplyScalar(Math.max(0, 1 - delta * 20));
+    if (keys.has('KeyW') || keys.has('ArrowUp'))   velRef.current.addScaledVector(dir,  thrust);
+    if (keys.has('KeyS') || keys.has('ArrowDown'))  velRef.current.addScaledVector(dir, -thrust);
+    if (keys.has('Space'))                          velRef.current.set(0, 0, 0);
 
-    if (keys.has('KeyW') || keys.has('ArrowUp'))   { velRef.current.addScaledVector(dir,    accel * delta); hasInput = true; }
-    if (keys.has('KeyS') || keys.has('ArrowDown'))  { velRef.current.addScaledVector(dir,   -accel * delta); hasInput = true; }
-    if (keys.has('TurboFwd'))                       { velRef.current.addScaledVector(dir,    accel * delta); hasInput = true; }
-    if (keys.has('KeyA') || keys.has('ArrowLeft'))  { velRef.current.addScaledVector(right, -accel * delta); hasInput = true; }
-    if (keys.has('KeyD') || keys.has('ArrowRight')) { velRef.current.addScaledVector(right,  accel * delta); hasInput = true; }
-    if (keys.has('KeyQ') || keys.has('PageUp'))     { velRef.current.addScaledVector(up,     accel * delta); hasInput = true; }
-    if (keys.has('KeyE') || keys.has('PageDown'))   { velRef.current.addScaledVector(up,    -accel * delta); hasInput = true; }
-
-    const curSpd = velRef.current.length();
-    const maxAllowed = maxSpd * boost;
+    // Cap velocità massima (30% della distanza/s) per evitare runaway
+    const curSpd     = velRef.current.length();
+    const maxAllowed = Math.max(1e-8, dist * 0.3);
     if (curSpd > maxAllowed) velRef.current.multiplyScalar(maxAllowed / curSpd);
-    if (!hasInput) velRef.current.multiplyScalar(friction);
 
     const wd = wheelRef.current;
     if (wd !== 0) {
-      velRef.current.addScaledVector(dir, -wd * maxSpd * 0.8);
+      velRef.current.addScaledVector(dir, -wd * Math.max(1e-8, dist * 0.01));
       (wheelRef as React.MutableRefObject<number>).current = 0;
     }
 
@@ -760,7 +759,8 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
   const press   = (code: string) => navKeysRef.current!.add(code);
   const release = (code: string) => navKeysRef.current!.delete(code);
 
-  const speedMS = distAU * AU * 0.006;
+  // Thrust massimo per secondo all'attuale distanza (0.1% della distanza/s)
+  const thrustMS = distAU * AU * 0.001;
   function fmtSpeed(ms: number): string {
     const c = 299_792_458;
     if (ms >= c * 0.001) return `${(ms / c * 100).toFixed(2)}% c`;
@@ -790,37 +790,43 @@ function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Se
     );
   }
 
+  const cell: React.CSSProperties = { width: 40, height: 40 };
+
   return (
     <div
-      style={{ position: 'absolute', bottom: 12, left: '50%', transform: 'translateX(-50%)', zIndex: 200, pointerEvents: 'all', display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'center', background: 'rgba(0,8,20,0.72)', border: '1px solid rgba(100,180,255,0.18)', borderRadius: 12, padding: '8px 14px', backdropFilter: 'blur(10px)' }}
+      style={{ position: 'absolute', bottom: 12, left: '50%', transform: 'translateX(-50%)', zIndex: 200, pointerEvents: 'all', display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'center', background: 'rgba(0,8,20,0.72)', border: '1px solid rgba(100,180,255,0.18)', borderRadius: 12, padding: '8px 14px', backdropFilter: 'blur(10px)' }}
       onMouseDown={e => e.stopPropagation()}
       onTouchStart={e => e.stopPropagation()}
     >
-      <div style={{ color: '#4a6680', fontSize: '0.55rem', marginBottom: 2 }}>
-        ~{fmtSpeed(speedMS)}
+      <div style={{ color: '#4a6680', fontSize: '0.50rem' }}>
+        ±{fmtSpeed(thrustMS)}/s
       </div>
-      {/* Direzionali */}
+
+      {/* Croce rotazione vista (3×3 grid) */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 40px)', gridTemplateRows: 'repeat(3, 40px)', gap: 4 }}>
+        <div style={cell} />
+        <Btn code="KeyQ" label="⬆" />
+        <div style={cell} />
+        <Btn code="KeyA" label="◀" />
+        <div style={{ ...cell, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'rgba(100,180,255,0.25)' }} />
+        </div>
+        <Btn code="KeyD" label="▶" />
+        <div style={cell} />
+        <Btn code="KeyE" label="⬇" />
+        <div style={cell} />
+      </div>
+
+      {/* Propulsione + Stop */}
       <div style={{ display: 'flex', gap: 4 }}>
         <Btn code="KeyW" label="▲" />
+        <Btn code="Space" label="⏹" />
         <Btn code="KeyS" label="▼" />
-        <div style={{ width: 4 }} />
-        <Btn code="KeyQ" label="⬆" />
-        <Btn code="KeyE" label="⬇" />
       </div>
-      <div style={{ display: 'flex', gap: 4 }}>
-        <Btn code="KeyA" label="◀" />
-        <Btn code="KeyD" label="▶" />
-      </div>
-      {/* Velocità */}
-      <div style={{ display: 'flex', gap: 4, marginTop: 2 }}>
-        <Btn code="BrakePad"  label="🐢" />
-        <Btn code="Space"     label="⏹" />
-        <Btn code="TurboFwd"  label="⚡" />
-      </div>
-      <div style={{ color: '#3a4a5a', fontSize: '0.50rem', display: 'flex', gap: 8 }}>
-        <span>{locale === 'it' ? 'Frena' : 'Brake'}</span>
+      <div style={{ color: '#3a4a5a', fontSize: '0.50rem', display: 'flex', gap: 16 }}>
+        <span>{locale === 'it' ? 'Acc' : 'Fwd'}</span>
         <span>Stop</span>
-        <span>Turbo</span>
+        <span>{locale === 'it' ? 'Dec' : 'Rev'}</span>
       </div>
     </div>
   );
@@ -1121,7 +1127,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
 
       {/* Hint comandi */}
       <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', color: '#2a3a4a', fontSize: '0.55rem', pointerEvents: 'none', textAlign: 'center', whiteSpace: 'nowrap', zIndex: 10 }}>
-        {it ? 'Tieni premuto un bottone · Scorri con dito per ruotare' : 'Hold a button · Swipe to look around'}
+        {it ? '▲▼ accelera/decelera · ◀▶⬆⬇ ruota vista · ⏹ stop' : '▲▼ thrust · ◀▶⬆⬇ rotate view · ⏹ stop'}
       </div>
     </div>
   );
