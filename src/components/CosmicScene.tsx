@@ -42,18 +42,6 @@ const SUN_POS: [number, number, number] = [
   0,
 ];
 
-const SCALE_JUMPS = [
-  { icon: '🌍', label: 'Terra',     labelEn: 'Earth',     altM: 1.5e7  },
-  { icon: '🌕', label: 'Luna',      labelEn: 'Moon',      altM: 4e8    },
-  { icon: '☀️', label: 'Sole',     labelEn: 'Sun',       altM: 1.6e11 },
-  { icon: '🔴', label: 'Marte',     labelEn: 'Mars',      altM: 2.5e11 },
-  { icon: '🪐', label: 'Giove',     labelEn: 'Jupiter',   altM: 8e11   },
-  { icon: '💫', label: 'Saturno',   labelEn: 'Saturn',    altM: 1.5e12 },
-  { icon: '⚫', label: 'Plutone',   labelEn: 'Pluto',     altM: 6e12   },
-  { icon: '❄️', label: 'Kuiper',   labelEn: 'Kuiper',    altM: 7e12   },
-  { icon: '⭐', label: 'Proxima',   labelEn: 'Proxima',   altM: 4.5e16 },
-  { icon: '🌌', label: 'Andromeda', labelEn: 'Andromeda', altM: 2.2e22 },
-] as const;
 
 // ── Sizing (radii visivi corretti — Luna a 0.00257 AU da Terra) ──────────────
 const SUN_VR   = 0.025;   // UA visive (era 0.065)
@@ -924,13 +912,6 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
       }
     }
   }, [flyTo]);
-
-  const jumpTo = useCallback((altM: number) => {
-    const altAU = altM * M_TO_AU;
-    const cur   = cameraPosRef.current;
-    const dir   = cur.length() > 1e-7 ? cur.clone().normalize() : new THREE.Vector3(0, 1, 0);
-    jumpRef.current = dir.multiplyScalar(altAU);
-  }, []);
 
   const it = locale === 'it';
 
