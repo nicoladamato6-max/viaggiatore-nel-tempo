@@ -526,10 +526,17 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     } else {
       altAU = 0.05;
     }
-    camera.position.set(0, altAU, 0);
     if (initialAltKm > 0) {
+      // Camera a 45° dall'asse verticale: stessa distanza da Terra ma pitch = -45° invece di -81°.
+      // Con pitch vicino a -90° lo yaw mondiale causa gimbal lock (la Terra rimane al centro e
+      // l'orizzonte ruota). A -45° lo yaw funziona correttamente: la Terra scorre lateralmente
+      // e l'orizzonte rimane piatto.
+      const side = altAU * Math.SQRT1_2; // altAU / sqrt(2)
+      camera.position.set(0, side, side);
       (yawRef   as React.MutableRefObject<number>).current = 0;
-      (pitchRef as React.MutableRefObject<number>).current = -Math.PI / 2 + 0.15;
+      (pitchRef as React.MutableRefObject<number>).current = -Math.PI / 4; // -45°, punta esattamente sulla Terra
+    } else {
+      camera.position.set(0, altAU, 0);
     }
   }, [camera]); // eslint-disable-line react-hooks/exhaustive-deps
 
