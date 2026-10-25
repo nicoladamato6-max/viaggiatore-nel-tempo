@@ -307,6 +307,7 @@ function DistantGalaxies({ show = true }: { show?: boolean }) {
 }
 
 // BigBangBackground: cambia il colore del cielo quando siamo all'inizio del tempo
+// t=0 (anno -13.8B): nero assoluto | t=1 (anno -13.5B): plasma bianco/arancio
 function BigBangBackground({ year }: { year: number }) {
   const { scene } = useThree();
   useEffect(() => () => { scene.background = new THREE.Color(0x00000a); }, [scene]);
@@ -316,9 +317,10 @@ function BigBangBackground({ year }: { year: number }) {
       return;
     }
     const t = Math.max(0, Math.min(1, (year - (-13_800_000_000)) / 300_000_000));
-    const hue = t * 0.07;
-    const l   = 0.70 + (1 - t) * 0.30;
-    const sat = Math.max(0.25, 1.0 - t * 0.75);
+    // t=0 → buio totale; t=1 → plasma luminoso (bianco-arancio)
+    const l   = t * 0.92;
+    const sat = t * 0.85;
+    const hue = t * 0.06;
     scene.background = new THREE.Color().setHSL(hue, sat, l);
   });
   return null;
@@ -353,9 +355,9 @@ function BigBangExpansion({ year }: { year: number }) {
     return g;
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // t=0: palla da 0.003 UA (camera a 0.05 UA, vista dall'esterno)
+  // t=0: sfera da 2 UA (camera a 25 UA → ~9° angolare, chiaramente visibile)
   // t→1: espansione a 450 UA — la camera è immersa nell'esplosione
-  const scale  = 0.003 + t * 450;
+  const scale  = 2 + t * 448;
   const pOpac  = Math.max(0, 0.92 - t * 0.75);
   const coreR  = scale * 0.12;
   const coreHue = t * 0.06;
@@ -1025,24 +1027,6 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
           ? <p style={{ color: '#445566', fontSize: '0.75rem' }}>{it ? "Sposta lo slider verso sinistra per esplorare l'universo primordiale" : 'Move the slider left to explore the primordial universe'}</p>
           : events.map(e => <CosmicEventButton key={e.id} event={e} onClick={onEventClick} />)
         }
-      </div>
-
-      {/* Navigazione scala (destra) */}
-      <div style={{ position: 'absolute', right: 16, top: 16, display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'flex-end' }}>
-        <p style={{ color: '#1abc9c99', fontSize: '0.6rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 4 }}>
-          {it ? '🔭 Navigazione' : '🔭 Navigate'}
-        </p>
-        {SCALE_JUMPS.map(j => (
-          <button key={j.label} onClick={() => jumpTo(j.altM)}
-            title={`${it ? j.label : j.labelEn} — ${fmtDist(j.altM * M_TO_AU)}`}
-            style={{ background: 'rgba(0,20,40,0.72)', border: '1px solid rgba(100,180,255,0.22)', borderRadius: 8, padding: '6px 10px', color: '#a0d8f0', cursor: 'pointer', fontSize: '0.72rem', textAlign: 'right', lineHeight: 1.3, backdropFilter: 'blur(8px)', minWidth: 110 }}
-            onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(100,180,255,0.65)'; e.currentTarget.style.color = '#e0f4ff'; }}
-            onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(100,180,255,0.22)'; e.currentTarget.style.color = '#a0d8f0'; }}
-          >
-            <span style={{ fontSize: '0.88rem' }}>{j.icon}</span>{' '}{it ? j.label : j.labelEn}
-            <div style={{ color: '#4a8aaa', fontSize: '0.6rem', marginTop: 1 }}>{fmtDist(j.altM * M_TO_AU)}</div>
-          </button>
-        ))}
       </div>
 
       {/* HUD altitudine + zona */}
