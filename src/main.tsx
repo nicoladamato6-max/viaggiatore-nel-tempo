@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import 'cesium/Build/Cesium/Widgets/widgets.css'
 import './index.css'
 import App from './App.tsx'
@@ -9,7 +9,6 @@ import { AuthProvider, useAuth } from './hooks/useAuth.tsx'
 
 function ProtectedApp() {
   const { user, loading } = useAuth();
-  const navigate = useNavigate();
 
   if (loading) return (
     <div style={{ display:'flex', alignItems:'center', justifyContent:'center', height:'100vh', background:'#060b14', color:'#00c8ff', fontFamily:'monospace', fontSize:'1rem', letterSpacing:'0.1em' }}>
@@ -17,10 +16,7 @@ function ProtectedApp() {
     </div>
   );
 
-  if (!user) {
-    navigate('/', { replace: true });
-    return null;
-  }
+  if (!user) return <Navigate to="/" replace />;
 
   return <App />;
 }
