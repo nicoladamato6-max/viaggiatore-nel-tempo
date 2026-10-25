@@ -487,9 +487,9 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
 
     // Rotazione punto di vista: tasti direzionali (WASD + frecce) e Q/E
     if (keys.has('KeyA') || keys.has('ArrowLeft'))
-      (yawRef   as React.MutableRefObject<number>).current += rot;
-    if (keys.has('KeyD') || keys.has('ArrowRight'))
       (yawRef   as React.MutableRefObject<number>).current -= rot;
+    if (keys.has('KeyD') || keys.has('ArrowRight'))
+      (yawRef   as React.MutableRefObject<number>).current += rot;
     if (keys.has('KeyQ') || keys.has('ArrowUp'))
       (pitchRef as React.MutableRefObject<number>).current = Math.max(-1.5, pitchRef.current! + rot);
     if (keys.has('KeyE') || keys.has('ArrowDown'))
@@ -904,10 +904,14 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
     flyToRef.current?.(pos, radius);
   }, []);
 
-  // Tastiera
+  // Tastiera — ignora eventi quando il focus è in un campo di testo
   useEffect(() => {
-    const dn = (e: KeyboardEvent) => navKeysRef.current.add(e.code);
-    const up = (e: KeyboardEvent) => navKeysRef.current.delete(e.code);
+    const inInput = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null;
+      return t?.tagName === 'INPUT' || t?.tagName === 'TEXTAREA' || !!t?.isContentEditable;
+    };
+    const dn = (e: KeyboardEvent) => { if (!inInput(e)) navKeysRef.current.add(e.code); };
+    const up = (e: KeyboardEvent) => { if (!inInput(e)) navKeysRef.current.delete(e.code); };
     window.addEventListener('keydown', dn);
     window.addEventListener('keyup',   up);
     return () => { window.removeEventListener('keydown', dn); window.removeEventListener('keyup', up); };
