@@ -508,9 +508,14 @@ interface CameraRigProps {
   onEarthApproachRef: React.RefObject<(() => void) | null>;
   nearEarthRef:       React.RefObject<boolean>;
   flyToRef:           React.RefObject<((pos: THREE.Vector3, radius: number) => void) | null>;
+  mouseDxRef:         React.RefObject<number>;
+  mouseDyRef:         React.RefObject<number>;
+  touchDxRef:         React.RefObject<number>;
+  touchDyRef:         React.RefObject<number>;
+  pendingOrientRef:   React.RefObject<boolean>;
 }
 
-function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAltRef, hudZoneRef, locale, wheelRef, initialAltKm, onEarthApproachRef, nearEarthRef, flyToRef }: CameraRigProps) {
+function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAltRef, hudZoneRef, locale, wheelRef, initialAltKm, onEarthApproachRef, nearEarthRef, flyToRef, mouseDxRef, mouseDyRef, touchDxRef, touchDyRef, pendingOrientRef }: CameraRigProps) {
   const { camera } = useThree();
   const velRef = useRef(new THREE.Vector3());
 
@@ -527,17 +532,15 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
       altAU = 0.05;
     }
     if (initialAltKm > 0) {
-      // Camera a 45° dall'asse verticale: stessa distanza da Terra ma pitch = -45° invece di -81°.
-      // Con pitch vicino a -90° lo yaw mondiale causa gimbal lock (la Terra rimane al centro e
-      // l'orizzonte ruota). A -45° lo yaw funziona correttamente: la Terra scorre lateralmente
-      // e l'orizzonte rimane piatto.
+      // Camera a 45° dall'asse verticale: stessa distanza da Terra ma pitch = -45°.
       const side = altAU * Math.SQRT1_2; // altAU / sqrt(2)
       camera.position.set(0, side, side);
       (yawRef   as React.MutableRefObject<number>).current = 0;
-      (pitchRef as React.MutableRefObject<number>).current = -Math.PI / 4; // -45°, punta esattamente sulla Terra
+      (pitchRef as React.MutableRefObject<number>).current = -Math.PI / 4;
     } else {
       camera.position.set(0, altAU, 0);
     }
+    (pendingOrientRef as React.MutableRefObject<boolean>).current = true;
   }, [camera]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useFrame((_, delta) => {
@@ -545,20 +548,60 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     const keys = navKeysRef.current!;
     const rot  = delta * 1.5; // rotazione vista (rad/s)
 
-    // Rotazione orizzontale: yaw attorno all'asse Y mondo (orizzonte sempre piatto, roll = 0)
-    if (keys.has('KeyD') || keys.has('ArrowRight')) (yawRef as React.MutableRefObject<number>).current -= rot;
-    if (keys.has('KeyA') || keys.has('ArrowLeft'))  (yawRef as React.MutableRefObject<number>).current += rot;
+    // Se arriva un flyTo o cambio era, ricostruisci il quaternione da yaw/pitch
+    if (pendingOrientRef.current) {
+      camera.quaternion.setFromEuler(new THREE.Euler(pitchRef.current!, yawRef.current!, 0, 'YXZ'));
+      (pendingOrientRef as React.MutableRefObject<boolean>).current = false;
+    }
 
-    // Rotazione verticale: pitch diretto (KeyQ/ArrowUp = su, KeyE/ArrowDown = giù)
+    // Cattura delta accumulati prima di applicarli (serve anche per il flag isLR)
+    const mdx = mouseDxRef.current!;
+    const mdy = mouseDyRef.current!;
+    const tdx = touchDxRef.current!;
+    const tdy = touchDyRef.current!;
+    if (mdx !== 0) (mouseDxRef as React.MutableRefObject<number>).current = 0;
+    if (mdy !== 0) (mouseDyRef as React.MutableRefObject<number>).current = 0;
+    if (tdx !== 0) (touchDxRef as React.MutableRefObject<number>).current = 0;
+    if (tdy !== 0) (touchDyRef as React.MutableRefObject<number>).current = 0;
+
+    // Rotazione locale: asse Y della nave spaziotemporale (sinistra/destra) — no gimbal lock
+    const isLR = keys.has('KeyA') || keys.has('KeyD') || keys.has('ArrowLeft') || keys.has('ArrowRight') || mdx !== 0 || tdx !== 0;
+    if (keys.has('KeyD') || keys.has('ArrowRight'))
+      camera.quaternion.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), -rot));
+    if (keys.has('KeyA') || keys.has('ArrowLeft'))
+      camera.quaternion.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0),  rot));
+
+    // Rotazione locale: asse X della nave (su/giù)
     if (keys.has('KeyQ') || keys.has('ArrowUp'))
-      (pitchRef as React.MutableRefObject<number>).current = Math.max(-1.5, pitchRef.current! + rot);
+      camera.quaternion.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0),  rot));
     if (keys.has('KeyE') || keys.has('ArrowDown'))
-      (pitchRef as React.MutableRefObject<number>).current = Math.min(1.5, pitchRef.current! - rot);
+      camera.quaternion.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), -rot));
 
-    camera.rotation.y = yawRef.current!;
-    camera.rotation.x = pitchRef.current!;
+    // Mouse drag → rotazione locale Y (orizzontale) e X (verticale)
+    if (mdx !== 0) camera.quaternion.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), -mdx * 0.003));
+    if (mdy !== 0) camera.quaternion.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), -mdy * 0.003));
 
-    const dir    = new THREE.Vector3(0, 0, -1).applyEuler(camera.rotation).normalize();
+    // Touch drag → rotazione locale Y e X
+    if (tdx !== 0) camera.quaternion.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), -tdx * 0.004));
+    if (tdy !== 0) camera.quaternion.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), -tdy * 0.004));
+
+    // Auto-correzione roll: quando non si ruota LR, allinea gradualmente la "su" della nave col mondo
+    if (!isLR) {
+      const fwd   = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion);
+      const wY    = new THREE.Vector3(0, 1, 0);
+      const perpY = wY.clone().sub(fwd.clone().multiplyScalar(fwd.dot(wY)));
+      const pLen  = perpY.length();
+      if (pLen > 0.1) { // non si guarda verso i poli: skip correzione
+        perpY.divideScalar(pLen);
+        const camUp    = new THREE.Vector3(0, 1, 0).applyQuaternion(camera.quaternion);
+        const camRight = new THREE.Vector3(1, 0, 0).applyQuaternion(camera.quaternion);
+        const rollErr  = Math.atan2(camRight.dot(perpY), camUp.dot(perpY));
+        const corrAng  = Math.sign(rollErr) * Math.min(Math.abs(rollErr), 1.5 * delta);
+        camera.quaternion.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 0, 1), -corrAng));
+      }
+    }
+
+    const dir = new THREE.Vector3(0, 0, -1).applyQuaternion(camera.quaternion).normalize();
     // Thrust: piccolo incremento costante — velocità inerziale (nessun attrito al rilascio)
     // Tastiera: W / Numpad+ = avanti, S / Numpad- = indietro
     const thrust = Math.max(1e-8, dist * 0.001) * delta;
@@ -604,6 +647,7 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
       const lookDir = targetPos.clone().sub(newPos).normalize();
       (yawRef   as React.MutableRefObject<number>).current = Math.atan2(-lookDir.x, -lookDir.z);
       (pitchRef as React.MutableRefObject<number>).current = Math.asin(Math.max(-1, Math.min(1, lookDir.y)));
+      (pendingOrientRef as React.MutableRefObject<boolean>).current = true;
     };
 
     cameraPosRef.current!.copy(camera.position);
@@ -991,6 +1035,11 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
   const nearEarthRef       = useRef(false);
   const flyToRef           = useRef<((pos: THREE.Vector3, radius: number) => void) | null>(null);
   const prevEraRef         = useRef('solar');
+  const mouseDxRef         = useRef(0);
+  const mouseDyRef         = useRef(0);
+  const touchDxRef         = useRef(0);
+  const touchDyRef         = useRef(0);
+  const pendingOrientRef   = useRef(true);
 
   // Keep callback ref current on every render
   onEarthApproachRef.current = onEarthApproach ?? null;
@@ -1020,8 +1069,8 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
       const dy = e.clientY - mouseRef.current.lastY;
       mouseRef.current.lastX = e.clientX;
       mouseRef.current.lastY = e.clientY;
-      yawRef.current   -= dx * 0.003;
-      pitchRef.current  = Math.max(-1.5, Math.min(1.5, pitchRef.current - dy * 0.003));
+      (mouseDxRef as React.MutableRefObject<number>).current += dx;
+      (mouseDyRef as React.MutableRefObject<number>).current += dy;
     };
     const up = () => { mouseRef.current.down = false; };
     window.addEventListener('mousemove', move);
@@ -1066,6 +1115,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
     if (pos) {
       (jumpRef as React.MutableRefObject<THREE.Vector3 | null>).current = new THREE.Vector3(...pos);
       (pitchRef as React.MutableRefObject<number>).current = ERA_PITCH[era] ?? -0.12;
+      (pendingOrientRef as React.MutableRefObject<boolean>).current = true;
     }
   }, [currentYear]);
 
@@ -1078,6 +1128,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
       const d = target.clone().sub(dest).normalize();
       (yawRef as React.MutableRefObject<number>).current = Math.atan2(-d.x, -d.z);
       (pitchRef as React.MutableRefObject<number>).current = Math.asin(Math.max(-1, Math.min(1, d.y)));
+      (pendingOrientRef as React.MutableRefObject<boolean>).current = true;
     }
 
     if (eid === 'luna') {
@@ -1156,8 +1207,8 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         const dy = e.touches[0].clientY - lastTYRef.current;
         lastTXRef.current = e.touches[0].clientX;
         lastTYRef.current = e.touches[0].clientY;
-        yawRef.current   -= dx * 0.004;
-        pitchRef.current  = Math.max(-1.5, Math.min(1.5, pitchRef.current - dy * 0.004));
+        (touchDxRef as React.MutableRefObject<number>).current += dx;
+        (touchDyRef as React.MutableRefObject<number>).current += dy;
       }}
     >
       <Canvas
@@ -1216,6 +1267,11 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
           onEarthApproachRef={onEarthApproachRef}
           nearEarthRef={nearEarthRef}
           flyToRef={flyToRef}
+          mouseDxRef={mouseDxRef}
+          mouseDyRef={mouseDyRef}
+          touchDxRef={touchDxRef}
+          touchDyRef={touchDyRef}
+          pendingOrientRef={pendingOrientRef}
         />
       </Canvas>
 
