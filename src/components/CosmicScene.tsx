@@ -538,11 +538,21 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     const keys = navKeysRef.current!;
     const rot  = delta * 1.5; // rotazione vista (rad/s)
 
-    // Rotazione punto di vista: tasti direzionali (WASD + frecce) e Q/E
-    if (keys.has('KeyA') || keys.has('ArrowLeft'))
-      (yawRef   as React.MutableRefObject<number>).current -= rot;
-    if (keys.has('KeyD') || keys.has('ArrowRight'))
-      (yawRef   as React.MutableRefObject<number>).current += rot;
+    // Rotazione orizzontale: ruota attorno all'asse Y LOCALE della camera (no clock-spin a picco ripido).
+    // Con yaw mondiale (asse Y globale), guardando verso il basso la scena ruota come un orologio.
+    // Con asse Y locale (camera up), guardando verso il basso la scena scivola lateralmente.
+    const lrDir = (keys.has('KeyD') || keys.has('ArrowRight')) ? -rot
+                : (keys.has('KeyA') || keys.has('ArrowLeft'))  ?  rot
+                : 0;
+    if (lrDir !== 0) {
+      const _q = new THREE.Quaternion().setFromEuler(new THREE.Euler(pitchRef.current!, yawRef.current!, 0, 'YXZ'));
+      _q.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), lrDir));
+      const _e = new THREE.Euler().setFromQuaternion(_q, 'YXZ');
+      (yawRef   as React.MutableRefObject<number>).current = _e.y;
+      (pitchRef as React.MutableRefObject<number>).current = Math.max(-1.5, Math.min(1.5, _e.x));
+    }
+
+    // Rotazione verticale: pitch diretto (KeyQ/ArrowUp = su, KeyE/ArrowDown = giù)
     if (keys.has('KeyQ') || keys.has('ArrowUp'))
       (pitchRef as React.MutableRefObject<number>).current = Math.max(-1.5, pitchRef.current! + rot);
     if (keys.has('KeyE') || keys.has('ArrowDown'))
@@ -1013,8 +1023,13 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
       const dy = e.clientY - mouseRef.current.lastY;
       mouseRef.current.lastX = e.clientX;
       mouseRef.current.lastY = e.clientY;
-      yawRef.current   -= dx * 0.003;
-      pitchRef.current  = Math.max(-1.5, Math.min(1.5, pitchRef.current - dy * 0.003));
+      if (dx !== 0) {
+        const _q = new THREE.Quaternion().setFromEuler(new THREE.Euler(pitchRef.current, yawRef.current, 0, 'YXZ'));
+        _q.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), -dx * 0.003));
+        const _e = new THREE.Euler().setFromQuaternion(_q, 'YXZ');
+        yawRef.current = _e.y;
+      }
+      pitchRef.current = Math.max(-1.5, Math.min(1.5, pitchRef.current - dy * 0.003));
     };
     const up = () => { mouseRef.current.down = false; };
     window.addEventListener('mousemove', move);
@@ -1149,7 +1164,12 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         const dy = e.touches[0].clientY - lastTYRef.current;
         lastTXRef.current = e.touches[0].clientX;
         lastTYRef.current = e.touches[0].clientY;
-        yawRef.current   -= dx * 0.004;
+        if (dx !== 0) {
+          const _q = new THREE.Quaternion().setFromEuler(new THREE.Euler(pitchRef.current, yawRef.current, 0, 'YXZ'));
+          _q.multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), -dx * 0.004));
+          const _e = new THREE.Euler().setFromQuaternion(_q, 'YXZ');
+          yawRef.current = _e.y;
+        }
         pitchRef.current  = Math.max(-1.5, Math.min(1.5, pitchRef.current - dy * 0.004));
       }}
     >
