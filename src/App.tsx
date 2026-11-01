@@ -137,20 +137,21 @@ const GALAXY_SEARCHES: HistoricalEvent[] = [
 ];
 
 // Nebulae — cercabili come corpi celesti (id: nebula-<slug>)
+// Anno -4_550_000_000: magic range dove isCosmicView=true (<-4.5B) e era='solar' (>-4.6B → nessun camera jump)
 const NEBULA_SEARCHES: HistoricalEvent[] = [
-  { id: 'nebula-orione', title: 'Nebulosa di Orione (M42)', year: -5_000_000_000, category: 'cosmo', isCosmic: true,
+  { id: 'nebula-orione', title: 'Nebulosa di Orione (M42)', year: -4_550_000_000, category: 'cosmo', isCosmic: true,
     description: 'La nebulosa più famosa e luminosa del cielo notturno, a 1.344 anni luce. Incubatrice stellare con oltre 700 stelle in formazione. Visibile a occhio nudo come la "spada" di Orione.',
     wikipediaSlug: 'Orion_Nebula' },
-  { id: 'nebula-granchio', title: 'Nebulosa del Granchio (M1)', year: -5_000_000_000, category: 'cosmo', isCosmic: true,
+  { id: 'nebula-granchio', title: 'Nebulosa del Granchio (M1)', year: -4_550_000_000, category: 'cosmo', isCosmic: true,
     description: 'Resto di supernova a 6.523 anni luce. Generata dall\'esplosione del 1054 d.C. osservata dagli astronomi cinesi. Al centro pulsa una stella di neutroni che ruota 30 volte al secondo.',
     wikipediaSlug: 'Crab_Nebula' },
-  { id: 'nebula-aquila', title: 'Nebulosa Aquila (M16)', year: -5_000_000_000, category: 'cosmo', isCosmic: true,
+  { id: 'nebula-aquila', title: 'Nebulosa Aquila (M16)', year: -4_550_000_000, category: 'cosmo', isCosmic: true,
     description: 'Nebulosa a emissione a 7.000 anni luce. Celebre per le "Colonne della Creazione" fotografate da Hubble nel 1995: pilastri di gas e polvere alti 4–5 anni luce.',
     wikipediaSlug: 'Eagle_Nebula' },
-  { id: 'nebula-anello', title: 'Nebulosa Anello (M57)', year: -5_000_000_000, category: 'cosmo', isCosmic: true,
+  { id: 'nebula-anello', title: 'Nebulosa Anello (M57)', year: -4_550_000_000, category: 'cosmo', isCosmic: true,
     description: 'Nebulosa planetaria a 2.567 anni luce nella Lira. Guscio di gas espulso da una stella morente (nana bianca al centro). Forma torica, vista quasi di faccia dalla Terra.',
     wikipediaSlug: 'Ring_Nebula' },
-  { id: 'nebula-laguna', title: 'Nebulosa Laguna (M8)', year: -5_000_000_000, category: 'cosmo', isCosmic: true,
+  { id: 'nebula-laguna', title: 'Nebulosa Laguna (M8)', year: -4_550_000_000, category: 'cosmo', isCosmic: true,
     description: 'Nebulosa a emissione a 4.000 anni luce nel Sagittario. Regione attiva di formazione stellare con giovani stelle calde (classe O) che ionizzano il gas circostante. Visibile a occhio nudo.',
     wikipediaSlug: 'Lagoon_Nebula' },
 ];
@@ -446,8 +447,10 @@ function AppInner() {
         event.id === 'luna' || event.id === 'sole' ||
         event.id.startsWith('planet-') || event.id.startsWith('moon-') ||
         event.id.startsWith('dwarf-') || event.id.startsWith('star-');
-      const isGalaxy = event.id.startsWith('galaxy-');
-      const cosmicYear = isSolarSystemBody ? -4_550_000_000 : isGalaxy ? -13_000_000_000 : -9_000_000_000;
+      const isGalaxy  = event.id.startsWith('galaxy-');
+      const isNebula  = event.id.startsWith('nebula-');
+      // Nebulose: come corpi solari (-4.55B): isCosmicView=true, era='solar' → nessun camera jump, nebulose visibili
+      const cosmicYear = (isSolarSystemBody || isNebula) ? -4_550_000_000 : isGalaxy ? -13_000_000_000 : -9_000_000_000;
       setOverrideYear(cosmicYear);
       setSliderValue(yearToSlider(cosmicYear));
       setFlyTo({ kind: 'body', entityId: event.id, ts: Date.now() });

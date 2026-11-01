@@ -1741,6 +1741,18 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         jumpRef.current = dest;
         orient(dest, target);
       }
+    } else if (eid.startsWith('nebula-')) {
+      const nb = NEBULAE.find(n => n.id === eid);
+      if (nb) {
+        const target = new THREE.Vector3(...nb.pos);
+        const viewDist = Math.max(nb.r * 2, 40);
+        // approach from a slightly offset direction so the nebula fills the frame
+        const away = target.clone().normalize();
+        if (away.lengthSq() < 0.001) away.set(0, 0, 1);
+        const dest = target.clone().sub(away.multiplyScalar(viewDist));
+        jumpRef.current = dest;
+        orient(dest, target);
+      }
     }
   }, [flyTo]);
 
