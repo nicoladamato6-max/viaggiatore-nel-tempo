@@ -296,6 +296,23 @@ function getProcTex(id: string): THREE.CanvasTexture | null {
   return _procCache[id];
 }
 
+// Glow sprite — cerchio morbido bianco, tintato via SpriteMaterial.color
+let _glowTex: THREE.CanvasTexture | null = null;
+function getGlowTex(): THREE.CanvasTexture {
+  if (_glowTex) return _glowTex;
+  const c = document.createElement('canvas');
+  c.width = 64; c.height = 64;
+  const ctx = c.getContext('2d')!;
+  const g = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+  g.addColorStop(0,    'rgba(255,255,255,1)');
+  g.addColorStop(0.25, 'rgba(255,255,255,0.7)');
+  g.addColorStop(0.60, 'rgba(255,255,255,0.18)');
+  g.addColorStop(1,    'rgba(0,0,0,0)');
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, 64, 64);
+  return (_glowTex = new THREE.CanvasTexture(c));
+}
+
 // ── Cards per InfoPanel ─────────────────────────────────────────────────────
 const SUN_CARD: HistoricalEvent = {
   id: 'sole-body', title: 'Il Sole', year: -4_600_000_000,
@@ -638,6 +655,96 @@ function BigBangExpansion({ year }: { year: number }) {
   );
 }
 
+// ── Nebulae — particle clouds nelle stelle vicine ──────────────────────────
+interface NebulaData { pos: [number,number,number]; color: string; r: number; n: number; label: string }
+const NEBULAE: NebulaData[] = [
+  { pos: [ 200,  50,  -80] as [number,number,number], color: '#ff4488', r: 28,  n: 900,  label: 'Nebulosa di Orione (M42)' },
+  { pos: [-380, 130,  200] as [number,number,number], color: '#44aaff', r: 22,  n: 650,  label: 'Nebulosa del Granchio (M1)' },
+  { pos: [ 290, -160,  330] as [number,number,number], color: '#44ffcc', r: 32,  n: 750,  label: 'Nebulosa Aquila (M16)' },
+  { pos: [-220,  -80, -260] as [number,number,number], color: '#aa44ff', r: 20,  n: 550,  label: 'Nebulosa Anello (M57)' },
+  { pos: [ 160, 220,   120] as [number,number,number], color: '#ffaa44', r: 18,  n: 480,  label: 'Nebulosa Laguna (M8)' },
+];
+
+function NebulaCloud({ pos, color, r, n }: NebulaData) {
+  const geo = useMemo(() => {
+    const c = new THREE.Color(color);
+    const positions = new Float32Array(n * 3);
+    const colors    = new Float32Array(n * 3);
+    for (let i = 0; i < n; i++) {
+      const theta = Math.random() * Math.PI * 2;
+      const phi   = Math.acos(2 * Math.random() - 1);
+      const rv    = r * Math.pow(Math.random(), 0.4);
+      positions[i*3]   = rv * Math.sin(phi) * Math.cos(theta);
+      positions[i*3+1] = rv * Math.sin(phi) * Math.sin(theta) * 0.55; // leggermente appiattita
+      positions[i*3+2] = rv * Math.cos(phi);
+      const bright = 0.55 + Math.random() * 0.45;
+      colors[i*3]   = Math.min(1, c.r * bright + 0.1);
+      colors[i*3+1] = Math.min(1, c.g * bright + 0.05);
+      colors[i*3+2] = Math.min(1, c.b * bright + 0.05);
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+    g.setAttribute('color',    new THREE.Float32BufferAttribute(colors, 3));
+    return g;
+  }, [color, r, n]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return (
+    <points geometry={geo} position={pos}>
+      <pointsMaterial size={1.5} sizeAttenuation={false} vertexColors transparent opacity={0.45} depthWrite={false} blending={THREE.AdditiveBlending} />
+    </points>
+  );
+}
+
+function Nebulae({ show }: { show: boolean }) {
+  if (!show) return null;
+  return <>{NEBULAE.map((nb, i) => <NebulaCloud key={i} {...nb} />)}</>;
+}
+
+// ── Buco nero M87 con disco di accrescimento e jet relativistico ────────────
+function BlackHoleM87({ show }: { show: boolean }) {
+  const pos: [number,number,number] = [5800, -1200, 3200];
+  const meshRef = useRef<THREE.Mesh | null>(null);
+  // Rotazione lenta del disco di accrescimento
+  useFrame((_, dt) => {
+    if (meshRef.current) meshRef.current.rotation.z += dt * 0.08;
+  });
+
+  if (!show) return null;
+  return (
+    <group position={pos}>
+      {/* Orizzonte degli eventi — sfera nera */}
+      <mesh>
+        <sphereGeometry args={[10, 24, 24]} />
+        <meshBasicMaterial color="#000000" />
+      </mesh>
+      {/* Disco di accrescimento — anello caldo in rotazione */}
+      <mesh ref={meshRef} rotation={[0.55, 0, 0]}>
+        <torusGeometry args={[18, 6, 4, 80]} />
+        <meshBasicMaterial color="#ff6600" transparent opacity={0.82} />
+      </mesh>
+      {/* Anello interno più caldo (bianco-giallo) */}
+      <mesh rotation={[0.55, 0, 0]}>
+        <torusGeometry args={[12, 2.5, 4, 60]} />
+        <meshBasicMaterial color="#ffcc44" transparent opacity={0.90} />
+      </mesh>
+      {/* Glow sprite del nucleo */}
+      <sprite scale={[55, 55, 1]}>
+        <spriteMaterial map={getGlowTex()} color="#ff8800" transparent blending={THREE.AdditiveBlending} depthWrite={false} opacity={0.55} />
+      </sprite>
+      {/* Jet relativistico nord */}
+      <mesh position={[0, 55, 0]}>
+        <cylinderGeometry args={[0.8, 5, 80, 8, 1, true]} />
+        <meshBasicMaterial color="#88aaff" transparent opacity={0.30} side={THREE.DoubleSide} />
+      </mesh>
+      {/* Jet relativistico sud */}
+      <mesh position={[0, -55, 0]} rotation={[Math.PI, 0, 0]}>
+        <cylinderGeometry args={[0.8, 5, 80, 8, 1, true]} />
+        <meshBasicMaterial color="#8899ff" transparent opacity={0.25} side={THREE.DoubleSide} />
+      </mesh>
+    </group>
+  );
+}
+
 // ── CameraRig (dentro Canvas) ─────────────────────────────────────────────
 interface CameraRigProps {
   navKeysRef:         React.RefObject<Set<string>>;
@@ -658,9 +765,10 @@ interface CameraRigProps {
   touchDxRef:         React.RefObject<number>;
   touchDyRef:         React.RefObject<number>;
   pendingOrientRef:   React.RefObject<boolean>;
+  warpRef:            React.RefObject<HTMLDivElement | null>;
 }
 
-function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAltRef, hudZoneRef, locale, wheelRef, initialAltKm, onEarthApproachRef, nearEarthRef, flyToRef, mouseDxRef, mouseDyRef, touchDxRef, touchDyRef, pendingOrientRef }: CameraRigProps) {
+function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAltRef, hudZoneRef, locale, wheelRef, initialAltKm, onEarthApproachRef, nearEarthRef, flyToRef, mouseDxRef, mouseDyRef, touchDxRef, touchDyRef, pendingOrientRef, warpRef }: CameraRigProps) {
   const { camera } = useThree();
   const velRef = useRef(new THREE.Vector3());
 
@@ -804,6 +912,13 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     if (hudAltRef.current)  hudAltRef.current.textContent  = fmtDist(newDist);
     if (hudZoneRef.current) hudZoneRef.current.textContent = getZone(newDist, locale);
 
+    // Effetto warp: intensità proporzionale alla velocità relativa alla distanza
+    if (warpRef.current) {
+      const spd = velRef.current.length();
+      const intensity = Math.min(1, spd / Math.max(1e-12, newDist * 0.04));
+      warpRef.current.style.opacity = intensity > 0.05 ? String(intensity.toFixed(3)) : '0';
+    }
+
     if (newDist < EARTH_APPROACH_AU) {
       if (!nearEarthRef.current) {
         (nearEarthRef as React.MutableRefObject<boolean>).current = true;
@@ -847,8 +962,13 @@ function SunSphere({ onClick, flyTo, show = true }: { onClick: () => void; flyTo
     if (tex) { tex.offset.x += delta * 0.003; tex.needsUpdate = false; }
   });
 
+  const glowTex = useMemo(() => getGlowTex(), []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <group position={SUN_POS} visible={show}>
+      {/* Glow sprite — visibile a grande distanza */}
+      <sprite scale={[SUN_VR * 18, SUN_VR * 18, 1]}>
+        <spriteMaterial map={glowTex} color="#ffaa22" transparent blending={THREE.AdditiveBlending} depthWrite={false} opacity={0.85} />
+      </sprite>
       {/* Corona esterna — alone semi-trasparente */}
       <mesh>
         <sphereGeometry args={[SUN_VR * 2.4, 16, 16]} />
@@ -1051,6 +1171,7 @@ function NearbyStar({ id, name, pos, color, show = true, onLabelClick }: {
       mat.map = tex; mat.color.set(0xffffff); mat.needsUpdate = true;
     }
   }, [id]);
+  const glowTex = useMemo(() => getGlowTex(), []); // eslint-disable-line react-hooks/exhaustive-deps
   const handleClick = onLabelClick ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick(id); } : undefined;
   return (
     <group position={pos} visible={show}>
@@ -1058,6 +1179,10 @@ function NearbyStar({ id, name, pos, color, show = true, onLabelClick }: {
         <sphereGeometry args={[0.8, 16, 16]} />
         <meshBasicMaterial color={color} />
       </mesh>
+      {/* Glow halo — dimensione basata sul tipo spettrale */}
+      <sprite scale={[3.5, 3.5, 1]}>
+        <spriteMaterial map={glowTex} color={color} transparent blending={THREE.AdditiveBlending} depthWrite={false} opacity={0.75} />
+      </sprite>
       <Html center position={[0, 1.2, 0]}>
         <div style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none', ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
           onClick={handleClick}>
@@ -1231,6 +1356,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
   const lastTYRef          = useRef(0);
   const hudAltRef          = useRef<HTMLSpanElement | null>(null);
   const hudZoneRef         = useRef<HTMLSpanElement | null>(null);
+  const warpOverlayRef     = useRef<HTMLDivElement | null>(null);
   const distAURef          = useRef(0.05);
   const wheelRef           = useRef(0);
   const onEarthApproachRef = useRef<(() => void) | null>(onEarthApproach ?? null);
@@ -1474,6 +1600,12 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         {currentYear >= -4_600_000_000 && <AsteroidBelt />}
         {currentYear >= -4_600_000_000 && <KuiperBelt />}
 
+        {/* Nebulae — nubi di gas e polvere nella zona interstellare */}
+        <Nebulae show={currentYear >= -5_000_000_000} />
+
+        {/* Buco nero M87 con disco di accrescimento */}
+        <BlackHoleM87 show={currentYear >= -13_200_000_000} />
+
         <CameraRig
           navKeysRef={navKeysRef}
           yawRef={yawRef}
@@ -1493,8 +1625,17 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
           touchDxRef={touchDxRef}
           touchDyRef={touchDyRef}
           pendingOrientRef={pendingOrientRef}
+          warpRef={warpOverlayRef}
         />
       </Canvas>
+
+      {/* Overlay effetto warp — diventa visibile ad alta velocità */}
+      <div ref={warpOverlayRef} style={{
+        position: 'absolute', inset: 0, pointerEvents: 'none', opacity: 0,
+        background: 'radial-gradient(ellipse at center, transparent 25%, rgba(40,80,200,0.10) 70%, rgba(20,50,180,0.18) 100%)',
+        boxShadow: 'inset 0 0 150px rgba(50,100,255,0.20)',
+        transition: 'opacity 0.08s linear',
+      }} />
 
       {/* Lista eventi cosmici (sinistra) */}
       <div style={{ position: 'absolute', left: 16, top: 16, bottom: 100, display: 'flex', flexDirection: 'column', gap: 8, overflowY: 'auto', maxWidth: 260, pointerEvents: 'all' }}>
