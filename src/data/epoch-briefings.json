@@ -3145,6 +3145,18 @@
         {
           "text": "Osserva il globo celeste della corte di Aquisgrana: gli astronomi carolingi calcolano solstizi ed eclissi per fissare il calendario liturgico",
           "cat": "cosmo"
+        },
+        {
+          "text": "Ascolta i cantori della Schola Cantorum di Aquisgrana intonare i neumi — i primi segni grafici che catturano la melodia del canto liturgico carolingio su pergamena",
+          "cat": "musica"
+        },
+        {
+          "text": "Assisti a una battuta di caccia con il falco nell'entourage di Carlo Magno: i falconieri portano guanti di cuoio e uccelli addestrati per anni a tornare al pugno",
+          "cat": "sport"
+        },
+        {
+          "text": "Osserva il globo celeste d'oro e argento donato da Harun al-Rashid a Carlo Magno: stelle e costellazioni incise in metallo, prima mappa araba del cosmo in una corte cristiana",
+          "cat": "cosmo"
         }
       ]
     },
@@ -3202,6 +3214,18 @@
         },
         {
           "text": "Study the celestial globe of the Aachen court: Carolingian astronomers calculate solstices and eclipses to fix the liturgical calendar",
+          "cat": "cosmo"
+        },
+        {
+          "text": "Listen to the cantors of Charlemagne's Schola Cantorum intone the neumes — the first graphic signs to capture the melody of Carolingian liturgical chant on parchment",
+          "cat": "musica"
+        },
+        {
+          "text": "Witness a falconry hunt in Charlemagne's retinue: falconers wear leather gloves and carry birds trained for years to return to the fist on command",
+          "cat": "sport"
+        },
+        {
+          "text": "Observe the golden and silver celestial globe given by Harun al-Rashid to Charlemagne: stars and constellations engraved in metal, the first Arabic map of the cosmos in a Christian court",
           "cat": "cosmo"
         }
       ]
@@ -3263,6 +3287,18 @@
         {
           "text": "Osserva il castello di Coucy eretto su un affioramento di calcare: la geologia del suolo determina ogni strategia difensiva medievale",
           "cat": "geologia"
+        },
+        {
+          "text": "Ascolta un trovatore occitano cantare una canzone d'amore alla corte di Guglielmo IX di Aquitania: è la prima volta che un poeta nomina il proprio sentimento in volgare romanzo",
+          "cat": "musica"
+        },
+        {
+          "text": "Assisti alla giostra di un torneo cavalleresco del XII secolo: due cavalieri corazzati si lanciano a piena velocità — la lancia spezzata decreta il vincitore secondo il codice d'onore",
+          "cat": "sport"
+        },
+        {
+          "text": "Osserva come i costruttori medievali scelgono una roccia calcarea affiorante per erigere il castello: speroni e bastioni di pietra naturale integrano le mura e rendono le fortezze inespugnabili",
+          "cat": "geologia"
         }
       ]
     },
@@ -3320,6 +3356,18 @@
         },
         {
           "text": "Observe the castle of Coucy built on a limestone outcrop: the geology of the soil determines every medieval defensive strategy",
+          "cat": "geologia"
+        },
+        {
+          "text": "Listen to an Occitan troubadour sing a love canso for William IX of Aquitaine: the first time a court poet names his own feeling in the vernacular Romance tongue",
+          "cat": "musica"
+        },
+        {
+          "text": "Watch a chivalric tournament joust in the 12th century: two armoured knights charge at full speed — a shattered lance decides the winner by the code of honour",
+          "cat": "sport"
+        },
+        {
+          "text": "Watch medieval builders choose a limestone outcrop to raise their castle: natural rock spurs and escarpments are built into the walls, making the fortress truly unassailable",
           "cat": "geologia"
         }
       ]
@@ -3381,6 +3429,18 @@
         {
           "text": "Studia l'astrolabio arabo nelle scuole di traduzione di Toledo: la scienza islamica entra in Europa e ridisegna la visione del cosmo",
           "cat": "cosmo"
+        },
+        {
+          "text": "Ascolta Hildegard von Bingen dirigere le monache dell'abbazia di Rupertsberg nel XII secolo: la sua polifonia visionaria — organum a voci libere — è la voce più originale della musica medievale",
+          "cat": "musica"
+        },
+        {
+          "text": "Partecipa a una partita di pallacorda nelle piazze delle città medievali: il gioco di mano a mano senza racchetta anticipa il tennis e si gioca ovunque, dal Mediterraneo al Nord Europa",
+          "cat": "sport"
+        },
+        {
+          "text": "Studia l'astrolabio arabeggiante portato in Europa attraverso la Spagna musulmana: misura l'altitudine del Sole e delle stelle per calcolare latitudine e ora locale con una precisione sconosciuta in Occidente",
+          "cat": "scienza"
         }
       ]
     },
@@ -3439,6 +3499,18 @@
         {
           "text": "Study the Arabic astrolabe in Toledo's translation schools: Islamic science enters Europe and redraws the vision of the cosmos",
           "cat": "cosmo"
+        },
+        {
+          "text": "Listen to Hildegard von Bingen lead the nuns of Rupertsberg Abbey in the 12th century: her visionary polyphony — organum with free-flowing voices — is the most original sound in medieval music",
+          "cat": "musica"
+        },
+        {
+          "text": "Join a game of pallacorda in the squares of medieval cities: hand-to-hand play without a racket, precursor to tennis, played from the Mediterranean to northern Europe",
+          "cat": "sport"
+        },
+        {
+          "text": "Study the Arabic astrolabe brought to Europe through Muslim Spain: it measures the altitude of the Sun and stars to calculate latitude and local time with a precision unknown in the West",
+          "cat": "scienza"
         }
       ]
     }
@@ -3507,6 +3579,18 @@
         {
           "text": "Assisti al Calcio Storico Fiorentino in piazza Santa Croce: un gioco di squadra brutale e rituale che si gioca dal 1530 per le strade della città",
           "cat": "sport"
+        },
+        {
+          "text": "Ascolta le laudi spirituali dei laudesi fiorentini cantate in piazza durante le processioni del Corpus Domini: voci corali in italiano volgare che anticipano il madrigale rinascimentale",
+          "cat": "musica"
+        },
+        {
+          "text": "Assisti alla Regata Storica sul Canal Grande di Venezia: gondolieri in costume garegcia sotto il fragore dei tifosi sulle fondamenta affollate, tra palazzi gotici e acque verdi",
+          "cat": "sport"
+        },
+        {
+          "text": "Visita le cave di marmo bianco di Carrara sulle Alpi Apuane: Michelangelo sceglie di persona i blocchi per il David sondando la pietra con il mazzuolo — il suono rivela le crepe invisibili",
+          "cat": "geologia"
         }
       ]
     },
@@ -3573,6 +3657,18 @@
         {
           "text": "Watch the Calcio Storico Fiorentino in Piazza Santa Croce: a brutal, ritual team game played since 1530 on the streets of the city",
           "cat": "sport"
+        },
+        {
+          "text": "Listen to the laude spirituali of the Florentine laudesi sung in the square during Corpus Domini processions: choral voices in vernacular Italian that anticipate the Renaissance madrigal",
+          "cat": "musica"
+        },
+        {
+          "text": "Watch the Regata Storica on Venice's Grand Canal: gondoliers in historical costume race amid the roar of supporters crowding every fondamenta, between Gothic palaces and green water",
+          "cat": "sport"
+        },
+        {
+          "text": "Visit the white marble quarries of Carrara in the Apuan Alps: Michelangelo personally selects blocks for the David by tapping the stone with a mallet — the sound reveals invisible cracks",
+          "cat": "geologia"
         }
       ]
     }
@@ -3641,6 +3737,18 @@
         {
           "text": "Osserva i cavalieri templari e ospitalieri allenarsi ogni giorno: cavalcata, combattimento e preghiera come disciplina integrale del corpo e dello spirito",
           "cat": "sport"
+        },
+        {
+          "text": "Ascolta un giullare narrare la Chanson de Roland al campo crociato fuori Antiochia nel 1098: la gesta del paladino morente infiamma i guerrieri prima dell'assalto alla città saracena",
+          "cat": "musica"
+        },
+        {
+          "text": "Assisti all'addestramento militare dei cavalieri templari in Terra Santa: giostre, esercizi di scherma e corse a cavallo nel calore secco del deserto di Giudea",
+          "cat": "sport"
+        },
+        {
+          "text": "Incontra un astronomo arabo di Damasco che mostra ai crociati le tavole di al-Battani: meridiani, latitudini e posizioni stellari con una precisione che l'Europa non raggiungerà per secoli",
+          "cat": "cosmo"
         }
       ]
     },
@@ -3707,6 +3815,18 @@
         {
           "text": "Watch Templar and Hospitaller knights train daily: riding, combat and prayer as the integrated discipline of body and spirit",
           "cat": "sport"
+        },
+        {
+          "text": "Listen to a jongleur narrate the Chanson de Roland at the Crusader camp outside Antioch in 1098: the dying paladin's deeds fire the warriors before the assault on the Saracen city",
+          "cat": "musica"
+        },
+        {
+          "text": "Watch Templar knights train in the Holy Land: jousting, fencing drills and cavalry charges under the dry heat of the Judean desert",
+          "cat": "sport"
+        },
+        {
+          "text": "Meet a Damascus astronomer who shows Crusaders al-Battani's tables: meridians, latitudes and star positions with a precision Europe will not match for centuries",
+          "cat": "cosmo"
         }
       ]
     }
@@ -3775,6 +3895,18 @@
         {
           "text": "Partecipa a una giostra medicea in piazza Santa Croce: l'equitazione come arte cavalleresca e spettacolo politico al servizio dei Medici",
           "cat": "sport"
+        },
+        {
+          "text": "Ascolta Guillaume Dufay cantare il suo mottetto isoritmico alla corte dei Malatesta a Rimini nel 1420: polifonia a quattro voci che supera il Medioevo e apre la strada al contrappunto fiammingo",
+          "cat": "musica"
+        },
+        {
+          "text": "Partecipa a un torneo di tiro con l'arco nelle corti del Trecento italiano: nobili e borghesi si cimentano in gara di precisione su campo aperto, tra il tifo delle dame e l'eco delle trombe",
+          "cat": "sport"
+        },
+        {
+          "text": "Leggi il Secretum di Petrarca, dialogo immaginario con sant'Agostino: il poeta interroga la propria accidia e inventa per la prima volta la nozione di «rinascita» della classicità antica",
+          "cat": "filosofia"
         }
       ]
     },
@@ -3841,6 +3973,18 @@
         {
           "text": "Take part in a Medicean joust in Piazza Santa Croce: horsemanship as chivalric art and political spectacle in the service of the Medici",
           "cat": "sport"
+        },
+        {
+          "text": "Listen to Guillaume Dufay sing his isorhythmic motet at the Malatesta court in Rimini in 1420: four-voice polyphony that leaves the Middle Ages behind and opens the way to Flemish counterpoint",
+          "cat": "musica"
+        },
+        {
+          "text": "Join an archery tournament at a 14th-century Italian court: nobles and burghers compete in precision shooting on an open field, to the cheers of ladies and the echo of trumpets",
+          "cat": "sport"
+        },
+        {
+          "text": "Read Petrarch's Secretum, an imaginary dialogue with Saint Augustine: the poet confronts his own acedia and invents for the first time the notion of a 'rebirth' of classical antiquity",
+          "cat": "filosofia"
         }
       ]
     }
@@ -3909,6 +4053,18 @@
         {
           "text": "Guarda le giostre medicee in piazza Santa Croce e il Calcio Storico Fiorentino: il corpo come strumento di rappresentanza del potere signorile",
           "cat": "sport"
+        },
+        {
+          "text": "Ascolta Heinrich Isaac eseguire una frottola alla corte di Lorenzo il Magnifico a Firenze nel 1480: melodie in italiano volgare accompagnate da liuto e viola da braccio, musica leggera che diventa arte",
+          "cat": "musica"
+        },
+        {
+          "text": "Assisti a una partita di calcio storico fiorentino in Piazza Santa Croce nel 1530: ventisei giocatori per squadra, nessuna regola proibita fuorché colpire l'arbitro — il primo sport moderno della storia",
+          "cat": "sport"
+        },
+        {
+          "text": "Studia la mappa di Paolo Toscanelli inviata a Colombo nel 1474: calcola le Indie a soli 5.000 km verso ovest — sbagliata di 15.000 km, ma abbastanza credibile da convincere un marinaio a salpare",
+          "cat": "cosmo"
         }
       ]
     },
@@ -3975,6 +4131,18 @@
         {
           "text": "Watch the Medicean jousts in Piazza Santa Croce and Calcio Storico Fiorentino: the body as an instrument of signorial political representation",
           "cat": "sport"
+        },
+        {
+          "text": "Listen to Heinrich Isaac perform a frottola at Lorenzo the Magnificent's court in Florence in 1480: Italian vernacular melodies with lute and viola da braccio — light music elevated into art",
+          "cat": "musica"
+        },
+        {
+          "text": "Watch a game of calcio storico fiorentino in Piazza Santa Croce in 1530: twenty-six players per side, no rule forbidden except striking the referee — the world's first modern sport",
+          "cat": "sport"
+        },
+        {
+          "text": "Study Paolo Toscanelli's map sent to Columbus in 1474: it places the Indies just 5,000 km westward — wrong by 15,000 km, yet credible enough to convince a sailor to set sail",
+          "cat": "cosmo"
         }
       ]
     }
@@ -4043,6 +4211,18 @@
         {
           "text": "Partecipa ai tornei cavallereschi europei del Cinquecento: da Londra a Vienna, l'élite continentale compete tra giostre, danze e banchetti spettacolari",
           "cat": "sport"
+        },
+        {
+          "text": "Ascolta Orlando di Lasso dirigere il suo madrigale a cinque voci a Monaco nel 1560: testi in italiano, francese e tedesco intrecciati in contrappunto imitativo di complessità mai vista prima",
+          "cat": "musica"
+        },
+        {
+          "text": "Assisti a una partita di Jeu de Paume nella sala coperta del castello di Fontainebleau: i cortigiani di Francesco I battono una palla di cuoio prima con il palmo, poi con una racchetta di budello",
+          "cat": "sport"
+        },
+        {
+          "text": "Visita le miniere d'argento del Cerro Rico di Potosì in Bolivia nel 1545: il monte più ricco del mondo produce 40.000 tonnellate di argento che finanzierà l'economia europea per due secoli interi",
+          "cat": "geologia"
         }
       ]
     },
@@ -4109,6 +4289,18 @@
         {
           "text": "Take part in 16th-century European chivalric tournaments: from London to Vienna, the continental elite competes through jousting, dance and spectacular feasting",
           "cat": "sport"
+        },
+        {
+          "text": "Listen to Orlando di Lasso conduct his five-voice madrigal in Munich in 1560: Italian, French and German texts woven into imitative counterpoint of unprecedented complexity",
+          "cat": "musica"
+        },
+        {
+          "text": "Watch a Jeu de Paume match in the covered court of Fontainebleau château: François I's courtiers strike a leather ball first with their palm, then with a gut-strung racket",
+          "cat": "sport"
+        },
+        {
+          "text": "Visit the silver mines of Cerro Rico in Potosí, Bolivia in 1545: the world's richest mountain yields 40,000 tonnes of silver that will finance the European economy for two full centuries",
+          "cat": "geologia"
         }
       ]
     }
@@ -4177,6 +4369,18 @@
         {
           "text": "Visita le fiere e i giochi comunitari luterani in Germania: Lutero difende il gioco e la musica come doni di Dio contro i riformatori più intransigenti",
           "cat": "sport"
+        },
+        {
+          "text": "Canta il corale «Ein feste Burg ist unser Gott» di Martin Lutero nelle chiese sassoni nel 1529: il primo inno in tedesco popolare che trasforma i fedeli da ascoltatori silenziosi a partecipanti corali",
+          "cat": "musica"
+        },
+        {
+          "text": "Osserva il dibattito puritano inglese del XVII secolo: i predicatori condannano i giochi festivi come peccato contro il Sabato, mentre i parrocchiani difendono cricket e danza come ricreazione innocente",
+          "cat": "sport"
+        },
+        {
+          "text": "Studia il De Revolutionibus Orbium Coelestium che Copernico pubblica nel 1543, anno della sua morte: la Terra gira attorno al Sole — la prima rivoluzione copernicana nella storia della scienza",
+          "cat": "cosmo"
         }
       ]
     },
@@ -4243,6 +4447,18 @@
         {
           "text": "Visit the Lutheran fairs and community games in Germany: Luther defends play and music as God's gifts against the most intransigent reformers",
           "cat": "sport"
+        },
+        {
+          "text": "Sing Martin Luther's chorale 'Ein feste Burg ist unser Gott' in Saxon churches in 1529: the first popular German hymn that transforms the faithful from silent listeners into choral participants",
+          "cat": "musica"
+        },
+        {
+          "text": "Observe the 17th-century English Puritan debate: preachers condemn festive games as sin against the Sabbath, while parishioners defend cricket and dancing as innocent recreation",
+          "cat": "sport"
+        },
+        {
+          "text": "Study De Revolutionibus Orbium Coelestium that Copernicus publishes in 1543, the year of his death: Earth orbits the Sun — the first Copernican revolution in the history of science",
+          "cat": "cosmo"
         }
       ]
     }
@@ -4311,6 +4527,18 @@
         {
           "text": "Osserva le grandi processioni della Controriforma a Roma e Siviglia: spettacoli pubblici di devozione che competono con il teatro profano per il popolo",
           "cat": "sport"
+        },
+        {
+          "text": "Ascolta Giovanni Pierluigi da Palestrina dirigere la sua Missa Papae Marcelli nella Cappella Sistina nel 1567: polifonia chiara e intellegibile che convince il Concilio di Trento a non bandire la musica corale",
+          "cat": "musica"
+        },
+        {
+          "text": "Visita un collegio gesuita del Seicento dove gli studenti praticano esercizi fisici quotidiani: la Ratio Studiorum include la disciplina corporea come strumento di formazione morale e caratteriale",
+          "cat": "sport"
+        },
+        {
+          "text": "Entra nella chiesa del Gesù a Roma nel 1584 e alza gli occhi al soffitto: il trionfo barocco di Pozzo non illustra la fede — la aggredisce con prospettiva illusoria, luce e movimento vertiginoso",
+          "cat": "arte"
         }
       ]
     },
@@ -4377,6 +4605,18 @@
         {
           "text": "Watch the great Counter-Reformation processions in Rome and Seville: public devotional spectacles competing with secular theater for the people",
           "cat": "sport"
+        },
+        {
+          "text": "Listen to Giovanni Pierluigi da Palestrina lead his Missa Papae Marcelli in the Sistine Chapel in 1567: clear, intelligible polyphony that convinces the Council of Trent not to ban choral music",
+          "cat": "musica"
+        },
+        {
+          "text": "Visit a 17th-century Jesuit college where students perform daily physical exercises: the Ratio Studiorum includes bodily discipline as an instrument of moral and character formation",
+          "cat": "sport"
+        },
+        {
+          "text": "Enter the Church of the Gesù in Rome in 1584 and look up at the ceiling: Pozzo's Baroque triumph does not illustrate faith — it assaults you with illusory perspective, light and vertiginous motion",
+          "cat": "arte"
         }
       ]
     }
@@ -4445,6 +4685,18 @@
         {
           "text": "Partecipa a una caccia reale nella foresta di Fontainebleau: il grand veneur guida cortigiani a cavallo in formazione cerimoniale",
           "cat": "sport"
+        },
+        {
+          "text": "Assisti alla prima dell'Orfeo di Claudio Monteverdi a Mantova nel 1607: la prima opera della storia in forma compiuta, con un'orchestra di quaranta strumentisti e recitativo cantato su testo poetico",
+          "cat": "musica"
+        },
+        {
+          "text": "Vivi la caccia al cervo del Re Sole nella foresta di Versailles nel 1680: Luigi XIV a cavallo guida cento cavalieri con trombe e corni da caccia — lo sport come rituale codificato del potere assoluto",
+          "cat": "sport"
+        },
+        {
+          "text": "Osserva Galileo puntare il suo cannocchiale verso Giove nel 1610 e scoprire quattro lune: la prova che non tutto orbita intorno alla Terra — l'Inquisizione lo processa nel 1633 e lui abiura",
+          "cat": "cosmo"
         }
       ]
     },
@@ -4511,6 +4763,18 @@
         {
           "text": "Join a royal hunt in the forest of Fontainebleau: the grand veneur leads courtiers on horseback in ceremonial formation",
           "cat": "sport"
+        },
+        {
+          "text": "Attend the premiere of Monteverdi's L'Orfeo in Mantua in 1607: the first fully formed opera in history, with an orchestra of forty players and sung recitative on a poetic text",
+          "cat": "musica"
+        },
+        {
+          "text": "Experience the Sun King's stag hunt in the forests of Versailles in 1680: Louis XIV on horseback leads a hundred riders with trumpets and hunting horns — sport as a ritual of absolute power",
+          "cat": "sport"
+        },
+        {
+          "text": "Watch Galileo point his telescope at Jupiter in 1610 and discover four moons: proof that not everything orbits Earth — the Inquisition puts him on trial in 1633 and he recants",
+          "cat": "cosmo"
         }
       ]
     }
@@ -4579,6 +4843,18 @@
         {
           "text": "Partecipa a una partita di cricket nel Kent degli anni 1700: il primo sport moderno organizzato con regole scritte e arbitro",
           "cat": "sport"
+        },
+        {
+          "text": "Studia i Preludi e Fughe del Clavicembalo ben temperato di Bach (1722): ogni fuga è un sistema di ingressi e contrappunti che segue regole matematiche rigide — musica come geometria applicata al suono",
+          "cat": "musica"
+        },
+        {
+          "text": "Impara la scherma con Salvator Fabris a Padova nel 1606: il suo trattato «De lo schermo overo scienza d'arme» codifica per la prima volta in Occidente posture, parate e stoccate come sistema razionale",
+          "cat": "sport"
+        },
+        {
+          "text": "Segui Nicola Stenone che nel 1669 a Firenze stabilisce i principi della stratigrafia: gli strati rocciosi più profondi sono più antichi — la Terra è un archivio del tempo leggibile nelle rocce",
+          "cat": "geologia"
         }
       ]
     },
@@ -4645,6 +4921,18 @@
         {
           "text": "Take part in a cricket match in 1700s Kent: the first modern sport organized with written rules and a formal umpire",
           "cat": "sport"
+        },
+        {
+          "text": "Study Bach's Preludes and Fugues in The Well-Tempered Clavier (1722): each fugue is a system of entries and counterpoint following strict mathematical rules — music as geometry applied to sound",
+          "cat": "musica"
+        },
+        {
+          "text": "Learn fencing with Salvator Fabris in Padua in 1606: his treatise 'De lo schermo overo scienza d'arme' codifies postures, parries and thrusts as a rational system for the first time in the West",
+          "cat": "sport"
+        },
+        {
+          "text": "Follow Nicolaus Steno who establishes the principles of stratigraphy in Florence in 1669: deeper rock layers are older — the Earth is a time archive readable in the strata",
+          "cat": "geologia"
         }
       ]
     }
@@ -4713,6 +5001,18 @@
         {
           "text": "Assisti a una partita di cricket a Lord's Cricket Ground, 1787: i nobili inglesi codificano le prime regole sportive universali",
           "cat": "sport"
+        },
+        {
+          "text": "Ascolta il giovane Mozart eseguire le sue Sonate per pianoforte a Vienna nel 1781: la forma-sonata — esposizione, sviluppo, ricapitolazione — come architettura razionale applicata con perfezione geometrica",
+          "cat": "musica"
+        },
+        {
+          "text": "Assisti alla prima partita di cricket con regole codificate al Lord's Cricket Ground di Londra nel 1787: il primo sport moderno con regolamento scritto, arbitri ufficiali e club organizzati permanenti",
+          "cat": "sport"
+        },
+        {
+          "text": "Leggi nell'Encyclopédie di Diderot e d'Alembert la voce «Astronomie» (1751): la scienza del cosmo spiegata al cittadino comune con figure e calcoli, senza teologia — solo ragione e osservazione sistematica",
+          "cat": "cosmo"
         }
       ]
     },
@@ -4779,6 +5079,18 @@
         {
           "text": "Attend a cricket match at Lord's Cricket Ground, 1787: English nobles codify the first universal sporting rules",
           "cat": "sport"
+        },
+        {
+          "text": "Listen to the young Mozart perform his Piano Sonatas in Vienna in 1781: the sonata form — exposition, development, recapitulation — as a rational architecture applied with geometric perfection",
+          "cat": "musica"
+        },
+        {
+          "text": "Watch the first cricket match with codified rules at Lord's Cricket Ground in London in 1787: the first modern sport with a written rulebook, official umpires and permanent organised clubs",
+          "cat": "sport"
+        },
+        {
+          "text": "Read the entry 'Astronomie' in Diderot and d'Alembert's Encyclopédie (1751): the science of the cosmos explained to the common citizen with diagrams and calculations, no theology — reason and observation alone",
+          "cat": "cosmo"
         }
       ]
     }
@@ -4847,6 +5159,18 @@
         {
           "text": "Osserva gli esercizi militari della guardia nazionale: la disciplina fisica come virtù repubblicana che trasforma il cittadino in soldato",
           "cat": "sport"
+        },
+        {
+          "text": "Assisti alla prima della Nona Sinfonia di Beethoven a Vienna nel 1824: il compositore sordo dirige senza sentire una nota — l'Inno alla Gioia risuona per la prima volta come manifesto dell'umanità unita",
+          "cat": "musica"
+        },
+        {
+          "text": "Partecipa alle Turnbewegung di Friedrich Ludwig Jahn nei campi ginnastici di Berlino nel 1811: sbarre, parallele e salti per costruire corpi sani come fondamento fisico di una nazione tedesca futura",
+          "cat": "sport"
+        },
+        {
+          "text": "Studia i Principles of Geology di Charles Lyell (1830): le rocce si formano lentamente per processi attuali — la Terra ha milioni di anni, non 6.000 come la Bibbia — Darwin lo leggerà sul Beagle",
+          "cat": "geologia"
         }
       ]
     },
@@ -4913,6 +5237,18 @@
         {
           "text": "Watch National Guard military exercises: physical discipline as republican virtue that transforms the citizen into a soldier",
           "cat": "sport"
+        },
+        {
+          "text": "Attend the premiere of Beethoven's Ninth Symphony in Vienna in 1824: the deaf composer conducts without hearing a note — the Ode to Joy rings out for the first time as a manifesto of united humanity",
+          "cat": "musica"
+        },
+        {
+          "text": "Join Friedrich Ludwig Jahn's Turnbewegung gymnastics fields in Berlin in 1811: bars, parallel bars and vaults to build healthy bodies as the physical foundation of a future German nation",
+          "cat": "sport"
+        },
+        {
+          "text": "Study Charles Lyell's Principles of Geology (1830): rocks form slowly through present-day processes — the Earth is millions of years old, not 6,000 as the Bible says — Darwin will read it on the Beagle",
+          "cat": "geologia"
         }
       ]
     }
@@ -4981,6 +5317,18 @@
         {
           "text": "Assisti a un duello alla pistola nel Bois de Boulogne: codice d'onore aristocratico che trasforma il conflitto personale in rito formale",
           "cat": "sport"
+        },
+        {
+          "text": "Assisti a un recital di Franz Liszt a Parigi nel 1840: il pubblico sviene, urla e strappa i guanti al pianista — la Lisztomania è il primo fenomeno di massa nella storia della musica da concerto",
+          "cat": "musica"
+        },
+        {
+          "text": "Osserva un incontro di pugilato secondo le London Prize Ring Rules del 1838: pugili a mani nude per decine di round — le Queensberry Rules del 1867 introdurranno guantoni e round da tre minuti",
+          "cat": "sport"
+        },
+        {
+          "text": "Studia Josef von Fraunhofer che nel 1814 a Monaco scopre 574 righe scure nello spettro solare: ogni elemento assorbe la luce a frequenze precise — le stelle rivelano la propria chimica attraverso la luce",
+          "cat": "cosmo"
         }
       ]
     },
@@ -5047,6 +5395,18 @@
         {
           "text": "Attend a pistol duel in the Bois de Boulogne: aristocratic code of honor that transforms personal conflict into formal ritual",
           "cat": "sport"
+        },
+        {
+          "text": "Attend a Franz Liszt recital in Paris in 1840: the audience faints, screams and tears gloves off the pianist — Lisztomania is the first mass phenomenon in the history of concert music",
+          "cat": "musica"
+        },
+        {
+          "text": "Watch a boxing match under the London Prize Ring Rules of 1838: bare-knuckle fighters go dozens of rounds — the Queensberry Rules of 1867 will introduce gloves and three-minute rounds",
+          "cat": "sport"
+        },
+        {
+          "text": "Study Josef von Fraunhofer who discovers 574 dark lines in the solar spectrum in Munich in 1814: each element absorbs light at precise frequencies — stars reveal their own chemistry through light",
+          "cat": "cosmo"
         }
       ]
     }
