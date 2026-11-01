@@ -1,82 +1,302 @@
 {
-  "Roman_Empire": {
+  "Risorgimento": {
     "it": [
-      {"text": "Studia la Colonna Traiana e i suoi 2.500 soldati scolpiti in spirale — il più grande racconto visivo narrativo dell'antichità", "cat": "arte"},
-      {"text": "Ascolta l'hydraulis, l'organo ad acqua inventato da Ctesibio di Alessandria, risuonare nei teatri romani durante gli spettacoli", "cat": "musica"},
-      {"text": "Leggi il De Architectura di Vitruvio e scopri come i romani progettano terme, teatri e acquedotti con calcoli geometrici precisi", "cat": "scienza"},
-      {"text": "Medita con Marco Aurelio i Pensieri scritti durante le campagne militari: lo stoicismo come arte di vivere senza illudersi", "cat": "filosofia"},
-      {"text": "Siediti tra i 50.000 spettatori del Colosseo durante i ludi romani e osserva come il potere usa lo spettacolo per governare", "cat": "sport"}
+      {
+        "text": "Ascolta 'Va pensiero' risuonare alla Scala: gli ebrei in esilio cantano la patria perduta, ma ogni italiano in platea sente il proprio Risorgimento. Verdi diventa il poeta inconsapevole dell'unità nazionale.",
+        "cat": "musica"
+      },
+      {
+        "text": "Osserva i camiciatori di Garibaldi allenarsi all'alba con esercizi ginnici militari: per i patrioti ottocenteschi il corpo forte è il corpo della nazione. La ginnastica è politica prima ancora che sport.",
+        "cat": "sport"
+      },
+      {
+        "text": "Incontra padre Angelo Secchi sul tetto dell'osservatorio romano: il gesuita classifica le stelle in quattro tipi spettrali e fonda l'astrofisica moderna, dimostrando che fede e scienza possono guardare lo stesso cielo.",
+        "cat": "cosmo"
+      }
     ],
     "en": [
-      {"text": "Study Trajan's Column and its 2,500 spiraling soldiers — the greatest narrative visual storytelling of antiquity", "cat": "arte"},
-      {"text": "Listen to the hydraulis, the water organ invented by Ctesibius of Alexandria, resounding in Roman theatres during performances", "cat": "musica"},
-      {"text": "Read Vitruvius's De Architectura and discover how Romans design baths, theatres and aqueducts with precise geometric calculations", "cat": "scienza"},
-      {"text": "Meditate with Marcus Aurelius on his Meditations written during military campaigns: Stoicism as the art of living without illusions", "cat": "filosofia"},
-      {"text": "Sit among 50,000 spectators at the Colosseum during the Roman ludi and observe how power uses spectacle to govern", "cat": "sport"}
+      {
+        "text": "Listen to 'Va pensiero' echo through La Scala: the exiled Hebrews sing of their lost homeland, yet every Italian in the audience hears their own Risorgimento. Verdi becomes, unknowingly, the bard of national unity.",
+        "cat": "musica"
+      },
+      {
+        "text": "Watch Garibaldi's red-shirted volunteers drilling at dawn with military gymnastics: for these Risorgimento patriots, a strong body is the nation's body. Exercise is politics before it is sport.",
+        "cat": "sport"
+      },
+      {
+        "text": "Meet Father Angelo Secchi on the roof of the Roman observatory: the Jesuit classifies stars into four spectral types, founding modern astrophysics and proving that faith and science can gaze at the same sky.",
+        "cat": "cosmo"
+      }
     ]
   },
-  "Early_Middle_Ages": {
+  "Industrial_Revolution": {
     "it": [
-      {"text": "Ammira i mosaici di San Vitale a Ravenna, 547 d.C.: arte longobarda e bizantina si fondono in un capolavoro di colori e oro", "cat": "arte"},
-      {"text": "Ascolta il canto gregoriano risuonare sotto le volte di un'abbazia benedettina: la prima musica scritta e codificata d'Europa", "cat": "musica"},
-      {"text": "Leggi le Etymologiae di Isidoro di Siviglia, 630 d.C.: la prima enciclopedia medievale che conserva il sapere antico per l'Europa", "cat": "scienza"},
-      {"text": "Studia la Consolazione della Filosofia di Boezio, scritta in carcere nel 524 d.C. in attesa dell'esecuzione: il destino e la Provvidenza", "cat": "filosofia"},
-      {"text": "Pratica la falconeria con un nobile longobardo: l'arte di addestrare rapaci diventa il simbolo dello status aristocratico medievale", "cat": "sport"}
+      {
+        "text": "Vivi una serata di music hall nella Londra vittoriana: operai in giacca domenicale ridono e cantano gli stessi numeri comici che vedono i borghesi, uniti per un'ora nella democrazia del palcoscenico.",
+        "cat": "musica"
+      },
+      {
+        "text": "Assisti alla riunione della Football Association a Londra nel 1863: per la prima volta si stabilisce che non si può calciare gli avversari alle gambe. Nasce il calcio moderno, e con esso lo sport di massa.",
+        "cat": "sport"
+      },
+      {
+        "text": "Scendi nelle miniere del Galles a trecento metri di profondità: il carbone che alimenta i motori a vapore ha impiegato trecento milioni di anni a formarsi nelle antiche paludi carbonifere. La rivoluzione industriale brucia il sole fossile.",
+        "cat": "geologia"
+      }
     ],
     "en": [
-      {"text": "Admire the mosaics of San Vitale in Ravenna, 547 AD: Lombard and Byzantine art fuse in a masterpiece of color and gold", "cat": "arte"},
-      {"text": "Listen to Gregorian chant resound beneath the vaults of a Benedictine abbey: Europe's first written and codified music", "cat": "musica"},
-      {"text": "Read Isidore of Seville's Etymologiae, 630 AD: the first medieval encyclopedia that preserves ancient knowledge for Europe", "cat": "scienza"},
-      {"text": "Study Boethius's Consolation of Philosophy, written in prison in 524 AD while awaiting execution: fate and Providence", "cat": "filosofia"},
-      {"text": "Practice falconry with a Lombard nobleman: the art of training raptors becomes the defining symbol of medieval aristocratic status", "cat": "sport"}
+      {
+        "text": "Spend an evening at a Victorian London music hall: factory workers in their Sunday jackets laugh and sing the same comic numbers as the middle classes, united for one hour in the democracy of the stage.",
+        "cat": "musica"
+      },
+      {
+        "text": "Attend the Football Association meeting in London in 1863: for the first time it is agreed that you cannot kick opponents in the shins. Modern football is born, and with it the idea of mass sport.",
+        "cat": "sport"
+      },
+      {
+        "text": "Descend into the Welsh mines three hundred metres underground: the coal feeding the steam engines took three hundred million years to form in ancient swamps. The industrial revolution burns fossil sunlight.",
+        "cat": "geologia"
+      }
     ]
   },
-  "Carolingian_Empire": {
+  "Age_of_imperialism": {
     "it": [
-      {"text": "Esamina gli avori carolingi della Scuola di Palazzo: scene bibliche incise su zanne d'elefante con una raffinatezza senza precedenti", "cat": "arte"},
-      {"text": "Partecipa alla Schola Cantorum di Aquisgrana: Carlo Magno importa il canto antifonale romano per unificare la liturgia in tutto l'Impero", "cat": "musica"},
-      {"text": "Studia astronomia con Alcuino di York alla Scuola Palatina: la rinascita carolingia riscopre Beda e i calcoli del calendario ecclesiastico", "cat": "scienza"},
-      {"text": "Dibatti di teologia carolingia alla corte di Carlo Magno: il rapporto tra ragione e fede nella rinascita del latino classico", "cat": "filosofia"},
-      {"text": "Unisciti alla caccia imperiale di Carlo Magno nelle foreste delle Ardenne: un rito militare e politico oltre che sportivo", "cat": "sport"}
+      {
+        "text": "Ascolta le prime note del blues nei campi di cotone del Mississippi: nella musica di chi non ha voce politica nasce il linguaggio che conquisterà il mondo. La resistenza culturale afroamericana inizia qui, tra lavoro forzato e canto libero.",
+        "cat": "musica"
+      },
+      {
+        "text": "Vivi l'emozione delle prime Olimpiadi moderne ad Atene nel 1896: Pierre de Coubertin ha riesumato i giochi greci per pacificare le nazioni in competizione sportiva. Solo uomini, solo Europa — ma l'idea è già rivoluzionaria.",
+        "cat": "sport"
+      },
+      {
+        "text": "Osserva la mappa della Conferenza di Berlino del 1884: le linee rette che dividono l'Africa ignorano fiumi e tribù ma seguono con precisione i giacimenti di oro, diamanti e rame. La geologia detta la geopolitica.",
+        "cat": "geologia"
+      }
     ],
     "en": [
-      {"text": "Examine the Carolingian ivory carvings of the Palace School: biblical scenes carved on elephant tusks with unprecedented refinement", "cat": "arte"},
-      {"text": "Join the Schola Cantorum at Aachen: Charlemagne imports Roman antiphonal chant to unify the liturgy throughout the Empire", "cat": "musica"},
-      {"text": "Study astronomy with Alcuin of York at the Palace School: the Carolingian renaissance rediscovers Bede and ecclesiastical calendar calculations", "cat": "scienza"},
-      {"text": "Debate Carolingian theology at Charlemagne's court: the relationship between reason and faith in the revival of classical Latin", "cat": "filosofia"},
-      {"text": "Join Charlemagne's imperial hunt in the Ardennes forests: a military and political ritual as much as a sporting pursuit", "cat": "sport"}
+      {
+        "text": "Hear the first notes of the blues in the Mississippi cotton fields: in the music of those without political voice, the language that will conquer the world is born. African American cultural resistance begins here, between forced labour and free song.",
+        "cat": "musica"
+      },
+      {
+        "text": "Experience the excitement of the first modern Olympics in Athens in 1896: Pierre de Coubertin has revived the Greek games to pacify competing nations through sport. Men only, Europe only — but the idea is already revolutionary.",
+        "cat": "sport"
+      },
+      {
+        "text": "Examine the map drawn at the Berlin Conference of 1884: the straight lines dividing Africa ignore rivers and tribes but follow with precision the deposits of gold, diamonds, and copper. Geology dictates geopolitics.",
+        "cat": "geologia"
+      }
     ]
   },
-  "Feudalism": {
+  "Belle_Époque": {
     "it": [
-      {"text": "Studia l'Arazzo di Bayeux, 1070: 70 metri di ricamo narrano la conquista normanna dell'Inghilterra con vivacità cinematografica", "cat": "arte"},
-      {"text": "Ascolta un trovatore occitano intonare una chanson de geste in una corte feudale: l'amor cortese come codice sociale e letterario", "cat": "musica"},
-      {"text": "Osserva la costruzione di un mulino ad acqua: la meccanica applicata all'agricoltura rivoluziona la produzione di farina in Europa", "cat": "scienza"},
-      {"text": "Leggi il Proslogion di Anselmo d'Aosta, 1078: la prova ontologica dell'esistenza di Dio — la filosofia medievale al servizio della fede", "cat": "filosofia"},
-      {"text": "Partecipa a un torneo cavalleresco in Normandia: combattimento collettivo con lance e spade davanti alla corte come spettacolo politico", "cat": "sport"}
+      {
+        "text": "Ascolta 'La Mer' di Debussy nel 1905: i suoni non descrivono il mare, lo evocano come i colori impressionisti evocano la luce. Per la prima volta la musica occidentale smette di raccontare storie e inizia a dipingere atmosfere.",
+        "cat": "musica"
+      },
+      {
+        "text": "Segui i ciclisti della prima edizione del Tour de France nel 1903: sei tappe notturne da Parigi a Marsiglia su strade sterrate. La bicicletta ha appena reso possibile il viaggio per chi non ha cavallo né automobile.",
+        "cat": "sport"
+      },
+      {
+        "text": "Osserva Henrietta Leavitt al telescopio di Harvard nel 1908: studiando le Cefeidi nelle Nubi di Magellano scopre che luminosità e periodo sono legati. Ha appena inventato il righello cosmico con cui si misurerà l'universo.",
+        "cat": "cosmo"
+      }
     ],
     "en": [
-      {"text": "Study the Bayeux Tapestry, 1070: 70 meters of embroidery narrate the Norman conquest of England with cinematic vividness", "cat": "arte"},
-      {"text": "Listen to an Occitan troubadour sing a chanson de geste at a feudal court: courtly love as social code and literary form", "cat": "musica"},
-      {"text": "Watch the construction of a watermill: applied mechanics revolutionizes flour production and transforms agricultural Europe", "cat": "scienza"},
-      {"text": "Read Anselm of Aosta's Proslogion, 1078: the ontological proof of God's existence — medieval philosophy in service of faith", "cat": "filosofia"},
-      {"text": "Join a knightly tournament in Normandy: collective combat with lances and swords before the assembled court as political spectacle", "cat": "sport"}
+      {
+        "text": "Listen to Debussy's 'La Mer' in 1905: the sounds don't describe the sea, they evoke it as Impressionist colours evoke light. For the first time Western music stops telling stories and begins painting atmospheres.",
+        "cat": "musica"
+      },
+      {
+        "text": "Follow the riders in the first Tour de France in 1903: six night stages from Paris to Marseille on dirt roads. The bicycle has just made long-distance travel possible for those with no horse or car.",
+        "cat": "sport"
+      },
+      {
+        "text": "Watch Henrietta Leavitt at the Harvard telescope in 1908: studying Cepheid stars in the Magellanic Clouds, she discovers that luminosity is tied to period. She has just invented the cosmic ruler that will measure the universe.",
+        "cat": "cosmo"
+      }
     ]
   },
-  "High_Middle_Ages": {
+  "World_War_I": {
     "it": [
-      {"text": "Guarda il cantiere di Notre-Dame di Parigi nel 1200: gli archi rampanti sfidano la fisica e portano la luce nelle navate gotiche", "cat": "arte"},
-      {"text": "Ascolta l'Organum di Léonin e Pérotin alla Scuola di Notre Dame: la prima polifonia scritta trasforma la musica sacra in arte pura", "cat": "musica"},
-      {"text": "Studia con Roger Bacon a Oxford nel 1260: lenti, specchi e prismi — la prima scienza sperimentale moderna sfida l'autorità aristotelica", "cat": "scienza"},
-      {"text": "Leggi la Summa Theologiae di Tommaso d'Aquino: la sintesi tra Aristotele e il Vangelo che fonda la filosofia scolastica cristiana", "cat": "filosofia"},
-      {"text": "Partecipa al proto-Calcio storico nelle piazze fiorentine del XIII secolo: squadre di quartiere, nessuna regola, pura forza fisica", "cat": "sport"}
+      {
+        "text": "Ascolta le prime note di jazz risuonare a Parigi nel 1917, portate dai soldati dell'Harlem Hellfighters: la guerra porta morte ma anche un ritmo nuovo che cambierà per sempre la musica europea.",
+        "cat": "musica"
+      },
+      {
+        "text": "Assisti alla tregua di Natale del 1914 nella terra di nessuno delle Fiandre: i soldati tedeschi e britannici che ieri si sparavano oggi si passano sigarette e danno calci a un pallone di fortuna. Lo sport come umanità residua.",
+        "cat": "sport"
+      },
+      {
+        "text": "Osserva le trincee delle Fiandre dove l'argilla trattiene i gas tossici più a lungo della sabbia: Fritz Haber applica la stessa chimica dei fertilizzanti per creare cloro e fosgene. La scienza della vita diventa arma di morte.",
+        "cat": "geologia"
+      }
     ],
     "en": [
-      {"text": "Watch the construction of Notre-Dame de Paris in 1200: flying buttresses defy physics and flood Gothic naves with light", "cat": "arte"},
-      {"text": "Listen to Léonin and Pérotin's Organum at the Notre Dame School: the first written polyphony transforms sacred music into pure art", "cat": "musica"},
-      {"text": "Study with Roger Bacon at Oxford in 1260: lenses, mirrors and prisms — the first modern experimental science challenges Aristotelian authority", "cat": "scienza"},
-      {"text": "Read Thomas Aquinas's Summa Theologiae: the synthesis of Aristotle and the Gospel that founds medieval Christian scholastic philosophy", "cat": "filosofia"},
-      {"text": "Join the proto-Calcio storico in 13th-century Florentine piazzas: neighborhood teams, no rules, pure physical force", "cat": "sport"}
+      {
+        "text": "Hear the first notes of jazz ring out in Paris in 1917, brought by the soldiers of the Harlem Hellfighters: war brings death, but also a new rhythm that will change European music forever.",
+        "cat": "musica"
+      },
+      {
+        "text": "Witness the Christmas Truce of 1914 in the no-man's land of Flanders: German and British soldiers who were shooting at each other yesterday are now sharing cigarettes and kicking a makeshift ball. Sport as residual humanity.",
+        "cat": "sport"
+      },
+      {
+        "text": "Observe the Flanders trenches where clay soil retains toxic gases longer than sand: Fritz Haber applies the same chemistry that synthesises fertilisers to create chlorine and phosgene. The science of life becomes a weapon of death.",
+        "cat": "geologia"
+      }
+    ]
+  },
+  "Interwar_period": {
+    "it": [
+      {
+        "text": "Vivi i Roaring Twenties a Chicago: Louis Armstrong trasforma il jazz da musica collettiva ad arte solista, mentre Duke Ellington fa suonare l'orchestra come un unico strumento. La musica nera conquista le sale da ballo bianche.",
+        "cat": "musica"
+      },
+      {
+        "text": "Assisti ai Giochi di Berlino del 1936: Jesse Owens vince quattro ori sotto lo sguardo di Hitler, dimostrando sul campo che l'atletica nera supera l'ideale ariano. Il Führer abbandona lo stadio prima della premiazione.",
+        "cat": "sport"
+      },
+      {
+        "text": "Incontra Edwin Hubble all'osservatorio di Mount Wilson nel 1929: le galassie si allontanano a velocità proporzionale alla distanza. L'universo non è statico — si espande, e il Big Bang diventa improvvisamente plausibile.",
+        "cat": "cosmo"
+      }
+    ],
+    "en": [
+      {
+        "text": "Live the Roaring Twenties in Chicago: Louis Armstrong transforms jazz from collective music to solo art, while Duke Ellington makes an orchestra sound like a single instrument. Black music conquers white dance halls.",
+        "cat": "musica"
+      },
+      {
+        "text": "Attend the 1936 Berlin Games: Jesse Owens wins four gold medals under Hitler's gaze, proving on the track that Black athleticism surpasses the Aryan ideal. The Führer leaves the stadium before the medal ceremony.",
+        "cat": "sport"
+      },
+      {
+        "text": "Meet Edwin Hubble at the Mount Wilson Observatory in 1929: galaxies are receding from us at speeds proportional to their distance. The universe is not static — it is expanding, and the Big Bang suddenly becomes plausible.",
+        "cat": "cosmo"
+      }
+    ]
+  },
+  "World_War_II": {
+    "it": [
+      {
+        "text": "Ascolta la radio BBC nelle case buie del Blitz: Vera Lynn canta 'We'll Meet Again' a milioni di soldati lontani e famiglie in ansia. La musica non ferma le bombe, ma tiene insieme le anime di un paese in guerra.",
+        "cat": "musica"
+      },
+      {
+        "text": "Osserva i prigionieri americani nello Stalag Luft III organizzare tornei di baseball: quando tutto è strappato via, lo sport rimane l'ultimo territorio di normalità, dignità e futuro ancora immaginabile.",
+        "cat": "sport"
+      },
+      {
+        "text": "Assisti all'esplosione di Hiroshima il 6 agosto 1945: il calore è così intenso da fondere la sabbia in vetro radioattivo, la trinitite. L'umanità ha imparato a liberare l'energia del nucleo atomico — e a usarla per distruggere le città.",
+        "cat": "geologia"
+      }
+    ],
+    "en": [
+      {
+        "text": "Listen to BBC radio in the darkened homes of the Blitz: Vera Lynn sings 'We'll Meet Again' to millions of distant soldiers and anxious families. Music cannot stop bombs, but it holds together the souls of a nation at war.",
+        "cat": "musica"
+      },
+      {
+        "text": "Watch American prisoners in Stalag Luft III organise baseball tournaments: when everything else is stripped away, sport remains the last territory of normality, dignity, and an imaginable future.",
+        "cat": "sport"
+      },
+      {
+        "text": "Witness the Hiroshima explosion on 6 August 1945: the heat is intense enough to melt sand into radioactive glass — trinitite. Humanity has learned to release atomic nuclear energy, and to use it to destroy cities.",
+        "cat": "geologia"
+      }
+    ]
+  },
+  "Cold_War": {
+    "it": [
+      {
+        "text": "Vivi l'America del 1956: Elvis Presley ondeggia i fianchi in televisione e l'URSS lo definisce 'arma dell'imperialismo culturale'. Il rock and roll è la prima guerra fredda combattuta con chitarre elettriche e giradischi.",
+        "cat": "musica"
+      },
+      {
+        "text": "Assisti al lancio dello Sputnik nell'ottobre 1957: la corsa allo spazio è lo sport più costoso della storia, con astronauti come atleti nazionali e razzi come medaglie olimpiche. Chi arriva primo sulla Luna vince la Guerra Fredda.",
+        "cat": "sport"
+      },
+      {
+        "text": "Segui la traiettoria della Voyager 1, lanciata nel 1977: nel 2012 attraversa l'eliopausa e per la prima volta un oggetto umano naviga nello spazio interstellare. L'umanità ha toccato il confine del sistema solare.",
+        "cat": "cosmo"
+      }
+    ],
+    "en": [
+      {
+        "text": "Experience America in 1956: Elvis Presley swivels his hips on television and the USSR calls him a 'weapon of cultural imperialism'. Rock and roll is the first cold war fought with electric guitars and record players.",
+        "cat": "musica"
+      },
+      {
+        "text": "Watch Sputnik launch in October 1957: the space race is the most expensive sport in history, with astronauts as national athletes and rockets as Olympic medals. Whoever reaches the Moon first wins the Cold War.",
+        "cat": "sport"
+      },
+      {
+        "text": "Track Voyager 1's trajectory from its 1977 launch: in 2012 it crosses the heliopause and for the first time a human-built object sails through interstellar space. Humanity has touched the edge of the solar system.",
+        "cat": "cosmo"
+      }
+    ]
+  },
+  "Globalization": {
+    "it": [
+      {
+        "text": "Vivi il 1983: il videoclip di 'Thriller' di Michael Jackson va in onda su MTV e viene visto simultaneamente in tutto il mondo. Per la prima volta un artista nero domina la televisione globale — il pop non ha più confini nazionali.",
+        "cat": "musica"
+      },
+      {
+        "text": "Osserva Diego Maradona a Napoli negli anni Ottanta: un ragazzo di Buenos Aires nato nella povertà diventa il dio di una città italiana. Il calcio globalizzato trasporta sogni, identità e dolore attraverso tutti gli oceani.",
+        "cat": "sport"
+      },
+      {
+        "text": "Esamina le carote di ghiaccio estratte dalla calotta antartica: ogni strato è un anno di atmosfera congelata, e gli scienziati leggono in esse l'accelerazione del riscaldamento dagli anni Ottanta. La geologia documenta ciò che la politica ignora.",
+        "cat": "geologia"
+      }
+    ],
+    "en": [
+      {
+        "text": "Experience 1983: Michael Jackson's 'Thriller' video airs on MTV and is watched simultaneously around the world. For the first time, a Black artist dominates global television — pop music no longer has national borders.",
+        "cat": "musica"
+      },
+      {
+        "text": "Watch Diego Maradona in Naples in the 1980s: a boy from Buenos Aires born in poverty becomes the god of an Italian city. Globalised football carries dreams, identities, and heartbreak across every ocean.",
+        "cat": "sport"
+      },
+      {
+        "text": "Examine the ice cores extracted from the Antarctic ice sheet: each layer is a year of frozen atmosphere, and scientists read in them the acceleration of warming since the 1980s. Geology documents what politics ignores.",
+        "cat": "geologia"
+      }
+    ]
+  },
+  "Digital_age": {
+    "it": [
+      {
+        "text": "Vivi il 2008: Daniel Ek lancia Spotify e in pochi anni milioni di brani diventano accessibili per il prezzo di un caffè al mese. La musica fisica scompare — restano solo dati, streaming e il paradosso dell'abbondanza infinita.",
+        "cat": "musica"
+      },
+      {
+        "text": "Assisti alla finale mondiale di League of Legends nel 2019: quarantamila spettatori nello stadio, cento milioni in streaming. Lo sport è diventato digitale, e i videogiocatori competitivi sono gli atleti del nuovo millennio.",
+        "cat": "sport"
+      },
+      {
+        "text": "Osserva la prima fotografia di un buco nero pubblicata nel 2019: l'anello luminoso attorno all'ombra di M87* ha viaggiato 55 milioni di anni per arrivare fino a noi. L'Event Horizon Telescope ha fotografato l'invisibile.",
+        "cat": "cosmo"
+      }
+    ],
+    "en": [
+      {
+        "text": "Experience 2008: Daniel Ek launches Spotify and within years millions of songs become accessible for the price of a monthly coffee. Physical music disappears — only data, streaming, and the paradox of infinite abundance remain.",
+        "cat": "musica"
+      },
+      {
+        "text": "Attend the 2019 League of Legends World Championship final: forty thousand spectators in the stadium, one hundred million watching online. Sport has gone digital, and competitive video game players are the athletes of the new millennium.",
+        "cat": "sport"
+      },
+      {
+        "text": "Look at the first photograph of a black hole, published in 2019: the bright ring around M87*'s shadow travelled 55 million years to reach us. The Event Horizon Telescope has photographed the invisible.",
+        "cat": "cosmo"
+      }
     ]
   }
 }

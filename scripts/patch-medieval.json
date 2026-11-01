@@ -1,0 +1,38 @@
+{
+  "Carolingian_Empire": {
+    "it": [
+      {"text": "Ascolta il canto liturgico carolingio nel scriptorium di un monastero: Alcuino di York insegna la notazione neumatica — la scrittura musicale nasce qui", "cat": "musica"},
+      {"text": "Assisti a un torneo equestre carolingio nella piana di Magonza: i cavalieri di Carlo Magno si scontrano con lancia e scudo — la giostra prende forma", "cat": "sport"},
+      {"text": "Osserva il globo celeste della corte di Aquisgrana: gli astronomi carolingi calcolano solstizi ed eclissi per fissare il calendario liturgico", "cat": "cosmo"}
+    ],
+    "en": [
+      {"text": "Listen to Carolingian liturgical chant in a monastery scriptorium: Alcuin of York teaches neume notation — musical writing is born here", "cat": "musica"},
+      {"text": "Watch a Carolingian equestrian tournament on the plains near Mainz: Charlemagne's knights clash with lance and shield — jousting takes shape", "cat": "sport"},
+      {"text": "Study the celestial globe of the Aachen court: Carolingian astronomers calculate solstices and eclipses to fix the liturgical calendar", "cat": "cosmo"}
+    ]
+  },
+  "Feudalism": {
+    "it": [
+      {"text": "Ascolta un trovatore provenzale cantare la fin'amor alla corte di Guglielmo IX d'Aquitania — nasce la canzone d'amore occidentale", "cat": "musica"},
+      {"text": "Assisti a un torneo cavalleresco in Champagne: la lancia spezzata, il rispetto per il nemico caduto — il codice d'onore prende forma nel XII secolo", "cat": "sport"},
+      {"text": "Osserva il castello di Coucy eretto su un affioramento di calcare: la geologia del suolo determina ogni strategia difensiva medievale", "cat": "geologia"}
+    ],
+    "en": [
+      {"text": "Listen to a Provençal troubadour sing fin'amor at the court of William IX of Aquitaine — Western love song is born", "cat": "musica"},
+      {"text": "Watch a knightly tournament in Champagne: the broken lance, respect for the fallen foe — the code of honor takes shape in the 12th century", "cat": "sport"},
+      {"text": "Observe the castle of Coucy built on a limestone outcrop: the geology of the soil determines every medieval defensive strategy", "cat": "geologia"}
+    ]
+  },
+  "High_Middle_Ages": {
+    "it": [
+      {"text": "Ascolta Hildegard von Bingen comporre le sue sequenze polifoniche nel monastero di Bingen — la prima compositrice con nome e opera conosciuti della storia", "cat": "musica"},
+      {"text": "Partecipa al palio di Siena del XII secolo: le contrade si fronteggiano a cavallo tra le viuzze della città — lo sport come identità civica", "cat": "sport"},
+      {"text": "Studia l'astrolabio arabo nelle scuole di traduzione di Toledo: la scienza islamica entra in Europa e ridisegna la visione del cosmo", "cat": "cosmo"}
+    ],
+    "en": [
+      {"text": "Listen to Hildegard von Bingen compose her polyphonic sequences at Bingen monastery — history's first named female composer with surviving works", "cat": "musica"},
+      {"text": "Join the 12th-century Palio of Siena: city districts compete on horseback through narrow streets — sport as civic identity", "cat": "sport"},
+      {"text": "Study the Arabic astrolabe in Toledo's translation schools: Islamic science enters Europe and redraws the vision of the cosmos", "cat": "cosmo"}
+    ]
+  }
+}

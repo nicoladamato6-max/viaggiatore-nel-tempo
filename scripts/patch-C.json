@@ -1,98 +1,98 @@
 {
-  "Upper_Paleolithic": {
+  "Mesopotamia": {
     "it": [
-      {"text": "Copia i bisonti e i cervi sulle pareti di Lascaux usando ocra e grasso animale come pigmento", "cat": "arte"},
-      {"text": "Soffia in un flauto ricavato da un osso di avvoltoio — il primo strumento musicale dell'umanità", "cat": "musica"},
-      {"text": "Scheggia selce con la percussione indiretta per ottenere lame affilate come rasoi", "cat": "scienza"},
-      {"text": "Accompagna il defunto nella sepoltura con ocra rossa e ornamenti: il primo rito funebre documentato", "cat": "filosofia"},
-      {"text": "Incidi su un osso i cicli lunari: il tuo calendario a 28 tacche è il più antico strumento astronomico", "cat": "cosmo"}
+      {"text": "Ascolta le corde dorate della lira di Ur risuonare nel palazzo reale: musicisti di corte accompagnano banchetti sacri con melodie che invocano gli dei sumeri.", "cat": "musica"},
+      {"text": "Assisti ai giochi del palazzo: lottatori mesopotamici si sfidano davanti al re nell'antica disciplina della lotta, immortalata su sigilli cilindrici e stele votive.", "cat": "sport"},
+      {"text": "Osserva gli astronomi babilonesi incidere su tavolette d'argilla le orbite di Venere e Marte: le prime tavole astronomiche della storia tracciano il destino di re e nazioni.", "cat": "cosmo"}
     ],
     "en": [
-      {"text": "Copy bison and deer on Lascaux cave walls using ochre and animal fat mixed into pigment", "cat": "arte"},
-      {"text": "Blow into a flute carved from a vulture bone — humanity's oldest known musical instrument", "cat": "musica"},
-      {"text": "Knap flint with indirect percussion to produce blades as sharp as any modern razor", "cat": "scienza"},
-      {"text": "Lower the dead into a grave lined with red ochre and shell ornaments: the first documented funeral rite", "cat": "filosofia"},
-      {"text": "Carve 28 notches onto a bone to track the lunar cycle — the oldest known astronomical counting device", "cat": "cosmo"}
+      {"text": "Listen to the golden strings of the Ur lyre resounding in the royal palace: court musicians accompany sacred banquets with melodies invoking the Sumerian gods.", "cat": "musica"},
+      {"text": "Witness the palace games: Mesopotamian wrestlers challenge each other before the king in the ancient art of wrestling, immortalized on cylinder seals and votive stelae.", "cat": "sport"},
+      {"text": "Watch Babylonian astronomers inscribe the orbits of Venus and Mars on clay tablets: the earliest astronomical records in history, tracing the fate of kings and nations.", "cat": "cosmo"}
     ]
   },
-  "Mesolithic": {
+  "Ancient_Egypt": {
     "it": [
-      {"text": "Dipingi scene di caccia collettiva sulle rocce di Cueva de los Caballos con figure dinamiche e stilizzate", "cat": "arte"},
-      {"text": "Assembla microliti di selce su un'asta di legno: la freccia composita che rivoluziona la caccia", "cat": "scienza"},
-      {"text": "Osserva il mare salire di un metro ogni secolo mentre i ghiacciai fondono e inghiottono le coste", "cat": "geologia"},
-      {"text": "Entra in trance al suono del tamburo: lo sciamano media tra il mondo dei vivi e quello degli spiriti", "cat": "filosofia"},
-      {"text": "Tendi l'arco su una canoa scavata nel tronco e aspetta il salmone nelle acque del fiume", "cat": "sport"}
+      {"text": "Ascolta i sistri d'oro tintinnare nei templi di Hathor: sacerdotesse agitano lo strumento sacro mentre le arpe da tempio accompagnano i riti divini sulle rive del Nilo.", "cat": "musica"},
+      {"text": "Assisti alle regate sul Nilo durante le feste di Opet: rematori potenti si sfidano tra grida di folla, mentre i lottatori egizi si esibiscono sulle rive del grande fiume.", "cat": "sport"},
+      {"text": "Vivi lo sforzo sovrumano di migliaia di operai che trascinano un obelisco di granito rosa di Assuan lungo il Nilo: la geologia del fiume modella la grandezza dell'Egitto.", "cat": "geologia"}
     ],
     "en": [
-      {"text": "Paint dynamic hunting scenes on the rocks of Cueva de los Caballos with stylised human silhouettes", "cat": "arte"},
-      {"text": "Mount tiny flint microliths onto a wooden shaft to create the composite arrow that transforms hunting", "cat": "scienza"},
-      {"text": "Watch the sea rise one metre per century as glaciers melt and swallow the coastal plains you know", "cat": "geologia"},
-      {"text": "Enter a drumbeat trance: the shaman crosses between the world of the living and the realm of spirits", "cat": "filosofia"},
-      {"text": "Draw your bow aboard a dugout canoe and wait for the salmon to run upstream in the river shallows", "cat": "sport"}
+      {"text": "Hear golden sistrums jingle in the temples of Hathor: priestesses shake the sacred instrument while temple harps accompany divine rites on the banks of the Nile.", "cat": "musica"},
+      {"text": "Watch the Nile regattas during the Opet festival: powerful rowers compete amid crowd cheers, while Egyptian wrestlers perform on the banks of the great river.", "cat": "sport"},
+      {"text": "Experience the superhuman effort of thousands of workers dragging a pink granite obelisk from Aswan along the Nile: the river's geology shapes the very greatness of Egypt.", "cat": "geologia"}
     ]
   },
-  "Neolithic": {
+  "Archaic_Greece": {
     "it": [
-      {"text": "Modella l'argilla in vasi dipinti con spirali e motivi geometrici — la ceramica di Cucuteni-Trypillia", "cat": "arte"},
-      {"text": "Batti le percussioni di terracotta durante il rito del raccolto per invocare la pioggia nei villaggi", "cat": "musica"},
-      {"text": "Pianta i semi di farro selezionati nella primavera scorsa: la prima agricoltura sistematica del Vicino Oriente", "cat": "scienza"},
-      {"text": "Porta offerte votive alla Dea Madre: statuette di terracotta deposte nei santuari neolitici d'Anatolia", "cat": "filosofia"},
-      {"text": "Sfida un rivale nel combattimento rituale durante la festa del solstizio — vincere significa prestigio sociale", "cat": "sport"}
+      {"text": "Ascolta il suono penetrante dell'aulos riempire il simposio: l'aulodia guida i canti corali del ditirambo, origine remota della tragedia che nascerà da questi riti dionisiaci.", "cat": "musica"},
+      {"text": "Assisti alle prime Olimpiadi del 776 a.C. ad Olimpia: atleti nudi competono nella corsa, nel lancio del disco e nel salto mentre il pentathlon nasce come suprema prova atletica.", "cat": "sport"},
+      {"text": "Incontra Talete di Mileto che predice un'eclissi solare e misura la piramide con la sua ombra: il cosmo cessa di essere mito e diventa oggetto di indagine razionale.", "cat": "cosmo"}
     ],
     "en": [
-      {"text": "Shape clay into vessels painted with spirals and chevrons — the tradition of Cucuteni-Trypillia pottery", "cat": "arte"},
-      {"text": "Strike terracotta percussion vessels during the harvest rite to call rain to the village fields", "cat": "musica"},
-      {"text": "Sow the emmer seeds you selected last autumn: systematic agriculture begins in the Fertile Crescent", "cat": "scienza"},
-      {"text": "Place terracotta figurines of the Mother Goddess in Anatolian shrine niches to secure the harvest", "cat": "filosofia"},
-      {"text": "Challenge a rival to ritual combat at the summer solstice festival — victory earns lasting social rank", "cat": "sport"}
+      {"text": "Hear the piercing sound of the aulos fill the symposium: the aulodia leads the choral songs of the dithyramb, the distant origin of tragedy that will emerge from these Dionysian rites.", "cat": "musica"},
+      {"text": "Witness the first Olympic Games of 776 BC at Olympia: naked athletes compete in running, discus throwing, and jumping as the pentathlon emerges as the supreme athletic test.", "cat": "sport"},
+      {"text": "Meet Thales of Miletus predicting a solar eclipse and measuring the pyramid by its shadow: the cosmos ceases to be myth and becomes an object of rational inquiry.", "cat": "cosmo"}
     ]
   },
-  "Chalcolithic": {
+  "Classical_Greece": {
     "it": [
-      {"text": "Fondi il rame in stampi di argilla per creare asce cerimoniali — i primi oggetti di status metallici", "cat": "arte"},
-      {"text": "Mescola arsenico al rame in fusione e ottieni un metallo più duro: la metallurgia sperimenta le leghe", "cat": "scienza"},
-      {"text": "Pizzica le corde di una lira a cassa di risonanza lignea nelle corti mesopotamiche di Ur", "cat": "musica"},
-      {"text": "Scendi nelle miniere di rame di Timna seguendo i filoni di malachite attraverso la roccia", "cat": "geologia"},
-      {"text": "Invoca Inanna e Enlil davanti al tempio: il primo pantheon divino organizza il cosmo sumero", "cat": "filosofia"}
+      {"text": "Assisti al Teatro di Dioniso ad Atene: il coro intona canti sacri agli dei mentre Sofocle porta in scena Edipo — la musica è l'anima viva della tragedia greca.", "cat": "musica"},
+      {"text": "Vivi l'emozione del dolichos olimpico — la lunga corsa di ventiquattro stadi — e ammira gli opliti che corrono armati di scudo e lancia: corpo e virtù guerriera al culmine.", "cat": "sport"},
+      {"text": "Ascolta Platone nell'Accademia sostenere che la musica riflette l'ordine matematico del cosmo: il ritmo e l'armonia formano l'anima del giovane cittadino ideale.", "cat": "filosofia"}
     ],
     "en": [
-      {"text": "Cast copper into clay moulds to produce ceremonial axes — the first metal objects used as status symbols", "cat": "arte"},
-      {"text": "Mix arsenic into molten copper and pour the harder alloy: early metallurgy experiments with composite metals", "cat": "scienza"},
-      {"text": "Pluck the strings of a wooden-box lyre in the courts of Ur — the first resonating instrument on record", "cat": "musica"},
-      {"text": "Descend into the Timna copper mine, following malachite veins deep into the sandstone cliff face", "cat": "geologia"},
-      {"text": "Invoke Inanna and Enlil before the temple steps: the first organised divine pantheon orders the cosmos", "cat": "filosofia"}
+      {"text": "Attend the Theatre of Dionysus in Athens: the chorus chants in honor of the gods as Sophocles stages Oedipus — music is the living soul of Greek tragedy.", "cat": "musica"},
+      {"text": "Experience the thrill of the Olympic dolichos — the long race of twenty-four stadia — and admire hoplites running armed with shield and spear: body and warrior virtue at their peak.", "cat": "sport"},
+      {"text": "Hear Plato in the Academy argue that music reflects the mathematical order of the cosmos: rhythm and harmony shape the soul of the ideal young citizen.", "cat": "filosofia"}
     ]
   },
-  "Bronze_Age": {
+  "Hellenistic_period": {
     "it": [
-      {"text": "Contempla gli affreschi minoici di Akrotiri: delfini e pescatori su pareti bianche prima dell'eruzione", "cat": "arte"},
-      {"text": "Suona il corno di bronzo nelle cerimonie micenee — il metallo trasforma anche il paesaggio sonoro", "cat": "musica"},
-      {"text": "Fondi stagno e rame in proporzione uno a dieci: la lega di bronzo che cambia la storia delle armi", "cat": "scienza"},
-      {"text": "Ascolta l'aedo recitare l'Epopea di Gilgamesh: il primo racconto scritto sulla paura della morte", "cat": "filosofia"},
-      {"text": "Monta sul carro da guerra trainato da cavalli e affronta il nemico nella pianura — tattica dell'Età del Bronzo", "cat": "sport"}
+      {"text": "Ascolta l'hydraulis di Ctesibio risuonare ad Alessandria: il primo organo della storia, alimentato ad acqua, stupisce la corte dei Tolomei con una potenza sonora senza precedenti.", "cat": "musica"},
+      {"text": "Assisti alla corsa dei carri nei giochi panellenici: aurighi in tunica bianca guidano quattro cavalli scalpitanti tra la polvere del circo olimpico davanti a decine di migliaia di spettatori.", "cat": "sport"},
+      {"text": "Vivi la Biblioteca di Alessandria al suo apice: Eratostene misura la circonferenza della Terra e ingegneri geniali costruiscono la Macchina di Anticitera, primo calcolatore astronomico della storia.", "cat": "scienza"}
     ],
     "en": [
-      {"text": "Study the Akrotiri frescoes of Santorini — dolphins and fishermen on white plaster before the eruption", "cat": "arte"},
-      {"text": "Sound a bronze horn at Mycenaean ceremonies — metal transforms the ritual soundscape of the palace", "cat": "musica"},
-      {"text": "Smelt tin and copper in a ratio of one to ten to cast bronze — the alloy that reshapes every weapon", "cat": "scienza"},
-      {"text": "Listen to the aedo chant the Epic of Gilgamesh — humanity's first written meditation on death and fame", "cat": "filosofia"},
-      {"text": "Mount a horse-drawn war chariot and charge across the plain — the defining tactical innovation of the age", "cat": "sport"}
+      {"text": "Hear Ctesibius's hydraulis resound in Alexandria: the world's first organ, water-powered, astonishes the Ptolemaic court with an unprecedented volume of sound.", "cat": "musica"},
+      {"text": "Watch the chariot race at the Panhellenic games: aurigae in white tunics guide four stamping horses through the dust of the Olympic track amid the roars of tens of thousands.", "cat": "sport"},
+      {"text": "Experience the Library of Alexandria at its peak: Eratosthenes measures the Earth's circumference and brilliant engineers build the Antikythera Mechanism, history's first astronomical calculator.", "cat": "scienza"}
     ]
   },
-  "Iron_Age": {
+  "Kingdom_of_Rome": {
     "it": [
-      {"text": "Ammira la toreutica celtica: i maestri di La Tène incidono spirali vegetali su cinturoni ed elmi", "cat": "arte"},
-      {"text": "Soffia nel carnyx celtico, il corno di guerra a testa di cinghiale — il suono incute terrore ai romani", "cat": "musica"},
-      {"text": "Alimenta la fucina e trasforma la ghisa in ferro battuto: il metallo più duro cambia l'agricoltura", "cat": "scienza"},
-      {"text": "Siedi ai piedi di Anassimandro a Mileto: l'apeiron come principio illimitato da cui tutto origina", "cat": "filosofia"},
-      {"text": "Gareggia nel pancrazio ai Giochi di Olimpia — il combattimento senza regole che forma il cittadino greco", "cat": "sport"}
+      {"text": "Ascolta le tibie etrusche risuonare nei sacrifici sul Campidoglio: il flauto doppio, mutuato dagli Etruschi, accompagna ogni rito sacro della Roma regia fin dalle sue origini.", "cat": "musica"},
+      {"text": "Assisti alle prime corse equestri al Circo Massimo fondato da Tarquinio Prisco: i cavalli tuonano sulla pista di terra mentre la folla esulta ai primissimi ludi della storia di Roma.", "cat": "sport"},
+      {"text": "Cammina sui sette colli di Roma: sotto i tuoi piedi, argilla alluvionale e tufo vulcanico plasmato dai Colli Albani — la geologia del Lazio ha determinato il destino di una civiltà.", "cat": "geologia"}
     ],
     "en": [
-      {"text": "Examine La Tène torc work: Celtic masters engrave flowing plant spirals onto iron belts and helmets", "cat": "arte"},
-      {"text": "Blow the carnyx, the Celtic war horn topped with a boar's head — its roar terrifies Roman legions", "cat": "musica"},
-      {"text": "Feed the bellows of the forge and hammer wrought iron into a ploughshare — agriculture accelerates", "cat": "scienza"},
-      {"text": "Sit at Anaximander's feet in Miletus and hear the apeiron named as the boundless source of all things", "cat": "filosofia"},
-      {"text": "Compete in the pankration at Olympia — the no-holds-barred contest that defines Greek civic virtue", "cat": "sport"}
+      {"text": "Hear Etruscan tibiae resound at sacrifices on the Capitoline Hill: the double flute, borrowed from the Etruscans, accompanies every sacred rite of royal Rome from its very origins.", "cat": "musica"},
+      {"text": "Witness the first horse races at the Circus Maximus founded by Tarquinius Priscus: horses thunder on the earthen track as the crowd exults at the earliest games in Rome's history.", "cat": "sport"},
+      {"text": "Walk the seven hills of Rome: beneath your feet, alluvial clay and volcanic tuff shaped by the Alban Hills — the geology of Latium has determined the destiny of a civilization.", "cat": "geologia"}
+    ]
+  },
+  "Roman_Republic": {
+    "it": [
+      {"text": "Ascolta la tuba romana squillare all'alba: il segnale metallico della tromba dritta mobilita la legione, mentre la bucina curva scandisce i turni di guardia notturna negli accampamenti.", "cat": "musica"},
+      {"text": "Assisti ai Ludi Plebeii al Circo Massimo: tra corse di carri e prime munera gladiatorie, i giochi della Repubblica nascono come offerta agli dei e si trasformano in spettacolo popolare.", "cat": "sport"},
+      {"text": "Vivi la riforma del calendario di Giulio Cesare nel 46 a.C.: su consiglio dell'astronomo Sosigene d'Alessandria, Roma adotta l'anno solare di 365,25 giorni — il tempo stesso si riorganizza.", "cat": "cosmo"}
+    ],
+    "en": [
+      {"text": "Hear the Roman tuba blare at dawn: the metallic signal of the straight trumpet mobilizes the legion, while the curved bucina marks the night watch shifts in the camps.", "cat": "musica"},
+      {"text": "Attend the Ludi Plebei at the Circus Maximus: amid chariot races and the first gladiatorial munera, the games of the Republic emerge as offerings to the gods and become popular spectacle.", "cat": "sport"},
+      {"text": "Experience Julius Caesar's calendar reform of 46 BC: on the advice of astronomer Sosigenes of Alexandria, Rome adopts the 365.25-day solar year — time itself is reorganized.", "cat": "cosmo"}
+    ]
+  },
+  "Early_Middle_Ages": {
+    "it": [
+      {"text": "Ascolta le voci dei monaci benedettini intonare il canto gregoriano nelle abbazie dell'Europa carolingia: Gregorio Magno codifica la musica sacra cristiana, voce dell'anima medievale.", "cat": "musica"},
+      {"text": "Assisti a un torneo equestre franco nelle pianure della Neustria: cavalieri bardati di ferro si sfidano con la lancia mentre i vichinghi del nord gareggiano nelle loro fierce giostre invernali.", "cat": "sport"},
+      {"text": "Incontra il monaco Beda il Venerabile nell'abbazia di Jarrow: il suo trattato 'De Temporum Ratione' calcola la data della Pasqua e preserva l'astronomia greca nel cuore del Medioevo.", "cat": "cosmo"}
+    ],
+    "en": [
+      {"text": "Hear the voices of Benedictine monks chanting Gregorian plainchant in Carolingian abbeys: Gregory the Great codifies Christian sacred music, the voice of the medieval soul.", "cat": "musica"},
+      {"text": "Watch a Frankish equestrian tournament in the plains of Neustria: iron-clad knights challenge each other with lances while northern Vikings compete in their fierce winter jousts.", "cat": "sport"},
+      {"text": "Meet the monk Bede the Venerable at Jarrow Abbey: his treatise 'De Temporum Ratione' calculates the date of Easter and preserves Greek astronomy at the heart of the Middle Ages.", "cat": "cosmo"}
     ]
   }
 }

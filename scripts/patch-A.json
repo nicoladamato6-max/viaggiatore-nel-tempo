@@ -2,276 +2,210 @@
   "Observable_universe": {
     "it": [
       {
-        "text": "Studia la radiazione di Hawking: i buchi neri non sono eterni e lentamente evaporano emettendo particelle quantistiche",
-        "cat": "cosmo"
+        "text": "Ascolta il silenzio cosmico: le prime fluttuazioni quantistiche tessono frequenze che milioni di anni dopo diventeranno la musica delle sfere. Ogni stella oscillerà come una nota in una sinfonia senza direttore.",
+        "cat": "musica"
       },
       {
-        "text": "Analizza l'epoca di Planck: nei primi 10⁻⁴³ secondi la gravità e le altre forze fondamentali erano un'unica forza indistinta",
+        "text": "Corri più veloce che puoi: in questo istante le galassie si allontanano da te a velocità superiori a quella della luce. Nel cosmo la vera gara non si vince — si espande senza fine.",
+        "cat": "sport"
+      },
+      {
+        "text": "Percepisci il tessuto dello spazio-tempo vibrare: miliardi di anni prima dei tuoi strumenti, le prime fusioni di masse colossali generano onde gravitazionali che attraversano l'universo come increspature su uno stagno infinito.",
         "cat": "scienza"
-      },
-      {
-        "text": "Rifletti sul problema del fine-tuning con Nick Bostrom: perché le costanti fisiche dell'universo consentono esattamente la vita?",
-        "cat": "filosofia"
-      },
-      {
-        "text": "Esplora la formazione del Sole 4,6 miliardi di anni fa: una nube di gas e polvere che collassa su sé stessa per gravità",
-        "cat": "geologia"
-      },
-      {
-        "text": "Contempla le nebulae catturate dal James Webb Space Telescope: pilastri di gas e polvere cosmica che formano stelle per milioni di anni",
-        "cat": "arte"
       }
     ],
     "en": [
       {
-        "text": "Study Hawking radiation: black holes are not eternal and slowly evaporate by emitting quantum particles over billions of years",
-        "cat": "cosmo"
+        "text": "Listen to the cosmic silence: the first quantum fluctuations weave frequencies that millions of years later will become the music of the spheres. Every star will oscillate like a note in a symphony without a conductor.",
+        "cat": "musica"
       },
       {
-        "text": "Analyze the Planck epoch: in the first 10⁻⁴³ seconds gravity and all other fundamental forces were a single indistinguishable force",
+        "text": "Run as fast as you can: at this moment galaxies race away from you at speeds exceeding light itself. In the cosmos the ultimate race is never won — it simply expands without end.",
+        "cat": "sport"
+      },
+      {
+        "text": "Feel the fabric of spacetime tremble: billions of years before your instruments exist, the first collisions of colossal masses generate gravitational waves rippling across the universe like tremors on an infinite pond.",
         "cat": "scienza"
-      },
-      {
-        "text": "Reflect on the fine-tuning problem with Nick Bostrom: why do the universe's physical constants allow exactly for life to exist?",
-        "cat": "filosofia"
-      },
-      {
-        "text": "Explore the Sun's formation 4.6 billion years ago: a cloud of gas and dust collapsing on itself through gravitational attraction",
-        "cat": "geologia"
-      },
-      {
-        "text": "Contemplate nebulae captured by the James Webb Space Telescope: pillars of gas and cosmic dust forming tomorrow's stars",
-        "cat": "arte"
       }
     ]
   },
   "History_of_Earth": {
     "it": [
       {
-        "text": "Osserva il Grande Bombardamento Tardivo 3,9 miliardi di anni fa: migliaia di asteroidi e comete martellano la Terra neonata",
-        "cat": "cosmo"
+        "text": "Senti la Terra cantare: le prime eruzioni vulcaniche fanno vibrare la crosta con frequenze profonde che nessun orecchio udirà mai. È la sinfonia primordiale — calore, pressione e roccia che compongono il primo movimento della Terra.",
+        "cat": "musica"
       },
       {
-        "text": "Studia gli stromatoliti di Shark Bay in Australia: le stesse strutture di 3,5 miliardi di anni fa esistono ancora oggi",
-        "cat": "scienza"
+        "text": "Nuota controcorrente negli oceani primordiali: le correnti termoaline, spinte dal calore del mantello, creano circuiti planetari che trasportano calore dai tropici ai poli in una gara senza fine per l'equilibrio termico.",
+        "cat": "sport"
       },
       {
-        "text": "Medita sull'ipotesi Gaia di James Lovelock: la Terra regola temperatura e chimica atmosferica come un sistema vivente autoorganizzato",
-        "cat": "filosofia"
-      },
-      {
-        "text": "Esplora il supercontinente Rodinia, assemblato 1,1 miliardi di anni fa e poi spaccato dalla deriva dei continenti 200 milioni di anni dopo",
+        "text": "Osserva le prime placche tettoniche muoversi impercettibilmente: la superficie terrestre è già divisa in frammenti che si scontrano, si separano e si fondono in cicli di centinaia di milioni di anni.",
         "cat": "geologia"
-      },
-      {
-        "text": "Ammira le colonne basaltiche della Chaussée des Géants in Irlanda del Nord: esagoni di lava solidificata larghi 50 cm",
-        "cat": "arte"
       }
     ],
     "en": [
       {
-        "text": "Observe the Late Heavy Bombardment 3.9 billion years ago: thousands of asteroids and comets hammer the newborn Earth",
-        "cat": "cosmo"
+        "text": "Hear the Earth sing: the first volcanic eruptions vibrate the crust with frequencies no ear will ever capture. This is the primordial symphony — heat, pressure, and rock composing the Earth's first movement.",
+        "cat": "musica"
       },
       {
-        "text": "Study Shark Bay stromatolites in Australia: the same living structures built by cyanobacteria 3.5 billion years ago still exist today",
-        "cat": "scienza"
+        "text": "Swim against the current in primordial oceans: thermohaline currents driven by mantle heat create planetary circuits that carry warmth from the tropics to the poles in an endless race for thermal equilibrium.",
+        "cat": "sport"
       },
       {
-        "text": "Meditate on James Lovelock's Gaia hypothesis: Earth self-regulates its temperature and atmospheric chemistry like a living system",
-        "cat": "filosofia"
-      },
-      {
-        "text": "Explore supercontinent Rodinia, assembled 1.1 billion years ago and then split apart by continental drift 200 million years later",
+        "text": "Watch the first tectonic plates move imperceptibly: Earth's surface is already fractured into fragments that collide, separate, and fuse in cycles spanning hundreds of millions of years.",
         "cat": "geologia"
-      },
-      {
-        "text": "Admire the basalt columns of Giant's Causeway in Northern Ireland: perfect hexagons of solidified lava 50 centimeters wide",
-        "cat": "arte"
       }
     ]
   },
   "Paleozoic": {
     "it": [
       {
-        "text": "Osserva il cielo devoniano senza inquinamento luminoso: la Via Lattea splende sulle prime foreste dove respirano i primi vertebrati terrestri",
-        "cat": "cosmo"
+        "text": "Immergi la testa nell'oceano del Siluriano: il crepitio dei trilobiti, il fruscio delle meduse e le prime vocalizzazioni degli animali marini creano un paesaggio sonoro che nessun musicista ha mai trascritto.",
+        "cat": "musica"
       },
       {
-        "text": "Studia Tiktaalik roseae, scoperto da Neil Shubin nel 2004: pinne con ossa omologhe alle zampe dei tetrapodi — il fossile di transizione",
+        "text": "Assisti alla prima grande corsa evolutiva: nel Devoniano, predatori e prede si sfidano in un'accelerazione biologica frenetica. Ogni nuova pinna, artiglio o corazza non è un'invenzione — è una risposta tattica in un campionato durato milioni di anni.",
+        "cat": "sport"
+      },
+      {
+        "text": "Respira profondamente: sei nel cuore della grande ossigenazione. Le alghe verdi e le prime piante terrestri trasformano l'atmosfera di CO₂ in un mantello sempre più ricco di ossigeno. Ogni tua inspirazione celebra 400 milioni di anni di fotosintesi.",
         "cat": "scienza"
-      },
-      {
-        "text": "Rifletti con Stephen Jay Gould: il Burgess Shale mostra che l'evoluzione è contingenza pura, non progresso verso la complessità",
-        "cat": "filosofia"
-      },
-      {
-        "text": "Esplora il supercontinente Gondwana nel Cambriano: oceani tropicali caldi ricchi di trilobiti e le prime barriere coralline della storia",
-        "cat": "geologia"
-      },
-      {
-        "text": "Ammira le geometrie naturali dei coralli rugosi paleozoici: architetture in calcite estinte al Permiano, mai più riprodotte dalla natura",
-        "cat": "arte"
       }
     ],
     "en": [
       {
-        "text": "Observe the Devonian sky without light pollution: the Milky Way shines over primordial forests where the first land vertebrates breathe",
-        "cat": "cosmo"
+        "text": "Dip your head into the Silurian ocean: the crackling of trilobites, the rustle of jellyfish, and the first vocalizations of sea creatures create a soundscape no musician has ever transcribed.",
+        "cat": "musica"
       },
       {
-        "text": "Study Tiktaalik roseae, discovered by Neil Shubin in 2004: fins with bones homologous to tetrapod limbs — the key transitional fossil",
+        "text": "Witness the first great evolutionary arms race: in the Devonian, predators and prey challenge each other in a frantic biological acceleration. Every new fin, claw, or armor plate is not an invention — it is a tactical response in a championship spanning millions of years.",
+        "cat": "sport"
+      },
+      {
+        "text": "Breathe deeply: you are at the heart of the great oxygenation. Green algae and the first land plants transform the CO₂-rich atmosphere into a cloak ever richer in oxygen. Every breath you take celebrates 400 million years of photosynthesis.",
         "cat": "scienza"
-      },
-      {
-        "text": "Reflect with Stephen Jay Gould: the Burgess Shale shows evolution is pure contingency, not inevitable progress toward complexity",
-        "cat": "filosofia"
-      },
-      {
-        "text": "Explore supercontinent Gondwana in the Cambrian: warm tropical oceans rich in trilobites and the very first coral reefs in history",
-        "cat": "geologia"
-      },
-      {
-        "text": "Admire the natural geometry of Paleozoic rugose corals: calcite architectures extinct since the Permian, never reproduced by nature again",
-        "cat": "arte"
       }
     ]
   },
   "Mesozoic": {
     "it": [
       {
-        "text": "Osserva il cielo cretaceo notturno: senza inquinamento luminoso, i dinosauri vivono sotto una Via Lattea mille volte più vivida di quella che vediamo noi",
-        "cat": "cosmo"
+        "text": "Ascolta il Giurassico: i sauropodi emettono boati sub-sonici che attraversano chilometri di foresta densa. Gli Hadrosauri, con le loro creste cave, risuonano come corni naturali nel crepuscolo.",
+        "cat": "musica"
       },
       {
-        "text": "Studia Archeopteryx lithographica scoperto da Huxley nel 1861: penne da uccello, denti da rettile — il legame evolutivo tra dinosauri e avifauna",
-        "cat": "scienza"
+        "text": "Corri con un Velociraptor che insegue la sua preda nel Cretaceo: la velocità è 25 km/h, ma è la tattica di branco a fare la differenza. Stai assistendo alla caccia più sofisticata del Mesozoico.",
+        "cat": "sport"
       },
       {
-        "text": "Rifletti con Stephen Jay Gould: se l'asteroide dello Chicxulub avesse mancato la Terra, i mammiferi sarebbero ancora piccoli insettivori notturni",
+        "text": "Guarda la palla di fuoco attraversare il cielo 66 milioni di anni fa: il 75% delle specie si estingue, ma dalla catastrofe nascono i mammiferi, i fiori e infine tu. L'estinzione non è una fine — è una selezione.",
         "cat": "filosofia"
-      },
-      {
-        "text": "Osserva la deriva di Gondwana: l'Atlantico si apre lentamente tra Africa e Sud America, isolando fauna che evolverà separatamente per milioni di anni",
-        "cat": "geologia"
-      },
-      {
-        "text": "Ammira le Dolomiti: ex barriere coralline triassiche spinte a 3.000 metri dalla tettonica, cattedrali di calcare dipinte da Tiziano nei suoi sfondi",
-        "cat": "arte"
       }
     ],
     "en": [
       {
-        "text": "Observe the Cretaceous night sky: without light pollution, dinosaurs live under a Milky Way a thousand times more vivid than what we see today",
-        "cat": "cosmo"
+        "text": "Listen to the Jurassic: sauropods emit sub-sonic rumbles that travel kilometers through dense forest. Hadrosaurs, with their hollow crests, resonate like natural horns in the twilight.",
+        "cat": "musica"
       },
       {
-        "text": "Study Archaeopteryx lithographica discovered by Huxley in 1861: bird feathers, reptile teeth — the evolutionary link between dinosaurs and birds",
-        "cat": "scienza"
+        "text": "Run alongside a Velociraptor chasing its prey in the Cretaceous: speed is 25 km/h, but pack strategy makes the difference. You are witnessing the most sophisticated hunting tactics of the Mesozoic.",
+        "cat": "sport"
       },
       {
-        "text": "Reflect with Stephen Jay Gould: if the Chicxulub asteroid had missed Earth, mammals would still be small nocturnal insectivores today",
+        "text": "Watch the fireball tear through the sky 66 million years ago: 75% of all species vanish, but from the catastrophe emerge mammals, flowers, and eventually you. Extinction is not an ending — it is a selection.",
         "cat": "filosofia"
-      },
-      {
-        "text": "Observe Gondwana drifting: the Atlantic slowly opens between Africa and South America, isolating fauna that will evolve separately for millions of years",
-        "cat": "geologia"
-      },
-      {
-        "text": "Admire the Dolomites: former Triassic coral reefs pushed to 3,000 meters by tectonics, limestone cathedrals painted by Titian in his backgrounds",
-        "cat": "arte"
       }
     ]
   },
   "Cenozoic": {
     "it": [
       {
-        "text": "Studia i cicli di Milankovitch: le oscillazioni dell'orbita terrestre descritte dal fisico serbo nel 1920 spiegano le glaciazioni del Pleistocene",
-        "cat": "cosmo"
+        "text": "Ascolta gli uccelli dell'Eocene: dopo l'estinzione dei dinosauri, i loro discendenti alati colonizzano ogni habitat e sviluppano il canto più complesso della storia animale. Ogni melodia è il prodotto di milioni di anni di selezione sessuale.",
+        "cat": "musica"
       },
       {
-        "text": "Studia l'evoluzione del cavallo con Othniel Marsh: da Eohippus grande come un cane a Equus moderno in 55 milioni di anni di selezione naturale",
+        "text": "Osserva Australopithecus alzarsi sulle due zampe circa 4 milioni di anni fa: il bipedismo libera le mani e inaugura la corsa di resistenza — la specialità atletica che porterà l'Homo sapiens a dominare le savane africane.",
+        "cat": "sport"
+      },
+      {
+        "text": "Tieni d'occhio le posizioni dei continenti: nel Cenozoico l'India si scontra con l'Asia sollevando l'Himalaya, e l'America del Sud si unisce al Nord scatenando il Grande Scambio Americano. La deriva non è finita.",
         "cat": "scienza"
-      },
-      {
-        "text": "Medita con Charles Darwin: la selezione naturale dell'Origine delle Specie del 1859 dissolve il concetto di scopo e direzione nella natura",
-        "cat": "filosofia"
-      },
-      {
-        "text": "Esplora la formazione delle Alpi nel Miocene: la collisione tra la placca africana e quella europea solleva montagne che alterano i monsoni asiatici",
-        "cat": "geologia"
-      },
-      {
-        "text": "Ammira le prime incisioni geometriche su ocra di Blombos Cave in Sudafrica: arte astratta creata da Homo sapiens 77.000 anni fa",
-        "cat": "arte"
       }
     ],
     "en": [
       {
-        "text": "Study Milankovitch cycles: orbital oscillations described by the Serbian physicist in 1920 explain why Pleistocene glaciations repeat every 100,000 years",
-        "cat": "cosmo"
+        "text": "Listen to the Eocene birds: after the dinosaurs' extinction, their feathered descendants colonize every habitat and develop the most complex birdsong in animal history. Every melody is the product of millions of years of sexual selection.",
+        "cat": "musica"
       },
       {
-        "text": "Study horse evolution with Othniel Marsh: from dog-sized Eohippus to modern Equus over 55 million years of natural selection",
+        "text": "Watch Australopithecus rise on its hind legs about 4 million years ago: bipedalism frees the hands and inaugurates endurance running — the athletic specialty that will lead Homo sapiens to dominate the African savannas.",
+        "cat": "sport"
+      },
+      {
+        "text": "Track the position of the continents: in the Cenozoic, India collides with Asia raising the Himalayas, and South America joins North America triggering the Great American Biotic Interchange. Drift is not over.",
         "cat": "scienza"
-      },
-      {
-        "text": "Meditate with Charles Darwin: natural selection in the 1859 Origin of Species dissolves the concept of purpose and direction in nature",
-        "cat": "filosofia"
-      },
-      {
-        "text": "Explore the Alps forming in the Miocene: the collision of the African and European plates raises mountains that alter Asian monsoon patterns",
-        "cat": "geologia"
-      },
-      {
-        "text": "Admire the first geometric engravings on ochre from Blombos Cave in South Africa: abstract art created by Homo sapiens 77,000 years ago",
-        "cat": "arte"
       }
     ]
   },
   "Prehistory": {
     "it": [
       {
-        "text": "Studia Stonehenge nella sua fase neolitica: i megaliti allineati al solstizio d'estate da 5.000 anni dimostrano astronomia pratica avanzata",
-        "cat": "cosmo"
+        "text": "Ascolta il suono più antico suonato da mani umane: un flauto d'osso d'avvoltoio ritrovato in Germania risale a 40.000 anni fa. Intorno al fuoco la musica non è intrattenimento — è rituale, coesione tribale, parola verso il soprannaturale.",
+        "cat": "musica"
       },
       {
-        "text": "Studia il biface acheuleano di Olduvai Gorge: la stessa tecnica di scheggiatura simmetrica usata per un milione di anni testimonia la cognizione umana",
-        "cat": "scienza"
+        "text": "Corri con il gruppo di cacciatori: 70.000 anni fa Homo sapiens non è il più veloce né il più forte, ma è il campione mondiale di resistenza. La caccia per sfinimento — inseguire la preda per ore fino al collasso — sfama tribù intere nelle savane africane.",
+        "cat": "sport"
       },
       {
-        "text": "Partecipa a un rituale sciamanico del Paleolitico: le figure metà-uomo metà-animale di Lascaux suggeriscono stati alterati di coscienza intenzionali",
+        "text": "Siediti con lo sciamano nella caverna: 30.000 anni fa, in cunicoli bui che amplificano i suoni in modo spettrale, gli artisti preistorici dipingono in trance. L'arte rupestre non è decorazione — è porta verso l'aldilà, incontro tra il visibile e l'invisibile.",
         "cat": "filosofia"
-      },
-      {
-        "text": "Osserva la Doggerland ora sommersa: 10.000 anni fa questa pianura nel Mare del Nord collegava Inghilterra e Danimarca, fertile e popolata",
-        "cat": "geologia"
-      },
-      {
-        "text": "Entra a Chauvet-Pont-d'Arc: le pitture rupestri di 36.000 anni fa mostrano leoni in movimento con prospettiva e maestria paragonabili a Picasso",
-        "cat": "arte"
       }
     ],
     "en": [
       {
-        "text": "Study Stonehenge in its Neolithic phase: megalith alignments to the summer solstice 5,000 years ago prove advanced prehistoric practical astronomy",
-        "cat": "cosmo"
+        "text": "Listen to the oldest sound played by human hands: a vulture-bone flute found in Germany dates back 40,000 years. Around the fire, music is not entertainment — it is ritual, tribal cohesion, a word spoken toward the supernatural.",
+        "cat": "musica"
       },
       {
-        "text": "Study the Acheulean handaxe from Olduvai Gorge: the same symmetric flaking technique used for one million years proves advanced human cognition",
-        "cat": "scienza"
+        "text": "Run with the hunting group: 70,000 years ago Homo sapiens is neither the fastest nor the strongest, but is the world champion of endurance. Persistence hunting — chasing prey for hours until it collapses — feeds entire tribes across African savannas.",
+        "cat": "sport"
       },
       {
-        "text": "Participate in a Paleolithic shamanic ritual: half-human half-animal figures in Lascaux suggest intentional altered states of consciousness",
+        "text": "Sit with the cave shaman: 30,000 years ago, in dark tunnels that amplify sound spectrally, prehistoric artists paint animals in trance. Cave art is not decoration — it is a doorway to the beyond, an encounter between the visible and the invisible.",
         "cat": "filosofia"
+      }
+    ]
+  },
+  "Ancient_history": {
+    "it": [
+      {
+        "text": "Ascolta la lira di Ur: nel 2600 a.C., nelle corti sumeriche di Mesopotamia, strumenti con casse d'oro e corde di budello eseguono inni agli dèi. La musica è già professione e potere — i musicisti di palazzo servono i re come i sacerdoti servono il tempio.",
+        "cat": "musica"
       },
       {
-        "text": "Observe now-submerged Doggerland: 10,000 years ago this North Sea plain connected England to Denmark, fertile and populated with wildlife",
-        "cat": "geologia"
+        "text": "Siediti sulle gradinate di Olimpia nell'estate del 776 a.C.: i primi Giochi durano un solo giorno, con una sola gara — lo stadion, 192 metri di corsa. Il vincitore Koroibos di Elide, un cuoco, diventa immortale. La tregua olimpica ferma le guerre per settimane.",
+        "cat": "sport"
       },
       {
-        "text": "Enter Chauvet-Pont-d'Arc: 36,000-year-old cave paintings show lions in motion with perspective and mastery comparable to Picasso",
-        "cat": "arte"
+        "text": "Osserva i sacerdoti babilonesi sul loro ziggurat notturno: con tavolette d'argilla e calcoli cuneiformi predicono eclissi con settimane d'anticipo. Il ciclo di Saros — 18 anni e 11 giorni — è la prima legge astronomica della storia, scoperta senza telescopi.",
+        "cat": "cosmo"
+      }
+    ],
+    "en": [
+      {
+        "text": "Listen to the lyre of Ur: in 2600 BCE, in Sumerian courts of Mesopotamia, instruments with golden resonance boxes and animal-gut strings perform hymns to the gods. Music is already a profession and power — palace musicians serve kings as priests serve the temple.",
+        "cat": "musica"
+      },
+      {
+        "text": "Take your seat in the stands at Olympia in the summer of 776 BCE: the first Games last just one day, with a single event — the stadion, 192 meters of foot race. The winner Koroibos of Elis, a cook, becomes immortal. The Olympic truce halts wars for weeks.",
+        "cat": "sport"
+      },
+      {
+        "text": "Watch the Babylonian priests on their nighttime ziggurat: with clay tablets and cuneiform calculations they predict eclipses weeks in advance. The Saros cycle — 18 years and 11 days — is the first astronomical law in history, discovered without telescopes.",
+        "cat": "cosmo"
       }
     ]
   }
