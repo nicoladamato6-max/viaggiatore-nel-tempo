@@ -302,7 +302,7 @@
     top: auto;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 60px; /* sopra il mobile nav bar (60px) */
     width: 100%;
     height: 68vh;
     border-right: none;
@@ -316,7 +316,7 @@
     z-index: 95;
   }
 
-  /* Collapsed: slide down leaving only the handle bar visible */
+  /* Collapsed: lascia visibile solo l'handle bar (48px) sopra il nav */
   .era-guide--sheet-closed {
     transform: translateY(calc(100% - 48px));
   }

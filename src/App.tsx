@@ -752,6 +752,7 @@ function AppInner() {
               onSelectEvent={handleEventClick}
             />
           )}
+          {/* EraGuide mobile — montato fuori da globeAndControls per stare sopra il bottom nav */}
           <button
             className={`territory-toggle-btn${showTerritories ? ' active' : ''}`}
             onClick={() => setShowTerritories(v => !v)}
@@ -956,6 +957,23 @@ function AppInner() {
                 />
               </div>
             </div>
+          )}
+
+          {/* EraGuide — bottom sheet sopra il nav bar */}
+          {eraGuide && eraGuideOpen && (
+            <EraGuide
+              data={eraGuide}
+              events={ALL_SEARCHABLE}
+              onClose={() => { setEraGuide(null); setEraGuideOpen(false); }}
+              onNavigate={({ year, flyTo: ft }) => {
+                if (year !== undefined) {
+                  setSliderValue(yearToSlider(year));
+                  setOverrideYear(year);
+                }
+                if (ft) setFlyTo(ft);
+              }}
+              onSelectEvent={(ev) => { handleEventClick(ev); setMobileTab('globe'); }}
+            />
           )}
 
           {/* Bottom nav */}
