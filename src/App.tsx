@@ -930,7 +930,7 @@ function AppInner() {
           {selectedEvent && (
             <div className="mobile-bottom-sheet">
               <div className="mobile-bottom-sheet__grip" />
-              <InfoPanel event={selectedEvent} locale={locale} onClose={() => setSelectedEvent(null)} />
+              <InfoPanel event={selectedEvent} locale={locale} onClose={() => setSelectedEvent(null)} events={ALL_SEARCHABLE} onSelectEvent={handleEventClick} />
             </div>
           )}
 
