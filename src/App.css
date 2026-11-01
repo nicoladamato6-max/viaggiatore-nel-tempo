@@ -816,6 +816,28 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #1e2d40 transparent;
 }
+.ip-chat__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0 8px;
+}
+.ip-chat__autosuggest {
+  background: rgba(0, 200, 255, 0.08);
+  border: 1px solid rgba(0, 200, 255, 0.25);
+  color: rgba(0, 220, 255, 0.85);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.ip-chat__autosuggest:hover:not(:disabled) {
+  background: rgba(0, 200, 255, 0.15);
+  border-color: rgba(0, 200, 255, 0.5);
+}
+.ip-chat__autosuggest:disabled { opacity: 0.4; cursor: default; }
 .ip-chat__hint {
   font-size: 0.72rem;
   color: rgba(168, 200, 255, 0.35);
