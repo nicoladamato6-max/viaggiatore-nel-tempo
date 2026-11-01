@@ -67,8 +67,7 @@ const PLANET_TEXTURES: Record<string, string> = {
   marte:    '/textures/mars.jpg',
   giove:    '/textures/jupiter.jpg',
   saturno:  '/textures/saturn.jpg',
-  urano:    '/textures/uranus.jpg',
-  nettuno:  '/textures/neptune.jpg',
+  // urano e nettuno: usano procedural (file locale troppo piccolo/piatto)
 };
 const DWARF_TEXTURES: Record<string, string> = {
   cerere: '/textures/ceres.jpg',
@@ -135,16 +134,71 @@ const PROC_TEX_FNS: Record<string, () => THREE.CanvasTexture> = {
       ctx.fillRect(0, y, 512, 6 + Math.random() * 8);
     }
   }),
-  urano: () => _makeProc(256, 128, ctx => {
-    const g = ctx.createLinearGradient(0, 0, 256, 0);
-    g.addColorStop(0, '#5accd8'); g.addColorStop(1, '#8aeaf2');
-    ctx.fillStyle = g; ctx.fillRect(0, 0, 256, 128);
+  // Urano — quasi privo di caratteristiche ma con sottili bande di metano (immagini Voyager 2 filtrate UV)
+  urano: () => _makeProc(512, 256, ctx => {
+    // Base: azzurro-verde del metano (~83% H2, ~15% He, ~2% CH4)
+    const base = ctx.createLinearGradient(0, 0, 0, 256);
+    base.addColorStop(0,    '#2ab8cc');   // polo (leggermente più verde)
+    base.addColorStop(0.35, '#5accd8');   // latitudine media
+    base.addColorStop(0.65, '#5accd8');
+    base.addColorStop(1,    '#2ab8cc');
+    ctx.fillStyle = base; ctx.fillRect(0, 0, 512, 256);
+    // Sottile variazione equatoriale (bande Voyager 2 enhanced)
+    for (let i = 0; i < 6; i++) {
+      const y = 60 + i * 22;
+      ctx.fillStyle = `rgba(80,210,230,${0.06 + i * 0.01})`;
+      ctx.fillRect(0, y, 512, 8 + i * 2);
+    }
+    // Variazione di luminosità polare leggera (limb darkening)
+    const pole1 = ctx.createLinearGradient(0, 0, 0, 50);
+    pole1.addColorStop(0, 'rgba(20,170,180,0.30)'); pole1.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = pole1; ctx.fillRect(0, 0, 512, 256);
+    const pole2 = ctx.createLinearGradient(0, 256, 0, 206);
+    pole2.addColorStop(0, 'rgba(20,170,180,0.25)'); pole2.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = pole2; ctx.fillRect(0, 0, 512, 256);
+    // Minima punteggiatura di cirri di metano (visibili in infrarosso)
+    for (let i = 0; i < 18; i++) {
+      const x = Math.random() * 512, y = 55 + Math.random() * 145, w = 20 + Math.random() * 60;
+      ctx.fillStyle = `rgba(180,240,250,${0.04 + Math.random() * 0.06})`;
+      ctx.fillRect(x, y, w, 3 + Math.random() * 4);
+    }
   }),
-  nettuno: () => _makeProc(256, 128, ctx => {
-    const g = ctx.createLinearGradient(0, 0, 0, 128);
-    g.addColorStop(0, '#1a3ae0'); g.addColorStop(0.5, '#2050c8'); g.addColorStop(1, '#1020a8');
-    ctx.fillStyle = g; ctx.fillRect(0, 0, 256, 128);
-    ctx.fillStyle = 'rgba(210,220,255,0.35)'; ctx.fillRect(0, 46, 256, 10);
+  // Nettuno — blu intenso con Grande Macchia Scura (GDS) e nuvole di metano (Voyager 2, 1989)
+  nettuno: () => _makeProc(512, 256, ctx => {
+    const base = ctx.createLinearGradient(0, 0, 0, 256);
+    base.addColorStop(0,    '#102ec8');  // polo
+    base.addColorStop(0.45, '#1842e0');  // banda equatoriale
+    base.addColorStop(0.55, '#1842e0');
+    base.addColorStop(1,    '#0c22b0');  // polo sud
+    ctx.fillStyle = base; ctx.fillRect(0, 0, 512, 256);
+    // Bande di nuvole brillanti (cirri di metano cristallizzato)
+    for (let i = 0; i < 5; i++) {
+      const y = 30 + i * 40;
+      ctx.fillStyle = `rgba(140,180,255,${0.12 + Math.random() * 0.10})`;
+      ctx.fillRect(0, y, 512, 5 + Math.random() * 8);
+    }
+    // Grande Macchia Scura (GDS) — anticiclone a ~20°S, osservato da Voyager 2
+    // In equirettangolare: lat -20° → y = 128 + 256*20/180 = ~156; lon ~120° → x = 512*120/360 = 170
+    const gds = ctx.createRadialGradient(170, 148, 0, 170, 148, 38);
+    gds.addColorStop(0, 'rgba(5,10,80,0.82)');
+    gds.addColorStop(0.5, 'rgba(8,15,100,0.50)');
+    gds.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = gds; ctx.beginPath(); ctx.ellipse(170, 148, 38, 22, 0, 0, Math.PI * 2); ctx.fill();
+    // Scooter — piccola nuvola bianca brillante (caratteristica distintiva Nettuno)
+    const scooter = ctx.createRadialGradient(260, 135, 0, 260, 135, 14);
+    scooter.addColorStop(0, 'rgba(220,235,255,0.85)'); scooter.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = scooter; ctx.beginPath(); ctx.ellipse(260, 135, 14, 8, -0.3, 0, Math.PI * 2); ctx.fill();
+    // GDS-2 (seconda macchia più piccola)
+    const gds2 = ctx.createRadialGradient(380, 170, 0, 380, 170, 18);
+    gds2.addColorStop(0, 'rgba(5,10,90,0.65)'); gds2.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = gds2; ctx.beginPath(); ctx.ellipse(380, 170, 18, 11, 0.2, 0, Math.PI * 2); ctx.fill();
+    // Oscuramento ai limbi polari
+    const lp = ctx.createLinearGradient(0, 0, 0, 45);
+    lp.addColorStop(0, 'rgba(5,8,60,0.45)'); lp.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = lp; ctx.fillRect(0, 0, 512, 256);
+    const lp2 = ctx.createLinearGradient(0, 256, 0, 211);
+    lp2.addColorStop(0, 'rgba(5,8,60,0.38)'); lp2.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = lp2; ctx.fillRect(0, 0, 512, 256);
   }),
   plutone: () => _makeProc(512, 256, ctx => {
     // Base: rosso-marrone scuro (tholins)
@@ -286,6 +340,156 @@ const PROC_TEX_FNS: Record<string, () => THREE.CanvasTexture> = {
     limb.addColorStop(0, 'rgba(0,0,0,0)');
     limb.addColorStop(0.7, 'rgba(0,0,0,0.1)');
     limb.addColorStop(1, 'rgba(0,0,0,0.78)');
+    ctx.fillStyle = limb; ctx.fillRect(0, 0, 512, 256);
+  }),
+
+  // ── Stelle vicine — fotosfera basata sulla classe spettrale ──────────────
+
+  // Rigel — B8Ia, supergigante blu-bianca, ~12.000 K. Fotosfera quasi uniforme
+  // con sottile granulazione ad altissima frequenza e limb darkening leggero
+  'star-rigel': () => _makeProc(512, 256, ctx => {
+    ctx.fillStyle = '#b8c8ff'; ctx.fillRect(0, 0, 512, 256);
+    let sr = 0xCAFEBABE >>> 0;
+    const rng = () => { sr = Math.imul(sr ^ (sr >>> 16), 0x45d9f3b) >>> 0; return sr / 4294967296; };
+    for (let i = 0; i < 600; i++) {
+      const x = rng() * 512, y = rng() * 256, r = 2 + rng() * 8;
+      const b = rng();
+      const gr = ctx.createRadialGradient(x, y, 0, x, y, r);
+      gr.addColorStop(0, `rgba(240,245,255,${0.08 + b * 0.10})`);
+      gr.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    }
+    // Leggero limb darkening
+    const limb = ctx.createRadialGradient(256, 128, 80, 256, 128, 270);
+    limb.addColorStop(0, 'rgba(0,0,0,0)'); limb.addColorStop(1, 'rgba(30,40,120,0.55)');
+    ctx.fillStyle = limb; ctx.fillRect(0, 0, 512, 256);
+  }),
+
+  // Sirio — A1V, stella bianca-azzurra, ~9.940 K. Fotosfera brillante con
+  // granulazione fine e macchie di calore subtropicali (tipo chemically peculiar)
+  'star-sirius': () => _makeProc(512, 256, ctx => {
+    ctx.fillStyle = '#d8e8ff'; ctx.fillRect(0, 0, 512, 256);
+    let sr = 0xDEAD1234 >>> 0;
+    const rng = () => { sr = Math.imul(sr ^ (sr >>> 16), 0x45d9f3b) >>> 0; return sr / 4294967296; };
+    for (let i = 0; i < 500; i++) {
+      const x = rng() * 512, y = rng() * 256, r = 3 + rng() * 10;
+      const gr = ctx.createRadialGradient(x, y, 0, x, y, r);
+      gr.addColorStop(0, `rgba(255,255,255,${0.12 + rng() * 0.12})`);
+      gr.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    }
+    const limb = ctx.createRadialGradient(256, 128, 70, 256, 128, 268);
+    limb.addColorStop(0, 'rgba(0,0,0,0)'); limb.addColorStop(1, 'rgba(20,30,100,0.50)');
+    ctx.fillStyle = limb; ctx.fillRect(0, 0, 512, 256);
+  }),
+
+  // Vega — A0Va, ~9.600 K, rotazione rapidissima (87% della velocità critica)
+  // → forma oblatata, polo più caldo e brillante, equatore più scuro (gravity darkening)
+  'star-vega': () => _makeProc(512, 256, ctx => {
+    // Gravity darkening: gradiente dall'equatore (più scuro) al polo (più caldo)
+    const grav = ctx.createLinearGradient(0, 0, 0, 256);
+    grav.addColorStop(0,    '#ffffff');   // polo nord — caldo, bianco puro
+    grav.addColorStop(0.35, '#e8f0ff');
+    grav.addColorStop(0.50, '#c8d8f8');   // equatore — più freddo, più blu
+    grav.addColorStop(0.65, '#e8f0ff');
+    grav.addColorStop(1,    '#ffffff');   // polo sud
+    ctx.fillStyle = grav; ctx.fillRect(0, 0, 512, 256);
+    let sr = 0xABCD5678 >>> 0;
+    const rng = () => { sr = Math.imul(sr ^ (sr >>> 16), 0x45d9f3b) >>> 0; return sr / 4294967296; };
+    for (let i = 0; i < 400; i++) {
+      const x = rng() * 512, y = rng() * 256, r = 2 + rng() * 7;
+      const gr = ctx.createRadialGradient(x, y, 0, x, y, r);
+      gr.addColorStop(0, `rgba(255,255,255,${0.10 + rng() * 0.10})`);
+      gr.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    }
+    const limb = ctx.createRadialGradient(256, 128, 75, 256, 128, 268);
+    limb.addColorStop(0, 'rgba(0,0,0,0)'); limb.addColorStop(1, 'rgba(15,25,90,0.45)');
+    ctx.fillStyle = limb; ctx.fillRect(0, 0, 512, 256);
+  }),
+
+  // Alpha Centauri — G2V (A è identica al Sole, B è K1V arancione)
+  // Texture simil-solare: granulazione, macchie, faculae
+  'star-alpha-centauri': () => _makeProc(512, 256, ctx => {
+    const base = ctx.createLinearGradient(0, 0, 512, 256);
+    base.addColorStop(0, '#ffe8a0'); base.addColorStop(0.5, '#ffcc00'); base.addColorStop(1, '#ff9a00');
+    ctx.fillStyle = base; ctx.fillRect(0, 0, 512, 256);
+    let sr = 0x11223344 >>> 0;
+    const rng = () => { sr = Math.imul(sr ^ (sr >>> 16), 0x45d9f3b) >>> 0; return sr / 4294967296; };
+    for (let i = 0; i < 550; i++) {
+      const x = rng() * 512, y = rng() * 256, r = 4 + rng() * 14;
+      const b = rng();
+      const gr = ctx.createRadialGradient(x, y, 0, x, y, r);
+      gr.addColorStop(0, b > 0.55
+        ? `rgba(255,255,${Math.floor(b * 150)},0.45)` : `rgba(200,${Math.floor(40 + b * 60)},0,0.32)`);
+      gr.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    }
+    // 2 piccole macchie stellari
+    for (let g = 0; g < 2; g++) {
+      const gx = (0.2 + rng() * 0.6) * 512, gy = (0.25 + rng() * 0.5) * 256;
+      const r = 8 + rng() * 12;
+      const pen = ctx.createRadialGradient(gx, gy, r * 0.25, gx, gy, r * 2.2);
+      pen.addColorStop(0, 'rgba(60,15,0,0.72)'); pen.addColorStop(1, 'rgba(160,55,0,0)');
+      ctx.fillStyle = pen; ctx.beginPath(); ctx.arc(gx, gy, r * 2.2, 0, Math.PI * 2); ctx.fill();
+    }
+    const limb = ctx.createRadialGradient(256, 128, 65, 256, 128, 265);
+    limb.addColorStop(0, 'rgba(0,0,0,0)'); limb.addColorStop(1, 'rgba(30,8,0,0.62)');
+    ctx.fillStyle = limb; ctx.fillRect(0, 0, 512, 256);
+  }),
+
+  // Proxima Centauri — M5.5Ve, nana rossa attiva, ~3.050 K
+  // Superficie scura rosso-arancio con macchie stellari enormi (fino al 30% del disco)
+  // e brillamenti frequenti (flare star più nota del vicinato solare)
+  'star-proxima': () => _makeProc(512, 256, ctx => {
+    ctx.fillStyle = '#8a1800'; ctx.fillRect(0, 0, 512, 256);
+    let sr = 0xFEDCBA09 >>> 0;
+    const rng = () => { sr = Math.imul(sr ^ (sr >>> 16), 0x45d9f3b) >>> 0; return sr / 4294967296; };
+    // Celle convettive grandi — nelle nane M la convezione è molto più evidente
+    for (let i = 0; i < 25; i++) {
+      const x = rng() * 512, y = rng() * 256, r = 20 + rng() * 50;
+      const gr = ctx.createRadialGradient(x, y, 0, x, y, r);
+      gr.addColorStop(0, `rgba(200,60,10,${0.18 + rng() * 0.22})`);
+      gr.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    }
+    // Macchie stellari enormi (molto più grandi di quelle solari)
+    for (let i = 0; i < 4; i++) {
+      const x = rng() * 380 + 66, y = rng() * 160 + 48, r = 22 + rng() * 35;
+      const sp = ctx.createRadialGradient(x, y, r * 0.2, x, y, r * 1.8);
+      sp.addColorStop(0, 'rgba(15,2,0,0.88)'); sp.addColorStop(1, 'rgba(80,8,0,0)');
+      ctx.fillStyle = sp; ctx.beginPath(); ctx.arc(x, y, r * 1.8, 0, Math.PI * 2); ctx.fill();
+    }
+    // Zona brillante equatoriale (flare region attiva)
+    ctx.fillStyle = 'rgba(255,90,20,0.12)'; ctx.fillRect(0, 96, 512, 64);
+    // Oscuramento al limbo molto pronunciato nelle nane M
+    const limb = ctx.createRadialGradient(256, 128, 40, 256, 128, 265);
+    limb.addColorStop(0, 'rgba(0,0,0,0)'); limb.addColorStop(0.65, 'rgba(0,0,0,0.05)');
+    limb.addColorStop(1, 'rgba(0,0,0,0.88)');
+    ctx.fillStyle = limb; ctx.fillRect(0, 0, 512, 256);
+  }),
+
+  // Stella di Barnard — M4Ve, nana rossa, ~3.200 K, moto proprio altissimo
+  // Simile a Proxima ma leggermente più calda (più arancio che rosso scuro)
+  'star-barnard': () => _makeProc(512, 256, ctx => {
+    ctx.fillStyle = '#a02800'; ctx.fillRect(0, 0, 512, 256);
+    let sr = 0x13579BDF >>> 0;
+    const rng = () => { sr = Math.imul(sr ^ (sr >>> 16), 0x45d9f3b) >>> 0; return sr / 4294967296; };
+    for (let i = 0; i < 20; i++) {
+      const x = rng() * 512, y = rng() * 256, r = 18 + rng() * 42;
+      const gr = ctx.createRadialGradient(x, y, 0, x, y, r);
+      gr.addColorStop(0, `rgba(220,80,20,${0.16 + rng() * 0.18})`);
+      gr.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+    }
+    for (let i = 0; i < 3; i++) {
+      const x = rng() * 380 + 66, y = rng() * 160 + 48, r = 18 + rng() * 28;
+      const sp = ctx.createRadialGradient(x, y, r * 0.2, x, y, r * 1.7);
+      sp.addColorStop(0, 'rgba(18,3,0,0.82)'); sp.addColorStop(1, 'rgba(90,12,0,0)');
+      ctx.fillStyle = sp; ctx.beginPath(); ctx.arc(x, y, r * 1.7, 0, Math.PI * 2); ctx.fill();
+    }
+    const limb = ctx.createRadialGradient(256, 128, 45, 256, 128, 265);
+    limb.addColorStop(0, 'rgba(0,0,0,0)'); limb.addColorStop(1, 'rgba(0,0,0,0.82)');
     ctx.fillStyle = limb; ctx.fillRect(0, 0, 512, 256);
   }),
 };
