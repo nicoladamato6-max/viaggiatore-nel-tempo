@@ -352,8 +352,8 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
         </div>
       </div>
 
-      {/* dati evento + tab Wiki/Chat */}
-      <div className="info-panel__scroll">
+      {/* meta + tabs: scroll solo in tab Wikipedia; in chat è flex-shrink:0 */}
+      <div className={`info-panel__scroll${activeTab === 'chat' ? ' info-panel__scroll--chat' : ''}`}>
 
         {/* meta */}
         <div className="info-panel__meta">
@@ -404,74 +404,74 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
           </>
         )}
 
-        {/* ── Chat tab ── */}
-        {activeTab === 'chat' && (
-          <div className="ip-chat">
-            <div className="ip-chat__messages">
-              {chatMsgs.length === 0 && (
-                <p className="ip-chat__hint">
-                  {locale === 'it'
-                    ? `Fai una domanda su "${event.title}" — curiosità, contesto, confronti con altre epoche…`
-                    : `Ask anything about "${event.title}" — curiosities, context, comparisons with other eras…`}
-                </p>
-              )}
-              {chatMsgs.map((msg, i) => (
-                <div key={i} className={`ip-chat__msg ip-chat__msg--${msg.role}`}>
-                  <div className="ip-chat__bubble">{msg.content}</div>
-                  {msg.role === 'assistant' && msg.suggestions && msg.suggestions.length > 0 && (
-                    <div className="ip-chat__suggestions">
-                      <span className="ip-chat__suggestions-label">
-                        {locale === 'it' ? '🔗 Naviga le connessioni:' : '🔗 Navigate connections:'}
-                      </span>
-                      <div className="ip-chat__chips">
-                        {msg.suggestions.map((s, si) => {
-                          const matched = matchSuggestion(s);
-                          return matched ? (
-                            <button
-                              key={si}
-                              className="ip-chat__chip ip-chat__chip--link"
-                              onClick={() => { onSelectEvent?.(matched); setActiveTab('info'); }}
-                              title={`${matched.title} — ${formatYear(matched.year)}`}
-                            >{s}</button>
-                          ) : (
-                            <span key={si} className="ip-chat__chip">{s}</span>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
-              {chatBusy && (
-                <div className="ip-chat__msg ip-chat__msg--assistant">
-                  <div className="ip-chat__bubble ip-chat__bubble--loading">
-                    <span className="ip-chat__dot" /><span className="ip-chat__dot" /><span className="ip-chat__dot" />
-                  </div>
-                </div>
-              )}
-              <div ref={chatEndRef} />
-            </div>
-            <div className="ip-chat__input-row">
-              <input
-                className="ip-chat__input"
-                type="text"
-                value={chatInput}
-                onChange={e => setChatInput(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && handleChatSend()}
-                placeholder={locale === 'it' ? 'Scrivi una domanda…' : 'Ask a question…'}
-                disabled={chatBusy}
-              />
-              <button
-                className="ip-chat__send"
-                onClick={handleChatSend}
-                disabled={chatBusy || !chatInput.trim()}
-                title={locale === 'it' ? 'Invia' : 'Send'}
-              >➤</button>
-            </div>
-          </div>
-        )}
-
       </div>{/* fine info-panel__scroll */}
+
+      {/* ── Chat tab — FUORI dallo scroll per mantenere input sempre visibile ── */}
+      {activeTab === 'chat' && (
+        <div className="ip-chat">
+          <div className="ip-chat__messages">
+            {chatMsgs.length === 0 && (
+              <p className="ip-chat__hint">
+                {locale === 'it'
+                  ? `Fai una domanda su "${event.title}" — curiosità, contesto, confronti con altre epoche…`
+                  : `Ask anything about "${event.title}" — curiosities, context, comparisons with other eras…`}
+              </p>
+            )}
+            {chatMsgs.map((msg, i) => (
+              <div key={i} className={`ip-chat__msg ip-chat__msg--${msg.role}`}>
+                <div className="ip-chat__bubble">{msg.content}</div>
+                {msg.role === 'assistant' && msg.suggestions && msg.suggestions.length > 0 && (
+                  <div className="ip-chat__suggestions">
+                    <span className="ip-chat__suggestions-label">
+                      {locale === 'it' ? '🔗 Naviga le connessioni:' : '🔗 Navigate connections:'}
+                    </span>
+                    <div className="ip-chat__chips">
+                      {msg.suggestions.map((s, si) => {
+                        const matched = matchSuggestion(s);
+                        return matched ? (
+                          <button
+                            key={si}
+                            className="ip-chat__chip ip-chat__chip--link"
+                            onClick={() => { onSelectEvent?.(matched); setActiveTab('info'); }}
+                            title={`${matched.title} — ${formatYear(matched.year)}`}
+                          >{s}</button>
+                        ) : (
+                          <span key={si} className="ip-chat__chip">{s}</span>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+            {chatBusy && (
+              <div className="ip-chat__msg ip-chat__msg--assistant">
+                <div className="ip-chat__bubble ip-chat__bubble--loading">
+                  <span className="ip-chat__dot" /><span className="ip-chat__dot" /><span className="ip-chat__dot" />
+                </div>
+              </div>
+            )}
+            <div ref={chatEndRef} />
+          </div>
+          <div className="ip-chat__input-row">
+            <input
+              className="ip-chat__input"
+              type="text"
+              value={chatInput}
+              onChange={e => setChatInput(e.target.value)}
+              onKeyDown={e => e.key === 'Enter' && handleChatSend()}
+              placeholder={locale === 'it' ? 'Scrivi una domanda…' : 'Ask a question…'}
+              disabled={chatBusy}
+            />
+            <button
+              className="ip-chat__send"
+              onClick={handleChatSend}
+              disabled={chatBusy || !chatInput.trim()}
+              title={locale === 'it' ? 'Invia' : 'Send'}
+            >➤</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -793,12 +793,18 @@ body {
   border-bottom-color: var(--clr-neon-cyan);
 }
 
+/* Quando la tab chat è attiva, lo scroll si riduce a flex-shrink:0 (solo meta + tabs) */
+.info-panel__scroll--chat {
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
 /* ── Chat panel (ip-chat) ── */
 .ip-chat {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 300px;
+  flex: 1;
+  min-height: 0;
 }
 .ip-chat__messages {
   flex: 1;

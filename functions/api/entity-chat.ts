@@ -5,6 +5,7 @@
 interface ChatEnv {
   AI?: { run: (model: string, opts: object) => Promise<{ response?: string; generated_text?: string }> };
   ANTHROPIC_API_KEY?: string;
+  GROQ_API_KEY?: string;
   AI_MODEL?: string;
 }
 
@@ -109,6 +110,33 @@ async function callCloudflareAI(
   return result.response ?? result.generated_text ?? '';
 }
 
+// Groq — OpenAI-compatible, free tier, molto affidabile
+async function callGroq(
+  env: ChatEnv, systemPrompt: string, messages: ChatMessage[], question: string
+): Promise<string> {
+  if (!env.GROQ_API_KEY) throw new Error('GROQ_API_KEY not set');
+  const groqMessages = [
+    { role: 'system', content: systemPrompt },
+    ...messages.slice(-6).map(m => ({ role: m.role, content: m.content })),
+    { role: 'user', content: question },
+  ];
+  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${env.GROQ_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model:      'llama-3.3-70b-versatile',
+      max_tokens: 800,
+      messages:   groqMessages,
+    }),
+  });
+  if (!res.ok) throw new Error(`Groq ${res.status}: ${await res.text()}`);
+  const data = await res.json() as { choices: Array<{ message: { content: string } }> };
+  return data.choices[0].message.content;
+}
+
 async function callClaudeHaiku(
   env: ChatEnv, systemPrompt: string, messages: ChatMessage[], question: string
 ): Promise<string> {
@@ -152,13 +180,19 @@ export const onRequestPost = async (context: { request: Request; env: ChatEnv })
   }
 
   const systemPrompt = buildSystemPrompt(entity, locale);
-  const model        = context.env.AI_MODEL ?? 'cloudflare-ai';
+  // Default: groq (affidabile, free, OpenAI-compatible)
+  // Override con AI_MODEL env var: 'groq' | 'claude-haiku' | 'cloudflare-ai'
+  const model        = context.env.AI_MODEL ?? 'groq';
 
   let raw: string;
   try {
-    raw = model === 'claude-haiku'
-      ? await callClaudeHaiku(context.env, systemPrompt, history, question)
-      : await callCloudflareAI(context.env, systemPrompt, history, question);
+    if (model === 'claude-haiku') {
+      raw = await callClaudeHaiku(context.env, systemPrompt, history, question);
+    } else if (model === 'cloudflare-ai') {
+      raw = await callCloudflareAI(context.env, systemPrompt, history, question);
+    } else {
+      raw = await callGroq(context.env, systemPrompt, history, question);
+    }
   } catch (err) {
     return jsonRes({ error: `AI call failed: ${err instanceof Error ? err.message : String(err)}` }, 502);
   }
