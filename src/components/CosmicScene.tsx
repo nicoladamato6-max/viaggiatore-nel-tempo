@@ -403,12 +403,12 @@ function EllipGalaxy({ pos, rx, ry, rz, rot, color, n, label, galaxyId, show = t
           <meshBasicMaterial transparent opacity={0} depthWrite={false} />
         </mesh>
       )}
-      <Html center position={[0, labelY, 0]}
-        style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none',
-          ...(handleLabelClick ? { pointerEvents: 'auto', cursor: 'pointer', zIndex: 10 } : {}) }}
-        onClick={handleLabelClick}
-      >
-        {label}
+      <Html center position={[0, labelY, 0]}>
+        <div style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none',
+          ...(handleLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
+          onClick={handleLabelClick}>
+          {label}
+        </div>
       </Html>
     </group>
   );
@@ -501,12 +501,12 @@ function DistantGalaxies({ show = true, onLabelClick }: { show?: boolean; onLabe
             <meshBasicMaterial transparent opacity={0} depthWrite={false} />
           </mesh>
         )}
-        <Html center position={[0, 200, 0]}
-          style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none',
-            ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer', zIndex: 10 } : {}) }}
-          onClick={onLabelClick ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick('galaxy-andromeda'); } : undefined}
-        >
-          Galassia di Andromeda (M31)
+        <Html center position={[0, 200, 0]}>
+          <div style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none',
+            ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
+            onClick={onLabelClick ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick('galaxy-andromeda'); } : undefined}>
+            Galassia di Andromeda (M31)
+          </div>
         </Html>
       </group>
 
@@ -870,9 +870,11 @@ function SunSphere({ onClick, flyTo, show = true }: { onClick: () => void; flyTo
           metalness={0}
         />
       </mesh>
-      <Html center position={[0, SUN_VR * 1.6, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
-        onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...SUN_POS), SUN_VR); }}>
-        ☀️ Sole
+      <Html center position={[0, SUN_VR * 1.6, 0]}>
+        <div style={{ ...LABEL_STYLE, display: show ? undefined : 'none', cursor: 'pointer', pointerEvents: 'auto' }}
+          onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...SUN_POS), SUN_VR); onClick(); }}>
+          ☀️ Sole
+        </div>
       </Html>
     </group>
   );
@@ -887,9 +889,11 @@ function EarthSphere({ onClick, flyTo, show = true }: { onClick: () => void; fly
         <sphereGeometry args={[EARTH_VR, 32, 32]} />
         <meshStandardMaterial color="#1e5fa8" roughness={0.7} metalness={0} />
       </mesh>
-      <Html center position={[0, EARTH_VR * 1.8, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
-        onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(0, 0, 0), EARTH_VR); }}>
-        🌍 Terra
+      <Html center position={[0, EARTH_VR * 1.8, 0]}>
+        <div style={{ ...LABEL_STYLE, display: show ? undefined : 'none', cursor: 'pointer', pointerEvents: 'auto' }}
+          onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(0, 0, 0), EARTH_VR); onClick(); }}>
+          🌍 Terra
+        </div>
       </Html>
     </group>
   );
@@ -908,9 +912,11 @@ function MoonSphere({ onClick, flyTo, show = true }: { onClick: () => void; flyT
         <sphereGeometry args={[MOON_VR, 24, 24]} />
         <meshStandardMaterial color="#b8b8b8" roughness={1} metalness={0} />
       </mesh>
-      <Html center position={[0, MOON_VR * 2, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
-        onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...pos), MOON_VR); }}>
-        🌕 Luna
+      <Html center position={[0, MOON_VR * 2, 0]}>
+        <div style={{ ...LABEL_STYLE, display: show ? undefined : 'none', cursor: 'pointer', pointerEvents: 'auto' }}
+          onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...pos), MOON_VR); onClick(); }}>
+          🌕 Luna
+        </div>
       </Html>
     </group>
   );
@@ -952,9 +958,11 @@ function PlanetSphere({ planet, onClick, flyTo, show = true }: { planet: typeof 
           <meshStandardMaterial color="#c8b570" transparent opacity={0.65} roughness={1} />
         </mesh>
       )}
-      <Html center position={[0, vr * 1.8, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
-        onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...pos), vr); }}>
-        {PLANET_ICONS[planet.id] ?? '🪐'} {planet.name}
+      <Html center position={[0, vr * 1.8, 0]}>
+        <div style={{ ...LABEL_STYLE, display: show ? undefined : 'none', cursor: 'pointer', pointerEvents: 'auto' }}
+          onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...pos), vr); onClick(); }}>
+          {PLANET_ICONS[planet.id] ?? '🪐'} {planet.name}
+        </div>
       </Html>
     </group>
   );
@@ -1050,11 +1058,11 @@ function NearbyStar({ id, name, pos, color, show = true, onLabelClick }: {
         <sphereGeometry args={[0.8, 16, 16]} />
         <meshBasicMaterial color={color} />
       </mesh>
-      <Html center position={[0, 1.2, 0]}
-        style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none', ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
-        onClick={handleClick}
-      >
-        {name}
+      <Html center position={[0, 1.2, 0]}>
+        <div style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none', ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
+          onClick={handleClick}>
+          {name}
+        </div>
       </Html>
     </group>
   );
@@ -1070,7 +1078,7 @@ const DWARF_PLANETS: DwarfData[] = [
   { id: 'haumea',   name: 'Haumea',   color: '#e0ddd8', radiusM:   620_000, pos: [43.1,  0.6, -12]  },
 ];
 
-function DwarfPlanetSphere({ dwarf, flyTo, show = true }: { dwarf: DwarfData; flyTo: FlyToFn; show?: boolean }) {
+function DwarfPlanetSphere({ dwarf, flyTo, show = true, onBodyLabelClick }: { dwarf: DwarfData; flyTo: FlyToFn; show?: boolean; onBodyLabelClick?: (id: string) => void }) {
   const meshRef = useRef<THREE.Mesh | null>(null);
   const vr = Math.max(0.0004, dwarf.radiusM * M_TO_AU * 20);
   useEffect(() => {
@@ -1091,9 +1099,11 @@ function DwarfPlanetSphere({ dwarf, flyTo, show = true }: { dwarf: DwarfData; fl
         <sphereGeometry args={[vr, 18, 18]} />
         <meshStandardMaterial color={dwarf.color} roughness={0.9} metalness={0.02} />
       </mesh>
-      <Html center position={[0, vr * 2, 0]} style={{ ...LABEL_STYLE, display: show ? undefined : 'none' }}
-        onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...dwarf.pos), vr); }}>
-        ⚫ {dwarf.name}
+      <Html center position={[0, vr * 2, 0]}>
+        <div style={{ ...LABEL_STYLE, display: show ? undefined : 'none', cursor: 'pointer', pointerEvents: 'auto' }}
+          onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...dwarf.pos), vr); if (onBodyLabelClick) onBodyLabelClick('dwarf-' + dwarf.id); }}>
+          ⚫ {dwarf.name}
+        </div>
       </Html>
     </group>
   );
@@ -1458,7 +1468,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         {PLANETS.map(p => (
           <PlanetSphere key={p.id} planet={p} onClick={() => onEventClick(toPlanetCard(p))} flyTo={flyToBody} show={currentYear >= -4_600_000_000} />
         ))}
-        {DWARF_PLANETS.map(d => <DwarfPlanetSphere key={d.id} dwarf={d} flyTo={flyToBody} show={currentYear >= -4_600_000_000} />)}
+        {DWARF_PLANETS.map(d => <DwarfPlanetSphere key={d.id} dwarf={d} flyTo={flyToBody} show={currentYear >= -4_600_000_000} onBodyLabelClick={onBodyLabelClick} />)}
 
         {/* Cinture: no Html, ok con mount condizionale */}
         {currentYear >= -4_600_000_000 && <AsteroidBelt />}
