@@ -165,9 +165,13 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
     const DIST_T1 = new Cesium.DistanceDisplayCondition(0, 10_000_000);
     const DIST_T2 = new Cesium.DistanceDisplayCondition(0, 5_000_000);
     const DIST_T3 = new Cesium.DistanceDisplayCondition(0, 2_000_000);
+    const seenCityNames = new Set<string>();
     for (const city of CITIES) {
+      if (seenCityNames.has(city.name)) continue;
+      seenCityNames.add(city.name);
       const dist = city.tier === 1 ? DIST_T1 : city.tier === 2 ? DIST_T2 : DIST_T3;
       cityDS.entities.add({
+        id: `city-${city.name}`,
         position: Cesium.Cartesian3.fromDegrees(city.lng, city.lat, 0),
         label: new Cesium.LabelGraphics({
           text: city.name,
@@ -205,6 +209,28 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
       if (typeof picked.id === 'string') {
         const event = eventsRef.current.find(e => e.id === picked.id);
         if (event) onClickRef.current(event);
+        return;
+      }
+
+      // Città (label/point con id 'city-*') — apre Wikipedia + naviga all'anno di fondazione
+      if (picked.id instanceof Cesium.Entity && typeof picked.id.id === 'string' && picked.id.id.startsWith('city-')) {
+        const cityName = picked.id.id.slice(5);
+        const cityData = CITIES.find(c => c.name === cityName);
+        if (cityData) {
+          const year = cityData.foundingYear ?? currentYearRef.current;
+          onClickRef.current({
+            id: picked.id.id,
+            title: cityData.name,
+            year,
+            category: 'storia',
+            tipo: 'luogo',
+            description: '',
+            lat: cityData.lat,
+            lng: cityData.lng,
+            wikipediaSlug: cityData.wikiSlug ?? cityData.name.replace(/\s+/g, '_'),
+            isCosmic: false,
+          });
+        }
         return;
       }
 

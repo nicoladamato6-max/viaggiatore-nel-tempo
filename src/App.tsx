@@ -708,7 +708,12 @@ function AppInner() {
                 currentYear={currentYear}
                 showTerritories={showTerritories}
                 locale={locale}
-                onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
+                onEventClick={(ev) => {
+                  // Città: handleSearchSelect porta il cursore all'anno di fondazione
+                  if (ev.id.startsWith('city-')) { handleSearchSelect(ev); }
+                  else { handleEventClick(ev); }
+                  if (isMobile) setMobileTab('globe');
+                }}
                 onAltitudeChange={(altKm) => {
                   setCesiumAltKm(altKm);
                   if (altKm > 30_000) setAltitudeCosmic(true);
