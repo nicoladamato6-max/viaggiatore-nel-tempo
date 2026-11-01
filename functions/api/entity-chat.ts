@@ -115,6 +115,7 @@ async function callGroq(
   env: ChatEnv, systemPrompt: string, messages: ChatMessage[], question: string
 ): Promise<string> {
   if (!env.GROQ_API_KEY) throw new Error('GROQ_API_KEY not set');
+  const apiKey = env.GROQ_API_KEY.trim(); // rimuove eventuali \n dalla UI Cloudflare
   const groqMessages = [
     { role: 'system', content: systemPrompt },
     ...messages.slice(-6).map(m => ({ role: m.role, content: m.content })),
@@ -124,7 +125,7 @@ async function callGroq(
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${env.GROQ_API_KEY}`,
+      'Authorization': `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
       model:      'llama-3.3-70b-versatile',
@@ -182,16 +183,24 @@ export const onRequestPost = async (context: { request: Request; env: ChatEnv })
   const systemPrompt = buildSystemPrompt(entity, locale);
   // Default: groq (affidabile, free, OpenAI-compatible)
   // Override con AI_MODEL env var: 'groq' | 'claude-haiku' | 'cloudflare-ai'
-  const model        = context.env.AI_MODEL ?? 'groq';
+  const model = context.env.AI_MODEL ?? 'groq';
 
   let raw: string;
+  let usedModel = model;
   try {
     if (model === 'claude-haiku') {
       raw = await callClaudeHaiku(context.env, systemPrompt, history, question);
     } else if (model === 'cloudflare-ai') {
       raw = await callCloudflareAI(context.env, systemPrompt, history, question);
     } else {
-      raw = await callGroq(context.env, systemPrompt, history, question);
+      // Groq con fallback su Cloudflare AI se la chiave manca o il servizio è down
+      try {
+        raw = await callGroq(context.env, systemPrompt, history, question);
+      } catch (groqErr) {
+        if (!context.env.AI) throw groqErr; // nessun fallback disponibile
+        raw = await callCloudflareAI(context.env, systemPrompt, history, question);
+        usedModel = 'cloudflare-ai';
+      }
     }
   } catch (err) {
     return jsonRes({ error: `AI call failed: ${err instanceof Error ? err.message : String(err)}` }, 502);
@@ -199,7 +208,7 @@ export const onRequestPost = async (context: { request: Request; env: ChatEnv })
 
   try {
     const parsed = extractChatJSON(raw);
-    return jsonRes({ ok: true, model, data: parsed });
+    return jsonRes({ ok: true, model: usedModel, data: parsed });
   } catch {
     return jsonRes({ error: 'AI returned invalid JSON', raw: raw.slice(0, 400) }, 502);
   }
