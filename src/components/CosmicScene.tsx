@@ -656,16 +656,16 @@ function BigBangExpansion({ year }: { year: number }) {
 }
 
 // ── Nebulae — particle clouds nelle stelle vicine ──────────────────────────
-interface NebulaData { pos: [number,number,number]; color: string; r: number; n: number; label: string }
+interface NebulaData { id: string; pos: [number,number,number]; color: string; r: number; n: number; label: string }
 const NEBULAE: NebulaData[] = [
-  { pos: [ 200,  50,  -80] as [number,number,number], color: '#ff4488', r: 28,  n: 900,  label: 'Nebulosa di Orione (M42)' },
-  { pos: [-380, 130,  200] as [number,number,number], color: '#44aaff', r: 22,  n: 650,  label: 'Nebulosa del Granchio (M1)' },
-  { pos: [ 290, -160,  330] as [number,number,number], color: '#44ffcc', r: 32,  n: 750,  label: 'Nebulosa Aquila (M16)' },
-  { pos: [-220,  -80, -260] as [number,number,number], color: '#aa44ff', r: 20,  n: 550,  label: 'Nebulosa Anello (M57)' },
-  { pos: [ 160, 220,   120] as [number,number,number], color: '#ffaa44', r: 18,  n: 480,  label: 'Nebulosa Laguna (M8)' },
+  { id: 'nebula-orione',   pos: [ 200,  50,  -80] as [number,number,number], color: '#ff4488', r: 28, n: 900, label: 'Nebulosa di Orione (M42)' },
+  { id: 'nebula-granchio', pos: [-380, 130,  200] as [number,number,number], color: '#44aaff', r: 22, n: 650, label: 'Nebulosa del Granchio (M1)' },
+  { id: 'nebula-aquila',   pos: [ 290, -160, 330] as [number,number,number], color: '#44ffcc', r: 32, n: 750, label: 'Nebulosa Aquila (M16)' },
+  { id: 'nebula-anello',   pos: [-220,  -80,-260] as [number,number,number], color: '#aa44ff', r: 20, n: 550, label: 'Nebulosa Anello (M57)' },
+  { id: 'nebula-laguna',   pos: [ 160,  220, 120] as [number,number,number], color: '#ffaa44', r: 18, n: 480, label: 'Nebulosa Laguna (M8)' },
 ];
 
-function NebulaCloud({ pos, color, r, n }: NebulaData) {
+function NebulaCloud({ id, pos, color, r, n, label, show, onLabelClick }: NebulaData & { show: boolean; onLabelClick?: (id: string) => void }) {
   const geo = useMemo(() => {
     const c = new THREE.Color(color);
     const positions = new Float32Array(n * 3);
@@ -675,7 +675,7 @@ function NebulaCloud({ pos, color, r, n }: NebulaData) {
       const phi   = Math.acos(2 * Math.random() - 1);
       const rv    = r * Math.pow(Math.random(), 0.4);
       positions[i*3]   = rv * Math.sin(phi) * Math.cos(theta);
-      positions[i*3+1] = rv * Math.sin(phi) * Math.sin(theta) * 0.55; // leggermente appiattita
+      positions[i*3+1] = rv * Math.sin(phi) * Math.sin(theta) * 0.55;
       positions[i*3+2] = rv * Math.cos(phi);
       const bright = 0.55 + Math.random() * 0.45;
       colors[i*3]   = Math.min(1, c.r * bright + 0.1);
@@ -688,16 +688,36 @@ function NebulaCloud({ pos, color, r, n }: NebulaData) {
     return g;
   }, [color, r, n]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  const handleClick = onLabelClick
+    ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick(id); }
+    : undefined;
+
   return (
-    <points geometry={geo} position={pos}>
-      <pointsMaterial size={1.5} sizeAttenuation={false} vertexColors transparent opacity={0.45} depthWrite={false} blending={THREE.AdditiveBlending} />
-    </points>
+    <group position={pos} visible={show}>
+      <points geometry={geo}>
+        <pointsMaterial size={1.5} sizeAttenuation={false} vertexColors transparent opacity={0.45} depthWrite={false} blending={THREE.AdditiveBlending} />
+      </points>
+      {/* Click target invisibile al centro della nebulosa */}
+      {onLabelClick && (
+        <mesh onClick={() => onLabelClick(id)}>
+          <sphereGeometry args={[r * 0.4, 8, 8]} />
+          <meshBasicMaterial transparent opacity={0} depthWrite={false} />
+        </mesh>
+      )}
+      <Html center position={[0, r * 1.2, 0]}>
+        <div style={{ ...GALAXY_LABEL_STYLE, ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer', color } : {}) }}
+          onClick={handleClick}>
+          {label}
+        </div>
+      </Html>
+    </group>
   );
 }
 
-function Nebulae({ show }: { show: boolean }) {
-  if (!show) return null;
-  return <>{NEBULAE.map((nb, i) => <NebulaCloud key={i} {...nb} />)}</>;
+function Nebulae({ show, onLabelClick }: { show: boolean; onLabelClick?: (id: string) => void }) {
+  return (
+    <>{NEBULAE.map(nb => <NebulaCloud key={nb.id} {...nb} show={show} onLabelClick={onLabelClick} />)}</>
+  );
 }
 
 // ── Buco nero M87 con disco di accrescimento e jet relativistico ────────────
@@ -1601,7 +1621,12 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         {currentYear >= -4_600_000_000 && <KuiperBelt />}
 
         {/* Nebulae — nubi di gas e polvere nella zona interstellare */}
-        <Nebulae show={currentYear >= -5_000_000_000} />
+        <Nebulae show={currentYear >= -5_000_000_000} onLabelClick={onBodyLabelClick ? (id) => {
+          // flyTo verso il centro della nebulosa
+          const nb = NEBULAE.find(n => n.id === id);
+          if (nb) flyToRef.current?.(new THREE.Vector3(...nb.pos), nb.r * 0.5);
+          onBodyLabelClick(id);
+        } : undefined} />
 
         {/* Buco nero M87 con disco di accrescimento */}
         <BlackHoleM87 show={currentYear >= -13_200_000_000} />

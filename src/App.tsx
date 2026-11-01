@@ -136,6 +136,25 @@ const GALAXY_SEARCHES: HistoricalEvent[] = [
     wikipediaSlug: 'Whirlpool_Galaxy' },
 ];
 
+// Nebulae — cercabili come corpi celesti (id: nebula-<slug>)
+const NEBULA_SEARCHES: HistoricalEvent[] = [
+  { id: 'nebula-orione', title: 'Nebulosa di Orione (M42)', year: -5_000_000_000, category: 'cosmo', isCosmic: true,
+    description: 'La nebulosa più famosa e luminosa del cielo notturno, a 1.344 anni luce. Incubatrice stellare con oltre 700 stelle in formazione. Visibile a occhio nudo come la "spada" di Orione.',
+    wikipediaSlug: 'Orion_Nebula' },
+  { id: 'nebula-granchio', title: 'Nebulosa del Granchio (M1)', year: -5_000_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Resto di supernova a 6.523 anni luce. Generata dall\'esplosione del 1054 d.C. osservata dagli astronomi cinesi. Al centro pulsa una stella di neutroni che ruota 30 volte al secondo.',
+    wikipediaSlug: 'Crab_Nebula' },
+  { id: 'nebula-aquila', title: 'Nebulosa Aquila (M16)', year: -5_000_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Nebulosa a emissione a 7.000 anni luce. Celebre per le "Colonne della Creazione" fotografate da Hubble nel 1995: pilastri di gas e polvere alti 4–5 anni luce.',
+    wikipediaSlug: 'Eagle_Nebula' },
+  { id: 'nebula-anello', title: 'Nebulosa Anello (M57)', year: -5_000_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Nebulosa planetaria a 2.567 anni luce nella Lira. Guscio di gas espulso da una stella morente (nana bianca al centro). Forma torica, vista quasi di faccia dalla Terra.',
+    wikipediaSlug: 'Ring_Nebula' },
+  { id: 'nebula-laguna', title: 'Nebulosa Laguna (M8)', year: -5_000_000_000, category: 'cosmo', isCosmic: true,
+    description: 'Nebulosa a emissione a 4.000 anni luce nel Sagittario. Regione attiva di formazione stellare con giovani stelle calde (classe O) che ionizzano il gas circostante. Visibile a occhio nudo.',
+    wikipediaSlug: 'Lagoon_Nebula' },
+];
+
 // ID dei corpi celesti (matchano gli ID entità CesiumJS o lune che volano verso il genitore)
 const BODY_IDS = new Set([
   'luna', 'sole',
@@ -144,6 +163,7 @@ const BODY_IDS = new Set([
   ...DWARF_PLANET_SEARCHES.map(d => d.id),
   ...NEARBY_STAR_SEARCHES.map(s => s.id),
   ...GALAXY_SEARCHES.map(g => g.id),
+  ...NEBULA_SEARCHES.map(n => n.id),
 ]);
 
 // ── Scala piecewise ridistribuita per densità informativa ────────────────────
@@ -356,7 +376,7 @@ function AppInner() {
       MOON_SEARCH, SUN_SEARCH,
       ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS,
       ...DWARF_PLANET_SEARCHES, ...NEARBY_STAR_SEARCHES,
-      ...GALAXY_SEARCHES,
+      ...GALAXY_SEARCHES, ...NEBULA_SEARCHES,
     ];
   }, [ALL_EVENTS, searchIndex]);
 
@@ -668,6 +688,7 @@ function AppInner() {
                 onBodyLabelClick={(entityId) => {
                   const ev = [
                     ...NEARBY_STAR_SEARCHES, ...DWARF_PLANET_SEARCHES, ...GALAXY_SEARCHES,
+                    ...NEBULA_SEARCHES,
                     MOON_SEARCH, SUN_SEARCH, ...PLANET_SEARCH_ITEMS, ...MOON_SEARCH_ITEMS,
                   ].find(e => e.id === entityId);
                   if (ev) handleSearchSelect(ev);
