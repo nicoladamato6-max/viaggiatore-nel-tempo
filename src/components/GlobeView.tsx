@@ -37,6 +37,44 @@ function fmtYearHUD(year: number): string {
   return `${year.toLocaleString('it-IT')} d.C.`;
 }
 
+// ── Cosmic HUD formatters ────────────────────────────────────────────────────
+
+const AU = 1.496e11;
+const LY = 9.461e15;
+
+function fmtDist(m: number): string {
+  if (m >= LY * 0.1) return `${(m / LY).toFixed(4)} a.l.`;
+  if (m >= AU * 0.01) return `${(m / AU).toFixed(3)} UA`;
+  return fmtAlt(m);
+}
+
+function fmtRA(rad: number): string {
+  const deg = Cesium.Math.toDegrees(rad < 0 ? rad + Math.PI * 2 : rad);
+  const h  = Math.floor(deg / 15);
+  const mf = (deg / 15 - h) * 60;
+  const mi = Math.floor(mf);
+  const s  = Math.round((mf - mi) * 60);
+  return `α ${String(h).padStart(2,'0')}h${String(mi).padStart(2,'0')}m${String(s).padStart(2,'0')}s`;
+}
+
+function fmtDec(rad: number): string {
+  const deg  = Cesium.Math.toDegrees(rad);
+  const sign = deg >= 0 ? '+' : '−';
+  const a    = Math.abs(deg);
+  const d    = Math.floor(a);
+  const mf   = (a - d) * 60;
+  const mi   = Math.floor(mf);
+  const s    = Math.round((mf - mi) * 60);
+  return `δ ${sign}${String(d).padStart(2,'0')}°${String(mi).padStart(2,'0')}'${String(s).padStart(2,'0')}"`;
+}
+
+function fmtVel(mps: number): string {
+  if (mps >= 3e8 * 0.001) return `${(mps / 3e8 * 100).toFixed(3)}% c`;
+  if (mps >= 1_000_000)   return `${(mps / 1_000_000).toFixed(2)} kkm/s`;
+  if (mps >= 1_000)       return `${(mps / 1_000).toFixed(1)} km/s`;
+  return `${Math.round(mps)} m/s`;
+}
+
 
 
 interface Props {
@@ -68,8 +106,15 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
   const eventsRef  = useRef(events);
   const onClickRef = useRef(onEventClick);
   // HUD: ref per aggiornamento DOM diretto (evita React re-render a 60fps)
+  const hudRef       = useRef<HTMLDivElement>(null);
   const hudAltRef    = useRef<HTMLSpanElement>(null);
   const hudCoordsRef = useRef<HTMLSpanElement>(null);
+  // Cosmic HUD refs
+  const hudDistRef   = useRef<HTMLSpanElement>(null);
+  const hudVecRef    = useRef<HTMLSpanElement>(null);
+  const hudVelRef    = useRef<HTMLSpanElement>(null);
+  const prevCamPosRef     = useRef<Cesium.Cartesian3 | null>(null);
+  const prevRenderTimeRef = useRef<number>(0);
   const isCosmicRef  = useRef(isCosmicView);
   const localeRef              = useRef(locale);
   const onAltitudeChangeRef    = useRef(onAltitudeChange);
@@ -281,19 +326,46 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
     dareLayer.show = false;
     dareLayerRef.current = dareLayer;
 
-    // ── Navigation HUD: aggiorna altitudine e coordinate ogni frame via DOM diretto ──
+    // ── Navigation HUD: aggiorna altitudine/coordinate o dati cosmici ogni frame ──
     viewer.scene.postRender.addEventListener(() => {
       if (viewer.isDestroyed()) return;
-      const pos = viewer.camera.positionCartographic;
-      if (hudAltRef.current) hudAltRef.current.textContent = fmtAlt(pos.height);
-      if (hudCoordsRef.current) {
-        hudCoordsRef.current.textContent = `${fmtDMS(Cesium.Math.toDegrees(pos.latitude), 'N', 'S')}  ${fmtDMS(Cesium.Math.toDegrees(pos.longitude), 'E', 'O')}`;
+      const now = performance.now();
+
+      if (isCosmicRef.current) {
+        // Cosmic mode: posizione in WC → distanza + RA/Dec + velocità
+        hudRef.current?.classList.add('globe-hud--cosmic');
+
+        const camPos = viewer.camera.position.clone();
+        const dist   = Cesium.Cartesian3.magnitude(camPos);
+        const lon    = Math.atan2(camPos.y, camPos.x);
+        const lat    = Math.atan2(camPos.z, Math.sqrt(camPos.x * camPos.x + camPos.y * camPos.y));
+
+        if (hudDistRef.current) hudDistRef.current.textContent = fmtDist(dist);
+        if (hudVecRef.current)  hudVecRef.current.textContent  = `${fmtRA(lon)}  ${fmtDec(lat)}`;
+
+        const dt = (now - prevRenderTimeRef.current) / 1000;
+        if (prevCamPosRef.current && dt > 0 && dt < 0.5) {
+          const mps = Cesium.Cartesian3.distance(camPos, prevCamPosRef.current) / dt;
+          if (hudVelRef.current) hudVelRef.current.textContent = fmtVel(mps);
+        }
+        prevCamPosRef.current = camPos;
+      } else {
+        // Terrestrial mode: altitudine + coordinate geografiche
+        hudRef.current?.classList.remove('globe-hud--cosmic');
+
+        const pos = viewer.camera.positionCartographic;
+        if (hudAltRef.current) hudAltRef.current.textContent = fmtAlt(pos.height);
+        if (hudCoordsRef.current) {
+          hudCoordsRef.current.textContent = `${fmtDMS(Cesium.Math.toDegrees(pos.latitude), 'N', 'S')}  ${fmtDMS(Cesium.Math.toDegrees(pos.longitude), 'E', 'O')}`;
+        }
+        const altKm = pos.height / 1000;
+        if (Math.abs(altKm - lastReportedAltKmRef.current) > Math.max(5000, lastReportedAltKmRef.current * 0.15)) {
+          lastReportedAltKmRef.current = altKm;
+          onAltitudeChangeRef.current?.(altKm);
+        }
       }
-      const altKm = pos.height / 1000;
-      if (Math.abs(altKm - lastReportedAltKmRef.current) > Math.max(5000, lastReportedAltKmRef.current * 0.15)) {
-        lastReportedAltKmRef.current = altKm;
-        onAltitudeChangeRef.current?.(altKm);
-      }
+
+      prevRenderTimeRef.current = now;
     });
 
     // ── Gestione rotazione dispositivo (portrait↔landscape) ─────────────────
@@ -766,15 +838,30 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
       <div ref={containerRef} style={{ width: '100%', height: '100%' }} />
-      <div className="globe-hud" aria-hidden="true">
-        <div className="globe-hud__row">
+      <div className="globe-hud" ref={hudRef} aria-hidden="true">
+        {/* Terrestrial rows — hidden in cosmic mode */}
+        <div className="globe-hud__row globe-hud__terrestrial">
           <span className="globe-hud__lbl">ALT</span>
           <span className="globe-hud__val" ref={hudAltRef}>—</span>
         </div>
-        <div className="globe-hud__row">
+        <div className="globe-hud__row globe-hud__terrestrial">
           <span className="globe-hud__lbl">POS</span>
           <span className="globe-hud__val globe-hud__coords" ref={hudCoordsRef}>—</span>
         </div>
+        {/* Cosmic rows — hidden in terrestrial mode */}
+        <div className="globe-hud__row globe-hud__cosmic">
+          <span className="globe-hud__lbl">DIST</span>
+          <span className="globe-hud__val" ref={hudDistRef}>—</span>
+        </div>
+        <div className="globe-hud__row globe-hud__cosmic">
+          <span className="globe-hud__lbl">VEC</span>
+          <span className="globe-hud__val globe-hud__coords" ref={hudVecRef}>—</span>
+        </div>
+        <div className="globe-hud__row globe-hud__cosmic">
+          <span className="globe-hud__lbl">VEL</span>
+          <span className="globe-hud__val" ref={hudVelRef}>— km/s</span>
+        </div>
+        {/* ERA — always visible */}
         <div className="globe-hud__row">
           <span className="globe-hud__lbl">ERA</span>
           <span className="globe-hud__val globe-hud__year">{fmtYearHUD(currentYear)}</span>

@@ -2014,6 +2014,15 @@ body {
   text-shadow: 0 0 10px var(--clr-gold-glow);
 }
 
+/* Cosmic HUD: mostra righe cosmiche, nasconde quelle terrestri */
+.globe-hud__cosmic   { display: none; }
+.globe-hud--cosmic .globe-hud__terrestrial { display: none; }
+.globe-hud--cosmic .globe-hud__cosmic      { display: flex; }
+
+/* Colori diversi per la modalità cosmica */
+.globe-hud--cosmic .globe-hud__val { color: #b8aaff; }
+.globe-hud--cosmic .globe-hud__lbl { color: #7a70cc; }
+
 /* ── Admin header button ───────────────────────────────────────────────────── */
 .admin-header-btn {
   background: rgba(255, 165, 0, 0.10);
