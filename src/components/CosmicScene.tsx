@@ -34,6 +34,24 @@ function fmtDist(au: number): string {
   return `${Math.round(m)} m`;
 }
 
+function fmtVelCosmic(auPerS: number): string {
+  const mps = auPerS * AU;
+  const c   = 3e8;
+  if (mps < 0.1)        return '0 m/s';
+  if (mps >= c * 0.001) return `${(mps / c * 100).toFixed(3)}% c`;
+  if (mps >= 1_000_000) return `${(mps / 1_000_000).toFixed(2)}M km/s`;
+  if (mps >= 1_000)     return `${(mps / 1_000).toFixed(1)} km/s`;
+  return `${Math.round(mps)} m/s`;
+}
+
+function fmtYearCosmicHUD(year: number): string {
+  if (Math.abs(year) >= 1_000_000_000) return `${(Math.abs(year) / 1e9).toFixed(1)} Mld a.C.`;
+  if (Math.abs(year) >= 1_000_000)     return `${(Math.abs(year) / 1e6).toFixed(0)} Mln a.C.`;
+  if (year < 0)   return `${Math.abs(year).toLocaleString('it-IT')} a.C.`;
+  if (year === 0) return 'Anno 0';
+  return `${year.toLocaleString('it-IT')} d.C.`;
+}
+
 // ── Posizioni fisse ─────────────────────────────────────────────────────────
 const SUN_DIST = 149_600_000_000;
 const SUN_POS: [number, number, number] = [
@@ -978,6 +996,7 @@ interface CameraRigProps {
   cameraPosRef:       React.RefObject<THREE.Vector3>;
   hudAltRef:          React.RefObject<HTMLSpanElement | null>;
   hudZoneRef:         React.RefObject<HTMLSpanElement | null>;
+  hudVelRef:          React.RefObject<HTMLSpanElement | null>;
   locale:             Locale;
   wheelRef:           React.RefObject<number>;
   initialAltKm:       number;
@@ -992,7 +1011,7 @@ interface CameraRigProps {
   warpRef:            React.RefObject<HTMLDivElement | null>;
 }
 
-function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAltRef, hudZoneRef, locale, wheelRef, initialAltKm, onEarthApproachRef, nearEarthRef, flyToRef, mouseDxRef, mouseDyRef, touchDxRef, touchDyRef, pendingOrientRef, warpRef }: CameraRigProps) {
+function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAltRef, hudZoneRef, hudVelRef, locale, wheelRef, initialAltKm, onEarthApproachRef, nearEarthRef, flyToRef, mouseDxRef, mouseDyRef, touchDxRef, touchDyRef, pendingOrientRef, warpRef }: CameraRigProps) {
   const { camera } = useThree();
   const velRef = useRef(new THREE.Vector3());
 
@@ -1135,6 +1154,9 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     const newDist = camera.position.length();
     if (hudAltRef.current)  hudAltRef.current.textContent  = fmtDist(newDist);
     if (hudZoneRef.current) hudZoneRef.current.textContent = getZone(newDist, locale);
+    if (hudVelRef.current && dt > 0) {
+      hudVelRef.current.textContent = fmtVelCosmic(velRef.current.length() / dt);
+    }
 
     // Effetto warp: intensità proporzionale alla velocità relativa alla distanza
     if (warpRef.current) {
@@ -1580,6 +1602,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
   const lastTYRef          = useRef(0);
   const hudAltRef          = useRef<HTMLSpanElement | null>(null);
   const hudZoneRef         = useRef<HTMLSpanElement | null>(null);
+  const hudVelRef          = useRef<HTMLSpanElement | null>(null);
   const warpOverlayRef     = useRef<HTMLDivElement | null>(null);
   const distAURef          = useRef(0.05);
   const wheelRef           = useRef(0);
@@ -1855,6 +1878,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
           cameraPosRef={cameraPosRef}
           hudAltRef={hudAltRef}
           hudZoneRef={hudZoneRef}
+          hudVelRef={hudVelRef}
           locale={locale}
           wheelRef={wheelRef}
           initialAltKm={initialAltKm}
@@ -1889,10 +1913,24 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         }
       </div>
 
-      {/* HUD altitudine + zona */}
-      <div style={{ position: 'absolute', bottom: 52, right: 16, background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(8px)', borderRadius: 8, padding: '6px 12px', color: '#88aacc', fontSize: '0.7rem', fontFamily: 'monospace', border: '1px solid rgba(100,160,220,0.2)' }}>
-        <div><span style={{ color: '#334455' }}>ALT </span><span ref={hudAltRef} style={{ color: '#aaccee' }}>—</span></div>
-        <div><span style={{ color: '#334455' }}>POS </span><span ref={hudZoneRef} style={{ color: '#aaccee' }}>—</span></div>
+      {/* HUD cosmico — stesso stile/posizione del HUD terrestre in GlobeView */}
+      <div className="globe-hud globe-hud--cosmic" aria-hidden="true">
+        <div className="globe-hud__row">
+          <span className="globe-hud__lbl">DIST</span>
+          <span className="globe-hud__val" ref={hudAltRef}>—</span>
+        </div>
+        <div className="globe-hud__row">
+          <span className="globe-hud__lbl">ZONA</span>
+          <span className="globe-hud__val globe-hud__coords" ref={hudZoneRef}>—</span>
+        </div>
+        <div className="globe-hud__row">
+          <span className="globe-hud__lbl">VEL</span>
+          <span className="globe-hud__val" ref={hudVelRef}>— km/s</span>
+        </div>
+        <div className="globe-hud__row">
+          <span className="globe-hud__lbl">ERA</span>
+          <span className="globe-hud__val globe-hud__year">{fmtYearCosmicHUD(currentYear)}</span>
+        </div>
       </div>
 
       {/* Plancia di navigazione (basso-centro) */}
