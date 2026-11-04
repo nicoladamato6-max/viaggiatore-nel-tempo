@@ -27,7 +27,7 @@ export function LeftNavPanel({ open, onClose, events, currentYear, onSelectEvent
   );
 
   const currentEra = useMemo(() =>
-    MACRO_ERAS.find(e => currentYear >= e.start && currentYear <= e.end),
+    MACRO_ERAS.find(era => currentYear >= era.start && currentYear <= era.end),
     [currentYear]
   );
 
@@ -59,7 +59,7 @@ export function LeftNavPanel({ open, onClose, events, currentYear, onSelectEvent
         {currentEra && (
           <div className="left-nav-panel__current-era">
             <span className="left-nav-panel__era-dot" />
-            <span className="left-nav-panel__era-name">{currentEra.label}</span>
+            <span className="left-nav-panel__era-name">{currentEra.name}</span>
             <span className="left-nav-panel__era-year">{formatYear(currentYear)}</span>
           </div>
         )}
@@ -116,11 +116,11 @@ export function LeftNavPanel({ open, onClose, events, currentYear, onSelectEvent
           {tab === 'scopri' && (
             MACRO_ERAS.map(era => (
               <button
-                key={era.label}
-                className={`left-nav-panel__era-item${currentEra?.label === era.label ? ' left-nav-panel__era-item--active' : ''}`}
+                key={era.name}
+                className={`left-nav-panel__era-item${currentEra?.name === era.name ? ' left-nav-panel__era-item--active' : ''}`}
                 onClick={() => { onSelectEra(era); onClose(); }}
               >
-                <span className="left-nav-panel__era-item-label">{era.label}</span>
+                <span className="left-nav-panel__era-item-label">{era.name}</span>
                 <span className="left-nav-panel__era-item-range">
                   {formatYear(era.start)} → {formatYear(era.end)}
                 </span>
