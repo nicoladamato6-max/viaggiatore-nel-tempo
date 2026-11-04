@@ -206,29 +206,40 @@ async function sendToEntityChat(
   return json.data;
 }
 
+const DEFAULT_H = 480;
+const LEFT_PANEL_W = 260;
+
 // ── Componente ────────────────────────────────────────────────────────────
 interface Props {
   event:            HistoricalEvent | null;
   locale:           Locale;
   onClose:          () => void;
+  onRecall?:        (ev: HistoricalEvent) => void;
   onShowEraGuide?:  () => void;
   eraGuideName?:    string;
   events?:          HistoricalEvent[];
   onSelectEvent?:   (ev: HistoricalEvent) => void;
+  leftPanelOpen?:   boolean;
 }
 
-export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName, events = [], onSelectEvent }: Props) {
-  const [width, setWidth] = useState(DEFAULT_W);
+export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName, events = [], onSelectEvent, leftPanelOpen }: Props) {
   const [activeTab, setActiveTab] = useState<'info' | 'chat'>('info');
   const [chatMsgs, setChatMsgs]   = useState<ChatMsg[]>([]);
   const [chatInput, setChatInput] = useState('');
   const [chatBusy, setChatBusy]   = useState(false);
+  const [minimized, setMinimized] = useState(false);
+  const [recalled,  setRecalled]  = useState<HistoricalEvent | null>(null);
+  const [pos,       setPos]       = useState<{x: number; y: number} | null>(null);
+  const [size,      setSize]      = useState({ w: DEFAULT_W, h: DEFAULT_H });
   const chatEndRef  = useRef<HTMLDivElement>(null);
   const panelRef    = useRef<HTMLDivElement>(null);
   const wikiBodyRef = useRef<HTMLDivElement>(null);
   const dragging    = useRef(false);
+  const resizing    = useRef(false);
   const startX      = useRef(0);
-  const startW      = useRef(0);
+  const startY      = useRef(0);
+  const startPos    = useRef({ x: 0, y: 0 });
+  const startSize   = useRef({ w: DEFAULT_W, h: DEFAULT_H });
 
   const { body, wikiUrl, wikiBase, loading } = useWikiContent(event?.wikipediaSlug, locale);
   const { speaking, speak, stop } = useTTS();
@@ -240,6 +251,14 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
       fixWikiPaths(wikiBodyRef.current, wikiBase);
     }
   }, [body, wikiBase]);
+
+  // Nuova entità selezionata → apri pannello e pulisci recall
+  useEffect(() => {
+    if (event) {
+      setRecalled(null);
+      setMinimized(false);
+    }
+  }, [event?.id]);
 
   // Reset chat when event changes
   useEffect(() => {
@@ -289,19 +308,30 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
     }
   }
 
-  // ── resize handle (desktop) ──────────────────────────────────────────────
-  function onHandleMouseDown(e: React.MouseEvent) {
+  // ── Drag header ──────────────────────────────────────────────────────────
+  function getDefaultPos() {
+    return {
+      x: Math.max(0, window.innerWidth - DEFAULT_W - 24),
+      y: 64,
+    };
+  }
+
+  function onHeaderMouseDown(e: React.MouseEvent) {
+    if ((e.target as HTMLElement).closest('button')) return;
     e.preventDefault();
+    const current = pos ?? getDefaultPos();
     dragging.current = true;
     startX.current   = e.clientX;
-    startW.current   = panelRef.current?.offsetWidth ?? width;
-    document.body.style.cursor     = 'col-resize';
+    startY.current   = e.clientY;
+    startPos.current = current;
+    document.body.style.cursor     = 'move';
     document.body.style.userSelect = 'none';
 
     function onMove(ev: MouseEvent) {
       if (!dragging.current) return;
-      const delta = startX.current - ev.clientX;
-      setWidth(Math.min(maxWidth(), Math.max(MIN_W, startW.current + delta)));
+      const nx = Math.max(0, Math.min(window.innerWidth  - 80, startPos.current.x + ev.clientX - startX.current));
+      const ny = Math.max(0, Math.min(window.innerHeight - 40, startPos.current.y + ev.clientY - startY.current));
+      setPos({ x: nx, y: ny });
     }
     function onUp() {
       dragging.current = false;
@@ -314,41 +344,74 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
     document.addEventListener('mouseup',   onUp);
   }
 
-  function onHandleDblClick() { setWidth(DEFAULT_W); }
+  // ── Corner resize ─────────────────────────────────────────────────────────
+  function onCornerMouseDown(e: React.MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+    resizing.current  = true;
+    startX.current    = e.clientX;
+    startY.current    = e.clientY;
+    startSize.current = { w: size.w, h: size.h };
+    document.body.style.cursor     = 'se-resize';
+    document.body.style.userSelect = 'none';
+
+    function onMove(ev: MouseEvent) {
+      if (!resizing.current) return;
+      const nw = Math.max(MIN_W,  startSize.current.w + ev.clientX - startX.current);
+      const nh = Math.max(160,    startSize.current.h + ev.clientY - startY.current);
+      setSize({ w: Math.min(nw, maxWidth()), h: nh });
+    }
+    function onUp() {
+      resizing.current = false;
+      document.body.style.cursor     = '';
+      document.body.style.userSelect = '';
+      document.removeEventListener('mousemove', onMove);
+      document.removeEventListener('mouseup',   onUp);
+    }
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup',   onUp);
+  }
 
   // Ferma TTS quando cambia evento
   useEffect(() => { stop(); }, [event?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Recall chip: visibile quando il pannello è stato chiuso (event=null) e c'è un'entità salvata
   if (!event) {
+    if (!recalled) return null;
+    const recallLeft = leftPanelOpen ? LEFT_PANEL_W + 14 : 14;
     return (
-      <div ref={panelRef} className="info-panel info-panel--empty" style={{ width }}>
-        <div className="info-panel__resize-handle"
-          onMouseDown={onHandleMouseDown}
-          onDoubleClick={onHandleDblClick}
-        />
-        <div className="info-panel__placeholder">
-          <div style={{ fontSize: '2.5rem', marginBottom: 12 }}>🌍</div>
-          <p>Tocca un evento sul globo per esplorarlo</p>
-        </div>
-      </div>
+      <button
+        className="recall-chip"
+        style={{ left: recallLeft }}
+        onClick={() => { onRecall?.(recalled); setRecalled(null); }}
+        title={locale === 'it' ? 'Riapri il pannello' : 'Reopen panel'}
+      >
+        <span className="recall-chip__arrow">→</span>
+        <span className="recall-chip__name">{recalled.title}</span>
+      </button>
     );
   }
 
   const color = CATEGORY_COLORS[event.category];
+  const resolvedPos = pos ?? getDefaultPos();
 
   return (
-    <div ref={panelRef} className="info-panel" style={{ width }}>
-
-      {/* resize handle (desktop) */}
+    <>
       <div
-        className="info-panel__resize-handle"
-        onMouseDown={onHandleMouseDown}
-        onDoubleClick={onHandleDblClick}
-        title="Trascina per ridimensionare"
-      />
+        ref={panelRef}
+        className={`info-panel${minimized ? ' info-panel--minimized' : ''}`}
+        style={{
+          position: 'fixed',
+          left: resolvedPos.x,
+          top:  resolvedPos.y,
+          width: size.w,
+          height: minimized ? 38 : size.h,
+          zIndex: 25,
+        }}
+      >
 
-      {/* intestazione */}
-      <div className="info-panel__header">
+      {/* intestazione — drag handle */}
+      <div className="info-panel__header" onMouseDown={onHeaderMouseDown}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 2, overflow: 'hidden', flex: 1 }}>
           <span
             className="category-badge"
@@ -367,7 +430,7 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
           )}
         </div>
         <div style={{ display: 'flex', gap: 4, alignItems: 'center', flexShrink: 0 }}>
-          {window.speechSynthesis && (
+          {window.speechSynthesis && !minimized && (
             <button
               className={`info-panel__icon-btn${speaking ? ' tts-active' : ''}`}
               onClick={() => {
@@ -383,12 +446,24 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
               {speaking ? '⏹' : '🔊'}
             </button>
           )}
-          <button className="info-panel__icon-btn" onClick={onClose} aria-label="Chiudi">×</button>
+          <button
+            className="info-panel__icon-btn"
+            onClick={() => setMinimized(v => !v)}
+            aria-label={minimized ? 'Espandi' : 'Minimizza'}
+            title={minimized ? (locale === 'it' ? 'Espandi' : 'Expand') : (locale === 'it' ? 'Minimizza' : 'Minimize')}
+          >
+            {minimized ? '▲' : '▬'}
+          </button>
+          <button
+            className="info-panel__icon-btn"
+            onClick={() => { setRecalled(event); onClose(); }}
+            aria-label="Chiudi"
+          >×</button>
         </div>
       </div>
 
-      {/* meta + tabs: scroll solo in tab Wikipedia; in chat è flex-shrink:0 */}
-      <div className={`info-panel__scroll${activeTab === 'chat' ? ' info-panel__scroll--chat' : ''}`}>
+      {/* meta + tabs: nascoste quando minimizzato */}
+      {!minimized && <div className={`info-panel__scroll${activeTab === 'chat' ? ' info-panel__scroll--chat' : ''}`}>
 
         {/* meta */}
         <div className="info-panel__meta">
@@ -439,10 +514,10 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
           </>
         )}
 
-      </div>{/* fine info-panel__scroll */}
+      </div>}{/* fine info-panel__scroll */}
 
       {/* ── Chat tab — FUORI dallo scroll per mantenere input sempre visibile ── */}
-      {activeTab === 'chat' && (
+      {!minimized && activeTab === 'chat' && (
         <div className="ip-chat">
           <div className="ip-chat__messages">
             {chatMsgs.length === 0 && (
@@ -515,6 +590,17 @@ export function InfoPanel({ event, locale, onClose, onShowEraGuide, eraGuideName
           </div>
         </div>
       )}
-    </div>
+
+      {/* Corner resize handle */}
+      {!minimized && (
+        <div
+          className="info-panel__corner-resize"
+          onMouseDown={onCornerMouseDown}
+          title="Ridimensiona"
+        />
+      )}
+
+      </div>
+    </>
   );
 }

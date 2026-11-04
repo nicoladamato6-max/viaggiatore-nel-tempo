@@ -11,6 +11,7 @@ import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { ProfileModal } from './components/ProfileModal';
 import { MobileNav } from './components/MobileNav';
+import { LeftNavPanel } from './components/LeftNavPanel';
 import { useAuth } from './hooks/useAuth';
 import { useMobile } from './hooks/useMobile';
 import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker, type MobileTab, type EraLaunchData } from './types';
@@ -260,9 +261,10 @@ function AppInner() {
   const [profileOpen,  setProfileOpen]  = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [adminOpen,    setAdminOpen]    = useState(false);
-  const [toast,        setToast]        = useState<string | null>(null);
-  const [mobileTab,    setMobileTab]    = useState<MobileTab>('globe');
+  const [toast,          setToast]          = useState<string | null>(null);
+  const [mobileTab,      setMobileTab]      = useState<MobileTab>('globe');
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
+  const [leftPanelOpen,  setLeftPanelOpen]  = useState(false);
 
   // Rileva redirect post-conferma email (#type=signup o #type=recovery nel hash)
   useEffect(() => {
@@ -676,7 +678,7 @@ function AppInner() {
 
   const globeAndControls = (
     <>
-      <div className={`globe-container${selectedEvent && !isMobile ? ' has-panel' : ''}`}>
+      <div className="globe-container">
         <div
           className="globe-wrapper"
           style={selectedEvent && !isMobile ? { '--mobile-globe-h': `${mobileGlobeH}vh` } as React.CSSProperties : undefined}
@@ -804,10 +806,12 @@ function AppInner() {
             event={selectedEvent}
             locale={locale}
             onClose={() => setSelectedEvent(null)}
+            onRecall={(ev) => { setSelectedEvent(ev); }}
             onShowEraGuide={eraGuide ? () => setEraGuideOpen(true) : undefined}
             eraGuideName={eraGuide?.eraName}
             events={ALL_SEARCHABLE}
             onSelectEvent={handleEventClick}
+            leftPanelOpen={leftPanelOpen}
           />
         )}
       </div>
@@ -835,9 +839,34 @@ function AppInner() {
   return (
     <div className={`app${isMobile ? ' app--mobile' : ''}`}>
 
+      {/* ── LeftNavPanel (solo desktop) ── */}
+      {!isMobile && (
+        <LeftNavPanel
+          open={leftPanelOpen}
+          onClose={() => setLeftPanelOpen(false)}
+          events={visibleEvents}
+          currentYear={currentYear}
+          onSelectEvent={handleEventClick}
+          onSelectEra={(period) => {
+            setSliderValue(yearToSlider(period.start));
+            setOverrideYear(null);
+          }}
+          locale={locale}
+          formatYear={formatYear}
+        />
+      )}
+
       {/* ── Header (solo desktop) ── */}
       {!isMobile && (
         <header className="header">
+          <button
+            className="header-hamburger"
+            onClick={() => setLeftPanelOpen(v => !v)}
+            aria-label={leftPanelOpen ? 'Chiudi navigazione' : 'Apri navigazione'}
+            title={leftPanelOpen ? 'Chiudi' : 'Navigazione'}
+          >
+            {leftPanelOpen ? '✕' : '☰'}
+          </button>
           <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
           <SearchBar
             events={ALL_SEARCHABLE}
