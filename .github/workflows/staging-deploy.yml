@@ -28,14 +28,27 @@ jobs:
       - name: Type check
         run: npx tsc --noEmit
 
+      - name: Validate staging Supabase secrets
+        run: |
+          if [ -z "$URL" ]; then
+            echo "❌ VITE_SUPABASE_URL_STAGING non configurato nei GitHub Secrets"
+            exit 1
+          fi
+          PROD_ID="tsdkqaheddnwzgxgphtw"
+          if echo "$URL" | grep -q "$PROD_ID"; then
+            echo "❌ VITE_SUPABASE_URL_STAGING punta al progetto di PRODUZIONE!"
+            echo "   Correggere il secret con l'URL del progetto staging."
+            exit 1
+          fi
+          echo "✅ Supabase URL staging verificato: $URL"
+        env:
+          URL: ${{ secrets.VITE_SUPABASE_URL_STAGING }}
+
       - name: Build (staging env)
         run: npm run build
         env:
           VITE_MAPTILER_KEY: ${{ secrets.VITE_MAPTILER_KEY }}
-          # URL hardcoded: non è un segreto, garantisce che staging usi sempre il suo DB
-          VITE_SUPABASE_URL: https://jicmmisiptgyumuvzhjn.supabase.co
-          # Anon key del progetto staging — aggiornare VITE_SUPABASE_ANON_KEY_STAGING
-          # con la chiave legacy (eyJ...) dalla pagina API Keys del progetto staging
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL_STAGING }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY_STAGING }}
 
       - name: Copy Cesium static assets to dist
