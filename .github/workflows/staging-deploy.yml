@@ -65,9 +65,22 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages project create test-viaggiatore-nel-tempo --production-branch staging
 
+      - name: Verify bundle contains staging Supabase URL
+        run: |
+          STAGING_ID="jicmmisiptgyumuvzhjn"
+          if ! grep -rl "$STAGING_ID" dist/assets/*.js 2>/dev/null | grep -q .; then
+            echo "❌ Il bundle NON contiene l'URL Supabase staging!"
+            grep -oh 'https://[a-z]*.supabase.co' dist/assets/*.js 2>/dev/null | sort -u || echo "   Nessun URL Supabase trovato"
+            exit 1
+          fi
+          echo "✅ Bundle verificato: URL Supabase staging corretto nel bundle"
+
       - name: Deploy to Staging (Cloudflare Pages)
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name test-viaggiatore-nel-tempo --commit-dirty=true
+          # --branch staging: forza il deploy sul branch di produzione del progetto staging
+          # senza questo flag i push da feature/* creano solo preview URL, non aggiornano
+          # test-viaggiatore-nel-tempo.pages.dev
+          command: pages deploy dist --project-name test-viaggiatore-nel-tempo --branch staging --commit-dirty=true
