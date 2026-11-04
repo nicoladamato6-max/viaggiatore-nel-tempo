@@ -32,7 +32,10 @@ jobs:
         run: npm run build
         env:
           VITE_MAPTILER_KEY: ${{ secrets.VITE_MAPTILER_KEY }}
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL_STAGING }}
+          # URL hardcoded: non è un segreto, garantisce che staging usi sempre il suo DB
+          VITE_SUPABASE_URL: https://jicmmisiptgyumuvzhjn.supabase.co
+          # Anon key del progetto staging — aggiornare VITE_SUPABASE_ANON_KEY_STAGING
+          # con la chiave legacy (eyJ...) dalla pagina API Keys del progetto staging
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY_STAGING }}
 
       - name: Copy Cesium static assets to dist
