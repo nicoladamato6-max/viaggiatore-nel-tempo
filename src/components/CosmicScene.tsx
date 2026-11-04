@@ -1,5 +1,6 @@
 // Renderer Three.js per la modalità cosmica — sostituisce Cesium quando isCosmicView=true.
 // Fornisce navigazione free-flight, stelle/Via Lattea, pianeti con textures procedurali.
+// HUD cosmico: DIST, ZONA, VEL, ERA — aggiunto 2026-11-04 commit 850560e
 import { useRef, useEffect, useMemo, useCallback } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Stars, Html } from '@react-three/drei';
