@@ -1155,8 +1155,8 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     const newDist = camera.position.length();
     if (hudAltRef.current)  hudAltRef.current.textContent  = fmtDist(newDist);
     if (hudZoneRef.current) hudZoneRef.current.textContent = getZone(newDist, locale);
-    if (hudVelRef.current && dt > 0) {
-      hudVelRef.current.textContent = fmtVelCosmic(velRef.current.length() / dt);
+    if (hudVelRef.current && delta > 0) {
+      hudVelRef.current.textContent = fmtVelCosmic(velRef.current.length() / delta);
     }
 
     // Effetto warp: intensità proporzionale alla velocità relativa alla distanza
