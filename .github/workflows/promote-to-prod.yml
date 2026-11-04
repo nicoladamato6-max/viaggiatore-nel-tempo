@@ -1,0 +1,64 @@
+name: Promuovi staging → produzione
+
+# Questo workflow si avvia SOLO manualmente dalla UI di GitHub (Actions tab).
+# Richiede conferma esplicita ("yes") per evitare promozioni accidentali.
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Digita "yes" per confermare il rilascio in produzione'
+        required: true
+        type: string
+        default: 'no'
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Valida conferma
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" != "yes" ]; then
+            echo "❌ Conferma non valida. Scrivi 'yes' nel campo 'confirm' per procedere."
+            exit 1
+          fi
+
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configura git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Crea tag di backup su produzione attuale
+        id: backup
+        run: |
+          TAG="prod-backup-$(date -u +%Y%m%d-%H%M%S)"
+          git tag "$TAG"
+          git push origin "$TAG"
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+          echo "✅ Backup tag creato: $TAG"
+          echo "   Per ripristinare eseguire: git reset --hard $TAG && git push --force origin main"
+
+      - name: ⚠️  AVVISO — Produzione in sostituzione
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "⚠️  ATTENZIONE: L'ambiente di produzione verrà sostituito."
+          echo "    URL: https://viaggiatore-nel-tempo.pages.dev"
+          echo "    Backup attuale: ${{ steps.backup.outputs.tag }}"
+          echo "    Per rollback: ordina 'rollback al tag ${{ steps.backup.outputs.tag }}'"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+      - name: Merge staging → main
+        run: |
+          git fetch origin staging
+          git merge --no-ff origin/staging \
+            -m "chore: promote staging to production [$(date -u +%Y-%m-%d)] [backup: ${{ steps.backup.outputs.tag }}]"
+          git push origin main
+          echo "✅ Produzione aggiornata. Il deploy partirà automaticamente da deploy.yml"

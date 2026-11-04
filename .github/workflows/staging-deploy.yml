@@ -1,0 +1,57 @@
+name: Staging — Build & Deploy
+
+on:
+  push:
+    branches:
+      - staging
+      - 'feature/**'
+  pull_request:
+    branches: [staging]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Build (staging env)
+        run: npm run build
+        env:
+          VITE_MAPTILER_KEY: ${{ secrets.VITE_MAPTILER_KEY }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL_STAGING }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY_STAGING }}
+
+      - name: Copy Cesium static assets to dist
+        run: |
+          mkdir -p dist/cesium
+          cp -r node_modules/cesium/Build/Cesium/. dist/cesium/
+
+      # Crea il progetto CF Pages se non esiste ancora (prima esecuzione)
+      - name: Create Cloudflare Pages project (prima esecuzione)
+        uses: cloudflare/wrangler-action@v3
+        continue-on-error: true
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create test-viaggiatore-nel-tempo --production-branch staging
+
+      - name: Deploy to Staging (Cloudflare Pages)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name test-viaggiatore-nel-tempo --commit-dirty=true

@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bridge Mockup — Viaggiatore nel Tempo</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:#04060e;
+  --panel-bg:rgba(4,12,30,0.92);
+  --panel-border:rgba(28,80,170,0.38);
+  --top-bg:rgba(3,8,20,0.97);
+  --ribbon-bg:rgba(3,7,18,0.97);
+  --accent:#00aaff;
+  --accent-dim:rgba(0,170,255,0.35);
+  --accent-glow:rgba(0,170,255,0.1);
+  --txt:#c8deff;
+  --txt2:#3f6a9a;
+  --txt3:#1e3c5a;
+  --ok:#00cc88;
+  --warn:#ffaa00;
+  --panel-w:260px;
+  --top-h:44px;
+  --ribbon-h:56px;
+}
+
+html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--txt);font-family:'Courier New',monospace}
+
+#globe-area{
+  position:fixed;inset:0;z-index:1;
+  display:flex;align-items:center;justify-content:center;
+  pointer-events:none;
+}
+#globe-svg{width:min(55vw,55vh);height:min(55vw,55vh)}
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+
+/* ── TOP BAR ── */
+.topbar{
+  position:fixed;top:0;left:0;right:0;height:var(--top-h);
+  background:var(--top-bg);border-bottom:1px solid var(--panel-border);
+  z-index:30;display:flex;align-items:center;padding:0 14px;gap:12px;
+}
+.topbar__menu{
+  background:none;border:1px solid var(--panel-border);color:var(--accent);
+  font-size:16px;cursor:pointer;padding:5px 8px;border-radius:4px;transition:background .2s;flex-shrink:0;
+}
+.topbar__menu:hover{background:var(--accent-glow)}
+.topbar__logo{font-size:13px;font-weight:700;white-space:nowrap;flex-shrink:0}
+.topbar__logo em{color:var(--accent);font-style:normal}
+.topbar__status{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;font-size:11px;color:var(--txt2)}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--ok);flex-shrink:0;box-shadow:0 0 6px var(--ok)}
+.status-label{color:var(--ok);font-weight:600}
+.topbar__right{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.topbar__clock{font-size:11px;color:var(--txt3);font-family:monospace;min-width:38px;text-align:right}
+.icon-btn{
+  background:none;border:1px solid var(--panel-border);color:var(--txt2);
+  font-size:13px;cursor:pointer;padding:5px 7px;border-radius:4px;transition:all .2s;
+}
+.icon-btn:hover{border-color:var(--accent-dim);color:var(--accent)}
+
+/* ── LEFT PANEL (navigation only, no entity info) ── */
+.left-panel{
+  position:fixed;top:var(--top-h);left:0;width:var(--panel-w);
+  bottom:var(--ribbon-h);
+  background:var(--panel-bg);border-right:1px solid var(--panel-border);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  z-index:20;display:flex;flex-direction:column;
+  transform:translateX(0);
+  transition:transform .38s cubic-bezier(.4,0,.2,1);
+  background-image:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0px,rgba(0,0,0,0) 3px,rgba(0,20,50,.1) 3px,rgba(0,20,50,.1) 4px);
+}
+.left-panel.closed{transform:translateX(calc(-1 * var(--panel-w)))}
+.panel-header{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-bottom:1px solid var(--panel-border);flex-shrink:0}
+.panel-header__title{font-size:9px;letter-spacing:2.5px;color:var(--txt3);text-transform:uppercase}
+.panel-header__btns{display:flex;gap:4px}
+.phbtn{background:none;border:none;color:var(--txt2);cursor:pointer;padding:2px 5px;border-radius:3px;font-size:12px}
+.phbtn:hover{color:var(--accent)}
+.panel-tabs{display:flex;border-bottom:1px solid var(--panel-border);flex-shrink:0}
+.ptab{flex:1;background:none;border:none;border-bottom:2px solid transparent;padding:8px 0;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt2);cursor:pointer;transition:all .2s;font-family:inherit}
+.ptab.on{color:var(--accent);border-bottom-color:var(--accent)}
+.ptab:hover:not(.on){color:var(--txt)}
+.panel-content{flex:1;overflow-y:auto;padding:12px;scroll-behavior:smooth}
+.panel-content::-webkit-scrollbar{width:3px}
+.panel-content::-webkit-scrollbar-thumb{background:var(--panel-border);border-radius:2px}
+.ev-item{display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid rgba(28,80,170,.14);cursor:pointer;border-radius:3px}
+.ev-item:hover{background:rgba(0,100,255,.06);margin:0 -12px;padding:8px 12px}
+.ev-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:5px;flex-shrink:0}
+.ev-yr{font-size:9px;color:var(--txt3);white-space:nowrap;flex-shrink:0;min-width:52px}
+.ev-title{font-size:12px;color:var(--txt2);line-height:1.3}
+.era-block{margin-bottom:14px}
+.era-block__name{font-size:9px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:7px;padding-bottom:4px;border-bottom:1px solid var(--panel-border)}
+.era-item{font-size:12px;color:var(--txt2);padding:5px 0;border-bottom:1px solid rgba(28,80,170,.1);cursor:pointer;transition:color .15s;line-height:1.3}
+.era-item:hover{color:var(--txt)}
+.panel-ghost{
+  position:fixed;top:calc(var(--top-h) + 16px);left:0;z-index:19;
+  background:rgba(4,12,30,.9);border:1px solid var(--panel-border);border-left:none;
+  color:var(--accent);font-size:11px;padding:10px 5px;border-radius:0 5px 5px 0;
+  cursor:pointer;writing-mode:vertical-lr;letter-spacing:2px;text-transform:uppercase;
+  transition:opacity .3s,transform .38s cubic-bezier(.4,0,.2,1);
+  backdrop-filter:blur(8px);
+}
+.panel-ghost.hidden{transform:translateX(-100%);opacity:0;pointer-events:none}
+
+/* ── HUD overlay ── */
+.hud{
+  position:fixed;bottom:calc(var(--ribbon-h) + 14px);left:14px;
+  z-index:10;font-size:11px;pointer-events:none;
+  transition:left .38s cubic-bezier(.4,0,.2,1);
+}
+.hud.panel-open{left:calc(var(--panel-w) + 14px)}
+.hud__row{display:flex;gap:8px;margin-bottom:3px}
+.hud__lbl{color:var(--txt3);min-width:30px}
+.hud__val{color:var(--accent)}
+
+/* ── BOTTOM RIBBON ── */
+.ribbon{
+  position:fixed;bottom:0;left:0;right:0;height:var(--ribbon-h);
+  background:var(--ribbon-bg);border-top:1px solid var(--panel-border);
+  z-index:20;display:flex;align-items:center;padding:0 16px;gap:14px;
+  transition:height .3s ease;
+}
+.ribbon.collapsed{height:16px}
+.ribbon.collapsed .ribbon-inner{display:none}
+.ribbon__tog{
+  position:absolute;top:-22px;right:50%;transform:translateX(50%);
+  background:var(--ribbon-bg);border:1px solid var(--panel-border);border-bottom:none;
+  color:var(--txt2);font-size:9px;letter-spacing:1.5px;padding:3px 14px;
+  border-radius:5px 5px 0 0;cursor:pointer;text-transform:uppercase;
+  transition:color .2s;font-family:inherit;
+}
+.ribbon__tog:hover{color:var(--accent)}
+.ribbon-inner{display:flex;align-items:center;gap:14px;width:100%}
+.rib-era{font-size:11px;color:var(--txt2);white-space:nowrap;flex-shrink:0}
+.rib-era b{color:var(--accent);font-weight:normal}
+.rib-slider-wrap{flex:1;display:flex;align-items:center;gap:8px;min-width:0}
+.rib-label{font-size:9px;color:var(--txt3);white-space:nowrap}
+.rib-track{flex:1;height:4px;background:rgba(28,80,170,.25);border-radius:2px;position:relative;cursor:pointer}
+.rib-fill{position:absolute;left:0;top:0;bottom:0;width:42%;background:var(--accent);border-radius:2px}
+.rib-thumb{
+  position:absolute;top:50%;left:42%;transform:translate(-50%,-50%);
+  width:13px;height:13px;background:var(--accent);border-radius:50%;
+  border:2px solid var(--bg);box-shadow:0 0 8px var(--accent);cursor:grab;
+}
+.rib-chips{display:flex;gap:4px;flex-shrink:0}
+.rib-chip{
+  font-size:9px;padding:3px 8px;border-radius:3px;border:1px solid var(--panel-border);
+  color:var(--txt3);background:none;cursor:pointer;text-transform:uppercase;letter-spacing:.5px;
+  transition:all .2s;font-family:inherit;
+}
+.rib-chip.on{border-color:var(--accent-dim);color:var(--accent);background:var(--accent-glow)}
+
+/* ── FLOATING INFO PANEL ─────────────────────────────── */
+.info-float{
+  position:fixed;
+  /* initial position: right side, below topbar */
+  right:20px;top:60px;
+  width:320px;min-width:220px;min-height:120px;
+  background:var(--panel-bg);border:1px solid var(--panel-border);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-radius:6px;z-index:25;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  transition:opacity .25s,transform .3s cubic-bezier(.4,0,.2,1);
+  opacity:0;transform:scale(.96) translateY(-8px);pointer-events:none;
+  background-image:repeating-linear-gradient(0deg,rgba(0,0,0,0) 0px,rgba(0,0,0,0) 3px,rgba(0,20,50,.1) 3px,rgba(0,20,50,.1) 4px);
+  /* resize handle via resize property on the whole panel */
+  resize:both;
+}
+.info-float.visible{opacity:1;transform:none;pointer-events:all}
+.info-float.minimized{height:38px !important;min-height:38px;resize:none;overflow:hidden}
+
+/* Drag handle = header */
+.if-header{
+  display:flex;align-items:center;gap:8px;padding:7px 10px;
+  border-bottom:1px solid var(--panel-border);flex-shrink:0;
+  cursor:move;user-select:none;background:rgba(0,20,50,.4);
+}
+.if-header__icon{font-size:11px;color:var(--accent);flex-shrink:0}
+.if-header__title{font-size:11px;font-weight:600;color:var(--txt);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.if-header__year{font-size:9px;color:var(--txt2);flex-shrink:0;margin-right:6px}
+.if-ctrl{
+  background:none;border:none;color:var(--txt2);cursor:pointer;
+  font-size:12px;padding:2px 5px;border-radius:3px;flex-shrink:0;
+}
+.if-ctrl:hover{color:var(--accent)}
+
+/* Info panel tabs */
+.if-tabs{display:flex;border-bottom:1px solid var(--panel-border);flex-shrink:0}
+.if-tab{
+  flex:1;background:none;border:none;border-bottom:2px solid transparent;
+  padding:7px 0;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--txt2);cursor:pointer;transition:all .2s;font-family:inherit;
+}
+.if-tab.on{color:var(--accent);border-bottom-color:var(--accent)}
+.if-tab:hover:not(.on){color:var(--txt)}
+
+/* Info panel body */
+.if-body{flex:1;overflow-y:auto;padding:12px}
+.if-body::-webkit-scrollbar{width:3px}
+.if-body::-webkit-scrollbar-thumb{background:var(--panel-border);border-radius:2px}
+.if-desc{font-size:12px;color:var(--txt2);line-height:1.65;font-family:system-ui,sans-serif;margin-bottom:12px}
+.if-actions{display:flex;gap:5px;margin-bottom:12px}
+.if-action-btn{
+  flex:1;background:var(--accent-glow);border:1px solid var(--accent-dim);color:var(--accent);
+  font-size:9px;letter-spacing:1px;padding:7px 2px;border-radius:4px;cursor:pointer;
+  text-transform:uppercase;transition:all .2s;font-family:inherit;
+}
+.if-action-btn:hover{background:rgba(0,170,255,.22)}
+.if-related-title{font-size:9px;letter-spacing:2px;color:var(--txt3);text-transform:uppercase;margin-bottom:8px}
+.if-rel-item{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid rgba(28,80,170,.14);cursor:pointer}
+.if-rel-item:hover{background:rgba(0,100,255,.06);margin:0 -12px;padding:7px 12px;border-radius:3px}
+.if-rel-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:4px;flex-shrink:0}
+.if-rel-yr{font-size:9px;color:var(--txt3);white-space:nowrap;flex-shrink:0;min-width:52px}
+.if-rel-ttl{font-size:11px;color:var(--txt2);line-height:1.3}
+
+/* Resize handle (corner visual) */
+.if-resize-corner{
+  position:absolute;right:0;bottom:0;width:16px;height:16px;
+  cursor:se-resize;
+  border-right:2px solid var(--panel-border);
+  border-bottom:2px solid var(--panel-border);
+  border-radius:0 0 5px 0;
+  opacity:.5;transition:opacity .2s;
+}
+.info-float:hover .if-resize-corner{opacity:1}
+
+/* Wikipedia loading placeholder */
+.wiki-lines{margin-top:8px}
+.wiki-line{height:11px;background:rgba(32,80,160,.2);border-radius:3px;margin-bottom:6px}
+
+/* Epoch bands overlay (above ribbon) */
+.epoch-bands{
+  position:fixed;bottom:var(--ribbon-h);left:0;right:0;
+  z-index:19;
+  overflow:hidden;
+  height:0;transition:height .35s ease;
+}
+.epoch-bands.open{height:68px}
+.epoch-bands-inner{
+  background:rgba(3,8,20,.95);border-top:1px solid var(--panel-border);
+  padding:8px 16px;display:flex;flex-direction:column;gap:5px;
+}
+.epoch-row{display:flex;align-items:center;gap:8px}
+.epoch-row__label{font-size:9px;color:var(--txt3);width:80px;flex-shrink:0;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.epoch-track{flex:1;height:9px;background:rgba(28,80,170,.15);border-radius:3px;position:relative}
+.epoch-bar{position:absolute;top:0;bottom:0;border-radius:3px;opacity:.75;cursor:pointer;transition:opacity .2s}
+.epoch-bar:hover{opacity:1}
+.epoch-btn{
+  font-size:9px;color:var(--txt3);background:none;border:1px solid var(--panel-border);
+  padding:1px 8px;border-radius:3px;cursor:pointer;font-family:inherit;letter-spacing:1px;text-transform:uppercase;
+  margin-left:auto;flex-shrink:0;
+}
+.epoch-btn:hover{color:var(--accent);border-color:var(--accent-dim)}
+
+/* Sim buttons (mockup helpers) */
+.sim-btn{
+  background:none;border:1px solid var(--panel-border);color:var(--txt2);
+  font-size:10px;padding:7px 14px;border-radius:4px;cursor:pointer;
+  font-family:inherit;letter-spacing:1px;text-transform:uppercase;transition:all .2s;width:100%;margin-bottom:8px;
+}
+.sim-btn:hover{border-color:var(--accent-dim);color:var(--accent)}
+
+.badge{
+  position:fixed;top:calc(var(--top-h) + 10px);right:14px;z-index:35;
+  background:rgba(0,0,0,.7);border:1px solid rgba(255,170,0,.4);
+  color:rgba(255,170,0,.85);font-size:9px;letter-spacing:1px;padding:5px 10px;
+  border-radius:4px;text-transform:uppercase;pointer-events:none;
+}
+
+/* ── Recall chip ── */
+.recall-chip{
+  position:fixed;bottom:calc(var(--ribbon-h) + 60px);left:14px;z-index:12;
+  background:rgba(0,170,255,0.12);border:1px solid rgba(0,170,255,0.4);
+  border-radius:4px;padding:6px 10px;
+  display:flex;align-items:center;gap:6px;
+  font-size:11px;color:var(--accent);cursor:pointer;
+  opacity:0;transform:translateY(6px);pointer-events:none;
+  transition:opacity .25s,transform .25s,left .38s cubic-bezier(.4,0,.2,1);
+  white-space:nowrap;
+}
+.recall-chip.visible{opacity:1;transform:none;pointer-events:all}
+.recall-chip.panel-open{left:calc(var(--panel-w) + 14px)}
+.recall-chip__name{max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.recall-chip__arrow{font-size:10px;opacity:.7}
+
+/* ── Slider tooltip ── */
+.slider-tooltip{
+  position:absolute;bottom:22px;transform:translateX(-50%);
+  background:rgba(3,8,20,.95);border:1px solid var(--panel-border);
+  color:var(--accent);font-size:9px;padding:3px 8px;border-radius:3px;
+  white-space:nowrap;pointer-events:none;
+  opacity:0;transition:opacity .15s;
+}
+.slider-tooltip.visible{opacity:1}
+</style>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+
+<div id="globe-area">
+<svg id="globe-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="globeGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#0d2a5a"/>
+      <stop offset="60%" stop-color="#061a3a"/>
+      <stop offset="100%" stop-color="#020c1e"/>
+    </radialGradient>
+    <clipPath id="globe-clip"><circle cx="200" cy="200" r="190"/></clipPath>
+  </defs>
+  <circle cx="200" cy="200" r="190" fill="url(#globeGrad)"/>
+  <g clip-path="url(#globe-clip)" fill="#112d5e" opacity="0.72">
+    <ellipse cx="215" cy="150" rx="55" ry="30" transform="rotate(-15 215 150)"/>
+    <ellipse cx="265" cy="145" rx="45" ry="25" transform="rotate(5 265 145)"/>
+    <ellipse cx="210" cy="225" rx="30" ry="50" transform="rotate(10 210 225)"/>
+    <ellipse cx="120" cy="175" rx="22" ry="40" transform="rotate(-5 120 175)"/>
+    <ellipse cx="130" cy="250" rx="18" ry="35" transform="rotate(-10 130 250)"/>
+    <ellipse cx="295" cy="168" rx="38" ry="28" transform="rotate(-8 295 168)"/>
+    <ellipse cx="300" cy="265" rx="22" ry="15" transform="rotate(15 300 265)"/>
+  </g>
+  <g clip-path="url(#globe-clip)" stroke="rgba(32,80,160,0.22)" stroke-width="0.5" fill="none">
+    <ellipse cx="200" cy="200" rx="190" ry="45"/>
+    <ellipse cx="200" cy="200" rx="190" ry="95"/>
+    <ellipse cx="200" cy="200" rx="190" ry="145"/>
+    <ellipse cx="200" cy="200" rx="145" ry="190"/>
+    <ellipse cx="200" cy="200" rx="95" ry="190"/>
+    <ellipse cx="200" cy="200" rx="45" ry="190"/>
+  </g>
+  <circle cx="200" cy="200" r="190" fill="none" stroke="rgba(32,100,200,0.5)" stroke-width="1"/>
+  <circle cx="200" cy="200" r="192" fill="none" stroke="rgba(0,120,255,0.1)" stroke-width="10"/>
+  <ellipse cx="155" cy="140" rx="55" ry="35" fill="rgba(255,255,255,0.025)" transform="rotate(-25 155 140)"/>
+  <circle cx="222" cy="168" r="4" fill="none" stroke="#00aaff" stroke-width="1.5"/>
+  <circle cx="222" cy="168" r="2" fill="#00aaff"/>
+  <line x1="222" y1="164" x2="222" y2="145" stroke="#00aaff" stroke-width="0.8" opacity="0.6"/>
+  <text x="225" y="143" font-size="9" fill="#00aaff" font-family="monospace" opacity="0.8">Roma</text>
+</svg>
+</div>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <button class="topbar__menu" id="menuBtn" onclick="togglePanel()">☰</button>
+  <div class="topbar__logo">🌍 <em>VIAGGIATORE</em> NEL TEMPO</div>
+  <div class="topbar__status">
+    <div class="status-dot"></div>
+    <span class="status-label">MISSIONE ATTIVA</span>
+    <span style="color:var(--txt3)">·</span>
+    <span>Roma, 753 a.C.</span>
+  </div>
+  <div class="topbar__right">
+    <span class="topbar__clock" id="clock">--:--</span>
+    <button class="icon-btn">🔍</button>
+    <button class="icon-btn">🌐</button>
+    <button class="icon-btn">👤</button>
+  </div>
+</header>
+
+<!-- LEFT PANEL — navigation only -->
+<aside class="left-panel" id="leftPanel">
+  <div class="panel-header">
+    <span class="panel-header__title">Navigazione</span>
+    <div class="panel-header__btns">
+      <button class="phbtn" onclick="togglePanel()">✕</button>
+    </div>
+  </div>
+  <div class="panel-tabs">
+    <button class="ptab on" onclick="setTab('eventi',this)">Eventi</button>
+    <button class="ptab" onclick="setTab('guida',this)">Guida</button>
+    <button class="ptab" onclick="setTab('sim',this)">Simula</button>
+  </div>
+  <div class="panel-content">
+
+    <!-- EVENTI -->
+    <div id="tab-eventi">
+      <div style="font-size:9px;letter-spacing:2px;color:var(--txt3);text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--panel-border)">753–700 a.C.</div>
+      <div class="ev-item" onclick="openInfo('Fondazione di Roma','📜 Storia · Luogo','753 a.C.','Secondo la tradizione, Roma fu fondata da Romolo il 21 aprile 753 a.C. sul Palatino. Romolo e Remo, figli di Marte, furono allattati da una lupa. Dopo aver ucciso il fratello, Romolo divenne il primo re di Roma.')">
+        <div class="ev-dot"></div><span class="ev-yr">753 a.C.</span>
+        <span class="ev-title">Fondazione di Roma</span>
+      </div>
+      <div class="ev-item" onclick="openInfo('Giochi Olimpici','⚡ Sport · Evento','776 a.C.','I primi Giochi Olimpici della storia si tennero nel 776 a.C. ad Olimpia in onore di Zeus. I giochi si ripetevano ogni 4 anni — l\'olimpiade — e comportavano la sospensione delle guerre tra le polis greche.')">
+        <div class="ev-dot" style="background:#9966ff"></div><span class="ev-yr">776 a.C.</span>
+        <span class="ev-title">Primi Giochi Olimpici</span>
+      </div>
+      <div class="ev-item" onclick="openInfo('Fondazione di Cartagine','📜 Storia · Luogo','814 a.C.','Cartagine fu fondata dai Fenici provenienti da Tiro secondo la leggenda guidati dalla regina Didone. Divenne la potenza dominante del Mediterraneo occidentale e il principale rivale di Roma nelle Guerre Puniche.')">
+        <div class="ev-dot" style="background:#33aaff"></div><span class="ev-yr">814 a.C.</span>
+        <span class="ev-title">Fondazione di Cartagine</span>
+      </div>
+      <div class="ev-item" onclick="openInfo('Omero — Iliade e Odissea','✍️ Arte · Persona','850 a.C.','Omero compose l\'Iliade e l\'Odissea nell\'VIII secolo a.C., i due poemi epici fondativi della letteratura occidentale. L\'Iliade narra la guerra di Troia, l\'Odissea il ritorno di Ulisse.')">
+        <div class="ev-dot" style="background:#ff9933"></div><span class="ev-yr">850 a.C.</span>
+        <span class="ev-title">Omero — Iliade e Odissea</span>
+      </div>
+      <div class="ev-item">
+        <div class="ev-dot" style="background:#33cc66"></div><span class="ev-yr">700 a.C.</span>
+        <span class="ev-title">Età del ferro in Europa</span>
+      </div>
+    </div>
+
+    <!-- GUIDA -->
+    <div id="tab-guida" style="display:none">
+      <div class="era-block">
+        <div class="era-block__name">Civiltà Mediterranee</div>
+        <div class="era-item" onclick="openInfo('Grecia Classica','📜 Storia · Civiltà','508 a.C.','La Grecia Classica (VIII–IV sec. a.C.) è il periodo in cui fiorirono democrazia, filosofia, arte e teatro. Atene e Sparta furono le principali poleis. Personaggi: Socrate, Platone, Aristotele, Pericle.')">🏛 Grecia Classica (VIII–IV sec. a.C.)</div>
+        <div class="era-item" onclick="openInfo('Roma Monarchica','📜 Storia · Civiltà','753 a.C.','Roma Monarchica (753–509 a.C.) fu il primo periodo della storia romana, con 7 re. Iniziò con Romolo e terminò con l\'espulsione di Tarquinio il Superbo. La città crebbe da villaggio a centro del Lazio.')">🏟 Roma Monarchica (753–509 a.C.)</div>
+        <div class="era-item">⛵ Fenici — Navigatori del Mediterraneo</div>
+        <div class="era-item">🗿 Cartagine e le guerre puniche</div>
+      </div>
+      <div class="era-block">
+        <div class="era-block__name">Medio Oriente</div>
+        <div class="era-item">📜 Impero Neo-Assiro (911–612 a.C.)</div>
+        <div class="era-item">⚔ Impero Neo-Babilonese</div>
+        <div class="era-item">🏺 Persia Achemenide</div>
+      </div>
+      <div class="era-block">
+        <div class="era-block__name">Asia</div>
+        <div class="era-item">🀄 Cina — Periodo dei Regni Combattenti</div>
+        <div class="era-item">☸ India — Nascita del buddismo</div>
+      </div>
+    </div>
+
+    <!-- SIM (mockup helpers) -->
+    <div id="tab-sim" style="display:none">
+      <div style="font-size:9px;letter-spacing:2px;color:var(--txt3);text-transform:uppercase;margin-bottom:12px">Simula interazioni</div>
+      <button class="sim-btn" onclick="openInfo('Fondazione di Roma','📜 Storia · Luogo','753 a.C.','Secondo la tradizione, Roma fu fondata da Romolo il 21 aprile 753 a.C. sul Palatino. Romolo e Remo, figli di Marte, furono allattati da una lupa. Dopo aver ucciso il fratello, Romolo divenne il primo re di Roma e costruì le mura della città.')">↳ Apri InfoPanel (Roma)</button>
+      <button class="sim-btn" onclick="closeInfo()">↳ Chiudi InfoPanel</button>
+      <button class="sim-btn" onclick="minimizeInfo()">↳ Minimizza InfoPanel</button>
+      <button class="sim-btn" onclick="toggleEpochBands()">↳ Toggle epoche sovrapposte</button>
+      <button class="sim-btn" onclick="togglePanel()">↳ Toggle pannello nav</button>
+      <button class="sim-btn" onclick="toggleRibbon()">↳ Toggle timeline ribbon</button>
+    </div>
+
+  </div>
+</aside>
+
+<button class="panel-ghost hidden" id="ghostBtn" onclick="togglePanel()">MISSIONE</button>
+
+<!-- HUD overlay -->
+<div class="hud panel-open" id="hud">
+  <div class="hud__row"><span class="hud__lbl">ALT</span><span class="hud__val">1,200 km</span></div>
+  <div class="hud__row"><span class="hud__lbl">POS</span><span class="hud__val">41°54'N 12°29'E</span></div>
+  <div class="hud__row"><span class="hud__lbl">ERA</span><span class="hud__val" style="color:#9966ff">📜 Età Antica</span></div>
+</div>
+
+<!-- Recall chip — appare quando InfoPanel è chiuso -->
+<div class="recall-chip" id="recallChip" onclick="openInfoLast()">
+  <span>📜</span>
+  <span class="recall-chip__name" id="recallName">—</span>
+  <span class="recall-chip__arrow">↗ Riapri</span>
+</div>
+
+<!-- ── FLOATING INFO PANEL ─────────────────────────── -->
+<div class="info-float" id="infoFloat">
+  <!-- Drag handle -->
+  <div class="if-header" id="ifHeader">
+    <span class="if-header__icon">📜</span>
+    <span class="if-header__title" id="ifTitle">Fondazione di Roma</span>
+    <span class="if-header__year" id="ifYear">753 a.C.</span>
+    <button class="if-ctrl" onclick="minimizeInfo()" title="Minimizza">—</button>
+    <button class="if-ctrl" onclick="expandInfo()" title="Espandi" id="ifExpBtn">⤢</button>
+    <button class="if-ctrl" onclick="closeInfo()" title="Chiudi">✕</button>
+  </div>
+  <!-- Info tabs -->
+  <div class="if-tabs" id="ifTabs">
+    <button class="if-tab on" onclick="setIfTab('wiki',this)">Wikipedia</button>
+    <button class="if-tab" onclick="setIfTab('ai',this)">Chiedi AI</button>
+    <button class="if-tab" onclick="setIfTab('media',this)">Media</button>
+  </div>
+  <!-- Body -->
+  <div class="if-body" id="ifBody">
+    <div id="iftab-wiki">
+      <p class="if-desc" id="ifDesc">Secondo la tradizione, Roma fu fondata da Romolo il 21 aprile 753 a.C. sul Palatino. La leggenda narra che Romolo e Remo, figli di Marte, furono allattati da una lupa.</p>
+      <div class="wiki-lines">
+        <div class="wiki-line" style="width:100%"></div>
+        <div class="wiki-line" style="width:88%"></div>
+        <div class="wiki-line" style="width:95%"></div>
+        <div class="wiki-line" style="width:72%"></div>
+      </div>
+      <div class="if-related-title" style="margin-top:14px">Correlati</div>
+      <div class="if-rel-item" onclick="openInfo('Repubblica Romana','📜 Storia · Civiltà','509 a.C.','Nel 509 a.C. il popolo romano cacciò Tarquinio il Superbo, l\'ultimo re. Furono istituiti due consoli eletti annualmente affiancati dal Senato. La Repubblica durò quasi 500 anni.')">
+        <div class="if-rel-dot" style="background:#9966ff"></div>
+        <span class="if-rel-yr">509 a.C.</span>
+        <span class="if-rel-ttl">Repubblica Romana — fine della monarchia</span>
+      </div>
+      <div class="if-rel-item">
+        <div class="if-rel-dot" style="background:#9966ff"></div>
+        <span class="if-rel-yr">264 a.C.</span>
+        <span class="if-rel-ttl">Prima Guerra Punica — scontro con Cartagine</span>
+      </div>
+      <div class="if-rel-item">
+        <div class="if-rel-dot" style="background:#9966ff"></div>
+        <span class="if-rel-yr">44 a.C.</span>
+        <span class="if-rel-ttl">Assassinio di Giulio Cesare</span>
+      </div>
+    </div>
+    <div id="iftab-ai" style="display:none">
+      <div class="if-actions">
+        <button class="if-action-btn">Racconta la storia</button>
+        <button class="if-action-btn">Confronta con oggi</button>
+        <button class="if-action-btn">Personaggi chiave</button>
+      </div>
+      <p class="if-desc" style="color:var(--txt3);font-style:italic">Clicca un suggerimento o scrivi una domanda su questa entità...</p>
+    </div>
+    <div id="iftab-media" style="display:none">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px">
+        <div style="aspect-ratio:4/3;background:rgba(28,80,160,.2);border-radius:4px;border:1px solid var(--panel-border);display:flex;align-items:center;justify-content:center;font-size:20px">🏛</div>
+        <div style="aspect-ratio:4/3;background:rgba(28,80,160,.2);border-radius:4px;border:1px solid var(--panel-border);display:flex;align-items:center;justify-content:center;font-size:20px">🗺</div>
+        <div style="aspect-ratio:4/3;background:rgba(28,80,160,.2);border-radius:4px;border:1px solid var(--panel-border);display:flex;align-items:center;justify-content:center;font-size:20px">🏺</div>
+        <div style="aspect-ratio:4/3;background:rgba(28,80,160,.2);border-radius:4px;border:1px solid var(--panel-border);display:flex;align-items:center;justify-content:center;font-size:20px">📜</div>
+      </div>
+      <p class="if-desc" style="color:var(--txt3)">Immagini da Wikimedia Commons · YouTube · Internet Archive</p>
+    </div>
+  </div>
+  <!-- Resize corner visual hint -->
+  <div class="if-resize-corner"></div>
+</div>
+
+<!-- Epoch bands overlay — content generated by JS based on slider position -->
+<div class="epoch-bands" id="epochBands">
+  <div class="epoch-bands-inner" id="epochBandsInner"></div>
+</div>
+
+<!-- BOTTOM RIBBON -->
+<footer class="ribbon" id="ribbon">
+  <button class="ribbon__tog" id="ribTogBtn" onclick="toggleRibbon()">▼ TIMELINE</button>
+  <div class="ribbon-inner">
+    <span class="rib-era">📜 <b>Età Antica</b> · 753 a.C.</span>
+    <div class="rib-slider-wrap">
+      <span class="rib-label">-13.8Mld</span>
+      <div class="rib-track" id="rib-track">
+        <div class="rib-fill" id="rib-fill"></div>
+        <div class="rib-thumb" id="rib-thumb">
+          <div class="slider-tooltip" id="sliderTooltip">Età Antica</div>
+        </div>
+      </div>
+      <span class="rib-label">2025</span>
+    </div>
+    <div class="rib-chips">
+      <button class="rib-chip on">Storia</button>
+      <button class="rib-chip on">Arte</button>
+      <button class="rib-chip">Scienza</button>
+      <button class="rib-chip on">Musica</button>
+      <button class="rib-chip">Cosmo</button>
+      <button class="epoch-btn" onclick="toggleEpochBands()">≋ Epoche</button>
+    </div>
+  </div>
+</footer>
+
+<div class="badge">Mockup interattivo · Feature B Bridge</div>
+
+<script>
+// ── Stars ──
+(function(){
+  const c=document.getElementById('stars'),ctx=c.getContext('2d');
+  function resize(){c.width=innerWidth;c.height=innerHeight;draw()}
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    let r=42;function rand(){r=(r*1664525+1013904223)&0xffffffff;return(r>>>0)/4294967296}
+    for(let i=0;i<280;i++){const x=rand()*c.width,y=rand()*c.height,s=rand()*1.4+.2,a=rand()*.55+.08;ctx.fillStyle=`rgba(180,210,255,${a})`;ctx.beginPath();ctx.arc(x,y,s,0,Math.PI*2);ctx.fill()}
+    for(let i=0;i<28;i++){const x=rand()*c.width,y=rand()*c.height;ctx.fillStyle=`rgba(220,235,255,${rand()*.5+.4})`;ctx.beginPath();ctx.arc(x,y,rand()*.8+.6,0,Math.PI*2);ctx.fill()}
+  }
+  window.addEventListener('resize',resize);resize();
+})();
+
+// ── Clock ──
+function tickClock(){const n=new Date();document.getElementById('clock').textContent=String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0')}
+tickClock();setInterval(tickClock,15000);
+
+// ── Panel toggle ──
+let panelOpen=true;
+function togglePanel(){
+  panelOpen=!panelOpen;
+  document.getElementById('leftPanel').classList.toggle('closed',!panelOpen);
+  document.getElementById('ghostBtn').classList.toggle('hidden',panelOpen);
+  document.getElementById('hud').classList.toggle('panel-open',panelOpen);
+  document.getElementById('recallChip').classList.toggle('panel-open',panelOpen);
+}
+
+// ── Ribbon toggle ──
+let ribbonOpen=true;
+function toggleRibbon(){
+  ribbonOpen=!ribbonOpen;
+  document.getElementById('ribbon').classList.toggle('collapsed',!ribbonOpen);
+  document.getElementById('ribTogBtn').textContent=ribbonOpen?'▼ TIMELINE':'▲ TIMELINE';
+}
+
+// ── Tab switch (left panel) ──
+function setTab(id,btn){
+  ['eventi','guida','sim'].forEach(t=>{
+    const el=document.getElementById('tab-'+t);if(el)el.style.display=t===id?'block':'none';
+  });
+  document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+}
+
+// ── InfoPanel ──
+const IF=document.getElementById('infoFloat');
+let ifMinimized=false,ifExpanded=false,lastEntity=null;
+
+function openInfo(title,cat,year,desc){
+  lastEntity={title,cat,year,desc};
+  document.getElementById('ifTitle').textContent=title;
+  document.getElementById('ifYear').textContent=year;
+  document.getElementById('ifDesc').textContent=desc;
+  setIfTab('wiki',IF.querySelector('.if-tab'));
+  IF.classList.remove('minimized');
+  ifMinimized=false;
+  if(!ifExpanded){IF.style.width='320px';IF.style.height=''}
+  IF.classList.add('visible');
+  // hide recall chip — panel is open
+  document.getElementById('recallChip').classList.remove('visible');
+}
+function closeInfo(){
+  IF.classList.remove('visible');
+  ifMinimized=false;ifExpanded=false;
+  IF.style.cssText='';
+  IF.style.right='20px';IF.style.top='60px';IF.style.width='320px';
+  // show recall chip if there's a previous entity
+  if(lastEntity){
+    const chip=document.getElementById('recallChip');
+    document.getElementById('recallName').textContent=lastEntity.title;
+    chip.classList.toggle('panel-open',panelOpen);
+    chip.classList.add('visible');
+  }
+}
+function minimizeInfo(){
+  if(!IF.classList.contains('visible'))return;
+  ifMinimized=!ifMinimized;
+  IF.classList.toggle('minimized',ifMinimized);
+}
+function expandInfo(){
+  if(!IF.classList.contains('visible'))return;
+  ifExpanded=!ifExpanded;
+  if(ifExpanded){
+    IF.style.top=String(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--top-h'))+(window.innerHeight*0.05))+'px';
+    IF.style.left='50%';IF.style.transform='translateX(-50%)';
+    IF.style.width='min(700px, 90vw)';IF.style.height='70vh';
+    IF.style.right='auto';
+    document.getElementById('ifExpBtn').textContent='⤡';
+  } else {
+    IF.style.left='';IF.style.transform='';IF.style.right='20px';IF.style.top='60px';
+    IF.style.width='320px';IF.style.height='';
+    document.getElementById('ifExpBtn').textContent='⤢';
+  }
+}
+function openInfoLast(){
+  if(lastEntity)openInfo(lastEntity.title,lastEntity.cat,lastEntity.year,lastEntity.desc);
+}
+
+// ── Info panel tabs ──
+function setIfTab(id,btn){
+  ['wiki','ai','media'].forEach(t=>{
+    const el=document.getElementById('iftab-'+t);if(el)el.style.display=t===id?'block':'none';
+  });
+  document.querySelectorAll('.if-tab').forEach(b=>b.classList.remove('on'));
+  if(btn)btn.classList.add('on');
+}
+
+// ── Drag InfoPanel ──
+(function(){
+  const header=document.getElementById('ifHeader');
+  let dragging=false,ox=0,oy=0;
+  header.addEventListener('mousedown',e=>{
+    if(e.target.closest('.if-ctrl'))return;
+    dragging=true;
+    const rect=IF.getBoundingClientRect();
+    ox=e.clientX-rect.left;oy=e.clientY-rect.top;
+    IF.style.transition='none';IF.style.right='auto';IF.style.bottom='auto';
+    IF.style.left=rect.left+'px';IF.style.top=rect.top+'px';
+    e.preventDefault();
+  });
+  window.addEventListener('mousemove',e=>{
+    if(!dragging)return;
+    let nx=e.clientX-ox,ny=e.clientY-oy;
+    nx=Math.max(0,Math.min(nx,window.innerWidth-80));
+    ny=Math.max(0,Math.min(ny,window.innerHeight-40));
+    IF.style.left=nx+'px';IF.style.top=ny+'px';
+  });
+  window.addEventListener('mouseup',()=>{if(dragging){dragging=false;IF.style.transition=''}});
+})();
+
+// ── Resize InfoPanel (manual corner drag) ──
+(function(){
+  const corner=IF.querySelector('.if-resize-corner');
+  let resizing=false,startX=0,startY=0,startW=0,startH=0;
+  corner.addEventListener('mousedown',e=>{
+    resizing=true;startX=e.clientX;startY=e.clientY;
+    startW=IF.offsetWidth;startH=IF.offsetHeight;
+    IF.style.transition='none';e.preventDefault();e.stopPropagation();
+  });
+  window.addEventListener('mousemove',e=>{
+    if(!resizing)return;
+    IF.style.width=Math.max(220,startW+(e.clientX-startX))+'px';
+    IF.style.height=Math.max(120,startH+(e.clientY-startY))+'px';
+    IF.style.resize='none';
+  });
+  window.addEventListener('mouseup',()=>{if(resizing){resizing=false;IF.style.transition=''}});
+})();
+
+// ── Epoch bands ──
+const EPOCH_SETS={
+  prehistoric:[
+    {label:'Dinosauri',left:14,width:14,color:'#ff6633'},
+    {label:'Era Glaciale',left:28,width:10,color:'#33aaff'},
+    {label:'Prime Civiltà',left:38,width:7,color:'#33cc88'}
+  ],
+  ancient:[
+    {label:'Roma',left:56,width:30,color:'#9966ff'},
+    {label:'Grecia',left:52,width:22,color:'#3399ff'},
+    {label:'Persia',left:58,width:14,color:'#ff9933'},
+    {label:'Cartagine',left:54,width:28,color:'#33cc88'}
+  ]
+};
+let epochOpen=false,epochAutoTimer=null;
+
+function buildEpochRows(set){
+  return set.map(r=>`<div class="epoch-row">
+    <span class="epoch-row__label">${r.label}</span>
+    <div class="epoch-track"><div class="epoch-bar" style="left:${r.left}%;width:${r.width}%;background:${r.color}"></div></div>
+  </div>`).join('');
+}
+function updateEpochBands(pct){
+  const set=pct<30?EPOCH_SETS.prehistoric:EPOCH_SETS.ancient;
+  document.getElementById('epochBandsInner').innerHTML=buildEpochRows(set);
+}
+function showEpochBands(){
+  epochOpen=true;
+  document.getElementById('epochBands').classList.add('open');
+}
+function hideEpochBands(){
+  epochOpen=false;
+  document.getElementById('epochBands').classList.remove('open');
+}
+function toggleEpochBands(){
+  if(epochOpen)hideEpochBands();else showEpochBands();
+}
+
+// ── Era label from slider pct ──
+function eraLabel(p){
+  if(p<8)return'Big Bang';if(p<16)return'Terra primordiale';
+  if(p<22)return'Era Paleozoica';if(p<28)return'Era Mesozoica';
+  if(p<35)return'Era Cenozoica';if(p<42)return'Preistoria';
+  if(p<50)return'Età Antica';if(p<58)return'Medioevo';
+  if(p<67)return'Rinascimento';if(p<76)return'Età Moderna';
+  if(p<85)return'Ottocento';if(p<93)return'Novecento';
+  return'Contemporaneo';
+}
+
+// ── Ribbon slider ──
+(function(){
+  const track=document.getElementById('rib-track'),fill=document.getElementById('rib-fill'),
+        thumb=document.getElementById('rib-thumb'),tip=document.getElementById('sliderTooltip');
+  let pct=42,dragging=false;
+  function setPct(p){
+    pct=Math.max(0,Math.min(100,p));
+    fill.style.width=pct+'%';thumb.style.left=pct+'%';
+    tip.textContent=eraLabel(pct);
+    updateEpochBands(pct);
+  }
+  function getX(e){return e.touches?e.touches[0].clientX:e.clientX}
+  function fromEvent(e){const r=track.getBoundingClientRect();return((getX(e)-r.left)/r.width)*100}
+
+  function onDragStart(e){
+    dragging=true;
+    tip.classList.add('visible');
+    if(epochAutoTimer){clearTimeout(epochAutoTimer);epochAutoTimer=null}
+    updateEpochBands(pct);
+    showEpochBands();
+    e.preventDefault();
+  }
+  function onDragEnd(){
+    if(!dragging)return;
+    dragging=false;
+    tip.classList.remove('visible');
+    epochAutoTimer=setTimeout(hideEpochBands,3000);
+  }
+
+  thumb.addEventListener('mousedown',onDragStart);
+  thumb.addEventListener('touchstart',e=>{onDragStart(e)},{passive:false});
+  window.addEventListener('mousemove',e=>{if(dragging)setPct(fromEvent(e))});
+  window.addEventListener('touchmove',e=>{if(dragging)setPct(fromEvent(e))},{passive:true});
+  window.addEventListener('mouseup',onDragEnd);
+  window.addEventListener('touchend',onDragEnd);
+  track.addEventListener('click',e=>{setPct(fromEvent(e));updateEpochBands(pct);showEpochBands();if(epochAutoTimer)clearTimeout(epochAutoTimer);epochAutoTimer=setTimeout(hideEpochBands,3000)});
+
+  // init
+  setPct(42);
+})();
+
+// ── Chip toggle ──
+document.querySelectorAll('.rib-chip').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('on')));
+
+// ── Auto-open demo ──
+setTimeout(()=>openInfo('Fondazione di Roma','📜 Storia · Luogo','753 a.C.','Secondo la tradizione, Roma fu fondata da Romolo il 21 aprile 753 a.C. sul Palatino. La leggenda narra che Romolo e Remo, figli di Marte, furono allattati da una lupa. Dopo aver ucciso il fratello, Romolo divenne il primo re di Roma e costruì le mura della città.'),600);
+</script>
+</body>
+</html>
