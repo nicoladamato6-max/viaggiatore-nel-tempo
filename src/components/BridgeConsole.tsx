@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback, useMemo } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import {
   type HistoricalEvent,
   type EventCategory,
@@ -31,6 +31,11 @@ interface Props {
   isCosmicView: boolean;
   aiPanelOpen: boolean;
   onToggleAIPanel: () => void;
+  onLocaleToggle: () => void;
+  user: { email: string; role: string } | null;
+  onAuthClick: () => void;
+  showTerritories: boolean;
+  onToggleTerritories: () => void;
 }
 
 const CATEGORIES = Object.keys(CATEGORY_LABELS) as EventCategory[];
@@ -44,13 +49,14 @@ export function BridgeConsole({
   cesiumAltKm, events,
   onSearch, locale,
   aiPanelOpen, onToggleAIPanel,
+  onLocaleToggle, user, onAuthClick,
+  showTerritories, onToggleTerritories,
 }: Props) {
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
   const [dropResults, setDropResults] = useState<HistoricalEvent[]>([]);
   const [catOpen, setCatOpen] = useState(false);
   const [typeOpen, setTypeOpen] = useState(false);
-  const [audOn, setAudOn] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const catRef   = useRef<HTMLDivElement>(null);
   const typeRef  = useRef<HTMLDivElement>(null);
@@ -79,12 +85,6 @@ export function BridgeConsole({
     document.addEventListener('mousedown', onDown);
     return () => document.removeEventListener('mousedown', onDown);
   }, []);
-
-  const handleDpad = useCallback((dir: 'left' | 'right' | 'up' | 'down') => {
-    const step = dir === 'up' || dir === 'down' ? 100 : 25;
-    const delta = dir === 'left' || dir === 'down' ? -step : step;
-    onSliderChange(Math.max(0, Math.min(1000, sliderValue + delta)));
-  }, [sliderValue, onSliderChange]);
 
   const altDisplay = cesiumAltKm > 0
     ? `${Math.round(cesiumAltKm).toLocaleString('it')} km`
@@ -152,39 +152,44 @@ export function BridgeConsole({
             )}
           </div>
 
-          {/* D-pad */}
-          <div className="bc__dpad">
-            <div className="bc__dpad-row bc__dpad-row--top">
-              <button className="bc__dpad-btn" onClick={() => handleDpad('up')} title="Avanza">△</button>
-            </div>
-            <div className="bc__dpad-row bc__dpad-row--mid">
-              <button className="bc__dpad-btn" onClick={() => handleDpad('left')} title="Indietro">◁</button>
-              <div className="bc__dpad-center" />
-              <button className="bc__dpad-btn" onClick={() => handleDpad('right')} title="Avanti">▷</button>
-            </div>
-            <div className="bc__dpad-row bc__dpad-row--bot">
-              <button className="bc__dpad-btn" onClick={() => handleDpad('down')} title="Torna indietro">▽</button>
-            </div>
-          </div>
-
-          {/* AUD */}
+          {/* AI — prominent button */}
           <button
-            className={`bc__fn-btn${audOn ? ' bc__fn-btn--on' : ''}`}
-            onClick={() => setAudOn(v => !v)}
-            title={locale === 'it' ? 'Audio' : 'Audio'}
-          >
-            <span className="bc__fn-ico">◉</span>
-            <span className="bc__fn-lbl">AUD</span>
-          </button>
-
-          {/* AI */}
-          <button
-            className={`bc__fn-btn${aiPanelOpen ? ' bc__fn-btn--on' : ''}`}
+            className={`bc__fn-btn bc__fn-btn--ai${aiPanelOpen ? ' bc__fn-btn--on' : ''}`}
             onClick={onToggleAIPanel}
             title="AI Assistant"
           >
             <span className="bc__fn-ico">⬡</span>
             <span className="bc__fn-lbl">AI</span>
+          </button>
+
+          {/* MAP — toggle territories */}
+          <button
+            className={`bc__fn-btn${showTerritories ? ' bc__fn-btn--on' : ''}`}
+            onClick={onToggleTerritories}
+            title={locale === 'it' ? 'Territori storici' : 'Historical territories'}
+          >
+            <span className="bc__fn-ico">🌐</span>
+            <span className="bc__fn-lbl">MAP</span>
+          </button>
+
+          {/* LANG — toggle locale */}
+          <button
+            className="bc__fn-btn"
+            onClick={onLocaleToggle}
+            title={locale === 'it' ? 'Switch to English' : 'Passa all\'italiano'}
+          >
+            <span className="bc__fn-ico">{locale === 'it' ? 'IT' : 'EN'}</span>
+            <span className="bc__fn-lbl">LANG</span>
+          </button>
+
+          {/* ACC/LOG — auth */}
+          <button
+            className="bc__fn-btn"
+            onClick={onAuthClick}
+            title={user ? user.email : (locale === 'it' ? 'Accedi' : 'Login')}
+          >
+            <span className="bc__fn-ico">{user ? '●' : '○'}</span>
+            <span className="bc__fn-lbl">{user ? 'ACC' : 'LOG'}</span>
           </button>
 
         </div>{/* /Row 1 */}
@@ -200,6 +205,7 @@ export function BridgeConsole({
               min={0}
               max={1000}
               value={sliderValue}
+              style={{ '--val': sliderValue } as React.CSSProperties}
               onChange={e => onSliderChange(Number(e.target.value))}
             />
             <div className="bc__slider-labels">

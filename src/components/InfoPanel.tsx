@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { type HistoricalEvent, type Locale, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
 
 const MIN_W     = 280;
@@ -159,53 +159,6 @@ function useTTS() {
   return { speaking, speak, stop };
 }
 
-// ── Chat con LLM ─────────────────────────────────────────────────────────
-interface ChatMsg { role: 'user' | 'assistant'; content: string; suggestions?: string[] }
-
-// Restituisce sempre un evento: prima cerca nel DB, poi crea un evento sintetico
-// che apre Wikipedia per quell'entità. Così tutti i chip sono cliccabili.
-function useSuggestionMatcher(allEvents: HistoricalEvent[]) {
-  return useCallback((name: string): HistoricalEvent => {
-    const low = name.toLowerCase();
-    const found = allEvents.find(ev =>
-      ev.title.toLowerCase() === low ||
-      ev.title.toLowerCase().includes(low) ||
-      low.includes(ev.title.toLowerCase().slice(0, 8))
-    );
-    if (found) return found;
-    return {
-      id: `wiki-suggestion-${name.replace(/\s+/g, '-').toLowerCase()}`,
-      title: name,
-      year: 0,
-      category: 'storia',
-      description: '',
-      wikipediaSlug: name.replace(/[\s']/g, '_'),
-      isCosmic: false,
-    };
-  }, [allEvents]);
-}
-
-async function sendToEntityChat(
-  entity: HistoricalEvent,
-  question: string,
-  history: ChatMsg[],
-  locale: Locale,
-): Promise<{ answer: string; suggestions: string[] }> {
-  const res = await fetch('/api/entity-chat', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      entity: { title: entity.title, description: entity.description, year: entity.year, category: entity.category },
-      question,
-      history: history.map(m => ({ role: m.role, content: m.content })),
-      locale,
-    }),
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const json = await res.json() as { ok: boolean; data: { answer: string; suggestions: string[] } };
-  return json.data;
-}
-
 const DEFAULT_H = 480;
 const LEFT_PANEL_W = 260;
 
@@ -264,11 +217,8 @@ async function fetchWikiImages(slug: string, lang: string): Promise<string[]> {
   } catch { return []; }
 }
 
-export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName, events = [], onSelectEvent, leftPanelOpen, onHide }: Props) {
-  const [activeTab, setActiveTab] = useState<'info' | 'chat' | 'media'>('info');
-  const [chatMsgs, setChatMsgs]   = useState<ChatMsg[]>([]);
-  const [chatInput, setChatInput] = useState('');
-  const [chatBusy, setChatBusy]   = useState(false);
+export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName, leftPanelOpen, onHide }: Props) {
+  const [activeTab, setActiveTab] = useState<'info' | 'media'>('info');
   const [minimized, setMinimized] = useState(false);
   const [expanded,  setExpanded]  = useState(false);
   const [mediaImages, setMediaImages] = useState<string[]>([]);
@@ -276,7 +226,6 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
   const [recalled,  setRecalled]  = useState<HistoricalEvent | null>(null);
   const [pos,       setPos]       = useState<{x: number; y: number} | null>(null);
   const [size,      setSize]      = useState({ w: DEFAULT_W, h: DEFAULT_H });
-  const chatEndRef  = useRef<HTMLDivElement>(null);
   const panelRef    = useRef<HTMLDivElement>(null);
   const wikiBodyRef = useRef<HTMLDivElement>(null);
   const dragging    = useRef(false);
@@ -288,7 +237,6 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
 
   const { body, wikiUrl, wikiBase, loading } = useWikiContent(event?.wikipediaSlug, locale);
   const { speaking, speak, stop } = useTTS();
-  const matchSuggestion = useSuggestionMatcher(events);
 
   // Fix percorsi Wikipedia dopo ogni render del corpo
   useEffect(() => {
@@ -305,10 +253,8 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
     }
   }, [event?.id]);
 
-  // Reset chat and media when event changes
+  // Reset media when event changes
   useEffect(() => {
-    setChatMsgs([]);
-    setChatInput('');
     setActiveTab('info');
     setMediaImages([]);
   }, [event?.id]);
@@ -323,47 +269,6 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
       .then(imgs => setMediaImages(imgs))
       .finally(() => setMediaLoading(false));
   }, [activeTab, event?.wikipediaSlug, locale]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // Auto-scroll chat
-  useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [chatMsgs]);
-
-  async function handleChatSend() {
-    if (!event || !chatInput.trim() || chatBusy) return;
-    const question = chatInput.trim();
-    setChatInput('');
-    const newMsgs: ChatMsg[] = [...chatMsgs, { role: 'user', content: question }];
-    setChatMsgs(newMsgs);
-    setChatBusy(true);
-    try {
-      const { answer, suggestions } = await sendToEntityChat(event, question, chatMsgs, locale);
-      setChatMsgs([...newMsgs, { role: 'assistant', content: answer, suggestions }]);
-    } catch {
-      setChatMsgs([...newMsgs, { role: 'assistant', content: locale === 'it' ? 'Errore di connessione. Riprova.' : 'Connection error. Please retry.', suggestions: [] }]);
-    } finally {
-      setChatBusy(false);
-    }
-  }
-
-  async function handleAutoSuggest() {
-    if (!event || chatBusy) return;
-    const label    = locale === 'it' ? 'suggeriscimi relazioni' : 'suggest connections';
-    const question = locale === 'it'
-      ? 'Suggerisci 3-4 connessioni con altre entità storiche. Per ognuna spiega esplicitamente il nesso: perché è sorprendente, cosa illumina, quale filo rosso le unisce attraverso epoche o discipline diverse.'
-      : 'Suggest 3-4 connections to other historical entities. For each one explicitly explain the link: why it is surprising, what it illuminates, what thread connects them across different eras or disciplines.';
-    const newMsgs: ChatMsg[] = [...chatMsgs, { role: 'user', content: label }];
-    setChatMsgs(newMsgs);
-    setChatBusy(true);
-    try {
-      const { answer, suggestions } = await sendToEntityChat(event, question, chatMsgs, locale);
-      setChatMsgs([...newMsgs, { role: 'assistant', content: answer, suggestions }]);
-    } catch {
-      setChatMsgs([...newMsgs, { role: 'assistant', content: locale === 'it' ? 'Errore di connessione. Riprova.' : 'Connection error. Please retry.', suggestions: [] }]);
-    } finally {
-      setChatBusy(false);
-    }
-  }
 
   // ── Drag header ──────────────────────────────────────────────────────────
   function getDefaultPos() {
@@ -550,7 +455,7 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
       </div>
 
       {/* meta + tabs: nascoste quando minimizzato */}
-      {!minimized && <div className={`info-panel__scroll${activeTab === 'chat' ? ' info-panel__scroll--chat' : ''}`}>
+      {!minimized && <div className="info-panel__scroll">
 
         {/* meta */}
         <div className="info-panel__meta">
@@ -565,10 +470,6 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
             className={`info-panel__tab${activeTab === 'info' ? ' info-panel__tab--active' : ''}`}
             onClick={() => setActiveTab('info')}
           >📖 {locale === 'it' ? 'Wikipedia' : 'Wikipedia'}</button>
-          <button
-            className={`info-panel__tab${activeTab === 'chat' ? ' info-panel__tab--active' : ''}`}
-            onClick={() => setActiveTab('chat')}
-          >💬 {locale === 'it' ? 'Chiedi' : 'Ask'}</button>
           <button
             className={`info-panel__tab${activeTab === 'media' ? ' info-panel__tab--active' : ''}`}
             onClick={() => setActiveTab('media')}
@@ -634,81 +535,6 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
         )}
 
       </div>}{/* fine info-panel__scroll */}
-
-      {/* ── Chat tab — FUORI dallo scroll per mantenere input sempre visibile ── */}
-      {!minimized && activeTab === 'chat' && (
-        <div className="ip-chat">
-          <div className="ip-chat__messages">
-            {chatMsgs.length === 0 && (
-              <div className="ip-chat__empty">
-                <p className="ip-chat__hint">
-                  {locale === 'it'
-                    ? `Fai una domanda su "${event.title}" — curiosità, contesto, confronti con altre epoche…`
-                    : `Ask anything about "${event.title}" — curiosities, context, comparisons with other eras…`}
-                </p>
-                <button
-                  className="ip-chat__autosuggest"
-                  onClick={handleAutoSuggest}
-                  disabled={chatBusy}
-                >
-                  🔗 {locale === 'it' ? 'suggeriscimi relazioni' : 'suggest connections'}
-                </button>
-              </div>
-            )}
-            {chatMsgs.map((msg, i) => (
-              <div key={i} className={`ip-chat__msg ip-chat__msg--${msg.role}`}>
-                <div className="ip-chat__bubble">{msg.content}</div>
-                {msg.role === 'assistant' && msg.suggestions && msg.suggestions.length > 0 && (
-                  <div className="ip-chat__suggestions">
-                    <span className="ip-chat__suggestions-label">
-                      {locale === 'it' ? '🔗 Naviga le connessioni:' : '🔗 Navigate connections:'}
-                    </span>
-                    <div className="ip-chat__chips">
-                      {msg.suggestions.map((s, si) => {
-                        const ev = matchSuggestion(s);
-                        const isDb = !ev.id.startsWith('wiki-suggestion-');
-                        return (
-                          <button
-                            key={si}
-                            className="ip-chat__chip ip-chat__chip--link"
-                            onClick={() => { onSelectEvent?.(ev); setActiveTab('info'); }}
-                            title={isDb ? `${ev.title} — ${formatYear(ev.year)}` : `Apri ${s} su Wikipedia`}
-                          >{s}</button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-            {chatBusy && (
-              <div className="ip-chat__msg ip-chat__msg--assistant">
-                <div className="ip-chat__bubble ip-chat__bubble--loading">
-                  <span className="ip-chat__dot" /><span className="ip-chat__dot" /><span className="ip-chat__dot" />
-                </div>
-              </div>
-            )}
-            <div ref={chatEndRef} />
-          </div>
-          <div className="ip-chat__input-row">
-            <input
-              className="ip-chat__input"
-              type="text"
-              value={chatInput}
-              onChange={e => setChatInput(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && handleChatSend()}
-              placeholder={locale === 'it' ? 'Scrivi una domanda…' : 'Ask a question…'}
-              disabled={chatBusy}
-            />
-            <button
-              className="ip-chat__send"
-              onClick={handleChatSend}
-              disabled={chatBusy || !chatInput.trim()}
-              title={locale === 'it' ? 'Invia' : 'Send'}
-            >➤</button>
-          </div>
-        </div>
-      )}
 
       {/* Corner resize handle */}
       {!minimized && (

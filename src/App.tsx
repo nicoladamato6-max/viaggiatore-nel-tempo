@@ -761,32 +761,6 @@ function AppInner() {
             />
           )}
           {/* EraGuide mobile — montato fuori da globeAndControls per stare sopra il bottom nav */}
-          <button
-            className={`territory-toggle-btn${showTerritories ? ' active' : ''}`}
-            onClick={() => setShowTerritories(v => !v)}
-            title={locale === 'it' ? (showTerritories ? 'Nascondi mappe storiche' : 'Mostra mappe storiche') : (showTerritories ? 'Hide historical maps' : 'Show historical maps')}
-          >
-            {showTerritories ? '🌐 ON' : '🌐'}
-          </button>
-          <button
-            className={`cosmic-toggle-btn${isCosmicView ? ' active' : ''}`}
-            onClick={() => {
-              if (isCosmicView) {
-                setOverrideYear(null);
-                setSliderValue(yearToSlider(0));
-              } else {
-                const cosmicYear = -9_000_000_000;
-                setOverrideYear(cosmicYear);
-                setSliderValue(yearToSlider(cosmicYear));
-              }
-            }}
-            title={locale === 'it'
-              ? (isCosmicView ? 'Ritorna alla Terra' : 'Esplora il cosmo')
-              : (isCosmicView ? 'Return to Earth' : 'Explore the cosmos')
-            }
-          >
-            {isCosmicView ? '🌍' : '🚀'}
-          </button>
           <AdminPanel
             locale={locale}
             open={adminOpen}
@@ -851,6 +825,11 @@ function AppInner() {
           isCosmicView={altitudeCosmic}
           aiPanelOpen={aiPanelOpen}
           onToggleAIPanel={() => setAiPanelOpen(v => !v)}
+          onLocaleToggle={() => setLocale(l => l === 'it' ? 'en' : 'it')}
+          user={user ? { email: user.email, role: user.role } : null}
+          onAuthClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
+          showTerritories={showTerritories}
+          onToggleTerritories={() => setShowTerritories(v => !v)}
         />
       )}
       {!isMobile && aiPanelOpen && (
@@ -914,47 +893,29 @@ function AppInner() {
             epochs={[...MACRO_ERAS, ...SUBCATEGORIES]}
             locale={locale}
           />
-          <button
-            className="locale-toggle-btn"
-            onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
-            title={locale === 'it' ? 'Switch to English' : 'Passa all\'italiano'}
-          >
-            {locale === 'it' ? '🇮🇹 IT' : '🇬🇧 EN'} ⇄
-          </button>
-          <div className="header-auth-wrap">
-            <button
-              className="auth-header-btn"
-              onClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
-              title={user ? user.email : (locale === 'it' ? 'Accedi' : 'Sign in')}
-            >
-              {user ? '👤' : '🔑'}
-            </button>
-            {userMenuOpen && user && (
-              <>
-                <div className="user-menu-backdrop" onClick={() => setUserMenuOpen(false)} />
-                <div className="user-menu">
-                  <div className="user-menu__email">{user.email}</div>
-                  {user.role === 'admin' && <div className="user-menu__role">ADMIN</div>}
-                  <button className="user-menu__item" onClick={() => { setProfileOpen(true); setUserMenuOpen(false); }}>
-                    {locale === 'it' ? '👤 Il mio profilo' : '👤 My profile'}
-                  </button>
-                  <button className="user-menu__logout" onClick={() => { logout(); setUserMenuOpen(false); }}>
-                    {locale === 'it' ? '⏏ Esci dall\'account' : '⏏ Sign out'}
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
-          {user?.role === 'admin' && (
-            <button
-              className="admin-header-btn"
-              onClick={() => setAdminOpen(true)}
-              title={locale === 'it' ? 'Pannello Amministratore' : 'Admin Panel'}
-            >
-              ⚙️
-            </button>
-          )}
         </header>
+      )}
+
+      {/* User menu dropdown — floating, triggered from Bridge Console ACC button */}
+      {userMenuOpen && user && !isMobile && (
+        <>
+          <div className="user-menu-backdrop" onClick={() => setUserMenuOpen(false)} />
+          <div className="user-menu user-menu--floating">
+            <div className="user-menu__email">{user.email}</div>
+            {user.role === 'admin' && <div className="user-menu__role">ADMIN</div>}
+            <button className="user-menu__item" onClick={() => { setProfileOpen(true); setUserMenuOpen(false); }}>
+              {locale === 'it' ? '👤 Il mio profilo' : '👤 My profile'}
+            </button>
+            {user.role === 'admin' && (
+              <button className="user-menu__item" onClick={() => { setAdminOpen(true); setUserMenuOpen(false); }}>
+                {locale === 'it' ? '⚙️ Admin Panel' : '⚙️ Admin Panel'}
+              </button>
+            )}
+            <button className="user-menu__logout" onClick={() => { logout(); setUserMenuOpen(false); }}>
+              {locale === 'it' ? '⏏ Esci dall\'account' : '⏏ Sign out'}
+            </button>
+          </div>
+        </>
       )}
 
       {/* ── Mobile: mini header con logo + lingua ── */}

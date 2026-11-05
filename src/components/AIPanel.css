@@ -9,10 +9,10 @@
   --ap-b45: rgba(26,144,255,.45);
 
   position: fixed;
-  bottom: 115px;      /* above Bridge Console (~108px) + 7px gap */
+  bottom: 130px;
   right: 10px;
-  width: 210px;
-  max-height: 320px;
+  width: 300px;
+  max-height: 420px;
   background: rgba(2,8,18,.96);
   backdrop-filter: blur(8px);
   border: 1px solid var(--ap-b45);
@@ -36,8 +36,8 @@
   border-radius: 8px 8px 0 0;
   flex-shrink: 0;
 }
-.aip__hd-ic    { font-size: 11px; color: rgba(80,160,255,.9); }
-.aip__hd-title { font-size: 7.5px; letter-spacing: .15em; flex: 1; color: var(--ap-t1); }
+.aip__hd-ic    { font-size: 16px; color: rgba(80,160,255,.9); }
+.aip__hd-title { font-size: 11px; letter-spacing: .15em; flex: 1; color: var(--ap-t1); }
 
 .aip__close {
   width: 16px; height: 16px;
@@ -69,7 +69,7 @@
   min-height: 0;
 }
 .aip__hint {
-  font-size: 8px;
+  font-size: 11px;
   line-height: 1.65;
   color: var(--ap-t3);
   font-style: italic;
@@ -83,13 +83,13 @@
 .aip__msg--user { flex-direction: row-reverse; }
 
 .aip__msg-ic {
-  font-size: 9px;
+  font-size: 13px;
   color: rgba(26,144,255,.7);
   flex-shrink: 0;
   margin-top: 1px;
 }
 .aip__msg-txt {
-  font-size: 8px;
+  font-size: 11px;
   line-height: 1.65;
   border-radius: 5px;
   padding: 4px 7px;
@@ -124,7 +124,7 @@
 }
 .aip__inp {
   width: 100%;
-  font-size: 7.5px;
+  font-size: 11px;
   outline: none;
   background: #020c18 !important;
   color: #7ec8f5 !important;

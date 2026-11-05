@@ -35,7 +35,7 @@
   padding: 0 10px;
   background: var(--bc-bg);
   border-bottom: 1px solid var(--bc-b12);
-  font-size: 7px;
+  font-size: 10px;
   letter-spacing: .08em;
   color: var(--bc-t2);
   overflow: hidden;
@@ -52,7 +52,7 @@
 .bc__sbar-txt { color: var(--bc-t2); letter-spacing: .1em; }
 .bc__sep      { color: var(--bc-t3); }
 .bc__sbar-lbl { color: var(--bc-t3); }
-.bc__sbar-val { color: var(--bc-t1); font-size: 7.5px; }
+.bc__sbar-val { color: var(--bc-t1); font-size: 10px; }
 
 /* ── Toggle button ── */
 .bc__toggle {
@@ -64,7 +64,7 @@
   border-bottom: 1px solid var(--bc-b12);
   color: var(--bc-t2);
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 7.5px;
+  font-size: 10px;
   letter-spacing: .18em;
   text-align: center;
   cursor: pointer;
@@ -103,7 +103,7 @@
 
 /* ── Era label ── */
 .bc__era-lbl {
-  font-size: 8px;
+  font-size: 11px;
   letter-spacing: .07em;
   white-space: nowrap;
   min-width: 80px;
@@ -127,7 +127,7 @@
   -webkit-text-fill-color: var(--bc-t1) !important;
   color-scheme: dark;
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 7.5px;
+  font-size: 10px;
   padding: 0 7px;
   outline: none;
   -webkit-appearance: none;
@@ -138,7 +138,7 @@
 .bc__si::placeholder {
   color: var(--bc-t3) !important;
   -webkit-text-fill-color: var(--bc-t3) !important;
-  font-size: 7.5px;
+  font-size: 10px;
 }
 .bc__si:focus {
   border-color: var(--bc-b45);
@@ -170,7 +170,7 @@
   background: transparent !important;
   border: none;
   color: var(--bc-t1);
-  font-size: 8px;
+  font-size: 10px;
   text-align: left;
   cursor: pointer;
   -webkit-appearance: none;
@@ -195,7 +195,7 @@
 }
 .bc__si-year {
   color: var(--bc-t3);
-  font-size: 7px;
+  font-size: 9px;
   flex-shrink: 0;
 }
 
@@ -279,7 +279,23 @@
   box-shadow: 0 0 14px var(--bc-glow) !important;
 }
 .bc__fn-ico { font-size: 10px; line-height: 1; }
-.bc__fn-lbl { font-size: 6px; letter-spacing: .1em; }
+.bc__fn-lbl { font-size: 8px; letter-spacing: .1em; }
+
+/* ── AI button — prominent variant ── */
+.bc__fn-btn--ai {
+  width: 44px;
+  height: 44px;
+  border-color: rgba(26,144,255,.55) !important;
+  box-shadow: 0 0 12px rgba(26,144,255,.25), inset 0 0 6px rgba(26,144,255,.08) !important;
+}
+.bc__fn-btn--ai .bc__fn-ico { font-size: 18px; }
+.bc__fn-btn--ai .bc__fn-lbl { font-size: 9px; letter-spacing: .15em; }
+.bc__fn-btn--ai:hover,
+.bc__fn-btn--ai.bc__fn-btn--on {
+  border-color: rgba(26,144,255,.95) !important;
+  box-shadow: 0 0 20px rgba(26,144,255,.55), inset 0 0 10px rgba(26,144,255,.15) !important;
+  color: #b8deff !important;
+}
 
 /* ── Slider ── */
 .bc__slider-wrap {
@@ -295,9 +311,9 @@
   width: 100%;
   height: 3px;
   background: linear-gradient(90deg,
-    rgba(26,144,255,.55) 0%,
-    rgba(26,144,255,.55) calc(var(--val, 50%) * 1%),
-    var(--bc-b12) calc(var(--val, 50%) * 1%),
+    rgba(26,144,255,.65) 0%,
+    rgba(26,144,255,.65) calc(var(--val, 500) / 1000 * 100%),
+    var(--bc-b12) calc(var(--val, 500) / 1000 * 100%),
     var(--bc-b12) 100%
   );
   border-radius: 2px;
@@ -327,7 +343,7 @@
 .bc__slider-labels {
   display: flex;
   justify-content: space-between;
-  font-size: 6px;
+  font-size: 9px;
   color: var(--bc-t3);
   letter-spacing: .05em;
 }
@@ -345,7 +361,7 @@
   border-radius: 3px;
   color: var(--bc-t2);
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 7.5px;
+  font-size: 10px;
   letter-spacing: .08em;
   cursor: pointer;
   white-space: nowrap;
@@ -374,7 +390,7 @@
   padding: 4px 0;
 }
 .bc__filter-drop-label {
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: .15em;
   color: var(--bc-t3);
   padding: 3px 8px 4px;
@@ -390,7 +406,7 @@
   border: none;
   color: var(--bc-t3);
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: 7.5px;
+  font-size: 10px;
   text-align: left;
   cursor: pointer;
   -webkit-appearance: none;

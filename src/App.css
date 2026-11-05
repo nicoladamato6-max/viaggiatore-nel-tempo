@@ -2047,6 +2047,11 @@ body {
 .user-menu {
   position: absolute; top: calc(100% + 8px); right: 0;
   z-index: 501;
+}
+.user-menu--floating {
+  position: fixed; bottom: 140px; right: 10px;
+  top: auto;
+  z-index: 501;
   background: rgba(8, 8, 28, 0.98);
   border: 1px solid rgba(0, 200, 255, 0.35);
   border-radius: 10px; padding: 10px 14px 8px;
