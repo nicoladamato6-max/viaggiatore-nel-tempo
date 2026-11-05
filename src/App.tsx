@@ -5,6 +5,7 @@ import { CosmicScene } from './components/CosmicScene';
 import { InfoPanel } from './components/InfoPanel';
 import { TimeControls } from './components/TimeControls';
 import { SearchBar } from './components/SearchBar';
+import { BridgeConsole } from './components/BridgeConsole';
 import { TimeMachine } from './components/TimeMachine';
 import { EraGuide } from './components/EraGuide';
 import { AuthModal } from './components/AuthModal';
@@ -265,7 +266,7 @@ function AppInner() {
   const [mobileTab,      setMobileTab]      = useState<MobileTab>('globe');
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [leftPanelOpen,  setLeftPanelOpen]  = useState(false);
-  const [ribbonCollapsed, setRibbonCollapsed] = useState(false);
+  const [aiPanelOpen,    setAiPanelOpen]    = useState(false);
 
   // Rileva redirect post-conferma email (#type=signup o #type=recovery nel hash)
   useEffect(() => {
@@ -817,32 +818,28 @@ function AppInner() {
         )}
       </div>
 
-      {/* Desktop: controls in basso */}
+      {/* Desktop: Bridge Console in basso */}
       {!isMobile && (
-        <>
-          <button
-            className="ribbon-toggle-btn"
-            onClick={() => setRibbonCollapsed(v => !v)}
-          >
-            {ribbonCollapsed ? '▲ TIMELINE' : '▼ TIMELINE'}
-          </button>
-          {!ribbonCollapsed && (
-            <div className="controls">
-              <TimeControls
-                sliderValue={sliderValue}
-                currentYear={currentYear}
-                formatYear={formatYear}
-                getEra={getEra}
-                onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
-                activeCategories={activeCategories}
-                onToggleCategory={toggleCategory}
-                activeTipi={activeTipi}
-                onToggleTipo={toggleTipo}
-                onEraClick={handleEraClick}
-              />
-            </div>
-          )}
-        </>
+        <BridgeConsole
+          sliderValue={sliderValue}
+          onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
+          currentYear={currentYear}
+          formatYear={formatYear}
+          getEra={getEra}
+          activeCategories={activeCategories}
+          onToggleCategory={toggleCategory}
+          activeTipi={activeTipi}
+          onToggleTipo={toggleTipo}
+          cesiumAltKm={cesiumAltKm}
+          events={ALL_SEARCHABLE}
+          onSearch={handleSearchSelect}
+          onWikiSelect={handleWikiSelect}
+          onEpochSelect={handleEpochSearchSelect}
+          locale={locale}
+          isCosmicView={altitudeCosmic}
+          aiPanelOpen={aiPanelOpen}
+          onToggleAIPanel={() => setAiPanelOpen(v => !v)}
+        />
       )}
     </>
   );
@@ -876,20 +873,6 @@ function AppInner() {
         >
           {locale === 'it' ? 'NAVIGA' : 'NAVIGATE'}
         </button>
-      )}
-
-      {/* ── HUD overlay (desktop) ── */}
-      {!isMobile && (
-        <div className={`hud${leftPanelOpen ? ' hud--panel-open' : ''}`}>
-          <div className="hud__row">
-            <span className="hud__lbl">ALT</span>
-            <span className="hud__val">{cesiumAltKm > 0 ? `${Math.round(cesiumAltKm).toLocaleString('it')} km` : '—'}</span>
-          </div>
-          <div className="hud__row">
-            <span className="hud__lbl">ERA</span>
-            <span className="hud__val">{getEra(currentYear).label}</span>
-          </div>
-        </div>
       )}
 
       {/* ── Header (solo desktop) ── */}
