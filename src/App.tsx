@@ -873,28 +873,7 @@ function AppInner() {
         </button>
       )}
 
-      {/* ── Header (solo desktop) ── */}
-      {!isMobile && (
-        <header className="header">
-          <button
-            className="header-hamburger"
-            onClick={() => setLeftPanelOpen(v => !v)}
-            aria-label={leftPanelOpen ? 'Chiudi navigazione' : 'Apri navigazione'}
-            title={leftPanelOpen ? 'Chiudi' : 'Navigazione'}
-          >
-            {leftPanelOpen ? '✕' : '☰'}
-          </button>
-          <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
-          <SearchBar
-            events={ALL_SEARCHABLE}
-            onSelect={handleSearchSelect}
-            onWikiSelect={handleWikiSelect}
-            onEpochSelect={handleEpochSearchSelect}
-            epochs={[...MACRO_ERAS, ...SUBCATEGORIES]}
-            locale={locale}
-          />
-        </header>
-      )}
+      {/* Desktop header rimosso — ricerca spostata nella Bridge Console */}
 
       {/* User menu dropdown — floating, triggered from Bridge Console ACC button */}
       {userMenuOpen && user && !isMobile && (

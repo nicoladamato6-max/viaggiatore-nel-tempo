@@ -41,6 +41,20 @@ interface Props {
 const CATEGORIES = Object.keys(CATEGORY_LABELS) as EventCategory[];
 const ENTITY_TYPES = Object.keys(ENTITY_TYPE_LABELS) as EntityType[];
 
+// Era segments for the slider overlay — derived from BP breakpoints + getEra colors
+const ERA_SEGMENTS = [
+  { from: 0,   to: 100, label: '🌌 Universo',   color: '#1abc9c' },
+  { from: 100, to: 250, label: '🌍 Terra',       color: '#27ae60' },
+  { from: 250, to: 290, label: '🐟 Paleozoico',  color: '#2ecc71' },
+  { from: 290, to: 330, label: '🦕 Mesozoico',   color: '#f39c12' },
+  { from: 330, to: 400, label: '🦎 Cenozoico',   color: '#e67e22' },
+  { from: 400, to: 560, label: '🦴 Preistoria',  color: '#e74c3c' },
+  { from: 560, to: 640, label: '📜 Antica',      color: '#9b59b6' },
+  { from: 640, to: 720, label: '🏰 Medioevo',    color: '#2980b9' },
+  { from: 720, to: 800, label: '🎨 Moderna',     color: '#8e44ad' },
+  { from: 800, to: 1000, label: '⚙️ Contemp.',   color: '#a8c8ff' },
+];
+
 export function BridgeConsole({
   sliderValue, onSliderChange,
   currentYear, formatYear, getEra,
@@ -57,6 +71,7 @@ export function BridgeConsole({
   const [dropResults, setDropResults] = useState<HistoricalEvent[]>([]);
   const [catOpen, setCatOpen] = useState(false);
   const [typeOpen, setTypeOpen] = useState(false);
+  const [sliderDragging, setSliderDragging] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const catRef   = useRef<HTMLDivElement>(null);
   const typeRef  = useRef<HTMLDivElement>(null);
@@ -152,14 +167,14 @@ export function BridgeConsole({
             )}
           </div>
 
-          {/* AI — prominent button */}
+          {/* AI — Assistente di viaggio AI */}
           <button
             className={`bc__fn-btn bc__fn-btn--ai${aiPanelOpen ? ' bc__fn-btn--on' : ''}`}
             onClick={onToggleAIPanel}
-            title="AI Assistant"
+            title="Assistente di viaggio AI"
           >
             <span className="bc__fn-ico">⬡</span>
-            <span className="bc__fn-lbl">AI</span>
+            <span className="bc__fn-ai-label">ASSISTENTE<br/>DI VIAGGIO AI</span>
           </button>
 
           {/* MAP — toggle territories */}
@@ -199,6 +214,24 @@ export function BridgeConsole({
 
           {/* Slider */}
           <div className="bc__slider-wrap">
+            {/* Era overlay — visible while dragging */}
+            {sliderDragging && (
+              <div className="bc__era-overlay">
+                {ERA_SEGMENTS.map(seg => (
+                  <div
+                    key={seg.from}
+                    className={`bc__era-seg${sliderValue >= seg.from && sliderValue < seg.to ? ' bc__era-seg--active' : ''}`}
+                    style={{
+                      left: `${seg.from / 10}%`,
+                      width: `${(seg.to - seg.from) / 10}%`,
+                      '--seg-color': seg.color,
+                    } as React.CSSProperties}
+                  >
+                    <span className="bc__era-seg-lbl">{seg.label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
             <input
               className="bc__slider"
               type="range"
@@ -207,6 +240,10 @@ export function BridgeConsole({
               value={sliderValue}
               style={{ '--val': sliderValue } as React.CSSProperties}
               onChange={e => onSliderChange(Number(e.target.value))}
+              onMouseDown={() => setSliderDragging(true)}
+              onMouseUp={() => setSliderDragging(false)}
+              onTouchStart={() => setSliderDragging(true)}
+              onTouchEnd={() => setSliderDragging(false)}
             />
             <div className="bc__slider-labels">
               <span>13.8 Mld a.C.</span>
