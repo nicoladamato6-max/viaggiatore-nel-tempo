@@ -2920,4 +2920,102 @@ body {
   .mobile-bottom-sheet .info-panel__corner-resize {
     display: none;
   }
+  .panel-ghost,
+  .hud,
+  .ribbon-toggle-btn { display: none; }
 }
+
+/* ── Panel ghost button ── */
+.panel-ghost {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  z-index: 19;
+  background: rgba(4, 12, 30, 0.88);
+  border: 1px solid rgba(28, 80, 170, 0.38);
+  border-left: none;
+  color: #00aaff;
+  font-size: 9px;
+  padding: 12px 5px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  font-family: monospace;
+  transition: background 0.2s, opacity 0.3s;
+}
+.panel-ghost:hover { background: rgba(0, 100, 255, 0.15); }
+
+/* ── HUD overlay ── */
+.hud {
+  position: fixed;
+  bottom: 106px;
+  left: 14px;
+  z-index: 10;
+  pointer-events: none;
+  font-family: monospace;
+  font-size: 11px;
+  transition: left 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1.6;
+}
+.hud--panel-open { left: 274px; }
+.hud__row { display: flex; gap: 8px; }
+.hud__lbl { color: rgba(62, 106, 154, 0.7); min-width: 32px; }
+.hud__val { color: #00aaff; }
+
+/* ── Ribbon toggle ── */
+.ribbon-toggle-btn {
+  display: block;
+  width: 100%;
+  background: rgba(3, 7, 18, 0.97);
+  border: none;
+  border-top: 1px solid rgba(28, 80, 170, 0.22);
+  color: rgba(62, 106, 154, 0.7);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  padding: 4px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: monospace;
+  text-align: center;
+  transition: color 0.2s;
+}
+.ribbon-toggle-btn:hover { color: #00aaff; }
+
+/* ── Era groups (LeftNavPanel SCOPRI) ── */
+.left-nav-panel__era-group { margin-bottom: 14px; }
+.left-nav-panel__era-group-label {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #00aaff;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(28, 80, 170, 0.35);
+}
+
+/* ── InfoPanel Media tab ── */
+.info-panel__media { padding: 12px 14px; }
+.info-panel__media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.info-panel__media-item {
+  display: block;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid rgba(28, 80, 170, 0.3);
+  background: rgba(28, 80, 160, 0.15);
+}
+.info-panel__media-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+.info-panel__media-item:hover img { transform: scale(1.05); }

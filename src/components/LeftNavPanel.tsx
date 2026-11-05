@@ -113,20 +113,42 @@ export function LeftNavPanel({ open, onClose, events, currentYear, onSelectEvent
             )
           )}
 
-          {tab === 'scopri' && (
-            MACRO_ERAS.map(era => (
-              <button
-                key={era.name}
-                className={`left-nav-panel__era-item${currentEra?.name === era.name ? ' left-nav-panel__era-item--active' : ''}`}
-                onClick={() => { onSelectEra(era); onClose(); }}
-              >
-                <span className="left-nav-panel__era-item-label">{era.name}</span>
-                <span className="left-nav-panel__era-item-range">
-                  {formatYear(era.start)} → {formatYear(era.end)}
-                </span>
-              </button>
-            ))
-          )}
+          {tab === 'scopri' && (() => {
+            const groups: { label: string; eras: typeof MACRO_ERAS }[] = [
+              {
+                label: locale === 'it' ? '🌌 Cosmo & Origini' : '🌌 Cosmos & Origins',
+                eras: MACRO_ERAS.filter(e => e.name.startsWith('🌌') || e.name.startsWith('🌍')),
+              },
+              {
+                label: locale === 'it' ? '🦕 Ere Geologiche' : '🦕 Geological Eras',
+                eras: MACRO_ERAS.filter(e => e.name.startsWith('🐟') || e.name.startsWith('🦕') || e.name.startsWith('🦎')),
+              },
+              {
+                label: locale === 'it' ? '🦴 Preistoria & Storia' : '🦴 Prehistory & History',
+                eras: MACRO_ERAS.filter(e =>
+                  !e.name.startsWith('🌌') && !e.name.startsWith('🌍') &&
+                  !e.name.startsWith('🐟') && !e.name.startsWith('🦕') && !e.name.startsWith('🦎')
+                ),
+              },
+            ];
+            return groups.map(group => group.eras.length === 0 ? null : (
+              <div key={group.label} className="left-nav-panel__era-group">
+                <div className="left-nav-panel__era-group-label">{group.label}</div>
+                {group.eras.map(era => (
+                  <button
+                    key={era.name}
+                    className={`left-nav-panel__era-item${currentEra?.name === era.name ? ' left-nav-panel__era-item--active' : ''}`}
+                    onClick={() => { onSelectEra(era); onClose(); }}
+                  >
+                    <span className="left-nav-panel__era-item-label">{era.name}</span>
+                    <span className="left-nav-panel__era-item-range">
+                      {formatYear(era.start)} → {formatYear(era.end)}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ));
+          })()}
 
         </div>
       </div>

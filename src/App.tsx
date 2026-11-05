@@ -265,6 +265,7 @@ function AppInner() {
   const [mobileTab,      setMobileTab]      = useState<MobileTab>('globe');
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [leftPanelOpen,  setLeftPanelOpen]  = useState(false);
+  const [ribbonCollapsed, setRibbonCollapsed] = useState(false);
 
   // Rileva redirect post-conferma email (#type=signup o #type=recovery nel hash)
   useEffect(() => {
@@ -818,20 +819,30 @@ function AppInner() {
 
       {/* Desktop: controls in basso */}
       {!isMobile && (
-        <div className="controls">
-          <TimeControls
-            sliderValue={sliderValue}
-            currentYear={currentYear}
-            formatYear={formatYear}
-            getEra={getEra}
-            onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
-            activeCategories={activeCategories}
-            onToggleCategory={toggleCategory}
-            activeTipi={activeTipi}
-            onToggleTipo={toggleTipo}
-            onEraClick={handleEraClick}
-          />
-        </div>
+        <>
+          <button
+            className="ribbon-toggle-btn"
+            onClick={() => setRibbonCollapsed(v => !v)}
+          >
+            {ribbonCollapsed ? '▲ TIMELINE' : '▼ TIMELINE'}
+          </button>
+          {!ribbonCollapsed && (
+            <div className="controls">
+              <TimeControls
+                sliderValue={sliderValue}
+                currentYear={currentYear}
+                formatYear={formatYear}
+                getEra={getEra}
+                onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
+                activeCategories={activeCategories}
+                onToggleCategory={toggleCategory}
+                activeTipi={activeTipi}
+                onToggleTipo={toggleTipo}
+                onEraClick={handleEraClick}
+              />
+            </div>
+          )}
+        </>
       )}
     </>
   );
@@ -854,6 +865,31 @@ function AppInner() {
           locale={locale}
           formatYear={formatYear}
         />
+      )}
+
+      {/* ── Ghost button (desktop, solo quando pannello chiuso) ── */}
+      {!isMobile && !leftPanelOpen && (
+        <button
+          className="panel-ghost"
+          onClick={() => setLeftPanelOpen(true)}
+          title={locale === 'it' ? 'Apri navigazione' : 'Open navigation'}
+        >
+          {locale === 'it' ? 'NAVIGA' : 'NAVIGATE'}
+        </button>
+      )}
+
+      {/* ── HUD overlay (desktop) ── */}
+      {!isMobile && (
+        <div className={`hud${leftPanelOpen ? ' hud--panel-open' : ''}`}>
+          <div className="hud__row">
+            <span className="hud__lbl">ALT</span>
+            <span className="hud__val">{cesiumAltKm > 0 ? `${Math.round(cesiumAltKm).toLocaleString('it')} km` : '—'}</span>
+          </div>
+          <div className="hud__row">
+            <span className="hud__lbl">ERA</span>
+            <span className="hud__val">{getEra(currentYear).label}</span>
+          </div>
+        </div>
       )}
 
       {/* ── Header (solo desktop) ── */}

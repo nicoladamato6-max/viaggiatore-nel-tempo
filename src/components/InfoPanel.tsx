@@ -222,12 +222,56 @@ interface Props {
   leftPanelOpen?:   boolean;
 }
 
+async function fetchWikiImages(slug: string, lang: string): Promise<string[]> {
+  try {
+    const params = new URLSearchParams({
+      action: 'query', titles: slug, prop: 'pageimages|images',
+      format: 'json', origin: '*', piprop: 'thumbnail', pithumbsize: '300', imlimit: '12',
+    });
+    const res = await fetch(`https://${lang}.wikipedia.org/w/api.php?${params}`);
+    if (!res.ok) return [];
+    const data = await res.json();
+    const pages = data.query?.pages ?? {};
+    const page = Object.values(pages)[0] as {
+      thumbnail?: { source: string };
+      images?: { title: string }[];
+    };
+    const result: string[] = [];
+    if (page?.thumbnail?.source) result.push(page.thumbnail.source);
+    const imageFiles = (page?.images ?? [])
+      .map((img: { title: string }) => img.title)
+      .filter((t: string) => /\.(jpg|jpeg|png)$/i.test(t))
+      .slice(0, 8);
+    if (imageFiles.length > 0) {
+      const infoParams = new URLSearchParams({
+        action: 'query', prop: 'imageinfo', iiprop: 'url',
+        format: 'json', origin: '*', iiurlwidth: '300',
+        titles: imageFiles.join('|'),
+      });
+      const infoRes = await fetch(`https://${lang}.wikipedia.org/w/api.php?${infoParams}`);
+      if (infoRes.ok) {
+        const infoData = await infoRes.json();
+        const infoPages = infoData.query?.pages ?? {};
+        Object.values(infoPages).forEach((p: unknown) => {
+          const pg = p as { imageinfo?: { thumburl?: string }[] };
+          const url = pg.imageinfo?.[0]?.thumburl;
+          if (url && !result.includes(url)) result.push(url);
+        });
+      }
+    }
+    return result.slice(0, 9);
+  } catch { return []; }
+}
+
 export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName, events = [], onSelectEvent, leftPanelOpen }: Props) {
-  const [activeTab, setActiveTab] = useState<'info' | 'chat'>('info');
+  const [activeTab, setActiveTab] = useState<'info' | 'chat' | 'media'>('info');
   const [chatMsgs, setChatMsgs]   = useState<ChatMsg[]>([]);
   const [chatInput, setChatInput] = useState('');
   const [chatBusy, setChatBusy]   = useState(false);
   const [minimized, setMinimized] = useState(false);
+  const [expanded,  setExpanded]  = useState(false);
+  const [mediaImages, setMediaImages] = useState<string[]>([]);
+  const [mediaLoading, setMediaLoading] = useState(false);
   const [recalled,  setRecalled]  = useState<HistoricalEvent | null>(null);
   const [pos,       setPos]       = useState<{x: number; y: number} | null>(null);
   const [size,      setSize]      = useState({ w: DEFAULT_W, h: DEFAULT_H });
@@ -260,12 +304,24 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
     }
   }, [event?.id]);
 
-  // Reset chat when event changes
+  // Reset chat and media when event changes
   useEffect(() => {
     setChatMsgs([]);
     setChatInput('');
     setActiveTab('info');
+    setMediaImages([]);
   }, [event?.id]);
+
+  // Load media images when media tab is active
+  useEffect(() => {
+    if (activeTab !== 'media' || !event?.wikipediaSlug) return;
+    if (mediaImages.length > 0) return;
+    setMediaLoading(true);
+    const lang = locale === 'en' ? 'en' : 'it';
+    fetchWikiImages(event.wikipediaSlug, lang)
+      .then(imgs => setMediaImages(imgs))
+      .finally(() => setMediaLoading(false));
+  }, [activeTab, event?.wikipediaSlug, locale]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Auto-scroll chat
   useEffect(() => {
@@ -314,6 +370,20 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
       x: Math.max(0, window.innerWidth - DEFAULT_W - 24),
       y: 64,
     };
+  }
+
+  function toggleExpand() {
+    if (expanded) {
+      setExpanded(false);
+      setPos(null);
+      setSize({ w: DEFAULT_W, h: DEFAULT_H });
+    } else {
+      const w = Math.min(700, window.innerWidth - 80);
+      const h = Math.round(window.innerHeight * 0.72);
+      setPos({ x: Math.round((window.innerWidth - w) / 2), y: 56 });
+      setSize({ w, h });
+      setExpanded(true);
+    }
   }
 
   function onHeaderMouseDown(e: React.MouseEvent) {
@@ -456,6 +526,14 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
           </button>
           <button
             className="info-panel__icon-btn"
+            onClick={toggleExpand}
+            aria-label={expanded ? 'Riduci' : 'Espandi pannello'}
+            title={expanded ? (locale === 'it' ? 'Riduci' : 'Reduce') : (locale === 'it' ? 'Espandi' : 'Expand')}
+          >
+            {expanded ? '⤡' : '⤢'}
+          </button>
+          <button
+            className="info-panel__icon-btn"
             onClick={() => { setRecalled(event); onClose(); }}
             aria-label="Chiudi"
           >×</button>
@@ -482,6 +560,10 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
             className={`info-panel__tab${activeTab === 'chat' ? ' info-panel__tab--active' : ''}`}
             onClick={() => setActiveTab('chat')}
           >💬 {locale === 'it' ? 'Chiedi' : 'Ask'}</button>
+          <button
+            className={`info-panel__tab${activeTab === 'media' ? ' info-panel__tab--active' : ''}`}
+            onClick={() => setActiveTab('media')}
+          >🖼 Media</button>
         </div>
 
         {/* ── Wikipedia tab ── */}
@@ -512,6 +594,34 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
               </span>
             </div>
           </>
+        )}
+
+        {/* ── Media tab ── */}
+        {activeTab === 'media' && (
+          <div className="info-panel__media">
+            {mediaLoading && (
+              <div className="info-panel__loading">
+                <span className="info-panel__spinner" /> {locale === 'it' ? 'Caricamento immagini…' : 'Loading images…'}
+              </div>
+            )}
+            {!mediaLoading && mediaImages.length === 0 && (
+              <p style={{ fontSize: '0.72rem', color: '#888', padding: '12px 14px' }}>
+                {locale === 'it' ? 'Nessuna immagine disponibile.' : 'No images available.'}
+              </p>
+            )}
+            {!mediaLoading && mediaImages.length > 0 && (
+              <div className="info-panel__media-grid">
+                {mediaImages.map((url, i) => (
+                  <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="info-panel__media-item">
+                    <img src={url} alt="" loading="lazy" />
+                  </a>
+                ))}
+              </div>
+            )}
+            <p className="info-panel__license" style={{ padding: '8px 14px' }}>
+              {locale === 'it' ? 'Immagini da Wikimedia Commons' : 'Images from Wikimedia Commons'}
+            </p>
+          </div>
         )}
 
       </div>}{/* fine info-panel__scroll */}
