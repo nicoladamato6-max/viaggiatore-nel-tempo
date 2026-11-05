@@ -63,7 +63,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages project create test-viaggiatore-nel-tempo --production-branch staging
+          command: pages project create test-viaggiatore-nel-tempo --production-branch main
 
       - name: Verify bundle contains staging Supabase URL
         run: |
@@ -80,7 +80,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          # --branch staging: forza il deploy sul branch di produzione del progetto staging
-          # senza questo flag i push da feature/* creano solo preview URL, non aggiornano
-          # test-viaggiatore-nel-tempo.pages.dev
-          command: pages deploy dist --project-name test-viaggiatore-nel-tempo --branch staging --commit-dirty=true
+          # --branch main: il progetto test-viaggiatore-nel-tempo ha "main" come production branch
+          # (creato manualmente da CF dashboard con default main). Deployando su "main"
+          # si aggiorna test-viaggiatore-nel-tempo.pages.dev (il root URL dello staging).
+          command: pages deploy dist --project-name test-viaggiatore-nel-tempo --branch main --commit-dirty=true
