@@ -6,6 +6,7 @@ import { InfoPanel } from './components/InfoPanel';
 import { TimeControls } from './components/TimeControls';
 import { SearchBar } from './components/SearchBar';
 import { BridgeConsole } from './components/BridgeConsole';
+import { AIPanel } from './components/AIPanel';
 import { TimeMachine } from './components/TimeMachine';
 import { EraGuide } from './components/EraGuide';
 import { AuthModal } from './components/AuthModal';
@@ -265,8 +266,9 @@ function AppInner() {
   const [toast,          setToast]          = useState<string | null>(null);
   const [mobileTab,      setMobileTab]      = useState<MobileTab>('globe');
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
-  const [leftPanelOpen,  setLeftPanelOpen]  = useState(false);
-  const [aiPanelOpen,    setAiPanelOpen]    = useState(false);
+  const [leftPanelOpen,     setLeftPanelOpen]     = useState(false);
+  const [aiPanelOpen,       setAiPanelOpen]       = useState(false);
+  const [infoPanelVisible,  setInfoPanelVisible]  = useState(true);
 
   // Rileva redirect post-conferma email (#type=signup o #type=recovery nel hash)
   useEffect(() => {
@@ -387,6 +389,8 @@ function AppInner() {
 
   const [selectedEvent, setSelectedEvent] = useState<HistoricalEvent | null>(null);
   const [eraGuide,      setEraGuide]      = useState<EraLaunchData | null>(null);
+  // Re-show InfoPanel whenever a new entity is selected
+  useEffect(() => { if (selectedEvent) setInfoPanelVisible(true); }, [selectedEvent]);
   const [eraGuideOpen,  setEraGuideOpen]  = useState(false);
   const [mobileGlobeH, setMobileGlobeH] = useState(40); // vh
   const splitDragRef = useRef<{ startY: number; startH: number } | null>(null);
@@ -803,7 +807,7 @@ function AppInner() {
             onMouseDown={onSplitDown}
           />
         )}
-        {!isMobile && (
+        {!isMobile && infoPanelVisible && (
           <InfoPanel
             event={selectedEvent}
             locale={locale}
@@ -814,7 +818,15 @@ function AppInner() {
             events={ALL_SEARCHABLE}
             onSelectEvent={handleEventClick}
             leftPanelOpen={leftPanelOpen}
+            onHide={() => setInfoPanelVisible(false)}
           />
+        )}
+        {!isMobile && selectedEvent && !infoPanelVisible && (
+          <button
+            className="info-ghost"
+            onClick={() => setInfoPanelVisible(true)}
+            title={locale === 'it' ? 'Apri pannello INFO' : 'Open INFO panel'}
+          >INFO</button>
         )}
       </div>
 
@@ -839,6 +851,13 @@ function AppInner() {
           isCosmicView={altitudeCosmic}
           aiPanelOpen={aiPanelOpen}
           onToggleAIPanel={() => setAiPanelOpen(v => !v)}
+        />
+      )}
+      {!isMobile && aiPanelOpen && (
+        <AIPanel
+          event={selectedEvent}
+          locale={locale}
+          onClose={() => setAiPanelOpen(false)}
         />
       )}
     </>

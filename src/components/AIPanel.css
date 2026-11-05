@@ -1,0 +1,158 @@
+/* ── AI Panel — LED cockpit style ─────────────────────────────────────── */
+.aip {
+  --ap-bg:  #02080e;
+  --ap-t1:  #7ec8f5;
+  --ap-t2:  #4e7ea8;
+  --ap-t3:  #2d4f6e;
+  --ap-b12: rgba(26,144,255,.12);
+  --ap-b22: rgba(26,144,255,.22);
+  --ap-b45: rgba(26,144,255,.45);
+
+  position: fixed;
+  bottom: 115px;      /* above Bridge Console (~108px) + 7px gap */
+  right: 10px;
+  width: 210px;
+  max-height: 320px;
+  background: rgba(2,8,18,.96);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--ap-b45);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  z-index: 40;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  color: var(--ap-t1);
+  box-shadow: 0 -4px 24px rgba(26,144,255,.12), 0 0 0 .5px var(--ap-b22);
+}
+
+/* ── Header ──────────────────────────────────────── */
+.aip__hd {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 9px 5px;
+  border-bottom: 1px solid var(--ap-b22);
+  background: rgba(1,7,16,.8);
+  border-radius: 8px 8px 0 0;
+  flex-shrink: 0;
+}
+.aip__hd-ic    { font-size: 11px; color: rgba(80,160,255,.9); }
+.aip__hd-title { font-size: 7.5px; letter-spacing: .15em; flex: 1; color: var(--ap-t1); }
+
+.aip__close {
+  width: 16px; height: 16px;
+  border: 1px solid var(--ap-b22);
+  border-radius: 4px;
+  background: transparent !important;
+  color: var(--ap-t2);
+  font-size: 8px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+  transition: border-color .12s, color .12s;
+}
+.aip__close:hover {
+  background: transparent !important;
+  border-color: var(--ap-b45);
+  color: var(--ap-t1);
+  box-shadow: 0 0 4px rgba(26,144,255,.2);
+}
+
+/* ── Body (messages) ──────────────────────────────── */
+.aip__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 0;
+}
+.aip__hint {
+  font-size: 8px;
+  line-height: 1.65;
+  color: var(--ap-t3);
+  font-style: italic;
+}
+.aip__msg {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+.aip__msg--ai { flex-direction: row; }
+.aip__msg--user { flex-direction: row-reverse; }
+
+.aip__msg-ic {
+  font-size: 9px;
+  color: rgba(26,144,255,.7);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.aip__msg-txt {
+  font-size: 8px;
+  line-height: 1.65;
+  border-radius: 5px;
+  padding: 4px 7px;
+}
+.aip__msg--ai   .aip__msg-txt { color: var(--ap-t2); background: var(--ap-b12); }
+.aip__msg--user .aip__msg-txt { color: var(--ap-t1); background: rgba(26,144,255,.18); }
+.aip__msg--thinking { color: var(--ap-t3) !important; letter-spacing: 4px; animation: blink 1s infinite; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .3; }
+}
+
+/* ── Input row ──────────────────────────────────── */
+.aip__inp-row {
+  padding: 6px 9px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-top: 1px solid var(--ap-b22);
+  flex-shrink: 0;
+}
+.aip__inp-wrap {
+  flex: 1;
+  border: 1px solid var(--ap-b45);
+  border-radius: 5px;
+  background: #020c18;
+  display: flex;
+  align-items: center;
+  padding: 0 7px;
+  height: 22px;
+}
+.aip__inp {
+  width: 100%;
+  font-size: 7.5px;
+  outline: none;
+  background: #020c18 !important;
+  color: #7ec8f5 !important;
+  -webkit-text-fill-color: #7ec8f5 !important;
+  color-scheme: dark;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.aip__inp::placeholder  { color: #2d4f6e; }
+.aip__inp:disabled      { opacity: .5; }
+
+.aip__send {
+  width: 22px; height: 22px;
+  border: 1px solid var(--ap-b45);
+  border-radius: 50%;
+  background: var(--ap-b12) !important;
+  color: var(--ap-t1);
+  font-size: 9px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+  flex-shrink: 0;
+  transition: border-color .12s, color .12s, box-shadow .12s;
+}
+.aip__send:hover:not(:disabled) {
+  background: var(--ap-b12) !important;
+  border-color: rgba(26,144,255,.95);
+  color: #b8deff;
+  box-shadow: 0 0 5px rgba(26,144,255,.25);
+}
+.aip__send:disabled { opacity: .4; cursor: default; }

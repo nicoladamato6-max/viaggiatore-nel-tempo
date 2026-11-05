@@ -220,6 +220,7 @@ interface Props {
   events?:          HistoricalEvent[];
   onSelectEvent?:   (ev: HistoricalEvent) => void;
   leftPanelOpen?:   boolean;
+  onHide?:          () => void;
 }
 
 async function fetchWikiImages(slug: string, lang: string): Promise<string[]> {
@@ -263,7 +264,7 @@ async function fetchWikiImages(slug: string, lang: string): Promise<string[]> {
   } catch { return []; }
 }
 
-export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName, events = [], onSelectEvent, leftPanelOpen }: Props) {
+export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName, events = [], onSelectEvent, leftPanelOpen, onHide }: Props) {
   const [activeTab, setActiveTab] = useState<'info' | 'chat' | 'media'>('info');
   const [chatMsgs, setChatMsgs]   = useState<ChatMsg[]>([]);
   const [chatInput, setChatInput] = useState('');
@@ -532,6 +533,14 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
           >
             {expanded ? '⤡' : '⤢'}
           </button>
+          {onHide && (
+            <button
+              className="info-panel__icon-btn"
+              onClick={onHide}
+              aria-label={locale === 'it' ? 'Nascondi a tab' : 'Hide to tab'}
+              title={locale === 'it' ? 'Nascondi a tab INFO →' : 'Hide to INFO tab →'}
+            >→|</button>
+          )}
           <button
             className="info-panel__icon-btn"
             onClick={() => { setRecalled(event); onClose(); }}
