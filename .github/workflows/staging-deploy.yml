@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - staging
-      - 'feature/**'
   pull_request:
     branches: [staging]
 
@@ -80,7 +79,26 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          # --branch main: il progetto test-viaggiatore-nel-tempo ha "main" come production branch
-          # (creato manualmente da CF dashboard con default main). Deployando su "main"
-          # si aggiorna test-viaggiatore-nel-tempo.pages.dev (il root URL dello staging).
-          command: pages deploy dist --project-name test-viaggiatore-nel-tempo --branch main --commit-dirty=true
+          # NIENTE --branch: wrangler direct-upload senza --branch aggiorna il root URL
+          # (test-viaggiatore-nel-tempo.pages.dev). Con --branch crea solo un preview alias.
+          command: pages deploy dist --project-name test-viaggiatore-nel-tempo --commit-dirty=true
+
+      - name: Verify staging root URL is live
+        run: |
+          echo "⏳ Attendo propagazione CF Pages (15s)..."
+          sleep 15
+          HTTP=$(curl -s -o /dev/null -w "%{http_code}" https://test-viaggiatore-nel-tempo.pages.dev/app)
+          if [ "$HTTP" != "200" ]; then
+            echo "❌ Staging non risponde: HTTP $HTTP"
+            exit 1
+          fi
+          echo "✅ Staging risponde HTTP 200"
+          # Verifica che il bundle deployato contenga BridgeConsole (componente corrente)
+          BUNDLE_URL=$(curl -s https://test-viaggiatore-nel-tempo.pages.dev/app | grep -o 'src="/assets/index-[^"]*\.js"' | head -1 | sed 's/src="//;s/"//')
+          if [ -n "$BUNDLE_URL" ]; then
+            if curl -s "https://test-viaggiatore-nel-tempo.pages.dev$BUNDLE_URL" | grep -q "BridgeConsole"; then
+              echo "✅ Bundle contiene BridgeConsole — versione corretta deployata"
+            else
+              echo "⚠️  BridgeConsole non trovato nel bundle — verificare manualmente"
+            fi
+          fi
