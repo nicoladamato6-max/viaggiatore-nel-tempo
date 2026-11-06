@@ -172,8 +172,6 @@ interface Props {
   eraGuideName?:    string;
   events?:          HistoricalEvent[];
   onSelectEvent?:   (ev: HistoricalEvent) => void;
-  leftPanelOpen?:   boolean;
-  onHide?:          () => void;
 }
 
 async function fetchWikiImages(slug: string, lang: string): Promise<string[]> {
@@ -217,15 +215,19 @@ async function fetchWikiImages(slug: string, lang: string): Promise<string[]> {
   } catch { return []; }
 }
 
-export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName, leftPanelOpen, onHide }: Props) {
-  const [activeTab, setActiveTab] = useState<'info' | 'media'>('info');
-  const [minimized, setMinimized] = useState(false);
-  const [expanded,  setExpanded]  = useState(false);
-  const [mediaImages, setMediaImages] = useState<string[]>([]);
+export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName }: Props) {
+  const [activeTab,    setActiveTab]    = useState<'info' | 'media'>('info');
+  const [minimized,    setMinimized]    = useState(false);
+  const [mediaImages,  setMediaImages]  = useState<string[]>([]);
   const [mediaLoading, setMediaLoading] = useState(false);
-  const [recalled,  setRecalled]  = useState<HistoricalEvent | null>(null);
-  const [pos,       setPos]       = useState<{x: number; y: number} | null>(null);
-  const [size,      setSize]      = useState({ w: DEFAULT_W, h: DEFAULT_H });
+  const [recalled,     setRecalled]     = useState<HistoricalEvent | null>(null);
+  // Docking state
+  const [dockMode,     setDockMode]     = useState<'anchored' | 'float'>('anchored');
+  const [anchorWidth,  setAnchorWidth]  = useState(380);
+  const [visible,      setVisible]      = useState(false);
+  // Float state
+  const [pos,          setPos]          = useState<{x: number; y: number} | null>(null);
+  const [size,         setSize]         = useState({ w: DEFAULT_W, h: DEFAULT_H });
   const panelRef    = useRef<HTMLDivElement>(null);
   const wikiBodyRef = useRef<HTMLDivElement>(null);
   const dragging    = useRef(false);
@@ -245,11 +247,14 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
     }
   }, [body, wikiBase]);
 
-  // Nuova entità selezionata → apri pannello e pulisci recall
+  // Nuova entità → slide-in dal bordo destro
   useEffect(() => {
     if (event) {
       setRecalled(null);
       setMinimized(false);
+      setDockMode('anchored');
+      setVisible(false);
+      requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true)));
     }
   }, [event?.id]);
 
@@ -270,32 +275,30 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
       .finally(() => setMediaLoading(false));
   }, [activeTab, event?.wikipediaSlug, locale]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ── Drag header ──────────────────────────────────────────────────────────
-  function getDefaultPos() {
-    return {
-      x: Math.max(0, window.innerWidth - DEFAULT_W - 24),
-      y: 64,
-    };
+  // Ferma TTS quando cambia evento
+  useEffect(() => { stop(); }, [event?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Chiudi con animazione di slide-out ────────────────────────────────────
+  function closeWithAnim() {
+    setVisible(false);
+    setTimeout(() => { setRecalled(event); onClose(); }, 300);
   }
 
-  function toggleExpand() {
-    if (expanded) {
-      setExpanded(false);
-      setPos(null);
-      setSize({ w: DEFAULT_W, h: DEFAULT_H });
-    } else {
-      const w = Math.min(700, window.innerWidth - 80);
-      const h = Math.round(window.innerHeight * 0.72);
-      setPos({ x: Math.round((window.innerWidth - w) / 2), y: 56 });
-      setSize({ w, h });
-      setExpanded(true);
-    }
+  // ── Undock: da ancorato a floating ────────────────────────────────────────
+  function undock() {
+    const w = Math.min(500, window.innerWidth - 80);
+    const h = Math.round(window.innerHeight * 0.72);
+    setPos({ x: Math.max(0, window.innerWidth - w - 24), y: 56 });
+    setSize({ w, h });
+    setDockMode('float');
   }
 
+  // ── Drag header (solo float) ──────────────────────────────────────────────
   function onHeaderMouseDown(e: React.MouseEvent) {
+    if (dockMode !== 'float') return;
     if ((e.target as HTMLElement).closest('button')) return;
     e.preventDefault();
-    const current = pos ?? getDefaultPos();
+    const current = pos ?? { x: Math.max(0, window.innerWidth - DEFAULT_W - 24), y: 64 };
     dragging.current = true;
     startX.current   = e.clientX;
     startY.current   = e.clientY;
@@ -320,8 +323,9 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
     document.addEventListener('mouseup',   onUp);
   }
 
-  // ── Corner resize ─────────────────────────────────────────────────────────
+  // ── Corner resize (solo float) ────────────────────────────────────────────
   function onCornerMouseDown(e: React.MouseEvent) {
+    if (dockMode !== 'float') return;
     e.preventDefault();
     e.stopPropagation();
     resizing.current  = true;
@@ -348,46 +352,54 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
     document.addEventListener('mouseup',   onUp);
   }
 
-  // Ferma TTS quando cambia evento
-  useEffect(() => { stop(); }, [event?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+  // ── Left-edge resize (solo anchored) ──────────────────────────────────────
+  function onLeftResizeDown(e: React.MouseEvent) {
+    e.preventDefault();
+    const sx = e.clientX;
+    const sw = anchorWidth;
+    document.body.style.cursor     = 'col-resize';
+    document.body.style.userSelect = 'none';
+    function onMove(ev: MouseEvent) {
+      const delta = sx - ev.clientX; // dragging left = wider
+      setAnchorWidth(Math.max(280, Math.min(window.innerWidth * 0.8, sw + delta)));
+    }
+    function onUp() {
+      document.body.style.cursor     = '';
+      document.body.style.userSelect = '';
+      document.removeEventListener('mousemove', onMove);
+      document.removeEventListener('mouseup',   onUp);
+    }
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup',   onUp);
+  }
 
-  // Recall chip: visibile quando il pannello è stato chiuso (event=null) e c'è un'entità salvata
+  // Recall chip — visibile quando pannello chiuso
   if (!event) {
     if (!recalled) return null;
-    const recallLeft = leftPanelOpen ? LEFT_PANEL_W + 14 : 14;
     return (
       <button
         className="recall-chip"
-        style={{ left: recallLeft }}
+        style={{ right: 14 }}
         onClick={() => { onRecall?.(recalled); setRecalled(null); }}
         title={locale === 'it' ? 'Riapri il pannello' : 'Reopen panel'}
       >
-        <span className="recall-chip__arrow">→</span>
         <span className="recall-chip__name">{recalled.title}</span>
+        <span className="recall-chip__arrow">←</span>
       </button>
     );
   }
 
   const color = CATEGORY_COLORS[event.category];
-  const resolvedPos = pos ?? getDefaultPos();
 
-  return (
+  // ── Contenuto interno (comune a anchored e float) ─────────────────────────
+  const panelContent = (
     <>
+      {/* intestazione */}
       <div
-        ref={panelRef}
-        className={`info-panel${minimized ? ' info-panel--minimized' : ''}`}
-        style={{
-          position: 'fixed',
-          left: resolvedPos.x,
-          top:  resolvedPos.y,
-          width: size.w,
-          height: minimized ? 38 : size.h,
-          zIndex: 25,
-        }}
+        className="info-panel__header"
+        onMouseDown={onHeaderMouseDown}
+        style={{ cursor: dockMode === 'float' ? 'move' : 'default' }}
       >
-
-      {/* intestazione — drag handle */}
-      <div className="info-panel__header" onMouseDown={onHeaderMouseDown}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 2, overflow: 'hidden', flex: 1 }}>
           <span
             className="category-badge"
@@ -406,6 +418,21 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
           )}
         </div>
         <div style={{ display: 'flex', gap: 4, alignItems: 'center', flexShrink: 0 }}>
+          {/* Undock / Re-anchor */}
+          {dockMode === 'anchored' ? (
+            <button
+              className="info-panel__icon-btn"
+              onClick={undock}
+              title={locale === 'it' ? 'Sblocca pannello' : 'Undock panel'}
+            >⊡</button>
+          ) : (
+            <button
+              className="info-panel__icon-btn"
+              onClick={() => { setDockMode('anchored'); setPos(null); }}
+              title={locale === 'it' ? 'Ancora a destra' : 'Dock to right'}
+            >⊟</button>
+          )}
+          {/* TTS */}
           {window.speechSynthesis && !minimized && (
             <button
               className={`info-panel__icon-btn${speaking ? ' tts-active' : ''}`}
@@ -422,6 +449,7 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
               {speaking ? '⏹' : '🔊'}
             </button>
           )}
+          {/* Minimizza */}
           <button
             className="info-panel__icon-btn"
             onClick={() => setMinimized(v => !v)}
@@ -430,53 +458,47 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
           >
             {minimized ? '▲' : '▬'}
           </button>
-          <button
-            className="info-panel__icon-btn"
-            onClick={toggleExpand}
-            aria-label={expanded ? 'Riduci' : 'Espandi pannello'}
-            title={expanded ? (locale === 'it' ? 'Riduci' : 'Reduce') : (locale === 'it' ? 'Espandi' : 'Expand')}
-          >
-            {expanded ? '⤡' : '⤢'}
-          </button>
-          {onHide && (
+          {/* Espandi (solo float) */}
+          {dockMode === 'float' && (
             <button
               className="info-panel__icon-btn"
-              onClick={onHide}
-              aria-label={locale === 'it' ? 'Nascondi a tab' : 'Hide to tab'}
-              title={locale === 'it' ? 'Nascondi a tab INFO →' : 'Hide to INFO tab →'}
-            >→|</button>
+              onClick={() => {
+                const w = Math.min(700, window.innerWidth - 80);
+                const h = Math.round(window.innerHeight * 0.72);
+                setPos({ x: Math.round((window.innerWidth - w) / 2), y: 56 });
+                setSize({ w, h });
+              }}
+              title={locale === 'it' ? 'Espandi' : 'Expand'}
+            >⤢</button>
           )}
+          {/* Chiudi */}
           <button
             className="info-panel__icon-btn"
-            onClick={() => { setRecalled(event); onClose(); }}
+            onClick={closeWithAnim}
             aria-label="Chiudi"
           >×</button>
         </div>
       </div>
 
-      {/* meta + tabs: nascoste quando minimizzato */}
+      {/* meta + tabs */}
       {!minimized && <div className="info-panel__scroll">
-
-        {/* meta */}
         <div className="info-panel__meta">
           <h2 className="info-panel__title">{event.title}</h2>
           <div className="info-panel__year">{formatYear(event.year)}</div>
           <p className="info-panel__desc">{event.description}</p>
         </div>
 
-        {/* tab bar */}
         <div className="info-panel__tabs">
           <button
             className={`info-panel__tab${activeTab === 'info' ? ' info-panel__tab--active' : ''}`}
             onClick={() => setActiveTab('info')}
-          >📖 {locale === 'it' ? 'Wikipedia' : 'Wikipedia'}</button>
+          >📖 Wikipedia</button>
           <button
             className={`info-panel__tab${activeTab === 'media' ? ' info-panel__tab--active' : ''}`}
             onClick={() => setActiveTab('media')}
           >🖼 Media</button>
         </div>
 
-        {/* ── Wikipedia tab ── */}
         {activeTab === 'info' && (
           <>
             <div className="info-panel__wiki-wrap">
@@ -506,7 +528,6 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
           </>
         )}
 
-        {/* ── Media tab ── */}
         {activeTab === 'media' && (
           <div className="info-panel__media">
             {mediaLoading && (
@@ -533,19 +554,43 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
             </p>
           </div>
         )}
+      </div>}
 
-      </div>}{/* fine info-panel__scroll */}
-
-      {/* Corner resize handle */}
-      {!minimized && (
-        <div
-          className="info-panel__corner-resize"
-          onMouseDown={onCornerMouseDown}
-          title="Ridimensiona"
-        />
+      {/* Corner resize (solo float) */}
+      {dockMode === 'float' && !minimized && (
+        <div className="info-panel__corner-resize" onMouseDown={onCornerMouseDown} title="Ridimensiona" />
       )}
-
-      </div>
     </>
+  );
+
+  // ── Anchored mode ─────────────────────────────────────────────────────────
+  if (dockMode === 'anchored') {
+    return (
+      <div
+        ref={panelRef}
+        className={`info-panel info-panel--anchored${visible ? ' info-panel--visible' : ''}${minimized ? ' info-panel--minimized' : ''}`}
+        style={{ width: anchorWidth }}
+      >
+        <div className="info-panel__left-resize" onMouseDown={onLeftResizeDown} />
+        {panelContent}
+      </div>
+    );
+  }
+
+  // ── Float mode ────────────────────────────────────────────────────────────
+  const resolvedPos = pos ?? { x: Math.max(0, window.innerWidth - DEFAULT_W - 24), y: 64 };
+  return (
+    <div
+      ref={panelRef}
+      className={`info-panel info-panel--float${minimized ? ' info-panel--minimized' : ''}`}
+      style={{
+        left:   resolvedPos.x,
+        top:    resolvedPos.y,
+        width:  size.w,
+        height: minimized ? 38 : size.h,
+      }}
+    >
+      {panelContent}
+    </div>
   );
 }

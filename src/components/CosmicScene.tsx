@@ -1102,14 +1102,18 @@ function CameraRig({ navKeysRef, yawRef, pitchRef, jumpRef, cameraPosRef, hudAlt
     // Thrust: incremento fine — velocità inerziale (nessun attrito al rilascio)
     // Tastiera: W / Numpad+ = avanti, S / Numpad- = indietro
     const thrust = Math.max(1e-10, dist * 0.0002) * delta;
+    const hyperThrust = thrust * 100;
 
     if (keys.has('KeyW') || keys.has('NumpadAdd'))      velRef.current.addScaledVector(dir,  thrust);
     if (keys.has('KeyS') || keys.has('NumpadSubtract')) velRef.current.addScaledVector(dir, -thrust);
+    if (keys.has('HyperFwd'))  velRef.current.addScaledVector(dir,  hyperThrust);
+    if (keys.has('HyperBack')) velRef.current.addScaledVector(dir, -hyperThrust);
     if (keys.has('Space'))                          velRef.current.set(0, 0, 0);
 
-    // Cap velocità massima (20% della distanza/s) per evitare runaway
+    // Cap velocità: 20% normale, 200% in iper-velocità
+    const isHyper    = keys.has('HyperFwd') || keys.has('HyperBack');
     const curSpd     = velRef.current.length();
-    const maxAllowed = Math.max(1e-10, dist * 0.2);
+    const maxAllowed = Math.max(1e-10, dist * (isHyper ? 2.0 : 0.2));
     if (curSpd > maxAllowed) velRef.current.multiplyScalar(maxAllowed / curSpd);
 
     const wd = wheelRef.current;
@@ -1551,8 +1555,28 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
       const t = e.target as HTMLElement | null;
       return t?.tagName === 'INPUT' || t?.tagName === 'TEXTAREA' || !!t?.isContentEditable;
     };
-    const dn = (e: KeyboardEvent) => { if (!inInput(e)) navKeysRef.current.add(e.code); };
-    const up = (e: KeyboardEvent) => { if (!inInput(e)) navKeysRef.current.delete(e.code); };
+    const dn = (e: KeyboardEvent) => {
+      if (inInput(e)) return;
+      navKeysRef.current.add(e.code);
+      // Shift+W / Shift+S → iper-velocità
+      if (e.shiftKey && e.code === 'KeyW') navKeysRef.current.add('HyperFwd');
+      if (e.shiftKey && e.code === 'KeyS') navKeysRef.current.add('HyperBack');
+      // Dispatch dai pulsanti della console
+      if (e.code === 'HyperFwd') navKeysRef.current.add('HyperFwd');
+      if (e.code === 'HyperBack') navKeysRef.current.add('HyperBack');
+    };
+    const up = (e: KeyboardEvent) => {
+      if (inInput(e)) return;
+      navKeysRef.current.delete(e.code);
+      if (e.code === 'KeyW')    navKeysRef.current.delete('HyperFwd');
+      if (e.code === 'KeyS')    navKeysRef.current.delete('HyperBack');
+      if (e.code === 'HyperFwd')  navKeysRef.current.delete('HyperFwd');
+      if (e.code === 'HyperBack') navKeysRef.current.delete('HyperBack');
+      if (e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+        navKeysRef.current.delete('HyperFwd');
+        navKeysRef.current.delete('HyperBack');
+      }
+    };
     window.addEventListener('keydown', dn);
     window.addEventListener('keyup',   up);
     return () => { window.removeEventListener('keydown', dn); window.removeEventListener('keyup', up); };

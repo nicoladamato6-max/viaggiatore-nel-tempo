@@ -1,11 +1,30 @@
-import { useState, useRef, useEffect } from 'react';
-import { type HistoricalEvent, type Locale } from '../types';
+import { useState, useRef, useEffect, useMemo } from 'react';
+import { type HistoricalEvent, type Locale, CATEGORY_COLORS } from '../types';
 import './AIPanel.css';
 
 interface Props {
-  event:   HistoricalEvent | null;
-  locale:  Locale;
-  onClose: () => void;
+  event:          HistoricalEvent | null;
+  locale:         Locale;
+  onClose:        () => void;
+  events?:        HistoricalEvent[];
+  onSelectEvent?: (ev: HistoricalEvent) => void;
+}
+
+function findCorrelations(ev: HistoricalEvent, all: HistoricalEvent[]): HistoricalEvent[] {
+  return all
+    .filter(e => e.id !== ev.id && e.category !== ev.category && !e.isCosmic)
+    .map(e => {
+      const yearDiff = Math.abs(e.year - ev.year);
+      let score = 1 / (1 + yearDiff / 500);
+      if (ev.lat != null && ev.lng != null && e.lat != null && e.lng != null) {
+        const d = Math.hypot(e.lat - ev.lat, e.lng - ev.lng);
+        score += 0.5 / (1 + d / 20);
+      }
+      return { e, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 6)
+    .map(x => x.e);
 }
 
 interface Msg { role: 'user' | 'ai'; text: string }
@@ -31,11 +50,16 @@ async function askEntity(
   return json.data.answer;
 }
 
-export function AIPanel({ event, locale, onClose }: Props) {
+export function AIPanel({ event, locale, onClose, events = [], onSelectEvent }: Props) {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Msg[]>([]);
   const [busy, setBusy] = useState(false);
   const bodyRef = useRef<HTMLDivElement>(null);
+
+  const correlations = useMemo(
+    () => (event && events.length > 0 ? findCorrelations(event, events) : []),
+    [event?.id, events], // eslint-disable-line react-hooks/exhaustive-deps
+  );
 
   useEffect(() => {
     if (bodyRef.current) bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
@@ -104,6 +128,25 @@ export function AIPanel({ event, locale, onClose }: Props) {
           </div>
         )}
       </div>
+
+      {correlations.length > 0 && (
+        <div className="aip__tags">
+          <span className="aip__tags-lbl">
+            {locale === 'it' ? 'Correlazioni:' : 'Related:'}
+          </span>
+          {correlations.map(e => (
+            <button
+              key={e.id}
+              className="aip__tag"
+              style={{ '--tag-clr': CATEGORY_COLORS[e.category] } as React.CSSProperties}
+              onClick={() => onSelectEvent?.(e)}
+              title={e.description}
+            >
+              {e.title}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="aip__inp-row">
         <div className="aip__inp-wrap">

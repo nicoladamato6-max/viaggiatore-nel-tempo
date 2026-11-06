@@ -62,6 +62,7 @@ interface Props {
   onThrustEnd?: () => void;
   showHoloOverlays?: boolean;
   onToggleHoloOverlays?: () => void;
+  onHyperDpad?: (dir: 'in' | 'out') => void;
 }
 
 const CATEGORIES = Object.keys(CATEGORY_LABELS) as EventCategory[];
@@ -83,6 +84,7 @@ export function BridgeConsole({
   isCosmicView,
   onThrustStart, onThrustEnd,
   showHoloOverlays, onToggleHoloOverlays,
+  onHyperDpad,
 }: Props) {
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
@@ -231,6 +233,10 @@ export function BridgeConsole({
                       onDown={onThrustStart} onUp={onThrustEnd} />
                     <CosmicBtn code="Space" label="⏹" title="Stop" />
                     <CosmicBtn code="KeyS" label="⬇" title="Decelera" />
+                    <div className="bc__dpad-sep" />
+                    <CosmicBtn code="HyperFwd" label="⚡" title="Iper-accelera 100×"
+                      onDown={onThrustStart} onUp={onThrustEnd} />
+                    <CosmicBtn code="HyperBack" label="⚡" title="Iper-decelera 100×" />
                   </>
                 ) : (
                   <>
@@ -239,6 +245,11 @@ export function BridgeConsole({
                     <button className="bc__dpad-btn" title="Stop" onClick={() => {}}>⏹</button>
                     <button className="bc__dpad-btn" title="Zoom out"
                       onClick={() => onDpad?.('out')}>⬇</button>
+                    <div className="bc__dpad-sep" />
+                    <button className="bc__dpad-btn" title="Iper-zoom in (2×)"
+                      onClick={() => onHyperDpad?.('in')}>⚡⬆</button>
+                    <button className="bc__dpad-btn" title="Iper-zoom out (2×)"
+                      onClick={() => onHyperDpad?.('out')}>⚡⬇</button>
                   </>
                 )}
               </div>

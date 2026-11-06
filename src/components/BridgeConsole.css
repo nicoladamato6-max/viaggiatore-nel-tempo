@@ -55,6 +55,7 @@
 .bc__sbar-lbl { color: var(--bc-t3); }
 .bc__sbar-val { color: var(--bc-t1); font-size: 10px; }
 .bc__sbar-subera { font-size: 10px; white-space: nowrap; }
+.bc__dpad-sep { width: 100%; height: 1px; background: rgba(0,220,190,0.15); margin: 2px 0; }
 
 /* ── Toggle button ── */
 .bc__toggle {

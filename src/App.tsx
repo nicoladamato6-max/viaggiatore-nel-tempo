@@ -543,6 +543,12 @@ function AppInner() {
     setFlyTo({ kind: 'geo', lat: newLat, lng: newLng, ts: Date.now(), range: newAlt * 1000 });
   }, []);
 
+  const handleHyperDpad = useCallback((dir: 'in' | 'out') => {
+    const { lat, lng, altKm } = cameraPosRef.current;
+    const newAlt = dir === 'in' ? Math.max(100, altKm * 0.25) : Math.min(50_000, altKm * 4);
+    setFlyTo({ kind: 'geo', lat, lng, ts: Date.now(), range: newAlt * 1000 });
+  }, []);
+
   // Click diretto su un'entità nel globo (La telecamera si muove già dentro GlobeView)
   const handleEventClick = useCallback((event: HistoricalEvent) => {
     setSelectedEvent(event);
@@ -856,8 +862,6 @@ function AppInner() {
             eraGuideName={eraGuide?.eraName}
             events={ALL_SEARCHABLE}
             onSelectEvent={handleEventClick}
-            leftPanelOpen={leftPanelOpen}
-            onHide={() => setInfoPanelVisible(false)}
           />
         )}
         {!isMobile && selectedEvent && !infoPanelVisible && (
@@ -901,6 +905,7 @@ function AppInner() {
           onThrustEnd={() => setThrustActive(false)}
           showHoloOverlays={showHoloOverlays}
           onToggleHoloOverlays={() => setShowHoloOverlays(v => !v)}
+          onHyperDpad={handleHyperDpad}
         />
       )}
       {!isMobile && aiPanelOpen && (
@@ -908,6 +913,8 @@ function AppInner() {
           event={selectedEvent}
           locale={locale}
           onClose={() => setAiPanelOpen(false)}
+          events={ALL_SEARCHABLE}
+          onSelectEvent={handleSearchSelect}
         />
       )}
     </>
