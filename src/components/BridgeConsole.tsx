@@ -12,6 +12,23 @@ import {
 import { type Period, MACRO_ERAS, SUBCATEGORIES, assignLanes } from '../data/historicalPeriods';
 import './BridgeConsole.css';
 
+// Estratto fuori dal componente per stabilità del tipo React (evita unmount/remount ad ogni render)
+function CosmicBtn({ code, label, title: t }: { code: string; label: string; title?: string }) {
+  const kdown = (c: string) => window.dispatchEvent(new KeyboardEvent('keydown', { code: c, bubbles: true }));
+  const kup   = (c: string) => window.dispatchEvent(new KeyboardEvent('keyup',   { code: c, bubbles: true }));
+  return (
+    <button
+      className="bc__dpad-btn"
+      title={t}
+      onPointerDown={e => { e.preventDefault(); kdown(code); }}
+      onPointerUp={() => kup(code)}
+      onPointerLeave={() => kup(code)}
+    >
+      {label}
+    </button>
+  );
+}
+
 interface Props {
   sliderValue: number;
   onSliderChange: (v: number) => void;
@@ -160,61 +177,40 @@ export function BridgeConsole({
           </div>
 
           {/* D-pad navigation — cosmic: keyboard events hold-to-press; earth: onDpad click */}
-          {onDpad && (() => {
-            // Dispatch keyboard events for CosmicScene's window listener
-            const kdown = (code: string) => window.dispatchEvent(new KeyboardEvent('keydown', { code, bubbles: true }));
-            const kup   = (code: string) => window.dispatchEvent(new KeyboardEvent('keyup',   { code, bubbles: true }));
-
-            // Cosmic hold-button: fires key while pointer is held
-            function CosmicBtn({ code, label, title: t }: { code: string; label: string; title?: string }) {
-              return (
-                <button
-                  className="bc__dpad-btn"
-                  title={t}
-                  onPointerDown={e => { e.preventDefault(); kdown(code); }}
-                  onPointerUp={() => kup(code)}
-                  onPointerLeave={() => kup(code)}
-                >
-                  {label}
-                </button>
-              );
-            }
-
-            return (
-              <div className="bc__dpad">
-                {/* Direction grid (3×3) */}
-                <div className="bc__dpad-dir">
-                  <div className="bc__dpad-row">
-                    {isCosmicView
-                      ? <CosmicBtn code="KeyQ" label="▲" title="Ruota su" />
-                      : <button className="bc__dpad-btn" onClick={() => onDpad('n')} title="Nord">▲</button>}
-                  </div>
-                  <div className="bc__dpad-row bc__dpad-row--mid">
-                    {isCosmicView
-                      ? <CosmicBtn code="KeyA" label="◀" title="Ruota sinistra" />
-                      : <button className="bc__dpad-btn" onClick={() => onDpad('w')} title="Ovest">◀</button>}
-                    <div className="bc__dpad-center" />
-                    {isCosmicView
-                      ? <CosmicBtn code="KeyD" label="▶" title="Ruota destra" />
-                      : <button className="bc__dpad-btn" onClick={() => onDpad('e')} title="Est">▶</button>}
-                  </div>
-                  <div className="bc__dpad-row">
-                    {isCosmicView
-                      ? <CosmicBtn code="KeyE" label="▼" title="Ruota giù" />
-                      : <button className="bc__dpad-btn" onClick={() => onDpad('s')} title="Sud">▼</button>}
-                  </div>
+          {onDpad && (
+            <div className="bc__dpad">
+              {/* Direction grid (3×3) */}
+              <div className="bc__dpad-dir">
+                <div className="bc__dpad-row">
+                  {isCosmicView
+                    ? <CosmicBtn code="KeyQ" label="▲" title="Ruota su" />
+                    : <button className="bc__dpad-btn" onClick={() => onDpad('n')} title="Nord">▲</button>}
                 </div>
-                {/* Thrust column — solo in modalità cosmica */}
-                {isCosmicView && (
-                  <div className="bc__dpad-thrust">
-                    <CosmicBtn code="KeyW" label="⬆" title="Accelera" />
-                    <CosmicBtn code="Space" label="⏹" title="Stop" />
-                    <CosmicBtn code="KeyS" label="⬇" title="Decelera" />
-                  </div>
-                )}
+                <div className="bc__dpad-row bc__dpad-row--mid">
+                  {isCosmicView
+                    ? <CosmicBtn code="KeyA" label="◀" title="Ruota sinistra" />
+                    : <button className="bc__dpad-btn" onClick={() => onDpad('w')} title="Ovest">◀</button>}
+                  <div className="bc__dpad-center" />
+                  {isCosmicView
+                    ? <CosmicBtn code="KeyD" label="▶" title="Ruota destra" />
+                    : <button className="bc__dpad-btn" onClick={() => onDpad('e')} title="Est">▶</button>}
+                </div>
+                <div className="bc__dpad-row">
+                  {isCosmicView
+                    ? <CosmicBtn code="KeyE" label="▼" title="Ruota giù" />
+                    : <button className="bc__dpad-btn" onClick={() => onDpad('s')} title="Sud">▼</button>}
+                </div>
               </div>
-            );
-          })()}
+              {/* Thrust column — solo in modalità cosmica */}
+              {isCosmicView && (
+                <div className="bc__dpad-thrust">
+                  <CosmicBtn code="KeyW" label="⬆" title="Accelera" />
+                  <CosmicBtn code="Space" label="⏹" title="Stop" />
+                  <CosmicBtn code="KeyS" label="⬇" title="Decelera" />
+                </div>
+              )}
+            </div>
+          )}
 
           {/* AI — Assistente di viaggio AI */}
           <button
