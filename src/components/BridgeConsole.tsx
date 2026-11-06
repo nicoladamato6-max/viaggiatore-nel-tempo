@@ -9,7 +9,7 @@ import {
   ENTITY_TYPE_LABELS,
   ENTITY_TYPE_COLORS,
 } from '../types';
-import { type Period, MACRO_ERAS, SUBCATEGORIES, assignLanes } from '../data/historicalPeriods';
+import { type Period, MACRO_ERAS, SUBCATEGORIES, assignLanes, getActivePeriods } from '../data/historicalPeriods';
 import './BridgeConsole.css';
 
 // Estratto fuori dal componente per stabilità del tipo React (evita unmount/remount ad ogni render)
@@ -123,6 +123,8 @@ export function BridgeConsole({
     ? `${Math.round(cesiumAltKm).toLocaleString('it')} km`
     : '—';
 
+  const activePeriods = useMemo(() => getActivePeriods(currentYear), [currentYear]);
+
   return (
     <div className={`bc${open ? '' : ' bc--closed'}`}>
 
@@ -136,6 +138,17 @@ export function BridgeConsole({
         <span className="bc__sep">|</span>
         <span className="bc__sbar-lbl">ERA</span>
         <span className="bc__sbar-val" style={{ color: era.color }}>{era.label}</span>
+        {activePeriods.length > 0 && (
+          <>
+            <span className="bc__sep">|</span>
+            {activePeriods.map((p, i) => (
+              <span key={p.name} className="bc__sbar-subera">
+                {i > 0 && <span className="bc__sep bc__sep--dot">·</span>}
+                <span style={{ color: p.color }}>{p.name}</span>
+              </span>
+            ))}
+          </>
+        )}
       </div>
 
       {/* ── Toggle ── */}

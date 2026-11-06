@@ -51,8 +51,10 @@
 
 .bc__sbar-txt { color: var(--bc-t2); letter-spacing: .1em; }
 .bc__sep      { color: var(--bc-t3); }
+.bc__sep--dot { margin: 0 3px; }
 .bc__sbar-lbl { color: var(--bc-t3); }
 .bc__sbar-val { color: var(--bc-t1); font-size: 10px; }
+.bc__sbar-subera { font-size: 10px; white-space: nowrap; }
 
 /* ── Toggle button ── */
 .bc__toggle {
