@@ -78,6 +78,7 @@ export type EraGuideCategory = 'storia' | 'arte' | 'musica' | 'scienza' | 'filos
 export interface EraGuideItem {
   text: string;
   cat: EraGuideCategory;
+  primaryEntity?: string; // titolo esatto dell'entità principale per questa esperienza (apre InfoPanel al click sull'intera riga)
 }
 
 export interface EraLaunchData {

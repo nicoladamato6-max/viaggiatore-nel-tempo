@@ -150,7 +150,7 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
   }
 
   // Pre-compute entity links for all items — must be before early return (hooks)
-  const top5Links = useMemo(() => {
+  const itemLinks = useMemo(() => {
     if (!data) return [];
     return data.briefing.items.map(item => findEntityLinks(item.text, events));
   }, [data, events]);
@@ -160,19 +160,34 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
   const it = data.locale === 'it';
   const { briefing, eraName, eraYear, originLat, originLng } = data;
 
-  function handleItemClick(itemText: string, itemIndex: number) {
-    const links = top5Links[itemIndex] ?? [];
-    // Seleziona la prima entità trovata nel testo — questo apre l'InfoPanel
-    const firstEntity = links[0]?.event ?? null;
-    const parsedYear = firstEntity?.year ?? parseYear(itemText) ?? eraYear;
+  function handleItemClick(item: typeof briefing.items[0], itemIndex: number) {
+    const links = itemLinks[itemIndex] ?? [];
+
+    // 1. Priorità: primaryEntity esplicita nel dato (titolo esatto dell'esperienza come concetto)
+    let primaryEv: HistoricalEvent | null = null;
+    if (item.primaryEntity) {
+      const needle = item.primaryEntity.toLowerCase();
+      primaryEv = events.find(e => e.title.toLowerCase() === needle) ?? null;
+    }
+
+    // 2. Fallback: entità con il match più LUNGO nel testo
+    //    (match lungo = entità più specifica = più probabile soggetto dell'esperienza)
+    if (!primaryEv && links.length > 0) {
+      primaryEv = links.reduce<typeof links[0] | null>(
+        (best, cur) => (!best || cur.phrase.length > best.phrase.length ? cur : best),
+        null,
+      )?.event ?? null;
+    }
+
+    const parsedYear = primaryEv?.year ?? parseYear(item.text) ?? eraYear;
     const flyTo: FlyTarget | undefined =
-      firstEntity && firstEntity.lat != null && firstEntity.lng != null
-        ? { kind: 'geo', lat: firstEntity.lat, lng: firstEntity.lng, ts: Date.now(), range: 1_800_000 }
+      primaryEv && primaryEv.lat != null && primaryEv.lng != null
+        ? { kind: 'geo', lat: primaryEv.lat, lng: primaryEv.lng, ts: Date.now(), range: 1_800_000 }
         : originLat != null && originLng != null
           ? { kind: 'geo', lat: originLat, lng: originLng, ts: Date.now(), range: 1_800_000 }
           : undefined;
     onNavigate({ year: parsedYear, flyTo });
-    if (firstEntity) onSelectEvent?.(firstEntity);
+    if (primaryEv) onSelectEvent?.(primaryEv);
   }
 
   function handleEntityClick(ev: HistoricalEvent, e: React.MouseEvent) {
@@ -317,7 +332,7 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
               <li key={i}>
                 <div
                   className="era-guide__top5-item"
-                  onClick={() => handleItemClick(item.text, i)}
+                  onClick={() => handleItemClick(item, i)}
                   title={it ? 'Naviga a questo momento' : 'Navigate to this moment'}
                 >
                   <span className="era-guide__item-cat" title={item.cat}>
@@ -325,7 +340,7 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
                   </span>
                   <span className="era-guide__top5-arrow">→</span>
                   <span className="era-guide__top5-text">
-                    {renderAnnotatedText(item.text, top5Links[i] ?? [], handleEntityClick)}
+                    {renderAnnotatedText(item.text, itemLinks[i] ?? [], handleEntityClick)}
                   </span>
                 </div>
               </li>
