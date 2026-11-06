@@ -11170,7 +11170,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Nome storico di Tokyo durante il periodo Edo (1603-1868). Nel XVII secolo era già la città più popolosa del mondo con oltre un milione di abitanti, invisibile all'Europa per le politiche di isolamento giapponese."
+    "description": "Nome storico di Tokyo durante il periodo Edo (1603-1868). Nel XVII secolo era già la città più popolosa del mondo con oltre un milione di abitanti, invisibile all'Europa per le politiche di isolamento giapponese.",
+    "wikipediaSlug": "Edo"
   },
   {
     "id": "cappella-sistina-affresco",
@@ -11181,7 +11182,8 @@
     "category": "arte",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Cappella papale nel Palazzo Apostolico del Vaticano, dipinta da Michelangelo tra il 1508 e il 1512 per Papa Giulio II. Il soffitto con la Creazione di Adamo e il Giudizio Universale sono capolavori assoluti."
+    "description": "Cappella papale nel Palazzo Apostolico del Vaticano, dipinta da Michelangelo tra il 1508 e il 1512 per Papa Giulio II. Il soffitto con la Creazione di Adamo e il Giudizio Universale sono capolavori assoluti.",
+    "wikipediaSlug": "Cappella_Sistina"
   },
   {
     "id": "calcio-fiorentino-1530",
@@ -11192,7 +11194,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Gioco di squadra violento nato a Firenze nel XVI secolo, antenato del calcio moderno. Ventisei giocatori per squadra, nessun arbitro, nessun limite di tempo: si disputava in Piazza Santa Croce dal 1530."
+    "description": "Gioco di squadra violento nato a Firenze nel XVI secolo, antenato del calcio moderno. Ventisei giocatori per squadra, nessun arbitro, nessun limite di tempo: si disputava in Piazza Santa Croce dal 1530.",
+    "wikipediaSlug": "Calcio_Fiorentino"
   },
   {
     "id": "torricelli-barometro",
@@ -11203,7 +11206,8 @@
     "category": "scienza",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Fisico e matematico italiano (1608-1647), inventore del barometro nel 1643. Dimostrò che l'aria ha peso e che esercita pressione, fondando la pneumatica e creando il primo strumento meteorologico."
+    "description": "Fisico e matematico italiano (1608-1647), inventore del barometro nel 1643. Dimostrò che l'aria ha peso e che esercita pressione, fondando la pneumatica e creando il primo strumento meteorologico.",
+    "wikipediaSlug": "Evangelista_Torricelli"
   },
   {
     "id": "royal-society-londra",
@@ -11214,7 +11218,8 @@
     "category": "scienza",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "La più antica accademia scientifica del mondo anglosassone, fondata a Londra nel 1660. Con il motto \"Nullius in verba\" (\"non credere a parole d'altri\"), promuove la verifica sperimentale delle teorie."
+    "description": "La più antica accademia scientifica del mondo anglosassone, fondata a Londra nel 1660. Con il motto \"Nullius in verba\" (\"non credere a parole d'altri\"), promuove la verifica sperimentale delle teorie.",
+    "wikipediaSlug": "Royal_Society"
   },
   {
     "id": "nicola-stenone-stratigrafia",
@@ -11225,7 +11230,8 @@
     "category": "scienza",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Geologo e anatomista danese (1638-1686) che nel 1669 a Firenze stabilì i principi fondamentali della stratigrafia: gli strati più profondi sono più antichi, ponendo le basi della geologia moderna."
+    "description": "Geologo e anatomista danese (1638-1686) che nel 1669 a Firenze stabilì i principi fondamentali della stratigrafia: gli strati più profondi sono più antichi, ponendo le basi della geologia moderna.",
+    "wikipediaSlug": "Nicola_Stenone"
   },
   {
     "id": "pace-di-westfalia",
@@ -11236,7 +11242,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Trattati di pace firmati nel 1648 a Münster e Osnabrück che conclusero la Guerra dei Trent'anni. Fondarono il moderno sistema internazionale di stati sovrani con principio di non ingerenza."
+    "description": "Trattati di pace firmati nel 1648 a Münster e Osnabrück che conclusero la Guerra dei Trent'anni. Fondarono il moderno sistema internazionale di stati sovrani con principio di non ingerenza.",
+    "wikipediaSlug": "Pace_di_Westfalia"
   },
   {
     "id": "versailles-palazzo",
@@ -11247,7 +11254,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Il palazzo di Luigi XIV a Versailles, la più grande reggia d'Europa con 700 stanze e 10.000 residenti. Costruito tra il 1661 e il 1710, divenne il modello per le monarchie assolute di tutta Europa."
+    "description": "Il palazzo di Luigi XIV a Versailles, la più grande reggia d'Europa con 700 stanze e 10.000 residenti. Costruito tra il 1661 e il 1710, divenne il modello per le monarchie assolute di tutta Europa.",
+    "wikipediaSlug": "Versailles"
   },
   {
     "id": "potosi-miniere-argento",
@@ -11258,7 +11266,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Monte boliviano che dal 1545 fu il più ricco giacimento d'argento del mondo. Produsse oltre 40.000 tonnellate di argento in tre secoli, finanziando l'impero spagnolo con il lavoro forzato di minatori indigeni."
+    "description": "Monte boliviano che dal 1545 fu il più ricco giacimento d'argento del mondo. Produsse oltre 40.000 tonnellate di argento in tre secoli, finanziando l'impero spagnolo con il lavoro forzato di minatori indigeni.",
+    "wikipediaSlug": "Cerro_Rico_di_Potosí"
   },
   {
     "id": "cupola-brunelleschi-firenze",
@@ -11269,7 +11278,8 @@
     "category": "arte",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "La cupola della Cattedrale di Santa Maria del Fiore a Firenze, progettata da Filippo Brunelleschi. Consacrata nel 1436, è alta 107 metri e fu realizzata senza centina in legno grazie a un sistema rivoluzionario di mattoni a spinapesce."
+    "description": "La cupola della Cattedrale di Santa Maria del Fiore a Firenze, progettata da Filippo Brunelleschi. Consacrata nel 1436, è alta 107 metri e fu realizzata senza centina in legno grazie a un sistema rivoluzionario di mattoni a spinapesce.",
+    "wikipediaSlug": "Cupola_del_Brunelleschi"
   },
   {
     "id": "lord-cricket-ground",
@@ -11280,7 +11290,8 @@
     "category": "sport",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Il campo di cricket più famoso del mondo, fondato a Londra nel 1787 da Thomas Lord. Sede del Marylebone Cricket Club (MCC), che nel 1788 codificò le prime regole universali del cricket moderno."
+    "description": "Il campo di cricket più famoso del mondo, fondato a Londra nel 1787 da Thomas Lord. Sede del Marylebone Cricket Club (MCC), che nel 1788 codificò le prime regole universali del cricket moderno.",
+    "wikipediaSlug": "Lord's_Cricket_Ground"
   },
   {
     "id": "ghigliottina-luigi-xvi",
@@ -11291,7 +11302,8 @@
     "category": "storia",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Re di Francia (1754-1793), ghigliottinato il 21 gennaio 1793 in Place de la Révolution (oggi Place de la Concorde) davanti a 20.000 persone. La sua esecuzione segnò l'apice della Rivoluzione Francese."
+    "description": "Re di Francia (1754-1793), ghigliottinato il 21 gennaio 1793 in Place de la Révolution (oggi Place de la Concorde) davanti a 20.000 persone. La sua esecuzione segnò l'apice della Rivoluzione Francese.",
+    "wikipediaSlug": "Luigi_XVI"
   },
   {
     "id": "ritirata-di-russia-1812",
@@ -11302,7 +11314,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "La disastrosa campagna di Napoleone in Russia (1812). Di 600.000 soldati entrati in Russia, meno di 100.000 tornarono a causa del freddo, della fame e degli attacchi cosacchi, segnando l'inizio del crollo napoleonico."
+    "description": "La disastrosa campagna di Napoleone in Russia (1812). Di 600.000 soldati entrati in Russia, meno di 100.000 tornarono a causa del freddo, della fame e degli attacchi cosacchi, segnando l'inizio del crollo napoleonico.",
+    "wikipediaSlug": "Ritirata_di_Russia"
   },
   {
     "id": "hagia-sophia",
@@ -11313,7 +11326,8 @@
     "category": "arte",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Basilica di Costantinopoli, costruita dall'imperatore Giustiniano nel 537 d.C. La sua cupola di 55 metri sembrava sospesa in aria. Convertita in moschea nel 1453, è oggi museo e luogo di culto a Istanbul."
+    "description": "Basilica di Costantinopoli, costruita dall'imperatore Giustiniano nel 537 d.C. La sua cupola di 55 metri sembrava sospesa in aria. Convertita in moschea nel 1453, è oggi museo e luogo di culto a Istanbul.",
+    "wikipediaSlug": "Hagia_Sophia"
   },
   {
     "id": "giostra-medicea",
@@ -11324,7 +11338,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Tornei cavallereschi organizzati dalla famiglia Medici nelle piazze fiorentine. La Giostra di Santa Croce del 1469, vinta da Lorenzo de' Medici, fu celebrata da Angelo Poliziano con la Stanza per la Giostra."
+    "description": "Tornei cavallereschi organizzati dalla famiglia Medici nelle piazze fiorentine. La Giostra di Santa Croce del 1469, vinta da Lorenzo de' Medici, fu celebrata da Angelo Poliziano con la Stanza per la Giostra.",
+    "wikipediaSlug": "Giostra_Medicea"
   },
   {
     "id": "scherma-salvator-fabris",
@@ -11335,7 +11350,8 @@
     "category": "sport",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Maestro di scherma padovano (1544-1618) autore del trattato De lo schermo overo scienza d'arme (1606). Il suo stile italiano a stocco diritto definì la scherma accademica europea del Seicento."
+    "description": "Maestro di scherma padovano (1544-1618) autore del trattato De lo schermo overo scienza d'arme (1606). Il suo stile italiano a stocco diritto definì la scherma accademica europea del Seicento.",
+    "wikipediaSlug": "Salvator_Fabris"
   },
   {
     "id": "cricket-kent-1700",
@@ -11346,7 +11362,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "La contea del Kent fu la culla del cricket moderno: le prime partite documentate risalgono al XVII sec. e le prime regole scritte al 1709. I Lord's Cricket Ground di Londra, fondato nel 1787, ne è il tempio."
+    "description": "La contea del Kent fu la culla del cricket moderno: le prime partite documentate risalgono al XVII sec. e le prime regole scritte al 1709. I Lord's Cricket Ground di Londra, fondato nel 1787, ne è il tempio.",
+    "wikipediaSlug": "Cricket_del_Kent"
   },
   {
     "id": "ludi-plebeii-circo",
@@ -11357,7 +11374,8 @@
     "category": "sport",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Il più grande ippodromo dell'antichità, nella valle tra Palatino e Aventino a Roma. Capace di 250.000 spettatori, ospitava le corse di carri dei Ludi Romani e Plebeii per centinaia di anni."
+    "description": "Il più grande ippodromo dell'antichità, nella valle tra Palatino e Aventino a Roma. Capace di 250.000 spettatori, ospitava le corse di carri dei Ludi Romani e Plebeii per centinaia di anni.",
+    "wikipediaSlug": "Circo_Massimo"
   },
   {
     "id": "bossuet-diritto-divino",
@@ -11368,7 +11386,8 @@
     "category": "filosofia",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Vescovo e oratore francese (1627-1704), teorico del diritto divino dei re nella Politique tirée de l'Écriture Sainte. Ispirò il modello assolutista di Luigi XIV attraverso la teologia politica."
+    "description": "Vescovo e oratore francese (1627-1704), teorico del diritto divino dei re nella Politique tirée de l'Écriture Sainte. Ispirò il modello assolutista di Luigi XIV attraverso la teologia politica.",
+    "wikipediaSlug": "Bossuet"
   },
   {
     "id": "caccia-reale-fontainebleau",
@@ -11379,7 +11398,8 @@
     "category": "sport",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "La residenza reale più antica dei re di Francia, con 25.000 ettari di foresta usata per le cacce reali. Luigi XIV vi organizzava battute di caccia come spettacoli di potere aristocratico."
+    "description": "La residenza reale più antica dei re di Francia, con 25.000 ettari di foresta usata per le cacce reali. Luigi XIV vi organizzava battute di caccia come spettacoli di potere aristocratico.",
+    "wikipediaSlug": "Foresta_di_Fontainebleau"
   },
   {
     "id": "guardia-nazionale-esercizi",
@@ -11390,7 +11410,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Milizia popolare francese nata durante la Rivoluzione nel 1789, comandata da La Fayette. La sua disciplina fisica e militare incarnava la virtù repubblicana del cittadino-soldato, contrapponuta all'eroismo aristocratico."
+    "description": "Milizia popolare francese nata durante la Rivoluzione nel 1789, comandata da La Fayette. La sua disciplina fisica e militare incarnava la virtù repubblicana del cittadino-soldato, contrapponuta all'eroismo aristocratico.",
+    "wikipediaSlug": "Guardia_Nazionale"
   },
   {
     "id": "duello-pistola-ottocento",
@@ -11401,7 +11422,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Rituale di onore aristocratico dell'Ottocento in cui due uomini si affrontavano a distanza con pistole. Il Bois de Boulogne a Parigi fu il teatro preferito — spesso finivano senza sparo, con la pace ottenuta dalla \"soddisfazione\" formale."
+    "description": "Rituale di onore aristocratico dell'Ottocento in cui due uomini si affrontavano a distanza con pistole. Il Bois de Boulogne a Parigi fu il teatro preferito — spesso finivano senza sparo, con la pace ottenuta dalla \"soddisfazione\" formale.",
+    "wikipediaSlug": "Duello_alla_Pistola"
   },
   {
     "id": "ginnastica-patriottica-torino",
@@ -11412,7 +11434,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il movimento delle Società di Ginnastica nate a Torino negli anni 1840 univa l'allenamento fisico all'ideologia risorgimentale: il corpo sano come metafora della nazione da rinnovare."
+    "description": "Il movimento delle Società di Ginnastica nate a Torino negli anni 1840 univa l'allenamento fisico all'ideologia risorgimentale: il corpo sano come metafora della nazione da rinnovare.",
+    "wikipediaSlug": "Ginnastica_Patriottica"
   },
   {
     "id": "calcio-storico-rinascimento",
@@ -11423,7 +11446,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Gioco di squadra violento nato a Firenze nel XVI secolo, antenato del calcio moderno. Ventisei giocatori per squadra, nessun arbitro, nessun limite di tempo: si disputava in Piazza Santa Croce."
+    "description": "Gioco di squadra violento nato a Firenze nel XVI secolo, antenato del calcio moderno. Ventisei giocatori per squadra, nessun arbitro, nessun limite di tempo: si disputava in Piazza Santa Croce.",
+    "wikipediaSlug": "Calcio_Storico_Fiorentino"
   },
   {
     "id": "torneo-cavalleresco-rinascimento",
@@ -11434,7 +11458,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "I tornei del Cinquecento da Londra a Vienna erano eventi politici oltre che sportivi: l'élite nobile si confrontava nella giostra, nella palestra e nella danza sotto gli occhi delle corti europee."
+    "description": "I tornei del Cinquecento da Londra a Vienna erano eventi politici oltre che sportivi: l'élite nobile si confrontava nella giostra, nella palestra e nella danza sotto gli occhi delle corti europee.",
+    "wikipediaSlug": "Torneo_Cavalleresco"
   },
   {
     "id": "processioni-controriforma",
@@ -11445,7 +11470,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Spettacoli religiosi di massa organizzati dalla Chiesa cattolica a Roma, Siviglia e Napoli durante la Controriforma. Coinvolgevano migliaia di partecipanti, musiche, stendardi e statue sacre per riaffermare il cattolicesimo."
+    "description": "Spettacoli religiosi di massa organizzati dalla Chiesa cattolica a Roma, Siviglia e Napoli durante la Controriforma. Coinvolgevano migliaia di partecipanti, musiche, stendardi e statue sacre per riaffermare il cattolicesimo.",
+    "wikipediaSlug": "Processioni_della_Controriforma"
   },
   {
     "id": "college-gesuitico-sport",
@@ -11456,7 +11482,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "I collegi della Compagnia di Gesù (fondata nel 1540) includevano esercizi fisici quotidiani nel curriculum — corsa, nuoto, lotta — come mezzo di disciplina morale e salute del corpo."
+    "description": "I collegi della Compagnia di Gesù (fondata nel 1540) includevano esercizi fisici quotidiani nel curriculum — corsa, nuoto, lotta — come mezzo di disciplina morale e salute del corpo.",
+    "wikipediaSlug": "Collegio_Gesuita"
   },
   {
     "id": "vitruvio-de-architectura",
@@ -11467,7 +11494,8 @@
     "category": "scienza",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Architetto e ingegnere romano del I sec. a.C., autore del De Architectura — il manuale di architettura più influente della storia. Descrive terme, teatri, acquedotti con proporzioni auree e principi tuttora studiati."
+    "description": "Architetto e ingegnere romano del I sec. a.C., autore del De Architectura — il manuale di architettura più influente della storia. Descrive terme, teatri, acquedotti con proporzioni auree e principi tuttora studiati.",
+    "wikipediaSlug": "Vitruvio"
   },
   {
     "id": "bardi-peruzzi-banchieri",
@@ -11478,7 +11506,8 @@
     "category": "storia",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Famiglia bancaria fiorentina del XIV secolo che finanziano i re d'Inghilterra e Francia. Con i Peruzzi, i Bardi gestivano la prima banca internazionale della storia, con filiali da Londra a Napoli."
+    "description": "Famiglia bancaria fiorentina del XIV secolo che finanziano i re d'Inghilterra e Francia. Con i Peruzzi, i Bardi gestivano la prima banca internazionale della storia, con filiali da Londra a Napoli.",
+    "wikipediaSlug": "Bardi"
   },
   {
     "id": "cave-di-carrara",
@@ -11489,7 +11518,8 @@
     "category": "arte",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Città della Toscana con le cave di marmo statuario bianco più pregiate del mondo, sfruttate dai Romani e poi da Michelangelo, che vi si recava di persona a scegliere i blocchi. Il marmo di Carrara è la materia prima della scultura rinascimentale."
+    "description": "Città della Toscana con le cave di marmo statuario bianco più pregiate del mondo, sfruttate dai Romani e poi da Michelangelo, che vi si recava di persona a scegliere i blocchi. Il marmo di Carrara è la materia prima della scultura rinascimentale.",
+    "wikipediaSlug": "Carrara"
   },
   {
     "id": "cupola-di-brunelleschi",
@@ -11500,7 +11530,8 @@
     "category": "arte",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "La cupola della Cattedrale di Firenze, progettata da Filippo Brunelleschi. Consacrata nel 1436, è alta 107 metri e fu realizzata senza centina in legno grazie al sistema dei mattoni a spinapesce — la soluzione ingegneristica più audace del Rinascimento."
+    "description": "La cupola della Cattedrale di Firenze, progettata da Filippo Brunelleschi. Consacrata nel 1436, è alta 107 metri e fu realizzata senza centina in legno grazie al sistema dei mattoni a spinapesce — la soluzione ingegneristica più audace del Rinascimento.",
+    "wikipediaSlug": "Cupola_di_Brunelleschi"
   },
   {
     "id": "torricelli-scienziato",
@@ -11511,7 +11542,8 @@
     "category": "scienza",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Evangelista Torricelli (1608-1647), fisico e matematico italiano, inventore del barometro nel 1643. Dimostrò che l'aria ha peso e pressione: la colonna di mercurio a 76 cm misura la pressione atmosferica, fondando la meteorologia strumentale."
+    "description": "Evangelista Torricelli (1608-1647), fisico e matematico italiano, inventore del barometro nel 1643. Dimostrò che l'aria ha peso e pressione: la colonna di mercurio a 76 cm misura la pressione atmosferica, fondando la meteorologia strumentale.",
+    "wikipediaSlug": "Torricelli"
   },
   {
     "id": "watteau-pittore",
@@ -11522,7 +11554,8 @@
     "category": "arte",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Antoine Watteau (1684-1721), pittore rococò francese inventore delle fêtes galantes. Il Pèlerinage à l'île de Cythère (1717) introduce la malinconia nel piacere aristocratico — l'arte come specchio dell'ancien régime al tramonto."
+    "description": "Antoine Watteau (1684-1721), pittore rococò francese inventore delle fêtes galantes. Il Pèlerinage à l'île de Cythère (1717) introduce la malinconia nel piacere aristocratico — l'arte come specchio dell'ancien régime al tramonto.",
+    "wikipediaSlug": "Watteau"
   },
   {
     "id": "citta-di-edo",
@@ -11533,7 +11566,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Nome storico di Tokyo durante il periodo Edo (1603-1868). Nel XVII secolo era già la città più popolosa del mondo con oltre un milione di abitanti, mentre l'Europa non conosceva il Giappone per le politiche di isolamento dello shogunato."
+    "description": "Nome storico di Tokyo durante il periodo Edo (1603-1868). Nel XVII secolo era già la città più popolosa del mondo con oltre un milione di abitanti, mentre l'Europa non conosceva il Giappone per le politiche di isolamento dello shogunato.",
+    "wikipediaSlug": "Città_di_Edo"
   },
   {
     "id": "societa-feudale-maniero",
@@ -11544,6 +11578,7 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il sistema politico-economico dell'Europa medievale (IX-XIII sec.): il signore garantisce protezione militare in cambio di fedeltà e lavoro dei villani. La piramide feudale — re, baroni, cavalieri, contadini — regge l'ordine sociale."
+    "description": "Il sistema politico-economico dell'Europa medievale (IX-XIII sec.): il signore garantisce protezione militare in cambio di fedeltà e lavoro dei villani. La piramide feudale — re, baroni, cavalieri, contadini — regge l'ordine sociale.",
+    "wikipediaSlug": "Sistema_Feudale"
   }
 ]

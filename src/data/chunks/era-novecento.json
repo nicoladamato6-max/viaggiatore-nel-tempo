@@ -15486,7 +15486,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il 29 ottobre 1929 (Martedì Nero) il mercato azionario americano crollò, innescando la Grande Depressione globale. In un giorno miliardi di dollari evaporarono e milioni di persone persero i risparmi."
+    "description": "Il 29 ottobre 1929 (Martedì Nero) il mercato azionario americano crollò, innescando la Grande Depressione globale. In un giorno miliardi di dollari evaporarono e milioni di persone persero i risparmi.",
+    "wikipediaSlug": "Crollo_di_Wall_Street"
   },
   {
     "id": "sputnik-1957",
@@ -15497,7 +15498,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il 4 ottobre 1957 l'URSS lanciò lo Sputnik, il primo satellite artificiale della storia. L'evento sorprese gli USA, inaugurò la corsa allo spazio e cambiò per sempre la geopolitica della Guerra Fredda."
+    "description": "Il 4 ottobre 1957 l'URSS lanciò lo Sputnik, il primo satellite artificiale della storia. L'evento sorprese gli USA, inaugurò la corsa allo spazio e cambiò per sempre la geopolitica della Guerra Fredda.",
+    "wikipediaSlug": "Sputnik"
   },
   {
     "id": "arpanet-1969",
@@ -15508,7 +15510,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Prima rete informatica decentralizzata, finanziata dal Pentagono nel 1969 per connettere quattro università americane. Precursore diretto di Internet, fu progettata per sopravvivere a un attacco nucleare."
+    "description": "Prima rete informatica decentralizzata, finanziata dal Pentagono nel 1969 per connettere quattro università americane. Precursore diretto di Internet, fu progettata per sopravvivere a un attacco nucleare.",
+    "wikipediaSlug": "ARPANET"
   },
   {
     "id": "fischer-spassky-reykjavik",
@@ -15519,7 +15522,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Partita del Secolo disputata a Reykjavik nel 1972 tra l'americano Bobby Fischer e il sovietico Boris Spassky per il titolo mondiale di scacchi. Interpretata come campo di battaglia simbolico della Guerra Fredda."
+    "description": "Partita del Secolo disputata a Reykjavik nel 1972 tra l'americano Bobby Fischer e il sovietico Boris Spassky per il titolo mondiale di scacchi. Interpretata come campo di battaglia simbolico della Guerra Fredda.",
+    "wikipediaSlug": "Fischer-Spassky"
   },
   {
     "id": "muro-di-berlino",
@@ -15530,7 +15534,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Barriera costruita nel 1961 dalla DDR che divise Berlino per 28 anni. Symbol supremo della Guerra Fredda, cadde il 9 novembre 1989, riunificando simbolicamente la città e segnando la fine del comunismo europeo."
+    "description": "Barriera costruita nel 1961 dalla DDR che divise Berlino per 28 anni. Symbol supremo della Guerra Fredda, cadde il 9 novembre 1989, riunificando simbolicamente la città e segnando la fine del comunismo europeo.",
+    "wikipediaSlug": "Muro_di_Berlino"
   },
   {
     "id": "hiroshima-bomba-atomica",
@@ -15541,7 +15546,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Città giapponese su cui fu sganciata la prima bomba atomica il 6 agosto 1945. Circa 70.000 persone morirono nell'esplosione immediata, 200.000 nei mesi successivi. Simbolo universale del disarmo nucleare."
+    "description": "Città giapponese su cui fu sganciata la prima bomba atomica il 6 agosto 1945. Circa 70.000 persone morirono nell'esplosione immediata, 200.000 nei mesi successivi. Simbolo universale del disarmo nucleare.",
+    "wikipediaSlug": "Hiroshima"
   },
   {
     "id": "tregua-natale-1914",
@@ -15552,7 +15558,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Tregua spontanea avvenuta nelle trincee del fronte occidentale il 25 dicembre 1914. Soldati tedeschi e britannici uscirono dalle trincee, si scambiarono doni e giocarono a calcio nella terra di nessuno."
+    "description": "Tregua spontanea avvenuta nelle trincee del fronte occidentale il 25 dicembre 1914. Soldati tedeschi e britannici uscirono dalle trincee, si scambiarono doni e giocarono a calcio nella terra di nessuno.",
+    "wikipediaSlug": "Tregua_di_Natale_del_1914"
   },
   {
     "id": "match-morte-kiev-1942",
@@ -15563,7 +15570,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il 9 agosto 1942 i calciatori dello Start FC di Kiev (ex Dinamo Kiev) batterono 5-3 la squadra della Luftwaffe. Secondo la leggenda, furono fucilati dai nazisti per non essersi arresi, diventando simboli della resistenza."
+    "description": "Il 9 agosto 1942 i calciatori dello Start FC di Kiev (ex Dinamo Kiev) batterono 5-3 la squadra della Luftwaffe. Secondo la leggenda, furono fucilati dai nazisti per non essersi arresi, diventando simboli della resistenza.",
+    "wikipediaSlug": "Match_della_Morte"
   },
   {
     "id": "kurt-weill-opera-tre-soldi",
@@ -15574,7 +15582,8 @@
     "category": "musica",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Compositore tedesco (1900-1950) che con Bertolt Brecht creò \"L'opera da tre soldi\" (1928), capolavoro del teatro epico. Fuse jazz, cabaret berlinese e critica sociale marxista in una forma musicale rivoluzionaria."
+    "description": "Compositore tedesco (1900-1950) che con Bertolt Brecht creò \"L'opera da tre soldi\" (1928), capolavoro del teatro epico. Fuse jazz, cabaret berlinese e critica sociale marxista in una forma musicale rivoluzionaria.",
+    "wikipediaSlug": "Kurt_Weill"
   },
   {
     "id": "11-settembre-2001",
@@ -15585,7 +15594,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il 11 settembre 2001 diciannove terroristi di Al-Qaeda dirottarono quattro aerei passeggeri: due colpirono le Torri Gemelle, uno il Pentagono, uno si schiantò in Pennsylvania. Circa 3.000 vittime."
+    "description": "Il 11 settembre 2001 diciannove terroristi di Al-Qaeda dirottarono quattro aerei passeggeri: due colpirono le Torri Gemelle, uno il Pentagono, uno si schiantò in Pennsylvania. Circa 3.000 vittime.",
+    "wikipediaSlug": "11_Settembre_2001"
   },
   {
     "id": "blues-mississippi",
@@ -15596,7 +15606,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Genere musicale afroamericano nato nei campi di cotone del Mississippi intorno al 1900. Originato dagli spiritual, work songs e field hollers degli schiavi liberati, è la radice del rock, jazz e soul moderni."
+    "description": "Genere musicale afroamericano nato nei campi di cotone del Mississippi intorno al 1900. Originato dagli spiritual, work songs e field hollers degli schiavi liberati, è la radice del rock, jazz e soul moderni.",
+    "wikipediaSlug": "Blues"
   },
   {
     "id": "jazz-harlem-hellfighters",
@@ -15607,7 +15618,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Reggimento afroamericano dell'esercito americano che portò il jazz in Francia durante la Prima Guerra Mondiale. La loro band guidata da James Reese Europe rivoluzionò il gusto musicale europeo a partire dal 1918."
+    "description": "Reggimento afroamericano dell'esercito americano che portò il jazz in Francia durante la Prima Guerra Mondiale. La loro band guidata da James Reese Europe rivoluzionò il gusto musicale europeo a partire dal 1918.",
+    "wikipediaSlug": "Harlem_Hellfighters"
   },
   {
     "id": "armistizio-1918",
@@ -15618,7 +15630,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "L'armistizio della Prima Guerra Mondiale fu firmato l'11 novembre 1918 alle 11:00 nella foresta di Compiègne. I cannoni si fermarono simultaneamente su tutti i fronti dopo quattro anni di guerra totale."
+    "description": "L'armistizio della Prima Guerra Mondiale fu firmato l'11 novembre 1918 alle 11:00 nella foresta di Compiègne. I cannoni si fermarono simultaneamente su tutti i fronti dopo quattro anni di guerra totale.",
+    "wikipediaSlug": "Armistizio_del_1918"
   },
   {
     "id": "battaglia-trincea-argonne",
@@ -15629,7 +15642,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Campagna militare del 1918 nelle foreste dell'Argonne, in Francia, che vide le truppe americane e francesi sfondare le linee tedesche. Una delle battaglie conclusive della Prima Guerra Mondiale."
+    "description": "Campagna militare del 1918 nelle foreste dell'Argonne, in Francia, che vide le truppe americane e francesi sfondare le linee tedesche. Una delle battaglie conclusive della Prima Guerra Mondiale.",
+    "wikipediaSlug": "Battaglia_dell'Argonne"
   },
   {
     "id": "colosseo-roma",
@@ -15640,7 +15654,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Il più grande anfiteatro romano, inaugurato nell'80 d.C. con 100 giorni di ludi. Capace di 50.000-80.000 spettatori, ospitava combattimenti di gladiatori, venationes (cacce) e esecuzioni pubbliche."
+    "description": "Il più grande anfiteatro romano, inaugurato nell'80 d.C. con 100 giorni di ludi. Capace di 50.000-80.000 spettatori, ospitava combattimenti di gladiatori, venationes (cacce) e esecuzioni pubbliche.",
+    "wikipediaSlug": "Colosseo"
   },
   {
     "id": "stalag-luft-iii-baseball",
@@ -15651,7 +15666,8 @@
     "category": "sport",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Campo di prigionia tedesco nella Slesia (ora Polonia) dove venivano rinchiusi aviatori alleati. I prigionieri organizzarono tornei di baseball, hockey e cricket come strumento di resistenza psicologica alla prigionia."
+    "description": "Campo di prigionia tedesco nella Slesia (ora Polonia) dove venivano rinchiusi aviatori alleati. I prigionieri organizzarono tornei di baseball, hockey e cricket come strumento di resistenza psicologica alla prigionia.",
+    "wikipediaSlug": "Stalag_Luft_III"
   },
   {
     "id": "berlino-muro-guerra-fredda",
@@ -15662,7 +15678,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Dal 1961 al 1989, Berlino fu divisa dal Muro in Est (DDR, socialista) e Ovest (FRG, capitalista). La stessa lingua, le stesse famiglie, separate da 155 km di cemento armato e filo spinato: il simbolo supremo della Guerra Fredda."
+    "description": "Dal 1961 al 1989, Berlino fu divisa dal Muro in Est (DDR, socialista) e Ovest (FRG, capitalista). La stessa lingua, le stesse famiglie, separate da 155 km di cemento armato e filo spinato: il simbolo supremo della Guerra Fredda.",
+    "wikipediaSlug": "Berlino_Divisa"
   },
   {
     "id": "vietnam-guerra-televisata",
@@ -15673,7 +15690,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "La prima guerra trasmessa in diretta televisiva (1965-1975): le immagini dei cadaveri americani e dei bambini bruciati dal napalm entrarono nei salotti di tutto il mondo, trasformando l'opinione pubblica contro il conflitto."
+    "description": "La prima guerra trasmessa in diretta televisiva (1965-1975): le immagini dei cadaveri americani e dei bambini bruciati dal napalm entrarono nei salotti di tutto il mondo, trasformando l'opinione pubblica contro il conflitto.",
+    "wikipediaSlug": "Guerra_del_Vietnam"
   },
   {
     "id": "mtv-video-killed-radio",
@@ -15684,7 +15702,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il primo videoclip trasmesso da MTV il 1° agosto 1981. Il singolo dei Buggles divenne l'anthem della nuova era audiovisiva, in cui il look del musicista era importante quanto la musica."
+    "description": "Il primo videoclip trasmesso da MTV il 1° agosto 1981. Il singolo dei Buggles divenne l'anthem della nuova era audiovisiva, in cui il look del musicista era importante quanto la musica.",
+    "wikipediaSlug": "Video_Killed_the_Radio_Star"
   },
   {
     "id": "carote-ghiaccio-antartide",
@@ -15695,7 +15714,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Campioni cilindrici estratti dalle calotte glaciali di Antartide e Groenlandia che registrano 800.000 anni di storia climatica. Ogni strato è un anno: le bolle d'aria intrappolate contengono l'atmosfera del passato."
+    "description": "Campioni cilindrici estratti dalle calotte glaciali di Antartide e Groenlandia che registrano 800.000 anni di storia climatica. Ogni strato è un anno: le bolle d'aria intrappolate contengono l'atmosfera del passato.",
+    "wikipediaSlug": "Carote_di_Ghiaccio"
   },
   {
     "id": "parigi-restaurazione-bourbon",
@@ -15706,6 +15726,7 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il ritorno dei Borboni in Francia dopo la caduta di Napoleone (1815-1830). Nonostante la Restaurazione, il caffè Procope e i salotti parigini fermentavano con idee liberali che sarebbero esplode nella Rivoluzione del 1830."
+    "description": "Il ritorno dei Borboni in Francia dopo la caduta di Napoleone (1815-1830). Nonostante la Restaurazione, il caffè Procope e i salotti parigini fermentavano con idee liberali che sarebbero esplode nella Rivoluzione del 1830.",
+    "wikipediaSlug": "Restaurazione_Borbonica"
   }
 ]

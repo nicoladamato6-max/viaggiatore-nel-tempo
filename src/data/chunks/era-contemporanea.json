@@ -15256,7 +15256,7 @@
     "lng": -4.4239,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": null,
+    "wikipediaSlug": "James_Peace",
     "isCosmic": false
   },
   {
@@ -35020,7 +35020,8 @@
     "category": "scienza",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Telescopio spaziale NASA lanciato nel 2021, il più potente mai costruito. Ha catturato immagini di galassie primordiali, nebulae e atmosfere di esopianeti con risoluzione senza precedenti."
+    "description": "Telescopio spaziale NASA lanciato nel 2021, il più potente mai costruito. Ha catturato immagini di galassie primordiali, nebulae e atmosfere di esopianeti con risoluzione senza precedenti.",
+    "wikipediaSlug": "James_Webb_Space_Telescope"
   },
   {
     "id": "genoma-umano-2003",
@@ -35031,7 +35032,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il sequenziamento completo del genoma umano, completato nel 2003 dal Progetto Genoma Umano. 3 miliardi di coppie di basi azotate mappate aprono nuove prospettive per la medicina genetica e la biologia evolutiva."
+    "description": "Il sequenziamento completo del genoma umano, completato nel 2003 dal Progetto Genoma Umano. 3 miliardi di coppie di basi azotate mappate aprono nuove prospettive per la medicina genetica e la biologia evolutiva.",
+    "wikipediaSlug": "Genoma_Umano"
   },
   {
     "id": "league-of-legends-esport",
@@ -35042,7 +35044,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Videogioco strategico multiplayer diventato il principale titolo degli esport mondiali. I Campionati Mondiali radunano decine di milioni di spettatori in streaming, superando molti sport tradizionali per audience."
+    "description": "Videogioco strategico multiplayer diventato il principale titolo degli esport mondiali. I Campionati Mondiali radunano decine di milioni di spettatori in streaming, superando molti sport tradizionali per audience.",
+    "wikipediaSlug": "League_of_Legends"
   },
   {
     "id": "chatgpt-novembre-2022",
@@ -35053,7 +35056,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Assistente basato su intelligenza artificiale rilasciato da OpenAI nel novembre 2022. Raggiunse 100 milioni di utenti in soli due mesi, la più rapida adozione tecnologica nella storia, inaugurando l'era dell'IA generativa."
+    "description": "Assistente basato su intelligenza artificiale rilasciato da OpenAI nel novembre 2022. Raggiunse 100 milioni di utenti in soli due mesi, la più rapida adozione tecnologica nella storia, inaugurando l'era dell'IA generativa.",
+    "wikipediaSlug": "ChatGPT"
   },
   {
     "id": "mtv-1981",
@@ -35064,6 +35068,7 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Canale televisivo musicale lanciato il 1° agosto 1981 con \"Video Killed the Radio Star\". Globalizzò la cultura pop e creò il formato del videoclip come forma d'arte commerciale, trasformando l'industria musicale."
+    "description": "Canale televisivo musicale lanciato il 1° agosto 1981 con \"Video Killed the Radio Star\". Globalizzò la cultura pop e creò il formato del videoclip come forma d'arte commerciale, trasformando l'industria musicale.",
+    "wikipediaSlug": "MTV"
   }
 ]

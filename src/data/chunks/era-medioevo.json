@@ -8719,7 +8719,8 @@
     "category": "arte",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Cattedrale gotica di Parigi, costruita tra il 1163 e il 1345. Gli archi rampanti consentirono un'altezza e luminosità mai raggiunte prima, rivoluzionando l'architettura europea del Medioevo."
+    "description": "Cattedrale gotica di Parigi, costruita tra il 1163 e il 1345. Gli archi rampanti consentirono un'altezza e luminosità mai raggiunte prima, rivoluzionando l'architettura europea del Medioevo.",
+    "wikipediaSlug": "Notre-Dame_di_Parigi"
   },
   {
     "id": "camino-de-santiago",
@@ -8730,7 +8731,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Rete di percorsi di pellegrinaggio cristiani verso la cattedrale di Santiago de Compostela in Galizia, Spagna. Attivo dal IX secolo, ha creato la prima rete di ospizi, ponti e infrastrutture turistiche d'Europa."
+    "description": "Rete di percorsi di pellegrinaggio cristiani verso la cattedrale di Santiago de Compostela in Galizia, Spagna. Attivo dal IX secolo, ha creato la prima rete di ospizi, ponti e infrastrutture turistiche d'Europa.",
+    "wikipediaSlug": "Camino_de_Santiago"
   },
   {
     "id": "roger-bacon-oxford",
@@ -8741,7 +8743,8 @@
     "category": "scienza",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Frate francescano inglese (1214-1292) soprannominato Doctor Mirabilis. Studiò lenti, specchi e prismi a Oxford, anticipando il metodo scientifico. Propone l'esperienza come base della conoscenza."
+    "description": "Frate francescano inglese (1214-1292) soprannominato Doctor Mirabilis. Studiò lenti, specchi e prismi a Oxford, anticipando il metodo scientifico. Propone l'esperienza come base della conoscenza.",
+    "wikipediaSlug": "Roger_Bacon"
   },
   {
     "id": "hildegard-von-bingen",
@@ -8752,7 +8755,8 @@
     "category": "musica",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Mistica, compositrice e scienziata medievale tedesca (1098-1179). Scrisse 77 composizioni liturgiche, opere scientifiche e mediche. Prima compositrice della storia con nome e opera attribuita con certezza."
+    "description": "Mistica, compositrice e scienziata medievale tedesca (1098-1179). Scrisse 77 composizioni liturgiche, opere scientifiche e mediche. Prima compositrice della storia con nome e opera attribuita con certezza.",
+    "wikipediaSlug": "Hildegard_von_Bingen"
   },
   {
     "id": "battaglia-della-somme",
@@ -8763,7 +8767,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Offensiva della Prima Guerra Mondiale (luglio-novembre 1916) nella regione della Somme, in Francia. Il primo giorno costò 57.000 caduti britannici, il più alto tributo giornaliero dell'esercito britannico."
+    "description": "Offensiva della Prima Guerra Mondiale (luglio-novembre 1916) nella regione della Somme, in Francia. Il primo giorno costò 57.000 caduti britannici, il più alto tributo giornaliero dell'esercito britannico.",
+    "wikipediaSlug": "Battaglia_della_Somme"
   },
   {
     "id": "troubadour-occitano",
@@ -8774,7 +8779,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Poeti e musicisti occitani dei secoli XII-XIII che elaborarono la lyrica cortese dell'amor cortese. I trovatori come Guglielmo IX d'Aquitania inventarono la canzone d'amore occidentale."
+    "description": "Poeti e musicisti occitani dei secoli XII-XIII che elaborarono la lyrica cortese dell'amor cortese. I trovatori come Guglielmo IX d'Aquitania inventarono la canzone d'amore occidentale.",
+    "wikipediaSlug": "Trovatori"
   },
   {
     "id": "schola-cantorum-aquisgrana",
@@ -8785,7 +8791,8 @@
     "category": "musica",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Scuola di canto fondata da Carlo Magno ad Aquisgrana per standardizzare il canto gregoriano in tutto l'impero carolingio. I cantori usavano i neumi, i primi segni grafici per catturare le melodie."
+    "description": "Scuola di canto fondata da Carlo Magno ad Aquisgrana per standardizzare il canto gregoriano in tutto l'impero carolingio. I cantori usavano i neumi, i primi segni grafici per catturare le melodie.",
+    "wikipediaSlug": "Schola_Cantorum"
   },
   {
     "id": "ars-nova-landini",
@@ -8796,7 +8803,8 @@
     "category": "musica",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Compositore e organista fiorentino (1335-1397), cieco dalla nascita. Il maggiore esponente dell'Ars Nova italiana, rivoluzionò il ritmo della polifonia europea nel Trecento fiorentino."
+    "description": "Compositore e organista fiorentino (1335-1397), cieco dalla nascita. Il maggiore esponente dell'Ars Nova italiana, rivoluzionò il ritmo della polifonia europea nel Trecento fiorentino.",
+    "wikipediaSlug": "Francesco_Landini"
   },
   {
     "id": "caporetto-1917",
@@ -8807,7 +8815,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Offensiva austro-tedesca dell'ottobre 1917 che sfondò il fronte italiano in 24 ore, catturando 300.000 prigionieri. Provocò la ritirata italiana sul Piave e il cambio del comando."
+    "description": "Offensiva austro-tedesca dell'ottobre 1917 che sfondò il fronte italiano in 24 ore, catturando 300.000 prigionieri. Provocò la ritirata italiana sul Piave e il cambio del comando.",
+    "wikipediaSlug": "Battaglia_di_Caporetto"
   },
   {
     "id": "chanson-de-roland",
@@ -8818,7 +8827,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Poema epico francese dell'XI secolo che narra la battaglia di Roncisvalle (778 d.C.) in cui morì il paladino Roland. La più antica opera della letteratura francese conservata, con 4.002 versi in decasillabi."
+    "description": "Poema epico francese dell'XI secolo che narra la battaglia di Roncisvalle (778 d.C.) in cui morì il paladino Roland. La più antica opera della letteratura francese conservata, con 4.002 versi in decasillabi.",
+    "wikipediaSlug": "Chanson_de_Roland"
   },
   {
     "id": "laude-spirituali-fiorentine",
@@ -8829,7 +8839,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Canti religiosi in volgare italiano sviluppati dalle confraternite dei laudesi fiorentini dal XIII secolo. Poliziano e il circolo laurenziano li elevarono a forma poetico-musicale d'arte nel Quattrocento."
+    "description": "Canti religiosi in volgare italiano sviluppati dalle confraternite dei laudesi fiorentini dal XIII secolo. Poliziano e il circolo laurenziano li elevarono a forma poetico-musicale d'arte nel Quattrocento.",
+    "wikipediaSlug": "Laude_Spirituali"
   },
   {
     "id": "rotazione-triennale-colture",
@@ -8840,7 +8851,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Sistema agricolo diffusosi nell'Europa carolingia del IX sec.: il campo era diviso in tre fasce (cereale invernale, cereale primaverile, maggese), aumentando la produttività del 50% rispetto alla rotazione biennale."
+    "description": "Sistema agricolo diffusosi nell'Europa carolingia del IX sec.: il campo era diviso in tre fasce (cereale invernale, cereale primaverile, maggese), aumentando la produttività del 50% rispetto alla rotazione biennale.",
+    "wikipediaSlug": "Rotazione_Triennale"
   },
   {
     "id": "mulino-ad-acqua-medievale",
@@ -8851,7 +8863,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il Libro del Domesday (1086) censì 5.624 mulini ad acqua in Inghilterra — un per ogni 50 famiglie. La meccanizzazione della macinatura liberò migliaia di ore di lavoro umano, trasformando l'economia medievale."
+    "description": "Il Libro del Domesday (1086) censì 5.624 mulini ad acqua in Inghilterra — un per ogni 50 famiglie. La meccanizzazione della macinatura liberò migliaia di ore di lavoro umano, trasformando l'economia medievale.",
+    "wikipediaSlug": "Mulino_ad_Acqua"
   },
   {
     "id": "falconeria-medievale",
@@ -8862,7 +8875,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Arte di addestrare rapaci per la caccia, introdotta in Europa dai Longobardi e Franchi dall'VIII secolo. Federico II di Svevia scrisse il trattato De Arte Venandi cum Avibus, il manuale di falconeria più importante del Medioevo."
+    "description": "Arte di addestrare rapaci per la caccia, introdotta in Europa dai Longobardi e Franchi dall'VIII secolo. Federico II di Svevia scrisse il trattato De Arte Venandi cum Avibus, il manuale di falconeria più importante del Medioevo.",
+    "wikipediaSlug": "Falconeria"
   },
   {
     "id": "avori-carolingi",
@@ -8873,7 +8887,8 @@
     "category": "arte",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Oggetti liturgici e profani intagliati su zanne d'elefante prodotti alla corte di Carlo Magno ad Aquisgrana. Scene bibliche di raffinata esecuzione che sintetizzano tradizione romana e elementi nordeuropei."
+    "description": "Oggetti liturgici e profani intagliati su zanne d'elefante prodotti alla corte di Carlo Magno ad Aquisgrana. Scene bibliche di raffinata esecuzione che sintetizzano tradizione romana e elementi nordeuropei.",
+    "wikipediaSlug": "Avori_Carolingi"
   },
   {
     "id": "astronomi-carolingi",
@@ -8884,7 +8899,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Gli astronomi alla corte di Carlo Magno compilarono cataloghi stellari e calcolano solstizi ed equinozi per fissare le feste religiose. Copiarono e tramandarono i testi astronomici latini di Plinio e Macrobio."
+    "description": "Gli astronomi alla corte di Carlo Magno compilarono cataloghi stellari e calcolano solstizi ed equinozi per fissare le feste religiose. Copiarono e tramandarono i testi astronomici latini di Plinio e Macrobio.",
+    "wikipediaSlug": "Astronomia_Carolingia"
   },
   {
     "id": "motte-bailey-castello",
@@ -8895,7 +8911,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Tipo di castello normanno composto da un terrapieno (motte) con torre in cima e un recinto inferiore (bailey). Costruibili in settimane, i castelli a motte-and-bailey permisero ai Normanni di controllare rapidamente i territori conquistati."
+    "description": "Tipo di castello normanno composto da un terrapieno (motte) con torre in cima e un recinto inferiore (bailey). Costruibili in settimane, i castelli a motte-and-bailey permisero ai Normanni di controllare rapidamente i territori conquistati.",
+    "wikipediaSlug": "Motte_e_Bailey"
   },
   {
     "id": "fin-amor-cortese",
@@ -8906,7 +8923,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il codice dell'amore cortese elaborato dai trovatori occitani del XII secolo: amore platonico, non ricambiato, tra cavaliere e dama irraggiungibile. La fin'amor generò tutta la lirica d'amore occidentale."
+    "description": "Il codice dell'amore cortese elaborato dai trovatori occitani del XII secolo: amore platonico, non ricambiato, tra cavaliere e dama irraggiungibile. La fin'amor generò tutta la lirica d'amore occidentale.",
+    "wikipediaSlug": "Fin'Amor"
   },
   {
     "id": "cavalieri-templari-addestramento",
@@ -8917,7 +8935,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Ordine militare-religioso fondato nel 1119 a Gerusalemme per proteggere i pellegrini. I Templari erano guerrieri monastici che si addestravano quotidianamente alla giostra e al combattimento a piedi."
+    "description": "Ordine militare-religioso fondato nel 1119 a Gerusalemme per proteggere i pellegrini. I Templari erano guerrieri monastici che si addestravano quotidianamente alla giostra e al combattimento a piedi.",
+    "wikipediaSlug": "Cavalieri_Templari"
   },
   {
     "id": "arte-romanica-crociata",
@@ -8928,7 +8947,8 @@
     "category": "arte",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Stile artistico sincretico sviluppato nei regni crociati di Terra Santa (1099-1291), che fonde elementi romanici occidentali con l'arte bizantina e l'arte islamica. Visibile nelle chiese di Gerusalemme, Acri e Cipro."
+    "description": "Stile artistico sincretico sviluppato nei regni crociati di Terra Santa (1099-1291), che fonde elementi romanici occidentali con l'arte bizantina e l'arte islamica. Visibile nelle chiese di Gerusalemme, Acri e Cipro.",
+    "wikipediaSlug": "Arte_Crociata"
   },
   {
     "id": "canti-crociati-francesi",
@@ -8939,7 +8959,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Genere lirico del XII-XIII sec. composto per incoraggiare la partecipazione alle Crociate. I trovieri francesi componevano chansons de croisade che mescolavano ideali cavallereschi, nostalgia di casa e fervore religioso."
+    "description": "Genere lirico del XII-XIII sec. composto per incoraggiare la partecipazione alle Crociate. I trovieri francesi componevano chansons de croisade che mescolavano ideali cavallereschi, nostalgia di casa e fervore religioso.",
+    "wikipediaSlug": "Canti_Crociati"
   },
   {
     "id": "astrolabio-arabico",
@@ -8950,7 +8971,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Strumento astronomico arabo-medievale per misurare l'altezza delle stelle e calcolare l'ora e la latitudine. Introdotto in Europa attraverso la Spagna islamica nel X-XI sec., fu essenziale per la navigazione e l'astronomia medievale."
+    "description": "Strumento astronomico arabo-medievale per misurare l'altezza delle stelle e calcolare l'ora e la latitudine. Introdotto in Europa attraverso la Spagna islamica nel X-XI sec., fu essenziale per la navigazione e l'astronomia medievale.",
+    "wikipediaSlug": "Astrolabio"
   },
   {
     "id": "pallacorda-gioco",
@@ -8961,7 +8983,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Precursore del tennis moderno, nato nei chiostri francesi del XIII sec. I giocatori colpivano una palla con il palmo della mano (poi con la racchetta) su un campo diviso da un cordino o una rete bassa."
+    "description": "Precursore del tennis moderno, nato nei chiostri francesi del XIII sec. I giocatori colpivano una palla con il palmo della mano (poi con la racchetta) su un campo diviso da un cordino o una rete bassa.",
+    "wikipediaSlug": "Pallacorda"
   },
   {
     "id": "palio-di-siena-storico",
@@ -8972,7 +8995,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Corsa di cavalli sulla piazza del Campo di Siena, con origini nel XIII sec. Le contrade (rioni storici) si fronteggiano in una competizione feroce che dura 90 secondi ma si prepara per mesi con strategia e alleanze."
+    "description": "Corsa di cavalli sulla piazza del Campo di Siena, con origini nel XIII sec. Le contrade (rioni storici) si fronteggiano in una competizione feroce che dura 90 secondi ma si prepara per mesi con strategia e alleanze.",
+    "wikipediaSlug": "Palio_di_Siena"
   },
   {
     "id": "calcio-storico-13-sec",
@@ -8983,7 +9007,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Gioco con il pallone praticato nelle piazze fiorentine e italiane dal XIII secolo, diretto antenato del Calcio Storico. Squadre di quartiere senza regole fisse si contendevano il pallone in spazi urbani."
+    "description": "Gioco con il pallone praticato nelle piazze fiorentine e italiane dal XIII secolo, diretto antenato del Calcio Storico. Squadre di quartiere senza regole fisse si contendevano il pallone in spazi urbani.",
+    "wikipediaSlug": "Proto-Calcio_Medievale"
   },
   {
     "id": "troubadour-guglielmo-ix",
@@ -8994,6 +9019,7 @@
     "category": "musica",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Duca d'Aquitania (1071-1127), il primo trovatore conosciuto per nome. Le sue 11 canzoni sopravvissute sono le prime poesie profane in lingua romanza. Inventore della lirica cortese europea."
+    "description": "Duca d'Aquitania (1071-1127), il primo trovatore conosciuto per nome. Le sue 11 canzoni sopravvissute sono le prime poesie profane in lingua romanza. Inventore della lirica cortese europea.",
+    "wikipediaSlug": "Guglielmo_IX_d'Aquitania"
   }
 ]

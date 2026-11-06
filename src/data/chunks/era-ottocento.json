@@ -21659,7 +21659,8 @@
     "category": "storia",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Artista e fotografo francese (1787-1851) che nel 1839 presentò il dagherrotipo all'Académie des Sciences di Parigi. Fu il primo metodo commerciale di fotografia, inaugurando l'era dell'immagine meccanica."
+    "description": "Artista e fotografo francese (1787-1851) che nel 1839 presentò il dagherrotipo all'Académie des Sciences di Parigi. Fu il primo metodo commerciale di fotografia, inaugurando l'era dell'immagine meccanica.",
+    "wikipediaSlug": "Louis_Daguerre"
   },
   {
     "id": "olimpiadi-moderne-1896",
@@ -21670,7 +21671,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "I primi Giochi Olimpici dell'era moderna, tenuti ad Atene nel 1896 per iniziativa di Pierre de Coubertin. 241 atleti da 14 nazioni gareggiarono nello Stadio Panatenaico ricostruito in marmo."
+    "description": "I primi Giochi Olimpici dell'era moderna, tenuti ad Atene nel 1896 per iniziativa di Pierre de Coubertin. 241 atleti da 14 nazioni gareggiarono nello Stadio Panatenaico ricostruito in marmo.",
+    "wikipediaSlug": "Olimpiadi_di_Atene_1896"
   },
   {
     "id": "cinque-giornate-milano",
@@ -21681,7 +21683,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Insurrezione popolare che dal 18 al 22 marzo 1848 cacciò le truppe austriache da Milano con le barricate. Episodio simbolo del Risorgimento italiano, anche se gli austriaci tornarono dopo Custoza."
+    "description": "Insurrezione popolare che dal 18 al 22 marzo 1848 cacciò le truppe austriache da Milano con le barricate. Episodio simbolo del Risorgimento italiano, anche se gli austriaci tornarono dopo Custoza.",
+    "wikipediaSlug": "Cinque_Giornate_di_Milano"
   },
   {
     "id": "vittorio-emanuele-ii-re-italia",
@@ -21692,7 +21695,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il 17 marzo 1861, il Parlamento di Torino proclamò Vittorio Emanuele II re d'Italia. Nasceva ufficialmente lo Stato italiano unificato, con Torino prima capitale."
+    "description": "Il 17 marzo 1861, il Parlamento di Torino proclamò Vittorio Emanuele II re d'Italia. Nasceva ufficialmente lo Stato italiano unificato, con Torino prima capitale.",
+    "wikipediaSlug": "Proclamazione_del_Regno_d'Italia"
   },
   {
     "id": "padre-angelo-secchi",
@@ -21703,7 +21707,8 @@
     "category": "scienza",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Gesuita italiano (1818-1878) che classificò le stelle in quattro tipi spettrali, fondando l'astrofisica stellare. Direttore dell'Osservatorio del Collegio Romano, scoprì la struttura spettrale del Sole."
+    "description": "Gesuita italiano (1818-1878) che classificò le stelle in quattro tipi spettrali, fondando l'astrofisica stellare. Direttore dell'Osservatorio del Collegio Romano, scoprì la struttura spettrale del Sole.",
+    "wikipediaSlug": "Angelo_Secchi"
   },
   {
     "id": "rivoluzioni-1848-anno-miracoli",
@@ -21714,7 +21719,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Ondata rivoluzionaria che nel 1848 investì Francia, Germania, Austria, Italia e Ungheria. Chiamate \"Primavera dei Popoli\" o \"Anno dei Miracoli\", tutte vennero represse entro il 1849."
+    "description": "Ondata rivoluzionaria che nel 1848 investì Francia, Germania, Austria, Italia e Ungheria. Chiamate \"Primavera dei Popoli\" o \"Anno dei Miracoli\", tutte vennero represse entro il 1849.",
+    "wikipediaSlug": "Rivoluzioni_del_1848"
   },
   {
     "id": "football-regole-cambridge-1848",
@@ -21725,7 +21731,8 @@
     "category": "sport",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il primo codice scritto del calcio, redatto nel 1848 all'Università di Cambridge. Vietava di toccare il pallone con le mani e di colpire gli avversari, ponendo le basi del football moderno."
+    "description": "Il primo codice scritto del calcio, redatto nel 1848 all'Università di Cambridge. Vietava di toccare il pallone con le mani e di colpire gli avversari, ponendo le basi del football moderno.",
+    "wikipediaSlug": "Regole_di_Cambridge"
   },
   {
     "id": "conferenza-di-berlino-1884",
@@ -21736,7 +21743,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Conferenza del 1884-85 che sancì la spartizione coloniale dell'Africa tra le potenze europee. 14 nazioni tracciarono confini arbitrari ignorando etnie e culture, con effetti che durano fino ad oggi."
+    "description": "Conferenza del 1884-85 che sancì la spartizione coloniale dell'Africa tra le potenze europee. 14 nazioni tracciarono confini arbitrari ignorando etnie e culture, con effetti che durano fino ad oggi.",
+    "wikipediaSlug": "Conferenza_di_Berlino"
   },
   {
     "id": "guerra-anglo-boera",
@@ -21747,7 +21755,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Conflitto (1899-1902) tra l'Impero britannico e le Repubbliche boere sudafricane. I britannici inventarono i campi di concentramento per civili boeri: 27.000 morirono in condizioni disumane."
+    "description": "Conflitto (1899-1902) tra l'Impero britannico e le Repubbliche boere sudafricane. I britannici inventarono i campi di concentramento per civili boeri: 27.000 morirono in condizioni disumane.",
+    "wikipediaSlug": "Guerra_Anglo-Boera"
   },
   {
     "id": "marsigliese-inno",
@@ -21758,7 +21767,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Inno nazionale francese composto da Rouget de Lisle in una notte nel 1792 durante la Rivoluzione. Il primo grande inno nazional-patriottico europeo, divenne il simbolo musicale della Rivoluzione."
+    "description": "Inno nazionale francese composto da Rouget de Lisle in una notte nel 1792 durante la Rivoluzione. Il primo grande inno nazional-patriottico europeo, divenne il simbolo musicale della Rivoluzione.",
+    "wikipediaSlug": "La_Marsigliese"
   },
   {
     "id": "tournbewegung-jahn",
@@ -21769,7 +21779,8 @@
     "category": "sport",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Pedagogo tedesco (1778-1852) fondatore del movimento ginnastico Turnbewegung nel 1811. Inventò sbarre, parallele e cavallo, creando la prima ginnastica moderna come strumento di identità nazionale tedesca."
+    "description": "Pedagogo tedesco (1778-1852) fondatore del movimento ginnastico Turnbewegung nel 1811. Inventò sbarre, parallele e cavallo, creando la prima ginnastica moderna come strumento di identità nazionale tedesca.",
+    "wikipediaSlug": "Friedrich_Ludwig_Jahn"
   },
   {
     "id": "palazzo-medici-michelozzo",
@@ -21780,7 +21791,8 @@
     "category": "arte",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Edificio fiorentino progettato da Michelozzo per Cosimo de' Medici nel 1445. Primo esempio di palazzo rinascimentale urbano: eleganza borghese al posto della fortezza medievale."
+    "description": "Edificio fiorentino progettato da Michelozzo per Cosimo de' Medici nel 1445. Primo esempio di palazzo rinascimentale urbano: eleganza borghese al posto della fortezza medievale.",
+    "wikipediaSlug": "Palazzo_Medici"
   },
   {
     "id": "locomotiva-stephenson",
@@ -21791,7 +21803,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "La \"Rocket\" di George Stephenson vinse le prove di Rainhill nel 1829, inaugurando l'era ferroviaria. Con 46 km/h stabilì un record di velocità e dimostrò la praticità delle locomotive a vapore."
+    "description": "La \"Rocket\" di George Stephenson vinse le prove di Rainhill nel 1829, inaugurando l'era ferroviaria. Con 46 km/h stabilì un record di velocità e dimostrò la praticità delle locomotive a vapore.",
+    "wikipediaSlug": "Locomotiva_di_Stephenson"
   },
   {
     "id": "poliziano-laude",
@@ -21802,7 +21815,8 @@
     "category": "musica",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Poeta e umanista fiorentino (1454-1494) del circolo laurenziano. Le sue laude (canti religiosi in volgare) messe in musica nel circolo di Lorenzo il Magnifico unirono arte sacra e profana, rinnovando la lirica italiana."
+    "description": "Poeta e umanista fiorentino (1454-1494) del circolo laurenziano. Le sue laude (canti religiosi in volgare) messe in musica nel circolo di Lorenzo il Magnifico unirono arte sacra e profana, rinnovando la lirica italiana.",
+    "wikipediaSlug": "Angelo_Poliziano"
   },
   {
     "id": "heinrich-isaac-frottola",
@@ -21813,7 +21827,8 @@
     "category": "musica",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Compositore fiammingo (c.1450-1517) alla corte di Lorenzo il Magnifico a Firenze. Compose frottole e mottetti mescolando stili nordeuropei e italiani, contribuendo alla nascita della musica rinascimentale italiana."
+    "description": "Compositore fiammingo (c.1450-1517) alla corte di Lorenzo il Magnifico a Firenze. Compose frottole e mottetti mescolando stili nordeuropei e italiani, contribuendo alla nascita della musica rinascimentale italiana.",
+    "wikipediaSlug": "Heinrich_Isaac"
   },
   {
     "id": "willem-dufay-polifonia",
@@ -21824,7 +21839,8 @@
     "category": "musica",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Compositore franco-fiammingo (1397-1474), il più importante del suo tempo. I suoi mottetti isoritmici e le messe polifoniche segnarono la transizione dal tardo medioevo al Rinascimento musicale."
+    "description": "Compositore franco-fiammingo (1397-1474), il più importante del suo tempo. I suoi mottetti isoritmici e le messe polifoniche segnarono la transizione dal tardo medioevo al Rinascimento musicale.",
+    "wikipediaSlug": "Guillaume_Dufay"
   },
   {
     "id": "le-pelerinage-watteau",
@@ -21835,7 +21851,8 @@
     "category": "arte",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Pittore rococò francese (1684-1721) inventore delle fêtes galantes. Il suo \"Pèlerinage à l'île de Cythère\" (1717) introduce la malinconia nel piacere aristocratico, anticipando il romanticismo."
+    "description": "Pittore rococò francese (1684-1721) inventore delle fêtes galantes. Il suo \"Pèlerinage à l'île de Cythère\" (1717) introduce la malinconia nel piacere aristocratico, anticipando il romanticismo.",
+    "wikipediaSlug": "Antoine_Watteau"
   },
   {
     "id": "offenbach-operette",
@@ -21846,7 +21863,8 @@
     "category": "musica",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Compositore franco-tedesco (1819-1880), padre dell'operetta moderna. Con \"Orfeo all'inferno\" e \"La Belle Hélène\" conquistò Parigi con musica leggera, satira sociale e ritmi di can-can."
+    "description": "Compositore franco-tedesco (1819-1880), padre dell'operetta moderna. Con \"Orfeo all'inferno\" e \"La Belle Hélène\" conquistò Parigi con musica leggera, satira sociale e ritmi di can-can.",
+    "wikipediaSlug": "Jacques_Offenbach"
   },
   {
     "id": "miniere-galles-vittoriane",
@@ -21857,7 +21875,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Le miniere di carbone del Galles meridionale, fulcro della Rivoluzione Industriale britannica. Nel 1850 vi lavoravano 50.000 minatori, uomini donne e bambini, 12 ore al giorno in condizioni pericolose."
+    "description": "Le miniere di carbone del Galles meridionale, fulcro della Rivoluzione Industriale britannica. Nel 1850 vi lavoravano 50.000 minatori, uomini donne e bambini, 12 ore al giorno in condizioni pericolose.",
+    "wikipediaSlug": "Miniere_del_Galles"
   },
   {
     "id": "music-hall-londra",
@@ -21868,7 +21887,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Genere di intrattenimento popolare vittoriano nato a Londra negli anni 1850: operai in giacca domenicale assistevano a sketch comici, canzoni sentimentali e numeri acrobatici. Base del cabaret e del vaudeville americano."
+    "description": "Genere di intrattenimento popolare vittoriano nato a Londra negli anni 1850: operai in giacca domenicale assistevano a sketch comici, canzoni sentimentali e numeri acrobatici. Base del cabaret e del vaudeville americano.",
+    "wikipediaSlug": "Music_Hall"
   },
   {
     "id": "puritani-condanna-sport",
@@ -21879,7 +21899,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Movimento religioso riformato inglese del XVII sec. che condannava i giochi festivi domenicali come peccato. I predicatori puritani chiusero teatri e arene, creando un conflitto morale attorno allo sport e al tempo libero."
+    "description": "Movimento religioso riformato inglese del XVII sec. che condannava i giochi festivi domenicali come peccato. I predicatori puritani chiusero teatri e arene, creando un conflitto morale attorno allo sport e al tempo libero.",
+    "wikipediaSlug": "Puritanesimo"
   },
   {
     "id": "cerro-rico-potosi-miniere",
@@ -21890,7 +21911,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Il monte boliviano che fu il cuore dell'impero d'argento spagnolo dal 1545. Il Cerro Rico produsse oltre la metà dell'argento mondiale per due secoli, estratto con il lavoro forzato (mita) di indigeni e schiavi africani."
+    "description": "Il monte boliviano che fu il cuore dell'impero d'argento spagnolo dal 1545. Il Cerro Rico produsse oltre la metà dell'argento mondiale per due secoli, estratto con il lavoro forzato (mita) di indigeni e schiavi africani.",
+    "wikipediaSlug": "Cerro_Rico"
   },
   {
     "id": "cavo-telegrafico-torino-milano",
@@ -21901,7 +21923,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il primo collegamento telegrafico tra Torino e Milano nel 1847 fu un simbolo del progresso risorgimentale. Riduzione del tempo di comunicazione da giorni a minuti: la velocità come motore dell'unificazione italiana."
+    "description": "Il primo collegamento telegrafico tra Torino e Milano nel 1847 fu un simbolo del progresso risorgimentale. Riduzione del tempo di comunicazione da giorni a minuti: la velocità come motore dell'unificazione italiana.",
+    "wikipediaSlug": "Cavo_Telegrafico"
   },
   {
     "id": "congo-leopoldo-ii-belga",
@@ -21912,6 +21935,7 @@
     "category": "storia",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Re del Belgio (1865-1909) che governò lo Stato Libero del Congo come proprietà personale. Il regime della gomma di Leopoldo II causò la morte di 10 milioni di congolesi — amputazioni sistematiche, lavoro forzato, il primo genocidio coloniale documentato."
+    "description": "Re del Belgio (1865-1909) che governò lo Stato Libero del Congo come proprietà personale. Il regime della gomma di Leopoldo II causò la morte di 10 milioni di congolesi — amputazioni sistematiche, lavoro forzato, il primo genocidio coloniale documentato.",
+    "wikipediaSlug": "Leopoldo_II"
   }
 ]

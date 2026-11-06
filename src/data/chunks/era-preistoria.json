@@ -2241,7 +2241,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Nei primissimi minuti dopo il Big Bang, idrogeno ed elio si formano per fusione nucleare. Questo processo fissa le proporzioni degli elementi leggeri nell'universo primordiale."
+    "description": "Nei primissimi minuti dopo il Big Bang, idrogeno ed elio si formano per fusione nucleare. Questo processo fissa le proporzioni degli elementi leggeri nell'universo primordiale.",
+    "wikipediaSlug": "Nucleosintesi_Primordiale"
   },
   {
     "id": "radiazione-di-hawking",
@@ -2252,7 +2253,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Effetto quantistico teorizzato da Stephen Hawking per cui i buchi neri emettono lentamente particelle e si evaporano. Unisce meccanica quantistica e relatività generale."
+    "description": "Effetto quantistico teorizzato da Stephen Hawking per cui i buchi neri emettono lentamente particelle e si evaporano. Unisce meccanica quantistica e relatività generale.",
+    "wikipediaSlug": "Radiazione_di_Hawking"
   },
   {
     "id": "epoca-di-planck",
@@ -2263,7 +2265,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Primo istante dell'universo (10⁻⁴³ secondi dal Big Bang), in cui tutte le forze fondamentali erano unificate. Oltre questa soglia la fisica attuale non riesce a descrivere la realtà."
+    "description": "Primo istante dell'universo (10⁻⁴³ secondi dal Big Bang), in cui tutte le forze fondamentali erano unificate. Oltre questa soglia la fisica attuale non riesce a descrivere la realtà.",
+    "wikipediaSlug": "Epoca_di_Planck"
   },
   {
     "id": "grande-ossidazione",
@@ -2274,7 +2277,8 @@
     "category": "geologia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Evento geologico 2,4 miliardi di anni fa in cui i cianobatteri liberarono ossigeno nell'atmosfera terrestre, trasformandola radicalmente e causando la prima grande estinzione di massa."
+    "description": "Evento geologico 2,4 miliardi di anni fa in cui i cianobatteri liberarono ossigeno nell'atmosfera terrestre, trasformandola radicalmente e causando la prima grande estinzione di massa.",
+    "wikipediaSlug": "Grande_Ossidazione"
   },
   {
     "id": "shark-bay-stromatoliti",
@@ -2285,7 +2289,8 @@
     "category": "geologia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Baia dell'Australia occidentale dove esistono ancora oggi stromatoliti viventi, strutture di cianobatteri identiche a quelle di 3,5 miliardi di anni fa. Patrimonio UNESCO."
+    "description": "Baia dell'Australia occidentale dove esistono ancora oggi stromatoliti viventi, strutture di cianobatteri identiche a quelle di 3,5 miliardi di anni fa. Patrimonio UNESCO.",
+    "wikipediaSlug": "Shark_Bay"
   },
   {
     "id": "rodinia-supercontinente",
@@ -2296,7 +2301,8 @@
     "category": "geologia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Supercontinente assemblato circa 1,1 miliardi di anni fa e poi spaccato dalla deriva dei continenti circa 750 milioni di anni fa. Precursore di tutti i successivi supercontinenti."
+    "description": "Supercontinente assemblato circa 1,1 miliardi di anni fa e poi spaccato dalla deriva dei continenti circa 750 milioni di anni fa. Precursore di tutti i successivi supercontinenti.",
+    "wikipediaSlug": "Rodinia"
   },
   {
     "id": "chaussee-des-geants",
@@ -2307,7 +2313,8 @@
     "category": "arte",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Formazione geologica in Irlanda del Nord composta da circa 40.000 colonne di basalto esagonale formatesi dal raffreddamento di lava vulcanica. Patrimonio UNESCO e meraviglia naturale."
+    "description": "Formazione geologica in Irlanda del Nord composta da circa 40.000 colonne di basalto esagonale formatesi dal raffreddamento di lava vulcanica. Patrimonio UNESCO e meraviglia naturale.",
+    "wikipediaSlug": "Chaussée_des_Géants"
   },
   {
     "id": "esplosione-cambriana",
@@ -2318,7 +2325,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Rapida diversificazione della vita animale circa 541 milioni di anni fa, quando apparvero la maggior parte dei piani corporei animali oggi esistenti. Dura circa 20 milioni di anni."
+    "description": "Rapida diversificazione della vita animale circa 541 milioni di anni fa, quando apparvero la maggior parte dei piani corporei animali oggi esistenti. Dura circa 20 milioni di anni.",
+    "wikipediaSlug": "Esplosione_Cambriana"
   },
   {
     "id": "stephen-jay-gould",
@@ -2329,7 +2337,8 @@
     "category": "filosofia",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Paleontologo e storico della scienza americano (1941-2002), autore della teoria degli equilibri punteggiati. Il suo studio del Burgess Shale ha rivoluzionato la comprensione dell'evoluzione."
+    "description": "Paleontologo e storico della scienza americano (1941-2002), autore della teoria degli equilibri punteggiati. Il suo studio del Burgess Shale ha rivoluzionato la comprensione dell'evoluzione.",
+    "wikipediaSlug": "Stephen_Jay_Gould"
   },
   {
     "id": "burgess-shale",
@@ -2340,7 +2349,8 @@
     "category": "scienza",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Deposito fossilifero canadese del Cambriano che conserva con straordinaria fedeltà i tessuti molli di organismi di 508 milioni di anni fa. Studiato da Stephen Jay Gould in Wonderful Life."
+    "description": "Deposito fossilifero canadese del Cambriano che conserva con straordinaria fedeltà i tessuti molli di organismi di 508 milioni di anni fa. Studiato da Stephen Jay Gould in Wonderful Life.",
+    "wikipediaSlug": "Burgess_Shale"
   },
   {
     "id": "archeopteryx-lithographica",
@@ -2351,7 +2361,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Animale del Giurassico superiore con caratteristiche di rettile e uccello: penne da volare, denti e artigli. Scoperto in Baviera nel 1861, è il fossile-chiave nel dibattito sull'evoluzione degli uccelli."
+    "description": "Animale del Giurassico superiore con caratteristiche di rettile e uccello: penne da volare, denti e artigli. Scoperto in Baviera nel 1861, è il fossile-chiave nel dibattito sull'evoluzione degli uccelli.",
+    "wikipediaSlug": "Archeopteryx_lithographica"
   },
   {
     "id": "velociraptor",
@@ -2362,7 +2373,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Piccolo dinosauro dromaeosauride del Cretaceo superiore, long 2 metri e veloce. Cacciava con tattiche di branco nel deserto del Gobi. Strettamente imparentato con gli uccelli moderni."
+    "description": "Piccolo dinosauro dromaeosauride del Cretaceo superiore, long 2 metri e veloce. Cacciava con tattiche di branco nel deserto del Gobi. Strettamente imparentato con gli uccelli moderni.",
+    "wikipediaSlug": "Velociraptor"
   },
   {
     "id": "cicli-di-milankovitch",
@@ -2373,7 +2385,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Variazioni periodiche dell'orbita e dell'asse terrestre descritte dal fisico serbo Milutin Milankovitch nel 1920. Spiegano i cicli glaciali e interglaciali che hanno plasmato il clima nell'ultimo milione di anni."
+    "description": "Variazioni periodiche dell'orbita e dell'asse terrestre descritte dal fisico serbo Milutin Milankovitch nel 1920. Spiegano i cicli glaciali e interglaciali che hanno plasmato il clima nell'ultimo milione di anni.",
+    "wikipediaSlug": "Cicli_di_Milankovitch"
   },
   {
     "id": "othniel-marsh",
@@ -2384,7 +2397,8 @@
     "category": "scienza",
     "tipo": "persona",
     "isCosmic": false,
-    "description": "Paleontologo americano (1831-1899) che documentò l'evoluzione del cavallo, da Eohippus a Equus in 55 milioni di anni. Antagonista di Edward Drinker Cope nella famosa \"Bone War\"."
+    "description": "Paleontologo americano (1831-1899) che documentò l'evoluzione del cavallo, da Eohippus a Equus in 55 milioni di anni. Antagonista di Edward Drinker Cope nella famosa \"Bone War\".",
+    "wikipediaSlug": "Othniel_Marsh"
   },
   {
     "id": "eohippus",
@@ -2395,7 +2409,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Piccolo ipparioide dell'Eocene, antenato del cavallo moderno, grande come un cane. Aveva quattro dita per zampa e viveva in foreste nordamericane. Documentato da Othniel Marsh."
+    "description": "Piccolo ipparioide dell'Eocene, antenato del cavallo moderno, grande come un cane. Aveva quattro dita per zampa e viveva in foreste nordamericane. Documentato da Othniel Marsh.",
+    "wikipediaSlug": "Eohippus"
   },
   {
     "id": "olduvai-gorge",
@@ -2406,7 +2421,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Gola della Tanzania che ha restituito i fossili di Homo habilis e i più antichi strumenti di pietra (tecnologia olduvaiana). Studiata da Louis e Mary Leakey a partire dagli anni '50."
+    "description": "Gola della Tanzania che ha restituito i fossili di Homo habilis e i più antichi strumenti di pietra (tecnologia olduvaiana). Studiata da Louis e Mary Leakey a partire dagli anni '50.",
+    "wikipediaSlug": "Olduvai_Gorge"
   },
   {
     "id": "chauvet-pont-d-arc",
@@ -2417,7 +2433,8 @@
     "category": "arte",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Grotta della Francia meridionale con 420 pitture rupestri di 36.000 anni fa: leoni, rinoceronti e orse in movimento con prospettiva e sovrapposizione. Patrimonio UNESCO, visitabile solo virtualmente."
+    "description": "Grotta della Francia meridionale con 420 pitture rupestri di 36.000 anni fa: leoni, rinoceronti e orse in movimento con prospettiva e sovrapposizione. Patrimonio UNESCO, visitabile solo virtualmente.",
+    "wikipediaSlug": "Chauvet-Pont-d'Arc"
   },
   {
     "id": "chiara-ossigenazione-cianobatteri",
@@ -2428,7 +2445,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Processo inventato dai cianobatteri circa 3,5 miliardi di anni fa che produce ossigeno come sottoprodotto. Ha trasformato l'atmosfera terrestre e reso possibile tutta la vita aerobica."
+    "description": "Processo inventato dai cianobatteri circa 3,5 miliardi di anni fa che produce ossigeno come sottoprodotto. Ha trasformato l'atmosfera terrestre e reso possibile tutta la vita aerobica.",
+    "wikipediaSlug": "Fotosintesi_Ossigenica"
   },
   {
     "id": "t-rex-tyrannosaurus",
@@ -2439,7 +2457,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Tyrannosaurus rex, il più iconico predatore del Cretaceo superiore nordamericano. Alto 4 metri, lungo 12, con morso potente come nessun altro animale terrestre. Estinto 66 milioni di anni fa."
+    "description": "Tyrannosaurus rex, il più iconico predatore del Cretaceo superiore nordamericano. Alto 4 metri, lungo 12, con morso potente come nessun altro animale terrestre. Estinto 66 milioni di anni fa.",
+    "wikipediaSlug": "T-Rex"
   },
   {
     "id": "chicxulub-impatto",
@@ -2450,7 +2469,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Cratere da impatto nello Yucatán, Messico, formato da un asteroide di 10 km circa 66 milioni di anni fa. L'impatto causò la quinta estinzione di massa, eliminando i dinosauri non aviari."
+    "description": "Cratere da impatto nello Yucatán, Messico, formato da un asteroide di 10 km circa 66 milioni di anni fa. L'impatto causò la quinta estinzione di massa, eliminando i dinosauri non aviari.",
+    "wikipediaSlug": "Chicxulub"
   },
   {
     "id": "rift-valley-africana",
@@ -2461,7 +2481,8 @@
     "category": "geologia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Sistema di spaccature tettoniche lungo 6.000 km dall'Etiopia al Mozambico, dove le placche africane si separano. Culla dell'evoluzione umana, con laghi, vulcani e sedimenti fossili."
+    "description": "Sistema di spaccature tettoniche lungo 6.000 km dall'Etiopia al Mozambico, dove le placche africane si separano. Culla dell'evoluzione umana, con laghi, vulcani e sedimenti fossili.",
+    "wikipediaSlug": "Rift_Valley_Africana"
   },
   {
     "id": "grotta-di-wonderwerk",
@@ -2472,7 +2493,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Grotta sudafricana nel Northern Cape dove sono stati trovati i resti del più antico uso intenzionale del fuoco: ossa e resti vegetali bruciati risalenti a 1 milione di anni fa."
+    "description": "Grotta sudafricana nel Northern Cape dove sono stati trovati i resti del più antico uso intenzionale del fuoco: ossa e resti vegetali bruciati risalenti a 1 milione di anni fa.",
+    "wikipediaSlug": "Grotta_di_Wonderwerk"
   },
   {
     "id": "tecnica-levalloisiana",
@@ -2483,7 +2505,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Metodo di scheggiatura della selce sviluppato dai Neanderthal circa 300.000 anni fa: il nucleo viene preparato a tartaruga per ottenere lame standardizzate di forma predeterminata."
+    "description": "Metodo di scheggiatura della selce sviluppato dai Neanderthal circa 300.000 anni fa: il nucleo viene preparato a tartaruga per ottenere lame standardizzate di forma predeterminata.",
+    "wikipediaSlug": "Tecnica_Levalloisiana"
   },
   {
     "id": "cueva-de-los-caballos",
@@ -2494,7 +2517,8 @@
     "category": "arte",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Sito rupestre spagnolo nella provincia di Castellón con pitture di caccia collettiva del Mesolitico. Figure umane stilizzate e dinamiche mostrano scene di caccia e rituali."
+    "description": "Sito rupestre spagnolo nella provincia di Castellón con pitture di caccia collettiva del Mesolitico. Figure umane stilizzate e dinamiche mostrano scene di caccia e rituali.",
+    "wikipediaSlug": "Cueva_de_los_Caballos"
   },
   {
     "id": "megaliti-di-malta",
@@ -2505,7 +2529,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Complessi templari preistorici di Malta (Ħaġar Qim, Mnajdra, Tarxien) costruiti tra il 3600 e il 2500 a.C., i più antichi templi in pietra del mondo, precedenti Stonehenge e le Piramidi."
+    "description": "Complessi templari preistorici di Malta (Ħaġar Qim, Mnajdra, Tarxien) costruiti tra il 3600 e il 2500 a.C., i più antichi templi in pietra del mondo, precedenti Stonehenge e le Piramidi.",
+    "wikipediaSlug": "Megaliti_di_Malta"
   },
   {
     "id": "ceramica-cucuteni-trypillia",
@@ -2516,7 +2541,8 @@
     "category": "arte",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Cultura neolitica dell'Europa orientale (5500-2750 a.C.) famosa per ceramiche dipinte con spirali e motivi geometrici. Costruiva villaggi di migliaia di persone, tra i più grandi del Neolitico."
+    "description": "Cultura neolitica dell'Europa orientale (5500-2750 a.C.) famosa per ceramiche dipinte con spirali e motivi geometrici. Costruiva villaggi di migliaia di persone, tra i più grandi del Neolitico.",
+    "wikipediaSlug": "Cucuteni-Trypillia"
   },
   {
     "id": "geissenklosterle-flauto",
@@ -2527,7 +2553,8 @@
     "category": "musica",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Grotta del Baden-Württemberg tedesco dove sono stati rinvenuti i più antichi strumenti musicali del mondo: flauti di osso d'avvoltoio e avorio di mammut risalenti a 40.000 anni fa."
+    "description": "Grotta del Baden-Württemberg tedesco dove sono stati rinvenuti i più antichi strumenti musicali del mondo: flauti di osso d'avvoltoio e avorio di mammut risalenti a 40.000 anni fa.",
+    "wikipediaSlug": "Geißenklösterle"
   },
   {
     "id": "venere-di-willendorf",
@@ -2538,7 +2565,8 @@
     "category": "arte",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Statuetta femminile in calcare oolite alta 11 cm, rinvenuta a Willendorf (Austria) e datata a 28.000 anni fa. Considerata una delle prime sculture al mondo, simbolo della fertilità paleolitica."
+    "description": "Statuetta femminile in calcare oolite alta 11 cm, rinvenuta a Willendorf (Austria) e datata a 28.000 anni fa. Considerata una delle prime sculture al mondo, simbolo della fertilità paleolitica.",
+    "wikipediaSlug": "Venere_di_Willendorf"
   },
   {
     "id": "grande-estinzione-permiano",
@@ -2549,7 +2577,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "La più devastante estinzione di massa della storia, 252 milioni di anni fa: il 96% delle specie marine e il 70% di quelle terrestri scomparvero in meno di 60.000 anni. Causa principale: vulcanismo siberiano."
+    "description": "La più devastante estinzione di massa della storia, 252 milioni di anni fa: il 96% delle specie marine e il 70% di quelle terrestri scomparvero in meno di 60.000 anni. Causa principale: vulcanismo siberiano.",
+    "wikipediaSlug": "Grande_Estinzione_del_Permiano"
   },
   {
     "id": "trilobiti",
@@ -2560,7 +2589,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Artropodi marini che dominarono i fondali oceanici per 270 milioni di anni, dal Cambriano al Permiano. Con oltre 20.000 specie note, sono tra i fossili più comuni e diversificati della storia."
+    "description": "Artropodi marini che dominarono i fondali oceanici per 270 milioni di anni, dal Cambriano al Permiano. Con oltre 20.000 specie note, sono tra i fossili più comuni e diversificati della storia.",
+    "wikipediaSlug": "Trilobiti"
   },
   {
     "id": "filamenti-cosmici",
@@ -2571,7 +2601,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Strutture a grande scala dell'universo: reti di filamenti di materia oscura e gas lunghi miliardi di anni luce, ai cui nodi si formano i superammassi di galassie."
+    "description": "Strutture a grande scala dell'universo: reti di filamenti di materia oscura e gas lunghi miliardi di anni luce, ai cui nodi si formano i superammassi di galassie.",
+    "wikipediaSlug": "Filamenti_Cosmici"
   },
   {
     "id": "energia-oscura",
@@ -2582,7 +2613,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Componente ipotetica che costituisce il 68% dell'energia dell'universo, responsabile dell'accelerazione dell'espansione cosmica. Scoperta nel 1998 con l'osservazione delle supernovae di tipo Ia."
+    "description": "Componente ipotetica che costituisce il 68% dell'energia dell'universo, responsabile dell'accelerazione dell'espansione cosmica. Scoperta nel 1998 con l'osservazione delle supernovae di tipo Ia.",
+    "wikipediaSlug": "Energia_Oscura"
   },
   {
     "id": "nebulosa-solare",
@@ -2593,7 +2625,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Nube di gas e polvere che collassò su sé stessa 4,6 miliardi di anni fa per gravità, generando il nostro Sole e il sistema planetario. Il disco protoplanetario diede origine ai pianeti."
+    "description": "Nube di gas e polvere che collassò su sé stessa 4,6 miliardi di anni fa per gravità, generando il nostro Sole e il sistema planetario. Il disco protoplanetario diede origine ai pianeti.",
+    "wikipediaSlug": "Nebulosa_Solare"
   },
   {
     "id": "fluttuazioni-quantistiche",
@@ -2604,7 +2637,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Variazioni spontanee dell'energia del vuoto quantistico nei primissimi istanti del Big Bang. Queste fluttuazioni si amplificarono con l'inflazione cosmica e divennero i semi delle strutture cosmiche."
+    "description": "Variazioni spontanee dell'energia del vuoto quantistico nei primissimi istanti del Big Bang. Queste fluttuazioni si amplificarono con l'inflazione cosmica e divennero i semi delle strutture cosmiche.",
+    "wikipediaSlug": "Fluttuazioni_Quantistiche"
   },
   {
     "id": "universo-osservabile",
@@ -2615,7 +2649,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "La porzione dell'universo da cui la luce ha avuto tempo di raggiungerci: una sfera di 93 miliardi di anni luce di diametro. Le galassie ai suoi bordi si allontanano a velocità superiore alla luce per l'espansione dello spazio."
+    "description": "La porzione dell'universo da cui la luce ha avuto tempo di raggiungerci: una sfera di 93 miliardi di anni luce di diametro. Le galassie ai suoi bordi si allontanano a velocità superiore alla luce per l'espansione dello spazio.",
+    "wikipediaSlug": "Universo_Osservabile"
   },
   {
     "id": "onde-gravitazionali",
@@ -2626,7 +2661,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Increspature dello spazio-tempo predette da Einstein nel 1916 e rilevate per la prima volta da LIGO nel 2015. Generate da eventi cosmici catastrofici come la fusione di buchi neri o stelle di neutroni."
+    "description": "Increspature dello spazio-tempo predette da Einstein nel 1916 e rilevate per la prima volta da LIGO nel 2015. Generate da eventi cosmici catastrofici come la fusione di buchi neri o stelle di neutroni.",
+    "wikipediaSlug": "Onde_Gravitazionali"
   },
   {
     "id": "pangea-supercontinente",
@@ -2637,7 +2673,8 @@
     "category": "geologia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Supercontinente formatosi circa 335 milioni di anni fa dalla fusione di tutti i continenti. Si è poi diviso in Laurasia e Gondwana circa 175 milioni di anni fa, formando la geografia attuale."
+    "description": "Supercontinente formatosi circa 335 milioni di anni fa dalla fusione di tutti i continenti. Si è poi diviso in Laurasia e Gondwana circa 175 milioni di anni fa, formando la geografia attuale.",
+    "wikipediaSlug": "Pangea"
   },
   {
     "id": "correnti-termoaline",
@@ -2648,7 +2685,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Sistema globale di correnti oceaniche profonde guidate da differenze di temperatura e salinità. La cinghia oceanica trasporta calore dai tropici alle regioni polari, regolando il clima del pianeta."
+    "description": "Sistema globale di correnti oceaniche profonde guidate da differenze di temperatura e salinità. La cinghia oceanica trasporta calore dai tropici alle regioni polari, regolando il clima del pianeta.",
+    "wikipediaSlug": "Circolazione_Termoalina"
   },
   {
     "id": "tettonica-a-placche",
@@ -2659,7 +2697,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Teoria che descrive il movimento delle placche litosferiche terrestri. Formulata negli anni '60, spiega terremoti, vulcani, formazione di montagne e deriva dei continenti."
+    "description": "Teoria che descrive il movimento delle placche litosferiche terrestri. Formulata negli anni '60, spiega terremoti, vulcani, formazione di montagne e deriva dei continenti.",
+    "wikipediaSlug": "Tettonica_a_Placche"
   },
   {
     "id": "cooksonia-pianta",
@@ -2670,7 +2709,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "La più antica pianta vascolare conosciuta, vissuta nel Siluriano (430 milioni di anni fa). Fu la prima pianta a colonizzare la terraferma, aprendo la strada all'esplosione vegetale del Devoniano."
+    "description": "La più antica pianta vascolare conosciuta, vissuta nel Siluriano (430 milioni di anni fa). Fu la prima pianta a colonizzare la terraferma, aprendo la strada all'esplosione vegetale del Devoniano.",
+    "wikipediaSlug": "Cooksonia"
   },
   {
     "id": "coralli-rugosi",
@@ -2681,7 +2721,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Coralli estinti che costruirono le barriere coralline paleozoiche dall'Ordoviciano al Permiano. Le loro geometrie a geometria radiale sono conservate come fossili guida nelle rocce calcaree di tutto il mondo."
+    "description": "Coralli estinti che costruirono le barriere coralline paleozoiche dall'Ordoviciano al Permiano. Le loro geometrie a geometria radiale sono conservate come fossili guida nelle rocce calcaree di tutto il mondo.",
+    "wikipediaSlug": "Coralli_Rugosi"
   },
   {
     "id": "angiosperme-fiori",
@@ -2692,7 +2733,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Piante con fiori e semi racchiusi in frutti, comparse 130 milioni di anni fa nel Cretaceo. La loro comparsa rivoluzionò il rapporto tra piante e insetti impollinatori, generando un'esplosione di biodiversità."
+    "description": "Piante con fiori e semi racchiusi in frutti, comparse 130 milioni di anni fa nel Cretaceo. La loro comparsa rivoluzionò il rapporto tra piante e insetti impollinatori, generando un'esplosione di biodiversità.",
+    "wikipediaSlug": "Angiosperme"
   },
   {
     "id": "sauropodi-dinosauri",
@@ -2703,7 +2745,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "I più grandi animali terrestri della storia: dinosauri erbivori con collo lunghissimo come Brachiosaurus e Argentinosaurus. I Sauropodi emettevano vocalizzazioni a bassa frequenza udibili a chilometri."
+    "description": "I più grandi animali terrestri della storia: dinosauri erbivori con collo lunghissimo come Brachiosaurus e Argentinosaurus. I Sauropodi emettevano vocalizzazioni a bassa frequenza udibili a chilometri.",
+    "wikipediaSlug": "Sauropodi"
   },
   {
     "id": "pakicetus-balena",
@@ -2714,7 +2757,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Mammifero terrestre del Pakistan/India di 53 milioni di anni fa, antenato comune di tutte le balene. Aveva quattro zampe ma già struttura ossea dell'orecchio adattata a percepire suoni in acqua."
+    "description": "Mammifero terrestre del Pakistan/India di 53 milioni di anni fa, antenato comune di tutte le balene. Aveva quattro zampe ma già struttura ossea dell'orecchio adattata a percepire suoni in acqua.",
+    "wikipediaSlug": "Pakicetus"
   },
   {
     "id": "sahelanthropus-tchadensis",
@@ -2725,7 +2769,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Ominide del Ciad vissuto 7 milioni di anni fa, il più antico rappresentante noto della linea evolutiva umana. Aveva già un forame magno in posizione anteriore, suggerendo una postura parzialmente eretta."
+    "description": "Ominide del Ciad vissuto 7 milioni di anni fa, il più antico rappresentante noto della linea evolutiva umana. Aveva già un forame magno in posizione anteriore, suggerendo una postura parzialmente eretta.",
+    "wikipediaSlug": "Sahelanthropus"
   },
   {
     "id": "domesticazione-cane",
@@ -2736,7 +2781,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "La prima alleanza inter-specie della storia, avvenuta tra 15.000 e 40.000 anni fa quando i lupi si avvicinarono ai campi degli uomini. I cani divennero compagni di caccia, sentinelle e compagni."
+    "description": "La prima alleanza inter-specie della storia, avvenuta tra 15.000 e 40.000 anni fa quando i lupi si avvicinarono ai campi degli uomini. I cani divennero compagni di caccia, sentinelle e compagni.",
+    "wikipediaSlug": "Domesticazione_del_Cane"
   },
   {
     "id": "megafauna-pleistocenica",
@@ -2747,7 +2793,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "I giganti del Pleistocene: mammut lanosi, rinoceronti lanosi, bradipi giganti e leoni americani. Questa megafauna si estinse tra 12.000 e 10.000 anni fa, probabilmente per il cambiamento climatico e la caccia umana."
+    "description": "I giganti del Pleistocene: mammut lanosi, rinoceronti lanosi, bradipi giganti e leoni americani. Questa megafauna si estinse tra 12.000 e 10.000 anni fa, probabilmente per il cambiamento climatico e la caccia umana.",
+    "wikipediaSlug": "Megafauna_Pleistocenica"
   },
   {
     "id": "caccia-cooperativa-preistorica",
@@ -2758,7 +2805,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Strategia venatoria sviluppata dal genere Homo che richiede pianificazione, comunicazione e divisione dei ruoli. La caccia cooperativa è considerata un driver evolutivo chiave per il linguaggio e la socialità."
+    "description": "Strategia venatoria sviluppata dal genere Homo che richiede pianificazione, comunicazione e divisione dei ruoli. La caccia cooperativa è considerata un driver evolutivo chiave per il linguaggio e la socialità.",
+    "wikipediaSlug": "Caccia_Cooperativa"
   },
   {
     "id": "calendario-lunare-paleolitico",
@@ -2769,7 +2817,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "I più antichi sistemi di conteggio conosciuti: serie di tacche su ossa animali che tracciano i cicli lunari di 28 giorni. Rinvenuti in Africa e Europa, risalgono a 35.000-40.000 anni fa."
+    "description": "I più antichi sistemi di conteggio conosciuti: serie di tacche su ossa animali che tracciano i cicli lunari di 28 giorni. Rinvenuti in Africa e Europa, risalgono a 35.000-40.000 anni fa.",
+    "wikipediaSlug": "Calendario_Lunare"
   },
   {
     "id": "arco-musicale-mesolitico",
@@ -2780,7 +2829,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Tra i più antichi strumenti musicali: una corda tesa su legno flessibile, forse derivata dall'arco da caccia. Pizzicando la corda si ottiene un tono fondamentale modulabile con la bocca come cassa di risonanza."
+    "description": "Tra i più antichi strumenti musicali: una corda tesa su legno flessibile, forse derivata dall'arco da caccia. Pizzicando la corda si ottiene un tono fondamentale modulabile con la bocca come cassa di risonanza.",
+    "wikipediaSlug": "Arco_Musicale"
   },
   {
     "id": "microliti-frecce",
@@ -2791,7 +2841,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Piccole schegge di selce del Mesolitico, affilate e inserite in incastri di legno o osso per formare frecce composite, falcetti e arpioni. La tecnologia microlitica rivoluzionò la caccia e la pesca."
+    "description": "Piccole schegge di selce del Mesolitico, affilate e inserite in incastri di legno o osso per formare frecce composite, falcetti e arpioni. La tecnologia microlitica rivoluzionò la caccia e la pesca.",
+    "wikipediaSlug": "Microliti"
   },
   {
     "id": "arpione-preistorico",
@@ -2802,7 +2853,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Strumento da pesca preistorico in osso o corno, con denti retrattili per trattenere il pesce. I primi arpioni risalgono al Paleolitico superiore africano (90.000 anni fa), diffusi poi in tutto il mondo."
+    "description": "Strumento da pesca preistorico in osso o corno, con denti retrattili per trattenere il pesce. I primi arpioni risalgono al Paleolitico superiore africano (90.000 anni fa), diffusi poi in tutto il mondo.",
+    "wikipediaSlug": "Arpione_Preistorico"
   },
   {
     "id": "dea-madre-statuetta",
@@ -2813,7 +2865,8 @@
     "category": "arte",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Statuette femminili del Paleolitico superiore e del Neolitico che raffigurano una divinità femminile della fertilità e della terra. Rinvenute in tutta Europa, Asia e Medio Oriente, sono tra le prime espressioni religiose umane."
+    "description": "Statuette femminili del Paleolitico superiore e del Neolitico che raffigurano una divinità femminile della fertilità e della terra. Rinvenute in tutta Europa, Asia e Medio Oriente, sono tra le prime espressioni religiose umane.",
+    "wikipediaSlug": "Dea_Madre"
   },
   {
     "id": "lavorazione-selce-percussione",
@@ -2824,7 +2877,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Tecnica di scheggiatura della selce sviluppata nel Paleolitico superiore: un percussore indiretto (osso o corno) consente lame più lunghe e standardizzate rispetto alla percussione diretta."
+    "description": "Tecnica di scheggiatura della selce sviluppata nel Paleolitico superiore: un percussore indiretto (osso o corno) consente lame più lunghe e standardizzate rispetto alla percussione diretta.",
+    "wikipediaSlug": "Percussione_Indiretta"
   },
   {
     "id": "carnyx-celtico",
@@ -2835,7 +2889,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Tromba da guerra celtica con campana a forma di testa di cinghiale. Usata nelle battaglie dell'Età del Ferro per intimidire il nemico e coordinare le truppe. Il suo suono penetrante veniva percepito come il grido della guerra."
+    "description": "Tromba da guerra celtica con campana a forma di testa di cinghiale. Usata nelle battaglie dell'Età del Ferro per intimidire il nemico e coordinare le truppe. Il suo suono penetrante veniva percepito come il grido della guerra.",
+    "wikipediaSlug": "Carnyx"
   },
   {
     "id": "cucitrice-di-ossa-paleolitico",
@@ -2846,7 +2901,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "I primissimi aghi da cucire in osso animale del Paleolitico superiore consentivano di confezionare indumenti aderenti al corpo. Questa tecnologia fu essenziale per sopravvivere alle glaciazioni dell'era del ghiaccio."
+    "description": "I primissimi aghi da cucire in osso animale del Paleolitico superiore consentivano di confezionare indumenti aderenti al corpo. Questa tecnologia fu essenziale per sopravvivere alle glaciazioni dell'era del ghiaccio.",
+    "wikipediaSlug": "Cucitrice_di_Ossa"
   },
   {
     "id": "carbonifero-periodo",
@@ -2857,7 +2913,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Periodo geologico (359-299 milioni di anni fa) famoso per le immense foreste di felci arboree che accumularono il carbone fossile. Libellule giganti (Meganeura) con apertura alare di 70 cm dominavano i cieli."
+    "description": "Periodo geologico (359-299 milioni di anni fa) famoso per le immense foreste di felci arboree che accumularono il carbone fossile. Libellule giganti (Meganeura) con apertura alare di 70 cm dominavano i cieli.",
+    "wikipediaSlug": "Carbonifero"
   },
   {
     "id": "placodermi-pesci",
@@ -2868,7 +2925,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Pesci corazzati del Devoniano con mandibole ossee, i predatori dominanti degli oceani dal 419 al 358 milioni di anni fa. Il Dunkleosteus, lungo 6 metri, aveva il morso più potente di qualsiasi vertebrato."
+    "description": "Pesci corazzati del Devoniano con mandibole ossee, i predatori dominanti degli oceani dal 419 al 358 milioni di anni fa. Il Dunkleosteus, lungo 6 metri, aveva il morso più potente di qualsiasi vertebrato.",
+    "wikipediaSlug": "Placodermi"
   },
   {
     "id": "via-lattea-galassia",
@@ -2879,7 +2937,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "La nostra galassia a spirale barrata, con 200-400 miliardi di stelle. Prima dell'inquinamento luminoso era visibile a occhio nudo come una banda luminosa che attraversa il cielo notturno — componente fondamentale del cielo preistorico."
+    "description": "La nostra galassia a spirale barrata, con 200-400 miliardi di stelle. Prima dell'inquinamento luminoso era visibile a occhio nudo come una banda luminosa che attraversa il cielo notturno — componente fondamentale del cielo preistorico.",
+    "wikipediaSlug": "Via_Lattea"
   },
   {
     "id": "alpi-catena",
@@ -2890,7 +2949,8 @@
     "category": "geologia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "La catena montuosa che si estende per 1.200 km dall'Austria alla Francia, formatasi dalla collisione tra le placche africana ed europea nel Miocene (25-5 milioni di anni fa). Le cime più alte raggiungono 4.808 m (Monte Bianco)."
+    "description": "La catena montuosa che si estende per 1.200 km dall'Austria alla Francia, formatasi dalla collisione tra le placche africana ed europea nel Miocene (25-5 milioni di anni fa). Le cime più alte raggiungono 4.808 m (Monte Bianco).",
+    "wikipediaSlug": "Alpi"
   },
   {
     "id": "percussione-ritmica-paleolitico",
@@ -2901,7 +2961,8 @@
     "category": "musica",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Il comportamento musicale più antico dell'umanità: battere ossa, pietre e legni in pattern ripetuti per coordinare il gruppo. Prove di percussione ritmica sono state trovate in siti di Homo heidelbergensis di 500.000 anni fa."
+    "description": "Il comportamento musicale più antico dell'umanità: battere ossa, pietre e legni in pattern ripetuti per coordinare il gruppo. Prove di percussione ritmica sono state trovate in siti di Homo heidelbergensis di 500.000 anni fa.",
+    "wikipediaSlug": "Percussione_Ritmica"
   },
   {
     "id": "homo-erectus-bipede",
@@ -2912,7 +2973,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Specie del genere Homo vissuta da 1,8 milioni a 70.000 anni fa, prima a uscire dall'Africa. Con cervello di 900 cc e statura quasi moderna, Homo Erectus controllava il fuoco e costruiva accampamenti."
+    "description": "Specie del genere Homo vissuta da 1,8 milioni a 70.000 anni fa, prima a uscire dall'Africa. Con cervello di 900 cc e statura quasi moderna, Homo Erectus controllava il fuoco e costruiva accampamenti.",
+    "wikipediaSlug": "Homo_Erectus"
   },
   {
     "id": "grotta-carsica-rifugio",
@@ -2923,7 +2985,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Cavità naturali nelle formazioni calcaree create dalla dissoluzione del carbonato di calcio da parte delle acque meteoriche. I Neanderthal le usarono come rifugi stagionali per centinaia di migliaia di anni."
+    "description": "Cavità naturali nelle formazioni calcaree create dalla dissoluzione del carbonato di calcio da parte delle acque meteoriche. I Neanderthal le usarono come rifugi stagionali per centinaia di migliaia di anni.",
+    "wikipediaSlug": "Grotta_Carsica"
   },
   {
     "id": "ago-di-osso-paleolitico",
@@ -2934,7 +2997,8 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "I più antichi aghi da cucire in osso risalgono a 50.000 anni fa in Siberia (Denisova). Consentivano di cucire pellicce aderenti al corpo, tecnologia essenziale per sopravvivere alle glaciazioni dell'era del ghiaccio."
+    "description": "I più antichi aghi da cucire in osso risalgono a 50.000 anni fa in Siberia (Denisova). Consentivano di cucire pellicce aderenti al corpo, tecnologia essenziale per sopravvivere alle glaciazioni dell'era del ghiaccio.",
+    "wikipediaSlug": "Ago_di_Osso"
   },
   {
     "id": "catalhoyuk-neolitico",
@@ -2945,7 +3009,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Città neolitica dell'Anatolia (Turchia), abitata dal 7500 al 5700 a.C. con oltre 8.000 abitanti. Le case erano costruite senza strade: si entrava dal tetto. Uno dei più antichi insediamenti urbani conosciuti."
+    "description": "Città neolitica dell'Anatolia (Turchia), abitata dal 7500 al 5700 a.C. con oltre 8.000 abitanti. Le case erano costruite senza strade: si entrava dal tetto. Uno dei più antichi insediamenti urbani conosciuti.",
+    "wikipediaSlug": "Çatalhöyük"
   },
   {
     "id": "gerico-prima-citta",
@@ -2956,7 +3021,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "La più antica città continua del mondo, abitata da 11.000 anni nel deserto della Giordania. Già 9000 a.C. aveva mura, una torre di 9 metri e 3.000 abitanti che coltivavano grano e orzo."
+    "description": "La più antica città continua del mondo, abitata da 11.000 anni nel deserto della Giordania. Già 9000 a.C. aveva mura, una torre di 9 metri e 3.000 abitanti che coltivavano grano e orzo.",
+    "wikipediaSlug": "Gerico"
   },
   {
     "id": "rame-anatolico-miniere",
@@ -2967,7 +3033,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "I giacimenti di rame dell'Anatolia (Turchia moderna) furono i primi sfruttati sistematicamente dall'umanità a partire dal 5000 a.C. La fusione del rame in Anatolia avvenne 2.000 anni prima che in Europa."
+    "description": "I giacimenti di rame dell'Anatolia (Turchia moderna) furono i primi sfruttati sistematicamente dall'umanità a partire dal 5000 a.C. La fusione del rame in Anatolia avvenne 2.000 anni prima che in Europa.",
+    "wikipediaSlug": "Rame_Anatolico"
   },
   {
     "id": "sinai-miniere-rame",
@@ -2978,7 +3045,8 @@
     "category": "storia",
     "tipo": "luogo",
     "isCosmic": false,
-    "description": "Le miniere di rame della penisola del Sinai sfruttate dagli Egizi dal 3500 a.C. I faraoni organizzavano spedizioni di centinaia di operai con sistemi di ventilazione e rampe di estrazione."
+    "description": "Le miniere di rame della penisola del Sinai sfruttate dagli Egizi dal 3500 a.C. I faraoni organizzavano spedizioni di centinaia di operai con sistemi di ventilazione e rampe di estrazione.",
+    "wikipediaSlug": "Miniere_del_Sinai"
   },
   {
     "id": "bronzo-arsenicale-metallurgia",
@@ -2989,7 +3057,8 @@
     "category": "scienza",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "La prima lega metallica della storia, ottenuta mescolando rame e arsenico (3-7%). Il bronzo arsenicale, più duro del rame puro, fu prodotto prima del bronzo con stagno e permise la prima metallurgia di qualità del Calcolitico."
+    "description": "La prima lega metallica della storia, ottenuta mescolando rame e arsenico (3-7%). Il bronzo arsenicale, più duro del rame puro, fu prodotto prima del bronzo con stagno e permise la prima metallurgia di qualità del Calcolitico.",
+    "wikipediaSlug": "Bronzo_Arsenicale"
   },
   {
     "id": "la-tene-cultura",
@@ -3000,7 +3069,8 @@
     "category": "arte",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Cultura celtica della seconda Età del Ferro (450 a.C. - 100 d.C.), prendeva il nome da un sito sul lago di Neuchâtel (Svizzera). Il suo stile artistico — spirali vegetali, zoomorfi, curve organiche — è uno dei più originali del mondo antico."
+    "description": "Cultura celtica della seconda Età del Ferro (450 a.C. - 100 d.C.), prendeva il nome da un sito sul lago di Neuchâtel (Svizzera). Il suo stile artistico — spirali vegetali, zoomorfi, curve organiche — è uno dei più originali del mondo antico.",
+    "wikipediaSlug": "La_Tène"
   },
   {
     "id": "india-vedica-tradizione",
@@ -3011,6 +3081,7 @@
     "category": "storia",
     "tipo": "evento",
     "isCosmic": false,
-    "description": "Periodo della civiltà indiana (1500-500 a.C.) dominato dalla tradizione vedica: i Veda (Rigveda, Samaveda, Yajurveda, Atharvaveda) venivano trasmessi oralmente con precisione millimetrica per 1.500 anni."
+    "description": "Periodo della civiltà indiana (1500-500 a.C.) dominato dalla tradizione vedica: i Veda (Rigveda, Samaveda, Yajurveda, Atharvaveda) venivano trasmessi oralmente con precisione millimetrica per 1.500 anni.",
+    "wikipediaSlug": "India_Vedica"
   }
 ]

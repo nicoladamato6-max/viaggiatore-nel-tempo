@@ -539,8 +539,16 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
               )}
             </div>
             <div className="info-panel__footer">
-              <a href={wikiUrl || `https://it.wikipedia.org/wiki/${event.wikipediaSlug}`} target="_blank" rel="noopener noreferrer" className="info-panel__wiki-btn">
-                Apri Wikipedia in una nuova scheda
+              <a
+                href={
+                  wikiUrl ||
+                  (event.wikipediaSlug
+                    ? `https://it.wikipedia.org/wiki/${event.wikipediaSlug}`
+                    : `https://it.wikipedia.org/w/index.php?search=${encodeURIComponent(event.title.split(/\s*[—–]\s*/)[0].trim())}`)
+                }
+                target="_blank" rel="noopener noreferrer" className="info-panel__wiki-btn"
+              >
+                {wikiUrl || event.wikipediaSlug ? 'Apri Wikipedia in una nuova scheda' : 'Cerca su Wikipedia'}
               </a>
               <span className="info-panel__license">
                 Testo da <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a>{', '}licenza{' '}
