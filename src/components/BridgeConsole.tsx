@@ -191,33 +191,46 @@ export function BridgeConsole({
                     : <button className="bc__dpad-btn" onClick={() => onDpad('s')} title="Sud">▼</button>}
                 </div>
               </div>
-              {/* Thrust column — sempre visibile; cosmic = tasti keyboard, terra = flyTo */}
+              {/* Thrust — due colonne affiancate: normale | iper */}
               <div className="bc__dpad-thrust">
-                {isCosmicView ? (
-                  <>
-                    <CosmicBtn code="KeyW" label="⬆" title="Accelera"
-                      onDown={onThrustStart} onUp={onThrustEnd} />
-                    <CosmicBtn code="Space" label="⏹" title="Stop" />
-                    <CosmicBtn code="KeyS" label="⬇" title="Decelera" />
-                    <div className="bc__dpad-sep" />
-                    <CosmicBtn code="HyperFwd" label="⚡" title="Iper-accelera 100×"
-                      onDown={onThrustStart} onUp={onThrustEnd} />
-                    <CosmicBtn code="HyperBack" label="⚡" title="Iper-decelera 100×" />
-                  </>
-                ) : (
-                  <>
-                    <button className="bc__dpad-btn" title="Zoom in"
-                      onClick={() => { onDpad?.('in'); onThrustStart?.(); setTimeout(() => onThrustEnd?.(), 400); }}>⬆</button>
-                    <button className="bc__dpad-btn" title="Stop" onClick={() => {}}>⏹</button>
-                    <button className="bc__dpad-btn" title="Zoom out"
-                      onClick={() => onDpad?.('out')}>⬇</button>
-                    <div className="bc__dpad-sep" />
-                    <button className="bc__dpad-btn" title="Iper-zoom in (2×)"
-                      onClick={() => onHyperDpad?.('in')}>⚡⬆</button>
-                    <button className="bc__dpad-btn" title="Iper-zoom out (2×)"
-                      onClick={() => onHyperDpad?.('out')}>⚡⬇</button>
-                  </>
-                )}
+                {/* colonna sinistra: normale */}
+                <div className="bc__dpad-thrust-col">
+                  {isCosmicView ? (
+                    <>
+                      <CosmicBtn code="KeyW" label="⬆" title="Accelera (W)"
+                        onDown={onThrustStart} onUp={onThrustEnd} />
+                      <CosmicBtn code="Space" label="⏹" title="Stop" />
+                      <CosmicBtn code="KeyS" label="⬇" title="Decelera (S)" />
+                    </>
+                  ) : (
+                    <>
+                      <button className="bc__dpad-btn" title="Zoom in"
+                        onClick={() => { onDpad?.('in'); onThrustStart?.(); setTimeout(() => onThrustEnd?.(), 400); }}>⬆</button>
+                      <button className="bc__dpad-btn" title="Stop">⏹</button>
+                      <button className="bc__dpad-btn" title="Zoom out"
+                        onClick={() => onDpad?.('out')}>⬇</button>
+                    </>
+                  )}
+                </div>
+                {/* colonna destra: iper (allineata a ⬆ e ⬇, vuota al centro) */}
+                <div className="bc__dpad-thrust-col">
+                  {isCosmicView ? (
+                    <>
+                      <CosmicBtn code="HyperFwd"  label="⚡⬆" title="Iper-accelera 100× (Shift+W)"
+                        onDown={onThrustStart} onUp={onThrustEnd} />
+                      <div className="bc__dpad-thrust-empty" />
+                      <CosmicBtn code="HyperBack" label="⚡⬇" title="Iper-decelera 100× (Shift+S)" />
+                    </>
+                  ) : (
+                    <>
+                      <button className="bc__dpad-btn bc__dpad-btn--wide" title="Iper-zoom in (4×)"
+                        onClick={() => onHyperDpad?.('in')}>⚡⬆</button>
+                      <div className="bc__dpad-thrust-empty" />
+                      <button className="bc__dpad-btn bc__dpad-btn--wide" title="Iper-zoom out (4×)"
+                        onClick={() => onHyperDpad?.('out')}>⚡⬇</button>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           )}

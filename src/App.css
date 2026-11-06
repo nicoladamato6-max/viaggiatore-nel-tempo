@@ -1960,7 +1960,7 @@ body {
 /* ── Navigation HUD (altitudine · coordinate · era) ─────────────────────── */
 .globe-hud {
   position: fixed;
-  bottom: 130px;   /* above Bridge Console (~123px tall) */
+  bottom: calc(var(--console-h, 130px) + 10px); /* aggiornato via ResizeObserver */
   left: 14px;
   z-index: 55;     /* above bc (50) */
   font-family: var(--font-mono);
@@ -2651,7 +2651,7 @@ body {
   right: 0;
   top: 0;
   height: 100vh;
-  z-index: 25;
+  z-index: 60; /* sopra globe-clock (55) e console (50) */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -2687,7 +2687,7 @@ body {
 /* ── InfoPanel floating (desktop) ── */
 .info-panel--float {
   position: fixed;
-  z-index: 25;
+  z-index: 60;
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid rgba(0, 200, 255, 0.35);
@@ -2708,22 +2708,31 @@ body {
     0 0 0 1px rgba(0, 200, 255, 0.15);
 }
 
-/* Corner resize handle (float only) */
-.info-panel__corner-resize {
+/* Resize handles su tutti i bordi/angoli (float only) */
+.ip__resize {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 16px;
-  height: 16px;
-  cursor: se-resize;
-  border-right: 2px solid rgba(0, 200, 255, 0.3);
-  border-bottom: 2px solid rgba(0, 200, 255, 0.3);
-  border-radius: 0 0 5px 0;
-  opacity: 0.5;
-  transition: opacity 0.2s;
+  z-index: 10;
 }
-.info-panel--float:hover .info-panel__corner-resize {
-  opacity: 1;
+/* Bordi */
+.ip__resize--n  { top: 0;    left: 10px; right: 10px; height: 5px;  cursor: n-resize; }
+.ip__resize--s  { bottom: 0; left: 10px; right: 10px; height: 5px;  cursor: s-resize; }
+.ip__resize--e  { right: 0;  top: 10px; bottom: 10px; width: 5px;   cursor: e-resize; }
+.ip__resize--w  { left: 0;   top: 10px; bottom: 10px; width: 5px;   cursor: w-resize; }
+/* Angoli */
+.ip__resize--nw { top: 0;    left: 0;   width: 12px; height: 12px; cursor: nw-resize; }
+.ip__resize--ne { top: 0;    right: 0;  width: 12px; height: 12px; cursor: ne-resize; }
+.ip__resize--sw { bottom: 0; left: 0;   width: 12px; height: 12px; cursor: sw-resize; }
+.ip__resize--se { bottom: 0; right: 0;  width: 12px; height: 12px; cursor: se-resize; }
+/* Visuale sottile sul bordo in hover */
+.info-panel--float:hover .ip__resize--s::after,
+.info-panel--float:hover .ip__resize--se::after,
+.info-panel--float:hover .ip__resize--sw::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 1px; left: 2px; right: 2px; height: 2px;
+  background: rgba(0, 200, 255, 0.35);
+  border-radius: 1px;
 }
 
 /* ── Recall chip ── */
@@ -3027,14 +3036,13 @@ body {
 }
 .panel-ghost:hover { background: rgba(0, 100, 255, 0.15); }
 
-/* ── Ghost INFO tab (right side, appears when InfoPanel is hidden) ── */
+/* ── Info tab permanente (bordo destro — sempre visibile) ── */
 .info-ghost {
   position: fixed;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
-  z-index: 30;
-  background: rgba(1, 7, 16, 0.85);
+  z-index: 55; /* sotto il pannello aperto (60), sopra clock (55) */
+  background: rgba(1, 7, 16, 0.88);
   border: 1px solid rgba(26, 144, 255, 0.45);
   border-right: none;
   color: #7ec8f5;
@@ -3048,13 +3056,21 @@ body {
   text-transform: uppercase;
   backdrop-filter: blur(8px);
   font-family: 'JetBrains Mono', 'Courier New', monospace;
-  transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
   -webkit-appearance: none;
   appearance: none;
+  max-height: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .info-ghost:hover {
-  background: rgba(26, 144, 255, 0.12) !important;
-  border-color: rgba(26, 144, 255, 0.75);
+  background: rgba(26, 144, 255, 0.14) !important;
+  border-color: rgba(26, 144, 255, 0.80);
+}
+.info-ghost--empty {
+  opacity: 0.45;
+  border-color: rgba(26, 144, 255, 0.25);
 }
 
 /* ── HUD overlay ── */

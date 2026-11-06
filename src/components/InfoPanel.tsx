@@ -322,8 +322,9 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
     document.addEventListener('mouseup',   onUp);
   }
 
-  // ── Corner resize (solo float) ────────────────────────────────────────────
-  function onCornerMouseDown(e: React.MouseEvent) {
+  // ── Resize da qualsiasi handle (8 direzioni, solo float) ────────────────
+  type ResizeDir = 'se' | 'sw' | 'ne' | 'nw' | 'n' | 's' | 'e' | 'w';
+  function onResizeMouseDown(e: React.MouseEvent, dir: ResizeDir) {
     if (dockMode !== 'float') return;
     e.preventDefault();
     e.stopPropagation();
@@ -331,14 +332,36 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
     startX.current    = e.clientX;
     startY.current    = e.clientY;
     startSize.current = { w: size.w, h: size.h };
-    document.body.style.cursor     = 'se-resize';
+    const resolvedPos = pos ?? { x: Math.max(0, window.innerWidth - DEFAULT_W - 24), y: 64 };
+    startPos.current  = resolvedPos;
+    const cursors: Record<ResizeDir, string> = {
+      se: 'se-resize', sw: 'sw-resize', ne: 'ne-resize', nw: 'nw-resize',
+      n: 'n-resize', s: 's-resize', e: 'e-resize', w: 'w-resize',
+    };
+    document.body.style.cursor     = cursors[dir];
     document.body.style.userSelect = 'none';
 
     function onMove(ev: MouseEvent) {
       if (!resizing.current) return;
-      const nw = Math.max(MIN_W,  startSize.current.w + ev.clientX - startX.current);
-      const nh = Math.max(160,    startSize.current.h + ev.clientY - startY.current);
-      setSize({ w: Math.min(nw, maxWidth()), h: nh });
+      const dx = ev.clientX - startX.current;
+      const dy = ev.clientY - startY.current;
+      let { x, y } = startPos.current;
+      let { w, h } = startSize.current;
+
+      if (dir === 'e' || dir === 'se' || dir === 'ne') w = Math.min(Math.max(MIN_W, w + dx), maxWidth());
+      if (dir === 'w' || dir === 'sw' || dir === 'nw') {
+        const nw = Math.max(MIN_W, w - dx);
+        x = startPos.current.x + (w - nw);
+        w = nw;
+      }
+      if (dir === 's' || dir === 'se' || dir === 'sw') h = Math.max(160, h + dy);
+      if (dir === 'n' || dir === 'ne' || dir === 'nw') {
+        const nh = Math.max(160, h - dy);
+        y = startPos.current.y + (h - nh);
+        h = nh;
+      }
+      setSize({ w, h });
+      if (dir !== 'e' && dir !== 's' && dir !== 'se') setPos({ x, y });
     }
     function onUp() {
       resizing.current = false;
@@ -555,9 +578,18 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
         )}
       </div>}
 
-      {/* Corner resize (solo float) */}
+      {/* Resize handles su tutti i bordi/angoli (solo float) */}
       {dockMode === 'float' && !minimized && (
-        <div className="info-panel__corner-resize" onMouseDown={onCornerMouseDown} title="Ridimensiona" />
+        <>
+          <div className="ip__resize ip__resize--n"  onMouseDown={e => onResizeMouseDown(e, 'n')} />
+          <div className="ip__resize ip__resize--s"  onMouseDown={e => onResizeMouseDown(e, 's')} />
+          <div className="ip__resize ip__resize--e"  onMouseDown={e => onResizeMouseDown(e, 'e')} />
+          <div className="ip__resize ip__resize--w"  onMouseDown={e => onResizeMouseDown(e, 'w')} />
+          <div className="ip__resize ip__resize--nw" onMouseDown={e => onResizeMouseDown(e, 'nw')} />
+          <div className="ip__resize ip__resize--ne" onMouseDown={e => onResizeMouseDown(e, 'ne')} />
+          <div className="ip__resize ip__resize--sw" onMouseDown={e => onResizeMouseDown(e, 'sw')} />
+          <div className="ip__resize ip__resize--se" onMouseDown={e => onResizeMouseDown(e, 'se')} />
+        </>
       )}
     </>
   );

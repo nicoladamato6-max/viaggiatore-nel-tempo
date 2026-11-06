@@ -420,6 +420,18 @@ function AppInner() {
   const isCosmicView = currentYear < -4_500_000_000 || altitudeCosmic;
   const timeWindow   = useMemo(() => getTimeWindow(currentYear), [currentYear]);
 
+  // Aggiorna --console-h su :root in base all'altezza reale della Bridge Console
+  useEffect(() => {
+    const el = document.querySelector('.bc') as HTMLElement | null;
+    if (!el) return;
+    const obs = new ResizeObserver(entries => {
+      const h = entries[0]?.borderBoxSize?.[0]?.blockSize ?? entries[0]?.contentRect?.height ?? 130;
+      document.documentElement.style.setProperty('--console-h', `${Math.round(h)}px`);
+    });
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [isMobile]);
+
   const visibleEvents = useMemo(() =>
     ALL_EVENTS.filter(e =>
       activeCategories.has(e.category) &&
@@ -852,24 +864,29 @@ function AppInner() {
             onMouseDown={onSplitDown}
           />
         )}
-        {!isMobile && infoPanelVisible && (
+        {!isMobile && infoPanelVisible && !!selectedEvent && (
           <InfoPanel
             event={selectedEvent}
             locale={locale}
-            onClose={() => setSelectedEvent(null)}
-            onRecall={(ev) => { setSelectedEvent(ev); }}
+            onClose={() => setInfoPanelVisible(false)}
+            onRecall={(ev) => { setSelectedEvent(ev); setInfoPanelVisible(true); }}
             onShowEraGuide={eraGuide ? () => setEraGuideOpen(true) : undefined}
             eraGuideName={eraGuide?.eraName}
             events={ALL_SEARCHABLE}
             onSelectEvent={handleEventClick}
           />
         )}
-        {!isMobile && selectedEvent && !infoPanelVisible && (
+        {/* Tab INFO permanente sul bordo destro — sempre visibile su desktop */}
+        {!isMobile && !infoPanelVisible && (
           <button
-            className="info-ghost"
-            onClick={() => setInfoPanelVisible(true)}
-            title={locale === 'it' ? 'Apri pannello INFO' : 'Open INFO panel'}
-          >INFO</button>
+            className={`info-ghost${selectedEvent ? '' : ' info-ghost--empty'}`}
+            onClick={() => { if (selectedEvent) setInfoPanelVisible(true); }}
+            title={selectedEvent
+              ? (locale === 'it' ? `Apri: ${selectedEvent.title}` : `Open: ${selectedEvent.title}`)
+              : (locale === 'it' ? 'Clicca un\'entità per aprire il pannello' : 'Click an entity to open the panel')}
+          >
+            {selectedEvent ? selectedEvent.title.slice(0, 18) : 'INFO'}
+          </button>
         )}
       </div>
 

@@ -122,7 +122,12 @@
 }
 
 /* Override stili SearchBar per adattarli alla console compatta */
-.bc__search-wrap .search-bar { width: 100%; }
+.bc__search-wrap .search-bar {
+  display: block !important; /* sovrascrive display:flex di App.css */
+  width: 100% !important;
+  position: relative !important;
+  margin-left: 0 !important;
+}
 .bc__search-wrap .search-bar input {
   height: 22px !important;
   font-size: 10px !important;
@@ -185,12 +190,23 @@
   grid-template-rows: repeat(3, 14px);
   gap: 2px;
 }
+/* Thrust: due colonne affiancate (normale | iper) */
 .bc__dpad-thrust {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2px;
   border-left: 1px solid var(--bc-b12);
   padding-left: 3px;
+}
+.bc__dpad-thrust-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.bc__dpad-thrust-empty {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
 .bc__dpad-row {
   display: flex;
@@ -205,6 +221,11 @@
   background: var(--bc-b12);
   border-radius: 2px;
   flex-shrink: 0;
+}
+.bc__dpad-btn--wide {
+  width: 24px;
+  height: 14px;
+  font-size: 7px;
 }
 .bc__dpad-btn {
   width: 14px;
