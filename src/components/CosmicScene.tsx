@@ -1481,84 +1481,6 @@ function DwarfPlanetSphere({ dwarf, flyTo, show = true, onBodyLabelClick }: { dw
   );
 }
 
-// ── NavPad HTML ─────────────────────────────────────────────────────────────
-function NavPad({ navKeysRef, locale, distAU }: { navKeysRef: React.RefObject<Set<string>>; locale: Locale; distAU: number }) {
-  const press   = (code: string) => navKeysRef.current!.add(code);
-  const release = (code: string) => navKeysRef.current!.delete(code);
-
-  // Thrust massimo per secondo all'attuale distanza (0.1% della distanza/s)
-  const thrustMS = distAU * AU * 0.001;
-  function fmtSpeed(ms: number): string {
-    const c = 299_792_458;
-    if (ms >= c * 0.001) return `${(ms / c * 100).toFixed(2)}% c`;
-    if (ms >= 1_000_000) return `${(ms / 1_000_000).toFixed(1)} Mm/s`;
-    if (ms >= 1_000)     return `${(ms / 1_000).toFixed(0)} km/s`;
-    return `${ms.toFixed(0)} m/s`;
-  }
-
-  const btnStyle: React.CSSProperties = {
-    background: 'rgba(0,20,40,0.78)', border: '1px solid rgba(100,180,255,0.22)',
-    borderRadius: 6, color: '#88bbdd', cursor: 'pointer', fontSize: '0.75rem',
-    width: 40, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center',
-    backdropFilter: 'blur(6px)', userSelect: 'none',
-  };
-
-  function Btn({ code, label }: { code: string; label: string }) {
-    return (
-      <button
-        onPointerDown={e => { e.stopPropagation(); press(code); }}
-        onPointerUp={e => { e.stopPropagation(); release(code); }}
-        onPointerLeave={() => release(code)}
-        onMouseDown={e => e.stopPropagation()}
-        style={btnStyle}
-      >
-        {label}
-      </button>
-    );
-  }
-
-  const cell: React.CSSProperties = { width: 40, height: 40 };
-
-  return (
-    <div
-      style={{ position: 'absolute', bottom: 12, left: '50%', transform: 'translateX(-50%)', zIndex: 200, pointerEvents: 'all', display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'center', background: 'rgba(0,8,20,0.72)', border: '1px solid rgba(100,180,255,0.18)', borderRadius: 12, padding: '8px 14px', backdropFilter: 'blur(10px)' }}
-      onMouseDown={e => e.stopPropagation()}
-      onTouchStart={e => e.stopPropagation()}
-    >
-      <div style={{ color: '#4a6680', fontSize: '0.50rem' }}>
-        ±{fmtSpeed(thrustMS)}/s
-      </div>
-
-      {/* Croce rotazione vista (3×3 grid) — tutti triangoli pieni ▲▼◀▶ */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 40px)', gridTemplateRows: 'repeat(3, 40px)', gap: 4 }}>
-        <div style={cell} />
-        <Btn code="KeyQ" label="▲" />
-        <div style={cell} />
-        <Btn code="KeyA" label="◀" />
-        <div style={{ ...cell, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'rgba(100,180,255,0.25)' }} />
-        </div>
-        <Btn code="KeyD" label="▶" />
-        <div style={cell} />
-        <Btn code="KeyE" label="▼" />
-        <div style={cell} />
-      </div>
-
-      {/* Propulsione + Stop — frecce outline ⬆⬇ distinte dalla croce */}
-      <div style={{ display: 'flex', gap: 4 }}>
-        <Btn code="KeyW" label="⬆" />
-        <Btn code="Space" label="⏹" />
-        <Btn code="KeyS" label="⬇" />
-      </div>
-      <div style={{ color: '#3a4a5a', fontSize: '0.50rem', display: 'flex', gap: 16 }}>
-        <span>{locale === 'it' ? 'Acc' : 'Fwd'}</span>
-        <span>Stop</span>
-        <span>{locale === 'it' ? 'Dec' : 'Rev'}</span>
-      </div>
-    </div>
-  );
-}
-
 // ── Bottone evento cosmico ─────────────────────────────────────────────────
 function CosmicEventButton({ event, onClick }: { event: HistoricalEvent; onClick: (e: HistoricalEvent) => void }) {
   const color = CATEGORY_COLORS[event.category];
@@ -1605,7 +1527,6 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
   const hudZoneRef         = useRef<HTMLSpanElement | null>(null);
   const hudVelRef          = useRef<HTMLSpanElement | null>(null);
   const warpOverlayRef     = useRef<HTMLDivElement | null>(null);
-  const distAURef          = useRef(0.05);
   const wheelRef           = useRef(0);
   const onEarthApproachRef = useRef<(() => void) | null>(onEarthApproach ?? null);
   const nearEarthRef       = useRef(false);
@@ -1934,13 +1855,7 @@ export function CosmicScene({ events, locale, currentYear, flyTo, onEventClick, 
         </div>
       </div>
 
-      {/* Plancia di navigazione (basso-centro) */}
-      <NavPad navKeysRef={navKeysRef} locale={locale} distAU={distAURef.current} />
-
-      {/* Hint comandi */}
-      <div style={{ position: 'absolute', top: 8, left: '50%', transform: 'translateX(-50%)', color: '#2a3a4a', fontSize: '0.55rem', pointerEvents: 'none', textAlign: 'center', whiteSpace: 'nowrap', zIndex: 10 }}>
-        {it ? '⬆⬇ accelera/decelera · ▲▼◀▶ ruota vista · ⏹ stop · +/− tastierino' : '⬆⬇ thrust · ▲▼◀▶ rotate view · ⏹ stop · numpad +/−'}
-      </div>
+      {/* NavPad rimosso — controlli integrati nella Bridge Console in basso */}
     </div>
   );
 }

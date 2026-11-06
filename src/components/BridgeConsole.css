@@ -94,7 +94,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  height: 32px;
+  min-height: 32px;
 }
 .bc__row--slider {
   gap: 6px;
@@ -201,10 +201,22 @@
 
 /* ── D-pad ── */
 .bc__dpad {
+  display: flex;
+  gap: 3px;
+  flex-shrink: 0;
+  align-items: center;
+}
+.bc__dpad-dir {
   display: grid;
   grid-template-rows: repeat(3, 14px);
   gap: 2px;
-  flex-shrink: 0;
+}
+.bc__dpad-thrust {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 1px solid var(--bc-b12);
+  padding-left: 3px;
 }
 .bc__dpad-row {
   display: flex;

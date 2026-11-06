@@ -56,6 +56,7 @@ export function BridgeConsole({
   onLocaleToggle, user, onAuthClick,
   showTerritories, onToggleTerritories,
   onDpad, yearToSlider,
+  isCosmicView,
 }: Props) {
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
@@ -158,22 +159,62 @@ export function BridgeConsole({
             )}
           </div>
 
-          {/* D-pad navigation */}
-          {onDpad && (
-            <div className="bc__dpad">
-              <div className="bc__dpad-row">
-                <button className="bc__dpad-btn" onClick={() => onDpad('n')} title="Nord / Su">▲</button>
+          {/* D-pad navigation — cosmic: keyboard events hold-to-press; earth: onDpad click */}
+          {onDpad && (() => {
+            // Dispatch keyboard events for CosmicScene's window listener
+            const kdown = (code: string) => window.dispatchEvent(new KeyboardEvent('keydown', { code, bubbles: true }));
+            const kup   = (code: string) => window.dispatchEvent(new KeyboardEvent('keyup',   { code, bubbles: true }));
+
+            // Cosmic hold-button: fires key while pointer is held
+            function CosmicBtn({ code, label, title: t }: { code: string; label: string; title?: string }) {
+              return (
+                <button
+                  className="bc__dpad-btn"
+                  title={t}
+                  onPointerDown={e => { e.preventDefault(); kdown(code); }}
+                  onPointerUp={() => kup(code)}
+                  onPointerLeave={() => kup(code)}
+                >
+                  {label}
+                </button>
+              );
+            }
+
+            return (
+              <div className="bc__dpad">
+                {/* Direction grid (3×3) */}
+                <div className="bc__dpad-dir">
+                  <div className="bc__dpad-row">
+                    {isCosmicView
+                      ? <CosmicBtn code="KeyQ" label="▲" title="Ruota su" />
+                      : <button className="bc__dpad-btn" onClick={() => onDpad('n')} title="Nord">▲</button>}
+                  </div>
+                  <div className="bc__dpad-row bc__dpad-row--mid">
+                    {isCosmicView
+                      ? <CosmicBtn code="KeyA" label="◀" title="Ruota sinistra" />
+                      : <button className="bc__dpad-btn" onClick={() => onDpad('w')} title="Ovest">◀</button>}
+                    <div className="bc__dpad-center" />
+                    {isCosmicView
+                      ? <CosmicBtn code="KeyD" label="▶" title="Ruota destra" />
+                      : <button className="bc__dpad-btn" onClick={() => onDpad('e')} title="Est">▶</button>}
+                  </div>
+                  <div className="bc__dpad-row">
+                    {isCosmicView
+                      ? <CosmicBtn code="KeyE" label="▼" title="Ruota giù" />
+                      : <button className="bc__dpad-btn" onClick={() => onDpad('s')} title="Sud">▼</button>}
+                  </div>
+                </div>
+                {/* Thrust column — solo in modalità cosmica */}
+                {isCosmicView && (
+                  <div className="bc__dpad-thrust">
+                    <CosmicBtn code="KeyW" label="⬆" title="Accelera" />
+                    <CosmicBtn code="Space" label="⏹" title="Stop" />
+                    <CosmicBtn code="KeyS" label="⬇" title="Decelera" />
+                  </div>
+                )}
               </div>
-              <div className="bc__dpad-row bc__dpad-row--mid">
-                <button className="bc__dpad-btn" onClick={() => onDpad('w')} title="Ovest">◀</button>
-                <div className="bc__dpad-center" />
-                <button className="bc__dpad-btn" onClick={() => onDpad('e')} title="Est">▶</button>
-              </div>
-              <div className="bc__dpad-row">
-                <button className="bc__dpad-btn" onClick={() => onDpad('s')} title="Sud / Giù">▼</button>
-              </div>
-            </div>
-          )}
+            );
+          })()}
 
           {/* AI — Assistente di viaggio AI */}
           <button
