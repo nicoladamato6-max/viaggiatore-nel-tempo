@@ -64,6 +64,8 @@ interface Props {
   showHoloOverlays?: boolean;
   onToggleHoloOverlays?: () => void;
   onHyperDpad?: (dir: 'in' | 'out') => void;
+  timeMachineOpen?: boolean;
+  onToggleTimeMachine?: () => void;
 }
 
 const CATEGORIES = Object.keys(CATEGORY_LABELS) as EventCategory[];
@@ -86,6 +88,7 @@ export function BridgeConsole({
   onThrustStart, onThrustEnd,
   showHoloOverlays, onToggleHoloOverlays,
   onHyperDpad,
+  timeMachineOpen, onToggleTimeMachine,
 }: Props) {
   const [open, setOpen] = useState(true);
   const [catOpen, setCatOpen] = useState(false);
@@ -153,6 +156,18 @@ export function BridgeConsole({
           <span className="bc__era-lbl" style={{ color: era.color }}>
             {formatYear(currentYear)}
           </span>
+
+          {/* Macchina del Tempo — pulsante console */}
+          {onToggleTimeMachine && (
+            <button
+              className={`bc__fn-btn bc__fn-btn--tm${timeMachineOpen ? ' bc__fn-btn--on' : ''}`}
+              onClick={onToggleTimeMachine}
+              title={locale === 'it' ? 'Macchina del Tempo' : 'Time Machine'}
+            >
+              <span className="bc__fn-ico bc__fn-ico--tm">⌛</span>
+              <span className="bc__fn-tm-label">MACCHINA<br/>DEL TEMPO</span>
+            </button>
+          )}
 
           {/* Search — full SearchBar con dataset + Wikipedia + epoche + voce */}
           <div className="bc__search-wrap">

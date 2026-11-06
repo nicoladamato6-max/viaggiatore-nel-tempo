@@ -269,6 +269,7 @@ function AppInner() {
   const [leftPanelOpen,     setLeftPanelOpen]     = useState(false);
   const [aiPanelOpen,       setAiPanelOpen]       = useState(false);
   const [infoPanelVisible,  setInfoPanelVisible]  = useState(true);
+  const [timeMachineOpen,   setTimeMachineOpen]   = useState(false);
 
   // Rileva redirect post-conferma email (#type=signup o #type=recovery nel hash)
   useEffect(() => {
@@ -827,6 +828,8 @@ function AppInner() {
               setEraGuide(data);
               setEraGuideOpen(true);
             }}
+            open={!isMobile ? timeMachineOpen : undefined}
+            onToggle={!isMobile ? () => setTimeMachineOpen(v => !v) : undefined}
           />
           {!isMobile && eraGuide && eraGuideOpen && (
             <EraGuide
@@ -923,6 +926,8 @@ function AppInner() {
           showHoloOverlays={showHoloOverlays}
           onToggleHoloOverlays={() => setShowHoloOverlays(v => !v)}
           onHyperDpad={handleHyperDpad}
+          timeMachineOpen={timeMachineOpen}
+          onToggleTimeMachine={() => setTimeMachineOpen(v => !v)}
         />
       )}
       {!isMobile && aiPanelOpen && (

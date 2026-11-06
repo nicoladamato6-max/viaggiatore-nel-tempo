@@ -167,11 +167,16 @@ interface Props {
   onNavigate: (params: { year?: number; flyTo?: FlyTarget }) => void;
   onEraLaunched?: (data: EraLaunchData) => void;
   bodyItems?: HistoricalEvent[];
+  /** Modalità controllata: il parent gestisce open state */
+  open?: boolean;
+  onToggle?: () => void;
 }
 
 // ── Componente ────────────────────────────────────────────────────────────────
-export function TimeMachine({ locale, events: _events, currentYear: _currentYear, onNavigate, onEraLaunched, bodyItems = [] }: Props) {
-  const [open,           setOpen]           = useState(false);
+export function TimeMachine({ locale, events: _events, currentYear: _currentYear, onNavigate, onEraLaunched, bodyItems = [], open: openProp, onToggle }: Props) {
+  const [internalOpen, setInternalOpen] = useState(false);
+  const open = openProp !== undefined ? openProp : internalOpen;
+  const setOpen = onToggle ? ((_v: boolean | ((v: boolean) => boolean)) => onToggle()) : setInternalOpen;
   const [yearText,       setYearText]       = useState('');
   const [place,          setPlace]          = useState('');
   const [log,            setLog]            = useState<string[]>([]);
@@ -307,16 +312,18 @@ export function TimeMachine({ locale, events: _events, currentYear: _currentYear
 
   return (
     <>
-      {/* Pulsante flottante */}
-      <button
-        className="tm-trigger"
-        onClick={() => setOpen(v => !v)}
-        title={it ? 'Macchina del Tempo' : 'Time Machine'}
-        aria-label="Time Machine"
-      >
-        <span className="tm-trigger__icon">🛸</span>
-        <span className="tm-trigger__text">{it ? 'Macchina del Tempo' : 'Time Machine'}</span>
-      </button>
+      {/* Pulsante flottante — solo in modalità non controllata (mobile) */}
+      {openProp === undefined && (
+        <button
+          className="tm-trigger"
+          onClick={() => setOpen(v => !v)}
+          title={it ? 'Macchina del Tempo' : 'Time Machine'}
+          aria-label="Time Machine"
+        >
+          <span className="tm-trigger__icon">🛸</span>
+          <span className="tm-trigger__text">{it ? 'Macchina del Tempo' : 'Time Machine'}</span>
+        </button>
+      )}
 
       {/* Overlay */}
       {open && (
