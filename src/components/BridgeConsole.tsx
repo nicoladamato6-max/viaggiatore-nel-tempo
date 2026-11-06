@@ -60,6 +60,8 @@ interface Props {
   yearToSlider: (year: number) => number;
   onThrustStart?: () => void;
   onThrustEnd?: () => void;
+  showHoloOverlays?: boolean;
+  onToggleHoloOverlays?: () => void;
 }
 
 const CATEGORIES = Object.keys(CATEGORY_LABELS) as EventCategory[];
@@ -80,6 +82,7 @@ export function BridgeConsole({
   onDpad, yearToSlider,
   isCosmicView,
   onThrustStart, onThrustEnd,
+  showHoloOverlays, onToggleHoloOverlays,
 }: Props) {
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
@@ -268,6 +271,28 @@ export function BridgeConsole({
             <span className="bc__fn-ico">{user ? '●' : '○'}</span>
             <span className="bc__fn-lbl">{user ? 'ACC' : 'LOG'}</span>
           </button>
+
+          {/* HUD — toggle ologrammi */}
+          {onToggleHoloOverlays && (
+            <button
+              className={`bc__fn-btn${showHoloOverlays ? ' bc__fn-btn--on' : ''}`}
+              onClick={onToggleHoloOverlays}
+              title={showHoloOverlays ? 'Nascondi ologrammi HUD' : 'Mostra ologrammi HUD'}
+            >
+              <span className="bc__fn-ico">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                  <circle cx="12" cy="12" r="3.5"/>
+                  <line x1="12" y1="2" x2="12" y2="7"/>
+                  <line x1="12" y1="17" x2="12" y2="22"/>
+                  <line x1="2" y1="12" x2="7" y2="12"/>
+                  <line x1="17" y1="12" x2="22" y2="12"/>
+                  <path d="M6 6 L4 4"/><path d="M18 6 L20 4"/>
+                  <path d="M18 18 L20 20"/><path d="M6 18 L4 20"/>
+                </svg>
+              </span>
+              <span className="bc__fn-lbl">HUD</span>
+            </button>
+          )}
 
         </div>{/* /Row 1 */}
 

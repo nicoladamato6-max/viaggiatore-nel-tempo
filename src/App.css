@@ -2014,32 +2014,6 @@ body {
   50%       { opacity: 0.90; transform: translate(-50%, -50%) scale(1.04); }
 }
 
-/* ── Pulsante toggle ologrammi ─────────────────────────────────────────── */
-.globe-holo-toggle {
-  position: fixed;
-  top: 36px;
-  right: 14px;
-  z-index: 56;
-  background: transparent;
-  border: none;
-  padding: 4px;
-  cursor: pointer;
-  color: rgba(0, 220, 190, 0.45);
-  transition: color 0.2s ease, filter 0.2s ease;
-  filter: drop-shadow(0 0 4px rgba(0, 220, 190, 0.20));
-}
-.globe-holo-toggle:hover {
-  color: rgba(0, 220, 190, 0.85);
-  filter: drop-shadow(0 0 8px rgba(0, 220, 190, 0.60));
-}
-.globe-holo-toggle--on {
-  color: rgba(0, 220, 190, 0.80);
-  filter: drop-shadow(0 0 6px rgba(0, 220, 190, 0.50));
-}
-.globe-holo-toggle--off {
-  color: rgba(0, 220, 190, 0.25);
-  filter: none;
-}
 
 .globe-hud__row {
   display: flex;

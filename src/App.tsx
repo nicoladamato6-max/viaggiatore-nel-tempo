@@ -709,25 +709,6 @@ function AppInner() {
 
   const globeAndControls = (
     <>
-      {/* Pulsante toggle ologrammi */}
-      {!isMobile && (
-        <button
-          className={`globe-holo-toggle ${showHoloOverlays ? 'globe-holo-toggle--on' : 'globe-holo-toggle--off'}`}
-          onClick={() => setShowHoloOverlays(v => !v)}
-          title={showHoloOverlays ? 'Nascondi ologrammi HUD' : 'Mostra ologrammi HUD'}
-        >
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
-            <circle cx="12" cy="12" r="3.5"/>
-            <line x1="12" y1="2" x2="12" y2="7"/>
-            <line x1="12" y1="17" x2="12" y2="22"/>
-            <line x1="2" y1="12" x2="7" y2="12"/>
-            <line x1="17" y1="12" x2="22" y2="12"/>
-            <path d="M6 6 L4 4" /><path d="M18 6 L20 4" />
-            <path d="M18 18 L20 20" /><path d="M6 18 L4 20" />
-          </svg>
-        </button>
-      )}
-
       {/* Ologrammi — visibili solo se showHoloOverlays */}
       {!isMobile && showHoloOverlays && (
         <>
@@ -918,6 +899,8 @@ function AppInner() {
           yearToSlider={yearToSlider}
           onThrustStart={() => setThrustActive(true)}
           onThrustEnd={() => setThrustActive(false)}
+          showHoloOverlays={showHoloOverlays}
+          onToggleHoloOverlays={() => setShowHoloOverlays(v => !v)}
         />
       )}
       {!isMobile && aiPanelOpen && (
