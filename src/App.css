@@ -1963,29 +1963,76 @@ body {
   bottom: 130px;   /* above Bridge Console (~123px tall) */
   left: 14px;
   z-index: 55;     /* above bc (50) */
-  background: rgba(0, 4, 10, 0.82);
-  border: 1px solid rgba(0, 220, 190, 0.60);
-  border-radius: 4px;
-  padding: 6px 12px 7px 10px;
   font-family: var(--font-mono);
   pointer-events: none;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow:
-    0 0 16px rgba(0, 220, 190, 0.30),
-    0 0 40px rgba(0, 160, 150, 0.12),
-    inset 0 0 16px rgba(0, 0, 0, 0.5),
-    0 0 1px rgba(0, 220, 190, 0.80);
   line-height: 1;
   user-select: none;
-  /* Scanline olografica */
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 3px,
-    rgba(0, 220, 190, 0.015) 3px,
-    rgba(0, 220, 190, 0.015) 4px
-  );
+}
+
+/* ── Clock olografico in alto a destra ─────────────────────────────────── */
+.globe-clock {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 55;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: rgba(0, 220, 190, 0.80);
+  text-shadow: 0 0 10px rgba(0, 220, 190, 0.60), 0 0 24px rgba(0, 180, 160, 0.30);
+  pointer-events: none;
+  user-select: none;
+  text-transform: uppercase;
+}
+
+/* ── Mirino olografico al centro del viewport ──────────────────────────── */
+.globe-crosshair {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 54;
+  width: 72px;
+  height: 72px;
+  pointer-events: none;
+  animation: crosshair-pulse 1.2s ease-in-out infinite;
+}
+.globe-crosshair::before,
+.globe-crosshair::after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 220, 190, 0.75);
+  box-shadow: 0 0 8px rgba(0, 220, 190, 0.70);
+}
+.globe-crosshair::before {
+  /* riga orizzontale */
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  margin-top: -0.5px;
+}
+.globe-crosshair::after {
+  /* riga verticale */
+  left: 50%;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  margin-left: -0.5px;
+}
+/* cerchietto centrale */
+.globe-crosshair__dot {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 220, 190, 0.85);
+  box-shadow: 0 0 8px rgba(0, 220, 190, 0.60);
+}
+@keyframes crosshair-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
 }
 
 .globe-hud__row {

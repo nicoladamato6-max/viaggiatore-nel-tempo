@@ -295,6 +295,16 @@ function AppInner() {
   const [cesiumAltKm,    setCesiumAltKm]    = useState(0);
   const cameraPosRef = useRef<{ lat: number; lng: number; altKm: number }>({ lat: 41.9, lng: 12.5, altKm: 10_000 });
 
+  // Clock olografico — aggiornato ogni secondo
+  const [nowStr, setNowStr] = useState(() => new Date().toLocaleString('it-IT', { dateStyle: 'short', timeStyle: 'medium' }));
+  useEffect(() => {
+    const id = setInterval(() => setNowStr(new Date().toLocaleString('it-IT', { dateStyle: 'short', timeStyle: 'medium' })), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  // Mirino olografico — visibile mentre si accelera
+  const [showCrosshair, setShowCrosshair] = useState(false);
+
   // ── Chunk loading (Opzione C) ───────────────────────────────────────────────
   const chunkCacheRef = useRef<Map<EraKey, HistoricalEvent[]>>(new Map());
   const [loadedChunks, setLoadedChunks] = useState<Map<EraKey, HistoricalEvent[]>>(new Map());
@@ -337,15 +347,14 @@ function AppInner() {
 
   useEffect(() => {
     fetch('/api/events')
-      .then(r => r.json())
-      .then((d: { events?: HistoricalEvent[] }) => {
-        if (d.events && d.events.length > 0) {
-          const allIds = new Set<string>();
-          chunkCacheRef.current.forEach(chunk => chunk.forEach(e => allIds.add(e.id)));
-          setWikidataEvents(d.events.filter(e => !allIds.has(e.id)));
-        }
+      .then(r => { if (!r.ok) return null; return r.json(); })
+      .then((d: { events?: HistoricalEvent[] } | null) => {
+        if (!d || !d.events || d.events.length === 0) return;
+        const allIds = new Set<string>();
+        chunkCacheRef.current.forEach(chunk => chunk.forEach(e => allIds.add(e.id)));
+        setWikidataEvents(d.events.filter(e => !allIds.has(e.id)));
       })
-      .catch(() => { /* API not available */ });
+      .catch(() => { /* API non disponibile in questo ambiente */ });
   }, []);
 
   // Tutti gli eventi statici = unione dei chunk caricati
@@ -699,6 +708,20 @@ function AppInner() {
 
   const globeAndControls = (
     <>
+      {/* Clock olografico in alto a destra */}
+      {!isMobile && (
+        <div className="globe-clock">
+          Viaggiatore nel tempo — {nowStr}
+        </div>
+      )}
+
+      {/* Mirino olografico al centro — visibile durante accelerazione */}
+      {showCrosshair && !isMobile && (
+        <div className="globe-crosshair">
+          <div className="globe-crosshair__dot" />
+        </div>
+      )}
+
       <div className="globe-container">
         <div
           className="globe-wrapper"
@@ -851,6 +874,8 @@ function AppInner() {
           onToggleTerritories={() => setShowTerritories(v => !v)}
           onDpad={handleDpad}
           yearToSlider={yearToSlider}
+          onThrustStart={() => setShowCrosshair(true)}
+          onThrustEnd={() => setShowCrosshair(false)}
         />
       )}
       {!isMobile && aiPanelOpen && (

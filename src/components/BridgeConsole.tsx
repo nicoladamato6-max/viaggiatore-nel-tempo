@@ -13,16 +13,19 @@ import { type Period, MACRO_ERAS, SUBCATEGORIES, assignLanes } from '../data/his
 import './BridgeConsole.css';
 
 // Estratto fuori dal componente per stabilità del tipo React (evita unmount/remount ad ogni render)
-function CosmicBtn({ code, label, title: t }: { code: string; label: string; title?: string }) {
+function CosmicBtn({ code, label, title: t, onDown, onUp }: {
+  code: string; label: string; title?: string;
+  onDown?: () => void; onUp?: () => void;
+}) {
   const kdown = (c: string) => window.dispatchEvent(new KeyboardEvent('keydown', { code: c, bubbles: true }));
   const kup   = (c: string) => window.dispatchEvent(new KeyboardEvent('keyup',   { code: c, bubbles: true }));
   return (
     <button
       className="bc__dpad-btn"
       title={t}
-      onPointerDown={e => { e.preventDefault(); kdown(code); }}
-      onPointerUp={() => kup(code)}
-      onPointerLeave={() => kup(code)}
+      onPointerDown={e => { e.preventDefault(); kdown(code); onDown?.(); }}
+      onPointerUp={() => { kup(code); onUp?.(); }}
+      onPointerLeave={() => { kup(code); onUp?.(); }}
     >
       {label}
     </button>
@@ -55,6 +58,8 @@ interface Props {
   onToggleTerritories: () => void;
   onDpad?: (dir: 'n' | 's' | 'e' | 'w' | 'in' | 'out') => void;
   yearToSlider: (year: number) => number;
+  onThrustStart?: () => void;
+  onThrustEnd?: () => void;
 }
 
 const CATEGORIES = Object.keys(CATEGORY_LABELS) as EventCategory[];
@@ -74,6 +79,7 @@ export function BridgeConsole({
   showTerritories, onToggleTerritories,
   onDpad, yearToSlider,
   isCosmicView,
+  onThrustStart, onThrustEnd,
 }: Props) {
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
@@ -201,14 +207,25 @@ export function BridgeConsole({
                     : <button className="bc__dpad-btn" onClick={() => onDpad('s')} title="Sud">▼</button>}
                 </div>
               </div>
-              {/* Thrust column — solo in modalità cosmica */}
-              {isCosmicView && (
-                <div className="bc__dpad-thrust">
-                  <CosmicBtn code="KeyW" label="⬆" title="Accelera" />
-                  <CosmicBtn code="Space" label="⏹" title="Stop" />
-                  <CosmicBtn code="KeyS" label="⬇" title="Decelera" />
-                </div>
-              )}
+              {/* Thrust column — sempre visibile; cosmic = tasti keyboard, terra = flyTo */}
+              <div className="bc__dpad-thrust">
+                {isCosmicView ? (
+                  <>
+                    <CosmicBtn code="KeyW" label="⬆" title="Accelera"
+                      onDown={onThrustStart} onUp={onThrustEnd} />
+                    <CosmicBtn code="Space" label="⏹" title="Stop" />
+                    <CosmicBtn code="KeyS" label="⬇" title="Decelera" />
+                  </>
+                ) : (
+                  <>
+                    <button className="bc__dpad-btn" title="Zoom in"
+                      onClick={() => { onDpad?.('in'); onThrustStart?.(); setTimeout(() => onThrustEnd?.(), 400); }}>⬆</button>
+                    <button className="bc__dpad-btn" title="Stop" onClick={() => {}}>⏹</button>
+                    <button className="bc__dpad-btn" title="Zoom out"
+                      onClick={() => onDpad?.('out')}>⬇</button>
+                  </>
+                )}
+              </div>
             </div>
           )}
 

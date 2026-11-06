@@ -452,7 +452,8 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
       window.removeEventListener('resize', onResize);
       if (zoomRestoreTimer !== null) clearTimeout(zoomRestoreTimer);
       handler.destroy();
-      viewer.destroy();
+      // Defer viewer.destroy() to avoid React reconciler removeChild conflict
+      // when transitioning between GlobeView and CosmicScene
       viewerRef.current = null;
       pinsRef.current         = null;
       cawmLayerRef.current    = null;
@@ -460,6 +461,7 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
       gplatesDSRef.current    = null;
       lgmDSRef.current        = null;
       cityLabelsDSRef.current = null;
+      setTimeout(() => { try { viewer.destroy(); } catch { /* already destroyed */ } }, 50);
     };
   }, []);
 
