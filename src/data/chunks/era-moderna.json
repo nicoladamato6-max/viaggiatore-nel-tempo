@@ -7534,7 +7534,7 @@
     "lng": null,
     "category": "filosofia",
     "tipo": "opera",
-    "wikipediaSlug": "95_tesi_di_Lutero",
+    "wikipediaSlug": "Ninety-five_Theses",
     "isCosmic": false
   },
   {
@@ -11579,6 +11579,6 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Il sistema politico-economico dell'Europa medievale (IX-XIII sec.): il signore garantisce protezione militare in cambio di fedeltà e lavoro dei villani. La piramide feudale — re, baroni, cavalieri, contadini — regge l'ordine sociale.",
-    "wikipediaSlug": "Sistema_Feudale"
+    "wikipediaSlug": "Feudalism"
   }
 ]
