@@ -88,9 +88,10 @@ interface Props {
   locale: Locale;
   onEventClick: (event: HistoricalEvent) => void;
   onAltitudeChange?: (altKm: number) => void;
+  onCameraChange?: (lat: number, lng: number, altKm: number) => void;
 }
 
-export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMarker, currentYear, showTerritories, locale, onEventClick, onAltitudeChange }: Props) {
+export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMarker, currentYear, showTerritories, locale, onEventClick, onAltitudeChange, onCameraChange }: Props) {
   const containerRef  = useRef<HTMLDivElement>(null);
   const viewerRef     = useRef<Cesium.Viewer | null>(null);
   // PointPrimitiveCollection per i pin degli eventi storici — molto più veloce delle Entity
@@ -118,8 +119,11 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
   const isCosmicRef  = useRef(isCosmicView);
   const localeRef              = useRef(locale);
   const onAltitudeChangeRef    = useRef(onAltitudeChange);
+  const onCameraChangeRef      = useRef(onCameraChange);
   const lastReportedAltKmRef   = useRef(0);
+  const lastCamReportTimeRef   = useRef(0);
   onAltitudeChangeRef.current  = onAltitudeChange;
+  onCameraChangeRef.current    = onCameraChange;
   // Paleogeografia — L1 GPlates + L2 CAWM/DARE + L3 Era Glaciale (piattaforma continentale LGM)
   const cawmLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
   const dareLayerRef    = useRef<Cesium.ImageryLayer | null>(null);
@@ -359,9 +363,19 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
           hudCoordsRef.current.textContent = `${fmtDMS(Cesium.Math.toDegrees(pos.latitude), 'N', 'S')}  ${fmtDMS(Cesium.Math.toDegrees(pos.longitude), 'E', 'O')}`;
         }
         const altKm = pos.height / 1000;
-        if (Math.abs(altKm - lastReportedAltKmRef.current) > Math.max(5000, lastReportedAltKmRef.current * 0.15)) {
+        if (Math.abs(altKm - lastReportedAltKmRef.current) > Math.max(50, lastReportedAltKmRef.current * 0.03)) {
           lastReportedAltKmRef.current = altKm;
           onAltitudeChangeRef.current?.(altKm);
+        }
+        // Camera position for D-pad (throttled to 400ms)
+        const nowMs = performance.now();
+        if (nowMs - lastCamReportTimeRef.current > 400) {
+          lastCamReportTimeRef.current = nowMs;
+          onCameraChangeRef.current?.(
+            Cesium.Math.toDegrees(pos.latitude),
+            Cesium.Math.toDegrees(pos.longitude),
+            altKm,
+          );
         }
       }
 

@@ -9,7 +9,7 @@ import {
   ENTITY_TYPE_LABELS,
   ENTITY_TYPE_COLORS,
 } from '../types';
-import { type Period } from '../data/historicalPeriods';
+import { type Period, MACRO_ERAS, SUBCATEGORIES, assignLanes } from '../data/historicalPeriods';
 import './BridgeConsole.css';
 
 interface Props {
@@ -36,24 +36,14 @@ interface Props {
   onAuthClick: () => void;
   showTerritories: boolean;
   onToggleTerritories: () => void;
+  onDpad?: (dir: 'n' | 's' | 'e' | 'w' | 'in' | 'out') => void;
+  yearToSlider: (year: number) => number;
 }
 
 const CATEGORIES = Object.keys(CATEGORY_LABELS) as EventCategory[];
 const ENTITY_TYPES = Object.keys(ENTITY_TYPE_LABELS) as EntityType[];
 
-// Era segments for the slider overlay — derived from BP breakpoints + getEra colors
-const ERA_SEGMENTS = [
-  { from: 0,   to: 100, label: '🌌 Universo',   color: '#1abc9c' },
-  { from: 100, to: 250, label: '🌍 Terra',       color: '#27ae60' },
-  { from: 250, to: 290, label: '🐟 Paleozoico',  color: '#2ecc71' },
-  { from: 290, to: 330, label: '🦕 Mesozoico',   color: '#f39c12' },
-  { from: 330, to: 400, label: '🦎 Cenozoico',   color: '#e67e22' },
-  { from: 400, to: 560, label: '🦴 Preistoria',  color: '#e74c3c' },
-  { from: 560, to: 640, label: '📜 Antica',      color: '#9b59b6' },
-  { from: 640, to: 720, label: '🏰 Medioevo',    color: '#2980b9' },
-  { from: 720, to: 800, label: '🎨 Moderna',     color: '#8e44ad' },
-  { from: 800, to: 1000, label: '⚙️ Contemp.',   color: '#a8c8ff' },
-];
+// Era overlay computed from MACRO_ERAS + SUBCATEGORIES via yearToSlider (passed as prop)
 
 export function BridgeConsole({
   sliderValue, onSliderChange,
@@ -65,6 +55,7 @@ export function BridgeConsole({
   aiPanelOpen, onToggleAIPanel,
   onLocaleToggle, user, onAuthClick,
   showTerritories, onToggleTerritories,
+  onDpad, yearToSlider,
 }: Props) {
   const [open, setOpen] = useState(true);
   const [query, setQuery] = useState('');
@@ -167,6 +158,23 @@ export function BridgeConsole({
             )}
           </div>
 
+          {/* D-pad navigation */}
+          {onDpad && (
+            <div className="bc__dpad">
+              <div className="bc__dpad-row">
+                <button className="bc__dpad-btn" onClick={() => onDpad('n')} title="Nord / Su">▲</button>
+              </div>
+              <div className="bc__dpad-row bc__dpad-row--mid">
+                <button className="bc__dpad-btn" onClick={() => onDpad('w')} title="Ovest">◀</button>
+                <div className="bc__dpad-center" />
+                <button className="bc__dpad-btn" onClick={() => onDpad('e')} title="Est">▶</button>
+              </div>
+              <div className="bc__dpad-row">
+                <button className="bc__dpad-btn" onClick={() => onDpad('s')} title="Sud / Giù">▼</button>
+              </div>
+            </div>
+          )}
+
           {/* AI — Assistente di viaggio AI */}
           <button
             className={`bc__fn-btn bc__fn-btn--ai${aiPanelOpen ? ' bc__fn-btn--on' : ''}`}
@@ -217,19 +225,41 @@ export function BridgeConsole({
             {/* Era overlay — visible while dragging */}
             {sliderDragging && (
               <div className="bc__era-overlay">
-                {ERA_SEGMENTS.map(seg => (
-                  <div
-                    key={seg.from}
-                    className={`bc__era-seg${sliderValue >= seg.from && sliderValue < seg.to ? ' bc__era-seg--active' : ''}`}
-                    style={{
-                      left: `${seg.from / 10}%`,
-                      width: `${(seg.to - seg.from) / 10}%`,
-                      '--seg-color': seg.color,
-                    } as React.CSSProperties}
-                  >
-                    <span className="bc__era-seg-lbl">{seg.label}</span>
-                  </div>
-                ))}
+                {/* Row 1: Macro eras */}
+                <div className="bc__era-macro-row">
+                  {MACRO_ERAS.map(era => {
+                    const fromS = Math.max(0, Math.min(1000, yearToSlider(era.start)));
+                    const toS   = Math.max(0, Math.min(1000, yearToSlider(era.end)));
+                    const active = sliderValue >= fromS && sliderValue < toS;
+                    return (
+                      <div
+                        key={era.name}
+                        className={`bc__era-seg${active ? ' bc__era-seg--active' : ''}`}
+                        style={{ left: `${fromS / 10}%`, width: `${Math.max(0.5, (toS - fromS) / 10)}%`, '--seg-color': era.color } as React.CSSProperties}
+                      >
+                        <span className="bc__era-seg-lbl">{era.name}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+                {/* Row 2: Sub-eras (swim lanes for overlaps) */}
+                <div className="bc__era-sub-row">
+                  {assignLanes(SUBCATEGORIES).map(({ period, lane }) => {
+                    const fromS = Math.max(0, Math.min(1000, yearToSlider(period.start)));
+                    const toS   = Math.max(0, Math.min(1000, yearToSlider(period.end)));
+                    if (toS - fromS < 0.2) return null;
+                    const active = sliderValue >= fromS && sliderValue < toS;
+                    return (
+                      <div
+                        key={period.name}
+                        className={`bc__sub-seg${active ? ' bc__sub-seg--active' : ''}`}
+                        style={{ left: `${fromS / 10}%`, width: `${Math.max(0.5, (toS - fromS) / 10)}%`, top: `${lane * 13}px`, '--seg-color': period.color } as React.CSSProperties}
+                      >
+                        <span className="bc__sub-seg-lbl">{period.name}</span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             )}
             <input

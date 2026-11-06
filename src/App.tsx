@@ -293,6 +293,7 @@ function AppInner() {
   const [overrideYear, setOverrideYear] = useState<number | null>(null);
   const [altitudeCosmic, setAltitudeCosmic] = useState(false);
   const [cesiumAltKm,    setCesiumAltKm]    = useState(0);
+  const cameraPosRef = useRef<{ lat: number; lng: number; altKm: number }>({ lat: 41.9, lng: 12.5, altKm: 10_000 });
 
   // ── Chunk loading (Opzione C) ───────────────────────────────────────────────
   const chunkCacheRef = useRef<Map<EraKey, HistoricalEvent[]>>(new Map());
@@ -518,6 +519,20 @@ function AppInner() {
     document.addEventListener('mouseup', up);
   }, [mobileGlobeH]);
 
+  // D-pad: pan/zoom camera; step dipende dall'altitudine corrente
+  const handleDpad = useCallback((dir: 'n' | 's' | 'e' | 'w' | 'in' | 'out') => {
+    const { lat, lng, altKm } = cameraPosRef.current;
+    const step = altKm > 10_000 ? 15 : altKm > 1_000 ? 5 : altKm > 100 ? 1 : 0.2;
+    let newLat = lat, newLng = lng, newAlt = altKm;
+    if (dir === 'n') newLat = Math.min(85, lat + step);
+    else if (dir === 's') newLat = Math.max(-85, lat - step);
+    else if (dir === 'e') newLng = ((lng + step + 540) % 360) - 180;
+    else if (dir === 'w') newLng = ((lng - step + 540) % 360) - 180;
+    else if (dir === 'in')  newAlt = Math.max(100, altKm * 0.5);
+    else if (dir === 'out') newAlt = Math.min(50_000, altKm * 2);
+    setFlyTo({ kind: 'geo', lat: newLat, lng: newLng, ts: Date.now(), range: newAlt * 1000 });
+  }, []);
+
   // Click diretto su un'entità nel globo (La telecamera si muove già dentro GlobeView)
   const handleEventClick = useCallback((event: HistoricalEvent) => {
     setSelectedEvent(event);
@@ -726,6 +741,10 @@ function AppInner() {
                   setCesiumAltKm(altKm);
                   if (altKm > 30_000) setAltitudeCosmic(true);
                 }}
+                onCameraChange={(lat, lng, altKm) => {
+                  cameraPosRef.current = { lat, lng, altKm };
+                  setCesiumAltKm(altKm);
+                }}
               />
           }
           <TimeMachine
@@ -830,6 +849,8 @@ function AppInner() {
           onAuthClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
           showTerritories={showTerritories}
           onToggleTerritories={() => setShowTerritories(v => !v)}
+          onDpad={handleDpad}
+          yearToSlider={yearToSlider}
         />
       )}
       {!isMobile && aiPanelOpen && (
