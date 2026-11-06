@@ -2784,7 +2784,7 @@ body {
   border-right: 1px solid rgba(0, 200, 255, 0.25);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  z-index: 40;
+  z-index: 1000; /* pari a InfoPanel ed EraGuide — LED (55) e console (50) rimangono dietro */
   display: flex;
   flex-direction: column;
   transform: translateX(0);
@@ -2799,7 +2799,7 @@ body {
 .left-nav-panel__overlay {
   position: fixed;
   inset: 0;
-  z-index: 39;
+  z-index: 999; /* sotto il pannello (1000), sopra i LED */
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
