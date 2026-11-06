@@ -879,8 +879,8 @@ function AppInner() {
             onSelectEvent={handleEventClick}
           />
         )}
-        {/* Tab INFO permanente sul bordo destro — sempre visibile su desktop */}
-        {!isMobile && !infoPanelVisible && (
+        {/* Tab INFO permanente sul bordo destro — visibile quando il pannello è chiuso */}
+        {!isMobile && !(infoPanelVisible && !!selectedEvent) && (
           <button
             className={`info-ghost${selectedEvent ? '' : ' info-ghost--empty'}`}
             onClick={() => { if (selectedEvent) setInfoPanelVisible(true); }}
@@ -888,7 +888,7 @@ function AppInner() {
               ? (locale === 'it' ? `Apri: ${selectedEvent.title}` : `Open: ${selectedEvent.title}`)
               : (locale === 'it' ? 'Clicca un\'entità per aprire il pannello' : 'Click an entity to open the panel')}
           >
-            {selectedEvent ? selectedEvent.title.slice(0, 18) : 'INFO'}
+            INFO PANEL
           </button>
         )}
       </div>

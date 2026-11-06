@@ -702,6 +702,10 @@ body {
 .wiki-body .noprint, .wiki-body .mw-cite-backlink { display: none !important; }
 .wiki-body sup.reference { font-size: .72em; }
 .wiki-body ol.references { font-size: .83em; color: #555; }
+/* il reset globale (* { padding:0 }) azzera il rientro delle liste — ripristinato qui */
+.wiki-body ul { padding-left: 1.6em; list-style: disc; }
+.wiki-body ol { padding-left: 1.6em; list-style: decimal; }
+.wiki-body li { margin: 0.2em 0; }
 
 .info-panel__loading {
   display: flex;
@@ -2651,7 +2655,7 @@ body {
   right: 0;
   top: 0;
   height: 100vh;
-  z-index: 60; /* sopra globe-clock (55) e console (50) */
+  z-index: 1000; /* sopra drei Html labels (~100) e tutto il resto tranne scanlines (9000) */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -2687,7 +2691,7 @@ body {
 /* ── InfoPanel floating (desktop) ── */
 .info-panel--float {
   position: fixed;
-  z-index: 60;
+  z-index: 1000;
   border-radius: 6px;
   overflow: hidden;
   border: 1px solid rgba(0, 200, 255, 0.35);
@@ -3041,7 +3045,7 @@ body {
   position: fixed;
   right: 0;
   top: 50%;
-  z-index: 55; /* sotto il pannello aperto (60), sopra clock (55) */
+  z-index: 999; /* sotto il pannello aperto (1000), sopra drei labels */
   background: rgba(1, 7, 16, 0.88);
   border: 1px solid rgba(26, 144, 255, 0.45);
   border-right: none;
