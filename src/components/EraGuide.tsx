@@ -160,13 +160,19 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
   const it = data.locale === 'it';
   const { briefing, eraName, eraYear, originLat, originLng } = data;
 
-  function handleItemClick(itemText: string) {
-    const parsedYear = parseYear(itemText) ?? eraYear;
+  function handleItemClick(itemText: string, itemIndex: number) {
+    const links = top5Links[itemIndex] ?? [];
+    // Seleziona la prima entità trovata nel testo — questo apre l'InfoPanel
+    const firstEntity = links[0]?.event ?? null;
+    const parsedYear = firstEntity?.year ?? parseYear(itemText) ?? eraYear;
     const flyTo: FlyTarget | undefined =
-      originLat != null && originLng != null
-        ? { kind: 'geo', lat: originLat, lng: originLng, ts: Date.now(), range: 1_800_000 }
-        : undefined;
+      firstEntity && firstEntity.lat != null && firstEntity.lng != null
+        ? { kind: 'geo', lat: firstEntity.lat, lng: firstEntity.lng, ts: Date.now(), range: 1_800_000 }
+        : originLat != null && originLng != null
+          ? { kind: 'geo', lat: originLat, lng: originLng, ts: Date.now(), range: 1_800_000 }
+          : undefined;
     onNavigate({ year: parsedYear, flyTo });
+    if (firstEntity) onSelectEvent?.(firstEntity);
   }
 
   function handleEntityClick(ev: HistoricalEvent, e: React.MouseEvent) {
@@ -311,7 +317,7 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
               <li key={i}>
                 <div
                   className="era-guide__top5-item"
-                  onClick={() => handleItemClick(item.text)}
+                  onClick={() => handleItemClick(item.text, i)}
                   title={it ? 'Naviga a questo momento' : 'Navigate to this moment'}
                 >
                   <span className="era-guide__item-cat" title={item.cat}>
