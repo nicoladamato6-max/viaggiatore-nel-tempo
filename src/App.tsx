@@ -302,8 +302,9 @@ function AppInner() {
     return () => clearInterval(id);
   }, []);
 
-  // Mirino olografico — visibile mentre si accelera
-  const [showCrosshair, setShowCrosshair] = useState(false);
+  // Ologrammi — toggle visibilità + glow attivo durante thrust
+  const [showHoloOverlays, setShowHoloOverlays] = useState(true);
+  const [thrustActive, setThrustActive] = useState(false);
 
   // ── Chunk loading (Opzione C) ───────────────────────────────────────────────
   const chunkCacheRef = useRef<Map<EraKey, HistoricalEvent[]>>(new Map());
@@ -708,18 +709,59 @@ function AppInner() {
 
   const globeAndControls = (
     <>
-      {/* Clock olografico in alto a destra */}
+      {/* Pulsante toggle ologrammi */}
       {!isMobile && (
-        <div className="globe-clock">
-          Viaggiatore nel tempo — {nowStr}
-        </div>
+        <button
+          className={`globe-holo-toggle ${showHoloOverlays ? 'globe-holo-toggle--on' : 'globe-holo-toggle--off'}`}
+          onClick={() => setShowHoloOverlays(v => !v)}
+          title={showHoloOverlays ? 'Nascondi ologrammi HUD' : 'Mostra ologrammi HUD'}
+        >
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+            <circle cx="12" cy="12" r="3.5"/>
+            <line x1="12" y1="2" x2="12" y2="7"/>
+            <line x1="12" y1="17" x2="12" y2="22"/>
+            <line x1="2" y1="12" x2="7" y2="12"/>
+            <line x1="17" y1="12" x2="22" y2="12"/>
+            <path d="M6 6 L4 4" /><path d="M18 6 L20 4" />
+            <path d="M18 18 L20 20" /><path d="M6 18 L4 20" />
+          </svg>
+        </button>
       )}
 
-      {/* Mirino olografico al centro — visibile durante accelerazione */}
-      {showCrosshair && !isMobile && (
-        <div className="globe-crosshair">
-          <div className="globe-crosshair__dot" />
-        </div>
+      {/* Ologrammi — visibili solo se showHoloOverlays */}
+      {!isMobile && showHoloOverlays && (
+        <>
+          {/* Clock in alto a destra */}
+          <div className="globe-clock">
+            Viaggiatore nel tempo — {nowStr}
+          </div>
+
+          {/* Mirino olografico al centro — sempre visibile, glow extra durante thrust */}
+          <div className={`globe-crosshair${thrustActive ? ' globe-crosshair--active' : ''}`}>
+            <svg viewBox="-60 -60 120 120" width="140" height="140" fill="none"
+                 stroke="rgba(0,220,190,0.80)" strokeLinecap="round">
+              {/* Angoli L — 4 bracket ai vertici */}
+              <path d="M -44 -24 L -44 -44 L -24 -44" strokeWidth="2.2" stroke="rgba(0,220,190,0.90)"/>
+              <path d="M  24 -44 L  44 -44 L  44 -24" strokeWidth="2.2" stroke="rgba(0,220,190,0.90)"/>
+              <path d="M  44  24 L  44  44 L  24  44" strokeWidth="2.2" stroke="rgba(0,220,190,0.90)"/>
+              <path d="M -24  44 L -44  44 L -44  24" strokeWidth="2.2" stroke="rgba(0,220,190,0.90)"/>
+              {/* Quarti di arco agli angoli */}
+              <path d="M -20 -38 A 38 38 0 0 1 -38 -20" strokeWidth="1.2" stroke="rgba(0,220,190,0.55)"/>
+              <path d="M  20 -38 A 38 38 0 0 0  38 -20" strokeWidth="1.2" stroke="rgba(0,220,190,0.55)"/>
+              <path d="M  38  20 A 38 38 0 0 1  20  38" strokeWidth="1.2" stroke="rgba(0,220,190,0.55)"/>
+              <path d="M -38  20 A 38 38 0 0 0 -20  38" strokeWidth="1.2" stroke="rgba(0,220,190,0.55)"/>
+              {/* Tacche centrali (con gap dal centro) */}
+              <line x1="0" y1="-10" x2="0" y2="-22" strokeWidth="1" stroke="rgba(0,220,190,0.55)"/>
+              <line x1="0" y1=" 10" x2="0" y2=" 22" strokeWidth="1" stroke="rgba(0,220,190,0.55)"/>
+              <line x1="-10" y1="0" x2="-22" y2="0" strokeWidth="1" stroke="rgba(0,220,190,0.55)"/>
+              <line x1=" 10" y1="0" x2=" 22" y2="0" strokeWidth="1" stroke="rgba(0,220,190,0.55)"/>
+              {/* Cerchio interno */}
+              <circle cx="0" cy="0" r="6" strokeWidth="1.2" stroke="rgba(0,220,190,0.70)"/>
+              {/* Punto centrale */}
+              <circle cx="0" cy="0" r="1.8" fill="rgba(0,220,190,0.90)" stroke="none"/>
+            </svg>
+          </div>
+        </>
       )}
 
       <div className="globe-container">
@@ -874,8 +916,8 @@ function AppInner() {
           onToggleTerritories={() => setShowTerritories(v => !v)}
           onDpad={handleDpad}
           yearToSlider={yearToSlider}
-          onThrustStart={() => setShowCrosshair(true)}
-          onThrustEnd={() => setShowCrosshair(false)}
+          onThrustStart={() => setThrustActive(true)}
+          onThrustEnd={() => setThrustActive(false)}
         />
       )}
       {!isMobile && aiPanelOpen && (

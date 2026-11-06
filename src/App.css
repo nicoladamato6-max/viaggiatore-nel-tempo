@@ -1992,47 +1992,53 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 54;
-  width: 72px;
-  height: 72px;
   pointer-events: none;
-  animation: crosshair-pulse 1.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(0, 220, 190, 0.60))
+          drop-shadow(0 0 18px rgba(0, 180, 160, 0.30));
+  animation: crosshair-pulse 2.4s ease-in-out infinite;
+  transition: filter 0.2s ease;
 }
-.globe-crosshair::before,
-.globe-crosshair::after {
-  content: '';
-  position: absolute;
-  background: rgba(0, 220, 190, 0.75);
-  box-shadow: 0 0 8px rgba(0, 220, 190, 0.70);
-}
-.globe-crosshair::before {
-  /* riga orizzontale */
-  top: 50%;
-  left: 10px;
-  right: 10px;
-  height: 1px;
-  margin-top: -0.5px;
-}
-.globe-crosshair::after {
-  /* riga verticale */
-  left: 50%;
-  top: 10px;
-  bottom: 10px;
-  width: 1px;
-  margin-left: -0.5px;
-}
-/* cerchietto centrale */
-.globe-crosshair__dot {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px; height: 10px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(0, 220, 190, 0.85);
-  box-shadow: 0 0 8px rgba(0, 220, 190, 0.60);
+/* Modalità "lock" durante accelerazione */
+.globe-crosshair--active {
+  filter: drop-shadow(0 0 10px rgba(0, 220, 190, 0.95))
+          drop-shadow(0 0 30px rgba(0, 220, 190, 0.60))
+          drop-shadow(0 0 60px rgba(0, 180, 160, 0.40));
+  animation: crosshair-lock 0.3s ease-in-out infinite;
 }
 @keyframes crosshair-pulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.55; }
+  0%, 100% { opacity: 0.65; }
+  50%       { opacity: 1; }
+}
+@keyframes crosshair-lock {
+  0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  50%       { opacity: 0.90; transform: translate(-50%, -50%) scale(1.04); }
+}
+
+/* ── Pulsante toggle ologrammi ─────────────────────────────────────────── */
+.globe-holo-toggle {
+  position: fixed;
+  top: 36px;
+  right: 14px;
+  z-index: 56;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: rgba(0, 220, 190, 0.45);
+  transition: color 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 0 4px rgba(0, 220, 190, 0.20));
+}
+.globe-holo-toggle:hover {
+  color: rgba(0, 220, 190, 0.85);
+  filter: drop-shadow(0 0 8px rgba(0, 220, 190, 0.60));
+}
+.globe-holo-toggle--on {
+  color: rgba(0, 220, 190, 0.80);
+  filter: drop-shadow(0 0 6px rgba(0, 220, 190, 0.50));
+}
+.globe-holo-toggle--off {
+  color: rgba(0, 220, 190, 0.25);
+  filter: none;
 }
 
 .globe-hud__row {
