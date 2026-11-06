@@ -11,6 +11,96 @@
     "wikipediaSlug": "Big_Bang"
   },
   {
+    "id": "nucleosintesi-primordiale",
+    "year": -13800000000,
+    "title": "Nucleosintesi Primordiale",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "radiazione-di-hawking",
+    "year": -13800000000,
+    "title": "Radiazione di Hawking",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "epoca-di-planck",
+    "year": -13800000000,
+    "title": "Epoca di Planck",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "fluttuazioni-quantistiche",
+    "year": -13800000000,
+    "title": "Fluttuazioni Quantistiche",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "universo-osservabile",
+    "year": -13800000000,
+    "title": "Universo Osservabile",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "onde-gravitazionali",
+    "year": -13800000000,
+    "title": "Onde Gravitazionali",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "filamenti-cosmici",
+    "year": -13700000000,
+    "title": "Filamenti Cosmici",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "energia-oscura",
+    "year": -13700000000,
+    "title": "Energia Oscura",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "via-lattea-galassia",
+    "year": -13700000000,
+    "title": "Via Lattea",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
     "id": "prime-stelle",
     "year": -13200000000,
     "title": "Formazione delle prime stelle",
@@ -75,6 +165,16 @@
     "lng": 46.6753,
     "isCosmic": true,
     "wikipediaSlug": "Sun"
+  },
+  {
+    "id": "nebulosa-solare",
+    "year": -4600000000,
+    "title": "Nebulosa Solare",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "cosm-sistema-solare-disco",
@@ -176,6 +276,26 @@
     "wikipediaSlug": "Origin_of_water_on_Earth"
   },
   {
+    "id": "correnti-termoaline",
+    "year": -4000000000,
+    "title": "Circolazione Termoalina",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "tettonica-a-placche",
+    "year": -4000000000,
+    "title": "Tettonica a Placche",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
     "id": "vita-terra",
     "year": -3800000000,
     "title": "Prime forme di vita sulla Terra",
@@ -198,6 +318,26 @@
     "wikipediaSlug": "Stromatolite"
   },
   {
+    "id": "shark-bay-stromatoliti",
+    "year": -3500000000,
+    "title": "Shark Bay",
+    "category": "geologia",
+    "tipo": "luogo",
+    "lat": -25.5,
+    "lng": 113.5,
+    "isCosmic": false
+  },
+  {
+    "id": "chiara-ossigenazione-cianobatteri",
+    "year": -3500000000,
+    "title": "Fotosintesi Ossigenica",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": -25,
+    "lng": 113,
+    "isCosmic": false
+  },
+  {
     "id": "ossigenazione-grande",
     "year": -2400000000,
     "title": "La Grande Ossigenazione — Quando la Terra Respira",
@@ -207,6 +347,16 @@
     "lng": 26,
     "isCosmic": false,
     "wikipediaSlug": "Great_Oxidation_Event"
+  },
+  {
+    "id": "grande-ossidazione",
+    "year": -2400000000,
+    "title": "Grande Ossidazione",
+    "category": "geologia",
+    "tipo": "evento",
+    "lat": -25,
+    "lng": 113,
+    "isCosmic": false
   },
   {
     "id": "cosm-eucarioti-prima",
@@ -231,6 +381,16 @@
     "wikipediaSlug": "Bangiomorpha"
   },
   {
+    "id": "rodinia-supercontinente",
+    "year": -1100000000,
+    "title": "Rodinia",
+    "category": "geologia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
     "id": "terra-palla-neve",
     "year": -720000000,
     "title": "Snowball Earth — La Terra Completamente Ghiacciata",
@@ -253,6 +413,16 @@
     "wikipediaSlug": "Ediacaran_biota"
   },
   {
+    "id": "esplosione-cambriana",
+    "year": -541000000,
+    "title": "Esplosione Cambriana",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
     "id": "primi-pesci-vertebrati",
     "year": -530000000,
     "title": "I Primi Vertebrati — La Rivoluzione dei Pesci",
@@ -262,6 +432,36 @@
     "lng": 102.7109,
     "isCosmic": false,
     "wikipediaSlug": "Cambrian_fish"
+  },
+  {
+    "id": "trilobiti",
+    "year": -520000000,
+    "title": "Trilobiti",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "burgess-shale",
+    "year": -508000000,
+    "title": "Burgess Shale",
+    "category": "scienza",
+    "tipo": "luogo",
+    "lat": 51.4,
+    "lng": -116.5,
+    "isCosmic": false
+  },
+  {
+    "id": "coralli-rugosi",
+    "year": -480000000,
+    "title": "Coralli Rugosi",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "piante-terra-colonizzazione",
@@ -297,6 +497,16 @@
     "wikipediaSlug": "Late_Ordovician_mass_extinction"
   },
   {
+    "id": "cooksonia-pianta",
+    "year": -430000000,
+    "title": "Cooksonia",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 51.5,
+    "lng": -1.5,
+    "isCosmic": false
+  },
+  {
     "id": "cosm-teleostei-pesci-ossei",
     "year": -420000000,
     "title": "I Pesci Ossei — Il 96% dei Pesci Attuali",
@@ -306,6 +516,16 @@
     "lng": -0.1278,
     "isCosmic": false,
     "wikipediaSlug": "Osteichthyes"
+  },
+  {
+    "id": "placodermi-pesci",
+    "year": -419000000,
+    "title": "Placodermi",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "cosm-cepfalopodi-cefalopodi",
@@ -350,6 +570,26 @@
     "lng": -83.2,
     "isCosmic": false,
     "wikipediaSlug": "Tiktaalik"
+  },
+  {
+    "id": "carbonifero-periodo",
+    "year": -359000000,
+    "title": "Carbonifero",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "pangea-supercontinente",
+    "year": -335000000,
+    "title": "Pangea",
+    "category": "geologia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "cosm-insetti-volo",
@@ -407,6 +647,16 @@
     "wikipediaSlug": "Permian–Triassic_extinction_event"
   },
   {
+    "id": "grande-estinzione-permiano",
+    "year": -252000000,
+    "title": "Grande Estinzione del Permiano",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
     "id": "dinosauri-comparsa",
     "year": -240000000,
     "title": "Comparsa dei Dinosauri",
@@ -427,6 +677,16 @@
     "lng": -68.4653,
     "isCosmic": false,
     "wikipediaSlug": "Origin_of_dinosaurs"
+  },
+  {
+    "id": "sauropodi-dinosauri",
+    "year": -230000000,
+    "title": "Sauropodi",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "pterosauri-volo-mesozoico",
@@ -495,6 +755,16 @@
     "wikipediaSlug": "Archaeopteryx"
   },
   {
+    "id": "archeopteryx-lithographica",
+    "year": -150000000,
+    "title": "Archeopteryx lithographica",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 48.9,
+    "lng": 10.9,
+    "isCosmic": false
+  },
+  {
     "id": "cosm-mesozoico-flora",
     "year": -130000000,
     "title": "La Flora del Mesozoico — Le Prime Piante con Fiori",
@@ -504,6 +774,16 @@
     "lng": 21.8243,
     "isCosmic": false,
     "wikipediaSlug": "Flowering_plant"
+  },
+  {
+    "id": "angiosperme-fiori",
+    "year": -130000000,
+    "title": "Angiosperme",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "cosm-cretaceo-mare",
@@ -517,6 +797,16 @@
     "wikipediaSlug": "Cretaceous_seaway"
   },
   {
+    "id": "velociraptor",
+    "year": -75000000,
+    "title": "Velociraptor",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 43.5,
+    "lng": 100.5,
+    "isCosmic": false
+  },
+  {
     "id": "tyrannosaurus-rex",
     "year": -68000000,
     "title": "T. rex — Il Re dei Dinosauri",
@@ -526,6 +816,16 @@
     "lng": -106.3956,
     "isCosmic": false,
     "wikipediaSlug": "Tyrannosaurus"
+  },
+  {
+    "id": "t-rex-tyrannosaurus",
+    "year": -68000000,
+    "title": "T-Rex",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 46,
+    "lng": -105,
+    "isCosmic": false
   },
   {
     "id": "estinzione-dinosauri",
@@ -550,6 +850,16 @@
     "wikipediaSlug": "Chicxulub_crater"
   },
   {
+    "id": "chicxulub-impatto",
+    "year": -66000000,
+    "title": "Chicxulub",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 21.4,
+    "lng": -89.5,
+    "isCosmic": false
+  },
+  {
     "id": "mammiferi-espansione",
     "year": -60000000,
     "title": "L'Espansione dei Mammiferi — Il Mondo dopo i Dinosauri",
@@ -570,6 +880,26 @@
     "lng": 98.9842,
     "isCosmic": false,
     "wikipediaSlug": "Primate"
+  },
+  {
+    "id": "eohippus",
+    "year": -55000000,
+    "title": "Eohippus",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 40,
+    "lng": -100,
+    "isCosmic": false
+  },
+  {
+    "id": "pakicetus-balena",
+    "year": -53000000,
+    "title": "Pakicetus",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 30,
+    "lng": 70,
+    "isCosmic": false
   },
   {
     "id": "himalaya-formazione",
@@ -594,6 +924,16 @@
     "wikipediaSlug": "Evolution_of_cetaceans"
   },
   {
+    "id": "chaussee-des-geants",
+    "year": -50000000,
+    "title": "Chaussée des Géants",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 55.24,
+    "lng": -6.51,
+    "isCosmic": false
+  },
+  {
     "id": "antartide-ghiacciata",
     "year": -34000000,
     "title": "L'Antartide si Ghiaccia — Fine delle Foreste Polari",
@@ -603,6 +943,26 @@
     "lng": 0,
     "isCosmic": false,
     "wikipediaSlug": "Antarctic_ice_sheet"
+  },
+  {
+    "id": "rift-valley-africana",
+    "year": -30000000,
+    "title": "Rift Valley Africana",
+    "category": "geologia",
+    "tipo": "luogo",
+    "lat": 0,
+    "lng": 36,
+    "isCosmic": false
+  },
+  {
+    "id": "alpi-catena",
+    "year": -30000000,
+    "title": "Alpi",
+    "category": "geologia",
+    "tipo": "luogo",
+    "lat": 46.5,
+    "lng": 9.5,
+    "isCosmic": false
   },
   {
     "id": "megalodon-squalo-gigante",
@@ -625,6 +985,16 @@
     "lng": 110,
     "isCosmic": false,
     "wikipediaSlug": "Gigantopithecus"
+  },
+  {
+    "id": "sahelanthropus-tchadensis",
+    "year": -7000000,
+    "title": "Sahelanthropus",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 16,
+    "lng": 16,
+    "isCosmic": false
   },
   {
     "id": "wd-Q3612703",
@@ -715,6 +1085,36 @@
     "wikipediaSlug": "Homo_habilis"
   },
   {
+    "id": "olduvai-gorge",
+    "year": -2000000,
+    "title": "Olduvai Gorge",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": -2.98,
+    "lng": 35.35,
+    "isCosmic": false
+  },
+  {
+    "id": "megafauna-pleistocenica",
+    "year": -2000000,
+    "title": "Megafauna Pleistocenica",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "tufo-vulcanico-roma",
+    "year": -2000000,
+    "title": "Tufo Vulcanico",
+    "category": "geologia",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
+  },
+  {
     "id": "cosm-homo-ergaster",
     "year": -1900000,
     "title": "Homo ergaster — Il Primo Umano Alto e Snello",
@@ -748,6 +1148,16 @@
     "wikipediaSlug": "Dmanisi"
   },
   {
+    "id": "homo-erectus-bipede",
+    "year": -1800000,
+    "title": "Homo Erectus",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 36,
+    "isCosmic": false
+  },
+  {
     "id": "cosm-acheuleano-ascia",
     "year": -1700000,
     "title": "L'Ascia Acheuleana — Tecnologia per 1,5 Milioni di Anni",
@@ -768,6 +1178,26 @@
     "lng": 24.2816,
     "isCosmic": false,
     "wikipediaSlug": "Control_of_fire_by_early_humans"
+  },
+  {
+    "id": "grotta-di-wonderwerk",
+    "year": -1000000,
+    "title": "Grotta di Wonderwerk",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": -27.85,
+    "lng": 23.55,
+    "isCosmic": false
+  },
+  {
+    "id": "caccia-cooperativa-preistorica",
+    "year": -1000000,
+    "title": "Caccia Cooperativa",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "prei-mazoyer-ata-grande",
@@ -814,6 +1244,16 @@
     "wikipediaSlug": "Great_Barrier_Reef"
   },
   {
+    "id": "percussione-ritmica-paleolitico",
+    "year": -500000,
+    "title": "Percussione Ritmica",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
     "id": "homo-sapiens-africa",
     "year": -300000,
     "title": "Homo sapiens — La Nostra Specie Nasce in Africa",
@@ -845,6 +1285,36 @@
     "lng": 28.45,
     "isCosmic": false,
     "wikipediaSlug": "Kabwe_1"
+  },
+  {
+    "id": "cicli-di-milankovitch",
+    "year": -300000,
+    "title": "Cicli di Milankovitch",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 44.8,
+    "lng": 20.5,
+    "isCosmic": false
+  },
+  {
+    "id": "tecnica-levalloisiana",
+    "year": -300000,
+    "title": "Tecnica Levalloisiana",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 48.9,
+    "lng": 2.4,
+    "isCosmic": false
+  },
+  {
+    "id": "grotta-carsica-rifugio",
+    "year": -300000,
+    "title": "Grotta Carsica",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 44,
+    "lng": 16,
+    "isCosmic": false
   },
   {
     "id": "neanderthal-europa",
@@ -1056,6 +1526,16 @@
     "wikipediaSlug": "Music_and_emotion"
   },
   {
+    "id": "ago-di-osso-paleolitico",
+    "year": -50000,
+    "title": "Ago di Osso",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
     "id": "arte-rupestre-sulawesi",
     "year": -45500,
     "title": "Sulawesi — L'Arte Rupestre più Antica del Mondo",
@@ -1122,6 +1602,16 @@
     "wikipediaSlug": "Hohle_Fels"
   },
   {
+    "id": "geissenklosterle-flauto",
+    "year": -40000,
+    "title": "Geißenklösterle",
+    "category": "musica",
+    "tipo": "luogo",
+    "lat": 48.4,
+    "lng": 9.7,
+    "isCosmic": false
+  },
+  {
     "id": "chauvet-grotte-pittura",
     "year": -36000,
     "title": "La Grotta Chauvet — I Maestri dell'Arte Paleolitica",
@@ -1131,6 +1621,16 @@
     "lng": 4.4156,
     "isCosmic": false,
     "wikipediaSlug": "Chauvet_Cave"
+  },
+  {
+    "id": "chauvet-pont-d-arc",
+    "year": -36000,
+    "title": "Chauvet-Pont-d'Arc",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 44.4,
+    "lng": 4.4,
+    "isCosmic": false
   },
   {
     "id": "mu-pre-flauti-vogelherd",
@@ -1144,6 +1644,26 @@
     "wikipediaSlug": "Vogelherd_Cave"
   },
   {
+    "id": "calendario-lunare-paleolitico",
+    "year": -35000,
+    "title": "Calendario Lunare",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "lavorazione-selce-percussione",
+    "year": -35000,
+    "title": "Percussione Indiretta",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
     "id": "mu-pre-percussioni-paleolitico",
     "year": -30000,
     "title": "Percussioni Rituali — il Ritmo come Prima Musica",
@@ -1153,6 +1673,16 @@
     "lng": 1.08,
     "isCosmic": false,
     "wikipediaSlug": "Prehistoric_music"
+  },
+  {
+    "id": "venere-di-willendorf",
+    "year": -28000,
+    "title": "Venere di Willendorf",
+    "category": "arte",
+    "tipo": "evento",
+    "lat": 48.4,
+    "lng": 15.4,
+    "isCosmic": false
   },
   {
     "id": "dolni-vestonice-ceramica",
@@ -1175,6 +1705,26 @@
     "lng": 15.4,
     "isCosmic": false,
     "wikipediaSlug": "Venus_of_Willendorf"
+  },
+  {
+    "id": "dea-madre-statuetta",
+    "year": -25000,
+    "title": "Dea Madre",
+    "category": "arte",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "cucitrice-di-ossa-paleolitico",
+    "year": -25000,
+    "title": "Cucitrice di Ossa",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "prei-beringia-terra-ponte",
@@ -1243,6 +1793,16 @@
     "wikipediaSlug": "Origin_of_the_domestic_dog"
   },
   {
+    "id": "domesticazione-cane",
+    "year": -15000,
+    "title": "Domesticazione del Cane",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 50,
+    "lng": 40,
+    "isCosmic": false
+  },
+  {
     "id": "prei-monte-verde-chile",
     "year": -14500,
     "title": "Monte Verde — I più Antichi Americani del Sud",
@@ -1285,6 +1845,16 @@
     "lng": 33.0827,
     "isCosmic": false,
     "wikipediaSlug": "Woolly_mammoth"
+  },
+  {
+    "id": "arpione-preistorico",
+    "year": -12000,
+    "title": "Arpione Preistorico",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "prei-natufiani-cereali",
@@ -1373,6 +1943,26 @@
     "lng": 139.6503,
     "isCosmic": false,
     "wikipediaSlug": "Jōmon_pottery"
+  },
+  {
+    "id": "arco-musicale-mesolitico",
+    "year": -10000,
+    "title": "Arco Musicale",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
+  },
+  {
+    "id": "microliti-frecce",
+    "year": -10000,
+    "title": "Microliti",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 0,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "prei-abu-hureyra-prima-agri",
@@ -1483,6 +2073,16 @@
     "lng": 35.44,
     "isCosmic": false,
     "wikipediaSlug": "Jericho"
+  },
+  {
+    "id": "gerico-prima-citta",
+    "year": -9000,
+    "title": "Gerico",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 31.86,
+    "lng": 35.44,
+    "isCosmic": false
   },
   {
     "id": "capra-pecora-domestiche",
@@ -1661,6 +2261,16 @@
     "wikipediaSlug": "Ã‡atalhÃ¶yÃ¼k"
   },
   {
+    "id": "catalhoyuk-neolitico",
+    "year": -7500,
+    "title": "Çatalhöyük",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 37.67,
+    "lng": 32.83,
+    "isCosmic": false
+  },
+  {
     "id": "prei-grotta-cueva-manos",
     "year": -7370,
     "title": "Cueva de las Manos — Le Mani di 9000 Anni Fa",
@@ -1747,6 +2357,16 @@
     "lng": 113.67,
     "isCosmic": false,
     "wikipediaSlug": "Jiahu"
+  },
+  {
+    "id": "cueva-de-los-caballos",
+    "year": -7000,
+    "title": "Cueva de los Caballos",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 40.5,
+    "lng": -0.1,
+    "isCosmic": false
   },
   {
     "id": "prei-khirokitia-cipro-neol",
@@ -1892,6 +2512,16 @@
     "wikipediaSlug": "Stentinello_culture"
   },
   {
+    "id": "ceramica-cucuteni-trypillia",
+    "year": -5500,
+    "title": "Cucuteni-Trypillia",
+    "category": "arte",
+    "tipo": "evento",
+    "lat": 48,
+    "lng": 28,
+    "isCosmic": false
+  },
+  {
     "id": "prei-eridu-mesopotamia-prima",
     "year": -5400,
     "title": "Eridu — La Prima Città della Mesopotamia",
@@ -1978,6 +2608,16 @@
     "lng": 34.9833,
     "isCosmic": false,
     "wikipediaSlug": "Timna_Valley"
+  },
+  {
+    "id": "rame-anatolico-miniere",
+    "year": -5000,
+    "title": "Rame Anatolico",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 39,
+    "lng": 35,
+    "isCosmic": false
   },
   {
     "id": "megaliti-carnac",
@@ -2156,6 +2796,26 @@
     "wikipediaSlug": "Megalithic_Temples_of_Malta"
   },
   {
+    "id": "megaliti-di-malta",
+    "year": -3600,
+    "title": "Megaliti di Malta",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 35.9,
+    "lng": 14.4,
+    "isCosmic": false
+  },
+  {
+    "id": "sinai-miniere-rame",
+    "year": -3500,
+    "title": "Miniere del Sinai",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 29.5,
+    "lng": 34,
+    "isCosmic": false
+  },
+  {
     "id": "prima-birra-sumeria",
     "year": -3500,
     "title": "La Prima Birra — Il Dono degli Dei",
@@ -2275,6 +2935,16 @@
     "lng": null,
     "isCosmic": false,
     "wikipediaSlug": "Scorpione_I"
+  },
+  {
+    "id": "sigilli-cilindrici-mesopotamia",
+    "year": -3500,
+    "title": "Sigilli Cilindrici",
+    "category": "arte",
+    "tipo": "evento",
+    "lat": 32.5,
+    "lng": 44.4,
+    "isCosmic": false
   },
   {
     "id": "prima-scrittura-protocuneiforme",
@@ -2618,6 +3288,16 @@
     "wikipediaSlug": "Djer"
   },
   {
+    "id": "bronzo-arsenicale-metallurgia",
+    "year": -3000,
+    "title": "Bronzo Arsenicale",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 38,
+    "lng": 32,
+    "isCosmic": false
+  },
+  {
     "id": "prei-inca-precursori-chavín",
     "year": -3000,
     "title": "Chavín de Huantar — La Prima Civiltà Andina",
@@ -2770,6 +3450,16 @@
     "lng": null,
     "isCosmic": false,
     "wikipediaSlug": "Semerkhet"
+  },
+  {
+    "id": "inanna-dea-sumera",
+    "year": -3000,
+    "title": "Inanna",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 31.3,
+    "lng": 46.1,
+    "isCosmic": false
   },
   {
     "id": "wd-Q151819",
@@ -3080,6 +3770,16 @@
     "wikipediaSlug": "Userkaf"
   },
   {
+    "id": "lire-di-ur",
+    "year": -2600,
+    "title": "Lire Reali di Ur",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 30.9,
+    "lng": 46.1,
+    "isCosmic": false
+  },
+  {
     "id": "snefru-piramidi-bent",
     "year": -2575,
     "title": "Snefru — Le Piramidi di Dahshur",
@@ -3122,6 +3822,16 @@
     "lng": 31.1342,
     "isCosmic": false,
     "wikipediaSlug": "Great_Pyramid_of_Giza"
+  },
+  {
+    "id": "piramide-di-cheope",
+    "year": -2560,
+    "title": "Piramide di Cheope",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 29.98,
+    "lng": 31.13,
+    "isCosmic": false
   },
   {
     "id": "wd-Q200986",
@@ -3287,6 +3997,26 @@
     "lng": 43.15,
     "isCosmic": false,
     "wikipediaSlug": "Nineveh"
+  },
+  {
+    "id": "lottatori-mesopotamici",
+    "year": -2500,
+    "title": "Lotta Mesopotamica",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 32.5,
+    "lng": 44.4,
+    "isCosmic": false
+  },
+  {
+    "id": "lotta-mesopotamica-sport",
+    "year": -2500,
+    "title": "Lotta Mesopotamica",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 32.5,
+    "lng": 44.4,
+    "isCosmic": false
   },
   {
     "id": "wd-Q269271",
@@ -3575,6 +4305,16 @@
     "wikipediaSlug": "Ur"
   },
   {
+    "id": "epopea-di-gilgamesh",
+    "year": -2100,
+    "title": "Epopea di Gilgamesh",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 32,
+    "lng": 45,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q352752",
     "year": -2050,
     "title": "Ibbi-Sin",
@@ -3672,6 +4412,26 @@
     "lng": null,
     "isCosmic": false,
     "wikipediaSlug": "Sesostri_II"
+  },
+  {
+    "id": "sistro-egizio",
+    "year": -2000,
+    "title": "Sistro",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 26.1,
+    "lng": 32.7,
+    "isCosmic": false
+  },
+  {
+    "id": "sistro-egizio-rito",
+    "year": -2000,
+    "title": "Sistro Egizio",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 26.1,
+    "lng": 32.7,
+    "isCosmic": false
   },
   {
     "id": "wd-Q19248",
@@ -3883,6 +4643,16 @@
     "wikipediaSlug": "Minoan_eruption"
   },
   {
+    "id": "akrotiri-affreschi",
+    "year": -1627,
+    "title": "Akrotiri",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 36.4,
+    "lng": 25.4,
+    "isCosmic": false
+  },
+  {
     "id": "micenei-civiltà",
     "year": -1600,
     "title": "Civiltà Micenea — La Prima Grecia",
@@ -4004,6 +4774,16 @@
     "wikipediaSlug": "Book_of_the_Dead"
   },
   {
+    "id": "valle-dei-re",
+    "year": -1550,
+    "title": "Valle dei Re",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 25.7,
+    "lng": 32.6,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q157966",
     "year": -1526,
     "title": "Amenofi I",
@@ -4035,6 +4815,16 @@
     "lng": 32.6103,
     "isCosmic": false,
     "wikipediaSlug": "Hatshepsut"
+  },
+  {
+    "id": "india-vedica-tradizione",
+    "year": -1500,
+    "title": "India Vedica",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 28,
+    "lng": 77,
+    "isCosmic": false
   },
   {
     "id": "india-vedica",
@@ -4101,6 +4891,26 @@
     "lng": null,
     "isCosmic": false,
     "wikipediaSlug": "Thutmose_IV"
+  },
+  {
+    "id": "regata-nilo-opet",
+    "year": -1500,
+    "title": "Festa di Opet",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 25.7,
+    "lng": 32.6,
+    "isCosmic": false
+  },
+  {
+    "id": "elefante-obelisco-egizio",
+    "year": -1500,
+    "title": "Obelisco Egizio",
+    "category": "arte",
+    "tipo": "evento",
+    "lat": 25.7,
+    "lng": 32.6,
+    "isCosmic": false
   },
   {
     "id": "thutmose-iii-massima-espansione",
@@ -4805,6 +5615,16 @@
     "lng": 26.2388,
     "isCosmic": false,
     "wikipediaSlug": "Troy"
+  },
+  {
+    "id": "ossa-oracolari-cina",
+    "year": -1200,
+    "title": "Ossa Oracolari",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 36,
+    "lng": 114.5,
+    "isCosmic": false
   },
   {
     "id": "ramesses-iii-popoli-mare",
@@ -5533,6 +6353,26 @@
     "wikipediaSlug": "Ancient_Olympic_Games"
   },
   {
+    "id": "giochi-olimpici-antichi",
+    "year": -776,
+    "title": "Giochi Olimpici Antichi",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 37.6,
+    "lng": 21.6,
+    "isCosmic": false
+  },
+  {
+    "id": "giochi-olimpici-776-aC",
+    "year": -776,
+    "title": "Olimpia",
+    "category": "sport",
+    "tipo": "luogo",
+    "lat": 37.6,
+    "lng": 21.6,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q44233",
     "year": -775,
     "title": "Esiodo",
@@ -5808,6 +6648,16 @@
     "wikipediaSlug": "Manasse_(re)"
   },
   {
+    "id": "pantathlon-olimpico",
+    "year": -708,
+    "title": "Pentathlon Olimpico",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 37.6,
+    "lng": 21.6,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q332578",
     "year": -705,
     "title": "Deioce",
@@ -6072,6 +6922,26 @@
     "wikipediaSlug": "Tarquinia"
   },
   {
+    "id": "astronomi-babilonesi",
+    "year": -700,
+    "title": "Astronomia Babilonese",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 32.5,
+    "lng": 44.4,
+    "isCosmic": false
+  },
+  {
+    "id": "astronomia-babilonese-eclissi",
+    "year": -700,
+    "title": "Astronomia Babilonese",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 32.5,
+    "lng": 44.4,
+    "isCosmic": false
+  },
+  {
     "id": "taharqa-faraone-nubiano",
     "year": -690,
     "title": "Taharqa — Il Faraone Nubiano",
@@ -6114,6 +6984,16 @@
     "lng": 43.1528,
     "isCosmic": false,
     "wikipediaSlug": "Assurbanipal"
+  },
+  {
+    "id": "corsa-carri-antichi",
+    "year": -680,
+    "title": "Corsa dei Carri",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 37.6,
+    "lng": 21.6,
+    "isCosmic": false
   },
   {
     "id": "wd-Q206741",
@@ -6237,6 +7117,16 @@
     "wikipediaSlug": "Aprie"
   },
   {
+    "id": "pancrazione-olimpico",
+    "year": -648,
+    "title": "Pancrazio",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 37.6,
+    "lng": 21.6,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q12591",
     "year": -641,
     "title": "Nabucodonosor II",
@@ -6323,6 +7213,16 @@
     "lng": 27.2756,
     "isCosmic": false,
     "wikipediaSlug": "Talete"
+  },
+  {
+    "id": "tales-di-mileto",
+    "year": -624,
+    "title": "Talete di Mileto",
+    "category": "filosofia",
+    "tipo": "persona",
+    "lat": 37.5,
+    "lng": 27.3,
+    "isCosmic": false
   },
   {
     "id": "wd-Q43423",
@@ -6719,6 +7619,26 @@
     "lng": 8.93,
     "isCosmic": false,
     "wikipediaSlug": "Genoa"
+  },
+  {
+    "id": "giardini-pensili-babilonia",
+    "year": -600,
+    "title": "Giardini Pensili di Babilonia",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 32.5,
+    "lng": 44.4,
+    "isCosmic": false
+  },
+  {
+    "id": "mileto-filosofia",
+    "year": -600,
+    "title": "Mileto",
+    "category": "filosofia",
+    "tipo": "luogo",
+    "lat": 37.5,
+    "lng": 27.3,
+    "isCosmic": false
   },
   {
     "id": "wd-Q8423",
@@ -7214,6 +8134,16 @@
     "lng": null,
     "isCosmic": false,
     "wikipediaSlug": "Aggeo_(profeta)"
+  },
+  {
+    "id": "exekias-vasi-neri",
+    "year": -550,
+    "title": "Exekias",
+    "category": "arte",
+    "tipo": "persona",
+    "lat": 37.97,
+    "lng": 23.73,
+    "isCosmic": false
   },
   {
     "id": "wd-Q44387",
@@ -7896,6 +8826,26 @@
     "lng": 23.7222,
     "isCosmic": false,
     "wikipediaSlug": "Ictino"
+  },
+  {
+    "id": "aulos-greco",
+    "year": -500,
+    "title": "Aulos",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 37.97,
+    "lng": 23.73,
+    "isCosmic": false
+  },
+  {
+    "id": "lari-penati-romani",
+    "year": -500,
+    "title": "Lari",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
   },
   {
     "id": "wd-Q83041",
@@ -8646,6 +9596,16 @@
     "wikipediaSlug": "Artaserse_II_di_Persia"
   },
   {
+    "id": "la-tene-cultura",
+    "year": -450,
+    "title": "La Tène",
+    "category": "arte",
+    "tipo": "evento",
+    "lat": 47,
+    "lng": 7,
+    "isCosmic": false
+  },
+  {
     "id": "legge-dodici-tavole",
     "year": -450,
     "title": "Legge delle XII Tavole — Il Diritto Scritto a Roma",
@@ -8831,6 +9791,16 @@
     "lng": 21.3744,
     "isCosmic": false,
     "wikipediaSlug": "Ippia_di_Elide"
+  },
+  {
+    "id": "partenone-atene",
+    "year": -438,
+    "title": "Partenone",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 37.97,
+    "lng": 23.73,
+    "isCosmic": false
   },
   {
     "id": "wd-Q221182",
@@ -9592,6 +10562,16 @@
     "wikipediaSlug": "Zhuāngzǐ"
   },
   {
+    "id": "ludi-romani-spettacoli",
+    "year": -366,
+    "title": "Ludi Romani",
+    "category": "sport",
+    "tipo": "luogo",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q168261",
     "year": -365,
     "title": "Tolomeo I",
@@ -10197,6 +11177,16 @@
     "wikipediaSlug": "Battaglia_della_porta_persiana"
   },
   {
+    "id": "ludi-plebeii-circo",
+    "year": -329,
+    "title": "Circo Massimo",
+    "category": "sport",
+    "tipo": "luogo",
+    "lat": 41.86,
+    "lng": 12.49,
+    "isCosmic": false
+  },
+  {
     "id": "alessandro-india",
     "year": -326,
     "title": "Alessandro Magno — La Spedizione in India",
@@ -10384,6 +11374,16 @@
     "wikipediaSlug": "Appian_Way"
   },
   {
+    "id": "acquedotto-appio-romano",
+    "year": -312,
+    "title": "Acquedotto Appio",
+    "category": "scienza",
+    "tipo": "luogo",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q1231054",
     "year": -311,
     "title": "battaglia di Gaza",
@@ -10505,6 +11505,16 @@
     "wikipediaSlug": "Erostrato"
   },
   {
+    "id": "carnyx-celtico",
+    "year": -300,
+    "title": "Carnyx",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 48,
+    "lng": 2,
+    "isCosmic": false
+  },
+  {
     "id": "euclide-elementi",
     "year": -300,
     "title": "Euclide — Gli Elementi della Geometria",
@@ -10591,6 +11601,56 @@
     "lng": 69.4333,
     "isCosmic": false,
     "wikipediaSlug": "Ai-Khanoum"
+  },
+  {
+    "id": "tibiae-romane",
+    "year": -300,
+    "title": "Tibia Romana",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
+  },
+  {
+    "id": "tuba-buccina-romana",
+    "year": -300,
+    "title": "Tuba Romana",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
+  },
+  {
+    "id": "tibia-flauto-romano",
+    "year": -300,
+    "title": "Tibia",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
+  },
+  {
+    "id": "groma-agrimensori-romani",
+    "year": -300,
+    "title": "Groma",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
+  },
+  {
+    "id": "biblioteca-di-alessandria-raccolta",
+    "year": -295,
+    "title": "Biblioteca di Alessandria",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 31.2,
+    "lng": 29.9,
+    "isCosmic": false
   },
   {
     "id": "wd-Q635839",
@@ -10745,6 +11805,16 @@
     "lng": 27.6178,
     "isCosmic": false,
     "wikipediaSlug": "Battaglia_di_Corupedio"
+  },
+  {
+    "id": "faro-di-alessandria",
+    "year": -280,
+    "title": "Faro di Alessandria",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 31.2,
+    "lng": 29.9,
+    "isCosmic": false
   },
   {
     "id": "wd-Q28959",
@@ -10954,6 +12024,16 @@
     "lng": null,
     "isCosmic": false,
     "wikipediaSlug": "Seleuco_II"
+  },
+  {
+    "id": "gladiatori-romani",
+    "year": -264,
+    "title": "Gladiatori",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
   },
   {
     "id": "wd-Q6286",
@@ -11845,6 +12925,16 @@
     "lng": 9.18,
     "isCosmic": false,
     "wikipediaSlug": "Mediolanum"
+  },
+  {
+    "id": "pergamo-pergamena",
+    "year": -200,
+    "title": "Pergamo",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 39.1,
+    "lng": 27.2,
+    "isCosmic": false
   },
   {
     "id": "wd-Q237867",
@@ -12881,6 +13971,16 @@
     "wikipediaSlug": "Fraate_IV"
   },
   {
+    "id": "busto-ritrattistico-romano",
+    "year": -100,
+    "title": "Ritratto Romano",
+    "category": "arte",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q1048",
     "year": -99,
     "title": "Gaio Giulio Cesare",
@@ -13110,6 +14210,16 @@
     "lng": 12.48,
     "isCosmic": false,
     "wikipediaSlug": "Gaio_Cassio_Longino"
+  },
+  {
+    "id": "vitruvio-de-architectura",
+    "year": -80,
+    "title": "Vitruvio",
+    "category": "scienza",
+    "tipo": "persona",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
   },
   {
     "id": "wd-Q47163",
@@ -13552,6 +14662,16 @@
     "wikipediaSlug": "Battaglia_del_fiume_Axona"
   },
   {
+    "id": "de-rerum-natura-lucrezio",
+    "year": -55,
+    "title": "De Rerum Natura",
+    "category": "filosofia",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q164294",
     "year": -54,
     "title": "Anna",
@@ -13561,6 +14681,16 @@
     "lng": 35.2061,
     "isCosmic": false,
     "wikipediaSlug": "Sant'Anna"
+  },
+  {
+    "id": "hathor-dendera",
+    "year": -54,
+    "title": "Tempio di Hathor a Dendera",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 26.1,
+    "lng": 32.7,
+    "isCosmic": false
   },
   {
     "id": "wd-Q273671",
@@ -15301,6 +16431,16 @@
     "wikipediaSlug": "Aśvaghoṣa"
   },
   {
+    "id": "colosseo-roma",
+    "year": 80,
+    "title": "Colosseo",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 41.89,
+    "lng": 12.49,
+    "isCosmic": false
+  },
+  {
     "id": "domiziano-imperatore",
     "year": 81,
     "title": "Domiziano — Il Tiranno che Amava l'Ordine",
@@ -16806,6 +17946,16 @@
     "lng": 19.6125,
     "isCosmic": false,
     "wikipediaSlug": "Ostiliano"
+  },
+  {
+    "id": "crisi-terzo-secolo-romano",
+    "year": 235,
+    "title": "Crisi del Terzo Secolo",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
   },
   {
     "id": "wd-Q309953",
@@ -19745,6 +20895,16 @@
     "wikipediaSlug": "Chilperico_I"
   },
   {
+    "id": "hagia-sophia",
+    "year": 537,
+    "title": "Hagia Sophia",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 41.01,
+    "lng": 28.98,
+    "isCosmic": false
+  },
+  {
     "id": "procopio-storia-segreta",
     "year": 551,
     "title": "Procopio di Cesarea — Il Primo Giornalista d'Inchiesta",
@@ -20295,6 +21455,16 @@
     "wikipediaSlug": "Islamic_art"
   },
   {
+    "id": "falconeria-medievale",
+    "year": 700,
+    "title": "Falconeria",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 50,
+    "lng": 10,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q7071",
     "year": 701,
     "title": "Li Bai",
@@ -20777,6 +21947,56 @@
     "lng": 12.453,
     "isCosmic": false,
     "wikipediaSlug": "Coronation_of_Charlemagne"
+  },
+  {
+    "id": "schola-cantorum-aquisgrana",
+    "year": 800,
+    "title": "Schola Cantorum",
+    "category": "musica",
+    "tipo": "luogo",
+    "lat": 50.77,
+    "lng": 6.09,
+    "isCosmic": false
+  },
+  {
+    "id": "rotazione-triennale-colture",
+    "year": 800,
+    "title": "Rotazione Triennale",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 50,
+    "lng": 10,
+    "isCosmic": false
+  },
+  {
+    "id": "avori-carolingi",
+    "year": 800,
+    "title": "Avori Carolingi",
+    "category": "arte",
+    "tipo": "evento",
+    "lat": 50.77,
+    "lng": 6.09,
+    "isCosmic": false
+  },
+  {
+    "id": "astronomi-carolingi",
+    "year": 800,
+    "title": "Astronomia Carolingia",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 50.77,
+    "lng": 6.09,
+    "isCosmic": false
+  },
+  {
+    "id": "astrolabio-arabico",
+    "year": 800,
+    "title": "Astrolabio",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 40.4,
+    "lng": -3.7,
+    "isCosmic": false
   },
   {
     "id": "wd-Q179759",
@@ -21318,6 +22538,16 @@
     "wikipediaSlug": "Caliphate_of_Cordoba"
   },
   {
+    "id": "mulino-ad-acqua-medievale",
+    "year": 900,
+    "title": "Mulino ad Acqua",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 48,
+    "lng": 2,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q11075",
     "year": 903,
     "title": "Abd al-Rahmān al-Sūfi",
@@ -21503,6 +22733,16 @@
     "lng": 5.75,
     "isCosmic": false,
     "wikipediaSlug": "Erik_il_Rosso"
+  },
+  {
+    "id": "societa-feudale-maniero",
+    "year": 950,
+    "title": "Sistema Feudale",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 48,
+    "lng": 2,
+    "isCosmic": false
   },
   {
     "id": "wd-Q14974",
@@ -21835,6 +23075,16 @@
     "wikipediaSlug": "History_of_Budapest"
   },
   {
+    "id": "camino-de-santiago",
+    "year": 1000,
+    "title": "Camino de Santiago",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 42.88,
+    "lng": -8.54,
+    "isCosmic": false
+  },
+  {
     "id": "alto-medio-ladislao-ungheria",
     "year": 1001,
     "title": "Stefano I — Il Primo Re d'Ungheria",
@@ -22088,6 +23338,16 @@
     "wikipediaSlug": "Serfdom"
   },
   {
+    "id": "motte-bailey-castello",
+    "year": 1050,
+    "title": "Motte e Bailey",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 51.5,
+    "lng": -1.5,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q58907",
     "year": 1052,
     "title": "Filippo I di Francia",
@@ -22218,6 +23478,16 @@
     "lng": 42.59,
     "isCosmic": false,
     "wikipediaSlug": "Battaglia_di_Manzicerta"
+  },
+  {
+    "id": "troubadour-guglielmo-ix",
+    "year": 1071,
+    "title": "Guglielmo IX d'Aquitania",
+    "category": "musica",
+    "tipo": "persona",
+    "lat": 44.8,
+    "lng": 0.5,
+    "isCosmic": false
   },
   {
     "id": "normanni-sicilia",
@@ -22440,6 +23710,16 @@
     "wikipediaSlug": "Ibn_Bajja"
   },
   {
+    "id": "canti-crociati-francesi",
+    "year": 1095,
+    "title": "Canti Crociati",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
+  },
+  {
     "id": "bm-prima-crociata-1096",
     "year": 1096,
     "title": "la Prima Crociata — Deus lo Vult a Gerusalemme",
@@ -22473,6 +23753,26 @@
     "wikipediaSlug": "Ildegarda_di_Bingen"
   },
   {
+    "id": "hildegard-von-bingen",
+    "year": 1098,
+    "title": "Hildegard von Bingen",
+    "category": "musica",
+    "tipo": "persona",
+    "lat": 49.9,
+    "lng": 7.9,
+    "isCosmic": false
+  },
+  {
+    "id": "chanson-de-roland",
+    "year": 1098,
+    "title": "Chanson de Roland",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
+  },
+  {
     "id": "prima-crociata-gerusalemme",
     "year": 1099,
     "title": "Prima Crociata — Presa di Gerusalemme",
@@ -22504,6 +23804,16 @@
     "lng": 35.2137,
     "isCosmic": false,
     "wikipediaSlug": "Crusader_states"
+  },
+  {
+    "id": "arte-romanica-crociata",
+    "year": 1099,
+    "title": "Arte Crociata",
+    "category": "arte",
+    "tipo": "evento",
+    "lat": 31.78,
+    "lng": 35.22,
+    "isCosmic": false
   },
   {
     "id": "scuola-chartres",
@@ -22605,6 +23915,26 @@
     "wikipediaSlug": "Republic_of_Genoa"
   },
   {
+    "id": "troubadour-occitano",
+    "year": 1100,
+    "title": "Trovatori",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 44,
+    "lng": 2.5,
+    "isCosmic": false
+  },
+  {
+    "id": "fin-amor-cortese",
+    "year": 1100,
+    "title": "Fin'Amor",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 44,
+    "lng": 2.5,
+    "isCosmic": false
+  },
+  {
     "id": "venezia-arsenale",
     "year": 1104,
     "title": "Arsenale di Venezia — La Prima Fabbrica Industriale",
@@ -22658,6 +23988,16 @@
     "lng": 35.2137,
     "isCosmic": false,
     "wikipediaSlug": "Knights_Templar"
+  },
+  {
+    "id": "cavalieri-templari-addestramento",
+    "year": 1119,
+    "title": "Cavalieri Templari",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 31.78,
+    "lng": 35.22,
+    "isCosmic": false
   },
   {
     "id": "adelardo-bath",
@@ -22999,6 +24339,16 @@
     "lng": 2.35,
     "isCosmic": false,
     "wikipediaSlug": "Notre-Dame_de_Paris"
+  },
+  {
+    "id": "notre-dame-parigi-cantiere",
+    "year": 1163,
+    "title": "Notre-Dame di Parigi",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 48.85,
+    "lng": 2.35,
+    "isCosmic": false
   },
   {
     "id": "wd-Q46420",
@@ -23496,6 +24846,16 @@
     "wikipediaSlug": "Champagne_fairs"
   },
   {
+    "id": "pallacorda-gioco",
+    "year": 1200,
+    "title": "Pallacorda",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q302835",
     "year": 1201,
     "title": "Nasir al-Din al-Tusi",
@@ -23747,6 +25107,26 @@
     "lng": 2.0447,
     "isCosmic": false,
     "wikipediaSlug": "Luigi_IX_di_Francia"
+  },
+  {
+    "id": "roger-bacon-oxford",
+    "year": 1214,
+    "title": "Roger Bacon",
+    "category": "scienza",
+    "tipo": "persona",
+    "lat": 51.75,
+    "lng": -1.25,
+    "isCosmic": false
+  },
+  {
+    "id": "magna-carta-1215",
+    "year": 1215,
+    "title": "Magna Carta",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 51.44,
+    "lng": -0.57,
+    "isCosmic": false
   },
   {
     "id": "bm-magna-carta-1215-england",
@@ -24299,6 +25679,16 @@
     "wikipediaSlug": "Battaglia_di_Ayn_Jalut"
   },
   {
+    "id": "laude-spirituali-fiorentine",
+    "year": 1260,
+    "title": "Laude Spirituali",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 43.78,
+    "lng": 11.25,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q212890",
     "year": 1261,
     "title": "Dionigi del Portogallo",
@@ -24486,6 +25876,16 @@
     "wikipediaSlug": "Pax_Mongolica"
   },
   {
+    "id": "calcio-storico-13-sec",
+    "year": 1280,
+    "title": "Proto-Calcio Medievale",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 43.78,
+    "lng": 11.25,
+    "isCosmic": false
+  },
+  {
     "id": "kublai-giappone",
     "year": 1281,
     "title": "Tentativo di Invasione del Giappone dai Mongoli",
@@ -24539,6 +25939,16 @@
     "lng": 10.409,
     "isCosmic": false,
     "wikipediaSlug": "Margherita_di_Scozia"
+  },
+  {
+    "id": "palio-di-siena-storico",
+    "year": 1283,
+    "title": "Palio di Siena",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 43.32,
+    "lng": 11.33,
+    "isCosmic": false
   },
   {
     "id": "wd-Q5236",
@@ -24682,6 +26092,16 @@
     "lng": 11.2558,
     "isCosmic": false,
     "wikipediaSlug": "Florentine_guilds"
+  },
+  {
+    "id": "bardi-peruzzi-banchieri",
+    "year": 1300,
+    "title": "Bardi",
+    "category": "storia",
+    "tipo": "persona",
+    "lat": 43.78,
+    "lng": 11.25,
+    "isCosmic": false
   },
   {
     "id": "bm-firenze-dante-esilio",
@@ -25045,6 +26465,16 @@
     "lng": 10.18,
     "isCosmic": false,
     "wikipediaSlug": "Ibn_Khaldun"
+  },
+  {
+    "id": "ars-nova-landini",
+    "year": 1335,
+    "title": "Francesco Landini",
+    "category": "musica",
+    "tipo": "persona",
+    "lat": 43.78,
+    "lng": 11.25,
+    "isCosmic": false
   },
   {
     "id": "petrarca-mont-ventoux",
@@ -25718,6 +27148,16 @@
     "wikipediaSlug": "Alberto_II_d'Asburgo"
   },
   {
+    "id": "willem-dufay-polifonia",
+    "year": 1397,
+    "title": "Guillaume Dufay",
+    "category": "musica",
+    "tipo": "persona",
+    "lat": 50.6,
+    "lng": 3.1,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q312551",
     "year": 1398,
     "title": "Kabīr",
@@ -25749,6 +27189,16 @@
     "lng": 8.2736,
     "isCosmic": false,
     "wikipediaSlug": "Johannes_Gutenberg"
+  },
+  {
+    "id": "cave-di-carrara",
+    "year": 1400,
+    "title": "Carrara",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 44.08,
+    "lng": 10.1,
+    "isCosmic": false
   },
   {
     "id": "wd-Q154751",
@@ -26213,6 +27663,26 @@
     "wikipediaSlug": "Regiomontano"
   },
   {
+    "id": "cupola-brunelleschi-firenze",
+    "year": 1436,
+    "title": "Cupola del Brunelleschi",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 43.77,
+    "lng": 11.26,
+    "isCosmic": false
+  },
+  {
+    "id": "cupola-di-brunelleschi",
+    "year": 1436,
+    "title": "Cupola di Brunelleschi",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 43.77,
+    "lng": 11.26,
+    "isCosmic": false
+  },
+  {
     "id": "cosmo-ulugh-beg-1437",
     "year": 1437,
     "title": "Ulugh Beg — il principe astronomo di Samarcanda",
@@ -26356,6 +27826,16 @@
     "wikipediaSlug": "Palazzo_Medici_Riccardi"
   },
   {
+    "id": "palazzo-medici-michelozzo",
+    "year": 1445,
+    "title": "Palazzo Medici",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 43.78,
+    "lng": 11.25,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q165983",
     "year": 1447,
     "title": "Bayezid II",
@@ -26466,6 +27946,16 @@
     "wikipediaSlug": "Luca_Signorelli"
   },
   {
+    "id": "heinrich-isaac-frottola",
+    "year": 1450,
+    "title": "Heinrich Isaac",
+    "category": "musica",
+    "tipo": "persona",
+    "lat": 43.78,
+    "lng": 11.25,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q7322",
     "year": 1451,
     "title": "Cristoforo Colombo",
@@ -26563,6 +28053,16 @@
     "lng": 11.2542,
     "isCosmic": false,
     "wikipediaSlug": "Amerigo_Vespucci"
+  },
+  {
+    "id": "poliziano-laude",
+    "year": 1454,
+    "title": "Angelo Poliziano",
+    "category": "musica",
+    "tipo": "persona",
+    "lat": 43.78,
+    "lng": 11.25,
+    "isCosmic": false
   },
   {
     "id": "guerra-rose-inglese",
@@ -26970,6 +28470,16 @@
     "lng": -3.7118,
     "isCosmic": false,
     "wikipediaSlug": "Diego_de_Almagro"
+  },
+  {
+    "id": "giostra-medicea",
+    "year": 1475,
+    "title": "Giostra Medicea",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 43.78,
+    "lng": 11.25,
+    "isCosmic": false
   },
   {
     "id": "rin-spain-inquisition-torquemada",
@@ -27819,6 +29329,16 @@
     "wikipediaSlug": "Salvator_mundi_(Leonardo)"
   },
   {
+    "id": "torneo-cavalleresco-rinascimento",
+    "year": 1500,
+    "title": "Torneo Cavalleresco",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 51.5,
+    "lng": -0.1,
+    "isCosmic": false
+  },
+  {
     "id": "rin-palestrina-polyphony",
     "year": 1501,
     "title": "la Stampa Musicale — Petrucci e la Rivoluzione della Musica Stampata",
@@ -28224,6 +29744,16 @@
     "lng": 4.2908,
     "isCosmic": false,
     "wikipediaSlug": "Gerardo_Mercatore"
+  },
+  {
+    "id": "cappella-sistina-affresco",
+    "year": 1512,
+    "title": "Cappella Sistina",
+    "category": "arte",
+    "tipo": "luogo",
+    "lat": 41.9,
+    "lng": 12.45,
+    "isCosmic": false
   },
   {
     "id": "rin-machiavelli-principe",
@@ -28732,6 +30262,26 @@
     "wikipediaSlug": "Étienne_de_La_Boétie"
   },
   {
+    "id": "calcio-fiorentino-1530",
+    "year": 1530,
+    "title": "Calcio Fiorentino",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 43.77,
+    "lng": 11.26,
+    "isCosmic": false
+  },
+  {
+    "id": "calcio-storico-rinascimento",
+    "year": 1530,
+    "title": "Calcio Storico Fiorentino",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 43.78,
+    "lng": 11.25,
+    "isCosmic": false
+  },
+  {
     "id": "rin-conquista-peru-pizarro",
     "year": 1532,
     "title": "Pizarro e la Conquista del Perù — L'Oro degli Inca",
@@ -28974,6 +30524,16 @@
     "wikipediaSlug": "Francis_Drake"
   },
   {
+    "id": "college-gesuitico-sport",
+    "year": 1540,
+    "title": "Collegio Gesuita",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
+  },
+  {
     "id": "rin-reforma-calvino-geneva",
     "year": 1541,
     "title": "Calvino — Ginevra come Città di Dio e il Calvinismo",
@@ -29106,6 +30666,16 @@
     "wikipediaSlug": "William_Gilbert"
   },
   {
+    "id": "scherma-salvator-fabris",
+    "year": 1544,
+    "title": "Salvator Fabris",
+    "category": "sport",
+    "tipo": "persona",
+    "lat": 45.4,
+    "lng": 11.9,
+    "isCosmic": false
+  },
+  {
     "id": "rin-peru-potosi-argento",
     "year": 1545,
     "title": "Potosi — la Montagna d'Argento che Fa il Mondo Moderno",
@@ -29148,6 +30718,26 @@
     "lng": 11.1217,
     "isCosmic": false,
     "wikipediaSlug": "Concilio_di_Trento"
+  },
+  {
+    "id": "potosi-miniere-argento",
+    "year": 1545,
+    "title": "Cerro Rico di Potosí",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": -19.6,
+    "lng": -65.75,
+    "isCosmic": false
+  },
+  {
+    "id": "cerro-rico-potosi-miniere",
+    "year": 1545,
+    "title": "Cerro Rico",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": -19.6,
+    "lng": -65.75,
+    "isCosmic": false
   },
   {
     "id": "wd-Q36620",
@@ -29786,6 +31376,16 @@
     "lng": -1.0833,
     "isCosmic": false,
     "wikipediaSlug": "Guy_Fawkes"
+  },
+  {
+    "id": "processioni-controriforma",
+    "year": 1570,
+    "title": "Processioni della Controriforma",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 41.9,
+    "lng": 12.5,
+    "isCosmic": false
   },
   {
     "id": "mod-ottomani-battaglia-lepanto",
@@ -30624,6 +32224,46 @@
     "wikipediaSlug": "Battaglia_di_Sekigahara"
   },
   {
+    "id": "edo-tokyo-seicento",
+    "year": 1600,
+    "title": "Edo",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 35.68,
+    "lng": 139.69,
+    "isCosmic": false
+  },
+  {
+    "id": "caccia-reale-fontainebleau",
+    "year": 1600,
+    "title": "Foresta di Fontainebleau",
+    "category": "sport",
+    "tipo": "luogo",
+    "lat": 48.4,
+    "lng": 2.7,
+    "isCosmic": false
+  },
+  {
+    "id": "citta-di-edo",
+    "year": 1600,
+    "title": "Città di Edo",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 35.68,
+    "lng": 139.69,
+    "isCosmic": false
+  },
+  {
+    "id": "puritani-condanna-sport",
+    "year": 1600,
+    "title": "Puritanesimo",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 51.5,
+    "lng": -0.1,
+    "isCosmic": false
+  },
+  {
     "id": "mod-reggenza-chiesa-1600",
     "year": 1601,
     "title": "le Missioni Gesuita in Cina — Matteo Ricci e il Dialogo",
@@ -30919,6 +32559,16 @@
     "lng": -71.21,
     "isCosmic": false,
     "wikipediaSlug": "Quebec_City"
+  },
+  {
+    "id": "torricelli-scienziato",
+    "year": 1608,
+    "title": "Torricelli",
+    "category": "scienza",
+    "tipo": "persona",
+    "lat": 44.8,
+    "lng": 11.6,
+    "isCosmic": false
   },
   {
     "id": "galileo-telescopio",
@@ -31449,6 +33099,16 @@
     "wikipediaSlug": "Robert_Boyle"
   },
   {
+    "id": "bossuet-diritto-divino",
+    "year": 1627,
+    "title": "Bossuet",
+    "category": "filosofia",
+    "tipo": "persona",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
+  },
+  {
     "id": "mod-harvey-blood",
     "year": 1628,
     "title": "Harvey e la circolazione del sangue",
@@ -31911,6 +33571,16 @@
     "wikipediaSlug": "René_Robert_Cavelier_de_La_Salle"
   },
   {
+    "id": "torricelli-barometro",
+    "year": 1643,
+    "title": "Evangelista Torricelli",
+    "category": "scienza",
+    "tipo": "persona",
+    "lat": 44.8,
+    "lng": 11.6,
+    "isCosmic": false
+  },
+  {
     "id": "mod-qing-dynasty-china",
     "year": 1644,
     "title": "la Dinastia Qing — l'Ultimo Impero Cinese",
@@ -32074,6 +33744,16 @@
     "lng": -9.137,
     "isCosmic": false,
     "wikipediaSlug": "Pietro_II_del_Portogallo"
+  },
+  {
+    "id": "pace-di-westfalia",
+    "year": 1648,
+    "title": "Pace di Westfalia",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 51.96,
+    "lng": 7.62,
+    "isCosmic": false
   },
   {
     "id": "mod-english-civil-war-cromwell",
@@ -32415,6 +34095,16 @@
     "lng": -0.1275,
     "isCosmic": false,
     "wikipediaSlug": "Daniel_Defoe"
+  },
+  {
+    "id": "royal-society-londra",
+    "year": 1660,
+    "title": "Royal Society",
+    "category": "scienza",
+    "tipo": "luogo",
+    "lat": 51.5,
+    "lng": -0.13,
+    "isCosmic": false
   },
   {
     "id": "eta-moderna-malpighi-microscopio",
@@ -32780,6 +34470,16 @@
     "wikipediaSlug": "1668_North_Anatolia_earthquake"
   },
   {
+    "id": "nicola-stenone-stratigrafia",
+    "year": 1669,
+    "title": "Nicola Stenone",
+    "category": "scienza",
+    "tipo": "persona",
+    "lat": 43.78,
+    "lng": 11.25,
+    "isCosmic": false
+  },
+  {
     "id": "spinoza-amsterdam",
     "year": 1670,
     "title": "Spinoza — Deus sive Natura",
@@ -33110,6 +34810,16 @@
     "wikipediaSlug": "Carlo_XII_di_Svezia"
   },
   {
+    "id": "versailles-palazzo",
+    "year": 1682,
+    "title": "Versailles",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 48.8,
+    "lng": 2.12,
+    "isCosmic": false
+  },
+  {
     "id": "mod-ottoman-siege-vienna-1683",
     "year": 1683,
     "title": "l'Assedio di Vienna del 1683 — il Limite dell'Espansione Ottomana",
@@ -33196,6 +34906,26 @@
     "lng": 3.5233,
     "isCosmic": false,
     "wikipediaSlug": "Antoine_Watteau"
+  },
+  {
+    "id": "watteau-pittore",
+    "year": 1684,
+    "title": "Watteau",
+    "category": "arte",
+    "tipo": "persona",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
+  },
+  {
+    "id": "le-pelerinage-watteau",
+    "year": 1684,
+    "title": "Antoine Watteau",
+    "category": "arte",
+    "tipo": "persona",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
   },
   {
     "id": "eta-moderna-huguenots",
@@ -33900,6 +35630,16 @@
     "lng": 34.5528,
     "isCosmic": false,
     "wikipediaSlug": "Campagna_di_Poltava"
+  },
+  {
+    "id": "cricket-kent-1700",
+    "year": 1709,
+    "title": "Cricket del Kent",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 51.3,
+    "lng": 0.5,
+    "isCosmic": false
   },
   {
     "id": "filo-fill-015",
@@ -37565,6 +39305,16 @@
     "wikipediaSlug": "Morte_di_Socrate"
   },
   {
+    "id": "lord-cricket-ground",
+    "year": 1787,
+    "title": "Lord's Cricket Ground",
+    "category": "sport",
+    "tipo": "luogo",
+    "lat": 51.53,
+    "lng": -0.17,
+    "isCosmic": false
+  },
+  {
     "id": "mod-australia-prima-flotta-1788",
     "year": 1788,
     "title": "la Prima Flotta — l'Australia come Colonia Penale",
@@ -37662,6 +39412,16 @@
     "lng": 151.21,
     "isCosmic": false,
     "wikipediaSlug": "Sydney"
+  },
+  {
+    "id": "guardia-nazionale-esercizi",
+    "year": 1789,
+    "title": "Guardia Nazionale",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
   },
   {
     "id": "lavoisier-chimica",
@@ -38003,6 +39763,26 @@
     "lng": 2.5369,
     "isCosmic": false,
     "wikipediaSlug": "Prima_coalizione"
+  },
+  {
+    "id": "marsigliese-inno",
+    "year": 1792,
+    "title": "La Marsigliese",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
+  },
+  {
+    "id": "ghigliottina-luigi-xvi",
+    "year": 1793,
+    "title": "Luigi XVI",
+    "category": "storia",
+    "tipo": "persona",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
   },
   {
     "id": "mod-decapitazione-maria-antonietta",
@@ -38445,6 +40225,16 @@
     "wikipediaSlug": "Émile_Clapeyron"
   },
   {
+    "id": "duello-pistola-ottocento",
+    "year": 1800,
+    "title": "Duello alla Pistola",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
+  },
+  {
     "id": "ott-volta-batteria-1800",
     "year": 1800,
     "title": "la Pila di Volta — l'Era dell'Elettricita",
@@ -38520,6 +40310,16 @@
     "lng": 8.6833,
     "isCosmic": false,
     "wikipediaSlug": "Battaglia_di_Marengo"
+  },
+  {
+    "id": "miniere-galles-vittoriane",
+    "year": 1800,
+    "title": "Miniere del Galles",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 51.8,
+    "lng": -3.5,
+    "isCosmic": false
   },
   {
     "id": "wd-Q596",
@@ -39490,6 +41290,26 @@
     "wikipediaSlug": "Terremoti_di_New_Madrid_del_1811-1812"
   },
   {
+    "id": "tournbewegung-jahn",
+    "year": 1811,
+    "title": "Friedrich Ludwig Jahn",
+    "category": "sport",
+    "tipo": "persona",
+    "lat": 52.5,
+    "lng": 13.4,
+    "isCosmic": false
+  },
+  {
+    "id": "ritirata-di-russia-1812",
+    "year": 1812,
+    "title": "Ritirata di Russia",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 55.75,
+    "lng": 37.6,
+    "isCosmic": false
+  },
+  {
     "id": "ott-romanticism-byron-shelley",
     "year": 1812,
     "title": "Byron e il Romanticismo — il Poeta come Eroe Ribelle",
@@ -39919,6 +41739,16 @@
     "wikipediaSlug": "Ottone_di_Grecia"
   },
   {
+    "id": "parigi-restaurazione-bourbon",
+    "year": 1815,
+    "title": "Restaurazione Borbonica",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q127332",
     "year": 1816,
     "title": "Charlotte Brontë",
@@ -40335,6 +42165,16 @@
     "lng": -8.7311,
     "isCosmic": false,
     "wikipediaSlug": "George_Stokes"
+  },
+  {
+    "id": "offenbach-operette",
+    "year": 1819,
+    "title": "Jacques Offenbach",
+    "category": "musica",
+    "tipo": "persona",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
   },
   {
     "id": "ott-rivoluzione-industriale-vapore",
@@ -41151,6 +42991,16 @@
     "wikipediaSlug": "John_Everett_Millais"
   },
   {
+    "id": "locomotiva-stephenson",
+    "year": 1829,
+    "title": "Locomotiva di Stephenson",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 53.75,
+    "lng": -2,
+    "isCosmic": false
+  },
+  {
     "id": "ott-treno-locomotiva-1830",
     "year": 1830,
     "title": "la Locomotiva — il Treno Rimpicciolisce il Mondo",
@@ -41391,6 +43241,16 @@
     "lng": -2.9426,
     "isCosmic": false,
     "wikipediaSlug": "Liverpool_and_Manchester_Railway"
+  },
+  {
+    "id": "othniel-marsh",
+    "year": 1831,
+    "title": "Othniel Marsh",
+    "category": "scienza",
+    "tipo": "persona",
+    "lat": 41.3,
+    "lng": -72.9,
+    "isCosmic": false
   },
   {
     "id": "faraday-elettromagnetismo",
@@ -42405,6 +44265,16 @@
     "wikipediaSlug": "Prima_guerra_anglo-afghana"
   },
   {
+    "id": "nascita-fotografia-1839",
+    "year": 1839,
+    "title": "Louis Daguerre",
+    "category": "storia",
+    "tipo": "persona",
+    "lat": 48.9,
+    "lng": 2.3,
+    "isCosmic": false
+  },
+  {
     "id": "indochina-coloniale",
     "year": 1840,
     "title": "Prima Guerra dell'Oppio — L'Umiliazione della Cina",
@@ -42867,6 +44737,16 @@
     "wikipediaSlug": "Federico_VIII_di_Danimarca"
   },
   {
+    "id": "ginnastica-patriottica-torino",
+    "year": 1844,
+    "title": "Ginnastica Patriottica",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 45.07,
+    "lng": 7.69,
+    "isCosmic": false
+  },
+  {
     "id": "telegrafo-morse",
     "year": 1844,
     "title": "Morse — Il Telegrafo e il Codice Morse",
@@ -43318,6 +45198,16 @@
     "wikipediaSlug": "Max_Liebermann"
   },
   {
+    "id": "cavo-telegrafico-torino-milano",
+    "year": 1847,
+    "title": "Cavo Telegrafico",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 45.07,
+    "lng": 7.69,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q107541",
     "year": 1848,
     "title": "9 Metis",
@@ -43547,6 +45437,36 @@
     "lng": 130.5511,
     "isCosmic": false,
     "wikipediaSlug": "Tōgō_Heihachirō"
+  },
+  {
+    "id": "cinque-giornate-milano",
+    "year": 1848,
+    "title": "Cinque Giornate di Milano",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 45.47,
+    "lng": 9.19,
+    "isCosmic": false
+  },
+  {
+    "id": "rivoluzioni-1848-anno-miracoli",
+    "year": 1848,
+    "title": "Rivoluzioni del 1848",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 48.2,
+    "lng": 16.37,
+    "isCosmic": false
+  },
+  {
+    "id": "football-regole-cambridge-1848",
+    "year": 1848,
+    "title": "Regole di Cambridge",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 52.2,
+    "lng": 0.1,
+    "isCosmic": false
   },
   {
     "id": "wd-Q2640",
@@ -43932,6 +45852,16 @@
     "lng": 7.2,
     "isCosmic": false,
     "wikipediaSlug": "Hermann_Ebbinghaus"
+  },
+  {
+    "id": "music-hall-londra",
+    "year": 1850,
+    "title": "Music Hall",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 51.5,
+    "lng": -0.1,
+    "isCosmic": false
   },
   {
     "id": "wd-Q107534",
@@ -45584,6 +47514,16 @@
     "wikipediaSlug": "Expedition_of_the_Thousand"
   },
   {
+    "id": "padre-angelo-secchi",
+    "year": 1860,
+    "title": "Angelo Secchi",
+    "category": "scienza",
+    "tipo": "persona",
+    "lat": 41.9,
+    "lng": 12.45,
+    "isCosmic": false
+  },
+  {
     "id": "wd-Q156149",
     "year": 1861,
     "title": "65 Cybele",
@@ -45791,6 +47731,16 @@
     "lng": 3.7253,
     "isCosmic": false,
     "wikipediaSlug": "Victor_Horta"
+  },
+  {
+    "id": "vittorio-emanuele-ii-re-italia",
+    "year": 1861,
+    "title": "Proclamazione del Regno d'Italia",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 45.07,
+    "lng": 7.69,
+    "isCosmic": false
   },
   {
     "id": "wd-Q156855",
@@ -46638,6 +48588,16 @@
     "lng": 21.7975,
     "isCosmic": false,
     "wikipediaSlug": "Akseli_Gallen-Kallela"
+  },
+  {
+    "id": "congo-leopoldo-ii-belga",
+    "year": 1865,
+    "title": "Leopoldo II",
+    "category": "storia",
+    "tipo": "persona",
+    "lat": 50.85,
+    "lng": 4.35,
+    "isCosmic": false
   },
   {
     "id": "wd-Q157735",
@@ -50721,6 +52681,16 @@
     "wikipediaSlug": "Walter_von_Reichenau"
   },
   {
+    "id": "conferenza-di-berlino-1884",
+    "year": 1884,
+    "title": "Conferenza di Berlino",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 52.5,
+    "lng": 13.4,
+    "isCosmic": false
+  },
+  {
     "id": "pasteur-rabbia",
     "year": 1885,
     "title": "Pasteur — Il Vaccino contro la Rabbia",
@@ -53812,6 +55782,16 @@
     "wikipediaSlug": "Battaglia_di_Adua"
   },
   {
+    "id": "olimpiadi-moderne-1896",
+    "year": 1896,
+    "title": "Olimpiadi di Atene 1896",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 37.97,
+    "lng": 23.73,
+    "isCosmic": false
+  },
+  {
     "id": "ott-sociology-durkheim-suicide",
     "year": 1897,
     "title": "Durkheim — il Suicidio e la Nascita della Sociologia Moderna",
@@ -54714,6 +56694,16 @@
     "wikipediaSlug": "Nairobi"
   },
   {
+    "id": "guerra-anglo-boera",
+    "year": 1899,
+    "title": "Guerra Anglo-Boera",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": -29,
+    "lng": 26,
+    "isCosmic": false
+  },
+  {
     "id": "freud-vienna",
     "year": 1900,
     "title": "Sigmund Freud — La Scoperta dell'Inconscio",
@@ -55020,6 +57010,26 @@
     "lng": 2.2945,
     "isCosmic": false,
     "wikipediaSlug": "Exposition_Universelle_(1900)"
+  },
+  {
+    "id": "kurt-weill-opera-tre-soldi",
+    "year": 1900,
+    "title": "Kurt Weill",
+    "category": "musica",
+    "tipo": "persona",
+    "lat": 52.5,
+    "lng": 13.4,
+    "isCosmic": false
+  },
+  {
+    "id": "blues-mississippi",
+    "year": 1900,
+    "title": "Blues",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 33.5,
+    "lng": -90.1,
+    "isCosmic": false
   },
   {
     "id": "fil-lacan-1901",
@@ -58982,6 +60992,16 @@
     "wikipediaSlug": "Adolfo_Bioy_Casares"
   },
   {
+    "id": "tregua-natale-1914",
+    "year": 1914,
+    "title": "Tregua di Natale del 1914",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 50.9,
+    "lng": 2.9,
+    "isCosmic": false
+  },
+  {
     "id": "nov-genocidio-armeni",
     "year": 1915,
     "title": "Il Genocidio Armeno — Il Primo Genocidio del XX Secolo",
@@ -59299,6 +61319,16 @@
     "lng": null,
     "isCosmic": true,
     "wikipediaSlug": "951_Gaspra"
+  },
+  {
+    "id": "battaglia-della-somme",
+    "year": 1916,
+    "title": "Battaglia della Somme",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 50,
+    "lng": 2.7,
+    "isCosmic": false
   },
   {
     "id": "nov-verdun-battaglia",
@@ -59673,6 +61703,26 @@
     "lng": 44.3661,
     "isCosmic": false,
     "wikipediaSlug": "Abd_al-Rahman_Arif"
+  },
+  {
+    "id": "battaglia-trincea-argonne",
+    "year": 1916,
+    "title": "Battaglia dell'Argonne",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 49.1,
+    "lng": 5,
+    "isCosmic": false
+  },
+  {
+    "id": "caporetto-1917",
+    "year": 1917,
+    "title": "Battaglia di Caporetto",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 46.25,
+    "lng": 13.65,
+    "isCosmic": false
   },
   {
     "id": "rivoluzione-russa-1917",
@@ -60542,6 +62592,26 @@
     "lng": 5.2861,
     "isCosmic": false,
     "wikipediaSlug": "Fanny_Blankers-Koen"
+  },
+  {
+    "id": "jazz-harlem-hellfighters",
+    "year": 1918,
+    "title": "Harlem Hellfighters",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 48.86,
+    "lng": 2.35,
+    "isCosmic": false
+  },
+  {
+    "id": "armistizio-1918",
+    "year": 1918,
+    "title": "Armistizio del 1918",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 49.6,
+    "lng": 3.6,
+    "isCosmic": false
   },
   {
     "id": "nov-primo-maggio-lavoratori",
@@ -65195,6 +67265,16 @@
     "lng": 74.13,
     "isCosmic": false,
     "wikipediaSlug": "Milkha_Singh"
+  },
+  {
+    "id": "wall-street-1929-crollo",
+    "year": 1929,
+    "title": "Crollo di Wall Street",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 40.71,
+    "lng": -74.01,
+    "isCosmic": false
   },
   {
     "id": "scoperta-plutone",
@@ -70389,6 +72469,16 @@
     "wikipediaSlug": "1940_Vrancea_earthquake"
   },
   {
+    "id": "stephen-jay-gould",
+    "year": 1941,
+    "title": "Stephen Jay Gould",
+    "category": "filosofia",
+    "tipo": "persona",
+    "lat": 40.7,
+    "lng": -74,
+    "isCosmic": false
+  },
+  {
     "id": "novecento-operazione-barbarossa-2",
     "year": 1941,
     "title": "La Resistenza Sovietica a Mosca — L'Inverno del 1941",
@@ -71654,6 +73744,26 @@
     "wikipediaSlug": "Willis_Reed"
   },
   {
+    "id": "match-morte-kiev-1942",
+    "year": 1942,
+    "title": "Match della Morte",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 50.45,
+    "lng": 30.52,
+    "isCosmic": false
+  },
+  {
+    "id": "stalag-luft-iii-baseball",
+    "year": 1942,
+    "title": "Stalag Luft III",
+    "category": "sport",
+    "tipo": "luogo",
+    "lat": 51.6,
+    "lng": 15.1,
+    "isCosmic": false
+  },
+  {
     "id": "novecento-raf-dam-busters",
     "year": 1943,
     "title": "I Dam Busters — Le Bombe Rimbalzanti",
@@ -72851,6 +74961,16 @@
     "lng": -74.2092,
     "isCosmic": false,
     "wikipediaSlug": "Rick_Barry"
+  },
+  {
+    "id": "hiroshima-bomba-atomica",
+    "year": 1945,
+    "title": "Hiroshima",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 34.39,
+    "lng": 132.45,
+    "isCosmic": false
   },
   {
     "id": "eniac",
@@ -78518,6 +80638,16 @@
     "wikipediaSlug": "Chris_Isaak"
   },
   {
+    "id": "sputnik-1957",
+    "year": 1957,
+    "title": "Sputnik",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 55.75,
+    "lng": 37.62,
+    "isCosmic": false
+  },
+  {
     "id": "con-cee-trattato-roma",
     "year": 1957,
     "title": "Il Trattato di Roma — Nasce la Comunità Economica Europea",
@@ -79990,6 +82120,26 @@
     "lng": -47.93,
     "isCosmic": false,
     "wikipediaSlug": "Brasília"
+  },
+  {
+    "id": "muro-di-berlino",
+    "year": 1961,
+    "title": "Muro di Berlino",
+    "category": "storia",
+    "tipo": "luogo",
+    "lat": 52.52,
+    "lng": 13.4,
+    "isCosmic": false
+  },
+  {
+    "id": "berlino-muro-guerra-fredda",
+    "year": 1961,
+    "title": "Berlino Divisa",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 52.52,
+    "lng": 13.4,
+    "isCosmic": false
   },
   {
     "id": "con-yuri-gagarin-spazio",
@@ -81851,6 +84001,16 @@
     "wikipediaSlug": "1964_Niigata_earthquake"
   },
   {
+    "id": "vietnam-guerra-televisata",
+    "year": 1965,
+    "title": "Guerra del Vietnam",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 16,
+    "lng": 108,
+    "isCosmic": false
+  },
+  {
     "id": "passeggiata-spaziale",
     "year": 1965,
     "title": "Leonov — Prima Passeggiata Spaziale",
@@ -83688,6 +85848,16 @@
     "wikipediaSlug": "Hassiba_Boulmerka"
   },
   {
+    "id": "arpanet-1969",
+    "year": 1969,
+    "title": "ARPANET",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 34.05,
+    "lng": -118.24,
+    "isCosmic": false
+  },
+  {
     "id": "beatles-abbey-road",
     "year": 1969,
     "title": "Beatles — Abbey Road",
@@ -84929,6 +87099,16 @@
     "lng": 9.8378,
     "isCosmic": false,
     "wikipediaSlug": "World_Economic_Forum"
+  },
+  {
+    "id": "fischer-spassky-reykjavik",
+    "year": 1972,
+    "title": "Fischer-Spassky",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 64.13,
+    "lng": -21.93,
+    "isCosmic": false
   },
   {
     "id": "con-terrorismo-ira-nord-irlanda",
@@ -89287,6 +91467,16 @@
     "wikipediaSlug": "Luis_Scola"
   },
   {
+    "id": "mtv-video-killed-radio",
+    "year": 1981,
+    "title": "Video Killed the Radio Star",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 40.75,
+    "lng": -73.99,
+    "isCosmic": false
+  },
+  {
     "id": "con-microsoft-apple-pc-revolution",
     "year": 1981,
     "title": "Il PC — La Rivoluzione del Computer Personale",
@@ -89791,6 +91981,16 @@
     "lng": 146.9144,
     "isCosmic": false,
     "wikipediaSlug": "Lauren_Jackson"
+  },
+  {
+    "id": "mtv-1981",
+    "year": 1981,
+    "title": "MTV",
+    "category": "musica",
+    "tipo": "evento",
+    "lat": 40.75,
+    "lng": -73.99,
+    "isCosmic": false
   },
   {
     "id": "con-guerra-falkland-1982",
@@ -94081,6 +96281,16 @@
     "lng": -121.877,
     "isCosmic": false,
     "wikipediaSlug": "Terremoto_di_Loma_Prieta_del_1989"
+  },
+  {
+    "id": "carote-ghiaccio-antartide",
+    "year": 1990,
+    "title": "Carote di Ghiaccio",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": -90,
+    "lng": 0,
+    "isCosmic": false
   },
   {
     "id": "pale-blue-dot",
@@ -98846,6 +101056,16 @@
     "wikipediaSlug": "2000_Baku_earthquake"
   },
   {
+    "id": "11-settembre-2001",
+    "year": 2001,
+    "title": "11 Settembre 2001",
+    "category": "storia",
+    "tipo": "evento",
+    "lat": 40.71,
+    "lng": -74.01,
+    "isCosmic": false
+  },
+  {
     "id": "con-11-settembre-2001",
     "year": 2001,
     "title": "L'11 Settembre 2001 — Il Mondo Cambia in un'Ora",
@@ -99625,6 +101845,16 @@
     "lng": 3.634,
     "isCosmic": false,
     "wikipediaSlug": "2003_Boumerdès_earthquake"
+  },
+  {
+    "id": "genoma-umano-2003",
+    "year": 2003,
+    "title": "Genoma Umano",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 38.9,
+    "lng": -77,
+    "isCosmic": false
   },
   {
     "id": "con-tsunami-2004-oceano-indiano",
@@ -100868,6 +103098,16 @@
     "lng": 107.328,
     "isCosmic": false,
     "wikipediaSlug": "2009_West_Java_earthquake"
+  },
+  {
+    "id": "league-of-legends-esport",
+    "year": 2009,
+    "title": "League of Legends",
+    "category": "sport",
+    "tipo": "evento",
+    "lat": 34.05,
+    "lng": -118.24,
+    "isCosmic": false
   },
   {
     "id": "cont-generazione-z-social-2010",
@@ -103994,6 +106234,16 @@
     "wikipediaSlug": "2021_Balochistan_earthquake"
   },
   {
+    "id": "james-webb-space-telescope",
+    "year": 2021,
+    "title": "James Webb Space Telescope",
+    "category": "scienza",
+    "tipo": "luogo",
+    "lat": 28.5,
+    "lng": -80.6,
+    "isCosmic": false
+  },
+  {
     "id": "dart-asteroide",
     "year": 2022,
     "title": "NASA DART — Prima deviazione di un asteroide",
@@ -104366,6 +106616,16 @@
     "lng": 18.18,
     "isCosmic": false,
     "wikipediaSlug": "Terremoto_della_Bosnia_ed_Erzegovina_del_2022"
+  },
+  {
+    "id": "chatgpt-novembre-2022",
+    "year": 2022,
+    "title": "ChatGPT",
+    "category": "scienza",
+    "tipo": "evento",
+    "lat": 37.77,
+    "lng": -122.42,
+    "isCosmic": false
   },
   {
     "id": "cont-crispr-medicina",
