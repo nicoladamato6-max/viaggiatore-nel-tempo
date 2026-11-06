@@ -164,7 +164,20 @@ export function BridgeConsole({
               onClick={onToggleTimeMachine}
               title={locale === 'it' ? 'Macchina del Tempo' : 'Time Machine'}
             >
-              <span className="bc__fn-ico bc__fn-ico--tm">⌛</span>
+              <span className="bc__fn-ico bc__fn-ico--tm">
+                <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* cerchio esterno — outline luminosa, nessun riempimento */}
+                  <circle cx="10" cy="10" r="8.5" stroke="rgba(0,220,190,0.9)" strokeWidth="1.2"/>
+                  {/* anello orbitale inclinato */}
+                  <ellipse cx="10" cy="10" rx="8.5" ry="3" stroke="rgba(0,220,190,0.45)" strokeWidth="0.8" transform="rotate(-30 10 10)"/>
+                  {/* lancetta ore */}
+                  <line x1="10" y1="10" x2="10" y2="4.5" stroke="rgba(0,220,190,0.95)" strokeWidth="1.4" strokeLinecap="round"/>
+                  {/* lancetta minuti */}
+                  <line x1="10" y1="10" x2="13.8" y2="12.2" stroke="rgba(0,220,190,0.75)" strokeWidth="1" strokeLinecap="round"/>
+                  {/* punto centrale */}
+                  <circle cx="10" cy="10" r="1" fill="rgba(0,220,190,0.9)"/>
+                </svg>
+              </span>
               <span className="bc__fn-tm-label">MACCHINA<br/>DEL TEMPO</span>
             </button>
           )}
