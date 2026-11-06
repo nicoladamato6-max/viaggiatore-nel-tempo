@@ -10,6 +10,7 @@ import {
   ENTITY_TYPE_COLORS,
 } from '../types';
 import { type Period, MACRO_ERAS, SUBCATEGORIES, assignLanes, getActivePeriods } from '../data/historicalPeriods';
+import { SearchBar } from './SearchBar';
 import './BridgeConsole.css';
 
 // Estratto fuori dal componente per stabilità del tipo React (evita unmount/remount ad ogni render)
@@ -76,7 +77,7 @@ export function BridgeConsole({
   activeCategories, onToggleCategory,
   activeTipi, onToggleTipo,
   cesiumAltKm, events,
-  onSearch, locale,
+  onSearch, onWikiSelect, onEpochSelect, locale,
   aiPanelOpen, onToggleAIPanel,
   onLocaleToggle, user, onAuthClick,
   showTerritories, onToggleTerritories,
@@ -87,33 +88,17 @@ export function BridgeConsole({
   onHyperDpad,
 }: Props) {
   const [open, setOpen] = useState(true);
-  const [query, setQuery] = useState('');
-  const [dropResults, setDropResults] = useState<HistoricalEvent[]>([]);
   const [catOpen, setCatOpen] = useState(false);
   const [typeOpen, setTypeOpen] = useState(false);
   const [sliderDragging, setSliderDragging] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
-  const catRef   = useRef<HTMLDivElement>(null);
-  const typeRef  = useRef<HTMLDivElement>(null);
+  const catRef = useRef<HTMLDivElement>(null);
+  const typeRef = useRef<HTMLDivElement>(null);
 
   const era = getEra(currentYear);
-
-  // Filter events for inline search
-  const filtered = useMemo(() => {
-    if (!query.trim()) return [];
-    const q = query.toLowerCase();
-    return events.filter(e => e.title.toLowerCase().includes(q)).slice(0, 8);
-  }, [query, events]);
-
-  useEffect(() => { setDropResults(filtered); }, [filtered]);
 
   // Close dropdowns on outside click
   useEffect(() => {
     function onDown(e: MouseEvent) {
-      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
-        setQuery('');
-        setDropResults([]);
-      }
       if (catRef.current && !catRef.current.contains(e.target as Node)) setCatOpen(false);
       if (typeRef.current && !typeRef.current.contains(e.target as Node)) setTypeOpen(false);
     }
@@ -169,35 +154,16 @@ export function BridgeConsole({
             {formatYear(currentYear)}
           </span>
 
-          {/* Search */}
-          <div className="bc__si-wrap" ref={searchRef}>
-            <input
-              className="bc__si"
-              type="text"
-              value={query}
-              onChange={e => setQuery(e.target.value)}
-              placeholder={locale === 'it' ? 'Cerca entità…' : 'Search entity…'}
-              autoComplete="off"
-              spellCheck={false}
+          {/* Search — full SearchBar con dataset + Wikipedia + epoche + voce */}
+          <div className="bc__search-wrap">
+            <SearchBar
+              events={events}
+              onSelect={onSearch}
+              onWikiSelect={onWikiSelect ?? (() => {})}
+              onEpochSelect={onEpochSelect}
+              epochs={SUBCATEGORIES}
+              locale={locale}
             />
-            {dropResults.length > 0 && (
-              <div className="bc__si-drop">
-                {dropResults.map(ev => (
-                  <button
-                    key={ev.id}
-                    className="bc__si-item"
-                    onClick={() => { onSearch(ev); setQuery(''); setDropResults([]); }}
-                  >
-                    <span
-                      className="bc__si-dot"
-                      style={{ background: CATEGORY_COLORS[ev.category] }}
-                    />
-                    <span className="bc__si-title">{ev.title}</span>
-                    <span className="bc__si-year">{formatYear(ev.year)}</span>
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
 
           {/* D-pad navigation — cosmic: keyboard events hold-to-press; earth: onDpad click */}
