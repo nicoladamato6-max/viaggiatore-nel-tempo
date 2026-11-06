@@ -835,7 +835,7 @@ function AppInner() {
             <EraGuide
               data={eraGuide}
               events={ALL_SEARCHABLE}
-              onClose={() => { setEraGuide(null); setEraGuideOpen(false); }}
+              onClose={() => setEraGuideOpen(false)}
               onNavigate={({ year, flyTo: ft }) => {
                 if (year !== undefined) {
                   setSliderValue(yearToSlider(year));
@@ -845,6 +845,16 @@ function AppInner() {
               }}
               onSelectEvent={handleEventClick}
             />
+          )}
+          {/* Ghost tab sinistra — riapre EraGuide quando è chiusa */}
+          {!isMobile && eraGuide && !eraGuideOpen && (
+            <button
+              className="era-ghost"
+              onClick={() => setEraGuideOpen(true)}
+              title={eraGuide.eraName}
+            >
+              ERA GUIDE
+            </button>
           )}
           {/* EraGuide mobile — montato fuori da globeAndControls per stare sopra il bottom nav */}
           <AdminPanel

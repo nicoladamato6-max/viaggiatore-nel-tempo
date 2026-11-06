@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useRef } from 'react';
 import { type FlyTarget, type EraLaunchData, type HistoricalEvent } from '../types';
 import { parseYear } from './TimeMachine';
 import './EraGuide.css';
@@ -99,9 +99,55 @@ function renderAnnotatedText(
   return <>{result}</>;
 }
 
+type ResizeDir = 'se' | 'sw' | 'ne' | 'nw' | 'n' | 's' | 'e' | 'w';
+
 export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: Props) {
   const [collapsed,     setCollapsed]     = useState(false);
   const [sheetExpanded, setSheetExpanded] = useState(false); // mobile bottom sheet
+  const [isFloat,       setIsFloat]       = useState(false);
+  const [floatPos,      setFloatPos]      = useState({ x: 60, y: 60 });
+  const [floatSize,     setFloatSize]     = useState({ w: 360, h: 620 });
+  const dragStartRef = useRef<{ mx: number; my: number; px: number; py: number } | null>(null);
+
+  function onDragMouseDown(e: React.MouseEvent) {
+    if (!isFloat) return;
+    e.preventDefault();
+    dragStartRef.current = { mx: e.clientX, my: e.clientY, px: floatPos.x, py: floatPos.y };
+    const onMove = (me: MouseEvent) => {
+      if (!dragStartRef.current) return;
+      setFloatPos({
+        x: dragStartRef.current.px + me.clientX - dragStartRef.current.mx,
+        y: dragStartRef.current.py + me.clientY - dragStartRef.current.my,
+      });
+    };
+    const onUp = () => {
+      dragStartRef.current = null;
+      window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('mouseup', onUp);
+    };
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+  }
+
+  function onResizeMouseDown(e: React.MouseEvent, dir: ResizeDir) {
+    e.preventDefault();
+    e.stopPropagation();
+    const startX = e.clientX, startY = e.clientY;
+    const sp = { ...floatPos }, ss = { ...floatSize };
+    const onMove = (me: MouseEvent) => {
+      const dx = me.clientX - startX, dy = me.clientY - startY;
+      let { x, y } = sp, { w, h } = ss;
+      if (dir.includes('e')) w = Math.max(280, ss.w + dx);
+      if (dir.includes('s')) h = Math.max(300, ss.h + dy);
+      if (dir.includes('w')) { w = Math.max(280, ss.w - dx); x = sp.x + ss.w - w; }
+      if (dir.includes('n')) { h = Math.max(300, ss.h - dy); y = sp.y + ss.h - h; }
+      setFloatSize({ w, h });
+      setFloatPos({ x, y });
+    };
+    const onUp = () => { window.removeEventListener('mousemove', onMove); window.removeEventListener('mouseup', onUp); };
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseup', onUp);
+  }
 
   // Pre-compute entity links for all items — must be before early return (hooks)
   const top5Links = useMemo(() => {
@@ -134,12 +180,17 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
 
   const classes = [
     'era-guide',
+    isFloat        ? 'era-guide--float'         : '',
     collapsed      ? 'era-guide--collapsed'    : '',
     sheetExpanded  ? 'era-guide--sheet-open'   : 'era-guide--sheet-closed',
   ].filter(Boolean).join(' ');
 
+  const floatStyle: React.CSSProperties = isFloat
+    ? { top: floatPos.y, left: floatPos.x, width: floatSize.w, height: floatSize.h, right: 'unset', bottom: 'unset' }
+    : {};
+
   return (
-    <div className={classes}>
+    <div className={classes} style={floatStyle}>
 
       {/* ── Mobile bottom sheet handle ── */}
       <div
@@ -161,8 +212,26 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
         >✕</button>
       </div>
 
+      {/* 8 resize handles — solo in modalità float */}
+      {isFloat && (
+        <>
+          <div className="eg__resize eg__resize--n"  onMouseDown={e => onResizeMouseDown(e,'n')} />
+          <div className="eg__resize eg__resize--s"  onMouseDown={e => onResizeMouseDown(e,'s')} />
+          <div className="eg__resize eg__resize--e"  onMouseDown={e => onResizeMouseDown(e,'e')} />
+          <div className="eg__resize eg__resize--w"  onMouseDown={e => onResizeMouseDown(e,'w')} />
+          <div className="eg__resize eg__resize--nw" onMouseDown={e => onResizeMouseDown(e,'nw')} />
+          <div className="eg__resize eg__resize--ne" onMouseDown={e => onResizeMouseDown(e,'ne')} />
+          <div className="eg__resize eg__resize--sw" onMouseDown={e => onResizeMouseDown(e,'sw')} />
+          <div className="eg__resize eg__resize--se" onMouseDown={e => onResizeMouseDown(e,'se')} />
+        </>
+      )}
+
       {/* ── Desktop header (always visible on desktop) ── */}
-      <div className="era-guide__header">
+      <div
+        className="era-guide__header"
+        onMouseDown={isFloat ? onDragMouseDown : undefined}
+        style={isFloat ? { cursor: 'move' } : undefined}
+      >
         {collapsed ? (
           <>
             <button
@@ -181,13 +250,32 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
               <span className="era-guide__era-name">{eraName}</span>
             </div>
             <div className="era-guide__header-btns">
-              <button
-                className="era-guide__icon-btn"
-                onClick={() => setCollapsed(true)}
-                title={collapseLabel}
-              >
-                ‹
-              </button>
+              {!isFloat && (
+                <button
+                  className="era-guide__icon-btn"
+                  onClick={() => setCollapsed(true)}
+                  title={collapseLabel}
+                >
+                  ‹
+                </button>
+              )}
+              {isFloat ? (
+                <button
+                  className="era-guide__icon-btn"
+                  onClick={() => setIsFloat(false)}
+                  title={it ? 'Aggancia a sinistra' : 'Dock to left'}
+                >
+                  ⊣
+                </button>
+              ) : (
+                <button
+                  className="era-guide__icon-btn"
+                  onClick={() => { setIsFloat(true); setCollapsed(false); }}
+                  title={it ? 'Sgancia pannello' : 'Undock panel'}
+                >
+                  ⊞
+                </button>
+              )}
               <button
                 className="era-guide__icon-btn"
                 onClick={onClose}

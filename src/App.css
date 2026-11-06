@@ -1394,7 +1394,7 @@ body {
 .tm-overlay {
   position: fixed;
   inset: 0;
-  z-index: 200;
+  z-index: 1200; /* sopra InfoPanel (1000) e drei Html labels */
   background: rgba(0, 4, 12, 0.85);
   backdrop-filter: blur(6px);
   display: flex;
@@ -3075,6 +3075,39 @@ body {
 .info-ghost--empty {
   opacity: 0.45;
   border-color: rgba(26, 144, 255, 0.25);
+}
+
+/* ── Era Guide tab (bordo sinistro — riapre EraGuide quando è chiusa) ── */
+.era-ghost {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  z-index: 999;
+  background: rgba(1, 7, 16, 0.88);
+  border: 1px solid rgba(201, 162, 39, 0.45);
+  border-left: none;
+  color: rgba(201, 162, 39, 0.85);
+  font-size: 9px;
+  padding: 14px 5px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%) rotate(180deg);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  transition: background 0.2s, border-color 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+  max-height: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.era-ghost:hover {
+  background: rgba(201, 162, 39, 0.12) !important;
+  border-color: rgba(201, 162, 39, 0.80);
 }
 
 /* ── HUD overlay ── */

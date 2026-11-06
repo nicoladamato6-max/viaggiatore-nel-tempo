@@ -2,15 +2,15 @@
 
 .era-guide {
   position: fixed;
-  top: 56px; /* sotto l'header */
+  top: 0;        /* full height dall'alto */
   left: 0;
   width: 320px;
-  height: calc(100vh - 56px);
+  height: 100vh; /* occupa tutto lo schermo verticalmente */
   background: rgba(8, 12, 22, 0.96);
   border-right: 1px solid #1e2d40;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  z-index: 90;
+  z-index: 1000; /* sopra i label Three.js, pari all'InfoPanel */
   display: flex;
   flex-direction: column;
   font-family: 'Georgia', serif;
@@ -23,6 +23,33 @@
 .era-guide--collapsed {
   width: 42px;
 }
+
+/* ── Modalità float (sganciata) ── */
+.era-guide--float {
+  border-right: none;
+  border: 1px solid rgba(201, 162, 39, 0.35);
+  border-radius: 6px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(201,162,39,0.15);
+  transition: none; /* no transition when dragging/resizing */
+}
+.era-guide--float .era-guide__header {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ── Resize handles (8 direzioni) — visibili solo in float ── */
+.eg__resize {
+  position: absolute;
+  z-index: 10;
+}
+.eg__resize--n  { top: 0;    left: 8px;    right: 8px;  height: 6px; cursor: n-resize; }
+.eg__resize--s  { bottom: 0; left: 8px;    right: 8px;  height: 6px; cursor: s-resize; }
+.eg__resize--e  { top: 8px;  right: 0;     bottom: 8px; width: 6px;  cursor: e-resize; }
+.eg__resize--w  { top: 8px;  left: 0;      bottom: 8px; width: 6px;  cursor: w-resize; }
+.eg__resize--nw { top: 0;    left: 0;      width: 12px; height: 12px; cursor: nw-resize; }
+.eg__resize--ne { top: 0;    right: 0;     width: 12px; height: 12px; cursor: ne-resize; }
+.eg__resize--sw { bottom: 0; left: 0;      width: 12px; height: 12px; cursor: sw-resize; }
+.eg__resize--se { bottom: 0; right: 0;     width: 12px; height: 12px; cursor: se-resize; }
 
 /* ── Header ── */
 .era-guide__header {
