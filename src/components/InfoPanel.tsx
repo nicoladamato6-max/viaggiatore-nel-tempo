@@ -160,7 +160,6 @@ function useTTS() {
 }
 
 const DEFAULT_H = 480;
-const LEFT_PANEL_W = 260;
 
 // ── Componente ────────────────────────────────────────────────────────────
 interface Props {
