@@ -746,8 +746,8 @@ function AppInner() {
               <path d="M  44  24 L  44  44 L  24  44" strokeWidth="2.2" stroke="rgba(0,220,190,0.90)"/>
               <path d="M -24  44 L -44  44 L -44  24" strokeWidth="2.2" stroke="rgba(0,220,190,0.90)"/>
               {/* Quarti di arco agli angoli */}
-              <path d="M -20 -38 A 38 38 0 0 1 -38 -20" strokeWidth="1.2" stroke="rgba(0,220,190,0.55)"/>
-              <path d="M  20 -38 A 38 38 0 0 0  38 -20" strokeWidth="1.2" stroke="rgba(0,220,190,0.55)"/>
+              <path d="M -20 -38 A 38 38 0 0 0 -38 -20" strokeWidth="1.2" stroke="rgba(0,220,190,0.55)"/>
+              <path d="M  20 -38 A 38 38 0 0 1  38 -20" strokeWidth="1.2" stroke="rgba(0,220,190,0.55)"/>
               <path d="M  38  20 A 38 38 0 0 1  20  38" strokeWidth="1.2" stroke="rgba(0,220,190,0.55)"/>
               <path d="M -38  20 A 38 38 0 0 0 -20  38" strokeWidth="1.2" stroke="rgba(0,220,190,0.55)"/>
               {/* Tacche centrali (con gap dal centro) */}
