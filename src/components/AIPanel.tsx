@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
-import { type HistoricalEvent, type Locale, CATEGORY_COLORS } from '../types';
+import { type HistoricalEvent, type Locale, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
 import './AIPanel.css';
 
 interface Props {
@@ -126,14 +126,19 @@ Use the tone of a passionate, engaging, and curious historical narrator.`;
       .then(reply => setMessages([{ role: 'ai', text: reply }]))
       .catch(() => {
         const intro = locale === 'it'
-          ? `${event.title} (${yr}) — ${event.description}\n\nEntità correlate che potresti esplorare:`
-          : `${event.title} (${yr}) — ${event.description}\n\nRelated entities you might explore:`;
-        const list = correlated.map(e =>
-          locale === 'it'
-            ? `• ${e.title} (${formatYear(e.year, 'it')}) — correlata per prossimità storica e geografica.`
-            : `• ${e.title} (${formatYear(e.year, 'en')}) — related by historical and geographical proximity.`
-        ).join('\n');
-        setMessages([{ role: 'ai', text: `${intro}\n${list}` }]);
+          ? `✦ ${event.title} (${yr})\n${event.description}\n\n🔭 Entità correlate da esplorare sulla mappa:`
+          : `✦ ${event.title} (${yr})\n${event.description}\n\n🔭 Related entities to explore on the map:`;
+        const list = correlated.map(e => {
+          const catLabel = CATEGORY_LABELS[e.category] ?? e.category;
+          const desc = e.description.length > 120 ? e.description.slice(0, 120) + '…' : e.description;
+          return locale === 'it'
+            ? `• ${e.title} (${formatYear(e.year, 'it')}) [${catLabel}]\n  ${desc}`
+            : `• ${e.title} (${formatYear(e.year, 'en')}) [${catLabel}]\n  ${desc}`;
+        }).join('\n\n');
+        const outro = locale === 'it'
+          ? '\n\nClicca su un\'entità sopra per esplorarla, o scrivimi una domanda.'
+          : '\n\nClick an entity above to explore it, or ask me a question.';
+        setMessages([{ role: 'ai', text: `${intro}\n\n${list}${outro}` }]);
       })
       .finally(() => setBusy(false));
 

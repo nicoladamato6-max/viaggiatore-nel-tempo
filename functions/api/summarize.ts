@@ -92,7 +92,7 @@ ${example}`;
 
 async function callCloudflareAI(env: SummarizeEnv, prompt: string): Promise<string> {
   if (!env.AI) throw new Error('AI binding not configured');
-  const result = await env.AI.run('@cf/meta/llama-3.1-8b-instruct-fp8', {
+  const result = await env.AI.run('@cf/deepseek-ai/deepseek-v4.1-flash-1017', {
     messages: [
       { role: 'system', content: 'You are a JSON API. Output only raw JSON, no markdown fences, no explanation.' },
       { role: 'user', content: prompt },

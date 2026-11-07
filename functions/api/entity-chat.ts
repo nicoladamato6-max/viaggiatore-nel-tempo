@@ -103,7 +103,7 @@ async function callCloudflareAI(
     ...messages.slice(-6).map(m => ({ role: m.role, content: m.content })),
     { role: 'user', content: question },
   ];
-  const result = await env.AI.run('@cf/meta/llama-3.1-8b-instruct-fp8', {
+  const result = await env.AI.run('@cf/deepseek-ai/deepseek-v4.1-flash-1017', {
     messages:   cfMessages,
     max_tokens: 800,
   });
