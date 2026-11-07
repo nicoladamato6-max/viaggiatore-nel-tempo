@@ -108,7 +108,7 @@ export function LeftNavPanel({ open, onClose, events, currentYear, onSelectEvent
             className={`left-nav-panel__tab${tab === 'cronologia' ? ' left-nav-panel__tab--active' : ''}`}
             onClick={() => setTab('cronologia')}
           >
-            {locale === 'it' ? 'Cronologia' : 'Timeline'}
+            {locale === 'it' ? 'Nel periodo' : 'In period'}
           </button>
           <button
             className={`left-nav-panel__tab${tab === 'scopri' ? ' left-nav-panel__tab--active' : ''}`}
