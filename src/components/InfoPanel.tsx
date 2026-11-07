@@ -267,7 +267,6 @@ async function fetchWikiImages(slug: string, lang: string): Promise<string[]> {
 
 export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName }: Props) {
   const [activeTab,    setActiveTab]    = useState<'info' | 'media'>('info');
-  const [minimized,    setMinimized]    = useState(false);
   const [mediaImages,  setMediaImages]  = useState<string[]>([]);
   const [mediaLoading, setMediaLoading] = useState(false);
   const [recalled,     setRecalled]     = useState<HistoricalEvent | null>(null);
@@ -301,7 +300,6 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
   useEffect(() => {
     if (event) {
       setRecalled(null);
-      setMinimized(false);
       setDockMode('anchored');
       setVisible(false);
       requestAnimationFrame(() => requestAnimationFrame(() => setVisible(true)));
@@ -496,17 +494,17 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
             <button
               className="info-panel__icon-btn"
               onClick={undock}
-              title={locale === 'it' ? 'Sblocca pannello' : 'Undock panel'}
-            >⊡</button>
+              title={locale === 'it' ? 'Sgancia pannello' : 'Undock panel'}
+            >⊞</button>
           ) : (
             <button
               className="info-panel__icon-btn"
               onClick={() => { setDockMode('anchored'); setPos(null); }}
               title={locale === 'it' ? 'Ancora a destra' : 'Dock to right'}
-            >⊟</button>
+            >⊢</button>
           )}
           {/* TTS */}
-          {window.speechSynthesis && !minimized && (
+          {window.speechSynthesis && (
             <button
               className={`info-panel__icon-btn${speaking ? ' tts-active' : ''}`}
               onClick={() => {
@@ -516,21 +514,12 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
                   locale,
                 );
               }}
-              title={speaking ? 'Ferma lettura' : 'Leggi ad alta voce'}
+              title={speaking ? (locale === 'it' ? 'Ferma lettura' : 'Stop reading') : (locale === 'it' ? 'Leggi ad alta voce' : 'Read aloud')}
               aria-label="Text-to-speech"
             >
               {speaking ? '⏹' : '🔊'}
             </button>
           )}
-          {/* Minimizza */}
-          <button
-            className="info-panel__icon-btn"
-            onClick={() => setMinimized(v => !v)}
-            aria-label={minimized ? 'Espandi' : 'Minimizza'}
-            title={minimized ? (locale === 'it' ? 'Espandi' : 'Expand') : (locale === 'it' ? 'Minimizza' : 'Minimize')}
-          >
-            {minimized ? '▲' : '▬'}
-          </button>
           {/* Espandi (solo float) */}
           {dockMode === 'float' && (
             <button
@@ -548,13 +537,14 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
           <button
             className="info-panel__icon-btn"
             onClick={closeWithAnim}
+            title={locale === 'it' ? 'Chiudi pannello' : 'Close panel'}
             aria-label="Chiudi"
-          >×</button>
+          >✕</button>
         </div>
       </div>
 
       {/* meta + tabs */}
-      {!minimized && <div className="info-panel__scroll">
+      <div className="info-panel__scroll">
         <div className="info-panel__meta">
           <h2 className="info-panel__title">{event.title}</h2>
           <div className="info-panel__year">{formatYear(event.year)}</div>
@@ -635,10 +625,10 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
             </p>
           </div>
         )}
-      </div>}
+      </div>
 
       {/* Resize handles su tutti i bordi/angoli (solo float) */}
-      {dockMode === 'float' && !minimized && (
+      {dockMode === 'float' && (
         <>
           <div className="ip__resize ip__resize--n"  onMouseDown={e => onResizeMouseDown(e, 'n')} />
           <div className="ip__resize ip__resize--s"  onMouseDown={e => onResizeMouseDown(e, 's')} />
@@ -658,7 +648,7 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
     return (
       <div
         ref={panelRef}
-        className={`info-panel info-panel--anchored${visible ? ' info-panel--visible' : ''}${minimized ? ' info-panel--minimized' : ''}`}
+        className={`info-panel info-panel--anchored${visible ? ' info-panel--visible' : ''}`}
         style={{ width: anchorWidth }}
       >
         <div className="info-panel__left-resize" onMouseDown={onLeftResizeDown} />
@@ -672,12 +662,12 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
   return (
     <div
       ref={panelRef}
-      className={`info-panel info-panel--float${minimized ? ' info-panel--minimized' : ''}`}
+      className="info-panel info-panel--float"
       style={{
         left:   resolvedPos.x,
         top:    resolvedPos.y,
         width:  size.w,
-        height: minimized ? 38 : size.h,
+        height: size.h,
       }}
     >
       {panelContent}
