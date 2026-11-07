@@ -152,7 +152,7 @@
     "lng": 37.6173,
     "category": "storia",
     "description": "Dal 1928 Stalin lancia i Piani Quinquennali: l'industrializzazione forzata dell'URSS trasforma in 20 anni un paese agricolo in potenza industriale. Il prezzo: la collettivizzazione forzata dell'agricoltura, l'Holodomor (carestia ucraina, 3-7 milioni di morti), le purghe del Grande Terrore (750.000 fucilati). L'URSS diventa la seconda potenza mondiale.",
-    "wikipediaSlug": "Five-year_plans_for_the_national_economy_of_the_Soviet_Union",
+    "wikipediaSlug": "Stalin",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -200,7 +200,7 @@
     "lng": 104.1954,
     "category": "storia",
     "description": "Da ottobre 1934 a ottobre 1935 la Prima Armata Rossa di Mao Zedong percorre 9.000 km attraverso le montagne della Cina per sfuggire all'esercito nazionalista di Chiang Kai-shek. Partono in 90.000, arrivano in 10.000. La Lunga Marcia è il mito fondante del Partito Comunista Cinese — Mao emerge come leader indiscusso.",
-    "wikipediaSlug": "Long_March",
+    "wikipediaSlug": "Lunga_marcia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -236,7 +236,7 @@
     "lng": 4.884,
     "category": "storia",
     "description": "Il 4 agosto 1944 la polizia tedesca scopre il nascondiglio sul retro (Achterhuis) dove Anne Frank si nasconde con la famiglia da 25 mesi ad Amsterdam. Anne muore a Bergen-Belsen nel febbraio 1945 — 3 mesi prima della fine della guerra. Il padre Otto pubblica il Diario nel 1947: 35 milioni di copie in 70 lingue — la testimonianza più letta dell'Olocausto.",
-    "wikipediaSlug": "Anne_Frank",
+    "wikipediaSlug": "Anna_Frank",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -248,7 +248,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Il 6 ottobre 1924 nasce l'URI (Unione Radiofonica Italiana, poi EIAR) — la radio italiana. Mussolini capisce subito il potenziale: dal 1924 al 1943 la radio è il principale strumento di propaganda fascista. I discorsi dal balcone di Palazzo Venezia vengono trasmessi in tutto il paese. La radio trasforma la politica del '900: Hitler, Stalin, Roosevelt ne fanno lo stesso uso.",
-    "wikipediaSlug": "EIAR",
+    "wikipediaSlug": "Ente_Italiano_per_le_Audizioni_Radiofoniche",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -284,7 +284,7 @@
     "lng": 3.0588,
     "category": "arte",
     "description": "Albert Camus pubblica Lo Straniero nel 1942 ad Algeri: Meursault uccide un arabo sulla spiaggia senza ragione apparente e non mostra emozioni al processo né alla condanna a morte. L'assurdo come condizione fondamentale dell'esistenza umana. Con Il Mito di Sisifo — dello stesso anno — Camus fonda l'Esistenzialismo dell'assurdo. Nobel 1957.",
-    "wikipediaSlug": "The_Stranger_(Camus)",
+    "wikipediaSlug": "Albert_Camus",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -488,7 +488,7 @@
     "lng": 13.405,
     "category": "storia",
     "description": "Il 19 gennaio 1917 il ministro degli esteri tedesco Zimmermann invia un telegramma segreto al Messico: se gli USA entrano in guerra, il Messico deve attaccarli in cambio di Texas, New Mexico e Arizona. I britannici intercettano e decodificano il messaggio. Pubblicato dai giornali americani in marzo, scatena l'indignazione che spinge il Congresso a dichiarare guerra alla Germania.",
-    "wikipediaSlug": "Zimmermann_Telegram",
+    "wikipediaSlug": "Zimmermann_telegram",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -524,7 +524,7 @@
     "lng": 3.2881,
     "category": "storia",
     "description": "Il 21 marzo 1918 Ludendorff lancia l'Operazione Michael: tattiche di infiltrazione (sturmtruppen), bombe a gas, attacchi su punti deboli. I tedeschi avanzano 60 km — il massimo avanzamento sul fronte occidentale in anni. Ma le riserve americane arrivano in massa, la logistica tedesca si esaurisce. A luglio inizia la controffensiva alleata che porterà all'armistizio di novembre.",
-    "wikipediaSlug": "Spring_Offensive",
+    "wikipediaSlug": "Spring_offensive",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -668,7 +668,7 @@
     "lng": 13.405,
     "category": "storia",
     "description": "Il 9-10 novembre 1938 le SA e le SS organizzano un pogrom sistematico in tutta la Germania: 7.500 negozi ebraici distrutti, 1.400 sinagoghe incendiate, 91 ebrei uccisi, 30.000 arrestati. La 'Notte dei Cristalli' (Kristallnacht) prende il nome dai vetri delle vetrine frantumati. È il segnale che la persecuzione ha abbandonato il campo legale per la violenza fisica di massa.",
-    "wikipediaSlug": "Kristallnacht",
+    "wikipediaSlug": "Notte_dei_cristalli",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -800,7 +800,7 @@
     "lng": 9.1866,
     "category": "storia",
     "description": "Nel 1919-1920 il 'Biennio Rosso' scuote l'Italia: scioperi generalizzati, occupazioni delle fabbriche a Torino e Milano, contadini che occupano le terre. I lavoratori issano la bandiera rossa nelle fabbriche FIAT. Il movimento non riesce a trasformarsi in rivoluzione — ma spaventa la borghesia e gli industriali che finanzieranno il fascismo come risposta. Gramsci fonda l'Ordine Nuovo.",
-    "wikipediaSlug": "Biennio_rosso",
+    "wikipediaSlug": "Biennio_Rosso",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1412,7 +1412,7 @@
     "lng": -77.0364,
     "category": "storia",
     "description": "L'11 marzo 1941 il Congresso americano approva il Lend-Lease Act: gli USA possono prestare o affittare armi e materiali alla Gran Bretagna senza richiedere pagamento immediato. Roosevelt lo paragona a prestare il tubo dell'acqua al vicino per spegnere un incendio. 50,1 miliardi di dollari di aiuti andranno a 38 paesi — inclusa l'URSS dopo il giugno 1941. Il Lend-Lease è decisivo per la sopravvivenza britannica.",
-    "wikipediaSlug": "Lend-Lease",
+    "wikipediaSlug": "Legge_degli_affitti_e_prestiti",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1652,7 +1652,7 @@
     "lng": 8.5417,
     "category": "scienza",
     "description": "Negli anni '20 Carl Gustav Jung, già allievo di Freud, sviluppa la sua psicologia analitica: inconscio collettivo (strato più profondo della psiche, condiviso dall'umanità), archetipi (figure universali come l'Ombra, l'Anima, il Sé), sincronicità. Jung studia mitologia comparata, alchimia, religioni orientali. La sua psicologia influenza la letteratura, il cinema, i moderni studi sulla spiritualità.",
-    "wikipediaSlug": "Carl_Jung",
+    "wikipediaSlug": "Carl_Gustav_Jung",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -2036,7 +2036,7 @@
     "lng": 21.0122,
     "category": "storia",
     "description": "La Blitzkrieg ('guerra lampo') è la tattica tedesca: concentrazione di carri armati (Panzer), supporto aereo (Stuka), fanteria motorizzata, coordinamento radio — sfonda un punto debole e avanza rapidamente in profondità senza fermarsi alle resistenze laterali. La Blitzkrieg distrugge la Polonia (1939), la Francia (1940), sfonda nell'URSS (1941). Solo il fallimento a Mosca e Stalingrado mostra i suoi limiti.",
-    "wikipediaSlug": "Blitzkrieg",
+    "wikipediaSlug": "Guerra_lampo",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2168,7 +2168,7 @@
     "lng": 23.7275,
     "category": "storia",
     "description": "Durante l'occupazione dell'Asse (1941-1944) la Grecia sviluppa una potente resistenza partigiana: ELAS (comunista) ed EDES (nazionalista). Ma i due movimenti combattono anche tra loro — preludio alla guerra civile greca (1944-1949). Gli Alleati sabotano il viadotto di Gorgopotamos (1942) tagliando i rifornimenti all'Africa di Rommel. La Grecia soffre una delle peggiori carestie d'Europa: 300.000 morti di fame nel 1941-42.",
-    "wikipediaSlug": "Greek_Resistance",
+    "wikipediaSlug": "Greek_resistance",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2300,7 +2300,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Mussolini è il primo politico europeo a capire il potere della radio e del cinema: discorsi amplificati nelle piazze, cinegiornali LUCE, fotografie costruite ad arte (il Duce senza cappello in segno di virilità, la mascella quadrata). L'EIAR trasmette i suoi discorsi in tutta Italia e nelle colonie. Mussolini inventa la leadership mediatica del XX secolo — lezione che Hitler, e dopo di lui tutti i demagoghi, impareranno.",
-    "wikipediaSlug": "Italian_Fascism",
+    "wikipediaSlug": "Italian_fascism",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2420,7 +2420,7 @@
     "lng": 15.9819,
     "category": "storia",
     "description": "Nel aprile 1941 la Germania e l'Italia smembrano la Jugoslavia: Croazia diventa stato fantoccio (NDH) guidato dagli Ustasha di Ante Pavelić. Gli Ustasha sterminano serbi, ebrei e rom con ferocia estrema: 320.000-340.000 serbi uccisi (alcuni storici stimano fino a 700.000). Jasenovac è il principale campo di sterminio ustasha — terzo per dimensioni in Europa dopo i campi nazisti.",
-    "wikipediaSlug": "Ustaše",
+    "wikipediaSlug": "Ustascia",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2684,7 +2684,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Il corporativismo fascista italiano è la terza via tra capitalismo e comunismo: sindacati e associazioni datoriali sono fusi in corporazioni controllate dallo Stato — 22 corporazioni coprono l'intera economia. In teoria il conflitto di classe è superato. In pratica le corporazioni sono strumento di controllo statale sull'economia. Il corporativismo fascista ispira (negativamente) molti regimi autoritari del periodo.",
-    "wikipediaSlug": "Italian_Fascism",
+    "wikipediaSlug": "Italian_fascism",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2900,7 +2900,7 @@
     "lng": 6.8652,
     "category": "storia",
     "description": "Negli anni '30 l'alpinismo conquista le ultime grandi pareti delle Alpi: la Nord dell'Eiger (1938, Heckmair-Harrer), la Nord delle Grandes Jorasses (1935), la Nord del Matterhorn (1931). Tra germanici e italiani nasce una competizione alpinistica nazionalistica — chi conquista queste ultime grandi problemi alpini dimostra la superiorità della razza. L'alpinismo come metafora politica del fascismo.",
-    "wikipediaSlug": "Nordwand",
+    "wikipediaSlug": "North_Face_-_Una_storia_vera",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3068,7 +3068,7 @@
     "lng": -118.3287,
     "category": "arte",
     "description": "Il 6 ottobre 1927 'Il Cantante di Jazz' di Warner Bros è il primo film sonoro commerciale di successo: Al Jolson canta 'You Ain't Heard Nothin' Yet'. Fine del cinema muto, inizio dell'era dei 'talkies'. Gli studi Hollywood — MGM, Paramount, Warner Bros, RKO, 20th Century Fox — producono 500+ film l'anno. Chaplin, Greta Garbo, Clark Gable, Humphrey Bogart: le star che creano il mito di Hollywood. Il cinema americano domina le schermi mondiali.",
-    "wikipediaSlug": "Jazz_Singer",
+    "wikipediaSlug": "Hollywood",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3080,7 +3080,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Nel 1925 l'Exposition Internationale des Arts Decoratifs a Parigi lancia l'Art Deco: geometrie audaci, materiali lussuosi (lacca, avorio, ebano), colori vividi, linee aerodinamiche. Il Chrysler Building di New York (1930), il Radio City Music Hall, i transatlantici France e Normandie: l'Art Deco è lo stile degli anni ruggenti e del jazz. Ma anche: i manifesti pubblicitari, i grattacieli, la moda di Chanel e Poiret. Decadenza elegante prima della Grande Depressione.",
-    "wikipediaSlug": "Art_Deco",
+    "wikipediaSlug": "Art_déco",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -3092,7 +3092,7 @@
     "lng": 13.405,
     "category": "arte",
     "description": "Il 31 agosto 1928 va in scena a Berlino 'L'Opera da Tre Soldi' di Bertolt Brecht e Kurt Weill: 'Mack the Knife', il successo mondiale che vuole smontare il teatro borghese. Brecht inventa il teatro epico: effetto di straniamento (Verfremdungseffekt) — il pubblico deve pensare, non identificarsi. 'Madre Courage', 'Vita di Galileo', 'Il Cerchio di Gesso del Caucaso': l'arte come critica del capitalismo. Brecht scappa dai nazisti nel 1933 — torna nella Germania Est dopo la guerra.",
-    "wikipediaSlug": "The_Threepenny_Opera",
+    "wikipediaSlug": "Bertolt_Brecht",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3104,7 +3104,7 @@
     "lng": -79.9959,
     "category": "scienza",
     "description": "Il 2 novembre 1920 la stazione KDKA di Pittsburgh trasmette i risultati delle elezioni presidenziali americane — prima trasmissione radiofonica regolare. Nel 1922 la BBC. Negli anni '30 la radio è il medium dominante: musica, news, intrattenimento in ogni casa. Roosevelt usa le 'fireside chats' (conversazioni al caminetto) per comunicare direttamente con gli americani durante la Grande Depressione. Hitler e Mussolini usano la radio per la propaganda. La radio crea la cultura di massa.",
-    "wikipediaSlug": "History_of_radio",
+    "wikipediaSlug": "Radio",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3200,7 +3200,7 @@
     "lng": -0.1278,
     "category": "arte",
     "description": "Nel 1922 T.S. Eliot pubblica 'The Waste Land' — 434 versi, 5 parti, 6 lingue, citazioni da Shakespeare a Dante a Upanishad: il poema modernista per eccellenza. 'April is the cruellest month.' La disperazione postbellica, la frammentazione della cultura occidentale, la fertilità spirituale perduta. Ezra Pound ha tagliato metà del manoscritto originale. Eliot — americano espatriato a Londra — vince il Nobel per la Letteratura nel 1948.",
-    "wikipediaSlug": "The_Waste_Land",
+    "wikipediaSlug": "T.S._Eliot",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3260,7 +3260,7 @@
     "lng": 32.8597,
     "category": "storia",
     "description": "Il 29 ottobre 1923 Mustafa Kemal Atatürk proclama la Repubblica di Turchia — dopo aver sconfitto le forze greche e la spartizione del paese voluta dalle potenze coloniali. Le riforme laiciste: alfabeto latino (1928, addio alfabeto arabo), istruzione pubblica laica, codice civile svizzero (poligamia abolita), voto alle donne (1934), abolizione del Califfato, cappello fedora al posto del fez. La Turchia moderna è la creazione di un solo uomo in 15 anni.",
-    "wikipediaSlug": "Atatürk",
+    "wikipediaSlug": "Mustafa_Kemal_Atatürk",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3272,7 +3272,7 @@
     "lng": 11.582,
     "category": "arte",
     "description": "Nel 1924 Thomas Mann pubblica 'La Montagna Incantata': il giovane Hans Castorp nel sanatorio di Davos diventa metafora dell'Europa alla vigilia della Grande Guerra — malata, isolata, incapace di agire. 'I Buddenbrook' (1901, Nobel 1929), 'Mario e il Mago' (1929 — parabola del fascismo), 'Dottor Faustus' (1947 — la Germania e il patto col diavolo). Mann è il grande testimone letterario del declino dell'Europa borghese.",
-    "wikipediaSlug": "The_Magic_Mountain",
+    "wikipediaSlug": "Thomas_Mann",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3320,7 +3320,7 @@
     "lng": 106.7,
     "category": "storia",
     "description": "Dal 16 ottobre 1934 al 22 ottobre 1935 l'Armata Rossa di Mao percorre 9.000 km attraverso le montagne della Cina per sfuggire all'accerchiamento nazionalista di Chiang Kai-shek. 100.000 partono; 8.000 arrivano. La Lunga Marcia leggendaria crea il mito del PCC: Mao Zedong emerge come leader indiscusso. La sopravvivenza nella marcia di 14 mesi diventa la fondazione ideologica del Partito Comunista Cinese al potere dal 1949.",
-    "wikipediaSlug": "Long_March",
+    "wikipediaSlug": "Lunga_marcia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3440,7 +3440,7 @@
     "lng": 8.5417,
     "category": "scienza",
     "description": "Nel 1916 Carl Gustav Jung pubblica i principi della psicologia analitica — separandosi definitivamente da Freud. L'inconscio collettivo (condiviso dall'umanità), gli archetipi (ombra, anima, animus, Sé), la sincronicità (eventi coincidenti senza causalità). Jung introduce i tipi psicologici (introversione/estroversione) — base del test MBTI. La psicologia junghiana influenza la cultura, la narrativa (Il Signore degli Anelli di Tolkien è piena di archetipi junghiani), il cinema.",
-    "wikipediaSlug": "Carl_Jung",
+    "wikipediaSlug": "Carl_Gustav_Jung",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3500,7 +3500,7 @@
     "lng": 0,
     "category": "scienza",
     "description": "Dal 1918 al 1920 la pandemia influenzale detta spagnola uccide tra 50 e 100 milioni di persone, piu della Prima Guerra Mondiale. Il virus colpisce soprattutto i giovani adulti. La Spagna e il paese che ne parla liberamente, da cui il nome. La guerra impedisce le misure sanitarie. E la piu letale pandemia della storia moderna dopo la Peste Nera.",
-    "wikipediaSlug": "1918_flu_pandemic",
+    "wikipediaSlug": "La_spagnola",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3536,7 +3536,7 @@
     "lng": -118.2437,
     "category": "arte",
     "description": "Negli anni Venti Hollywood diventa la capitale del cinema mondiale: Chaplin con la Febbre dell'Oro 1925, Keaton, Griffith. Il cinema muto poi sonoro con Il Cantante di Jazz 1927. Il sistema degli studios, le stelle, la mitologia hollywoodiana. Il cinema e l'arte del XX secolo, l'industria culturale dominante che forma l'immaginario globale.",
-    "wikipediaSlug": "Hollywood_Golden_Age",
+    "wikipediaSlug": "Hollywood",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3680,7 +3680,7 @@
     "lng": 4.8839,
     "category": "storia",
     "description": "Dal luglio 1942 la famiglia Frank si nasconde nell'Alloggio Segreto di Amsterdam per due anni: Anna, 13 anni, scrive il suo diario. Nel 1944 vengono scoperti e deportati. Anna Frank muore di tifo a Bergen-Belsen nel febbraio 1945, due mesi prima della liberazione. Il diario viene pubblicato dal padre Otto nel 1947: 30 milioni di copie, la testimonianza piu letta della Shoah.",
-    "wikipediaSlug": "Anne_Frank",
+    "wikipediaSlug": "Anna_Frank",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3740,7 +3740,7 @@
     "lng": -118.3287,
     "category": "arte",
     "description": "Negli anni Venti Hollywood diventa la capitale mondiale del cinema: Chaplin, Keaton, D.W. Griffith, Cecil B. DeMille. Il sonoro nel 1927 con Il Cantante di Jazz. La Grande Depressione porta il cinema di fuga: Garbo, Gable, Fred Astaire. Il codice Hays del 1930 censura il cinema americano per 30 anni. I grandi studios: MGM, Paramount, Warner, RKO controllano produzione, distribuzione, esercizio.",
-    "wikipediaSlug": "Golden_age_of_Hollywood",
+    "wikipediaSlug": "Hollywood",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3812,7 +3812,7 @@
     "lng": -0.1278,
     "category": "scienza",
     "description": "Il 2 novembre 1936 la BBC lancia il primo servizio televisivo regolare al mondo: 400 linee, trasmesso dall'Alexandra Palace di Londra. In 5000 case britanniche ci sono i primi televisori. La televisione si interrompe nel 1939 per la guerra. Al riavvio nel 1946 il numero di televisori è 12.000. Nel 1953 l'incoronazione di Elisabetta II: la prima grande copertura televisiva, 20 milioni di britannici guardano. La televisione trasforma la politica, il giornalismo, la cultura popolare.",
-    "wikipediaSlug": "BBC_Television_Service",
+    "wikipediaSlug": "BBC",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3860,7 +3860,7 @@
     "lng": 118.7969,
     "category": "storia",
     "description": "Nel dicembre 1937 le truppe giapponesi entrano a Nanchino capitale cinese: sei settimane di massacri sistematici, 100.000-300.000 morti civili, 20.000-80.000 stupri. Iris Chang: The Rape of Nanking pubblicato nel 1997. Il Giappone ancora oggi non riconosce pienamente il massacro nei libri di testo: ferita aperta nei rapporti sino-giapponesi. I tribunali internazionali di Tokyo (1946-1948) condannano i generali responsabili. La memoria come battaglia politica nell'Asia del XXI secolo.",
-    "wikipediaSlug": "Nanjing_massacre",
+    "wikipediaSlug": "Nanjing_Massacre",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4064,7 +4064,7 @@
     "lng": -0.1278,
     "category": "scienza",
     "description": "Nel 1935 Gerhard Domagk scopre il Prontosil, il primo sulfamidico: salva sua figlia dall'infezione streptococcica. Nobel 1939 (che i nazisti gli proibiscono di accettare). Roosevelt Jr. salvato dai sulfamidici nel 1936. I sulfamidici riducono la mortalità per polmonite dal 30% al 5% in pochi anni. Prima dei sulfamidici e degli antibiotici una ferita si infettava facilmente con esiti letali. La rivoluzione farmaceutica del XX secolo: da aspettativa di vita di 47 anni nel 1900 a 75 anni nel 2000.",
-    "wikipediaSlug": "Sulfonamide",
+    "wikipediaSlug": "Solfonammide",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -4148,7 +4148,7 @@
     "lng": -74.006,
     "category": "storia",
     "description": "Il 24 ottobre 1929 (Black Thursday) e il 29 ottobre (Black Tuesday) il crollo di Wall Street: il Dow Jones perde l'89% in 3 anni. 13 milioni di disoccupati negli USA nel 1933 (25%). Le banche falliscono, i risparmi evaporano, i prezzi agricoli crollano. La Dust Bowl nelle Grandi Pianure. I Grapes of Wrath di Steinbeck. Il New Deal di Roosevelt dal 1933. La Grande Depressione come causa del nazismo in Germania (Hitler eletto nel 1933 sulla crisi economica). La lezione: Keynes e la domanda aggregata.",
-    "wikipediaSlug": "Wall_Street_Crash_of_1929",
+    "wikipediaSlug": "Grande_depressione",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4160,7 +4160,7 @@
     "lng": -118.2437,
     "category": "arte",
     "description": "Nel 1941 Orson Welles dirige e interpreta Quarto Potere (Citizen Kane) a 25 anni: il profondeur di campo, i flashback non lineari, le angolazioni insolite, il sonoro diegetico. Il film più innovativo della storia del cinema. La storia di William Randolph Hearst come critica al potere mediatico. Welles è considerato arrogante, il film è sabotato dalla distribuzione. Solo col tempo diventa il film più importante della storia. Welles come il più grande cineasta della storia che non ha mai avuto controllo produttivo sui suoi film.",
-    "wikipediaSlug": "Citizen_Kane",
+    "wikipediaSlug": "Quarto_potere",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4580,7 +4580,7 @@
     "lng": 30.36,
     "category": "storia",
     "description": "Nicola II (1868-1918) è l'ultimo zar di Russia. La Domenica di Sangue (1905) e la disastrosa guerra russo-giapponese minano la sua autorità. Travolto dalla Prima Guerra Mondiale e dalla crisi interna, abdica il 15 marzo 1917. Il 17 luglio 1918 viene fucilato con la moglie Alexandra, le quattro figlie e il figlio Alexei dai bolscevichi a Ekaterinburg — fine della dinastia Romanov iniziata nel 1613. La Chiesa Ortodossa Russa li ha canonizzati come santi nel 2000.",
-    "wikipediaSlug": "Nicholas_II_of_Russia",
+    "wikipediaSlug": "Nicola_II",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4725,7 +4725,7 @@
     "category": "filosofia",
     "tipo": "opera",
     "description": "Il Tractatus Logico-Philosophicus di Ludwig Wittgenstein viene pubblicato nel 1921 in tedesco (Logisch-Philosophische Abhandlung) e nel 1922 in inglese con prefazione di Russell. L'opera, scritta in forma aforistica e numerata, sostiene la teoria raffigurativa del linguaggio: le proposizioni significative raffigurano fatti del mondo; ciò che non può essere detto può solo essere mostrato. La metafisica, l'etica e l'estetica ricadono nel dominio dell'indicibile. Il libro è considerato il manifesto del positivismo logico e uno dei testi filosofici più influenti del XX secolo.",
-    "wikipediaSlug": "Tractatus_Logico-Philosophicus",
+    "wikipediaSlug": "Tractatus_logico-philosophicus",
     "isCosmic": false
   },
   {
@@ -5037,7 +5037,7 @@
     "category": "sport",
     "tipo": "organizzazione",
     "description": "Fondata nel 1926, la SSC Napoli è una delle squadre di calcio più amate e popolari d'Italia. Grazie a Diego Armando Maradona vinse i primi due scudetti (1987, 1990) e la Coppa UEFA 1989. Il terzo scudetto arrivò nel 2023, primo dopo 33 anni, scatenando un'esultanza collettiva senza precedenti in tutto il Paese. Lo stadio San Paolo è stato rinominato Stadio Diego Armando Maradona nel 2020.",
-    "wikipediaSlug": "SSC_Napoli",
+    "wikipediaSlug": "Società_Sportiva_Calcio_Napoli",
     "isCosmic": false
   },
   {
@@ -5049,7 +5049,7 @@
     "category": "sport",
     "tipo": "organizzazione",
     "description": "Fondata nel 1927 dalla fusione di tre club romani, l'AS Roma è il principale club calcistico della capitale italiana con 3 scudetti e 9 Coppe Italia. Simbolo della romanità, ha avuto campioni come Falcão, Totti (che vi trascorse tutta la carriera), De Rossi, Bruno Conti. La finale di Coppa dei Campioni 1984 persa ai rigori contro il Liverpool è uno dei momenti più dolorosi della storia del club.",
-    "wikipediaSlug": "AS_Roma",
+    "wikipediaSlug": "Associazione_Sportiva_Roma",
     "isCosmic": false
   },
   {
@@ -5121,7 +5121,7 @@
     "category": "cosmo",
     "tipo": "scoperta",
     "description": "Nel 1925 Cecilia Payne-Gaposchkin (1900–1979) dimostrò nella sua tesi di dottorato ad Harvard che le stelle sono composte principalmente di idrogeno ed elio, non di metalli come si credeva. La sua scoperta fu inizialmente respinta dalla comunità scientifica maschile, ma fu in seguito riconosciuta come una delle più importanti del XX secolo. Otto Struve la definì \"la tesi di dottorato più brillante mai scritta in astronomia\". Aprì la strada all'astrofisica delle stelle e alla comprensione della nucleosintesi stellare.",
-    "wikipediaSlug": "Cecilia_Payne-Gaposchkin",
+    "wikipediaSlug": "Cecilia_Payne_Gaposchkin",
     "isCosmic": false
   },
   {
@@ -5372,7 +5372,7 @@
     "lng": 9.281,
     "category": "sport",
     "description": "Il 28 maggio 1922 viene inaugurato l'Autodromo Nazionale di Monza, vicino a Milano: costruito in soli 110 giorni con 3.500 operai, è ancora oggi uno dei circuiti più veloci della Formula 1. Il primo Gran Premio d'Italia si svolge qui il 10 settembre 1922. Monza è diventata la casa della Ferrari e della tifoseria italiana — i 'tifosi' del Tempio della Velocità. Il circuito cambia configurazione nel tempo ma mantiene i suoi rettilinei lunghissimi che permettono velocità medie superiori ai 260 km/h. La tragedia di Ayrton Senna a Imola 1994 si svolge su un altro autodromo, ma Monza rimane il cuore del motorsport italiano.",
-    "wikipediaSlug": "Autodromo_Nazionale_Monza",
+    "wikipediaSlug": "Autodromo_nazionale_di_Monza",
     "isCosmic": false,
     "tipo": "luogo"
   },
@@ -10842,7 +10842,7 @@
     "lng": -6.3322,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Jocelyn_Bell",
+    "wikipediaSlug": "Jocelyn_Bell_Burnell",
     "isCosmic": false
   },
   {
@@ -10998,7 +10998,7 @@
     "lng": -86.4692,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Margaret_Hamilton_(scienziata)",
+    "wikipediaSlug": "Margaret_Hamilton",
     "isCosmic": false
   },
   {
@@ -15679,7 +15679,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Dal 1961 al 1989, Berlino fu divisa dal Muro in Est (DDR, socialista) e Ovest (FRG, capitalista). La stessa lingua, le stesse famiglie, separate da 155 km di cemento armato e filo spinato: il simbolo supremo della Guerra Fredda.",
-    "wikipediaSlug": "Berlino_Divisa"
+    "wikipediaSlug": "Berlino_(disambigua)"
   },
   {
     "id": "vietnam-guerra-televisata",

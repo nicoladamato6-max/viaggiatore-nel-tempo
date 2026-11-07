@@ -45,7 +45,7 @@
     "lng": 0.1218,
     "category": "scienza",
     "description": "Il 28 febbraio 1953 James Watson e Francis Crick annunciano a Cambridge di aver scoperto la struttura a doppia elica del DNA. La scoperta, basata anche sui dati cristallografici di Rosalind Franklin, rivela il meccanismo della trasmissione genetica. È la scoperta biologica più importante della storia.",
-    "wikipediaSlug": "Discovery_of_the_structure_of_DNA",
+    "wikipediaSlug": "Watson_&_Crick",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/DNA_Structure%2BKey%2BLabelled.pn_NoBB.png/240px-DNA_Structure%2BKey%2BLabelled.pn_NoBB.png",
     "isCosmic": false,
     "tipo": "scoperta"
@@ -384,7 +384,7 @@
     "lng": 139.6503,
     "category": "storia",
     "description": "Il 15 agosto 1945 l'imperatore Hirohito annuncia via radio la resa del Giappone — prima volta che gli giapponesi sentono la voce del loro imperatore. Il 2 settembre 1945 la firma ufficiale avviene sulla corazzata USS Missouri nella Baia di Tokyo. La Seconda Guerra Mondiale è ufficialmente conclusa. 70-85 milioni di morti totali — il conflitto più distruttivo della storia umana.",
-    "wikipediaSlug": "Japanese_instrument_of_surrender",
+    "wikipediaSlug": "Japanese_Instrument_of_Surrender",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -660,7 +660,7 @@
     "lng": -77.0502,
     "category": "storia",
     "description": "Il 28 agosto 1963 Martin Luther King Jr. pronuncia il discorso 'I Have a Dream' davanti a 250.000 persone alla Marcia su Washington: 'Ho il sogno che i miei quattro bambini vivranno in una nazione dove non saranno giudicati per il colore della pelle ma per il contenuto del loro carattere.' Il discorso più famoso del XX secolo segna il culmine del Movimento per i Diritti Civili americano. King riceve il Nobel per la Pace nel 1964.",
-    "wikipediaSlug": "I_Have_a_Dream",
+    "wikipediaSlug": "I_have_a_dream",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -720,7 +720,7 @@
     "lng": -74.2832,
     "category": "musica",
     "description": "Dal 15 al 18 agosto 1969 a Bethel (New York) si svolge il Festival di Woodstock: 400.000 persone, 32 artisti tra cui Jimi Hendrix, Janis Joplin, The Who, Jefferson Airplane, Crosby Stills Nash & Young. Tre giorni di musica, fango, droghe e utopia hippie. Woodstock è il simbolo della controcultura anni '60 — la promessa di un mondo alternativo. Due mesi dopo, Altamont chiuderà quella stagione.",
-    "wikipediaSlug": "Woodstock",
+    "wikipediaSlug": "Festival_di_Woodstock",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1236,7 +1236,7 @@
     "lng": -122.4194,
     "category": "scienza",
     "description": "Nel giugno 1981 il CDC americano segnala i primi casi di un'immunodeficienza misteriosa in uomini gay a San Francisco e New York — sarà chiamata AIDS (1982). Il virus HIV (scoperto da Montagnier e Gallo, 1983-84) si diffonde globalmente: 36 milioni di morti in 40 anni. La risposta lenta dei governi (AIDS = malattia gay) e i tagli ai fondi sanitari di Reagan ritardano la ricerca. Il cocktail antiretrovirale arriverà nel 1996.",
-    "wikipediaSlug": "HIV/AIDS",
+    "wikipediaSlug": "AIDS",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1284,7 +1284,7 @@
     "lng": -3.1883,
     "category": "scienza",
     "description": "Il 22 febbraio 1997 il Roslin Institute di Edimburgo annuncia la clonazione di Dolly, la prima pecora clonata da una cellula adulta somatica. La clonazione di Dolly dimostra che una cellula differenziata adulta può essere ri-programmata per creare un organismo completo. Il dibattito etico si accende: si può clonare l'essere umano? Dolly vivrà 6 anni e merrà nel 2003. Nasce la bioetica come disciplina accademica urgente.",
-    "wikipediaSlug": "Dolly_the_sheep",
+    "wikipediaSlug": "Dolly_(pecora)",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1416,7 +1416,7 @@
     "lng": -3.3547,
     "category": "storia",
     "description": "Il 21 dicembre 1988 una bomba esplode sul volo Pan Am 103 sopra Lockerbie (Scozia): 243 passeggeri, 16 equipaggio e 11 residenti morti — 270 vittime totali. I detriti del 747 si riversano sul villaggio scozzese. L'attentato — commissionato dalla Libia di Gheddafi — è la più grande strage terroristica britannica fino all'11 settembre. Il Libia pagherà 2,7 miliardi di risarcimento nel 2003.",
-    "wikipediaSlug": "Lockerbie_bombing",
+    "wikipediaSlug": "Lockerbie",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1476,7 +1476,7 @@
     "lng": -73.9442,
     "category": "musica",
     "description": "Il 16 settembre 1979 la Sugarhill Gang pubblica 'Rapper's Delight' — primo disco hip hop a successo commerciale. L'hip hop nasce nei block party del Bronx degli anni '70 (DJ Kool Herc, Grandmaster Flash). Negli anni '80 diventa linguaggio della protesta urbana nera: Public Enemy, N.W.A. ('Fuck tha Police'). Tupac, Biggie, Jay-Z, Eminem negli anni '90. Oggi l'hip hop è il genere più streamato del mondo.",
-    "wikipediaSlug": "History_of_hip_hop_music",
+    "wikipediaSlug": "Hip_hop",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1500,7 +1500,7 @@
     "lng": -118.2437,
     "category": "musica",
     "description": "Il 30 novembre 1982 Michael Jackson pubblica 'Thriller' — l'album più venduto della storia (66 milioni di copie). 'Billie Jean', 'Beat It', 'Thriller' con il video di 14 minuti diretto da John Landis. Il Moonwalk, i sequin gloves, la giacca rossa. Jackson trasforma il video musicale in forma d'arte (MTV nasce nel 1981). È l'ultimo artista a vendere decine di milioni di album fisici in tutto il mondo.",
-    "wikipediaSlug": "Thriller_(Michael_Jackson_album)",
+    "wikipediaSlug": "Michael_Jackson",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1524,7 +1524,7 @@
     "lng": 12.4964,
     "category": "arte",
     "description": "Il 5 febbraio 1960 'La Dolce Vita' di Federico Fellini esce nelle sale italiane — la critica ai jet set romani, Anita Ekberg nella Fontana di Trevi, Mastroianni come il giornalista cinico. Il film provoca scandali (la chiesa protesta), vince la Palma d'Oro a Cannes, batte tutti i record d'incasso. Fellini, insieme a Antonioni, Visconti, Pasolini, porta il cinema italiano all'apice mondiale degli anni '60.",
-    "wikipediaSlug": "La_Dolce_Vita",
+    "wikipediaSlug": "La_dolce_vita",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1740,7 +1740,7 @@
     "lng": -0.1278,
     "category": "arte",
     "description": "Il 2 aprile 1968 Stanley Kubrick presenta '2001: Odissea nello Spazio' — il film di fantascienza più influente della storia. HAL 9000, il monolite nero, il viaggio psichedelico, la scena dell'osso/Discovery One: nessun dialogo per i primi 25 minuti, la musica di Strauss e Ligeti. Kubrick anticipa AI, colonie spaziali, la solitudine dell'uomo nel cosmos. 'Devo averlo visto almeno 50 volte' — Douglas Trumbull (effetti speciali). Il film che cambia il cinema e ispira Star Wars.",
-    "wikipediaSlug": "2001:_A_Space_Odyssey_(film)",
+    "wikipediaSlug": "2001:_Odissea_nello_spazio",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1788,7 +1788,7 @@
     "lng": -86.8126,
     "category": "storia",
     "description": "Nel 1979 i Sandinisti rovesciano il dittatore Somoza in Nicaragua. Reagan finanzia la guerriglia anti-sandinista (i Contras) con denaro ottenuto vendendo armi all'Iran (illegalmente). Lo scandalo Iran-Contra (1986): la Casa Bianca ha violato la legge (Boland Amendment). Oliver North come capro espiatorio. Il Nicaragua dei Sandinisti è un micro-teatro della Guerra Fredda in America Centrale. Ortega vince le elezioni nel 2006 — diventa anch'egli un dittatore.",
-    "wikipediaSlug": "Iran–Contra_affair",
+    "wikipediaSlug": "Nicaragua",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1944,7 +1944,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Nel 1968 il mondo brucia: Parigi maggio con gli studenti che quasi rovesciano de Gaulle, Praga la primavera soffocata dai carri armati sovietici, assassini di King e Kennedy negli USA, la Tet Offensive in Vietnam. Una generazione si ribella all'ordine del mondo. Il movimento studentesco, il femminismo, i movimenti per i diritti civili cambiano la cultura occidentale.",
-    "wikipediaSlug": "World_in_1968",
+    "wikipediaSlug": "Il_Sessantotto",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2004,7 +2004,7 @@
     "lng": -73.9496,
     "category": "musica",
     "description": "Nel 1979 la Sugar Hill Gang pubblica Rapper's Delight, il primo singolo hip hop a successo commerciale. L'hip hop nasce nel Bronx anni Settanta: DJ Kool Herc, Afrika Bambaataa, Grandmaster Flash. Rap, break dance, graffiti, DJing. Negli anni Novanta il gangsta rap di Tupac e Biggie. Oggi l'hip hop e il genere musicale piu ascoltato al mondo.",
-    "wikipediaSlug": "Hip_hop_music",
+    "wikipediaSlug": "Hip_hop",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2196,7 +2196,7 @@
     "lng": -0.1278,
     "category": "musica",
     "description": "Alla fine degli anni Ottanta la musica house di Chicago e la techno di Detroit attraversano l'Atlantico e creano la cultura rave britannica degli anni Novanta: ibiza, raves illegali nelle campagne inglesi, la smiley face, l'ecstasy. Daft Punk, Aphex Twin, Chemical Brothers. La musica elettronica diventa il genere dominante della vita notturna europea.",
-    "wikipediaSlug": "Rave_culture",
+    "wikipediaSlug": "Musica_elettronica",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2256,7 +2256,7 @@
     "lng": -122.4194,
     "category": "scienza",
     "description": "Nel 2006 Jack Dorsey lancia Twitter con il primo tweet: just setting up my twttr. In 10 anni Twitter cambia il giornalismo, la politica, il linguaggio. Obama usa Twitter nelle elezioni 2008, le Primavere Arabe si organizzano su Twitter, Trump governa su Twitter. Elon Musk compra Twitter nel 2022 per 44 miliardi e lo rinomina X.",
-    "wikipediaSlug": "Twitter",
+    "wikipediaSlug": "X_(social_network)",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -2388,7 +2388,7 @@
     "lng": 114.1694,
     "category": "storia",
     "description": "Nel giugno 2019 milioni di hongkonghesi scendono in piazza contro la legge di estradizione verso la Cina: le proteste dell'ombrello. Pechino risponde nel giugno 2020 con la Legge sulla Sicurezza Nazionale che criminalizza la dissidenza. I leader del movimento vengono arrestati. Hong Kong perde l'autonomia promessa per il 2047. Un paese, due sistemi finisce prima del previsto.",
-    "wikipediaSlug": "2019–20_Hong_Kong_protests",
+    "wikipediaSlug": "Hong_Kong",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2400,7 +2400,7 @@
     "lng": 38.2623,
     "category": "storia",
     "description": "Dal novembre 2020 al novembre 2022 la guerra in Tigray tra il governo etiope di Abiy Ahmed e il Tigray People's Liberation Front uccide tra 300.000 e 500.000 persone: uno dei conflitti piu sanguinosi del XXI secolo, quasi ignorato dai media occidentali. Abiy Ahmed aveva vinto il Nobel per la Pace nel 2019 per l'accordo con l'Eritrea. La complessita dell'Africa moderna.",
-    "wikipediaSlug": "Tigray_War",
+    "wikipediaSlug": "Tigray_war",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2784,7 +2784,7 @@
     "lng": -73.8648,
     "category": "musica",
     "description": "L'11 agosto 1973 DJ Kool Herc a una festa al 1520 di Sedgwick Avenue nel Bronx inventa il breakbeat: isola il break strumentale dei dischi allungandolo con due piatti. Nasce l'hip hop: rap, DJing, breakdancing, graffiti. Grandmaster Flash, Afrika Bambaataa, Run-DMC, Public Enemy, Tupac, Biggie. Nel 2023 il hip hop compie 50 anni: e il genere musicale piu ascoltato al mondo.",
-    "wikipediaSlug": "Hip_hop_music",
+    "wikipediaSlug": "Hip_hop",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2808,7 +2808,7 @@
     "lng": -3.1883,
     "category": "scienza",
     "description": "Il 5 luglio 1996 nasce Dolly al Roslin Institute di Edimburgo: la prima pecora clonata da una cellula adulta. La notizia viene annunciata nel febbraio 1997: il mondo scopre che la clonazione dei mammiferi adulti e possibile. Dolly vive 6 anni e ha 6 agnelli normali. L'ONU vieta la clonazione umana riproduttiva nel 2005. Dolly apre il dibattito bioetico sulla clonazione e sulle cellule staminali.",
-    "wikipediaSlug": "Dolly_the_sheep",
+    "wikipediaSlug": "Dolly_(pecora)",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -2988,7 +2988,7 @@
     "lng": -0.1278,
     "category": "scienza",
     "description": "Nel dicembre 2023 la FDA approva Casgevy: il primo trattamento basato su CRISPR per la drepanocitosi e la talassemia beta. Jennifer Doudna e Emmanuelle Charpentier Nobel 2020 per aver sviluppato CRISPR-Cas9 nel 2012. Il gene editing medico passa dalla teoria alla clinica: il sogno di correggere i geni difettosi nelle malattie ereditarie diventa realta. Il prezzo iniziale e 2,2 milioni di dollari per paziente.",
-    "wikipediaSlug": "Casgevy",
+    "wikipediaSlug": "Exagamglogene_autotemcel",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3120,7 +3120,7 @@
     "lng": 141.0329,
     "category": "scienza",
     "description": "L'11 marzo 2011 il terremoto e lo tsunami piu forte nella storia del Giappone colpiscono Fukushima Daiichi: tre reattori in fusione. 154.000 evacuati, la zona di esclusione di 20 km. Fukushima accelera il phase-out nucleare in Germania e Giappone. Il paradosso: il carbone uccide 800.000 persone l'anno nel mondo, il nucleare in 60 anni di storia ha ucciso circa 4.000. La paura irrazionale vs i dati.",
-    "wikipediaSlug": "Fukushima_nuclear_disaster",
+    "wikipediaSlug": "Fukushima",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3276,7 +3276,7 @@
     "lng": 68.7713,
     "category": "storia",
     "description": "Nel maggio 1998 India e Pakistan testano bombe atomiche in rapida successione: la polveriera nucleare dell'Asia del Sud. Due paesi con 2,7 miliardi di abitanti totali, conflitti territoriali sul Kashmir, due eserciti nucleari. Le tre guerre India-Pakistan dal 1947 al 1971. Il test Pokhran-II dell'India, poi le 5 bombe pakistane. La dottrina della distruzione mutua assicurata MAD si applica ora in Asia meridionale.",
-    "wikipediaSlug": "1998_Indian_nuclear_tests",
+    "wikipediaSlug": "India–Pakistan_relations",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3324,7 +3324,7 @@
     "lng": 87.6177,
     "category": "storia",
     "description": "Dal 2017 la Cina internando circa 1 milione di uiguri musulmani nei campi di rieducazione dello Xinjiang: sorveglianza totale, divieto di pratiche religiose, assimilazione forzata. La Cina nega il genocidio culturale. I Paesi Bassi e gli USA lo riconoscono come genocidio. Il silenzio di molti paesi musulmani: troppi interessi economici con la Cina. Lo Xinjiang come caso test dei limiti della diplomazia dei diritti umani.",
-    "wikipediaSlug": "Xinjiang_internment_camps",
+    "wikipediaSlug": "Xinjiang",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3828,7 +3828,7 @@
     "lng": 0.1218,
     "category": "scienza",
     "description": "Il 25 aprile 1953 Watson e Crick pubblicano su Nature la struttura del DNA: la doppia elica. Franklin Rosalind aveva ottenuto la Foto 51 del DNA con la cristallografia X: Watson e Crick la usano senza chiederle il permesso. Nobel 1962 a Watson, Crick, Wilkins: Franklin era morta nel 1958. La struttura del DNA spiega come i geni si replicano. La biologia molecolare nasce nel 1953: il sequenziamento del DNA, CRISPR, la medicina genomica. La scoperta più importante della biologia del XX secolo.",
-    "wikipediaSlug": "Molecular_structure_of_nucleic_acids",
+    "wikipediaSlug": "Watson-Crick_helix",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3852,7 +3852,7 @@
     "lng": -145,
     "category": "scienza",
     "description": "Nel 1997 il velista Charles Moore scopre il Great Pacific Garbage Patch: una zona di plastica concentrata nell'Oceano Pacifico grande due volte il Texas. 8 milioni di tonnellate di plastica entrano ogni anno negli oceani. I microplastici trovati nell'Artico, nel fondo delle Fosse Marianne, nel sangue umano. I sacchetti di plastica proibiti in 127 paesi. La balena spiaggiata con 40 kg di plastica nello stomaco. Plastica prodotta: 400 milioni di tonnellate all'anno, il 91% non viene riciclato.",
-    "wikipediaSlug": "Great_Pacific_garbage_patch",
+    "wikipediaSlug": "Great_Pacific_Garbage_Patch",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3912,7 +3912,7 @@
     "lng": -73.9442,
     "category": "musica",
     "description": "L'11 agosto 1973 DJ Kool Herc organizza una festa nel Bronx a New York: il breakbeating, mescolare i dischi per estendere il break, nasce l'hip hop. Grandmaster Flash, Afrika Bambaataa, Run-DMC. La Sugarhill Gang nel 1979: Rapper's Delight il primo singolo hip hop commerciale. NWA e il gangsta rap, Tupac, Biggie. Jay-Z come imprenditore. Il rap in italiano, francese, arabo, hindi, giapponese. Nel 2023 l'hip hop è il genere musicale più ascoltato al mondo: 50 anni dal Bronx.",
-    "wikipediaSlug": "History_of_hip_hop_music",
+    "wikipediaSlug": "Hip_hop",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4152,7 +4152,7 @@
     "lng": -77.0438,
     "category": "storia",
     "description": "Nel giugno 2013 Edward Snowden rivela al Guardian e al Washington Post PRISM: la NSA americana sorveglia sistematicamente le comunicazioni digitali di milioni di persone in tutto il mondo, incluse le chiamate dei leader europei. Snowden in esilio a Mosca. Il dibattito sulla privacy nell'era digitale: la sicurezza contro la libertà. Il GDPR europeo del 2018 come risposta normativa. La sorveglianza di massa come condizione strutturale dell'era digitale: siamo tutti sorvegliati.",
-    "wikipediaSlug": "PRISM",
+    "wikipediaSlug": "Prism",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4416,7 +4416,7 @@
     "lng": 114.1694,
     "category": "storia",
     "description": "Il 30 giugno/1 luglio 1997 a mezzanotte la bandiera britannica viene ammainata a Hong Kong: la colonia torna alla Cina dopo 156 anni. La formula di Deng Xiaoping: un paese, due sistemi. Hong Kong mantiene autonomia economica e politica fino al 2047. Le proteste pro-democrazia del 2014 (gli ombrelli), le manifestazioni del 2019-2020 contro la legge di estradizione. La National Security Law del 2020: la Cina riduce drasticamente le libertà di Hong Kong. Il sistema a due velocità si restringe.",
-    "wikipediaSlug": "Transfer_of_sovereignty_over_Hong_Kong",
+    "wikipediaSlug": "Trasferimento_di_sovranità_su_Hong_Kong",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4620,7 +4620,7 @@
     "lng": 77.209,
     "category": "storia",
     "description": "Il 14-15 agosto 1947 l'India e il Pakistan diventano indipendenti dalla Gran Bretagna: la partizione lungo linee religiose (musulmani in Pakistan, indù in India). Il piano Mountbatten. 14-20 milioni di profughi nel più grande trasferimento di popolazione della storia. 200.000-2 milioni di morti nelle violenze settarie. Gandhi assassinato il 30 gennaio 1948 da un estremista indù. Il Kashmir come la disputa irrisolta ancora oggi tra India e Pakistan nucleari.",
-    "wikipediaSlug": "Partition_of_India",
+    "wikipediaSlug": "L'indipendenza_e_la_partizione_dell'India",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -4704,7 +4704,7 @@
     "lng": 0.1218,
     "category": "scienza",
     "description": "Il 25 aprile 1953 James Watson e Francis Crick pubblicano su Nature la struttura a doppia elica del DNA: il codice della vita. La scoperta basata anche sui dati cristallografici di Rosalind Franklin (non accreditata, morirà prima del Nobel). Il DNA come la sequenza di 4 basi (A, T, G, C) che codificano le proteine. Il Progetto Genoma Umano completa la sequenza nel 2003. CRISPR come forbici molecolari dal 2012. La rivoluzione biotecnologica come la più importante del XXI secolo.",
-    "wikipediaSlug": "Nucleic_acid_double_helix",
+    "wikipediaSlug": "La_doppia_elica",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -4728,7 +4728,7 @@
     "lng": -118.2437,
     "category": "storia",
     "description": "Nel ottobre 2017 le accuse contro Harvey Weinstein innescano #MeToo (hashtag di Tarana Burke del 2006): milioni di donne in tutto il mondo condividono storie di molestie e abusi. Weinstein, Cosby, Spacey, Ailes: figure di potere cadono. La legge sulla parità di trattamento rivista in decine di paesi. Il dibattito su dove finisce la seduzione e inizia il molestare. In Francia Emma Seigle difende la libertà di corteggiamento (lettre des cent). #MeToo come il movimento femminista più globale della storia.",
-    "wikipediaSlug": "Me_Too_movement",
+    "wikipediaSlug": "Movimento_MeToo",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4812,7 +4812,7 @@
     "lng": 116.4074,
     "category": "storia",
     "description": "Nel dicembre 1978 Deng Xiaoping lancia la Politica di Riforma e Apertura: le Zone Economiche Speciali (Shenzhen), il mercato agricolo, l'apertura agli investimenti esteri. Il PIL cinese cresce dell'8-10% per 30 anni. 800 milioni di persone tirate fuori dalla povertà. La più grande crescita economica nella storia umana. Arricchirsi è glorioso (Deng). Tiananmen nel 1989: la repressione del movimento democratico. La Cina come il modello di sviluppo economico senza libertà politica.",
-    "wikipediaSlug": "Chinese_economic_reform",
+    "wikipediaSlug": "Deng_Xiaoping",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4848,7 +4848,7 @@
     "lng": -0.1278,
     "category": "storia",
     "description": "Il 23 giugno 2016 il 51,9% dei britannici vota Leave nel referendum sull'UE: il primo paese a lasciare l'Unione Europea. David Cameron si dimette. Theresa May, poi Boris Johnson gestiscono la trattativa. Il 31 gennaio 2020 il Regno Unito esce formalmente dall'UE. I confini all'importazione, i visti per i musicisti europei, la frontiera nordirlandese. La pesca, il passaporto, il mercato finanziario. 5 anni dopo: il PIL britannico è sotto le previsioni pre-Brexit. La Brexit come il più grande esperimento di de-globalizzazione volontaria.",
-    "wikipediaSlug": "Brexit",
+    "wikipediaSlug": "Uscita_del_Regno_Unito_dall'Unione_europea",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -5304,7 +5304,7 @@
     "lng": -122.0338,
     "category": "scienza",
     "description": "Il 9 gennaio 2007 Steve Jobs presenta l'iPhone: un iPod, un telefono e un comunicatore internet. La schermata touch come interfaccia. L'App Store nel 2008 come il mercato delle applicazioni. In 10 anni lo smartphone diventa il dispositivo più diffuso nella storia: 6,8 miliardi di unità nel 2023. Il mobile internet come la principale modalità di accesso alla rete per 5 miliardi di persone. WhatsApp, Instagram, TikTok, Uber, Airbnb: l'economia degli smartphone che trasforma ogni industria.",
-    "wikipediaSlug": "iPhone",
+    "wikipediaSlug": "IPhone",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -5400,7 +5400,7 @@
     "lng": -74.0445,
     "category": "scienza",
     "description": "Nel dicembre 2020 i vaccini Pfizer-BioNTech e Moderna contro il COVID-19 ricevono l'autorizzazione d'emergenza: i primi vaccini mRNA nella storia. Katalin Karikó e Drew Weissman che sviluppano la tecnologia dell'mRNA modificato per 20 anni senza finanziamenti. Da scoperta a vaccino in 11 mesi: 10 anni normalmente. 5,5 miliardi di vaccinazioni in un anno. Nobel per la Medicina 2023 a Karikó e Weissman. L'mRNA come piattaforma per il futuro: vaccini contro il cancro, l'HIV, la malaria in sviluppo.",
-    "wikipediaSlug": "mRNA_vaccine",
+    "wikipediaSlug": "MRNA_vaccine",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -5628,7 +5628,7 @@
     "lng": -79.3832,
     "category": "scienza",
     "description": "Nel 1962 Marshall McLuhan pubblica la Galassia Gutenberg e nel 1964 Understanding Media: il medium è il messaggio. Non il contenuto ma il mezzo di comunicazione trasforma la coscienza: la stampa crea il pensiero lineare e il nazionalismo, la TV crea il villaggio globale e il pensiero tribale. McLuhan come il teorico dei media più influente del XX secolo: profeta di Internet 30 anni prima. Il villaggio globale come concetto che descrive i social media meglio di qualsiasi teoria successiva. Il mezzo è il massaggio (errore di stampa trasformato in titolo).",
-    "wikipediaSlug": "The_Medium_Is_the_Massage",
+    "wikipediaSlug": "McLuhan",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -5688,7 +5688,7 @@
     "lng": 37.62,
     "category": "storia",
     "description": "Michail Gorbaciov diventa segretario del PCUS e avvia le riforme della glasnost (trasparenza) e perestrojka (ristrutturazione). Le riforme, pensate per salvare il sistema sovietico, accelerano invece il suo crollo aprendo spazi di libertà che il sistema non riesce a gestire. Gorbaciov vince il Nobel per la Pace del 1990.",
-    "wikipediaSlug": "Glasnost",
+    "wikipediaSlug": "Glasnost'",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -5976,7 +5976,7 @@
     "lng": -74.01,
     "category": "storia",
     "description": "Il Boeing 707 inaugura l'era dei jet commerciali, riducendo drasticamente i costi e i tempi dei viaggi transoceanici. Il turismo di massa nasce in questi anni con i pacchetti vacanza e i voli charter. In due decenni, il viaggio in aereo passa da privilegio di élite a esperienza di massa che trasforma culture e geografie.",
-    "wikipediaSlug": "Jet_age",
+    "wikipediaSlug": "Jet_Age",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -6120,7 +6120,7 @@
     "lng": -74.18,
     "category": "cosmo",
     "description": "Arno Penzias e Robert Wilson dei Bell Labs scoprono per caso la radiazione cosmica di fondo a microonde, l'eco del Big Bang. La scoperta fornisce la prova definitiva della teoria del Big Bang contro la teoria dello stato stazionario. I due fisici valgono il Nobel nel 1978 per quella che è considerata la scoperta cosmologica più importante del Novecento.",
-    "wikipediaSlug": "Cosmic_microwave_background",
+    "wikipediaSlug": "Scoperta_della_radiazione_cosmica_di_fondo",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -6144,7 +6144,7 @@
     "lng": 2.35,
     "category": "arte",
     "description": "Samuel Beckett scrive Aspettando Godot, la pièce teatrale più influente del XX secolo in cui due vagabondi aspettano qualcuno che non arriva mai. L'assurdismo beckettiano rivoluziona il teatro senza trama, senza azione, senza senso apparente. Il dramma svuotato di Beckett riflette l'angoscia esistenziale dell'Europa postbellica.",
-    "wikipediaSlug": "Waiting_for_Godot",
+    "wikipediaSlug": "Beckett",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6156,7 +6156,7 @@
     "lng": 12.45,
     "category": "arte",
     "description": "Federico Fellini dirige La Strada con Giulietta Masina, vincendo il primo Oscar italiano al miglior film straniero. Il cinema felliniano, tra realismo poetico e visione onirica, rivoluziona il linguaggio cinematografico mondiale. La Dolce Vita, 8½ e Amarcord fanno di Fellini il più influente regista europeo del dopoguerra.",
-    "wikipediaSlug": "La_Strada",
+    "wikipediaSlug": "Fellini",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6168,7 +6168,7 @@
     "lng": -74.01,
     "category": "arte",
     "description": "Jack Kerouac pubblica Sulla strada, romanzo scritto in tre settimane su un rotolo di carta, manifesto della Beat Generation. Il romanzo celebra la libertà, il jazz, la droga e il viaggio come forme di ribellione contro il conformismo americano. Allen Ginsberg con Howl e William Burroughs con Naked Lunch completano la costellazione Beat.",
-    "wikipediaSlug": "On_the_Road",
+    "wikipediaSlug": "On_the_road",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6180,7 +6180,7 @@
     "lng": -74.01,
     "category": "arte",
     "description": "J.D. Salinger pubblica Il Giovane Holden, romanzo che inventa il disagio adolescenziale come tema letterario. La voce di Holden Caulfield, autenticamente adolescente e ribelle contro la falsità degli adulti, risuona in ogni generazione successiva. Il libro viene bandito dalle scuole americane ma continua a essere uno dei più letti al mondo.",
-    "wikipediaSlug": "The_Catcher_in_the_Rye",
+    "wikipediaSlug": "Salinger",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6276,7 +6276,7 @@
     "lng": -83.05,
     "category": "musica",
     "description": "Marvin Gaye produce What's Going On contro la volontà della Motown, creando il primo concept album soul sulla guerra in Vietnam e il degrado urbano. La sua voce sensuale e la coscienza sociale fondono R&B e pensiero politico in modo mai sentito prima. What's Going On è considerato il miglior disco della storia dalla rivista Rolling Stone.",
-    "wikipediaSlug": "What's_Going_On_(Marvin_Gaye_album)",
+    "wikipediaSlug": "Marvin_Gaye",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6360,7 +6360,7 @@
     "lng": -70.52,
     "category": "arte",
     "description": "Steven Spielberg dirige Lo Squalo, il primo vero blockbuster della storia del cinema moderno, inventando il modello del film estivo lanciato in migliaia di sale contemporaneamente. Il terrore del grande squalo bianco mantiene milioni di americani fuori dall'oceano per un'estate. Spielberg ridefinisce il rapporto tra Hollywood e il pubblico di massa.",
-    "wikipediaSlug": "Jaws_(film)",
+    "wikipediaSlug": "Spielberg",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6396,7 +6396,7 @@
     "lng": -74.01,
     "category": "musica",
     "description": "Madonna lancia Like a Virgin trasformando la sessualità femminile in dichiarazione di potere e autonomia. La sua capacità di reinventarsi continuamente — Material Girl, Like a Prayer, Vogue — la rende la pop star femminile più influente della storia. Madonna sfida tabù religiosi, razziali e sessuali con una consapevolezza mediatica senza precedenti.",
-    "wikipediaSlug": "Madonna_(entertainer)",
+    "wikipediaSlug": "Madonna",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6408,7 +6408,7 @@
     "lng": -93.27,
     "category": "musica",
     "description": "Prince pubblica Purple Rain, disco e film che mostrano un musicista senza precedenti capace di suonare tutti gli strumenti, fondere funk, rock e pop in un suono personalissimo. La sua sessualità androgina e le esibizioni dal vivo sconvolgenti lo rendono un performer senza eguali. Prince è considerato il musicista più completo della sua generazione.",
-    "wikipediaSlug": "Prince_(musician)",
+    "wikipediaSlug": "Prince",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6444,7 +6444,7 @@
     "lng": -74.01,
     "category": "musica",
     "description": "Run-DMC porta il rap al grande pubblico bianco collaborando con gli Aerosmith in Walk This Way. Il loro stile — sneakers Adidas senza lacci, tute Adidas, cappelli — diventa il look dell'hip hop. La collaborazione tra rock e rap anticipa il metal rap dei Rage Against the Machine e il crossover che dominerà gli anni '90.",
-    "wikipediaSlug": "Run-DMC",
+    "wikipediaSlug": "Run_DMC",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -6456,7 +6456,7 @@
     "lng": -74.01,
     "category": "arte",
     "description": "Toni Morrison pubblica Beloved, romanzo sulla memoria della schiavitù raccontato attraverso il fantasma di una figlia uccisa da sua madre per salvarla dalla schiavitù. Il libro vince il Pulitzer nel 1988 e il Nobel nel 1993. Morrison è la prima scrittrice afroamericana a vincere il Nobel per la Letteratura.",
-    "wikipediaSlug": "Beloved_(novel)",
+    "wikipediaSlug": "Toni_Morrison",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6468,7 +6468,7 @@
     "lng": -0.13,
     "category": "arte",
     "description": "Stanley Kubrick adatta il romanzo di Anthony Burgess in Arancia Meccanica, film sulla violenza, il libero arbitrio e il controllo sociale che scandalizza e affascina il mondo. Kubrick lo ritira dalla distribuzione britannica per le polemiche sui crimini ispirati al film. Nessun regista ha esplorato così spietatamente i lati oscuri della civiltà.",
-    "wikipediaSlug": "A_Clockwork_Orange_(film)",
+    "wikipediaSlug": "Kubrick",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6528,7 +6528,7 @@
     "lng": -118.24,
     "category": "musica",
     "description": "Tupac Shakur in California e The Notorious B.I.G. a New York sono i due massimi poeti del rap negli anni '90. La faida tra East Coast e West Coast culmina negli assassinii di entrambi nel 1996-97. Tupac rimane il rapper più iconico di tutti i tempi, con milioni di fan convinti che sia ancora vivo.",
-    "wikipediaSlug": "2Pac",
+    "wikipediaSlug": "Tupac_Shakur",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6564,7 +6564,7 @@
     "lng": -118.24,
     "category": "arte",
     "description": "James Cameron dirige Titanic con Leonardo DiCaprio e Kate Winslet, il film che per undici anni detiene il record di incassi mondiali. My Heart Will Go On di Céline Dion diventa la canzone più venduta degli anni '90. Titanic introduce il 3D digitale e segna l'apice del blockbuster romantico hollywoodiano.",
-    "wikipediaSlug": "Titanic_(1997_film)",
+    "wikipediaSlug": "Titanic",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6576,7 +6576,7 @@
     "lng": -118.24,
     "category": "arte",
     "description": "Le Wachowski dirigono Matrix con Keanu Reeves, introducendo il bullet time e un immaginario visivo che ridefinisce la fantascienza cinematografica. Il film pone domande filosofiche sulla realtà, la simulazione e il controllo in un formato action blockbuster. L'influenza di Matrix sull'estetica degli anni 2000 — dal cinema ai videogiochi alla moda — è totale.",
-    "wikipediaSlug": "The_Matrix",
+    "wikipediaSlug": "Matrix",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6624,7 +6624,7 @@
     "lng": -118.24,
     "category": "arte",
     "description": "Christopher Nolan dirige Il Cavaliere Oscuro con Heath Ledger come Joker, il film di supereroi più acclamato dalla critica. La morte di Ledger durante le riprese rende la sua interpretazione leggendaria e vale l'Oscar postumo. Nolan ridefinisce il blockbuster come cinema d'autore, elevando il cinecomic a forma rispettabile.",
-    "wikipediaSlug": "The_Dark_Knight_(film)",
+    "wikipediaSlug": "Christopher_Nolan",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6672,7 +6672,7 @@
     "lng": 127,
     "category": "arte",
     "description": "Parasite di Bong Joon-ho vince quattro Oscar incluso il Miglior Film, primo film non anglofono a ottenere il massimo riconoscimento di Hollywood. La critica feroce alla disuguaglianza di classe nella società capitalista coreana risuona in tutto il mondo. Il film apre una stagione d'oro del cinema asiatico internazionale.",
-    "wikipediaSlug": "Parasite_(2019_film)",
+    "wikipediaSlug": "Parasite_(film_2019)",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6792,7 +6792,7 @@
     "lng": 139.69,
     "category": "arte",
     "description": "Haruki Murakami pubblica Norwegian Wood, romanzo che porta la letteratura giapponese al grande pubblico occidentale con la sua fusione di realismo quotidiano e surrealismo. Kafka sulla spiaggia e 1Q84 confermano Murakami come il romanziere più letto del Giappone nel mondo. La sua opera mescola cultura pop occidentale e sensibilità giapponese.",
-    "wikipediaSlug": "Norwegian_Wood_(novel)",
+    "wikipediaSlug": "Murakami",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6840,7 +6840,7 @@
     "lng": 127,
     "category": "musica",
     "description": "Gangnam Style di PSY diventa il primo video a superare un miliardo di visualizzazioni su YouTube, rivelando al mondo la portata della Korean Wave. BTS porta il K-pop a Billboard e ai Grammy, diventando la prima band coreana a dominare le classifiche americane. La Corea del Sud esporta musica, cinema, serie TV e gastronomia in tutto il mondo.",
-    "wikipediaSlug": "Korean_Wave",
+    "wikipediaSlug": "Hallyu",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -7440,7 +7440,7 @@
     "lng": 12.48,
     "category": "arte",
     "description": "Sandro Chia, Francesco Clemente, Enzo Cucchi e Mimmo Paladino guidano la Transavanguardia italiana, riportando la pittura figurativa al centro dell'arte contemporanea dopo anni di concettualismo. Il critico Achille Bonito Oliva conia il termine e porta il movimento alle fiere internazionali. La Transavanguardia italiana conquista New York e ridà all'Italia un ruolo centrale nell'arte globale.",
-    "wikipediaSlug": "Transavanguardia",
+    "wikipediaSlug": "Transavantgarde",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -8076,7 +8076,7 @@
     "lng": -0.13,
     "category": "storia",
     "description": "Il 31 gennaio 2020 il Regno Unito lascia formalmente l'Unione Europea dopo 47 anni di membership, primo paese nella storia a uscire volontariamente dall'Unione. La Brexit richiede tre anni di negoziati caotici, tre premier (Cameron, May, Johnson) e un accordo commerciale siglato la vigilia di Natale 2020. Le conseguenze economiche e politiche continuano a dibattersi anni dopo l'uscita.",
-    "wikipediaSlug": "Brexit",
+    "wikipediaSlug": "Uscita_del_Regno_Unito_dall'Unione_europea",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -9721,7 +9721,7 @@
     "category": "storia",
     "tipo": "organizzazione",
     "description": "L'Unione Europea nasce formalmente il 1° novembre 1993 con l'entrata in vigore del Trattato di Maastricht, firmato nel 1992. Evoluzione della Comunità Economica Europea fondata nel 1957 con il Trattato di Roma, l'UE introduce la cittadinanza europea, l'unione economica e monetaria che porterà all'euro nel 2002, e una politica estera e di sicurezza comune. Da 12 membri fondatori è cresciuta fino a 27 stati dopo la Brexit del 2020. Il progetto di integrazione europea è la risposta alle devastazioni delle due guerre mondiali, con l'obiettivo di garantire pace, prosperità e democrazia sul continente. Nel 2012 riceve il Premio Nobel per la pace per il suo contributo alla riconciliazione europea.",
-    "wikipediaSlug": "European_Union",
+    "wikipediaSlug": "L'Union_Européenne_de_Radio-Télévision",
     "isCosmic": false
   },
   {
@@ -9733,7 +9733,7 @@
     "category": "storia",
     "tipo": "organizzazione",
     "description": "Il Fondo Monetario Internazionale nasce nel luglio 1944 dalla Conferenza di Bretton Woods nel New Hampshire, dove 44 nazioni disegnano il nuovo ordine economico internazionale del dopoguerra sotto la guida degli economisti John Maynard Keynes e Harry Dexter White. Entra formalmente in attività nel 1945 con sede a Washington. Il suo mandato originale è garantire la stabilità del sistema monetario internazionale, basato sui cambi fissi agganciati al dollaro e all'oro. Dopo l'abbandono del sistema di Bretton Woods nel 1971, si evolve in prestatore di ultima istanza per i paesi in crisi finanziaria, spesso imponendo dure condizioni di aggiustamento strutturale. Conta oggi 190 paesi membri e gestisce risorse per oltre 650 miliardi di diritti speciali di prelievo.",
-    "wikipediaSlug": "International_Monetary_Fund",
+    "wikipediaSlug": "Il_Fatto_Quotidiano",
     "isCosmic": false
   },
   {
@@ -9817,7 +9817,7 @@
     "category": "storia",
     "tipo": "evento",
     "description": "L'11 dicembre 2006 a Erba, in provincia di Como, Rosa Bazzi e Olindo Romano massacrarono quattro vicini di casa: Raffaella Castagna, suo figlio Youssef di due anni, la madre Paola Galli e la vicina Valeria Cherubini. L'unico sopravvissuto, il marito di Valeria, rimase gravemente ferito. La coppia fu condannata all'ergastolo nel 2011. Il caso, definito dai media \"la strage di Erba\", divenne uno degli omicidi multipli più noti della cronaca italiana contemporanea, oggetto di libri, documentari e continui dibattiti sulla colpevolezza degli imputati.",
-    "wikipediaSlug": "Erba_Massacre",
+    "wikipediaSlug": "Strage_di_Erba",
     "isCosmic": false
   },
   {
@@ -9972,7 +9972,7 @@
     "lng": -74.18,
     "category": "cosmo",
     "description": "Nel 1965 i fisici americani Arno Penzias e Robert Wilson, lavorando con un'antenna a microonde dei Bell Labs a Holmdel (New Jersey), rilevano un rumore di fondo isotropo e persistente a 2,725 K proveniente uniformemente da ogni direzione del cielo. Inizialmente attribuito a escrementi di piccioni nell'antenna, il segnale corrisponde esattamente alla radiazione cosmica di fondo prevista dalla teoria del Big Bang: il «bagliore» termico residuo dell'universo primordiale, circa 380 000 anni dopo l'evento iniziale. La scoperta, per cui Penzias e Wilson ricevono il Nobel nel 1978, costituisce la prova osservativa definitiva del Big Bang e segna la fine del modello cosmologico stazionario. Lo studio dettagliato della CMB (Cosmic Microwave Background) da parte dei satelliti COBE, WMAP e Planck ha rivelato le fluttuazioni primordiali da cui si sono formate le grandi strutture dell'universo.",
-    "wikipediaSlug": "Cosmic_microwave_background",
+    "wikipediaSlug": "Scoperta_della_radiazione_cosmica_di_fondo",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -10572,7 +10572,7 @@
     "lng": 11.0333,
     "category": "sport",
     "description": "Il 27 luglio 1951, al Gran Premio di Gran Bretagna di Silverstone, la Ferrari vince la sua prima gara nel Campionato Mondiale di Formula 1 con l'argentino José Froilán González. Enzo Ferrari, 53 anni, piange di gioia e dolore insieme: ha battuto l'Alfa Romeo, la casa per cui aveva corso e lavorato per vent'anni. Da quel momento la Ferrari diventa la scuderia più titolata della Formula 1: 16 titoli costruttori, piloti come Fangio, Lauda, Schumacher, Vettel. Il 'Cavallino Rampante' diventa il simbolo del motorsport mondiale e dell'eccellenza italiana.",
-    "wikipediaSlug": "Ferrari_in_Formula_One",
+    "wikipediaSlug": "Ferrari",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -10584,7 +10584,7 @@
     "lng": 8.5417,
     "category": "sport",
     "description": "Nel 1966 viene istituita la Coppa del Mondo di Sci Alpino, circuito stagionale che premia il miglior sciatore complessivo su tutte le specialità (discesa, super-G, gigante, slalom). La prima edizione, nel 1967, è vinta dal francese Jean-Claude Killy negli uomini e dall'austriaca Nancy Greene nelle donne. L'Italia conquista la coppa con Alberto Tomba negli anni '90, con Pirmin Zurbriggen negli anni '80, e in tempi recenti con Federica Brignone (2020) — prima italiana a vincere la classifica generale assoluta. Il circuito conta oggi oltre 80 gare in 20 paesi.",
-    "wikipediaSlug": "Alpine_Ski_World_Cup",
+    "wikipediaSlug": "Coppa_del_Mondo_di_sci_alpino",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -10728,7 +10728,7 @@
     "lng": -74.006,
     "category": "sport",
     "description": "L'8 marzo 1971 al Madison Square Garden di New York si svolge 'Il Combattimento del Secolo': Muhammad Ali contro Joe Frazier per il titolo mondiale dei pesi massimi. Entrambi imbattuti, entrambi campioni. Ali era stato spogliato del titolo nel 1967 per rifiuto al servizio militare; Frazier era campione ufficiale. 300 milioni di spettatori in tutto il mondo guardano la tv. Vince Frazier per decisione unanima dopo 15 round brutali — primo ko sportivo della carriera di Ali. La rivalità tra i due è personale, politica, razziale: tre combattimenti totali, vinti due a uno da Ali.",
-    "wikipediaSlug": "Fight_of_the_Century_(1971)",
+    "wikipediaSlug": "Ali_vs._Frazier_II",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -10800,7 +10800,7 @@
     "lng": 13.405,
     "category": "sport",
     "description": "Il 16 agosto 2009, durante i Campionati Mondiali di Atletica Leggera di Berlino, Usain Bolt corre i 100 metri in 9 secondi e 58 centesimi — record mondiale assoluto ancora in piedi nel 2025. È la corsa più veloce mai misurata nella storia dell'umanità. Bolt aveva già abbassato il record ai Giochi di Pechino 2008 (9.69, poi 9.58) celebrando prima del traguardo con una posa teatrale. Il giamaicano detiene anche il record dei 200 metri (19.19). Con tre ori a Pechino 2008, tre a Londra 2012 e tre a Rio 2016 nei 100, 200 e staffetta 4x100, Bolt è il velocista più titolato e celebre della storia.",
-    "wikipediaSlug": "Usain_Bolt_at_the_2009_World_Championships_in_Athletics",
+    "wikipediaSlug": "Usain_Bolt",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -10812,7 +10812,7 @@
     "lng": 116.4074,
     "category": "sport",
     "description": "Tra il 10 e il 17 agosto 2008, Michael Phelps gareggia e vince 8 gare di nuoto alle Olimpiadi di Pechino — una medaglia d'oro ogni giorno per otto giorni consecutivi. Supera così il record di 7 ori in una sola edizione olimpica stabilito da Mark Spitz a Monaco 1972. La vittoria più sofferta è nella 100m farfalla dove vince con 1/100 di secondo su Michael Cavic. In totale Phelps stabilisce 7 record mondiali in quella settimana. La sua prestazione fisica è analizzata come un fenomeno biologico: apertura alare di 201 cm contro un'altezza di 193 cm, piedi che ruotano come pinne.",
-    "wikipediaSlug": "Michael_Phelps_at_the_2008_Summer_Olympics",
+    "wikipediaSlug": "Michael_Phelps",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -11041,7 +11041,7 @@
     "tipo": "persona",
     "description": "Elodie Di Patrizi (Roma, 1990), cantante italiana tra le più ascoltate degli anni 2020. Formatasi ad Amici di Maria De Filippi, ha costruito un'immagine che unisce pop, R&B e urban con forte personalità visiva.",
     "category": "musica",
-    "wikipediaSlug": "Elodie_(cantante)"
+    "wikipediaSlug": "Elodie"
   },
   {
     "id": "mus-mango-cantante",
@@ -11692,7 +11692,7 @@
     "lng": -0.0681,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": "Adele_(cantante)",
+    "wikipediaSlug": "Adele",
     "isCosmic": false
   },
   {
@@ -13768,7 +13768,7 @@
     "lng": -79.3867,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": "Drake_(rapper)",
+    "wikipediaSlug": "Drake",
     "isCosmic": false
   },
   {
@@ -13804,7 +13804,7 @@
     "lng": -75.1289,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": "Pink_(cantante)",
+    "wikipediaSlug": "Pink",
     "isCosmic": false
   },
   {
@@ -13960,7 +13960,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Kiss_(gruppo_musicale)",
+    "wikipediaSlug": "Kiss",
     "isCosmic": false
   },
   {
@@ -14224,7 +14224,7 @@
     "lng": 30.3167,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": "Viktor_Coj",
+    "wikipediaSlug": "Viktor_Tsoi",
     "isCosmic": false
   },
   {
@@ -14800,7 +14800,7 @@
     "lng": 138.6,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": "Sia_(cantante)",
+    "wikipediaSlug": "Sia",
     "isCosmic": false
   },
   {
@@ -15256,7 +15256,7 @@
     "lng": -4.4239,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": "James_Peace",
+    "wikipediaSlug": "James_Keach",
     "isCosmic": false
   },
   {
@@ -18436,7 +18436,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Clannad_(gruppo_musicale)",
+    "wikipediaSlug": "Clannad",
     "isCosmic": false
   },
   {
@@ -18460,7 +18460,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Big_Bang_(gruppo_musicale)",
+    "wikipediaSlug": "Big_Bang",
     "isCosmic": false
   },
   {
@@ -20716,7 +20716,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Keane_(gruppo_musicale)",
+    "wikipediaSlug": "Keane",
     "isCosmic": false
   },
   {
@@ -25204,7 +25204,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Blue_(gruppo_musicale)",
+    "wikipediaSlug": "Blue",
     "isCosmic": false
   },
   {
@@ -25288,7 +25288,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Il_Volo_(gruppo_musicale)",
+    "wikipediaSlug": "Il_Volo",
     "isCosmic": false
   },
   {
@@ -25312,7 +25312,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Laibach_(gruppo_musicale)",
+    "wikipediaSlug": "Laibach",
     "isCosmic": false
   },
   {
@@ -25384,7 +25384,7 @@
     "lng": -73.8644,
     "category": "sport",
     "tipo": "persona",
-    "wikipediaSlug": "James_Blake_(tennista)",
+    "wikipediaSlug": "James_Blake",
     "isCosmic": false
   },
   {
@@ -27028,7 +27028,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Aqua_(gruppo_musicale)",
+    "wikipediaSlug": "Aqua",
     "isCosmic": false
   },
   {
@@ -27052,7 +27052,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Bauhaus_(gruppo_musicale)",
+    "wikipediaSlug": "Bauhaus",
     "isCosmic": false
   },
   {
@@ -27064,7 +27064,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Skillet",
+    "wikipediaSlug": "Frying_pan",
     "isCosmic": false
   },
   {
@@ -27160,7 +27160,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Incubus_(gruppo_musicale)",
+    "wikipediaSlug": "Incubus",
     "isCosmic": false
   },
   {
@@ -27184,7 +27184,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Judas_(Lady_Gaga)",
+    "wikipediaSlug": "Judas",
     "isCosmic": false
   },
   {
@@ -27196,7 +27196,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Just_Dance_(singolo)",
+    "wikipediaSlug": "Just_Dance",
     "isCosmic": false
   },
   {
@@ -31012,7 +31012,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "You're_My_Best_Friend/'39",
+    "wikipediaSlug": "You're_My_Best_Friend",
     "isCosmic": false
   },
   {
@@ -33556,7 +33556,7 @@
     "lng": -77.933,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": "Terremoto_della_Virginia_del_2011",
+    "wikipediaSlug": "Terremoto_in_Virginia_del_2011",
     "isCosmic": false
   },
   {
@@ -33580,7 +33580,7 @@
     "lng": 100.084,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": "Terremoto_di_Sumatra_del_2010",
+    "wikipediaSlug": "Terremoto_di_Sumatra_dell'ottobre_2010",
     "isCosmic": false
   },
   {
@@ -33664,7 +33664,7 @@
     "lng": 67.484,
     "category": "geologia",
     "tipo": "evento",
-    "wikipediaSlug": "Terremoto_del_Belucistan_del_2008",
+    "wikipediaSlug": "Terremoto_del_Pakistan_del_2008",
     "isCosmic": false
   },
   {
@@ -34972,7 +34972,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "Brasilia viene inaugurata il 21 aprile 1960 dal presidente Juscelino Kubitschek come nuova capitale del Brasile, costruita dal nulla in soli 41 mesi in mezzo all'altopiano centrale. Progettata dall'urbanista Lúcio Costa con architetture di Oscar Niemeyer, la città ha la forma di un aeroplano vista dall'alto. Patrimonio UNESCO, è il più audace esperimento di pianificazione urbana del XX secolo e simbolo della modernità brasiliana.",
-    "wikipediaSlug": "Brasília",
+    "wikipediaSlug": "Brasilia",
     "isCosmic": false
   },
   {

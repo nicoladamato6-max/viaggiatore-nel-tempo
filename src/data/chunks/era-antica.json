@@ -69,7 +69,7 @@
     "lng": 25.4615,
     "category": "geologia",
     "description": "Verso il 1628 a.C. l'isola di Thera (oggi Santorini) esplode in una delle più grandi eruzioni vulcaniche degli ultimi 10.000 anni. Lo tsunami distrugge la civiltà minoica di Creta e potrebbe aver ispirato il mito di Atlantide. La caldera risultante, riempita d'acqua, è oggi una delle destinazioni turistiche più spettacolari del Mediterraneo.",
-    "wikipediaSlug": "Minoan_eruption",
+    "wikipediaSlug": "Eruzione_di_Thera",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -153,7 +153,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Nel 27 a.C. il Senato romano conferisce a Ottaviano il titolo di 'Augustus' (il venerabile). Inizia il Principato: pur mantenendo le forme della Repubblica, Augusto detiene il potere assoluto. Il suo regno di 44 anni porta la 'Pax Romana': due secoli di relativa pace e prosperità nel Mediterraneo. Roma raggiunge il suo apogeo.",
-    "wikipediaSlug": "Augusto_(imperatore_romano)",
+    "wikipediaSlug": "Augusto",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -249,7 +249,7 @@
     "lng": 12.4669,
     "category": "storia",
     "description": "Il 28 ottobre 312 d.C. Costantino I sconfigge Massenzio al Ponte Milvio sul Tevere, a Roma. Secondo Eusebio di Cesarea, la notte prima della battaglia Costantino vide in sogno il monogramma di Cristo (☧) con la scritta 'In hoc signo vinces' (Con questo segno vincerai). La vittoria apre la strada alla cristianizzazione dell'Impero Romano.",
-    "wikipediaSlug": "Battle_of_Milvian_Bridge",
+    "wikipediaSlug": "Battaglia_di_Ponte_Milvio",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -297,7 +297,7 @@
     "lng": 23.75,
     "category": "filosofia",
     "description": "Nasce a Stagira, in Macedonia, il filosofo Aristotele, allievo di Platone e precettore del giovane Alessandro Magno. Aristotele fonda il Liceo ad Atene e crea la biologia, la logica formale, la fisica, la retorica, la poetica, l'etica e la politica come discipline sistematiche. Per 1.800 anni la sua autorità è quasi incontrastata in Europa.",
-    "wikipediaSlug": "Aristotle",
+    "wikipediaSlug": "Aristotele",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -333,7 +333,7 @@
     "lng": 116.9911,
     "category": "filosofia",
     "description": "Confucio muore nel 479 a.C. a Qufu, in Cina, dopo una vita dedicata all'insegnamento dell'etica, della famiglia e del governo virtuoso. I suoi Dialetti (Analects), raccolti dai discepoli, diventano il fondamento della civiltà cinese per 2.500 anni. Il Confucianesimo modella la cultura di Cina, Giappone, Corea e Vietnam ancora oggi.",
-    "wikipediaSlug": "Confucius",
+    "wikipediaSlug": "Confucio",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -501,7 +501,7 @@
     "lng": 31.2138,
     "category": "storia",
     "description": "Il faraone Snefru costruisce tre piramidi — la Piramide Romboidale, la Piramide Rossa e quella di Meidum — sperimentando fino a perfezionare la forma classica. Dahshur, a sud di Giza, conserva ancora oggi queste strutture fondamentali per la storia dell'architettura egizia.",
-    "wikipediaSlug": "Sneferu",
+    "wikipediaSlug": "Snefru",
     "isCosmic": false,
     "tipo": "luogo"
   },
@@ -633,7 +633,7 @@
     "lng": 32.5472,
     "category": "storia",
     "description": "Il re persiano Cambyses II sconfigge l'ultimo faraone nativo Psamtik III nella Battaglia di Pelusio nel 525 a.C. L'Egitto diventa satrapia persiana per due secoli. La leggenda vuole che i Persiani avanzassero con gatti in braccio, sapendo che gli Egizi non avrebbero osato combattere per non ferirli.",
-    "wikipediaSlug": "Battle_of_Pelusium_(525_BC)",
+    "wikipediaSlug": "Cambise_II_di_Persia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -681,7 +681,7 @@
     "lng": 52.8881,
     "category": "storia",
     "description": "Ciro il Grande conquista Babilonia nel 539 a.C. senza combattere e libera i popoli deportati, tra cui gli Ebrei. Il Cilindro di Ciro — conservato al British Museum — è considerato da alcuni il primo documento di diritti umani della storia: proclama la libertà religiosa e abolisce la schiavitù forzata. Il Secondo Tempio di Gerusalemme viene ricostruito.",
-    "wikipediaSlug": "Cyrus_the_Great",
+    "wikipediaSlug": "Ciro_il_Grande",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -765,7 +765,7 @@
     "lng": 22.4296,
     "category": "storia",
     "description": "Il leggendario legislatore Licurgo dà a Sparta la sua straordinaria costituzione: proprietà uguale, bambini allevati dallo Stato, donne che gareggiano, niente moneta d'oro e d'argento. Il modello spartano di frugalità militare affascinerà Rousseau, Napoleone e i Rivoluzionari Francesi. 'Spartano' entra in tutte le lingue europee.",
-    "wikipediaSlug": "Lycurgus_of_Sparta",
+    "wikipediaSlug": "Licurgo",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -789,7 +789,7 @@
     "lng": 26.9758,
     "category": "scienza",
     "description": "Pitagora nasce a Samo e fonda a Crotone (Calabria) una comunità filosofica-religiosa che indaga i numeri come fondamento della realtà. Il teorema che porta il suo nome (anche se noto ai Babilonesi) e la scoperta dei rapporti matematici nella musica aprono la strada alla fisica moderna. 'La matematica è il linguaggio dell'universo.'",
-    "wikipediaSlug": "Pythagoras",
+    "wikipediaSlug": "Pitagora",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -801,7 +801,7 @@
     "lng": 27.3416,
     "category": "filosofia",
     "description": "Il filosofo Eraclito di Efeso propone che il fuoco sia il principio fondamentale dell'universo e che tutto sia in continuo cambiamento: 'Non ci si può bagnare due volte nello stesso fiume.' Il suo concetto di Logos (ragione cosmica) influenza la filosofia stoica e il Vangelo di Giovanni ('In principio era il Logos').",
-    "wikipediaSlug": "Heraclitus",
+    "wikipediaSlug": "Eraclito",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1101,7 +1101,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "L'imperatore Claudio, considerato dalla famiglia uno stupido per via della sua balbuzie e goffaggine, si rivela un amministratore capace. Nel 43 d.C. invia 4 legioni in Britannia e partecipa personalmente alla conquista. Allarga la cittadinanza romana, costruisce porti e canali. Avvelenato probabilmente dalla moglie Agrippina nel 54 d.C.",
-    "wikipediaSlug": "Claudius",
+    "wikipediaSlug": "Claudio_(imperatore)",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1197,7 +1197,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "L'imperatore Aureliano costruisce tra il 271 e il 275 d.C. le imponenti mura difensive di Roma, lunghe 19 km e alte 6-8 metri: per la prima volta in 600 anni la città si dota di difese. Riunifica anche l'Impero dissolto durante la Crisi del Terzo Secolo (recupera Gallia, Hispania, Britannia, l'Oriente di Zenobia di Palmira). Detto 'Restauratore del Mondo'.",
-    "wikipediaSlug": "Aurelian_Wall",
+    "wikipediaSlug": "Aureliano",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1221,7 +1221,7 @@
     "lng": 26.5553,
     "category": "storia",
     "description": "Il 9 agosto 378 d.C. l'imperatore Valente muore nella battaglia di Adrianopoli (Edirne, Turchia) contro i Visigoti. Due terzi dell'esercito romano d'Oriente, circa 20.000 soldati, vengono uccisi. La cavalleria barbara demolisce l'invincibile fanteria romana. Edward Gibbon considera Adrianopoli l'inizio della fine dell'Impero Romano.",
-    "wikipediaSlug": "Battle_of_Adrianople_(378)",
+    "wikipediaSlug": "Battaglia_di_Adrianopoli",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1353,7 +1353,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Dopo la disfatta del Trasimeno contro Annibale (217 a.C.), il dittatore Quinto Fabio Massimo adotta la strategia del logorare senza combattere — seguire l'esercito cartaginese, tagliarne i rifornimenti, evitare battaglie aperte. Deriso come 'Cunctator' (il temporeggiatore), viene riabilitato dopo Canne. La 'strategia fabiana' — guerra d'attrito — entra nella storia militare.",
-    "wikipediaSlug": "Fabius_Maximus_Verrucosus",
+    "wikipediaSlug": "Quinto_Fabio_Massimo",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1473,7 +1473,7 @@
     "lng": 32.6014,
     "category": "storia",
     "description": "Tutankhamon sale al trono a 9 anni intorno al 1332 a.C. e muore a 19. Troppo giovane e di breve regno per essere importante nella storia egizia, diventa nel 1922 il faraone più famoso del mondo quando Howard Carter scopre intatta la sua tomba nella Valle dei Re. Il tesoro — tra cui la maschera d'oro — è il simbolo dell'antico Egitto.",
-    "wikipediaSlug": "Tutankhamun",
+    "wikipediaSlug": "Tutankhamon",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1509,7 +1509,7 @@
     "lng": 33.7489,
     "category": "storia",
     "description": "Intorno al 300 a.C. Meroe diventa la capitale del regno di Kush (odierno Sudan). La civiltà nubia costruisce oltre 200 piramidi — più dell'Egitto — e sviluppa una scrittura meroitica ancora non decifrata. Meroe controlla le rotte commerciali dell'Africa orientale per 600 anni.",
-    "wikipediaSlug": "Meroë",
+    "wikipediaSlug": "Meroe",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1521,7 +1521,7 @@
     "lng": 43.2588,
     "category": "storia",
     "description": "La città di Ashur (odierna Iraq) è la prima capitale dell'Impero Assiro, fondata intorno al 2500 a.C. sul fiume Tigri. Prende il nome dal dio principale Ashur. L'Assiria — la più militaristica potenza del Medio Oriente antico — domina la Mesopotamia dal 2000 al 612 a.C., quando Babilonia e Medi distruggono Ninive.",
-    "wikipediaSlug": "Ashur_(city)",
+    "wikipediaSlug": "Ashur",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1545,7 +1545,7 @@
     "lng": 23.7348,
     "category": "storia",
     "description": "Temistocle convince gli Ateniesi a usare i proventi delle miniere d'argento per costruire 200 triremi invece di distribuirle ai cittadini. La flotta vince a Salamina nel 480 a.C. contro la flotta persiana di Serse. Senza Temistocle non ci sarebbe stato il Partenone, né Socrate, né la democrazia occidentale.",
-    "wikipediaSlug": "Themistocles",
+    "wikipediaSlug": "Temistocle_(nome)",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1557,7 +1557,7 @@
     "lng": 15.2766,
     "category": "storia",
     "description": "Senofane di Elea (570-475 a.C.) scrive: 'Se i buoi potessero disegnare gli dei, li disegnerebbero simili ai buoi.' Il primo critico sistematico dell'antropomorfismo religioso: gli dei non sono esseri soprannaturali ma proiezioni umane. La sua filosofia anticipa il monismo e la critica religiosa moderna.",
-    "wikipediaSlug": "Xenophanes",
+    "wikipediaSlug": "Cratere_Senofane",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1569,7 +1569,7 @@
     "lng": 13.6,
     "category": "scienza",
     "description": "Empedocle di Agrigento (490-430 a.C.) propone che la materia sia composta da quattro elementi eterni — terra, acqua, fuoco, aria — mossi da due forze: Amore e Contesa. La teoria dei quattro elementi domina la fisica e la medicina per 2.000 anni, fino a Lavoisier. Empedocle è anche il fondatore della biologia con la teoria dell'evoluzione dei viventi.",
-    "wikipediaSlug": "Empedocles",
+    "wikipediaSlug": "6152_Empedocles",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1581,7 +1581,7 @@
     "lng": 23.7348,
     "category": "arte",
     "description": "Lisippo (390-300 a.C.) è lo scultore ufficiale di Alessandro Magno. Inventa un nuovo canone di proporzioni — testa più piccola, corpo più allungato, movimento dinamico — che rompe la staticità delle statue di Prassitele. Il suo stile ellenistico influenza tutta la scultura romana e, attraverso il Rinascimento, la scultura moderna.",
-    "wikipediaSlug": "Lysippos",
+    "wikipediaSlug": "Lisippo",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1593,7 +1593,7 @@
     "lng": 28.9784,
     "category": "storia",
     "description": "Diogene di Sinope (412-323 a.C.) vive in una botte ad Atene e pratica il Cinismo: rifiuto radicale delle convenzioni sociali, ritorno alla natura. Quando Alessandro il Grande gli chiede cosa vuole: 'Spostati, mi fai ombra.' La sua filosofia — niente proprietà, niente vergogna — ispira gli Stoici e, a distanza, i movimenti anarchici.",
-    "wikipediaSlug": "Diogenes",
+    "wikipediaSlug": "Diogene_di_Sinope",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1605,7 +1605,7 @@
     "lng": 23.7348,
     "category": "scienza",
     "description": "Teofrasto (371-287 a.C.), successore di Aristotele al Liceo, scrive la Historia Plantarum e la Causa Plantarum: classificazione di 550 piante, loro uso medico e agricolo. È il fondatore della botanica come scienza. La sua classificazione distingue piante da fiore e piante senza fiore — ancora utilizzata come punto di partenza.",
-    "wikipediaSlug": "Theophrastus",
+    "wikipediaSlug": "Teofrasto",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1665,7 +1665,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Traiano (98-117 d.C.) è il primo imperatore romano nato in provincia (Spagna) e il primo di origine non italica. Porta l'Impero alla sua massima estensione territoriale con le conquiste di Dacia (Romania) e Mesopotamia. I Mercati di Traiano e la Colonna Traiana a Roma celebrano le sue vittorie. I successori lo chiamano 'optimum principem'.",
-    "wikipediaSlug": "Trajan",
+    "wikipediaSlug": "Traiano_(nome)",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1689,7 +1689,7 @@
     "lng": 35.2137,
     "category": "storia",
     "description": "Nel 701 a.C. il re assiro Sennacherib assedia Gerusalemme con il suo grande esercito, ordinando al re Ezechia di capitolare. Secondo la Bibbia un angelo uccide 185.000 Assiri in una notte. Storicamente: la peste decimò l'esercito. Sennacherib si ritira senza conquistare Gerusalemme — evento considerato un miracolo nella tradizione ebraica.",
-    "wikipediaSlug": "Sennacherib's_siege_of_Jerusalem",
+    "wikipediaSlug": "Sennacherib",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1857,7 +1857,7 @@
     "lng": 23.7348,
     "category": "scienza",
     "description": "Nel 335 a.C. Aristotele fonda il Liceo ad Atene, dove insegna camminando (Peripatetici). Scrive su zoologia, logica, retorica, poetica, politica, fisica, metafisica, etica. Le sue 200 opere (ne sopravvivono 47) sono l'enciclopedia più ampia mai scritta da un singolo intellettuale. Domina il pensiero occidentale fino a Galileo.",
-    "wikipediaSlug": "Lyceum_(Aristotle)",
+    "wikipediaSlug": "Aristotele",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1905,7 +1905,7 @@
     "lng": 29.9187,
     "category": "storia",
     "description": "Dopo la vittoria su Pompeo a Farsalo (48 a.C.) Cesare insegue il rivale in Egitto, dove trova la testa di Pompeo e incontra Cleopatra VII — la fa avvolgere in un tappeto e portare nel suo palazzo. I due diventano amanti. Cesare la mette sul trono d'Egitto, lei gli darà Cesarione. La storia più romantica della storia antica.",
-    "wikipediaSlug": "Julius_Caesar_in_Egypt",
+    "wikipediaSlug": "Giulio_Cesare",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1917,7 +1917,7 @@
     "lng": 30.7033,
     "category": "storia",
     "description": "Nel 41 a.C. Marco Antonio, trionfviro romano, incontra Cleopatra a Tarso. Il loro amore durerà 11 anni e porterà alla loro rovina: nella battaglia di Azio (31 a.C.) la flotta di Ottaviano sconfigge la flotta romano-egizia. Marco Antonio si suicida. Cleopatra si avvelena. L'Egitto diventa provincia romana. Nasce l'Impero.",
-    "wikipediaSlug": "Mark_Antony",
+    "wikipediaSlug": "Marco_Antonio",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2013,7 +2013,7 @@
     "lng": 22.7562,
     "category": "storia",
     "description": "La civiltà micenea (1600-1100 a.C.) è la prima civiltà greca alfabetizzata (Lineare B). Il palazzo di Micene con la Porta dei Leoni, la civiltà dei guerrieri bronzei, i tesori in oro di Agamennone — scoperti da Schliemann nel 1876. Crollano intorno al 1200 a.C. durante il 'Collasso dell'Età del Bronzo', evento ancora misterioso.",
-    "wikipediaSlug": "Mycenae",
+    "wikipediaSlug": "Micene",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2049,7 +2049,7 @@
     "lng": 18.0148,
     "category": "scienza",
     "description": "Pitagora di Samo fonda intorno al 540 a.C. una comunità filosofica a Crotone (Calabria). Il suo teorema (a²+b²=c²) era già noto a Babilonesi ed Egizi, ma Pitagora lo dimostra per la prima volta. La sua dottrina — i numeri sono la sostanza della realtà — anticipa la fisica matematica moderna. 'La musica delle sfere' è la prima teoria della fisica dell'universo.",
-    "wikipediaSlug": "Pythagoras",
+    "wikipediaSlug": "Pitagora",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -2073,7 +2073,7 @@
     "lng": 23.7348,
     "category": "storia",
     "description": "Demostene, il più grande oratore greco, pronuncia dal 351 al 341 a.C. le Filippiche ad Atene: discorsi che avvertono del pericolo di Filippo II di Macedonia. L'Atene democratica non ascolta. Nel 338 Filippo vince a Cheronea — la fine della libertà greca. Demostene si avvelena nel 322 a.C. piuttosto che capitolare ai Macedoni.",
-    "wikipediaSlug": "Demosthenes",
+    "wikipediaSlug": "100133_Demosthenes",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2085,7 +2085,7 @@
     "lng": 23.7348,
     "category": "arte",
     "description": "Prassitele (400-330 a.C.) è lo scultore più famoso della Grecia classica: crea il primo nudo femminile monumentale (l'Afrodite di Cnido) che scandalizza ma diventa il canone della bellezza femminile per 2.500 anni. I suoi originali sono tutti perduti ma gli Hermes con Dioniso di Olimpia (forse originale) è il suo capolavoro.",
-    "wikipediaSlug": "Praxiteles",
+    "wikipediaSlug": "5983_Praxiteles",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2169,7 +2169,7 @@
     "lng": 25.9706,
     "category": "storia",
     "description": "Il vescovo visigoto Ulfila (311-383) inventa l'alfabeto gotico e traduce la Bibbia in gotico — la prima traduzione completa in una lingua germanica. L'opera missionaria di Ulfila converte i Goti al Cristianesimo ariano. Il Codex Argenteus (argento su pergamena viola) ad Uppsala è il testo più antico in una lingua germanica.",
-    "wikipediaSlug": "Ulfilas",
+    "wikipediaSlug": "Ulfila",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2253,7 +2253,7 @@
     "lng": 43.15,
     "category": "storia",
     "description": "Tiglath-Pileser III (745-727 a.C.) trasforma l'Assiria in un impero burocratico moderno: deportazione sistematica delle popolazioni sconfitte (evita ribellioni), esercito professionale permanente, provincia al posto dei regni vassalli. Conquista Babilonia, Siria, Israele. La sua politica di deportazione è il modello che ispira la Deportazione babilonese degli Ebrei.",
-    "wikipediaSlug": "Tiglath-Pileser_III",
+    "wikipediaSlug": "Tiglatpileser_III",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2265,7 +2265,7 @@
     "lng": 32.55,
     "category": "storia",
     "description": "Intorno al 750 a.C. il regno di Kush (Sudan settentrionale) conquista l'Egitto: i faraoni della XXV dinastia sono nubiani — i 'faraoni neri'. Reggono l'Egitto per 60 anni fino all'invasione assira. La cultura kushita — piramidi più ripide di quelle egiziane, scrittura meroitica — continua fino al IV sec. d.C.",
-    "wikipediaSlug": "Kingdom_of_Kush",
+    "wikipediaSlug": "Regno_di_Kush",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2277,7 +2277,7 @@
     "lng": 35.3781,
     "category": "storia",
     "description": "Sidone (Libano) è la più antica delle grandi città fenicie — già menzionata da Omero. I Fenici di Sidone inventano il vetro soffiato e la porpora (colorante rosso estratto dal murice). La porpora sidonia è il colore del potere nell'antichità — un chilo di lana tinta costa quanto 20 kg d'oro.",
-    "wikipediaSlug": "Sidon",
+    "wikipediaSlug": "Sidone",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2289,7 +2289,7 @@
     "lng": 78.1642,
     "category": "filosofia",
     "description": "Tra il 1500 e il 500 a.C. le tribù indoeuropee (Arii) si insediano nella valle del Gange (India del nord) portando i Veda — i testi sacri più antichi dell'Induismo. Il Rigveda (1500-1000 a.C.) è la più antica composizione letteraria ancora viva al mondo: recitata ancora nelle cerimonie induiste.",
-    "wikipediaSlug": "Vedic_period",
+    "wikipediaSlug": "Periodo_vedico",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2301,7 +2301,7 @@
     "lng": 108.9398,
     "category": "storia",
     "description": "Il Periodo degli Stati Combattenti (475-221 a.C.) è l'era più creativa della storia cinese: Confucio, Laozi, Sun Tzu scrivono opere che plasmano la civiltà per millenni. Alla fine il re Ying Zheng di Qin unifica la Cina nel 221 a.C. diventando il Primo Imperatore. La Grande Muraglia e l'Esercito di Terracotta sono le sue opere.",
-    "wikipediaSlug": "Warring_States_period",
+    "wikipediaSlug": "Periodo_degli_Stati_Combattenti",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2313,7 +2313,7 @@
     "lng": 14.4989,
     "category": "storia",
     "description": "Il 24 agosto 79 d.C. il Vesuvio erutta e seppellisce Pompei, Ercolano ed Oplontis sotto 6 metri di cenere. Plinio il Giovane assiste dall'altra sponda della baia e descrive tutto in una lettera a Tacito. Riscoperta nel 1748, Pompei offre la più dettagliata istantanea della vita romana del I secolo — case, affreschi, graffiti, cadaveri.",
-    "wikipediaSlug": "Pompeii",
+    "wikipediaSlug": "Pompei_(città_antica)",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2325,7 +2325,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Nel 212 d.C. l'imperatore Caracalla estende la cittadinanza romana a tutti gli abitanti liberi dell'Impero — probabilmente per riscuotere più tasse dall'imposta di successione. Ma l'effetto è rivoluzionario: milioni di persone di culture diverse diventano improvvisamente Romani. La più grande naturalizzazione di massa della storia antica.",
-    "wikipediaSlug": "Antonine_Constitution",
+    "wikipediaSlug": "Editto_di_Caracalla",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2337,7 +2337,7 @@
     "lng": 16.4402,
     "category": "storia",
     "description": "Nel 305 Diocleziano abdica — il primo imperatore romano a farlo volontariamente — e si ritira nel suo immenso palazzo a Spalato (Split, Croazia). Il palazzo diventa una città: il centro storico di Split moderna vive ancora dentro le mura del palazzo imperiale. Diocleziano coltiva cavoli e rifiuta di tornare a Roma.",
-    "wikipediaSlug": "Diocletian's_Palace",
+    "wikipediaSlug": "Palazzo_di_Diocleziano",
     "isCosmic": false,
     "tipo": "luogo"
   },
@@ -2349,7 +2349,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Il 24 agosto 410 d.C. il re visigoto Alarico saccheggia Roma per tre giorni — la prima volta che Roma viene presa da un nemico in 800 anni. L'evento sconvolge il mondo romano: Agostino scrive La Città di Dio in risposta. La città viene evacuata ma non distrutta. È il segnale che il sistema difensivo romano si sta sgretolando.",
-    "wikipediaSlug": "Sack_of_Rome_(410)",
+    "wikipediaSlug": "Alarico_I",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2385,7 +2385,7 @@
     "lng": 44.2066,
     "category": "storia",
     "description": "Il regno di Saba (Yemen e Etiopia, IX-VI sec. a.C.) controlla le rotte dell'incenso e della mirra — le spezie più preziose dell'antichità. La leggendaria Regina di Saba visita Salomone a Gerusalemme secondo la Bibbia (I Re 10). La civiltà sabea costruisce dighe, sistemi d'irrigazione e templi nel deserto arabico.",
-    "wikipediaSlug": "Sheba",
+    "wikipediaSlug": "Regno_di_Saba",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2397,7 +2397,7 @@
     "lng": 85.144,
     "category": "storia",
     "description": "Dopo la sanguinosa conquista di Kalinga (261 a.C.) — 100.000 morti — l'imperatore Maurya Ashoka si converte al Buddismo e rifiuta la guerra. Incide gli Editti di Ashoka su rocce e colonne in tutto l'India: tolleranza religiosa, cure mediche per uomini e animali, divieto di crudeltà. Il primo monarca ad adottare la nonviolenza come politica di stato.",
-    "wikipediaSlug": "Ashoka",
+    "wikipediaSlug": "Aśoka",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2409,7 +2409,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Antonino Pio (138-161 d.C.) regna per 23 anni senza guerre significative — il più lungo periodo di pace interna dell'Impero Romano. Non lascia mai l'Italia. Sotto di lui l'Impero raggiunge la massima prosperità. Edward Gibbon nel 'Declino e Caduta' descrive il suo regno come il periodo più felice della storia umana. Il Mausoleo di Adriano (Castel Sant'Angelo) viene completato.",
-    "wikipediaSlug": "Antoninus_Pius",
+    "wikipediaSlug": "Antonino_Pio",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2421,7 +2421,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Giuliano (361-363 d.C.) è l'ultimo imperatore romano pagano: educato cristiano, si converte al neoplatonismo e tenta di restaurare il paganesimo greco-romano. Proibisce ai cristiani di insegnare letteratura classica. Muore dopo soli 20 mesi di regno in una battaglia contro i Persiani — forse ucciso da un cristiano del suo esercito. I cristiani lo chiameranno 'l'Apostata'.",
-    "wikipediaSlug": "Julian_(emperor)",
+    "wikipediaSlug": "Giuliano_l'Apostata",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2433,7 +2433,7 @@
     "lng": 44.4208,
     "category": "arte",
     "description": "La Porta di Ishtar di Babilonia (575 a.C.), commissionata da Nabucodonosor II, è rivestita di mattoni smaltati azzurri con dragoni (simbolo di Marduk) e tori (simbolo di Adad). Alta 14 metri, era la più bella porta della città. Ricostruita al Pergamon Museum di Berlino, è uno dei più straordinari esempi di arte decorativa mesopotamica.",
-    "wikipediaSlug": "Ishtar_Gate",
+    "wikipediaSlug": "Porta_di_Ištar",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2445,7 +2445,7 @@
     "lng": 35.6484,
     "category": "storia",
     "description": "Biblo (Jbail, Libano) è una delle città più antiche del mondo — abitata dal 7000 a.C. I Fenici di Biblo commerciano il papiro egizio verso il mondo greco: la parola greca per papiro è 'biblos' — da cui 'Bibbia' (il libro del papiro). Biblo è anche il più importante sito fenicio con iscrizioni in quello che diventerà l'alfabeto.",
-    "wikipediaSlug": "Byblos",
+    "wikipediaSlug": "Biblo",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2457,7 +2457,7 @@
     "lng": 31.2088,
     "category": "arte",
     "description": "Il faraone Sneferu (2613-2589 a.C.) costruisce non una ma tre piramidi a Dahshur: la Piramide Romboidale (angolo cambiato a metà costruzione), la Piramide Rossa (prima piramide liscia riuscita) e una terza a Meidum. I suoi tentativi e correzioni portano alla perfezione: suo figlio Cheope costruirà la Grande Piramide di Giza.",
-    "wikipediaSlug": "Sneferu",
+    "wikipediaSlug": "Snefru",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2505,7 +2505,7 @@
     "lng": 29.9187,
     "category": "storia",
     "description": "Il 1° agosto 30 a.C. Marco Antonio si suicida ad Alessandria credendo erroneamente che Cleopatra fosse già morta. Undici giorni dopo Cleopatra si suicida con il veleno di un aspide piuttosto che essere portata in trionfo a Roma da Ottaviano. La morte di entrambi chiude definitivamente la guerra civile romana. Ottaviano diventa Augusto.",
-    "wikipediaSlug": "Mark_Antony",
+    "wikipediaSlug": "Marco_Antonio",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2541,7 +2541,7 @@
     "lng": 38.3,
     "category": "storia",
     "description": "Nel 401 a.C. Ciro il Giovane guida 10.000 mercenari greci contro il fratello Artaserse II per il trono persiano. Ciro muore nella battaglia di Cunassa. I Greci — rimasti senza comandante in mezzo alla Persia nemica — eleggono nuovi capi (tra cui Senofonte) e percorrono 2.000 km fino al Mar Nero. Senofonte narra l'avventura nell'Anabasi — il più avvincente diario di marcia dell'antichità.",
-    "wikipediaSlug": "Ten_Thousand_(Greek)",
+    "wikipediaSlug": "Artaserse_II_di_Persia",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2589,7 +2589,7 @@
     "lng": 10.848,
     "category": "geologia",
     "description": "Nel 1991 sulla Alpi italo-austriache (Similaun, Alto Adige) viene trovato Ötzi — il Similaunmann: un uomo di 45 anni vissuto 5.300 anni fa, perfettamente mummificato dal ghiaccio. Equipaggiamento completo: ascia di rame, arco, frecce, vestiti in pelle. È stato assassinato — freccia nell'arteria succlavia. Il suo DNA rivela un contadino neolitico anatolico con pochi parenti viventi oggi in Sardegna.",
-    "wikipediaSlug": "Ötzi",
+    "wikipediaSlug": "Mummia_del_Similaun",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2637,7 +2637,7 @@
     "lng": 32,
     "category": "geologia",
     "description": "3.200 anni prima di Cristo (periodo Nagada III) l'Alto Egitto si unifica progressivamente: il Re Scorpione I e poi Re Scorpione II dominano l'Alto Egitto. La Tavolozza di Narmer (-3100 a.C.) documenta la prima unificazione dell'Alto e Basso Egitto — forse da parte di Narmer (o Menes). Nasce la civiltà faraonica che durerà 3.000 anni.",
-    "wikipediaSlug": "Early_Dynastic_Period_(Egypt)",
+    "wikipediaSlug": "Scorpione_I",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2769,7 +2769,7 @@
     "lng": 34.8578,
     "category": "storia",
     "description": "3.500 anni prima di Cristo nella pianura filistea (Israele) il sito di Tell es-Safi (Gat) registra già insediamenti del Calcolitico. Il Levante — corridoio tra Egitto, Mesopotamia e Anatolia — è tra le aree più densamente abitate e scavate del mondo. Ogni metro di terra nasconde strati di civiltà sovrapposte: Canaanei, Filistei, Israeliti, Ellenisti, Romani. Il palinsesto della storia.",
-    "wikipediaSlug": "Tell_es-Safi/Gath",
+    "wikipediaSlug": "Gat_dei_Filistei",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2793,7 +2793,7 @@
     "lng": -94,
     "category": "storia",
     "description": "3.500 anni prima di Cristo nelle pianure alluvionali del Golfo del Messico (Veracruz) le prime comunità sedentarie coltivano mais, zucca e fagioli. Da qui emergerà tra il -1500 e -400 a.C. la civiltà Olmeca — la 'madre delle civiltà mesoamericane'. I precursori olmeci sperimentano già ceramica, scultura, gerarchie sociali. La Mesoamerica si avvicina alla complessità urbana.",
-    "wikipediaSlug": "Olmec",
+    "wikipediaSlug": "Olmecs",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2829,7 +2829,7 @@
     "lng": -8.977,
     "category": "storia",
     "description": "3.000 anni prima di Cristo nella penisola iberica (Portogallo) fiorisce la cultura di Vila Nova de São Pedro: villaggi con mura in pietra, ceramica Campaniforme, oggetti in rame. Zambujal (Torres Vedras) è il sito più imponente: bastioni concentrici, metallurgia del rame locale. La cultura Campaniforme è uno dei fenomeni più enigmatici del Calcolitico europeo: stessa ceramica da Portogallo a Polonia.",
-    "wikipediaSlug": "Vila_Nova_de_São_Pedro_culture",
+    "wikipediaSlug": "Zambujal",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2973,7 +2973,7 @@
     "lng": 32.6014,
     "category": "storia",
     "description": "Tutankhamon regno circa dal 1332 al 1323 a.C., re bambino che sale al trono a nove anni e muore a diciotto. La sua tomba scoperta nel 1922 da Howard Carter e Lord Carnarvon e la piu ricca mai trovata intatta nella Valle dei Re. Il sarcofago d'oro, la maschera funebre, 5.000 oggetti. La maledizione del faraone fa parlare di se anche oggi.",
-    "wikipediaSlug": "Tutankhamun",
+    "wikipediaSlug": "Tutankhamon",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3033,7 +3033,7 @@
     "lng": 43.1483,
     "category": "storia",
     "description": "L'Impero Assiro sotto Sargon II, Sennacherib e Assurbanipal tra il 720 e il 612 a.C. e il piu grande impero del Vicino Oriente: conquista Babilonia, Egitto, Israele. L'Assiro usa il terrore sistematico: deportazioni di massa, pali per i nemici. La biblioteca di Assurbanipal a Ninive con 30.000 tavolette cuneiformi e la piu grande raccolta di testi mesopotamici.",
-    "wikipediaSlug": "Neo-Assyrian_Empire",
+    "wikipediaSlug": "Gli_spiriti_dell'isola",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3093,7 +3093,7 @@
     "lng": 117,
     "category": "arte",
     "description": "Confucio nasce nel 551 a.C. nello Stato di Lu, odierna Shandong. I suoi insegnamenti raccolti nei Dialetti riguardano la pieta filiale, il rispetto della gerarchia, la coltivazione morale del governante, il rituale come fondamento della societa. Il confucianesimo modella la Cina, il Giappone, la Corea, il Vietnam per 2.500 anni.",
-    "wikipediaSlug": "Confucius",
+    "wikipediaSlug": "Confucio",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3213,7 +3213,7 @@
     "lng": 78.0322,
     "category": "storia",
     "description": "Tra il 1500 e il 1200 a.C. viene composto il Rig Veda, la piu antica delle scritture indo-europee: 1.028 inni in sanscrito vedico dedicati agli dei. Gli Arri arrivano in India dal 1500 a.C. Il sistema delle caste emerge dalla societa vedica. Il pensiero filosofico delle Upanishad 800-400 a.C. sviluppa concetti come Brahman, Atman, Karma. L'India vedica fonda la civilta hindu.",
-    "wikipediaSlug": "Rigveda",
+    "wikipediaSlug": "Ṛgveda",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3273,7 +3273,7 @@
     "lng": 104.0668,
     "category": "storia",
     "description": "Dal 481 al 221 a.C. sette stati cinesi si combattono per l'unificazione: il Periodo degli Stati Combattenti. La crisi del sistema Zhou produce il fiore della filosofia cinese: Confucio, Mozi, Mencio, Laozi, Zhuangzi, Han Fei. Il Tao Te Ching, l'Arte della Guerra di Sun Tzu. La guerra crea i filosofi: come rispondere alla violenza con l'etica, l'armonia, il realismo politico.",
-    "wikipediaSlug": "Warring_States_period",
+    "wikipediaSlug": "Periodo_degli_Stati_Combattenti",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3345,7 +3345,7 @@
     "lng": 82.9739,
     "category": "filosofia",
     "description": "Dopo la conquista della Kalinga nel 261 a.C. con 100.000 morti, l'imperatore Maurya Ashoka si converte al Buddhismo: editti su stele di pietra promulgano la non-violenza, la tolleranza religiosa, la protezione degli animali, i pozzi per i pellegrini. Ashoka invia missionari in Grecia, Egitto, Sri Lanka, Afghanistan. Il primo grande esperimento di governo buddhista: il Dharma come principio di stato.",
-    "wikipediaSlug": "Ashoka",
+    "wikipediaSlug": "Aśoka",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -3417,7 +3417,7 @@
     "lng": 37.1343,
     "category": "filosofia",
     "description": "Intorno al 1000 a.C. il profeta iranico Zarathustra (Zoroastro) fonda lo Zoroastrismo: la prima religione monoteistica della storia con un unico dio del bene Ahura Mazda contro Angra Mainyu il principio del male. Il fuoco come simbolo del divino. Il paradiso e l'inferno, il giorno del giudizio, il salvatore futuro Saoshyant. Lo Zoroastrismo influenza l'Ebraismo durante la cattività babilonese e attraverso questo il Cristianesimo e l'Islam. Il bene contro il male come struttura narrativa universale.",
-    "wikipediaSlug": "Zoroastrianism",
+    "wikipediaSlug": "Zarathustra_Style",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3429,7 +3429,7 @@
     "lng": 78.0322,
     "category": "arte",
     "description": "Intorno al 1500 a.C. le tribù indoeuropee arrivate in India iniziano a comporre il Rigveda: 1.028 inni in sanscrito vedico, la letteratura religiosa piu antica dell'India. Il sanscrito vedico come lingua sacra del subcontinente. I quattro Veda come fondamento dell'induismo: Rigveda, Samaveda, Yajurveda, Atharvaveda. Le Upanishad (800-200 a.C.) approfondiscono la filosofia vedica. Il ciclo del dharma, karma, moksha, samsara nasce nei testi vedici.",
-    "wikipediaSlug": "Rigveda",
+    "wikipediaSlug": "Ṛgveda",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3501,7 +3501,7 @@
     "lng": 85.0931,
     "category": "filosofia",
     "description": "Nel 261 a.C. il re Ashoka dell'Impero Maurya vince la guerra di Kalinga: 100.000 morti in battaglia, 150.000 deportati. L'orrore lo converte al buddhismo. Ashoka il Grande diventa il primo re a proclamare la non-violenza come politica di stato: editti incisi su rocce e pilastri in tutto l'impero. Ospedali per uomini e animali, alberi lungo le strade. Il buddhismo si diffonde in tutta l'Asia grazie a Ashoka. La figura del governante illuminato che rinuncia alla guerra.",
-    "wikipediaSlug": "Ashoka",
+    "wikipediaSlug": "Aśoka",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3645,7 +3645,7 @@
     "lng": 85.1376,
     "category": "storia",
     "description": "Dal 268 al 232 a.C. Ashoka governa l'Impero Maurya: il più grande impero della storia indiana, dall'Afghanistan al Deccan. La battaglia di Kalinga (261 a.C.) costa 100.000 morti: Ashoka, inorridito, si converte al Buddhismo. I Dhamma (editti) scolpiti su pietre e colonne in tutto l'impero: la non-violenza, la tolleranza religiosa, il rispetto degli animali, le cure mediche per tutti. Ashoka invia missioni buddhiste in Sri Lanka, Grecia, Egitto. Il Buddhismo come religione mondiale grazie ad Ashoka.",
-    "wikipediaSlug": "Ashoka",
+    "wikipediaSlug": "Aśoka",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3741,7 +3741,7 @@
     "lng": 23.7267,
     "category": "arte",
     "description": "Dal 447 al 432 a.C. Pericle finanzia con il tesoro della Lega Delio-Attica la costruzione del Partenone sull'Acropoli: Ictino e Callicrate come architetti, Fidia come scultore. Le imperfezioni ottiche corrette attraverso la curvatura sottile: nulla è perfettamente dritto. La statua crisoelefantina di Atena Parthenos. L'Eretteo con le Cariatidi. L'età di Pericle come il periodo di massima fioritura della democrazia, filosofia, letteratura e arte ateniese. Il Partenone come il simbolo della civiltà occidentale.",
-    "wikipediaSlug": "Parthenon",
+    "wikipediaSlug": "Partenone",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3765,7 +3765,7 @@
     "lng": 77.209,
     "category": "scienza",
     "description": "Tra il 800 e il 200 a.C. vengono composte le Upanishad (108 testi): la filosofia vedica che esplora il Brahman (realtà ultima universale) e l'Atman (sé individuale). Tat tvam asi (Tu sei quello): l'identità tra l'anima individuale e l'anima universale. Il concetto di karma, samsara (ciclo di reincarnazioni), moksha (liberazione). Le Upanishad come base dell'Induismo, del Jainismo e del Buddhismo. Schopenhauer le legge e le chiama il conforto della vita. Il Vedanta come la filosofia indiana più influente.",
-    "wikipediaSlug": "Upanishads",
+    "wikipediaSlug": "Upaniṣad",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3777,7 +3777,7 @@
     "lng": 43.144,
     "category": "storia",
     "description": "Dal 745 a.C. Tiglath-pileser III riforma l'esercito assiro: il primo esercito professionale permanente della storia, con cavalleria, fanteria e genio militare. Le deportazioni di massa come strumento di controllo: gli Israeliani deportati nel 722 a.C. Le città conquistate rase al suolo come deterrenza. Ninive come la più grande città del mondo (700.000 abitanti) con la biblioteca di Assurbanipal: 30.000 tavolette cuneiformi incluso il Poema di Gilgamesh. L'Assiria come il prototipo dell'imperialismo militare.",
-    "wikipediaSlug": "Neo-Assyrian_Empire",
+    "wikipediaSlug": "Gli_spiriti_dell'isola",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3789,7 +3789,7 @@
     "lng": 31.913,
     "category": "storia",
     "description": "Dal 1351 al 1334 a.C. il faraone Akhenaton (Amenofi IV) impone il culto unico di Aton (il disco solare): il primo monoteismo della storia. Sposta la capitale ad Akhetaton (Tell el-Amarna). Nefertiti come regina-consorte. L'arte di Amarna: il realismo inedito nella rappresentazione dei corpi, le figlie reali con crani allungati. Alla morte di Akhenaton la controrivoluzione: i sacerdoti di Amon riprendono il potere, Tutankhamon ripristina il politeismo. L'influenza di Akhenaton sul Mosaismo dibattuta.",
-    "wikipediaSlug": "Akhenaten",
+    "wikipediaSlug": "Akhenaton",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3813,7 +3813,7 @@
     "lng": 23.7267,
     "category": "arte",
     "description": "Intorno al 429 a.C. Sofocle scrive Edipo Re: il figlio che uccide il padre e sposa la madre senza saperlo, poi si acceca quando scopre la verità. Aristotele chiama Edipo Re la tragedia perfetta. Il mythos (trama), il riconoscimento (anagnorisis), la catarsi come i concetti della Poetica che nascono dall'analisi di questa tragedia. Freud chiama Complesso di Edipo il conflitto psichico universale che trova in Sofocle la sua espressione letteraria. Il teatro greco come il luogo dove la città discute i suoi conflitti più profondi.",
-    "wikipediaSlug": "Oedipus_Rex",
+    "wikipediaSlug": "Oedipus_rex",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3897,7 +3897,7 @@
     "lng": 53.688,
     "category": "filosofia",
     "description": "Intorno al 600 a.C. il profeta Zarathustra (Zoroastro) fonda lo Zoroastrismo in Persia: la prima religione monoteistica con un dio del bene (Ahura Mazda) e un principio del male (Angra Mainyu). Il libero arbitrio: l'uomo può scegliere tra bene e male. Il Giudizio Finale, il paradiso e l'inferno, il salvatore messianico. Lo Zoroastrismo come l'influenza diretta sull'Ebraismo del periodo persiano (l'Esilio Babilonese), sul Cristianesimo e sull'Islam. 100.000 Zoroastriani oggi (Parsi in India). Also sprach Zarathustra di Nietzsche.",
-    "wikipediaSlug": "Zoroastrianism",
+    "wikipediaSlug": "Zarathustra_Style",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3921,7 +3921,7 @@
     "lng": 55.7717,
     "category": "storia",
     "description": "Dal 250 a.C. al 224 d.C. l'Impero Partico (Arsacide) come intermediario tra Roma e la Cina sulla Via della Seta. Il cavallo partico come il più pregiato del mondo antico: i Romani lo vogliono, devono pagare in argento o seta cinese. Carre (53 a.C.): la legione di Crasso annientata dai Parti con la tattica delle frecce a cavallo. I Parti come l'ostacolo all'espansione romana verso est. La cultura partica come fusione di ellenismo e iranismo: le monete, la scultura. I Sasanidi poi come i successori persiani.",
-    "wikipediaSlug": "Parthian_Empire",
+    "wikipediaSlug": "I_partiti_politici_in_Italia_dal_1848_al_1924",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3933,7 +3933,7 @@
     "lng": 31.6258,
     "category": "arte",
     "description": "Intorno al 1264 a.C. Ramesse II fa costruire i templi di Abu Simbel nella Nubia: le quattro statue colossali (20 metri) di Ramesse scolpite nella roccia. Il tempio di Nefertari come quello dedicato alla grande sposa reale. La battaglia di Qadesh (1274 a.C.) come l'evento narrato su ogni tempio: Ramesse come invincibile guerriero solitario contro gli Ittiti (in realtà fu una patta). La propaganda del potere come l'arte principale dei faraoni. Abu Simbel spostato di 60 metri tra il 1964 e il 1968 per salvarlo dalla diga di Assuan.",
-    "wikipediaSlug": "Abu_Simbel_temples",
+    "wikipediaSlug": "Ramesse_II",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3957,7 +3957,7 @@
     "lng": 53.17,
     "category": "storia",
     "description": "Ciro II fonda l'Impero Achemenide, il più grande stato del mondo antico. La sua politica di tolleranza religiosa e rispetto per le culture conquistate è rivoluzionaria. Libera i Giudei dalla cattività babilonese, guadagnandosi il titolo di Messia nella Bibbia ebraica.",
-    "wikipediaSlug": "Cyrus_the_Great",
+    "wikipediaSlug": "Ciro_il_Grande",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -3969,7 +3969,7 @@
     "lng": 25.43,
     "category": "geologia",
     "description": "La devastante eruzione vulcanica di Santorini provoca uno tsunami e una nube di cenere che danneggiano gravemente la civiltà minoica di Creta. Questo evento catastrofico contribuisce al declino di una delle prime civiltà europee avanzate. Potrebbe essere all'origine del mito di Atlantide.",
-    "wikipediaSlug": "Minoan_eruption",
+    "wikipediaSlug": "Eruzione_di_Thera",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -3981,7 +3981,7 @@
     "lng": 22.43,
     "category": "storia",
     "description": "Sparta sviluppa l'agoge, il rigido sistema educativo militare che forma guerrieri dalla nascita. L'organizzazione sociale spartana con la sottomissione degli iloti crea la potenza militare più temuta della Grecia. Il modello spartano influenzerà il pensiero politico occidentale per secoli.",
-    "wikipediaSlug": "Agoge",
+    "wikipediaSlug": "Agoghé",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -4029,7 +4029,7 @@
     "lng": 32.6,
     "category": "storia",
     "description": "Ramesse I (Ramesses Menpehtyra) viene scelto da Horemheb come successore nel 1295 a.C. e fonda la XIX Dinastia da cui discenderanno Seti I e il grande Ramesse II. Pur regnando appena due anni per l'età avanzata, la sua tomba nella Valle dei Re (KV16) è decorata con il Libro dei Portali — uno dei più importanti testi religiosi dell'antico Egitto. Ramesse I è il nonno di Ramesse il Grande, il cui nome riecheggerà per millenni.",
-    "wikipediaSlug": "Ramesses_I",
+    "wikipediaSlug": "Ramesse_I",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4041,7 +4041,7 @@
     "lng": 10.79,
     "category": "filosofia",
     "description": "Papa Leone I incontra Attila re degli Unni sul fiume Mincio nel 452 e lo convince a risparmiare Roma, in un gesto diplomatico ancora celebrato come miracolo. È il primo papa chiamato 'Magno' e il primo a proclamare la primazia assoluta del vescovo di Roma su tutta la Chiesa. Nel 455 limita il sacco vandalo di Genserico, impedendo l'incendio della città. Al Concilio di Calcedonia (451) impone la sua dottrina cristologica: Leone I è il fondatore del papato come potere politico.",
-    "wikipediaSlug": "Pope_Leo_I",
+    "wikipediaSlug": "Leone_Magno",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4053,7 +4053,7 @@
     "lng": 12.45,
     "category": "filosofia",
     "description": "Simon Pietro, pescatore galileo e primo apostolo di Gesù, è considerato dalla tradizione cattolica il primo vescovo di Roma — capostipite dei 266 papi. Secondo la tradizione fu crocifisso a testa in giù sotto Nerone nel 64 d.C. sulla collina Vaticana. La Basilica di San Pietro è costruita sulla sua tomba. La dottrina della successione apostolica — per cui ogni papa è successore di Pietro e vicario di Cristo — fonda il primato del vescovo di Roma sulla cristianità mondiale per due millenni.",
-    "wikipediaSlug": "Pope_Peter",
+    "wikipediaSlug": "Pietro",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -4065,7 +4065,7 @@
     "lng": 12.45,
     "category": "filosofia",
     "description": "Papa Silvestro I (314-335) guida la Chiesa romana durante il regno di Costantino il Grande, dopo l'Editto di Milano (313) che legalizza il Cristianesimo. Durante il suo pontificato si svolge il fondamentale Concilio di Nicea (325), che definisce il dogma trinitario. Al suo nome è legata la 'Donazione di Costantino' — un documento medievale falso che attribuiva a Costantino la cessione del potere temporale dell'Occidente al papa — che giustificò per secoli le pretese politiche del papato fino a quando Lorenzo Valla la smascherò nel 1440.",
-    "wikipediaSlug": "Pope_Sylvester_I",
+    "wikipediaSlug": "Silvestro_I",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4101,7 +4101,7 @@
     "lng": 32.64,
     "category": "musica",
     "description": "L'Egitto faraonico aveva una cultura musicale ricchissima: arpe verticali con 4-22 corde, flauti traversi (sebi), oboe doppio (memet), lute (nefer), sistro (il sonaglio sacro di Hathor), e tamburi. Le pitture tombali di Saqqara e Tebe mostrano orchestre con decine di musicisti. La musica era associata a Hathor (dea della musica) e Thoth (dio della saggezza). I cantori del tempio erano sacerdotesse professioniste — tra le poche donne con status ufficiale nell'Egitto antico.",
-    "wikipediaSlug": "Music_of_ancient_Egypt",
+    "wikipediaSlug": "Musica_dell'antico_Egitto",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4113,7 +4113,7 @@
     "lng": 32.6,
     "category": "musica",
     "description": "Nella tomba di Tutankamon (KV62, Valle dei Re) Howard Carter trova nel 1922 due trompette di bronzo e argento — gli strumenti musicali più antichi ancora suonabili del mondo. Nel 1939 la BBC le trasmette in diretta: la loro voce risuona dopo 3.300 anni di silenzio. Gli altri strumenti trovati (sistri, arpe, crotali) confermano che anche il faraone bambino aveva un ensemble musicale per la vita nell'aldilà: la musica era necessaria per l'eternità.",
-    "wikipediaSlug": "Tutankhamun",
+    "wikipediaSlug": "Tutankhamon",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4125,7 +4125,7 @@
     "lng": 78,
     "category": "musica",
     "description": "Il Sama Veda (il Veda delle Melodie) è uno dei quattro Veda sacri dell'induismo e il più antico testo musicale dell'India: 1.875 versi del Rig Veda messi in forma melodica per essere cantati dai sacerdoti Udgatri durante i sacrifici soma. Le melodie vediche — trasmesse oralmente per 3.500 anni senza interruzione — sono la tradizione musicale orale più antica ancora viva al mondo. Da esse derivano i raga classici dell'India, la più elaborata teoria musicale non occidentale.",
-    "wikipediaSlug": "Samaveda",
+    "wikipediaSlug": "Sāmaveda",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4161,7 +4161,7 @@
     "lng": 46.1,
     "category": "musica",
     "description": "Nelle tombe reali di Ur (Iraq), Leonard Woolley scopre nel 1927 la Grande Lira d'Oro — uno strumento a 11 corde decorato con una testa di toro in oro e lapislazzuli, risalente a 2600-2500 a.C. Assieme a 8 altre lire e arpe rinvenute, testimonia che la corte sumerica di Ur aveva un'orchestra sofisticata per cerimonie funebri e banchetti reali. Le lire di Ur sono oggi al British Museum e al Museo di Baghdad: simbolo della musica come lusso del potere nell'antichità.",
-    "wikipediaSlug": "Lyres_of_Ur",
+    "wikipediaSlug": "La_Gira_Dura",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4209,7 +4209,7 @@
     "lng": 25.15,
     "category": "musica",
     "description": "Aristosseno di Taranto (354-300 a.C.), allievo di Aristotele, scrive gli Elementi di Armonia — il primo trattato sistematico di teoria musicale giunto fino a noi. Contro Pitagora, Aristosseno sostiene che la musica va giudicata dall'orecchio, non solo dalla matematica. Definisce tetracordi, modi e scale — un sistema che sopravvive nella teoria medievale e rinascimentale. La sua distinzione tra i generi diatonico, cromatico ed enarmonico fonda la classificazione delle scale musicali usata ancora oggi.",
-    "wikipediaSlug": "Aristoxenus",
+    "wikipediaSlug": "Aristosseno",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4281,7 +4281,7 @@
     "lng": 29.92,
     "category": "musica",
     "description": "Ctesibio di Alessandria (285-222 a.C.) inventa l'hydraulis — l'organo idraulico — uno strumento che usa l'acqua per stabilizzare la pressione dell'aria nelle canne. È il progenitore diretto dell'organo da chiesa medievale e dell'organo moderno. L'hydraulis viene usato nell'anfiteatro romano per accompagnare i giochi dei gladiatori e nelle corti reali. Nerone ne era appassionato. L'invenzione di Ctesibio dimostra che già nell'ellenismo la musica si univa alla meccanica e all'ingegneria.",
-    "wikipediaSlug": "Hydraulis",
+    "wikipediaSlug": "Organo_idraulico",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4293,7 +4293,7 @@
     "lng": 88.36,
     "category": "musica",
     "description": "Il Natyashastra (II sec. a.C. - II sec. d.C.) di Bharata Muni è il testo fondante della teoria musicale e drammaturgica indiana classica. Codifica i 22 shruti (microtoni), i raga (scale modali), i tala (ritmi) e il concetto di rasa (emozione estetica). La musica gandharva — offerta agli dèi — è la fonte da cui derivano tutte le tradizioni musicali del subcontinente: la musica hindustani del Nord e la carnática del Sud. Il sistema dei raga rimane oggi la più elaborata teoria modale mai sviluppata.",
-    "wikipediaSlug": "Natyashastra",
+    "wikipediaSlug": "Nātyaśāstra",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4305,7 +4305,7 @@
     "lng": 9.19,
     "category": "musica",
     "description": "Ambrogio, vescovo di Milano dal 374, introduce nella liturgia cristiana occidentale il canto antifonale (alternanza tra due cori) e compone inni metrici in latino destinati al popolo — rivoluzione che rompe con la tradizione del solo canto dei chierici. I quattro inni sicuramente attribuiti ad Ambrogio (Aeterne rerum conditor, Deus creator omnium, Iam surgit hora tertia, Veni Redemptor gentium) sono i più antichi della tradizione liturgica latina. Il canto ambrosiano di Milano è ancora oggi distinto dal canto gregoriano e vivo nella cattedrale.",
-    "wikipediaSlug": "Ambrosian_chant",
+    "wikipediaSlug": "Sant'Ambrogio",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4378,7 +4378,7 @@
     "category": "cosmo",
     "tipo": "scoperta",
     "description": "Talete di Mileto, filosofo e matematico greco del VI secolo a.C., è ricordato per aver predetto l'eclissi solare del 28 maggio 585 a.C. — un evento che secondo Erodoto interruppe la battaglia tra Lidi e Medi. Talete propose anche che la Terra fosse un disco piatto che galleggia sull'acqua, ma soprattutto cercò spiegazioni naturali ai fenomeni celesti invece di ricorrere agli dei. Fu il primo a distinguere nettamente tra astronomia come scienza e astrologia come pratica divinatoria.",
-    "wikipediaSlug": "Thales_of_Miletus",
+    "wikipediaSlug": "Talete_di_Mileto",
     "isCosmic": false
   },
   {
@@ -4390,7 +4390,7 @@
     "category": "cosmo",
     "tipo": "persona",
     "description": "Anassimandro di Mileto fu il primo filosofo greco a proporre un modello cosmologico basato su principi razionali anziché mitologici. Concepì la Terra come un cilindro sospeso liberamente nello spazio senza alcun supporto — intuizione sorprendentemente moderna. Immaginò il cielo come una serie di ruote di fuoco parzialmente oscurate, e propose che gli esseri viventi si fossero evoluti dall'acqua. La sua visione di un cosmo ordinato e comprensibile dalla ragione umana aprì la strada a secoli di astronomia greca.",
-    "wikipediaSlug": "Anaximander",
+    "wikipediaSlug": "Anassimandro",
     "isCosmic": false
   },
   {
@@ -4402,7 +4402,7 @@
     "category": "cosmo",
     "tipo": "scoperta",
     "description": "Pitagora di Samo, o la sua scuola filosofica, propose per primo che la Terra avesse forma sferica — non piatta come credevano i predecessori. L'idea nasceva da considerazioni estetiche (la sfera è la forma più perfetta) ma anche da osservazioni: la forma rotonda dell'ombra della Terra sulla Luna durante le eclissi lunari, e il fatto che stelle diverse sono visibili a diverse latitudini. La dottrina della sfericità terrestre fu poi adottata da tutta la filosofia greca classica e mai più abbandonata dalla scienza occidentale.",
-    "wikipediaSlug": "Pythagoras",
+    "wikipediaSlug": "Pitagora",
     "isCosmic": false
   },
   {
@@ -4414,7 +4414,7 @@
     "category": "cosmo",
     "tipo": "persona",
     "description": "Aristarco di Samo fu il primo astronomo nella storia ad affermare che il Sole, e non la Terra, si trova al centro dell'universo. Propose che tutti i pianeti, inclusa la Terra, orbitano attorno al Sole, e che la Terra ruota su se stessa in un giorno. Misurò anche le distanze relative e le dimensioni di Sole e Luna. La sua teoria eliocentrica anticipava di quasi 1800 anni quella di Copernico, ma fu rifiutata dai contemporanei — in parte per ragioni fisiche, in parte per l'autorità di Aristotele.",
-    "wikipediaSlug": "Aristarchus_of_Samos",
+    "wikipediaSlug": "Aristarco_di_Samo",
     "isCosmic": false
   },
   {
@@ -4438,7 +4438,7 @@
     "category": "cosmo",
     "tipo": "persona",
     "description": "Ipparco di Nicea fu forse il più grande astronomo dell'antichità. Compilò un catalogo di circa 850 stelle con posizioni accurate, scoprì la precessione degli equinozi confrontando le proprie osservazioni con quelle più antiche, calcolò la distanza della Luna con un errore inferiore al 5%, e introdusse il sistema di magnitudini stellari ancora in uso oggi. Inventò anche la trigonometria come strumento matematico per l'astronomia. Le sue tavole lunari e solari rimasero le più accurate per secoli.",
-    "wikipediaSlug": "Hipparchus",
+    "wikipediaSlug": "4000_Hipparchus",
     "isCosmic": false
   },
   {
@@ -4450,7 +4450,7 @@
     "category": "cosmo",
     "tipo": "persona",
     "description": "Claudio Tolomeo di Alessandria fu l'astronomo che codificò e perfezionò il modello geocentrico dell'universo in forma matematicamente rigorosa. Sviluppò il sistema degli epicicli — cerchi su cerchi — per spiegare i movimenti apparentemente irregolari dei pianeti pur mantenendo la Terra al centro. Il suo sistema, pur basato su un'ipotesi sbagliata, permetteva previsioni astronomiche abbastanza precise da risultare utili per 14 secoli. Fu anche geografo e matematico di primo piano.",
-    "wikipediaSlug": "Ptolemy",
+    "wikipediaSlug": "Tolomeo",
     "isCosmic": false
   },
   {
@@ -4462,7 +4462,7 @@
     "category": "cosmo",
     "tipo": "opera",
     "description": "L'Almagesto (dal greco 'la grande trattazione') è il trattato astronomico scritto da Claudio Tolomeo che raccolse e sistematizzò tutta la conoscenza astronomica greca. Diviso in tredici libri, contiene il catalogo di 1022 stelle di Ipparco aggiornato, la teoria matematica dei movimenti dei pianeti, del Sole e della Luna, e le tavole che permettevano di calcolare le posizioni degli astri per qualsiasi data. Rimase il testo astronomico di riferimento assoluto in Europa e nel mondo islamico per oltre 1400 anni.",
-    "wikipediaSlug": "Almagest",
+    "wikipediaSlug": "Tolomeo",
     "isCosmic": false
   },
   {
@@ -4486,7 +4486,7 @@
     "category": "arte",
     "tipo": "opera",
     "description": "La Venere di Milo è una statua in marmo pario alta circa 2 metri, scoperta nel 1820 sull'isola di Melo (Milos) nelle Cicladi. Datata tra il 130 e il 100 a.C., è attribuita allo scultore Alexandros di Antiochia. Raffigura quasi certamente la dea Afrodite, anche se alcune ipotesi la identificano con Anfitrite. La scultura è universalmente considerata un simbolo di bellezza femminile ideale: nonostante la perdita delle braccia avvenuta durante il ritrovamento, la figura emana equilibrio, eleganza e sensualità. Oggi è conservata al Museo del Louvre di Parigi, dove è una delle opere più visitate al mondo.",
-    "wikipediaSlug": "Venus_de_Milo",
+    "wikipediaSlug": "Venere_di_Milo",
     "isCosmic": false
   },
   {
@@ -4498,7 +4498,7 @@
     "category": "arte",
     "tipo": "opera",
     "description": "Il gruppo scultoreo del Laocoonte è uno dei capolavori più drammatici dell'arte antica. Raffigura il sacerdote troiano Laocoonte e i suoi due figli avvolti dai serpenti marini, puniti dagli dei per aver tentato di avvertire i Troiani riguardo al cavallo di legno. Scoperto a Roma nel 1506 nei pressi delle Terme di Traiano, il gruppo fu subito acquistato da papa Giulio II e collocato nei Musei Vaticani, dove si trova tuttora. Plinio il Vecchio lo definì la più grande opera d'arte mai creata. La tensione muscolare, l'espressione di dolore e terrore nei volti ne fanno un'icona del pathos ellenistico.",
-    "wikipediaSlug": "Laocoön_and_His_Sons",
+    "wikipediaSlug": "Laocoonte_ed_i_suoi_figli",
     "isCosmic": false
   },
   {
@@ -4522,7 +4522,7 @@
     "category": "arte",
     "tipo": "luogo",
     "description": "Il Colosso di Rodi fu una gigantesca statua del dio Helios, patrono dell'isola di Rodi, eretta tra il 292 e il 280 a.C. dallo scultore Caro di Lindo per celebrare la resistenza della città all'assedio di Demetrio Poliorcete. Con un'altezza stimata di circa 33 metri, era considerata una delle Sette Meraviglie del Mondo Antico. La statua rimase in piedi per soli 56 anni prima di essere abbattuta da un terremoto nel 226 a.C. I resti giacquero per secoli sul fondale del porto. Ancora oggi la sua posizione esatta e la sua forma sono oggetto di dibattito tra gli studiosi, alimentando il fascino di questa leggenda dell'antichità.",
-    "wikipediaSlug": "Colossus_of_Rhodes",
+    "wikipediaSlug": "Il_colosso_di_Rodi",
     "isCosmic": false
   },
   {
@@ -4558,7 +4558,7 @@
     "category": "arte",
     "tipo": "opera",
     "description": "L'Apoxyomenos, che significa 'colui che si raschia', è una scultura in bronzo creata da Lisippo di Sicione intorno al 320 a.C., nota oggi attraverso una copia marmorea conservata ai Musei Vaticani. Rappresenta un atleta mentre si ripulisce il sudore e la polvere dalla pelle con lo strigile, uno strumento appuntito usato nelle palestre greche. Lisippo rivoluzionò la scultura greca abbandonando le proporzioni canoniche di Policleto e introducendo una figura più snella, con una testa più piccola rispetto al corpo, che crea un effetto di slancio verso l'alto. L'opera segna il passaggio tra arte classica ed ellenistica.",
-    "wikipediaSlug": "Apoxyomenos",
+    "wikipediaSlug": "Apoxyómenos",
     "isCosmic": false
   },
   {
@@ -4774,7 +4774,7 @@
     "category": "filosofia",
     "tipo": "persona",
     "description": "Nagarjuna (II sec. d.C.), monaco buddista dell'India meridionale, è il più importante filosofo del Buddhismo Mahayana dopo il Buddha stesso. La sua scuola Madhyamaka (\"Via di mezzo\") elaborò la dottrina della Sunyata (vuoto): tutti i fenomeni sono privi di esistenza intrinseca, esistono solo in relazione ad altri fenomeni (dipendenza originale). Con i \"Mūlamadhyamakakārikā\" dimostrò per via logica che ogni concetto filosofico — inclusi quelli di Dio, io, causa, tempo — si contraddice se analizzato rigorosamente. Il suo pensiero influenzò tutte le scuole buddhiste successive in Cina, Tibet, Giappone.",
-    "wikipediaSlug": "Nagarjuna",
+    "wikipediaSlug": "Nāgārjuna",
     "isCosmic": false
   },
   {
@@ -4881,7 +4881,7 @@
     "lng": 27.27,
     "category": "cosmo",
     "description": "Nel 585 a.C. il filosofo Talete di Mileto predice con successo un'eclissi solare, un evento che, secondo Erodoto, mette fine a una battaglia tra Lidi e Medi per lo stupore dei combattenti. La previsione sarebbe stata possibile sfruttando la conoscenza del ciclo di Saros, forse appresa dai Babilonesi durante i suoi viaggi. Talete è considerato il primo filosofo naturale dell'Occidente: cercava spiegazioni razionali dei fenomeni celesti in luogo di interpretazioni mitologiche. L'episodio segna un momento fondativo nella storia della scienza: l'astronomia come strumento di previsione razionale del futuro.",
-    "wikipediaSlug": "Thales_of_Miletus",
+    "wikipediaSlug": "Talete_di_Mileto",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4893,7 +4893,7 @@
     "lng": 23.73,
     "category": "cosmo",
     "description": "Anassagora di Clazomene, attivo ad Atene verso il 450 a.C., propone una spiegazione rivoluzionaria del Sole: non una divinità, ma una massa di pietra o metallo incandescente, più grande del Peloponneso, che brucia a causa del suo moto rapido. Sostiene che la Luna riflette la luce solare — intuizione corretta — e interpreta le eclissi come il passaggio della Luna davanti al Sole. Per queste idee, considerate empie, viene processato ad Atene e costretto all'esilio. Anassagora rappresenta il punto di rottura tra la concezione divina degli astri e il loro studio come corpi fisici naturali.",
-    "wikipediaSlug": "Anaxagoras",
+    "wikipediaSlug": "4180_Anaxagoras",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4905,7 +4905,7 @@
     "lng": 27.38,
     "category": "cosmo",
     "description": "Attorno al 370 a.C. il matematico e astronomo Eudosso di Cnido elabora il primo modello matematico del cosmo: un sistema di sfere omocentriche concentriche, centrate sulla Terra, i cui moti combinati spiegano i movimenti apparenti del Sole, della Luna e dei cinque pianeti allora noti. Il modello impiega 27 sfere distinte, ciascuna con un asse di rotazione diverso, e rappresenta il primo tentativo di descrivere il cielo con equazioni geometriche invece di semplici narrazioni. Pur incapace di spiegare le variazioni di luminosità dei pianeti (la prova che cambiano distanza dalla Terra), il sistema di Eudosso è il capostipite della modellistica astronomica matematica. La sua influenza pervade tutta la cosmologia aristotelica e tolemaica.",
-    "wikipediaSlug": "Eudoxus_of_Cnidus",
+    "wikipediaSlug": "Eudosso_di_Cnido",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4917,7 +4917,7 @@
     "lng": 23.73,
     "category": "cosmo",
     "description": "Attorno al 350 a.C. Aristotele sistematizza la cosmologia geocentrica nel trattato «Del Cielo» (De Caelo): la Terra è sferica, immobile al centro dell'universo, circondata da sfere celesti concentriche di etere immutabile che trasportano i pianeti e le stelle fisse. Il cosmo aristotelico è finito, eterno e gerarchicamente ordinato: la corruzione e il cambiamento appartengono solo al mondo sublunare. Aristotele fornisce anche argomenti osservativi a sostegno della sfericità terrestre (ombra circolare durante le eclissi lunari, diversa altezza delle stelle ai diversi latitudini). Questa visione cosmica, assorbita dalla scolastica medievale e dalla Chiesa, dominerà la cultura europea per quasi due millenni, fino alla rivoluzione copernicana.",
-    "wikipediaSlug": "Aristotle",
+    "wikipediaSlug": "Aristotele",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4929,7 +4929,7 @@
     "lng": 26.98,
     "category": "cosmo",
     "description": "Aristarco di Samo, astronomo greco vissuto intorno al 310-230 a.C., propone il primo modello eliocentrico documentato della storia: il Sole è al centro dell'universo, la Terra ruota su se stessa ogni giorno e orbita attorno al Sole in un anno. Per spiegare l'assenza di parallasse stellare visibile, Aristarco ipotizza che le stelle fisse siano a distanze immensamente maggiori di quanto si pensasse. Utilizza metodi geometrici per stimare le dimensioni relative e le distanze della Luna e del Sole, ottenendo risultati qualitativamente corretti. La sua teoria viene respinta dai contemporanei — incluso Archimede, che la riporta senza accettarla — e dovrà aspettare quasi 1800 anni per essere riscoperta da Copernico.",
-    "wikipediaSlug": "Aristarchus_of_Samos",
+    "wikipediaSlug": "Aristarco_di_Samo",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4953,7 +4953,7 @@
     "lng": 29.72,
     "category": "cosmo",
     "description": "Ipparco di Nicea, il più grande astronomo greco del II secolo a.C., compila il primo catalogo stellare sistematico con le posizioni di circa 850 stelle e introduce la scala di magnitudini per misurarne la luminosità, sistema ancora in uso nella forma moderna. Confrontando le sue osservazioni con quelle babilonesi precedenti, scopre la precessione degli equinozi: l'asse terrestre descrive lentamente un cono nel tempo (un giro completo in circa 26 000 anni), facendo slittare la posizione dei punti equinoziali rispetto alle stelle. Ipparco sviluppa anche un modello matematico del moto lunare di grande accuratezza, utilizzando per la prima volta la trigonometria in astronomia. Le sue opere, in gran parte perdute, sono la fonte principale di Tolomeo e costituiscono il fondamento dell'astronomia matematica greca.",
-    "wikipediaSlug": "Hipparchus",
+    "wikipediaSlug": "4000_Hipparchus",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4965,7 +4965,7 @@
     "lng": 29.9,
     "category": "cosmo",
     "description": "Claudio Tolomeo, astronomo greco-egizio del II secolo d.C. attivo ad Alessandria, redige l'Almagesto («il grande trattato»), la summa dell'astronomia antica: 13 libri che raccolgono e sistematizzano secoli di osservazioni greche e babilonesi in un modello matematico geocentrico di straordinaria potenza predittiva. Il sistema tolemaico utilizza cerchi deferenti, epicicli ed equanti per riprodurre con precisione le posizioni apparenti dei pianeti e prevederne i movimenti futuri. Sebbene fisicamente errato nella sua struttura (la Terra non è al centro del sistema solare), il modello è matematicamente efficiente: le tavole planetarie tolemaiche restano in uso per oltre 1400 anni. L'Almagesto è il testo astronomico fondamentale del Medioevo europeo e islamico e verrà superato solo con la rivoluzione copernicana del XVI secolo.",
-    "wikipediaSlug": "Almagest",
+    "wikipediaSlug": "Tolomeo",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6056,7 +6056,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Nimrod_(Bibbia)",
+    "wikipediaSlug": "Nimrod",
     "isCosmic": false
   },
   {
@@ -6080,7 +6080,7 @@
     "lng": 5.3825,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Pitea",
+    "wikipediaSlug": "Piteå",
     "isCosmic": false
   },
   {
@@ -6320,7 +6320,7 @@
     "lng": 27.2978,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": "Biante",
+    "wikipediaSlug": "Mazda_Biante",
     "isCosmic": false
   },
   {
@@ -6344,7 +6344,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Asa_(re)",
+    "wikipediaSlug": "Asa",
     "isCosmic": false
   },
   {
@@ -6548,7 +6548,7 @@
     "lng": 22.8475,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": "Battaglia_di_Cheronea_(338_a.C.)",
+    "wikipediaSlug": "Battaglia_di_Cheronea",
     "isCosmic": false
   },
   {
@@ -6692,7 +6692,7 @@
     "lng": 35.2342,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Acazia_(re_di_Giuda)",
+    "wikipediaSlug": "Acazia",
     "isCosmic": false
   },
   {
@@ -6716,7 +6716,7 @@
     "lng": 16.8168,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Ippaso_(filosofo)",
+    "wikipediaSlug": "Ippaso",
     "isCosmic": false
   },
   {
@@ -6728,7 +6728,7 @@
     "lng": 35.2342,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Manasse_(re)",
+    "wikipediaSlug": "Manasse",
     "isCosmic": false
   },
   {
@@ -6752,7 +6752,7 @@
     "lng": 35.0998,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Amon_(re)",
+    "wikipediaSlug": "Amon",
     "isCosmic": false
   },
   {
@@ -6764,7 +6764,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Massinissa",
+    "wikipediaSlug": "Masinissa",
     "isCosmic": false
   },
   {
@@ -6776,7 +6776,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Necao_II",
+    "wikipediaSlug": "Neco_Williams",
     "isCosmic": false
   },
   {
@@ -6848,7 +6848,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Ioram_(re_di_Giuda)",
+    "wikipediaSlug": "Ioram",
     "isCosmic": false
   },
   {
@@ -6884,7 +6884,7 @@
     "lng": 35.2342,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Ioas_(re_di_Giuda)",
+    "wikipediaSlug": "Ioas",
     "isCosmic": false
   },
   {
@@ -6896,7 +6896,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Iotam_(re)",
+    "wikipediaSlug": "Iotam",
     "isCosmic": false
   },
   {
@@ -6980,7 +6980,7 @@
     "lng": 27.2905,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Epicarmo",
+    "wikipediaSlug": "Epicharmus_of_Cos",
     "isCosmic": false
   },
   {
@@ -7076,7 +7076,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Osea_(re)",
+    "wikipediaSlug": "Osea",
     "isCosmic": false
   },
   {
@@ -7088,7 +7088,7 @@
     "lng": 22.5256,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Efestione",
+    "wikipediaSlug": "Ed_Eyestone",
     "isCosmic": false
   },
   {
@@ -7160,7 +7160,7 @@
     "lng": 17.1167,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Teano_(filosofa)",
+    "wikipediaSlug": "Teano",
     "isCosmic": false
   },
   {
@@ -7232,7 +7232,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Artabano_II",
+    "wikipediaSlug": "Artabanus_II_of_Parthia",
     "isCosmic": false
   },
   {
@@ -7244,7 +7244,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Mardonio_(generale)",
+    "wikipediaSlug": "Mardonio",
     "isCosmic": false
   },
   {
@@ -10064,7 +10064,7 @@
     "lng": 71.5675,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Kaniṣka",
+    "wikipediaSlug": "Kanishka",
     "isCosmic": false
   },
   {
@@ -11792,7 +11792,7 @@
     "lng": 28.976,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Teodosio_II",
+    "wikipediaSlug": "Teodosio_I_di_Bisanzio",
     "isCosmic": false
   },
   {
@@ -11852,7 +11852,7 @@
     "lng": 23.7222,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": "Isocrate",
+    "wikipediaSlug": "Isocrates",
     "isCosmic": false
   },
   {
@@ -11876,7 +11876,7 @@
     "lng": 23,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Stefano_protomartire",
+    "wikipediaSlug": "Stefano",
     "isCosmic": false
   },
   {
@@ -11888,7 +11888,7 @@
     "lng": 33.9,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Barnaba_(apostolo)",
+    "wikipediaSlug": "Barnaba",
     "isCosmic": false
   },
   {
@@ -12008,7 +12008,7 @@
     "lng": 108.8583,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Han_Wudi",
+    "wikipediaSlug": "Wu",
     "isCosmic": false
   },
   {
@@ -12104,7 +12104,7 @@
     "lng": 116.9326,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Gao_Zu_(imperatore_Han)",
+    "wikipediaSlug": "Gao_Zu",
     "isCosmic": false
   },
   {
@@ -12140,7 +12140,7 @@
     "lng": 12.6468,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Valentino_di_Terni",
+    "wikipediaSlug": "San_Valentino",
     "isCosmic": false
   },
   {
@@ -12308,7 +12308,7 @@
     "lng": 3.1255,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Vercingetorige",
+    "wikipediaSlug": "Vercingetorix",
     "isCosmic": false
   },
   {
@@ -12344,7 +12344,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Chefren",
+    "wikipediaSlug": "Khafre",
     "isCosmic": false
   },
   {
@@ -12932,7 +12932,7 @@
     "lng": 34.9,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Giovanni_evangelista",
+    "wikipediaSlug": "Giovanni",
     "isCosmic": false
   },
   {
@@ -13328,7 +13328,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Carino",
+    "wikipediaSlug": "Cariño_(disambiguation)",
     "isCosmic": false
   },
   {
@@ -13376,7 +13376,7 @@
     "lng": 26.5,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Ulfila",
+    "wikipediaSlug": "Ulfilas",
     "isCosmic": false
   },
   {
@@ -13388,7 +13388,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Micerino",
+    "wikipediaSlug": "Taka_Michinoku",
     "isCosmic": false
   },
   {
@@ -13424,7 +13424,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Osea_(profeta)",
+    "wikipediaSlug": "Osea",
     "isCosmic": false
   },
   {
@@ -13532,7 +13532,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Teodorico_I_(Visigoti)",
+    "wikipediaSlug": "Teodorico_III_Fernandez",
     "isCosmic": false
   },
   {
@@ -13556,7 +13556,7 @@
     "lng": 3.0869,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Avito",
+    "wikipediaSlug": "Avito.ru",
     "isCosmic": false
   },
   {
@@ -13664,7 +13664,7 @@
     "lng": 12.4828,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Tiberio_Sempronio_Gracco_(tribuno_della_plebe_133_a.C.)",
+    "wikipediaSlug": "Tiberio_Sempronio_Gracco",
     "isCosmic": false
   },
   {
@@ -13700,7 +13700,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Volusiano",
+    "wikipediaSlug": "Volusia_County,_Florida",
     "isCosmic": false
   },
   {
@@ -13748,7 +13748,7 @@
     "lng": 23.7281,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Dracone",
+    "wikipediaSlug": "Dracone_barge",
     "isCosmic": false
   },
   {
@@ -13784,7 +13784,7 @@
     "lng": 83.055,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Ānanda_(monaco)",
+    "wikipediaSlug": "Ānanda",
     "isCosmic": false
   },
   {
@@ -14480,7 +14480,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Nynetjer",
+    "wikipediaSlug": "Ninetjer",
     "isCosmic": false
   },
   {
@@ -15116,7 +15116,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Sobekneferu",
+    "wikipediaSlug": "Nefrusobek",
     "isCosmic": false
   },
   {
@@ -16124,7 +16124,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Bimbisara",
+    "wikipediaSlug": "Bimbisāra",
     "isCosmic": false
   },
   {
@@ -18392,7 +18392,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "Micene, nel Peloponneso, fu la citta piu potente del mondo greco tra il 1600 e il 1100 a.C.: la sua Porta dei Leoni, le tombe a pozzo e il tesoro di Agamennone la rendono emblema dell'Eta del Bronzo.",
-    "wikipediaSlug": "Mycenae",
+    "wikipediaSlug": "Micene",
     "isCosmic": false
   },
   {
@@ -18536,7 +18536,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "Veio fu una delle piu importanti citta-stato etrusche, situata a circa 15 km da Roma, e per secoli la sua principale rivale. Aveva oltre 100.000 abitanti e un'arte raffinata. Fu conquistata e distrutta da Roma nel 396 a.C. da parte di Camillo.",
-    "wikipediaSlug": "Veii",
+    "wikipediaSlug": "Veio",
     "isCosmic": false
   },
   {
@@ -18560,7 +18560,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "Neapolis (Citta Nuova) fu fondata intorno al 470 a.C. dai coloni cumani nella costa campana. Divenne una delle colonie greche piu prospere d'Italia e mantenne la sua identita greca anche sotto il dominio romano. L'odierna Napoli conserva nel sottosuolo il tracciato della citta ellenistica.",
-    "wikipediaSlug": "Neapolis_(Naples)",
+    "wikipediaSlug": "Neapolis",
     "isCosmic": false
   },
   {
@@ -18692,7 +18692,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "Genova (Genua in latino, Zena in ligure) ha origini preromane risalenti almeno al VI secolo a.C., quando era giÃ  un importante porto dei Liguri che commerciavano con Greci ed Etruschi lungo la costa tirrenica. Alleata con Roma dal 218 a.C., resistette all'invasione di Magone, fratello di Annibale, e divenne municipio romano. Nel Medioevo divenne una delle quattro Repubbliche Marinare e una delle potenze commerciali piÃ¹ importanti del Mediterraneo, con colonie dalla Crimea al Mar Nero.",
-    "wikipediaSlug": "Genoa",
+    "wikipediaSlug": "Genoa_Cricket_and_Football_Club",
     "isCosmic": false
   },
   {
@@ -18728,7 +18728,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "Lutetia (Parigi) fu fondata intorno al 250 a.C. dalla tribÃ¹ celtica dei Parisii su un'isola della Senna, l'odierna ÃŽle de la CitÃ©, e divenne un importante centro commerciale grazie alla sua posizione strategica sul fiume navigabile. Conquistata dai Romani nel 52 a.C. durante la campagna di Giulio Cesare, fu trasformata in cittÃ  romana con terme, anfiteatro e forum sulla riva sinistra. Dalla piccola Lutetia Ã¨ nata la moderna Parigi, capitale culturale d'Europa e cittÃ  piÃ¹ visitata al mondo.",
-    "wikipediaSlug": "Lutetia",
+    "wikipediaSlug": "Lutezia",
     "isCosmic": false
   },
   {
@@ -18836,7 +18836,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "Caesaraugusta (Saragozza) fu fondata nell'anno 15 a.C. dall'imperatore Augusto sul sito dell'ibero Salduie, alla confluenza dell'Ebro con i fiumi GÃ¡llego e Huerva, come colonia per veterani romani delle campagne cantabriche. Con oltre 25.000 abitanti, era una delle maggiori cittÃ  della Hispania romana, dotata di un foro, anfiteatro, teatro e porto fluviale. Il nome della cittÃ , che ricorda il fondatore imperiale, Ã¨ sopravvissuto attraverso le dominazioni visigota e islamica fino all'odierna Zaragoza.",
-    "wikipediaSlug": "Zaragoza",
+    "wikipediaSlug": "Saragozza",
     "isCosmic": false
   },
   {
@@ -19125,7 +19125,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Piccoli cilindri incisi in pietra dura usati in Mesopotamia come firma personale su tavolette d'argilla. Rotolati sull'argilla lasciavano un'impronta narrativa continua di miti, divinità e scene di vita.",
-    "wikipediaSlug": "Sigilli_Cilindrici"
+    "wikipediaSlug": "Sigillo_cilindrico"
   },
   {
     "id": "inanna-dea-sumera",
@@ -19245,7 +19245,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "La disciplina olimpica più pericolosa e costosa: una o due bighe trascinate da cavalli per 12 giri dello stadio (14 km circa). Introdotta nei Giochi nel 680 a.C., era l'evento più spettacolare, spesso letale per aurighi e cavalli.",
-    "wikipediaSlug": "Corsa_dei_Carri"
+    "wikipediaSlug": "Corsa_dei_carri"
   },
   {
     "id": "sistro-egizio",

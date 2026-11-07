@@ -212,7 +212,7 @@
     "lng": -83.2,
     "category": "geologia",
     "description": "Il Tiktaalik roseae, scoperto nel 2004 nell'Artico canadese (Nunavut), è il 'pesce mancante': un pesce con pinne simili a proto-zampe, collo mobile, polmoni primitivi. Vive 375 milioni di anni fa in estuari poco profondi. È il collegamento evolutivo tra i pesci e i tetrapodi (anfibi, rettili, mammiferi). 'Il giorno in cui i pesci hanno imparato a camminare.'",
-    "wikipediaSlug": "Tiktaalik",
+    "wikipediaSlug": "Tiktaalik_roseae",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -368,7 +368,7 @@
     "lng": 40,
     "category": "geologia",
     "description": "3,2 milioni di anni fa nella Grande Rift Valley etiopica vive 'Lucy' (Australopithecus afarensis): ritrovata nel 1974 a Hadar (Etiopia). Alta 1 metro, cervello da scimpanzé, ma cammina perfettamente eretta su due gambe. Le impronte di Laetoli (Tanzania, 3,6 Ma) — due ominidi che camminano nella cenere vulcanica — sono la prova più commovente della bipedia umana.",
-    "wikipediaSlug": "Lucy_(Australopithecus)",
+    "wikipediaSlug": "Lucy",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -380,7 +380,7 @@
     "lng": 36.1167,
     "category": "geologia",
     "description": "3,3 milioni di anni fa nel sito di Lomekwi 3 (Kenya) vengono usati i più antichi utensili di pietra conosciuti: schegge di selce per tagliare la carne e rompere le ossa. Prima si credeva che solo Homo habilis usasse strumenti (-2,5 Ma). La scoperta di Lomekwi 3 (2015) suggerisce che Australopithecus stesso li usasse. La tecnologia precede il cervello grande.",
-    "wikipediaSlug": "Lomekwian",
+    "wikipediaSlug": "Lomekwi",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -428,7 +428,7 @@
     "lng": 7.12,
     "category": "geologia",
     "description": "250.000 anni fa in Europa e Asia occidentale evolvono i Neanderthal (dalla valle di Neander, Germania). Cervello mediamente più grande del nostro, adattati al freddo glaciale, seppelliscono i morti con fiori, usano ornamenti, curano i feriti. Il sequenziamento del DNA di Svante Pääbo (Nobel 2022) rivela che si sono incrociati con Homo sapiens: il 2-4% del DNA degli europei è neanderthaliano.",
-    "wikipediaSlug": "Neanderthal",
+    "wikipediaSlug": "Homo_neanderthalensis",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -488,7 +488,7 @@
     "lng": 119.8708,
     "category": "geologia",
     "description": "Una mano in negativo (l'artista soffia pigmento rosso intorno alla mano) a Leang Timpuseng (Sulawesi, Indonesia) ha 45.500 anni — l'arte rupestre più antica del mondo (2021). Anche un maiale verrucoso dipinto a 45.500 anni è la più antica pittura figurativa conosciuta. Sfida l'idea che l'arte nasca in Europa: era già in Asia tentosmila anni prima dei grandi cicli europei.",
-    "wikipediaSlug": "Cave_paintings_in_Sulawesi",
+    "wikipediaSlug": "Sulawesi",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -668,7 +668,7 @@
     "lng": 10,
     "category": "geologia",
     "description": "15.000 anni fa (forse anche prima) il lupo grigio viene addomesticato dall'uomo paleolitico in Europa o Asia orientale — il dibattito continua. Il cane è il primo animale domestico, migliaia di anni prima delle pecore, capre e bovini. Aiuta nella caccia, guarda il campo, riscalda di notte. Il sequenziamento del DNA del 2016 suggerisce addomesticamento in Europa circa 40.000 anni fa.",
-    "wikipediaSlug": "Origin_of_the_domestic_dog",
+    "wikipediaSlug": "Domesticazione_del_cane",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1004,7 +1004,7 @@
     "lng": 33.4607,
     "category": "geologia",
     "description": "154 milioni di anni fa nelle foreste del Giurassico (Tanzania, Tendaguru Formation) vive il Brachiosaurus — uno dei più grandi animali terrestri mai vissuti: 26 m di lunghezza, 50 tonnellate, collo di 9 m. Si nutre di foglie di conifere e cycadacee ad altezze inaccessibili agli altri. Il suo cuore — stimato 400 kg — deve pompare il sangue fino alla testa a 9 m di altezza.",
-    "wikipediaSlug": "Brachiosaurus",
+    "wikipediaSlug": "Brachiosaurus_altithorax",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1064,7 +1064,7 @@
     "lng": 9.5375,
     "category": "geologia",
     "description": "1,2 miliardi di anni fa compariono le prime alghe rosse multicellulari (Bangiomorpha pubescens) — i fossili più antichi di eucariote multicellulare conosciuto, trovati nel Canada artico. Queste alghe si riproducono sessualmente — prima prova di riproduzione sessuale nella storia della vita. Il sesso — rimescolamento del materiale genetico — accelera enormemente l'evoluzione.",
-    "wikipediaSlug": "Bangiomorpha",
+    "wikipediaSlug": "Bangiomorpha_pubescens",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1100,7 +1100,7 @@
     "lng": -105,
     "category": "geologia",
     "description": "312 milioni di anni fa i rettili inventano l'uovo amniotico: un guscio impermeabile con membrane interne che proteggono l'embrione e mantengono l'umidità. Non più dipendenza dall'acqua per la riproduzione — l'uovo amniotico permette di vivere lontano dai fiumi. Da questo punto in poi rettili (e i loro discendenti: uccelli e mammiferi) colonizzano ogni habitat terrestre.",
-    "wikipediaSlug": "Amniote",
+    "wikipediaSlug": "Amniota",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1136,7 +1136,7 @@
     "lng": 120,
     "category": "geologia",
     "description": "400 milioni di anni fa nel Devoniano le prime vere scogliere coralline costruite da coralli tabulati e rugosi punteggiano i mari tropicali. Come le scogliere moderne, ospitano una biodiversità straordinaria. L'estinzione del Devoniano (-375 Ma) distrugge il 75% delle specie reef — le scogliere non si riprendono per 100 milioni di anni. Ancora oggi le scogliere coralline ospitano il 25% di tutta la vita marina.",
-    "wikipediaSlug": "Reef",
+    "wikipediaSlug": "Barriera_corallina",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1268,7 +1268,7 @@
     "lng": 33.6244,
     "category": "geologia",
     "description": "7.500 anni prima di Cristo a Shillourokambos (Cipro) viene sepolto un essere umano con un gatto accanto — prova della prima associazione felino-uomo. I gatti selvatici africani (Felis silvestris lybica) seguono i topi nei granai neolitici e vengono tollerati dagli agricoltori. A differenza dei cani, i gatti si sono 'auto-addomesticati': non è l'uomo a selezionarli, sono loro a scegliere di stare vicino all'uomo.",
-    "wikipediaSlug": "Cat#Domestication",
+    "wikipediaSlug": "Cat",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1328,7 +1328,7 @@
     "lng": 38,
     "category": "geologia",
     "description": "4.000 anni prima di Cristo in Etiopia e nel Corno d'Africa vengono addomesticati teff (Eragrostis tef) e sorgho (Sorghum bicolor). In parallelo in Africa occidentale si addomestica il miglio africano. L'Africa ha una propria rivoluzione agricola indipendente — diversa e contemporanea a quella della Mezzaluna Fertile. Queste colture sono resistenti alla siccità e ancora oggi fondamentali per la sicurezza alimentare africana.",
-    "wikipediaSlug": "Teff",
+    "wikipediaSlug": "Eragrostis_tef",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1412,7 +1412,7 @@
     "lng": 40.91,
     "category": "arte",
     "description": "6.000 anni prima di Cristo nella Siria settentrionale (Tell Halaf, sul confine turco) fiorisce la cultura di Halaf: produce la ceramica dipinta più bella del Neolitico — geometrie policrome, figure di animali, stelle. Si diffonde dalla Siria alla Mesopotamia e all'Iran. L'eccellenza artigianale implica specializzazione — ceramisti a tempo pieno, scambio commerciale, surplus agricolo. La società si complessifica.",
-    "wikipediaSlug": "Halaf_period",
+    "wikipediaSlug": "Tell_Halaf",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1628,7 +1628,7 @@
     "lng": -3.837,
     "category": "arte",
     "description": "Le grotte di Nerja (Málaga, Spagna) potrebbero ospitare pitture rupestri datate a 42.000 anni fa — potenzialmente le più antiche d'Europa, prodotte da Neanderthal (non Homo sapiens). La datazione del 2012 è controversa: molti archeologi chiedono conferma. Se verificata, significherebbe che i Neanderthal avevano comportamenti simbolici pari a quelli dei sapiens. Il dibattito sulla 'modernità comportamentale' dei Neanderthal continua.",
-    "wikipediaSlug": "Nerja_cave",
+    "wikipediaSlug": "Nerja",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1640,7 +1640,7 @@
     "lng": 25.7,
     "category": "storia",
     "description": "6.200 anni prima di Cristo il tell (collina artificiale formata da abitazioni sovrapposte) di Karanovo (Bulgaria) è il più importante sito neolitico dei Balcani: 14 strati di occupazione ininterrotta per 4.000 anni. La cultura Karanovo I definisce il Neolitico balcanico: ceramica a impressa, case rettangolari, agricoltura su loess. I Balcani sono il corridoio attraverso cui l'agricoltura anatolica raggiunge l'Europa centrale.",
-    "wikipediaSlug": "Karanovo",
+    "wikipediaSlug": "Nova_Zagora",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1844,7 +1844,7 @@
     "lng": 29.9838,
     "category": "arte",
     "description": "7.000 anni prima di Cristo il villaggio di Hacilar (Anatolia, Turchia) produce ceramica dipinta di eccezionale qualità: vasi con figure umane e animali in rosso su crema, oppure in nero su rosso. Le figure femminili (dee madri?) sono ubique. La ceramica di Hacilar è considerata tra le più belle del Neolitico mondiale. Nella fase successiva (5.500 a.C.) Hacilar produce i primi esempi di ceramica con decorazioni a spirale — pattern che si diffonderà in tutta Europa.",
-    "wikipediaSlug": "Hacilar",
+    "wikipediaSlug": "Hagilar",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1880,7 +1880,7 @@
     "lng": 116.802,
     "category": "arte",
     "description": "8.000 anni prima di Cristo (e anche molto prima) nella penisola di Murujuga / Burrup (Australia Occidentale) i popoli aborigeni incidono oltre un milione di petroglifi — la più grande raccolta di arte rupestre del mondo. Le incisioni mostrano animali oggi estinti, volti umani, figure cosmiche. Alcune risalgono a 50.000 anni fa — quando il livello del mare era più basso e Murujuga non era ancora una penisola. Candidato UNESCO.",
-    "wikipediaSlug": "Murujuga",
+    "wikipediaSlug": "Burrup_Peninsula",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1964,7 +1964,7 @@
     "lng": 133.78,
     "category": "musica",
     "description": "Il bullroarer — una tavoletta di legno legata a una corda che ruotata produce un rombo profondo — è usato dagli Aborigeni australiani da almeno 20.000 anni nelle cerimonie di iniziazione e comunicazione con il mondo degli spiriti. È uno degli strumenti musicali più diffusi al mondo, presente indipendentemente in Australia, Africa, Nuova Guinea e America precolombiana. Il suo suono imitante il tuono rappresenta la voce degli antenati.",
-    "wikipediaSlug": "Bullroarer",
+    "wikipediaSlug": "Rombo_(strumento_musicale)",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2061,7 +2061,7 @@
     "lng": null,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Tiu_(pharaoh)",
+    "wikipediaSlug": "Tiu",
     "isCosmic": false
   },
   {
@@ -2109,7 +2109,7 @@
     "category": "storia",
     "tipo": "evento",
     "description": "Le conchiglierie mesolitiche di Muge, in Portogallo, conservano i cimiteri di comunita di cacciatori-raccoglitori vissuti lungo il Tago 8.000 anni fa: i piu antichi cimiteri strutturati d'Europa occidentale.",
-    "wikipediaSlug": "Muge_mesolithic_shell_middens",
+    "wikipediaSlug": "Muge",
     "isCosmic": false
   },
   {
@@ -2145,7 +2145,7 @@
     "category": "geologia",
     "tipo": "evento",
     "description": "Theia e il nome del protopianeta delle dimensioni di Marte che colpi la giovane Terra circa 4,5 miliardi di anni fa. Il materiale espulso dall'impatto si aggrego in orbita formando la Luna. Senza questo evento catastrofico la Terra avrebbe un asse di rotazione instabile e probabilmente non ospiterebbe vita complessa.",
-    "wikipediaSlug": "Theia_(planet)",
+    "wikipediaSlug": "Theia",
     "isCosmic": false
   },
   {
@@ -2242,7 +2242,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Nei primissimi minuti dopo il Big Bang, idrogeno ed elio si formano per fusione nucleare. Questo processo fissa le proporzioni degli elementi leggeri nell'universo primordiale.",
-    "wikipediaSlug": "Nucleosintesi_Primordiale"
+    "wikipediaSlug": "Nucleosintesi_primordiale"
   },
   {
     "id": "radiazione-di-hawking",
@@ -2614,7 +2614,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Componente ipotetica che costituisce il 68% dell'energia dell'universo, responsabile dell'accelerazione dell'espansione cosmica. Scoperta nel 1998 con l'osservazione delle supernovae di tipo Ia.",
-    "wikipediaSlug": "Energia_Oscura"
+    "wikipediaSlug": "Energia_oscura"
   },
   {
     "id": "nebulosa-solare",
@@ -2662,7 +2662,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Increspature dello spazio-tempo predette da Einstein nel 1916 e rilevate per la prima volta da LIGO nel 2015. Generate da eventi cosmici catastrofici come la fusione di buchi neri o stelle di neutroni.",
-    "wikipediaSlug": "Onde_Gravitazionali"
+    "wikipediaSlug": "Onda_gravitazionale"
   },
   {
     "id": "pangea-supercontinente",
@@ -2794,7 +2794,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "I giganti del Pleistocene: mammut lanosi, rinoceronti lanosi, bradipi giganti e leoni americani. Questa megafauna si estinse tra 12.000 e 10.000 anni fa, probabilmente per il cambiamento climatico e la caccia umana.",
-    "wikipediaSlug": "Megafauna_Pleistocenica"
+    "wikipediaSlug": "Megafauna_pleistocenica"
   },
   {
     "id": "caccia-cooperativa-preistorica",
@@ -2986,7 +2986,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Cavità naturali nelle formazioni calcaree create dalla dissoluzione del carbonato di calcio da parte delle acque meteoriche. I Neanderthal le usarono come rifugi stagionali per centinaia di migliaia di anni.",
-    "wikipediaSlug": "Grotta_Carsica"
+    "wikipediaSlug": "Grotte_Carsiche_di_Sant'Angelo"
   },
   {
     "id": "ago-di-osso-paleolitico",

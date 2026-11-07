@@ -55,7 +55,7 @@
     "lng": -99.1332,
     "category": "storia",
     "description": "Nel 1325 gli Aztechi fondano Tenochtitlan (l'odierna Città del Messico) su un'isola nel lago Texcoco, dopo aver visto l'aquila che divora il serpente su un cactus. La città cresce fino a 300.000 abitanti — più grande di qualsiasi città europea contemporanea — con templi piramidali, acquedotti e mercati. Viene distrutta da Cortés nel 1521.",
-    "wikipediaSlug": "Tenochtitlan",
+    "wikipediaSlug": "Tenochtitlán",
     "isCosmic": false,
     "tipo": "luogo"
   },
@@ -91,7 +91,7 @@
     "lng": 35.9167,
     "category": "storia",
     "description": "Nella battaglia dello Yarmuk (636 d.C.) gli eserciti arabo-islamici del califfo Omar sconfiggono il Basileus Eraclio e conquistano la Siria, la Palestina e la Mesopotamia al Bisanzio. In dieci anni (632-642) l'Islam conquista un territorio vasto quanto l'Impero Romano: Siria, Egitto, Persia. Una delle più rapide espansioni militari della storia.",
-    "wikipediaSlug": "Battle_of_Yarmouk",
+    "wikipediaSlug": "Conquista_araba_della_Persia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -103,7 +103,7 @@
     "lng": -5.3536,
     "category": "storia",
     "description": "Nel 711 il generale berbero Tariq ibn Ziyad attraversa lo stretto che porta ancora il suo nome (Gibilterra = Jabal al-Tariq) con 7.000 uomini e sconfigge il re visigoto Roderico. In tre anni la penisola iberica è quasi interamente musulmana. Al-Andalus diventa per sette secoli il centro della cultura islamica in Europa, con Cordova come capitale.",
-    "wikipediaSlug": "Umayyad_conquest_of_Hispania",
+    "wikipediaSlug": "Tariq_ibn_Ziyad",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -139,7 +139,7 @@
     "lng": -1.3079,
     "category": "storia",
     "description": "Alfredo il Grande di Wessex, incoronato re a Winchester nel 871, è l'unico sovrano anglosassone chiamato 'Grande'. Ferma l'invasione danese, fonda la prima marina inglese, istituisce scuole, traduce testi latini in anglosassone e crea un codice di leggi basato sui Dieci Comandamenti. Winchester, la sua capitale, è ancora il centro del Wessex.",
-    "wikipediaSlug": "Alfred_the_Great",
+    "wikipediaSlug": "Alfredo_il_Grande",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -163,7 +163,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Il 2 febbraio 962 Papa Giovanni XII incorona a Roma il re tedesco Ottone I 'Imperatore dei Romani', fondando il Sacro Romano Impero. L'Impero, che si estende su Germania, Italia e Borgogna, sopravviverà — tra dissoluzione e rinascite — fino al 1806 quando Napoleone lo scioglie. Voltaire disse che 'non era né sacro, né romano, né un impero'.",
-    "wikipediaSlug": "Otto_I,_Holy_Roman_Emperor",
+    "wikipediaSlug": "Otto_I",
     "isCosmic": false,
     "tipo": "organizzazione"
   },
@@ -187,7 +187,7 @@
     "lng": -0.1278,
     "category": "storia",
     "description": "Il vichingo danese Canuto il Grande conquista l'Inghilterra nel 1016 diventando re di Inghilterra, Danimarca, Norvegia e Scozia — il più vasto impero del Nord europeo medievale. Convertito al Cristianesimo, governa con saggezza e giustizia. La leggenda del 'Re Canuto e le onde' (che ordina al mare di fermarsi per mostrare ai cortigiani i limiti del potere reale) è ancora celebre.",
-    "wikipediaSlug": "Cnut_the_Great",
+    "wikipediaSlug": "Canuto_il_Grande",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -211,7 +211,7 @@
     "lng": 28.9784,
     "category": "storia",
     "description": "Nel 1204 i Crociati della Quarta Crociata, invece di liberare Gerusalemme, saccheggiano la cristiana Costantinopoli per tre giorni: portano via tonnellate d'oro, reliquie e opere d'arte. I Cavalli di San Marco a Venezia vengono da lì. Lo scisma del 1054 tra Roma e Bisanzio diventa definitivo. L'Impero d'Oriente non si riprenderà mai del tutto.",
-    "wikipediaSlug": "Sack_of_Constantinople_(1204)",
+    "wikipediaSlug": "Quarta_crociata",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -235,7 +235,7 @@
     "lng": 13.3615,
     "category": "storia",
     "description": "Federico II, imperatore con sede a Palermo, parla sei lingue, scrive poesie d'amore (inventando la Scuola Siciliana, padre dell'italiano letterario), conduce esperimenti scientifici e firma un trattato con il sultano d'Egitto per avere Gerusalemme senza combattere. I contemporanei lo chiamano 'Stupor Mundi' (Stupore del Mondo). La Chiesa lo scomunica quattro volte.",
-    "wikipediaSlug": "Frederick_II,_Holy_Roman_Emperor",
+    "wikipediaSlug": "Federico_II",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -247,7 +247,7 @@
     "lng": 13.6604,
     "category": "filosofia",
     "description": "San Tommaso d'Aquino, nato a Roccasecca (Frosinone), sintetizza nella Summa Theologica il pensiero di Aristotele con la teologia cristiana: la ragione e la fede non si contraddicono. Il tomismo diventa la filosofia ufficiale della Chiesa cattolica. Canonizzato nel 1323, è chiamato 'Doctor Angelicus'. La sua opera è ancora il riferimento della filosofia scolastica.",
-    "wikipediaSlug": "Thomas_Aquinas",
+    "wikipediaSlug": "Tommaso_d'Aquino",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -259,7 +259,7 @@
     "lng": 11.8798,
     "category": "arte",
     "description": "Francesco Petrarca, nato ad Arezzo, viene incoronato poeta laureato sul Campidoglio a Roma nel 1341 — primo poeta a ricevere quell'onore dall'antichità. I suoi sonetti per Laura nel Canzoniere fissano la forma del sonetto moderno e inaugurano il petrarchismo europeo. Riscopre e copia manoscritti latini classici, fondando l'Umanesimo.",
-    "wikipediaSlug": "Petrarch",
+    "wikipediaSlug": "Petrarca",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -283,7 +283,7 @@
     "lng": 3.3885,
     "category": "storia",
     "description": "Il re dei Franchi Clodoveo I si converte al Cattolicesimo romano nel 496 — unico tra i re barbari a scegliere Roma invece dell'arianesimo. L'accordo con la Chiesa di Roma gli garantisce il sostegno del clero e della popolazione gallo-romana. La Francia nasce da questa alleanza tra i Franchi e la Chiesa: ancora oggi il presidente francese è titolare onorario di 'Chanoine de Latran'.",
-    "wikipediaSlug": "Clovis_I",
+    "wikipediaSlug": "Clodoveo_I",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -295,7 +295,7 @@
     "lng": 12.4534,
     "category": "filosofia",
     "description": "Papa Gregorio I il Grande (590-604 d.C.) trasforma il papato in potenza politica autonoma: negozia con i Longobardi, invia missionari in Inghilterra, riforma la liturgia (il canto gregoriano porta il suo nome), codifica la dottrina dei Sette Peccati Capitali. Di fronte al vuoto di potere lasciato dall'Impero, la Chiesa diventa il baluardo della civiltà latina.",
-    "wikipediaSlug": "Pope_Gregory_I",
+    "wikipediaSlug": "Gregorio_Magno",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -319,7 +319,7 @@
     "lng": 31.2262,
     "category": "storia",
     "description": "Nel 641 d.C. il generale Amr ibn al-As conquista Alessandria per i califfi di Medina, ponendo fine a mille anni di dominio greco-romano sull'Egitto. L'Islam trasforma profondamente il paese: lingua araba, religione islamica, nuova architettura. Il Cairo fonderà la sua identità come cuore del mondo arabo nelle decadi successive.",
-    "wikipediaSlug": "Muslim_conquest_of_Egypt",
+    "wikipediaSlug": "Conquista_araba_dell'Egitto",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -331,7 +331,7 @@
     "lng": 36.2918,
     "category": "storia",
     "description": "Mu'awiya ibn Abi Sufyan fonda il Califfato Omayyade con capitale a Damasco nel 661 d.C. Sposta il centro del potere islamico dall'Arabia alla Siria, crea una flotta islamica, trasforma il califfo in monarca e la carica in ereditaria — rottura traumatica che genera lo scisma Sunniti-Sciiti (Hussein muore a Karbala nel 680 d.C.).",
-    "wikipediaSlug": "Muawiya_I",
+    "wikipediaSlug": "Mu'awiya_ibn_Yazid",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -343,7 +343,7 @@
     "lng": 44.0241,
     "category": "filosofia",
     "description": "Il 10 ottobre 680 Hussein ibn Ali, nipote di Maometto, viene massacrato con 72 compagni dalle truppe del califfo omayyade a Karbala (Iraq). L'episodio causa la definitiva divisione dell'Islam in Sunniti (che accettano il califfo) e Sciiti (che seguono i discendenti di Alì). L'Ashura — commemorazione del martirio di Hussein — è ancora oggi celebrata con processioni in tutto il mondo sciita.",
-    "wikipediaSlug": "Battle_of_Karbala",
+    "wikipediaSlug": "Karbala",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -355,7 +355,7 @@
     "lng": 5.3823,
     "category": "storia",
     "description": "Il Trattato di Verdun (843) divide l'Impero Carolingio tra i tre nipoti di Carlo Magno: Francia Occidentale (Francia), Francia Orientale (Germania) e Lotaringia (Lorena + Italia). Per la prima volta emergono entità politiche che corrispondono alle nazioni europee moderne. I confini tra Francia e Germania nascono qui — e saranno causa di guerra fino al 1945.",
-    "wikipediaSlug": "Treaty_of_Verdun",
+    "wikipediaSlug": "Trattato_di_Verdun",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -367,7 +367,7 @@
     "lng": -4.7794,
     "category": "filosofia",
     "description": "Ibn Rushd (Averroè), medico e filosofo di Cordova, scrive i più influenti commenti alle opere di Aristotele. La traduzione latina dei suoi commenti nel XIII secolo riporta Aristotele all'Europa cristiana, provocando la rivoluzione scolastica di Tommaso d'Aquino. Dante lo colloca nel Limbo con i grandi pagani. La Scuola di Atene di Raffaello lo ritrae tra i filosofi.",
-    "wikipediaSlug": "Averroes",
+    "wikipediaSlug": "Averroè",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -379,7 +379,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Federico I Barbarossa ('Barba Rossa' per la sua folta barba rossa) viene incoronato imperatore a Roma nel 1155. Le sue campagne in Italia per imporre il dominio imperiale sulle città lombarde si scontrano con la Lega Lombarda — che lo sconfigge a Legnano (1176). Muore annegato nel fiume Salef durante la Terza Crociata. Il mito Barbarossa sopravvive nei secoli.",
-    "wikipediaSlug": "Frederick_Barbarossa",
+    "wikipediaSlug": "Federico_Barbarossa",
     "isCosmic": false,
     "tipo": "organizzazione"
   },
@@ -391,7 +391,7 @@
     "lng": 35.0686,
     "category": "storia",
     "description": "Il re inglese Riccardo I conduce la Terza Crociata (1189-1192) contro Saladino, conquistando Cipro e Acri ma non riuscendo a riprendere Gerusalemme. Stipula con Saladino un armistizio che garantisce ai Cristiani l'accesso ai luoghi santi. Catturato e imprigionato dall'imperatore Enrico VI al ritorno, viene liberato per un riscatto astronomico pagato dagli Inglesi.",
-    "wikipediaSlug": "Richard_I_of_England",
+    "wikipediaSlug": "Riccardo_Cuor_di_Leone",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -403,7 +403,7 @@
     "lng": -3.2994,
     "category": "storia",
     "description": "San Domenico di Guzman, castigliano, fonda nel 1216 l'Ordine dei Frati Predicatori (Domenicani) con l'obiettivo di combattere l'eresia catara attraverso la predicazione dotta. I Domenicani diventeranno i principali intellettuali della Chiesa medievale (Tommaso d'Aquino, Alberto Magno) e i principali inquisitori. Dante li chiama 'cagnolini di Dio' (Domini canes).",
-    "wikipediaSlug": "Dominic_de_Guzmán",
+    "wikipediaSlug": "Domenico_di_Guzmán",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -415,7 +415,7 @@
     "lng": 28.9784,
     "category": "arte",
     "description": "Nel 537 Giustiniano inaugura la nuova Santa Sofia a Costantinopoli, costruita in soli 5 anni con 10.000 operai. La cupola di 55 metri di diametro sembra 'sospesa da una catena d'oro dal cielo' (Procopio). Per mille anni è la chiesa più grande del mondo. Diventa moschea nel 1453 e oggi è museo-moschea.",
-    "wikipediaSlug": "Hagia_Sophia",
+    "wikipediaSlug": "Giustiniano_I",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -439,7 +439,7 @@
     "lng": 35.2137,
     "category": "storia",
     "description": "Il 15 luglio 1099 i crociati prendono Gerusalemme dopo tre anni di marcia dall'Europa. Il massacro che segue — musulmani ed ebrei indiscriminatamente — è tra i più brutali delle crociate. Nasce il Regno di Gerusalemme. L'incontro/scontro tra Occidente cristiano e mondo islamico segna per secoli le relazioni tra le due civiltà.",
-    "wikipediaSlug": "Siege_of_Jerusalem_(1099)",
+    "wikipediaSlug": "Prima_crociata",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -451,7 +451,7 @@
     "lng": -2.7284,
     "category": "storia",
     "description": "Re Alfredo del Wessex sconfigge i Vichinghi Danesi nella battaglia di Edington (878), difendendo l'ultimo regno anglosassone libero. Unifica l'Inghilterra, promuove l'alfabetizzazione in inglese antico, organizza la difesa con burghs (città fortezze). È l'unico monarca inglese chiamato 'il Grande'.",
-    "wikipediaSlug": "Alfred_the_Great",
+    "wikipediaSlug": "Alfredo_il_Grande",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -475,7 +475,7 @@
     "lng": 12.4534,
     "category": "storia",
     "description": "Il 2 febbraio 962 Papa Giovanni XII incorona Ottone I 'Imperatore dei Romani' a Roma. Nasce ufficialmente il Sacro Romano Impero della Nazione Germanica, che durerà fino al 1806 (quando Napoleone ne impone lo scioglimento). L'incoronazione lega per secoli la corona imperiale al benestare papale.",
-    "wikipediaSlug": "Holy_Roman_Empire",
+    "wikipediaSlug": "Ottone_I",
     "isCosmic": false,
     "tipo": "organizzazione"
   },
@@ -487,7 +487,7 @@
     "lng": 12.4534,
     "category": "filosofia",
     "description": "Papa Innocenzo III (pontificato 1198-1216) è il papa più potente della storia medievale: scomunica re Giovanni d'Inghilterra, indice la Quarta Crociata e quella contro gli Albigesi, convoca il IV Concilio Lateranense. Afferma che il papa è sopra i re come il sole è sopra la luna. L'apice del potere temporale della Chiesa.",
-    "wikipediaSlug": "Pope_Innocent_III",
+    "wikipediaSlug": "Papa_Innocenzo_III",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -499,7 +499,7 @@
     "lng": 30.5234,
     "category": "storia",
     "description": "Nel dicembre 1240 l'esercito mongolo di Batu Khan distrugge Kiev — allora la più grande città dell'Europa orientale. La Russia mongola (Giogo Tataro) dura 250 anni. Mosca emergerà dalla distruzione come potenza egemone, raccogliendo attorno a sé i principati russi che resistono ai Mongoli.",
-    "wikipediaSlug": "Mongol_invasion_of_Kievan_Rus'",
+    "wikipediaSlug": "Mongoli",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -511,7 +511,7 @@
     "lng": 10.4017,
     "category": "arte",
     "description": "Francesco Petrarca muore ad Arquà (Padova) nel 1374, lasciando il Canzoniere — 366 liriche per Laura de Noves, donna che amò per decenni senza essere ricambiato. Il sonetto petrarchesco diventa il modello della lirica europea per due secoli: Shakespeare, Sidney, Ronsard, Camões lo imitano. Petrarca è il primo intellettuale moderno.",
-    "wikipediaSlug": "Canzoniere_(Petrarch)",
+    "wikipediaSlug": "Petrarca",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -535,7 +535,7 @@
     "lng": -21.8954,
     "category": "storia",
     "description": "Nell'874 il norreno Ingólfr Arnarson diventa il primo colono permanente dell'Islanda a Reykjavík. Nel giro di 60 anni 20.000-30.000 Vichinghi colonizzano l'isola. L'Althing, fondato nel 930, è il parlamento più antico del mondo ancora in funzione. Dal 985 Erik il Rosso partirà dall'Islanda per raggiungere la Groenlandia.",
-    "wikipediaSlug": "Settlement_of_Iceland",
+    "wikipediaSlug": "Vichinghi",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -571,7 +571,7 @@
     "lng": -5.9823,
     "category": "storia",
     "description": "Isidoro di Siviglia (560-636), vescovo e dotto, compila le Etymologiae: la prima enciclopedia del Medioevo, 20 volumi che raccolgono tutto il sapere tardoantico — grammatica, retorica, matematica, medicina, storia naturale. Diventa il testo di riferimento per le scuole monastiche medievali per 500 anni.",
-    "wikipediaSlug": "Isidore_of_Seville",
+    "wikipediaSlug": "Isidoro_di_Siviglia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -595,7 +595,7 @@
     "lng": 28.9784,
     "category": "storia",
     "description": "Il Terzo Concilio di Costantinopoli (680-681) condanna il monotelismo — la dottrina secondo cui Cristo ha un'unica volontà — e afferma che Cristo ha due volontà, divina e umana. La questione teologica riflette il conflitto politico tra Costantinopoli e Roma per il controllo della Chiesa.",
-    "wikipediaSlug": "Third_Council_of_Constantinople",
+    "wikipediaSlug": "Terzo_Concilio_di_Costantinopoli",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -607,7 +607,7 @@
     "lng": 39.8579,
     "category": "storia",
     "description": "L'Hajj, il pellegrinaggio alla Mecca, è uno dei cinque pilastri dell'Islam. Ogni anno milioni di fedeli convergono sulla città santa per circumnavigare la Kaaba, il cubo rivestito di seta nera al centro della Grande Moschea. L'Hajj è la più grande riunione di persone in un unico luogo della storia.",
-    "wikipediaSlug": "Hajj",
+    "wikipediaSlug": "Ḥajj",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -619,7 +619,7 @@
     "lng": 12.4534,
     "category": "storia",
     "description": "Nel 756 il re dei Franchi Pipino il Breve dona al Papa i territori dell'Esarcato di Ravenna appena sottratti ai Longobardi: nasce lo Stato Pontificio, che durerà fino al 1870. La Donazione di Pipino segna l'inizio del potere temporale dei papi e dell'alleanza tra la Chiesa di Roma e il regno franco che porterà a Carlo Magno.",
-    "wikipediaSlug": "Donation_of_Pepin",
+    "wikipediaSlug": "Donazione_di_Pipino",
     "isCosmic": false,
     "tipo": "organizzazione"
   },
@@ -631,7 +631,7 @@
     "lng": 8,
     "category": "storia",
     "description": "Carlo Magno conquista i Sassoni pagani della Germania settentrionale in 32 anni di guerra (772-804). Il massacro di Verden (782) — 4.500 Sassoni decapitati in un giorno — è il più grave crimine documentato del suo regno. I Sassoni convertiti al Cristianesimo vengono integrati nell'Impero Franco.",
-    "wikipediaSlug": "Saxon_Wars",
+    "wikipediaSlug": "Carlo_Magno",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -679,7 +679,7 @@
     "lng": 13.3615,
     "category": "storia",
     "description": "Nel 1072 i Normanni guidati da Ruggero d'Altavilla completano la conquista della Sicilia musulmana con la presa di Palermo. Il Regno di Sicilia diventa uno dei centri più cosmopoliti del Medioevo: Arabi, Greci, Normanni convivono. Sotto Ruggero II (1130-1154) fiorisce una cultura unica di sintesi.",
-    "wikipediaSlug": "Emirate_of_Sicily",
+    "wikipediaSlug": "Normanni",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -691,7 +691,7 @@
     "lng": 12.4534,
     "category": "filosofia",
     "description": "Papa Gregorio VII (1073-1085) lancia la riforma gregoriana contro la simonia e il nicolaismo. La lotta per le investiture con l'imperatore Enrico IV culmina a Canossa (1077): l'imperatore umiliato nella neve chiede perdono al papa. Segna il trionfo del potere papale sul potere imperiale nel Medioevo centrale.",
-    "wikipediaSlug": "Gregorian_Reform",
+    "wikipediaSlug": "Riforma_Gregoriana",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -703,7 +703,7 @@
     "lng": 3.0863,
     "category": "filosofia",
     "description": "Il 27 novembre 1095 Papa Urbano II predica a Clermont (Francia) la Prima Crociata per liberare Gerusalemme dai Turchi Selgiuchidi. 'Dieu lo volt!' (Dio lo vuole!) grida la folla. Centomila persone rispondono all'appello. È l'inizio delle Crociate che dureranno 200 anni e lasceranno un'eredità di conflitti millenaria.",
-    "wikipediaSlug": "Pope_Urban_II",
+    "wikipediaSlug": "Papa_Urbano_II",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -715,7 +715,7 @@
     "lng": -2.3597,
     "category": "scienza",
     "description": "Adelardo di Bath (1080-1152), studioso inglese, viaggia in Siria e Spagna per apprendere l'arabo e traduce in latino opere di matematica e astronomia arabe — tra cui gli Elementi di Euclide. È il primo ponte tra la scienza araba e l'Europa cristiana, anticipando la grande stagione dei traduttori del XII secolo.",
-    "wikipediaSlug": "Adelard_of_Bath",
+    "wikipediaSlug": "Adelardo_di_Bath",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -727,7 +727,7 @@
     "lng": 4.9779,
     "category": "storia",
     "description": "Bernardo di Chiaravalle (1090-1153) fonda l'abbazia di Clairvaux nel 1115 e diventa il religioso più influente del suo secolo. Predica la Seconda Crociata, condanna Abelardo per eresia, ispira l'Ordine dei Templari. La sua teologia mistica e il suo carisma personale modellano la spiritualità medievale del XII secolo.",
-    "wikipediaSlug": "Bernard_of_Clairvaux",
+    "wikipediaSlug": "San_Bernardo_di_Chiaravalle",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -739,7 +739,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Attorno al 1118 a Parigi Pierre Abelardo, il più brillante filosofo del suo tempo, si innamora della sua allieva Eloisa. Lo zio di lei lo fa castrare. Abelardo diventa monaco, Eloisa badessa. La loro corrispondenza è il più straordinario epistolario d'amore medievale. Abelardo usa la logica per analizzare la teologia — rivoluzione intellettuale.",
-    "wikipediaSlug": "Peter_Abelard",
+    "wikipediaSlug": "Abelardo_ed_Eloisa",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -751,7 +751,7 @@
     "lng": 9.1705,
     "category": "storia",
     "description": "Nel 1167 i comuni dell'Italia settentrionale fondano la Lega Lombarda contro l'imperatore Federico Barbarossa che minaccia la loro autonomia. La Lega vince la battaglia di Legnano nel 1176 — la prima vittoria di una coalizione borghese contro una forza feudale. Nasce l'idea di autonomia comunale italiana.",
-    "wikipediaSlug": "Lombard_League",
+    "wikipediaSlug": "Lega_Lombarda",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -763,7 +763,7 @@
     "lng": 29.9553,
     "category": "filosofia",
     "description": "Il rabbino Mosè Maimonide (1135-1204), nato a Cordoba e medico di corte ad Alessandria d'Egitto, scrive la Guida dei Perplessi: reconciliazione tra filosofia aristotelica e fede ebraica. La sua opera influenza Tommaso d'Aquino e il pensiero cristiano medievale. Il più grande filosofo ebraico del Medioevo.",
-    "wikipediaSlug": "Maimonides",
+    "wikipediaSlug": "Mosè_Maimonide",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -799,7 +799,7 @@
     "lng": 31.8133,
     "category": "storia",
     "description": "La Quinta Crociata (1217-1221) tenta di conquistare l'Egitto per usarlo come base verso Gerusalemme. Presa Damietta (1219), i crociati avanzano verso Il Cairo ma vengono intrappolati dall'inondazione del Nilo. San Francesco d'Assisi va a predicare al Sultano Al-Kamil. La crociata termina con una resa umiliante.",
-    "wikipediaSlug": "Fifth_Crusade",
+    "wikipediaSlug": "Quinta_crociata",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -823,7 +823,7 @@
     "lng": 35.2137,
     "category": "storia",
     "description": "Nel 1229 l'imperatore Federico II ottiene Gerusalemme con una trattativa diplomatica con il Sultano Al-Kamil: senza un solo scontro armato. Il Papa lo aveva scomunicato per non aver combattuto. Federico si incorona Re di Gerusalemme da solo — nessun prelato vuole incoronare uno scomunicato. La 'crociata impossibile' riuscita.",
-    "wikipediaSlug": "Sixth_Crusade",
+    "wikipediaSlug": "Federico_II",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -835,7 +835,7 @@
     "lng": 13.3615,
     "category": "storia",
     "description": "Il 30 marzo 1282 la campana del Vespro a Palermo segnala l'inizio della rivolta contro gli occupanti francesi di Carlo d'Angiò. In poche ore vengono massacrati migliaia di Francesi in tutta la Sicilia. La rivolta, forse organizzata da Pedro III d'Aragona, espelle i Francesi dall'isola — un colpo di stato degno di un film.",
-    "wikipediaSlug": "Sicilian_Vespers",
+    "wikipediaSlug": "Vespri_siciliani",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -919,7 +919,7 @@
     "lng": 9.1705,
     "category": "storia",
     "description": "Nel 1450 il condottiero Francesco Sforza conquista Milano e fonda la Signoria degli Sforza. Sotto il suo ducato e quello del figlio Ludovico il Moro, Milano diventa il centro del Rinascimento lombardo: Leonardo da Vinci vi trascorre 18 anni dipingendo l'Ultima Cena e progettando macchine impossibili.",
-    "wikipediaSlug": "Francesco_I_Sforza",
+    "wikipediaSlug": "Francesco_Sforza",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -931,7 +931,7 @@
     "lng": 9.1705,
     "category": "storia",
     "description": "Nel 568 i Longobardi guidati dal re Alboino attraversano le Alpi e invadono l'Italia settentrionale devastata dalla guerra gotica. In pochi anni controllano la Pianura Padana (Lombardia — da 'Longobardi'). Il loro dominio dura fino al 774, quando Carlo Magno li sconfigge. Il diritto longobardo influenza a lungo l'Italia settentrionale.",
-    "wikipediaSlug": "Lombards",
+    "wikipediaSlug": "Longobardi",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -943,7 +943,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Dal 535 al 554 il generale Belisario, incaricato da Giustiniano, combatte la guerra più lunga e devastante della storia italiana per strappare la penisola agli Ostrogoti. 18 anni di battaglie da Napoli a Ravenna. L'Italia viene devastata: la popolazione scende a un terzo, le città sono rovine. La 'riconquista' imperiale apre la via ai Longobardi.",
-    "wikipediaSlug": "Gothic_War_(535–554)",
+    "wikipediaSlug": "Guerra_gotica",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -955,7 +955,7 @@
     "lng": 28.9784,
     "category": "storia",
     "description": "Procopio di Cesarea (500-565), segretario di Belisario, scrive la Storia Segreta (Anecdota): il libro più scandaloso del Medioevo. Dopo aver esaltato Giustiniano nelle opere ufficiali, nella storia 'segreta' lo descrive come un demone e Teodora come un'ex prostituta. Pubblicato dopo la morte, rivela il lato oscuro dell'età giustinianea.",
-    "wikipediaSlug": "Procopius",
+    "wikipediaSlug": "Procopio_di_Cesarea",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -991,7 +991,7 @@
     "lng": 14.4208,
     "category": "storia",
     "description": "Carlo IV (1346-1378), re di Boemia e imperatore, trasforma Praga nella capitale del Sacro Romano Impero e la più grande città dell'Europa centrale. Fonda l'Università di Praga (1348, la prima Europa centrale), il Castello di Praga, il Ponte Carlo. Praga diventa la 'Città d'Oro' — centro culturale e politico d'Europa.",
-    "wikipediaSlug": "Charles_IV,_Holy_Roman_Emperor",
+    "wikipediaSlug": "Carlo_IV_di_Boemia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1027,7 +1027,7 @@
     "lng": 37.6173,
     "category": "storia",
     "description": "Ivan III il Grande (1462-1505) libera Mosca dal Giogo Tataro nel 1480 senza combattere — i Mongoli si ritirano dal fiume Ugra. Unifica i principati russi attorno a Mosca, si sposa con Sofia Paleologa (nipote dell'ultimo imperatore di Bisanzio) e adotta l'aquila bicefala. Si proclama 'Sovrano di tutta la Russia'.",
-    "wikipediaSlug": "Ivan_III_of_Russia",
+    "wikipediaSlug": "Ivan_III_di_Russia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1051,7 +1051,7 @@
     "lng": -89.6165,
     "category": "storia",
     "description": "Tra il 250 e il 900 d.C. la civiltà Maya raggiunge il suo apice classico in Mesoamerica (Messico, Guatemala, Belize): città-stato come Tikal, Palenque, Copan con piramidi, archivi geroglifici, il calendario più preciso del mondo antico, sistemi astronomici sofisticati. L'astronomia maya prevede con precisione i cicli di Venere.",
-    "wikipediaSlug": "Maya_civilization",
+    "wikipediaSlug": "Maya",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1075,7 +1075,7 @@
     "lng": -4.7794,
     "category": "storia",
     "description": "Nel 1195 il califfo almohade Al-Mansur esilia Averroè a Lucena (Cordova) accusandolo di eresia per i suoi commenti filosofici. Dieci anni prima aveva ordinato a Averroè di scrivere riassunti di Aristotele. La tensione tra filosofia razionale e fede islamica esplode: Averroè viene riabilitato poco prima di morire nel 1198.",
-    "wikipediaSlug": "Averroes",
+    "wikipediaSlug": "Averroè",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1087,7 +1087,7 @@
     "lng": 1.488,
     "category": "storia",
     "description": "La Scuola di Chartres (XI-XII secolo), presso la Cattedrale di Chartres, è il primo centro di filosofia naturalistica del Medioevo. Adelardo di Bath, Teodorico di Chartres, Bernardo Silvestre studiano la natura con metodo razionale — anticipando lo spirito scientifico del XIII secolo. La cattedrale gotica di Chartres con le sue vetrate è costruita nello stesso spirito.",
-    "wikipediaSlug": "School_of_Chartres",
+    "wikipediaSlug": "Scuola_di_Chartres",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1099,7 +1099,7 @@
     "lng": 13.3615,
     "category": "storia",
     "description": "Ruggero II (1130-1154) è il re più cosmopolita del Medioevo: a Palermo il suo palazzo vede arabi, greci e normanni convivere. Finanzia il geografo arabo Al-Idrisi che disegna la mappa più precisa del mondo medievale. La Cappella Palatina con i suoi mosaici greco-normanni e i soffitti a muqarnas arabi è il suo capolavoro.",
-    "wikipediaSlug": "Roger_II_of_Sicily",
+    "wikipediaSlug": "Ruggero_II_di_Sicilia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1159,7 +1159,7 @@
     "lng": 108.9542,
     "category": "storia",
     "description": "La dinastia Tang (618-907) è l'era d'oro della Cina: la capitale Chang'an (Xi'an) con 1 milione di abitanti è la città più grande del mondo. La Seta viene esportata da Venezia all'India. Li Bai e Du Fu sono i più grandi poeti cinesi. La Cina accetta stranieri di ogni fede: cristiani nestoriani, zoroastriani, musulmani, manichei.",
-    "wikipediaSlug": "Tang_dynasty",
+    "wikipediaSlug": "Dinastia_Tang",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1171,7 +1171,7 @@
     "lng": 2.547,
     "category": "storia",
     "description": "Nel 751 Pippino il Breve, con l'approvazione di Papa Zaccaria, depone l'ultimo re merovingio e fonda la dinastia carolingia. Nel 754 dona al Papa la Pentapoli (Romagna) — la Donazione di Pippino fonda lo Stato Pontificio che durerà fino al 1870. La Chiesa ottiene il potere temporale, inizio del conflitto tra papi e imperatori.",
-    "wikipediaSlug": "Pepin_the_Short",
+    "wikipediaSlug": "Pipino_il_Breve",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1207,7 +1207,7 @@
     "lng": 28.9784,
     "category": "storia",
     "description": "Nel 726 l'imperatore Leone III ordina la distruzione delle icone religiose (immagini sacre) nell'Impero Bizantino. L'Iconoclastia divide l'Oriente cristiano per un secolo (726-843) e causa la rottura definitiva con Roma. Papa Gregorio II scomunica Leone. Il concilio di Nicea II (787) ripristina il culto delle icone. La disputa segna il divario tra Oriente e Occidente.",
-    "wikipediaSlug": "Byzantine_Iconoclasm",
+    "wikipediaSlug": "Iconoclasm",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1219,7 +1219,7 @@
     "lng": 16.6068,
     "category": "storia",
     "description": "Nel 863 i fratelli greci Cirillo e Metodio vengono inviati dall'imperatore Michele III di Bisanzio in Moravia (Repubblica Ceca) per evangelizzare gli Slavi. Cirillo crea l'alfabeto glagolitico (predecessore del cirillico) per trascrivere la lingua slava. La loro missione fonda la tradizione letteraria slava ortodossa — russo, bulgaro, serbo nascono qui.",
-    "wikipediaSlug": "Cyril_and_Methodius",
+    "wikipediaSlug": "Cirillo_e_Metodio",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1255,7 +1255,7 @@
     "lng": 11.2556,
     "category": "arte",
     "description": "Lorenzo Ghiberti vince nel 1401 il concorso per le porte nord del Battistero di Firenze contro Brunelleschi — il più famoso 'ballottaggio' artistico della storia. Le sue porte nord (1403-1424) e le 'Porte del Paradiso' est (1425-1452) rivoluzionano la scultura con la prospettiva nella bronzistica. Michelangelo le chiamerà 'degne di stare in paradiso'.",
-    "wikipediaSlug": "Gates_of_Paradise",
+    "wikipediaSlug": "Ghiberti",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1303,7 +1303,7 @@
     "lng": 7.3149,
     "category": "storia",
     "description": "Anselmo di Aosta (1033-1109), arcivescovo di Canterbury, enuncia nel Proslogion (1077) la prova ontologica dell'esistenza di Dio: 'Dio è ciò di cui non si può pensare nulla di più grande — dunque deve esistere anche nella realtà.' La prova è accettata da Cartesio, Leibniz e Hegel, rifiutata da Kant. Il dibattito continua ancora oggi.",
-    "wikipediaSlug": "Anselm_of_Canterbury",
+    "wikipediaSlug": "Anselmo_d'Aosta",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1315,7 +1315,7 @@
     "lng": 28.9784,
     "category": "storia",
     "description": "Basilio II (976-1025), detto 'il Bulgaroctono' (sterminatore di Bulgari), riporta l'Impero Bizantino al suo massimo splendore medievale. Nel 1014 cattura 15.000 soldati bulgari dopo la battaglia di Kleidion: li acceca tutti tranne uno ogni cento — lasciato con un occhio per guidare i ciechi. Il loro zar Samuel muore di crepacuore vedendoli arrivare.",
-    "wikipediaSlug": "Basil_II",
+    "wikipediaSlug": "Basilio_II",
     "isCosmic": false,
     "tipo": "luogo"
   },
@@ -1327,7 +1327,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Ottone III (996-1002), nipote di Ottone I, incorona il suo amico Gerberto d'Aurillac come Papa Silvestro II (il primo papa francese) e sogna una Renovatio Imperii Romani con Roma capitale. La sua morte a 21 anni spegne il progetto. Ma il suo pontificato crea l'istituzione che diventerà il Sacro Romano Impero per 800 anni.",
-    "wikipediaSlug": "Otto_III,_Holy_Roman_Emperor",
+    "wikipediaSlug": "Ottone_III_di_Sassonia",
     "isCosmic": false,
     "tipo": "organizzazione"
   },
@@ -1339,7 +1339,7 @@
     "lng": -1.0815,
     "category": "storia",
     "description": "Nel 927 Athelstan, nipote di Alfredo il Grande, unifica per la prima volta i regni anglosassoni in un unico regno d'Inghilterra. Sconfigge un'alleanza di Vichinghi, Scozzesi e Britanni nella battaglia di Brunanburh (937). La sua corte ad Exeter è la più colta d'Europa del suo tempo. È considerato il primo re d'Inghilterra.",
-    "wikipediaSlug": "Æthelstan",
+    "wikipediaSlug": "Athelstan",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1351,7 +1351,7 @@
     "lng": 31.2836,
     "category": "storia",
     "description": "Secondo la Cronaca di Nestore, nel 862 il capo vichingo Rurik viene chiamato dagli Slavi a governare Novgorod (Russia nord-occidentale). I suoi discendenti — i Rurikidi — governano la Russia per 700 anni. Vladimiro il Grande (980-1015) battezza la Rus' di Kiev al Cristianesimo ortodosso nel 988 — il momento fondativo della cultura russa.",
-    "wikipediaSlug": "Rurik",
+    "wikipediaSlug": "Rjurik",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1363,7 +1363,7 @@
     "lng": 30.5234,
     "category": "storia",
     "description": "Nel 882 il reggente vichingo Oleg di Novgorod conquista Kiev (Ucraina) e sposta lì la capitale dello stato vichingo-slavo. Appende il suo scudo alle porte di Costantinopoli (907) e strappa un trattato commerciale vantaggioso all'Impero Bizantino. La Rus' di Kiev — con lingua slava e religione ortodossa — è la diretta antenata della nazione russa.",
-    "wikipediaSlug": "Oleg_of_Novgorod",
+    "wikipediaSlug": "Oleg_di_Novgorod",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1375,7 +1375,7 @@
     "lng": 7.7521,
     "category": "scienza",
     "description": "Gerberto d'Aurillac (945-1003), eletto Papa Silvestro II nel 999, è il più grande scienziato medievale prima del XII secolo: studia nelle scuole arabe di Cordova, introduce i numeri arabi (con lo zero) in Europa, costruisce orologi meccanici e sfere armillari. Accusato dai nemici di essere un mago del diavolo per la sua straordinaria conoscenza.",
-    "wikipediaSlug": "Pope_Sylvester_II",
+    "wikipediaSlug": "Gerberto_d'Aurillac",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1399,7 +1399,7 @@
     "lng": 135.7681,
     "category": "arte",
     "description": "Intorno al 1008 la dama di corte giapponese Murasaki Shikibu completa la Storia di Genji (Genji Monogatari): 54 capitoli che seguono le avventure amorose del principe Genji alla corte Heian di Kyoto. È il primo romanzo psicologico della storia mondiale — 800 anni prima di Cervantes. La letteratura giapponese raggiunge il suo primo vertice.",
-    "wikipediaSlug": "The_Tale_of_Genji",
+    "wikipediaSlug": "Murasaki_Shikibu",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1435,7 +1435,7 @@
     "lng": -1.2544,
     "category": "storia",
     "description": "Oxford sviluppa il suo carattere universitario intorno al 1167 quando Enrico II vieta agli studenti inglesi di frequentare Parigi. I college medioevali — Merton (1264), Balliol (1263), University (1249) — creano il sistema tutorial ancora in uso. Oxford ha prodotto 28 primi ministri britannici, 69 Nobel e J.R.R. Tolkien.",
-    "wikipediaSlug": "University_of_Oxford",
+    "wikipediaSlug": "Università_di_Oxford",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1459,7 +1459,7 @@
     "lng": 11.3307,
     "category": "storia",
     "description": "Nel 1376 Caterina da Siena (1347-1380) — figlia di un tintore senese, mistica, che non sa scrivere ma detta lettere — persuade il Papa Gregorio XI a tornare da Avignone a Roma dopo 70 anni di 'cattività'. Scrive 383 lettere sopravvissute a papi, re e cardinali. Dichiarata Dottore della Chiesa nel 1970 — uno dei due soli donne con questo titolo.",
-    "wikipediaSlug": "Catherine_of_Siena",
+    "wikipediaSlug": "Caterina_da_Siena",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1471,7 +1471,7 @@
     "lng": 9.1705,
     "category": "arte",
     "description": "Intorno al 1490 Leonardo da Vinci disegna l'Uomo Vitruviano a Milano: la figura umana inscritta nel cerchio e nel quadrato secondo le proporzioni di Vitruvio. È il simbolo dell'armonia tra uomo e cosmo, la sintesi di arte e scienza, il manifesto dell'Umanesimo rinascimentale. Conservato alle Gallerie dell'Accademia di Venezia, raramente esposto.",
-    "wikipediaSlug": "Vitruvian_Man",
+    "wikipediaSlug": "Leonardo_da_Vinci",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1483,7 +1483,7 @@
     "lng": 6.1319,
     "category": "storia",
     "description": "Villibrordo (658-739), monaco anglosassone, evangelizza i Frisoni (Olanda) su incarico di Pipino di Herstal. Papa Sergio I lo consacra primo vescovo di Utrecht nel 695 — la diocesi più antica dei Paesi Bassi. Il suo discepolo Bonifacio continuerà l'evangelizzazione della Germania. Le missioni anglosassoni costruiscono la rete ecclesiastica dell'Europa carolingia.",
-    "wikipediaSlug": "Willibrord",
+    "wikipediaSlug": "Villibrordo",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1519,7 +1519,7 @@
     "lng": 14.0153,
     "category": "storia",
     "description": "Dal 827 al 902 gli Arabi conquistano progressivamente la Sicilia dai Bizantini, con Palermo capitale. La Sicilia araba (827-1072) è un centro culturale: giardini, bagni, poesia, agricoltura avanzata (agrumi, canna da zucchero, cotone). I Normanni la riconquistano tra il 1061 e il 1091 — ma l'influsso arabo resta nell'architettura e nella cultura siciliana.",
-    "wikipediaSlug": "Emirate_of_Sicily",
+    "wikipediaSlug": "Normanni",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1555,7 +1555,7 @@
     "lng": -3,
     "category": "storia",
     "description": "Offa (757-796), re di Mercia (Inghilterra centrale), costruisce l'Offa's Dyke — un argine di 240 km lungo il confine col Galles per contenere i Gallesi. È la più grande opera ingegneristica dell'Inghilterra medievale. Il primo re a essere chiamato 'rex Anglorum' (re degli Inglesi). Carlo Magno lo tratta come un pari — la prima relazione diplomatica tra Inghilterra e Europa continentale.",
-    "wikipediaSlug": "Offa_of_Mercia",
+    "wikipediaSlug": "Offa_di_Mercia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1663,7 +1663,7 @@
     "lng": 28.9784,
     "category": "storia",
     "description": "L'imperatore Anastasio I (491-518) riforma radicalmente il sistema fiscale di Bisanzio: abolisce la chrysargyron (tassa odiatissima sui mercanti), introduce il follis di rame come moneta commerciale stabile. Lascia al suo successore Giustino I un tesoro di 320.000 libbre d'oro. La buona amministrazione finanziaria permette a Giustiniano di riconquistare il Mediterraneo.",
-    "wikipediaSlug": "Anastasius_I_(emperor)",
+    "wikipediaSlug": "Anastasio_I",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1711,7 +1711,7 @@
     "lng": -3.7038,
     "category": "storia",
     "description": "Il re visigoto Recesvindo promulga nel 654 il Liber Iudiciorum — il codice di leggi visigoto che abolisce la separazione giuridica tra Visigoti e Romani in Spagna: una legge per tutti i sudditi. È uno dei più importanti codici giuridici del Medioevo. La Spagna visigota (418-711) crea la prima sintesi romano-germanica che sopravvivrà alla conquista araba.",
-    "wikipediaSlug": "Liber_Iudiciorum",
+    "wikipediaSlug": "Reccesvindo",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1723,7 +1723,7 @@
     "lng": 7.6261,
     "category": "storia",
     "description": "Nel 772 Carlo Magno inizia la lunga guerra contro i Sassoni pagani (772-804): 32 anni, interruzioni e rivolte. L'abbattimento dell'Irminsul (colonna sacra sassone) nel 772 è l'atto simbolico di rottura. Widukind, il capo sassone, si converte nel 785. La conversione forzata dei Sassoni crea il nucleo orientale dell'Impero Carolingio che diventerà la Germania.",
-    "wikipediaSlug": "Saxon_Wars",
+    "wikipediaSlug": "Carlo_Magno",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1771,7 +1771,7 @@
     "lng": 28.9784,
     "category": "storia",
     "description": "Zoe (978-1050) è una delle poche donne al potere a Bisanzio: figlia di Costantino VIII, governa l'Impero come imperatrice sovrana per periodi alternati tra il 1028 e il 1050 con tre mariti e un co-imperatore. Il mosaico di Zoe in Santa Sofia la ritrae giovane (anche se aveva 50 anni) — il volto del marito di turno era rilevato e sostituito.",
-    "wikipediaSlug": "Zoe_(empress)",
+    "wikipediaSlug": "Zoe_Porfirogenita",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1963,7 +1963,7 @@
     "lng": -4.7794,
     "category": "arte",
     "description": "Intorno al 1180 Ibn Rushd (Averroè) di Cordova scrive i suoi commentari ad Aristotele — che diventano il canale principale attraverso cui la filosofia aristotelica ritorna in Europa. Averroè difende la filosofia contro la teologia (Al-Ghazali): razionalità e fede non si contraddicono. Dante lo pone tra i grandi pagani del Limbo. Il Rinascimento aristotelico medievale — Tommaso d'Aquino sintetizza Aristotele e il Vangelo nella Summa Theologica (1265-74).",
-    "wikipediaSlug": "Averroes",
+    "wikipediaSlug": "Averroè",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1987,7 +1987,7 @@
     "lng": 12.3388,
     "category": "storia",
     "description": "Nel XIII secolo Venezia è la potenza commerciale e marittima dominante del Mediterraneo: la flotta più grande, il commercio con Oriente e Occidente, il Ducato come moneta di riferimento. Il sistema politico: il Doge eletto, il Consiglio dei Dieci, la Serenissima — oligarchia commerciale stabile per mille anni. La Quarta Crociata (1204) — i veneziani dirottano i crociati su Costantinopoli e la saccheggiano — mostra il pragmatismo veneziano. 'Prima i ducati, poi il Paradiso.'",
-    "wikipediaSlug": "Republic_of_Venice",
+    "wikipediaSlug": "Venezia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1999,7 +1999,7 @@
     "lng": 12.4964,
     "category": "arte",
     "description": "Nel 1274 Tommaso d'Aquino muore a 49 anni lasciando incompiuta la Summa Theologica — l'opera più ambiziosa della filosofia medievale: la sintesi tra teologia cristiana e filosofia aristotelica. Le 5 prove dell'esistenza di Dio, la legge naturale, la giustizia, la guerra giusta. Dottore della Chiesa nel 1323, patrono delle università cattoliche. Il tomismo rimane la filosofia ufficiale della Chiesa cattolica. 'Fides et ratio' — fede e ragione non si contraddicono.",
-    "wikipediaSlug": "Thomas_Aquinas",
+    "wikipediaSlug": "Tommaso_d'Aquino",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2035,7 +2035,7 @@
     "lng": 11.8762,
     "category": "arte",
     "description": "Intorno al 1305 Giotto di Bondone completa la decorazione della Cappella degli Scrovegni a Padova — 39 episodi della vita di Cristo e della Vergine. Giotto rompe con la tradizione bizantica piatta e gerarchica: i personaggi hanno volume, espressione emotiva, rapporto con lo spazio. Dante lo cita come il pittore che supera Cimabue. Vasari lo chiama il fondatore della pittura moderna. Giotto è il padre del Rinascimento — cento anni prima del Rinascimento.",
-    "wikipediaSlug": "Giotto_di_Bondone",
+    "wikipediaSlug": "Giotto",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2047,7 +2047,7 @@
     "lng": 11.3308,
     "category": "arte",
     "description": "Intorno al 1342 Francesco Petrarca inizia il 'Canzoniere' — 366 poesie (in maggioranza sonetti) per Laura de Noves, donna amata e mai posseduta. Il Canzoniere fonda la tradizione del sonetto europeo (Shakespeare, Sidney, Donne). Petrarca è anche il primo umanista: scopre lettere di Cicerone nell'archivio di Verona, valorizza la cultura classica latina come modello estetico. Sale il Monte Ventoso per il piacere di salirlo: il primo turista moderno?",
-    "wikipediaSlug": "Petrarch",
+    "wikipediaSlug": "Petrarca",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -2131,7 +2131,7 @@
     "lng": 12.3155,
     "category": "storia",
     "description": "Tra il 1100 e il 1350 Venezia costruisce la sua potenza commerciale: il monopolio del commercio con il Levante, l'arsenale come prima fabbrica moderna, la flotta di galee. Il Gran Consiglio aristocratico, il Doge, il sistema oligarchico stabile. Venezia media tra Islam e Occidente, tra Oriente e Europa. La Serenissima durera mille anni fino a Napoleone nel 1797.",
-    "wikipediaSlug": "Republic_of_Venice",
+    "wikipediaSlug": "Venezia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2179,7 +2179,7 @@
     "lng": 10.3953,
     "category": "arte",
     "description": "Il 6 aprile 1327 Francesco Petrarca vede Laura nella chiesa di Santa Chiara ad Avignone: nascono i 366 sonetti del Canzoniere. Petrarca e il ponte tra Medioevo e Rinascimento: studia i classici latini, valorizza l'individuo, conia il termine Umanesimo. L'amore per Laura e il modello dell'amore cortese laicizzato che ispira la lirica europea.",
-    "wikipediaSlug": "Petrarch",
+    "wikipediaSlug": "Petrarca",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -2203,7 +2203,7 @@
     "lng": 37.6173,
     "category": "storia",
     "description": "Nel 1237 Batu Khan, nipote di Gengis Khan, invade la Rus di Kiev: Vladimir, Mosca, Kiev vengono rase al suolo. La Russia viene dominata dalla Orda d'Oro per 250 anni fino al 1480. Il giogo tataro-mongolo segna la Russia diversamente dall'Europa occidentale. Ivan il Terribile pone fine alla dominazione mongola nel 1480.",
-    "wikipediaSlug": "Mongol_invasion_of_Kievan_Rus'",
+    "wikipediaSlug": "Mongoli",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2287,7 +2287,7 @@
     "lng": 31.8133,
     "category": "storia",
     "description": "Dal 1217 al 1221 la Quinta Crociata attacca l'Egitto: conquista Damietta nel 1219 ma viene sconfitta nel Delta del Nilo. San Francesco d'Assisi incontra il sultano Al-Kamil durante la crociata cercando la conversione pacifica. L'incontro tra Francesco e il sultano e il piu significativo dialogo interreligioso medievale.",
-    "wikipediaSlug": "Fifth_Crusade",
+    "wikipediaSlug": "Quinta_crociata",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2383,7 +2383,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Dopo la Peste Nera del 1347-51 la Danza Macabra diventa tema artistico dominante: la Morte che balla con papi, re, nobili e poveri, eguagliatore universale. I cicli di affreschi nelle chiese e cimiteri di tutta Europa: Lubeck, Parigi, Basilea, Tallinn. L'arte tardo-medievale e ossessionata dalla morte: il Trionfo della Morte, i teschi, i vermi.",
-    "wikipediaSlug": "Danse_Macabre",
+    "wikipediaSlug": "Danse_macabre",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2455,7 +2455,7 @@
     "lng": 66.9757,
     "category": "storia",
     "description": "Dal 1370 al 1405 Timur il Lame, Tamerlano, conquista dalla Persia all'India, dalla Russia all'Anatolia: le piramidi di teschi di Bagdad, la sconfitta dell'Impero Ottomano nel 1402. Samarcanda diventa la capitale di un breve impero culturale splendido. Tamerlano si proclama discendente di Gengis Khan. Il suo progetto di invasione della Cina si ferma con la sua morte nel 1405.",
-    "wikipediaSlug": "Timur",
+    "wikipediaSlug": "Tamerlano",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2479,7 +2479,7 @@
     "lng": 14.4378,
     "category": "storia",
     "description": "Carlo IV di Lussemburgo regna come imperatore dal 1355 al 1378 e fa di Praga la capitale culturale d'Europa: la cattedrale di San Vito, l'Universita di Praga nel 1348, il Ponte Carlo. La Bolla d'Oro del 1356 regola l'elezione imperiale: sette principi elettori. Carlo e il modello del principe rinascimentale ante litteram, mecenate e politico abile.",
-    "wikipediaSlug": "Charles_IV,_Holy_Roman_Emperor",
+    "wikipediaSlug": "Carlo_IV_di_Boemia",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2563,7 +2563,7 @@
     "lng": 37.6173,
     "category": "storia",
     "description": "Dal 1237 al 1242 Batu Khan nipote di Gengis distrugge la Russia medievale: Kiev viene rasa al suolo nel 1240. Il Principato di Vladimir-Suzdal, Ryazan, Mosca bruciano. I Mongoli avanzano fino alla Polonia e Ungheria ma si ritirano alla morte del Gran Khan Ogedei. Il giogo tartaro dura 250 anni sulla Russia: influenza profonda sulla psicologia politica russa e sul suo isolazionismo.",
-    "wikipediaSlug": "Mongol_invasion_of_Rus'",
+    "wikipediaSlug": "Batu_Khan",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2575,7 +2575,7 @@
     "lng": 108.9398,
     "category": "arte",
     "description": "La Dinastia Tang 618-907 d.C. e la piu cosmopolita della storia cinese: la capitale Chang'an con 1 milione di abitanti e il centro del mondo. Li Bai e Du Fu sono i piu grandi poeti cinesi: la luna, il vino, l'amicizia, l'esilio. La ceramica Tang, la pittura su seta, il buddhismo Chan. La Via della Seta porta merci e culture dall'Asia Centrale alla Cina. La porcellana cinese conquista il mondo.",
-    "wikipediaSlug": "Tang_dynasty",
+    "wikipediaSlug": "Dinastia_Tang",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2587,7 +2587,7 @@
     "lng": 44.4009,
     "category": "scienza",
     "description": "Intorno all'830 Muhammad ibn Musa al-Khwarizmi pubblica a Baghdad il Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabalah: l'algebra. Al-jabr diventa algebra in latino. Il suo nome diventa algoritmo. La Casa della Sapienza di Baghdad traduce Aristotele, Euclide, Tolomeo, Galeno in arabo. Il numero zero arriva dall'India tramite gli Arabi. La civilta islamica salva e trasmette il sapere classico all'Europa.",
-    "wikipediaSlug": "Muhammad_ibn_Musa_al-Khwarizmi",
+    "wikipediaSlug": "Al-Khwarizmi",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -2611,7 +2611,7 @@
     "lng": 12.4534,
     "category": "filosofia",
     "description": "Papa Innocenzo III 1198-1216 e il pontefice al culmine del potere papale: il vicario di Cristo scomunica i re, lancia la Crociata albigese, convoca il IV Concilio Lateranense. Afferma che il papato sta al regno come il sole sta alla luna. Destituisce imperatori, detta le regole della transustanziazione e della confessione annuale. Il papato medievale non raggiunge mai piu questo potere.",
-    "wikipediaSlug": "Pope_Innocent_III",
+    "wikipediaSlug": "Papa_Innocenzo_III",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2719,7 +2719,7 @@
     "lng": 9.1859,
     "category": "storia",
     "description": "Federico I Barbarossa imperatore del Sacro Romano Impero tenta sei volte di sottomettere i comuni italiani: la Lega Lombarda guidata da Milano sconfigge il suo esercito a Legnano nel 1176. La Pace di Costanza del 1183 riconosce l'autonomia dei comuni. Federico muore annegato nel Saleph durante la Terza Crociata nel 1190. La sconfitta di Barbarossa rafforza il modello del comune italiano autogovernato.",
-    "wikipediaSlug": "Frederick_I_Holy_Roman_Emperor",
+    "wikipediaSlug": "Federico_Barbarossa",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2959,7 +2959,7 @@
     "lng": -99.1332,
     "category": "storia",
     "description": "Intorno al 1430 Tenochtitlan nell'attuale Messico raggiunge il suo apice: 200.000-300.000 abitanti su un'isola nel lago di Texcoco collegata alla terraferma da tre strade rialzate. Il Grande Tempio con piramidi gemelle. Il culto di Huitzilopochtli e Tlaloc: i sacrifici umani come meccanismo cosmologico per mantenere il sole in moto. Hernán Cortés nel 1519 descrive Tenochtitlan come la più bella città del mondo. Superiore a Madrid o Lisbona del tempo per organizzazione e dimensioni.",
-    "wikipediaSlug": "Tenochtitlan",
+    "wikipediaSlug": "Tenochtitlán",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3043,7 +3043,7 @@
     "lng": 11.2558,
     "category": "arte",
     "description": "Intorno al 1485 Sandro Botticelli dipinge la Nascita di Venere per Lorenzo de' Medici: la dea dell'amore che nasce dall'oceano su una conchiglia gigante. Il neoplatonismo di Ficino tradotto in pittura: la Bellezza come riflesso terreno dell'idea divina. La Primavera (1477-1478) con le Tre Grazie. Botticelli cadde in crisi religiosa con Savonarola e smise di dipingere per anni. Riscoperto nel XIX secolo dai Preraffaelliti: John Everett Millais lo porta in Inghilterra. La Nascita di Venere come icona dell'arte occidentale.",
-    "wikipediaSlug": "The_Birth_of_Venus",
+    "wikipediaSlug": "Botticelli",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -3055,7 +3055,7 @@
     "lng": 11.2558,
     "category": "arte",
     "description": "Intorno al 1440 Donatello completa il David in bronzo per i Medici: la prima statua a tutto tondo in bronzo dell'arte europea dopo l'antichità classica. Un giovanetto nudo con il piede sul capo di Golia: l'eros, la vittoria, la vulnerabilità come soggetti scultorei autonomi. Lo Zuccone (il profeta calvo) come ritratto psicologico brutale. Il Gattamelata a Padova: la prima statua equestre monumentale moderna. Donatello come il maestro che insegna scultura alla generazione di Michelangelo.",
-    "wikipediaSlug": "David_(Donatello)",
+    "wikipediaSlug": "Donatello",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3151,7 +3151,7 @@
     "lng": 4.8059,
     "category": "filosofia",
     "description": "Dal 1309 al 1377 i papi risiedono ad Avignone invece di Roma: il papato sotto l'influenza dei re di Francia. Clemente V trasferisce la sede. 7 papi successivi ad Avignone. Il Grande Scisma d'Occidente dal 1378: due papi rivali (poi tre), uno a Roma, uno ad Avignone, uno a Pisa. La crisi della Chiesa come istituzione universale. Il Concilio di Costanza del 1417 risolve il scisma con l'elezione di Martino V. Lo scisma come anticamera della Riforma Protestante.",
-    "wikipediaSlug": "Avignon_papacy",
+    "wikipediaSlug": "Avignon_Papacy",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -3247,7 +3247,7 @@
     "lng": 11.2558,
     "category": "arte",
     "description": "Intorno al 1486 Sandro Botticelli dipinge la Nascita di Venere per Lorenzo il Magnifico: il primo grande nudo femminile su tela del Rinascimento, la dea del mare nata dalla schiuma. Il neoplatonismo dell'Accademia Platonica di Firenze: la bellezza come riflesso del divino, Venere come simbolo dell'amore celeste. La Primavera (1477-82) come pendant. Botticelli dimenticato per 4 secoli, riscoperto dai Preraffaelliti nel XIX secolo. Oggi il quadro più famoso degli Uffizi.",
-    "wikipediaSlug": "The_Birth_of_Venus",
+    "wikipediaSlug": "Botticelli",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -3259,7 +3259,7 @@
     "lng": 12.3155,
     "category": "storia",
     "description": "Nel XV secolo Venezia come la più ricca potenza commerciale del Mediterraneo: il commercio delle spezie dall'Asia attraverso i mercati del Levante, la flotta dell'Arsenale (la prima fabbrica di stato moderna, capace di costruire una nave da guerra al giorno). La Banca del Giro (1619) come precursore della banca centrale. I trattati con i sultani ottomani. Venezia come la Repubblica più longeva della storia (697-1797). Il Canal Grande, i palazzi, la pittura (Bellini, Giorgione, Tiziano, Tintoretto). Marco Polo come il veneziano più famoso.",
-    "wikipediaSlug": "Republic_of_Venice",
+    "wikipediaSlug": "Venezia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3283,7 +3283,7 @@
     "lng": 10.4017,
     "category": "scienza",
     "description": "Nel 1202 Leonardo Fibonacci pubblica il Liber Abaci a Pisa: introduce i numeri arabi (0-9) e il sistema posizionale decimale in Europa occidentale. Prima usavano i numeri romani per i calcoli. I numeri arabi come la rivoluzione computazionale medievale: moltiplicazione e divisione diventano possibili su carta. La successione di Fibonacci (1,1,2,3,5,8,13...) nel contesto di un problema su conigli. Il Phi (sezione aurea) nella natura. La matematica commerciale come fondazione della banca fiorentina.",
-    "wikipediaSlug": "Fibonacci",
+    "wikipediaSlug": "Leonardo_Fibonacci",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3307,7 +3307,7 @@
     "lng": -4.7794,
     "category": "scienza",
     "description": "Nell'XI-XII secolo a Toledo e Palermo i traduttori arabo-latini trasmettono Aristotele all'Europa: Averroè (Ibn Rushd) come il Commentatore di Aristotele, tradotto da Michele Scoto. La riscoperta di Aristotele come la più grande rivoluzione intellettuale medievale. La logica, la fisica, la metafisica, l'etica di Aristotele: il corpus che Tommaso d'Aquino sintetizza con la teologia cristiana. La Casa della Saggezza a Baghdad (830) aveva tradotto i Greci in arabo; ora passano dall'arabo al latino.",
-    "wikipediaSlug": "Translation_Movement",
+    "wikipediaSlug": "Translation_movement",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3499,7 +3499,7 @@
     "lng": 11.6836,
     "category": "arte",
     "description": "Francesco Petrarca (1304-1374) come il primo umanista e il primo poeta moderno: il Canzoniere come la raccolta di 366 liriche in volgare toscano su Laura de Noves, donna amata e mai posseduta. Il sonetto petrarchesco (8+6 versi) come la forma poetica più influente della letteratura occidentale (adottata da Shakespeare, Sidney, Spenser). L'uomo che guarda a Roma classica come modello di civiltà. L'incoronazione poetica sul Campidoglio nel 1341. Petrarca come il fondatore dell'Umanesimo e della scrittura autobiografica moderna.",
-    "wikipediaSlug": "Petrarch",
+    "wikipediaSlug": "Petrarca",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3703,7 +3703,7 @@
     "lng": 39.61,
     "category": "storia",
     "description": "Umar ibn al-Khattab, secondo califfo dell'Islam (634-644), realizza in dieci anni la più rapida espansione militare della storia: conquista Siria, Iraq, Persia e Egitto, sottraendo all'Impero Bizantino e a quello Sassanide le loro province più ricche. Fonda il sistema amministrativo islamico (diwan), introduce il calendario islamico e permette agli ebrei di tornare a Gerusalemme dopo secoli di esclusione. Assassinato da uno schiavo persiano nel 644, il suo califato trasforma l'Islam da movimento arabo peninsulare a civiltà mondiale.",
-    "wikipediaSlug": "Umar",
+    "wikipediaSlug": "Omar",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3775,7 +3775,7 @@
     "lng": -5.99,
     "category": "musica",
     "description": "Isidoro di Siviglia (560-636) nelle sue Etymologiae — la prima enciclopedia medievale — dedica un intero libro alla musica. Trasmette al Medioevo la divisione boeziana in musica mundana, humana e instrumentalis e classifica gli strumenti in tre famiglie: tesa (corde), inflatilia (fiati), percussilia (percussioni) — classificazione ancora usata. Isidoro afferma che 'la musica è così potente che senza di essa non può esistere alcuna disciplina': frase che fonda la posizione della musica nel curriculum medievale.",
-    "wikipediaSlug": "Isidore_of_Seville",
+    "wikipediaSlug": "Isidoro_di_Siviglia",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3823,7 +3823,7 @@
     "lng": 10.75,
     "category": "musica",
     "description": "Gli skaldi erano i poeti-cantori di corte delle corti vichinghe scandinave (IX-XIII sec.), equivalenti dei bardi celtici e dei trovatori provenzali. Componevano drápur (poemi epicolirici) e lausavísur (strofe improvvisate) per celebrare le vittorie dei re e commemmorare i caduti. La loro arte richiedeva padronanza della metrica complicatissima (fornyrðislag, dróttkvætt) e di un vocabolario poetico cifrato (kenning). Alcune poesie sono attribuite a guerrieri-poeti come Egill Skallagrímsson — protagonista della saga omonima — che compose il suo lamento funebre per il figlio annegato.",
-    "wikipediaSlug": "Skald",
+    "wikipediaSlug": "Scaldo",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3907,7 +3907,7 @@
     "lng": -5.99,
     "category": "musica",
     "description": "Alfonso X di Castiglia (1221-1284) commissiona le Cantigas de Santa María — 420 composizioni monodiche in galiziano-portoghese che narrano miracoli della Vergine. Sono il corpus più ricco di musica medievale profana sopravvissuta: miniature dettagliatissime ritraggono gli strumenti (arpa, liuto, cetra, shawm, flauto, tamburo) suonati da musicisti cristiani, mori ed ebrei fianco a fianco. La corte di Alfonso X era il più cosmopolita centro culturale dell'Europa medievale — punto d'incontro di tre civiltà.",
-    "wikipediaSlug": "Cantigas_de_Santa_María",
+    "wikipediaSlug": "Alfonso_X_il_Saggio",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3992,7 +3992,7 @@
     "category": "cosmo",
     "tipo": "persona",
     "description": "Muhammad ibn Jābir al-Battani, astronomo arabo attivo a Raqqa in Siria, migliorò significativamente le tavole astronomiche di Tolomeo attraverso osservazioni sistematiche prolungate per decenni. Calcolò con maggiore precisione l'inclinazione dell'eclittica, la lunghezza dell'anno solare e la precessione degli equinozi. Introdusse i seni trigonometrici (sinus) al posto delle corde usate dai Greci, rivoluzionando il calcolo astronomico. La sua opera principale, il Zij al-Sabi, fu tradotta in latino nel XII secolo e influenzò profondamente Copernico e Tycho Brahe.",
-    "wikipediaSlug": "Al-Battani",
+    "wikipediaSlug": "Muḥammad_ibn_Jābir_al-Ḥarrānī_al-Battānī",
     "isCosmic": false
   },
   {
@@ -4028,7 +4028,7 @@
     "category": "cosmo",
     "tipo": "luogo",
     "description": "L'Osservatorio di Maragha, fondato nel 1259 in Azerbaijan dall'astronomo Nasir al-Din al-Tusi sotto il patronato del Khan mongolo Hulagu, fu il primo istituto astronomico organizzato della storia. Disponeva di una grande biblioteca, di strumenti all'avanguardia tra cui un quadrante murale di 4 metri, e di un team permanente di astronomi provenienti da tutto il mondo islamico e dalla Cina. Produsse le Tavole Ilkhaniche e sviluppò modelli matematici dei movimenti planetari che influenzarono direttamente Copernico.",
-    "wikipediaSlug": "Maragheh_observatory",
+    "wikipediaSlug": "Osservatorio_di_Maragheh",
     "isCosmic": false
   },
   {
@@ -4136,7 +4136,7 @@
     "category": "arte",
     "tipo": "luogo",
     "description": "La cupola della Cattedrale di Santa Maria del Fiore, completata da Filippo Brunelleschi nel 1436, è uno dei capolavori assoluti dell'architettura rinascimentale e dell'ingegneria di tutti i tempi. Con un diametro di 45,5 metri e un'altezza di 114 metri, rimase per secoli la cupola più grande del mondo. Brunelleschi risolse il problema apparentemente insormontabile di coprire l'enorme tamburo della cattedrale senza l'uso delle centine tradizionali, inventando tecniche costruttive rivoluzionarie. La struttura a doppia calotta ottagonale con le nervature in marmo bianco domina ancora oggi il panorama fiorentino. L'interno, affrescato da Giorgio Vasari e Federico Zuccari, raffigura il Giudizio Universale.",
-    "wikipediaSlug": "Florence_Cathedral",
+    "wikipediaSlug": "Il_Duomo_di_Firenze",
     "isCosmic": false
   },
   {
@@ -4184,7 +4184,7 @@
     "category": "storia",
     "tipo": "organizzazione",
     "description": "L'Università di Oxford è la più antica università di lingua inglese al mondo e la seconda università più antica d'Europa, con tracce di insegnamento risalenti al 1096. Si sviluppa rapidamente dopo il 1167, quando Enrico II d'Inghilterra vieta agli studenti inglesi di frequentare l'Università di Parigi. Organizzata in college autonomi — il più antico è University College, del 1249 — sviluppa il sistema tutorial come metodo pedagogico fondamentale. Tra i suoi alumni figurano 27 primi ministri britannici, 28 premi Nobel e decine tra i più influenti scrittori, scienziati e politici del mondo anglosassone. Le sue biblioteche, tra cui la celebre Bodleiana del 1602, custodiscono oltre 13 milioni di volumi. Rimane oggi tra le prime cinque università al mondo.",
-    "wikipediaSlug": "University_of_Oxford",
+    "wikipediaSlug": "Università_di_Oxford",
     "isCosmic": false
   },
   {
@@ -4220,7 +4220,7 @@
     "category": "filosofia",
     "tipo": "persona",
     "description": "Mosè Maimonide (1138–1204), nato a Cordova e rifugiatosi in Egitto dopo la persecuzione almohade, fu il più grande filosofo ebraico medievale. La sua opera \"Guida dei Perplessi\" (Moreh Nevukhim, 1190) tentò di conciliare la filosofia aristotelica con la teologia ebraica, affrontando problemi come la compatibilità tra la creazione biblica del mondo e l'eternità aristotelica della materia. Influenzò enormemente Tommaso d'Aquino e la scolastica cristiana. I suoi \"Tredici principi di fede\" sono ancora recitati nelle liturgie ebraiche ortodosse.",
-    "wikipediaSlug": "Maimonides",
+    "wikipediaSlug": "Mosè_Maimonide",
     "isCosmic": false
   },
   {
@@ -4279,7 +4279,7 @@
     "lng": 39.01,
     "category": "cosmo",
     "description": "Muhammad ibn Jabir al-Battani, astronomo arabo operante a Raqqa (nell'odierna Siria) nell'IX-X secolo, conduce osservazioni sistematiche del Sole, della Luna e dei pianeti per oltre 40 anni, producendo misurazioni che correggono e superano quelle di Tolomeo. Determina con notevole precisione la lunghezza dell'anno solare, l'inclinazione dell'eclittica e l'eccentricità dell'orbita solare, e calcola che il punto di massima distanza della Terra dal Sole si è spostato rispetto all'epoca di Tolomeo, intuendo il moto dell'apogeo solare. Le sue tavole astronomiche (al-Zij al-Sabi) sono tradotte in latino nel XII secolo e restano un riferimento imprescindibile per gli astronomi europei medievali. Al-Battani è considerato il più grande astronomo del mondo islamico medievale.",
-    "wikipediaSlug": "Al-Battani",
+    "wikipediaSlug": "Muḥammad_ibn_Jābir_al-Ḥarrānī_al-Battānī",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4291,7 +4291,7 @@
     "lng": 68.42,
     "category": "cosmo",
     "description": "Il poligrafo persiano Al-Biruni (973-1048), uno degli intelletti più universali del Medioevo islamico, perfeziona attorno al 1000 d.C. un metodo ingegnoso per misurare il raggio della Terra: dall'angolo di depressione dell'orizzonte visto da una collina di altezza nota ricava il raggio terrestre senza bisogno di misurare lunghe distanze orizzontali. Il risultato ottenuto — circa 6 339 km — è straordinariamente vicino al valore reale di 6 371 km. Al-Biruni conduce le sue osservazioni durante la campagna militare di Mahmud di Ghazni in India e documenta il metodo nel «Kitab al-Qanun al-Mas'udi». È anche uno dei primi a ipotizzare che l'America possa esistere come continente a ovest dell'Europa.",
-    "wikipediaSlug": "Biruni",
+    "wikipediaSlug": "Al-Biruni",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4315,7 +4315,7 @@
     "lng": 46.24,
     "category": "cosmo",
     "description": "Nel 1259 il califfo ilkhanide Hulagu Khan fonda a Maragha, nell'odierno Iran nord-occidentale, uno dei più grandi osservatori astronomici del mondo medievale, affidandone la direzione a Nasir al-Din al-Tusi. L'osservatorio raccoglie i migliori astronomi islamici dell'epoca e produce le «Tavole ilkhanidi» (Zij-i Ilkhani), un catalogo di oltre 1000 stelle con posizioni aggiornate rispetto a Tolomeo. Al-Tusi sviluppa anche il cosiddetto «coppia di al-Tusi», uno strumento matematico per eliminare alcune delle contraddizioni fisiche del sistema tolemaico; questa soluzione influenza direttamente Copernico, che la riprende nel De Revolutionibus. L'osservatorio di Maragha rappresenta il culmine dell'astronomia islamica medievale e un ponte verso la rivoluzione scientifica europea.",
-    "wikipediaSlug": "Maragheh_observatory",
+    "wikipediaSlug": "Osservatorio_di_Maragheh",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -4771,7 +4771,7 @@
     "lng": 35.7206,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Sinān",
+    "wikipediaSlug": "Sinan",
     "isCosmic": false
   },
   {
@@ -5059,7 +5059,7 @@
     "lng": 39.8261,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "ʿĀʾisha_bint_Abī_Bakr",
+    "wikipediaSlug": "Aisha",
     "isCosmic": false
   },
   {
@@ -5071,7 +5071,7 @@
     "lng": 47.81,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Alhazen",
+    "wikipediaSlug": "Ibn_al-Haytham",
     "isCosmic": false
   },
   {
@@ -5095,7 +5095,7 @@
     "lng": -1.3358,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Pietro_Abelardo",
+    "wikipediaSlug": "Abelardo_Pinto",
     "isCosmic": false
   },
   {
@@ -5131,7 +5131,7 @@
     "lng": -1.427,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Alfredo_il_Grande",
+    "wikipediaSlug": "Alfredo_il_grande",
     "isCosmic": false
   },
   {
@@ -5143,7 +5143,7 @@
     "lng": 85.144,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Āryabhaṭa",
+    "wikipediaSlug": "Aryabhata",
     "isCosmic": false
   },
   {
@@ -5155,7 +5155,7 @@
     "lng": 39.8261,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Fāṭima_bint_Muhammad",
+    "wikipediaSlug": "Fatima_bint_Muhammad",
     "isCosmic": false
   },
   {
@@ -5215,7 +5215,7 @@
     "lng": 76.4389,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": "Śaṅkara",
+    "wikipediaSlug": "Adi_Shankara",
     "isCosmic": false
   },
   {
@@ -5227,7 +5227,7 @@
     "lng": 51.4344,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Rhazes",
+    "wikipediaSlug": "Abu_Bakr_al-Razi",
     "isCosmic": false
   },
   {
@@ -5551,7 +5551,7 @@
     "lng": 83.0128,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": "Kabīr",
+    "wikipediaSlug": "Kabir",
     "isCosmic": false
   },
   {
@@ -6643,7 +6643,7 @@
     "lng": 35,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Teodora_(moglie_di_Giustiniano)",
+    "wikipediaSlug": "Teodora",
     "isCosmic": false
   },
   {
@@ -7615,7 +7615,7 @@
     "lng": 21.5511,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Sigismondo_I_Jagellone",
+    "wikipediaSlug": "Sigismondo_I_di_Polonia",
     "isCosmic": false
   },
   {
@@ -8407,7 +8407,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "Cordoba, capitale del Califfato Omayyade in Spagna nel X secolo, era la citta piu grande d'Europa: la sua biblioteca di 400.000 volumi e le scuole dove Avicenna e Averroe insegnarono la fecero centro mondiale del sapere.",
-    "wikipediaSlug": "Caliphate_of_Cordoba",
+    "wikipediaSlug": "Cordoba",
     "isCosmic": false
   },
   {
@@ -8695,7 +8695,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "Secondo la tradizione azteca, Tenochtitlan viene fondata nel 1325 su un'isola nel lago Texcoco dopo che gli Aztechi vedono l'aquila che divora un serpente su un cactus — il segno divino profetizzato. Da piccolo insediamento di un popolo nomade, diventa in due secoli la più grande città delle Americhe con oltre 200.000 abitanti, capitale di un impero che assoggetta l'intero Messico centrale.",
-    "wikipediaSlug": "Tenochtitlan",
+    "wikipediaSlug": "Tenochtitlán",
     "isCosmic": false
   },
   {
@@ -8840,7 +8840,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Canti religiosi in volgare italiano sviluppati dalle confraternite dei laudesi fiorentini dal XIII secolo. Poliziano e il circolo laurenziano li elevarono a forma poetico-musicale d'arte nel Quattrocento.",
-    "wikipediaSlug": "Laude_spirituale"
+    "wikipediaSlug": "Lauda_spirituale"
   },
   {
     "id": "rotazione-triennale-colture",
@@ -8864,7 +8864,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Il Libro del Domesday (1086) censì 5.624 mulini ad acqua in Inghilterra — un per ogni 50 famiglie. La meccanizzazione della macinatura liberò migliaia di ore di lavoro umano, trasformando l'economia medievale.",
-    "wikipediaSlug": "Mulino_ad_Acqua"
+    "wikipediaSlug": "Mulino_ad_acqua"
   },
   {
     "id": "falconeria-medievale",
@@ -8924,7 +8924,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Il codice dell'amore cortese elaborato dai trovatori occitani del XII secolo: amore platonico, non ricambiato, tra cavaliere e dama irraggiungibile. La fin'amor generò tutta la lirica d'amore occidentale.",
-    "wikipediaSlug": "Fin'amor"
+    "wikipediaSlug": "Amor_cortese"
   },
   {
     "id": "cavalieri-templari-addestramento",

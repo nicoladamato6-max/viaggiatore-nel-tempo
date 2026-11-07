@@ -7,7 +7,7 @@
     "lng": 2.3522,
     "category": "cosmo",
     "description": "Le Verrier e Adams predicono matematicamente l'esistenza di Nettuno prima di osservarlo. Primo pianeta scoperto con la matematica pura.",
-    "wikipediaSlug": "Discovery_of_Neptune",
+    "wikipediaSlug": "Scoperta_di_Nettuno",
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/240px-Neptune_Full.jpg",
     "isCosmic": false,
     "tipo": "evento"
@@ -128,7 +128,7 @@
     "lng": -2.2426,
     "category": "scienza",
     "description": "Nel 1909-1911 Ernest Rutherford all'Università di Manchester bombarda una sottile lamina d'oro con particelle alfa. Alcune rimbalzano indietro: 'Come se avessi sparato un proiettile di artiglieria su un foglio di carta velina e tornasse indietro a colpirmi.' Dimostra che l'atomo ha un nucleo centrale denso e carico positivamente.",
-    "wikipediaSlug": "Geiger–Marsden_experiments",
+    "wikipediaSlug": "Rutherford",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -200,7 +200,7 @@
     "lng": 7.6869,
     "category": "storia",
     "description": "Il 17 marzo 1861 il Parlamento italiano a Torino proclama il Regno d'Italia con Vittorio Emanuele II come primo re. Dopo secoli di dominazione straniera e frammentazione politica, l'Italia è unita. Il processo risorgimentale — guidato da Cavour, Mazzini, Garibaldi — costa anni di guerre, rivoluzioni e sacrifici. Roma diventa capitale nel 1871.",
-    "wikipediaSlug": "Italian_unification",
+    "wikipediaSlug": "Unità_d'Italia",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -236,7 +236,7 @@
     "lng": -49.9469,
     "category": "storia",
     "description": "Il 15 aprile 1912 il transatlantico RMS Titanic affonda nel Nord Atlantico dopo aver colpito un iceberg durante il viaggio inaugurale: 1.517 morti su 2.224 passeggeri. Il disastro — costruito sull'illusione dell'inaffondabile — scuote la fiducia nella tecnologia moderna e nella classe dirigente. Le normative sulla sicurezza marittima vengono riscritte.",
-    "wikipediaSlug": "Titanic",
+    "wikipediaSlug": "RMS_Titanic",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -356,7 +356,7 @@
     "lng": -77.0369,
     "category": "scienza",
     "description": "Il 24 maggio 1844 Samuel Morse trasmette il primo messaggio telegrafico tra Washington e Baltimora: 'What hath God wrought?' Il telegrafo collega per la prima volta in tempo reale punti distanti centinaia di km: nasce la comunicazione istantanea. Il Codice Morse (punti e linee) è ancora usato nelle emergenze marittime.",
-    "wikipediaSlug": "Electrical_telegraph",
+    "wikipediaSlug": "Morse",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -416,7 +416,7 @@
     "lng": 8.9463,
     "category": "storia",
     "description": "Nel 1831 Giuseppe Mazzini fonda a Marsiglia la Giovine Italia: il movimento repubblicano che persegue l'unità italiana attraverso l'insurrezione popolare. Esiliato per tutta la vita, ispira generazioni di patrioti. La Repubblica Romana del 1849 è il suo capolavoro politico — fugace ma fondante. Garibaldi realizzerà in pratica il suo sogno.",
-    "wikipediaSlug": "Young_Italy_(historical)",
+    "wikipediaSlug": "Giuseppe_Mazzini",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -476,7 +476,7 @@
     "lng": 114.1095,
     "category": "storia",
     "description": "Dal 1839 al 1842 la Gran Bretagna combatte la Prima Guerra dell'Oppio contro la Cina: l'imperatore aveva vietato l'oppio importato dalla Compagnia delle Indie. La marina britannica sconfigge facilmente la flotta cinese. Il Trattato di Nanchino (1842) cede Hong Kong alla Gran Bretagna e apre 5 porti cinesi al commercio. Il 'secolo dell'umiliazione' cinese inizia qui.",
-    "wikipediaSlug": "First_Opium_War",
+    "wikipediaSlug": "Prima_Guerra_dell'Oppio",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -512,7 +512,7 @@
     "lng": 2.3522,
     "category": "scienza",
     "description": "Il 6 luglio 1885 Louis Pasteur salva la vita al bambino Joseph Meister (9 anni), morso da un cane rabbioso, con il primo vaccino anti-rabbico: 13 iniezioni in 10 giorni. Rischiando la propria reputazione (il vaccino non era ancora testato sull'uomo), Pasteur inaugura l'era della vaccinazione moderna. L'Istituto Pasteur viene fondato nel 1888.",
-    "wikipediaSlug": "Louis_Pasteur",
+    "wikipediaSlug": "Pasteur",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -548,7 +548,7 @@
     "lng": -74.006,
     "category": "scienza",
     "description": "Nel 1907 Leo Baekeland brevetta la Bakelite — la prima vera plastica sintetica, prodotta dalla reazione tra fenolo e formaldeide sotto pressione e calore. La Bakelite è isolante elettrico, duro, resistente al calore: usato in interruttori, maniglie, gioielli, radio. Negli anni '20-30 la Bakelite è ovunque — simbolo della modernità industriale. La plastica trasformerà il mondo del XX e XXI secolo.",
-    "wikipediaSlug": "Bakelite",
+    "wikipediaSlug": "Bachelite",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -704,7 +704,7 @@
     "lng": 2.3082,
     "category": "scienza",
     "description": "Louis Pasteur dimostra la teoria dei germi e sviluppa i vaccini contro il colera dei polli (1880), il carbonchio (1881) e la rabbia (1885). Il vaccino anti-rabbia è il primo usato sull'uomo: il giovane Joseph Meister, morso da un cane rabbioso, viene salvato nel 1885. Pasteur fonda la microbiologia moderna e la pastorizzazione (1864). L'aspettativa di vita aumenta drammaticamente nel tardo XIX-XX secolo grazie ai vaccini.",
-    "wikipediaSlug": "Louis_Pasteur",
+    "wikipediaSlug": "Pasteur",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1004,7 +1004,7 @@
     "lng": -72.2852,
     "category": "storia",
     "description": "Il 1° gennaio 1804 Haiti dichiara l'indipendenza da Francia: la prima nazione del mondo fondata da ex schiavi, la seconda repubblica del continente americano dopo gli USA (1776). Toussaint Louverture guida la rivolta (1791); Jean-Jacques Dessalines proclama l'indipendenza. La Francia chiederà 150 milioni di franchi di risarcimento per gli 'schiavi perduti' — debito pagato fino al 1947. La storia coloniale più travagliata dell'emisfero occidentale.",
-    "wikipediaSlug": "Haitian_Revolution",
+    "wikipediaSlug": "Haiti",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1052,7 +1052,7 @@
     "lng": 2.3522,
     "category": "scienza",
     "description": "Il 7 gennaio 1839 l'Accademia delle Scienze di Parigi annuncia il dagherrotipo di Louis Daguerre: la prima tecnica fotografica commercialmente praticabile. Niépce aveva fatto la prima foto nel 1826 (8 ore di esposizione). La fotografia rivoluziona il ritratto (democratizza l'immagine prima riservata alla pittura), il giornalismo (foto di guerra dalla Guerra di Crimea, 1855), la scienza (astronomia, medicina), l'arte (i pittori si liberano dalla riproduzione della realtà).",
-    "wikipediaSlug": "History_of_photography",
+    "wikipediaSlug": "Fotografia",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1100,7 +1100,7 @@
     "lng": 2.3522,
     "category": "musica",
     "description": "Dal 1838 al 1847 Chopin vive a Parigi con George Sand: i notturni, i polacchi, gli studi, la musica che distilla la nostalgia per la Polonia occupata dai russi. Frederic Chopin (1810-1849) è il compositore della malinconia romantica — tubercolosi, esilio, la patria perduta. Le sue mazurche e polacche portano la musica folk polacca al pianoforte da concerto. Muore a 39 anni a Parigi. Il cuore — per suo volere — viene sepolto a Varsavia.",
-    "wikipediaSlug": "Frédéric_Chopin",
+    "wikipediaSlug": "Chopin",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -1124,7 +1124,7 @@
     "lng": 2.3522,
     "category": "scienza",
     "description": "Nel 1864 Louis Pasteur inventa la pastorizzazione: riscaldare il vino (poi il latte) a 55-60°C per qualche minuto per uccidere i microrganismi senza alterare il sapore. La scoperta emerge dalla ricerca sulle fermentazioni e dalla teoria dei germi. La pastorizzazione del latte (adottata commercialmente dagli anni 1880) riduce drasticamente mortalità infantile da malattie trasmesse dal latte (tubercolosi bovina, salmonella). Un gesto semplice che salva milioni di bambini.",
-    "wikipediaSlug": "Pasteurization",
+    "wikipediaSlug": "Pasteur",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1196,7 +1196,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Nel 1863 il Salon des Refusés espone 'Le Déjeuner sur l'Herbe' di Édouard Manet: una donna nuda a picnic con uomini vestiti — scandalo immenso. La critica accademica fischla; il pubblico si scandalizza. Manet non è impressionista ma è il padre degli impressionisti: la pittura 'alla macchia', il colore piatto, il soggetto moderno. 'Olympia' (1865): un'altra nuda che guarda lo spettatore — riceve ancora fischi. Manet trasforma la pittura senza capirlo.",
-    "wikipediaSlug": "Le_Déjeuner_sur_l'herbe",
+    "wikipediaSlug": "Le_déjeuner_sur_l'herbe",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -1220,7 +1220,7 @@
     "lng": -0.1278,
     "category": "storia",
     "description": "Nel 1792 Mary Wollstonecraft pubblica 'A Vindication of the Rights of Woman' — il primo trattato filosofico sul femminismo: se gli uomini hanno diritti naturali (come sosteneva la Rivoluzione Francese), allora anche le donne li hanno. L'educazione delle donne come chiave per la loro emancipazione. Wollstonecraft scandalizza l'Inghilterra (vive fuori dal matrimonio, ha una figlia illegittima). Sua figlia Mary Shelley scriverà Frankenstein nel 1818. La madre del femminismo.",
-    "wikipediaSlug": "A_Vindication_of_the_Rights_of_Woman",
+    "wikipediaSlug": "Mary_Wollstonecraft",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1280,7 +1280,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Dal 1853 al 1870 il barone Haussmann per ordine di Napoleone III demolisce la Parigi medievale e la ricostruisce: 71 nuovi boulevard (tra cui i Grands Boulevards e gli Champs-Elysées allargati), piazze con fontane (Place de l'Étoile), fognature, parchi (Bois de Boulogne e Vincennes). 350.000 parigini poveri vengono spostati fuori dal centro. La Parigi di Haussmann è la città moderna per eccellenza — e il modello copiato da ogni capitale che si 'modernizza'.",
-    "wikipediaSlug": "Haussmann's_renovation_of_Paris",
+    "wikipediaSlug": "Haussmann",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1304,7 +1304,7 @@
     "lng": 37.8667,
     "category": "storia",
     "description": "Intorno al 1880 Lev Tolstoj vive una crisi spirituale profonda: il grande scrittore, conte, proprietario di 335 servi liberati, rifiuta la sua aristocratica vita precedente. Diventa cristiano radicale: vangelo come norma di vita, nonviolenza (che ispira Gandhi), rifiuto dello stato, rifiuto della proprietà (vuole cedere le sue terre). La moglie Sonya si oppone — conflitto drammatico. A 82 anni fugge di casa e muore alla stazione di Astapovo (1910).",
-    "wikipediaSlug": "Tolstoy's_spiritual_crisis",
+    "wikipediaSlug": "Tolstoj",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1316,7 +1316,7 @@
     "lng": 121.265,
     "category": "storia",
     "description": "Dal agosto 1904 al gennaio 1905 l'esercito giapponese assedia Port Arthur (Manciuria), la base navale russa nel Pacifico. 157 giorni di assedio, 58.000 giapponesi morti e 31.000 russi. La fortezza cade il 2 gennaio 1905. L'assedio è il primo a usare su larga scala il filo spinato, le mitragliatrici difensive, le trincee — anticipa la tattica della Prima Guerra Mondiale. Il generale Nogi che assedia Port Arthur perderà i due figli nella battaglia.",
-    "wikipediaSlug": "Siege_of_Port_Arthur",
+    "wikipediaSlug": "Assedio_di_Port_Arthur",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -1328,7 +1328,7 @@
     "lng": -0.1278,
     "category": "scienza",
     "description": "Nel 1798 Thomas Robert Malthus pubblica il Saggio sul Principio della Popolazione: la popolazione cresce geometricamente mentre il cibo cresce aritmeticamente. Darwin usa il malthusianesimo per elaborare la selezione naturale. Il principio rimane nella discussione sulle risorse ambientali.",
-    "wikipediaSlug": "An_Essay_on_the_Principle_of_Population",
+    "wikipediaSlug": "Malthus",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1340,7 +1340,7 @@
     "lng": -0.1278,
     "category": "scienza",
     "description": "Nel 1865 James Clerk Maxwell pubblica le equazioni che unificano elettricita, magnetismo e luce: quattro equazioni differenziali che descrivono tutto l'elettromagnetismo. Maxwell predice l'esistenza delle onde radio. Hertz le dimostra nel 1888. Marconi le usa per la radio nel 1901. Einstein chiama le equazioni di Maxwell la piu bella scoperta del XIX secolo.",
-    "wikipediaSlug": "Maxwell's_equations",
+    "wikipediaSlug": "Maxwell",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1376,7 +1376,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Dal 1800 al 1812 Napoleone Bonaparte domina l'Europa: Austerlitz 1805, Jena 1806, Wagram 1809. Il Codice Napoleonico diffonde i principi della Rivoluzione Francese. I fratelli di Napoleone salgono sui troni europei. La campagna di Russia del 1812 con 600.000 uomini e il disastro che avvia il declino. Waterloo 1815 e l'esilio a Sant'Elena.",
-    "wikipediaSlug": "Napoleonic_Wars",
+    "wikipediaSlug": "Napoleone_Bonaparte",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1412,7 +1412,7 @@
     "lng": 13.405,
     "category": "musica",
     "description": "Nel 1885 Johannes Brahms completa la Quarta Sinfonia, la sua ultima: il romanticismo tedesco al suo apice. Quattro sinfonie, concerti per pianoforte e violino, il Requiem tedesco. Brahms era il leader del campo classicista contro Wagner e Liszt. La polemica Brahms-Wagner divide la musica tedesca del XIX secolo tra assoluto e programmatico.",
-    "wikipediaSlug": "Symphony_No._4_(Brahms)",
+    "wikipediaSlug": "Brahms",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -1448,7 +1448,7 @@
     "lng": 49.1221,
     "category": "scienza",
     "description": "Nel 1830 Nikolai Lobachevskij pubblica la geometria iperbolica: lo spazio in cui due parallele a una retta divergono invece di non incontrarsi mai. Contemporaneamente Janos Bolyai sviluppa la stessa idea. Riemann completa nel 1854 con la geometria sferica. Le geometrie non-euclidee demoliscono l'assolutismo kantiano dello spazio e preparano la Relativita Generale di Einstein.",
-    "wikipediaSlug": "Nikolai_Lobachevsky",
+    "wikipediaSlug": "Lobachevskij",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1484,7 +1484,7 @@
     "lng": 8.6821,
     "category": "arte",
     "description": "Nel 1818 Arthur Schopenhauer pubblica Il Mondo come Volonta e Rappresentazione: la Volonta come forza cieca e irrazionale che muove tutto, la vita come sofferenza senza scopo. L'influenza del buddhismo indiano. L'arte e la musica come momentanea liberazione dalla Volonta. Nietzsche, Freud, Wagner vengono influenzati direttamente da Schopenhauer.",
-    "wikipediaSlug": "The_World_as_Will_and_Representation",
+    "wikipediaSlug": "Schopenhauer",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1496,7 +1496,7 @@
     "lng": 5.5279,
     "category": "arte",
     "description": "Negli anni Ottanta e Novanta Paul Cezanne dipinge la montagna Sainte-Victoire decine di volte: la costruzione geometrica dello spazio pittorico, il colore modulato per creare volume. Cezanne e il padre del Cubismo: Picasso e Braque lo studiano. La sua solitudine ad Aix-en-Provence, la perseveranza. Paul Cezanne il padre della pittura moderna secondo Matisse e Picasso.",
-    "wikipediaSlug": "Mont_Sainte-Victoire_(Cézanne)",
+    "wikipediaSlug": "Cezanne",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -1508,7 +1508,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Nel 1880 Auguste Rodin inizia la Porta dell'Inferno, il grande portale per il futuro museo delle arti decorative: il Pensatore, il Bacio, l'Ugolino. Rodin rivoluziona la scultura con superfici irregolari che captano la luce, figure incompiute emergenti dal marmo. Il Balzac del 1898 scandalizza: non e un ritratto, e un'idea scultorea della creazione.",
-    "wikipediaSlug": "The_Thinker",
+    "wikipediaSlug": "Rodin",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1532,7 +1532,7 @@
     "lng": 1.5344,
     "category": "arte",
     "description": "Dal 1895 in poi Claude Monet si ritira nel suo giardino di Giverny: le serie delle Cattedrali di Rouen a diverse ore del giorno, le Ninfee nel laghetto artificiale. 250 quadri di ninfee tra il 1896 e il 1926, sempre lo stesso soggetto con la luce che cambia. Monet muore cieco nel 1926 lasciando il grande pannello delle Ninfee al Musee de l'Orangerie.",
-    "wikipediaSlug": "Water_Lilies_(Monet_series)",
+    "wikipediaSlug": "Monet",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1568,7 +1568,7 @@
     "lng": 9.9935,
     "category": "scienza",
     "description": "Nel 1888 Heinrich Hertz dimostra sperimentalmente l'esistenza delle onde elettromagnetiche previste da Maxwell nel 1865: un'oscillazione elettrica da un lato della stanza induce un'altra dall'altro. Hertz non capisce l'importanza pratica, muore a 36 anni nel 1894. Marconi nel 1901 usa le onde hertziane per trasmettere segnali radio attraverso l'Atlantico.",
-    "wikipediaSlug": "Heinrich_Hertz",
+    "wikipediaSlug": "Hertz",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1592,7 +1592,7 @@
     "lng": 9.19,
     "category": "arte",
     "description": "Nel 1827 Alessandro Manzoni pubblica la prima edizione dei Promessi Sposi: la storia di Renzo e Lucia nell'Italia spagnola del Seicento con don Abbondio, don Rodrigo, fra Cristoforo, la Monaca di Monza. Manzoni riscrive il romanzo nella lingua viva toscana dopo un soggiorno a Firenze. I Promessi Sposi formano l'italiano unitario e la coscienza nazionale risorgimentale.",
-    "wikipediaSlug": "The_Betrothed_(novel)",
+    "wikipediaSlug": "Manzoni",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1664,7 +1664,7 @@
     "lng": -91.1313,
     "category": "scienza",
     "description": "Nel settembre 1835 il Beagle con Darwin arriva alle Galapagos: le diverse specie di fringuelli da isola a isola, i coccodrilli marini, le tartarughe giganti. Darwin osserva senza capire ancora. Nel 1838 legge Malthus e capisce: selezione naturale. Ci vogliono venti anni per pubblicare nel 1859 L'Origine delle Specie. La teoria dell'evoluzione e la piu potente idea biologica mai formulata.",
-    "wikipediaSlug": "Galapagos_Islands",
+    "wikipediaSlug": "Il_viaggio_del_Beagle",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1676,7 +1676,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Dal 1853 al 1870 il barone Haussmann per incarico di Napoleone III demolisce il labirinto medievale di Parigi e costruisce i grandi boulevards: 165 km di nuove strade larghe, acquedotti, parchi, quartieri borghesi. 350.000 poveri vengono spostati alla periferia. La Parigi di Haussmann e il modello dell'urbanistica capitalista moderna.",
-    "wikipediaSlug": "Haussmann's_renovation_of_Paris",
+    "wikipediaSlug": "Haussmann",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1688,7 +1688,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Nel 1850 Gustave Courbet espone i Frantumatori di pietre e l'Entierrement a Ornans al Salon: scene di vita rurale povera senza idealizzazione, figure di contadini a grandezza naturale. Il Realismo in pittura contro la pittura accademica storica e mitologica. Manet con il Dejeuner sur l'Herbe del 1863 porta il realismo alla contemporaneita provocando scandalo.",
-    "wikipediaSlug": "Realism_(arts)",
+    "wikipediaSlug": "Courbet",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -1700,7 +1700,7 @@
     "lng": 69.2075,
     "category": "storia",
     "description": "Il Grande Gioco tra Russia e Inghilterra per il controllo dell'Asia Centrale e dell'Afghanistan dura dalla meta dell'Ottocento al 1907. La Prima Guerra Anglo-Afghana del 1839-42 finisce con il massacro di 16.000 soldati britannici nella ritirata da Kabul. L'Afghanistan rimane cuscinetto tra i due Imperi. Il Grande Gioco prefigura tutte le guerre moderne in Afghanistan.",
-    "wikipediaSlug": "The_Great_Game",
+    "wikipediaSlug": "Il_grande_gioco_dell'oca",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1724,7 +1724,7 @@
     "lng": 37.6173,
     "category": "arte",
     "description": "Nel 1904 Anton Cechov fa rappresentare al Teatro d'Arte di Mosca il Giardino dei Ciliegi, il suo ultimo dramma: la famiglia aristocratica che perde il giardino alla modernita del commercio. Il Gabbiano 1896, Tre Sorelle 1901. Il teatro di Cechov senza trama convenzionale, i personaggi che parlano senza capirsi, il tempo che passa senza che nulla accada: il teatro moderno.",
-    "wikipediaSlug": "The_Cherry_Orchard",
+    "wikipediaSlug": "Cechov",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1784,7 +1784,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Il 7 gennaio 1839 Daguerre presenta il dagherrotipo all'Academie des Sciences di Parigi: una lastra di rame argentata cattura immagini permanenti in 30 minuti. Il governo francese acquista il brevetto e lo regala al mondo. La fotografia rivoluziona la pittura: gli impressionisti sfuggono alla rappresentazione realistica. La prima fotografia di una persona e quella di un uomo che si fa lucidare le scarpe a Parigi.",
-    "wikipediaSlug": "Louis_Daguerre",
+    "wikipediaSlug": "Fotografia",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1808,7 +1808,7 @@
     "lng": 2.3522,
     "category": "scienza",
     "description": "Dal 1857 Louis Pasteur dimostra che la fermentazione e causata da microorganismi, non dalla generazione spontanea. La pastorizzazione del vino nel 1863 salva l'industria vinicola francese. Nel 1865 scopre il trattamento del baco da seta. Nel 1881 vaccina le pecore contro il carbonchio in pubblico a Pouilly-le-Fort. Nel 1885 vaccina il bambino morso da un cane rabbioso Joseph Meister.",
-    "wikipediaSlug": "Louis_Pasteur",
+    "wikipediaSlug": "Pasteur",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1844,7 +1844,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Il 3 aprile 1862 Victor Hugo pubblica I Miserabili a Bruxelles: Jean Valjean condannato a 19 anni per aver rubato un pane, il detective Javert, Cosette, Fantine. Il romanzo piu lungo della letteratura francese 1.200 pagine esplora poverta, prigioni, giustizia sociale nella Parigi post-napoleonica. Hugo impegnato politicamente esule da Napoleone III a Guernesey. Il romanzo e un atto politico.",
-    "wikipediaSlug": "Les_Misérables",
+    "wikipediaSlug": "Victor_Hugo",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1856,7 +1856,7 @@
     "lng": 7.6869,
     "category": "storia",
     "description": "Camillo Benso Conte di Cavour, primo ministro del Piemonte dal 1852, orchestra l'unificazione italiana attraverso la diplomazia. Al Congresso di Parigi del 1856 presenta la questione italiana alle potenze europee. L'alleanza con Napoleone III e la guerra austro-piemontese del 1859 liberano la Lombardia. Cavour muore nel giugno 1861 senza vedere il compimento dell'Italia ma ne e il vero artefice politico.",
-    "wikipediaSlug": "Camillo_di_Cavour",
+    "wikipediaSlug": "Cavour",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1868,7 +1868,7 @@
     "lng": 30.3351,
     "category": "scienza",
     "description": "Nel marzo 1869 Dmitri Mendeleev presenta alla Societa Chimica Russa la Tavola Periodica degli Elementi: ordina 63 elementi per peso atomico e lascia spazi vuoti per elementi ancora da scoprire. Predice le proprieta del gallio e del germanio prima della loro scoperta. La Tavola Periodica e uno degli atti creativi piu audaci della scienza: ordinare l'intera materia.",
-    "wikipediaSlug": "Dmitri_Mendeleev",
+    "wikipediaSlug": "Mendeleev",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1880,7 +1880,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Nel 1907 Picasso dipinge Les Demoiselles d'Avignon: cinque figure femminili con volti simultaneamente di fronte e di profilo, influenzate dall'arte africana e iberica. Braque e Picasso inventano il Cubismo: la rappresentazione simultanea di piu punti di vista. Il Cubismo rompe con 500 anni di prospettiva rinascimentale. La prima rivoluzione visiva moderna che porta all'astrattismo.",
-    "wikipediaSlug": "Les_Demoiselles_d'Avignon",
+    "wikipediaSlug": "Les_demoiselles_d'Avignon",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -1892,7 +1892,7 @@
     "lng": 9.1859,
     "category": "arte",
     "description": "L'11 febbraio 1909 Filippo Tommaso Marinetti pubblica il Manifesto del Futurismo sul Figaro: un automobile in corsa e piu bella della Vittoria di Samotracia. La velocita, la macchina, la guerra, il nazionalismo come valori estetici. Balla, Boccioni, Severini. Il futurismo italiano esalta la violenza e il militarismo: molti futuristi aderiscono al fascismo. L'estetica che porta al totalitarismo.",
-    "wikipediaSlug": "Futurism",
+    "wikipediaSlug": "Il_Futurista",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -1904,7 +1904,7 @@
     "lng": 13.405,
     "category": "scienza",
     "description": "Nel 1807 Georg Wilhelm Friedrich Hegel pubblica la Fenomenologia dello Spirito: la dialettica tesi-antitesi-sintesi come logica della storia, lo Spirito Assoluto che si realizza nella storia umana. Hegel vede Napoleone a cavallo e lo chiama lo Spirito del Mondo a cavallo. Marx capovolgera la dialettica di Hegel: non lo Spirito ma la materia e la base, non le idee ma le classi sociali.",
-    "wikipediaSlug": "Georg_Wilhelm_Friedrich_Hegel",
+    "wikipediaSlug": "Hegel",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1928,7 +1928,7 @@
     "lng": 29.3167,
     "category": "storia",
     "description": "Il 10 novembre 1871 il giornalista Henry Morton Stanley trova il missionario David Livingstone malato a Ujiji sul Lago Tanganica: dottor Livingstone suppongo. Livingstone era andato a trovare le sorgenti del Nilo. La corsa europea all'esplorazione dell'Africa Nera nel XIX secolo: Livingstone, Burton, Speke, Stanley. L'esplorazione precede la colonizzazione: il sapere geografico come strumento imperiale.",
-    "wikipediaSlug": "Henry_Morton_Stanley",
+    "wikipediaSlug": "Stanley_Livingston",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1940,7 +1940,7 @@
     "lng": -0.1278,
     "category": "scienza",
     "description": "Nel 1871 Darwin pubblica L'Origine dell'Uomo e la Selezione Sessuale: l'uomo discende da antenati scimmieschi africani. Lo scandalo e enorme: il vescovo Wilberforce chiede a Huxley se preferisce un nonno scimmia per parte di padre o di madre. Huxley risponde che preferirebbe un nonno scimmia a un vescovo che usa l'intelligenza per oscurare la verita. La teoria dell'evoluzione si applica all'uomo.",
-    "wikipediaSlug": "The_Descent_of_Man,_and_Selection_in_Relation_to_Sex",
+    "wikipediaSlug": "L'origine_dell'uomo_e_la_selezione_sessuale",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -2240,7 +2240,7 @@
     "lng": 24.9384,
     "category": "musica",
     "description": "Nel 1899 Jean Sibelius compone Finlandia: il poema sinfonico che diventa l'inno del nazionalismo finlandese sotto l'occupazione russa. La Russia lo vieta per il suo potere politico. I sette sinfonie di Sibelius sono il contributo piu importante della Scandinavia alla musica classica. Dvorak per la Boemia, Smetana per la Boemia, Grieg per la Norvegia, Sibelius per la Finlandia: il Romanticismo come nazionalismo.",
-    "wikipediaSlug": "Finlandia_(Sibelius)",
+    "wikipediaSlug": "Sibelius",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -2372,7 +2372,7 @@
     "lng": 1.535,
     "category": "arte",
     "description": "Dal 1896 fino alla morte nel 1926 Claude Monet dipinge le Ninfee nel suo giardino di Giverny: 250 tele. Le grandi decorazioni al Musée de l'Orangerie. La cataratta che quasi lo acceca a 80 anni: i colori si sfumano, l'astrazione avanza. L'Impressionismo nasce con Impressione, levar del sole del 1872 e i critici che deridono il titolo. Le Ninfee anticipano l'Espressionismo Astratto americano degli anni Cinquanta. Rothko si ispira a Monet.",
-    "wikipediaSlug": "Water_Lilies_(Monet_series)",
+    "wikipediaSlug": "Monet",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2444,7 +2444,7 @@
     "lng": 4.8357,
     "category": "arte",
     "description": "Il 28 dicembre 1895 Auguste e Louis Lumière proiettano i loro film al Grand Café di Parigi: L'Uscita dalla Fabbrica Lumière, L'Arrivo del Treno. Lo spettacolo del cinema: le persone scappano vedendo il treno arrivare. Thomas Edison aveva il kinetoscopio ma solo per una persona. Méliès nel 1902 gira Viaggio nella Luna il primo film di fantascienza. Il cinema come arte totale che assorbe letteratura, teatro, pittura, musica.",
-    "wikipediaSlug": "Lumière_Brothers",
+    "wikipediaSlug": "Lumière_brothers",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2456,7 +2456,7 @@
     "lng": -0.1278,
     "category": "arte",
     "description": "Nel 1895 Oscar Wilde viene processato per gross indecency con il Marchese di Queensberry: condannato a 2 anni di lavori forzati. Il genio vittoriano che cade: Il Ritratto di Dorian Gray, L'Importanza di Chiamarsi Ernesto, La Ballata del Carcere di Reading. La prigione distrugge Wilde: muore povero a Parigi nel 1900 a 46 anni. Wilde come martire dell'omofobia vittoriana. Il suo processo spinge i diritti omosessuali indietro di 70 anni in Inghilterra.",
-    "wikipediaSlug": "Trials_of_Oscar_Wilde",
+    "wikipediaSlug": "Oscar_Wilde",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2588,7 +2588,7 @@
     "lng": 8.6821,
     "category": "arte",
     "description": "Nel 1819 Arthur Schopenhauer pubblica Il Mondo come Volontà e Rappresentazione: il mondo non è razionale come dice Hegel ma è Volontà cieca e irrazionale che genera dolore. Il pessimismo filosofico. L'arte e la musica come fugaci vie di fuga dalla Volontà. L'ascesi buddhista come soluzione. Schopenhauer ignorato per 30 anni, riscoperto dopo il 1848. Nietzsche, Wagner, Freud, Wittgenstein lo leggono. Il pessimismo come alternativa all'ottimismo progressista della modernità.",
-    "wikipediaSlug": "The_World_as_Will_and_Representation",
+    "wikipediaSlug": "Schopenhauer",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2696,7 +2696,7 @@
     "lng": 7.4474,
     "category": "scienza",
     "description": "Nel 1905 Albert Einstein, 26 anni, impiegato all'Ufficio Brevetti di Berna, pubblica 4 articoli che cambiano la fisica: la relatività speciale (E=mc²), l'effetto fotoelettrico (Nobel 1921), il moto browniano, e la relatività dei corpi in movimento. E=mc² unifica massa e energia: ogni grammo di massa equivale a 90 miliardi di joule. La velocità della luce come limite assoluto. Il tempo che rallenta ad alte velocità. L'Annus Mirabilis come uno dei momenti più fruttuosi della storia scientifica.",
-    "wikipediaSlug": "Annus_Mirabilis_papers",
+    "wikipediaSlug": "Annus_mirabilis_papers",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -2708,7 +2708,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Nel 1907 Pablo Picasso dipinge Les Demoiselles d'Avignon: cinque figure femminili con volti scomposti ispirate alle maschere africane e alle sculture iberiche. La prospettiva unica viene frantumata: più punti di vista simultanei. Braque e Picasso sviluppano il Cubismo Analitico e poi Sintetico. La collage. Il cubismo come prima grande rottura con la tradizione pittorica occidentale dal Rinascimento. Picasso lavora per 70 anni: dal realismo classico all'astrazione geometrica al neo-espressionismo.",
-    "wikipediaSlug": "Les_Demoiselles_d'Avignon",
+    "wikipediaSlug": "Les_demoiselles_d'Avignon",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -2792,7 +2792,7 @@
     "lng": -70.0995,
     "category": "arte",
     "description": "Nel 1851 Herman Melville pubblica Moby Dick or, The Whale: il capitano Achab che insegue la balena bianca che gli ha mangiato la gamba, la vendetta contro la natura indifferente. Il romanzo fallisce commercialmente: Melville muore nel 1891 come impiegato doganale dimenticato. Riscoperto negli anni Venti del Novecento: considerato il grande romanzo americano. Il libro che parla della caccia alle balene, della natura, del potere, dell'ossessione, dell'America del XIX secolo.",
-    "wikipediaSlug": "Moby-Dick",
+    "wikipediaSlug": "Moby_Dick",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2804,7 +2804,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Dal 1853 al 1870 il prefetto Haussmann su ordine di Napoleone III trasforma Parigi: 60 km di boulevard retti, demolizione di 20.000 edifici medievali, costruzione di 40.000 edifici nuovi. 350.000 persone espropriate. I boulevard larghi rendono le barricate impossibili: la modernizzazione come risposta alle rivoluzioni. Le fognature moderne, l'acquedotto, i lampioni a gas. La Parigi haussmanniana come modello per città di tutto il mondo: Madrid, Barcellona, Buenos Aires, Chicago.",
-    "wikipediaSlug": "Haussmann's_renovation_of_Paris",
+    "wikipediaSlug": "Haussmann",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2852,7 +2852,7 @@
     "lng": 2.3522,
     "category": "scienza",
     "description": "Negli anni Sessanta Louis Pasteur dimostra che le malattie infettive sono causate da microrganismi specifici: non i miasmi (aria cattiva) come si credeva da secoli. La pastorizzazione del vino e della birra. Il vaccino contro il colera dei polli (1880), contro l'antrace (1881), contro la rabbia (1885 (il bambino Joseph Meister, primo vaccino su un essere umano). La teoria dei germi come fondamento della medicina moderna. L'Institut Pasteur fondato nel 1888.",
-    "wikipediaSlug": "Louis_Pasteur",
+    "wikipediaSlug": "Pasteur",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -2924,7 +2924,7 @@
     "lng": 116.4074,
     "category": "storia",
     "description": "Nel 1912 Pu Yi abdica a 6 anni: la fine della dinastia Qing e dell'Impero Cinese dopo 2.000 anni. Vive nella Città Proibita fino al 1924 come imperatore senza poteri. Il Giappone lo usa come fantoccio in Manciuria (Manchukuo) dal 1932 al 1945. Prigioniero sovietico, poi cinese. Rieducato come giardiniere. Muore nel 1967 come cittadino comune della Repubblica Popolare. Il film L'Ultimo Imperatore di Bertolucci (1987, 9 Oscar): il destino straordinario di un uomo che non ha mai scelto il suo destino.",
-    "wikipediaSlug": "Puyi",
+    "wikipediaSlug": "Pu_Yi",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3116,7 +3116,7 @@
     "lng": -72.2852,
     "category": "storia",
     "description": "Dal 1791 al 1804 la rivoluzione haitiana: la prima e unica rivoluzione di schiavi vittoriosa nella storia. Toussaint Louverture guida gli schiavi della colonia francese più ricca del mondo (Santo Domingo). Napoleone manda 40.000 soldati: muoiono tutti di febbre gialla. Il 1° gennaio 1804 Haiti proclama l'indipendenza. La vendetta europea: Francia impone riparazioni di 150 milioni di franchi (pagati fino al 1947). La rivoluzione che terrificò tutti gli stati schiavisti dell'America.",
-    "wikipediaSlug": "Haitian_Revolution",
+    "wikipediaSlug": "Haiti",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3140,7 +3140,7 @@
     "lng": 30.3609,
     "category": "arte",
     "description": "Nel 1880 Dostoevskij pubblica I Fratelli Karamazov: il testamento spirituale dell'ultimo anno di vita. Ivan il nichilista razionale, Alëša il mistico, Dmitrij il passionale. Il Grande Inquisitore come il testo più potente sulla libertà religiosa del XIX secolo. La domanda: se Dio non esiste, tutto è permesso? Dostoevskij come il romanziere che anticipa l'esistenzialismo, la psicanalisi, il nichilismo novecentesco. Freud dice che i Fratelli Karamazov è il più grande romanzo mai scritto.",
-    "wikipediaSlug": "The_Brothers_Karamazov",
+    "wikipediaSlug": "Dostoevskij",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3152,7 +3152,7 @@
     "lng": -74.006,
     "category": "scienza",
     "description": "Nel 1837 Samuel Morse inventa il telegrafo elettrico e il codice Morse. Il 24 maggio 1844 il primo messaggio a lunga distanza: What hath God wrought (Numeri 23:23) da Washington a Baltimora. Il cavo transatlantico dal 1866: Londra e New York connesse in pochi secondi invece di 2 settimane di nave. La rete telegrafale mondiale entro il 1880: il primo sistema globale di comunicazione istantanea. Il telegrafo come l'internet del XIX secolo.",
-    "wikipediaSlug": "Electrical_telegraph",
+    "wikipediaSlug": "Morse",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3164,7 +3164,7 @@
     "lng": -77.2311,
     "category": "storia",
     "description": "Dal 1 al 3 luglio 1863 la Battaglia di Gettysburg in Pennsylvania: la più sanguinosa battaglia della Guerra Civile Americana, 51.000 tra morti, feriti e dispersi in 3 giorni. La carica di Pickett: 12.000 soldati confederati camminano verso le linee dell'Unione sotto il fuoco dell'artiglieria. Il discorso di Gettysburg di Lincoln il 19 novembre 1863: 272 parole, 2 minuti, il testo fondativo della democrazia americana moderna. La svolta della guerra: dopo Gettysburg il Sud non lancia più offensive.",
-    "wikipediaSlug": "Battle_of_Gettysburg",
+    "wikipediaSlug": "Gettysburg",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -3200,7 +3200,7 @@
     "lng": 30.3609,
     "category": "scienza",
     "description": "Nel 1869 Dmitri Mendeleev presenta la tavola periodica degli elementi alla Società Chimica Russa: 63 elementi ordinati per peso atomico con proprietà periodiche che si ripetono. Mendeleev lascia spazi vuoti per elementi non ancora scoperti e ne predice le proprietà. Il gallio scoperto nel 1875, il germanio nel 1886, lo scandio nel 1879: tutti corrispondono alle previsioni. La tavola periodica come la più bella struttura di organizzazione della conoscenza scientifica mai creata.",
-    "wikipediaSlug": "Periodic_table",
+    "wikipediaSlug": "Mendeleev",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3236,7 +3236,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Nel 1857 Charles Baudelaire pubblica I Fiori del Male: processo per oscenità, 6 poesie condannate (restaurate nel 1949). La bellezza che nasce dalla perversione, il vizio, la morte. Le Corrispondenze: la sinestesia come metodo poetico. Il Simbolismo come movimento derivato da Baudelaire: Verlaine, Rimbaud, Mallarmé. Rimbaud che con 17 anni scrive Una stagione all'inferno e poi abbandona la poesia per il commercio africano. La poesia moderna come rottura con il verso classico.",
-    "wikipediaSlug": "Les_Fleurs_du_mal",
+    "wikipediaSlug": "Baudelaire",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -3248,7 +3248,7 @@
     "lng": 2.3522,
     "category": "scienza",
     "description": "Nel 1897 Émile Durkheim pubblica Il Suicidio: il primo grande studio sociologico quantitativo. Il suicidio come fenomeno sociale, non solo individuale: le variazioni per religione, professione, stato civile. Il suicidio anomico (perdita di norme), egoista (troppo poco legame sociale), altruistico (troppo legame). Durkheim dimostra che la statistica può rivelare leggi sociali. La divisione del lavoro sociale (1893). Le Forme elementari della vita religiosa (1912). Durkheim come il fondatore della sociologia come disciplina accademica.",
-    "wikipediaSlug": "Suicide_(Durkheim_book)",
+    "wikipediaSlug": "Durkheim",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3272,7 +3272,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Il 17 marzo 1861 il parlamento di Torino proclama il Regno d'Italia con Vittorio Emanuele II re: l'Unità come risultato della spedizione dei Mille di Garibaldi (maggio-novembre 1860), della diplomazia di Cavour e delle guerre d'indipendenza. Roma annessa nel 1870 dopo il ritiro delle truppe francesi. La Questione Meridionale: il Sud come economia arretrata che non si integra col Nord industriale. D'Azeglio: L'Italia è fatta, ora bisogna fare gli italiani. La nazione politica senza ancora nazione culturale.",
-    "wikipediaSlug": "Kingdom_of_Italy_(1861–1946)",
+    "wikipediaSlug": "L'unità_italiana",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3284,7 +3284,7 @@
     "lng": 0.1218,
     "category": "scienza",
     "description": "Nel 1890 Alfred Marshall pubblica Principles of Economics: la sintesi della teoria neoclassica. La domanda e l'offerta come curve che si incontrano nell'equilibrio. L'elasticità della domanda. Il surplus del consumatore. Marshall come il fondatore della microeconomia moderna. La Cambridge School of Economics. La distinzione tra breve e lungo periodo. Marshall come il rivale accademico della scuola austriaca (Menger, Böhm-Bawerk). L'economia come scienza che studia come le persone massimizzano la loro utilità sotto vincoli.",
-    "wikipediaSlug": "Principles_of_Economics_(Marshall)",
+    "wikipediaSlug": "Marshall",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -3296,7 +3296,7 @@
     "lng": 16.3738,
     "category": "scienza",
     "description": "Nel 1895 Sigmund Freud e Josef Breuer pubblicano Studi sull'Isteria: Anna O., Dora, le pazienti isteriche curate con la talking cure. L'inconscio come la parte sommersa della mente. Il meccanismo della rimozione. L'interpretazione dei sogni (1899): la via regia all'inconscio. Il complesso di Edipo. La Psicopatologia della vita quotidiana (1901). Freud come il pensatore più influente del XX secolo dopo Marx: il linguaggio della psicanalisi penetra in letteratura, arte, cinema, cultura popolare.",
-    "wikipediaSlug": "Studies_on_Hysteria",
+    "wikipediaSlug": "Freud",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3428,7 +3428,7 @@
     "lng": 2.3522,
     "category": "scienza",
     "description": "Nel 1862 Louis Pasteur confuta la teoria della generazione spontanea con il pallone a collo di cigno: i microbi vengono dall'aria, non nascono spontaneamente. La pastorizzazione (1864) per prevenire la fermentazione del vino. La teoria dei germi come causa delle malattie: il medico Joseph Lister applica l'antisepsi chirurgica dal 1867. Il vaccino contro il colera dei polli (1880), il carbonchio (1881), la rabbia (1885). Pasteur come il fondatore della microbiologia e dell'immunologia moderne.",
-    "wikipediaSlug": "Louis_Pasteur",
+    "wikipediaSlug": "Pasteur",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3584,7 +3584,7 @@
     "lng": 8.4037,
     "category": "scienza",
     "description": "Nel 1807 Georg Wilhelm Friedrich Hegel pubblica la Fenomenologia dello Spirito: la coscienza che si sviluppa attraverso la storia come lo Spirito (Geist) che si conosce. La dialettica tesi-antitesi-sintesi come il motore dello sviluppo storico. Lo Stato come la realizzazione della libertà razionale. La filosofia della storia: ogni epoca ha la sua forma di libertà, la storia va verso la libertà crescente. Marx rovescia Hegel: la dialettica è materiale (economia), non ideale (Spirito). Hegel come la cerniera tra Kant e Marx.",
-    "wikipediaSlug": "Phenomenology_of_Spirit",
+    "wikipediaSlug": "Hegel",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3656,7 +3656,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Nel 1862 Victor Hugo pubblica i Miserabili: Jean Valjean condannato a 19 anni per aver rubato un pane, la redenzione possibile, l'Inspector Javert come la legge senza pietà. Il romanzo come denuncia sociale: la miseria urbana, il sistema penitenziario, la lotta di classe. Notre-Dame de Paris (1831) come la salvezza del Gotico. Hugo come il più grande poeta, drammaturgo e romanziere del Romanticismo francese. 20 anni di esilio da Napoleone III (a Guernsey). Il suo funerale nel 1885: 2 milioni di persone a Parigi.",
-    "wikipediaSlug": "Les_Misérables",
+    "wikipediaSlug": "Victor_Hugo",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -3716,7 +3716,7 @@
     "lng": -71.1167,
     "category": "scienza",
     "description": "Nel 1890 William James pubblica i Principi di Psicologia: il primo manuale moderno di psicologia come scienza. Il flusso di coscienza (stream of consciousness) come concetto che passa alla letteratura (Joyce, Woolf). Le emozioni come reazioni fisiologiche (la teoria James-Lange: piangiamo perché siamo tristi, non siamo tristi perché piangiamo). Il Pragmatismo (1907): la verità di un'idea si misura dalle sue conseguenze pratiche. James come il fondatore sia della psicologia americana che del pragmatismo filosofico.",
-    "wikipediaSlug": "Principles_of_Psychology",
+    "wikipediaSlug": "William_James",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3764,7 +3764,7 @@
     "lng": -1.15,
     "category": "storia",
     "description": "Gli artigiani tessili del Nottinghamshire distruggono i telai meccanici che minacciano i loro mestieri. La rivolta luddista è la prima grande protesta operaia contro l'automazione industriale. Il termine luddismo entra nel linguaggio per indicare l'opposizione al progresso tecnologico.",
-    "wikipediaSlug": "Luddite",
+    "wikipediaSlug": "Luddites",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -4028,7 +4028,7 @@
     "lng": 16.37,
     "category": "storia",
     "description": "Francesco Giuseppe I d'Asburgo sale al trono a 18 anni nel 1848 — durante le rivoluzioni che scuotono l'Europa — e regna per 68 anni fino alla morte nel 1916. È l'imperatore più longevo d'Europa: vede nascere il Risorgimento italiano, la Comune di Parigi, l'unificazione tedesca, la Belle Époque, la crisi dei Balcani. Il suo Impero austro-ungarico abbraccia 50 milioni di persone e 11 nazionalità diverse in costante tensione. L'assassinio del nipote Francesco Ferdinando a Sarajevo nel 1914 scatena la Prima Guerra Mondiale — il conflitto che travolge il suo Impero due anni dopo la sua morte.",
-    "wikipediaSlug": "Franz_Joseph_I_of_Austria",
+    "wikipediaSlug": "Francesco_Giuseppe_I_d'Austria",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4088,7 +4088,7 @@
     "lng": -0.13,
     "category": "storia",
     "description": "Giorgio IV (1820-1830), già Principe Reggente dal 1811, è il monarca che presta il nome all'era 'georgiana' — uno dei periodi più ferventi della cultura britannica: Jane Austen, Byron, Keats, Turner, Nash. Eccentrico, spendaccione e immorale (il suo matrimonio con Carolina di Brunswick è un disastro pubblico), Giorgio IV modernizza il castello di Windsor e commissionò il Brighton Pavilion. Il Reform Act del 1832, che trasformerà la democrazia britannica, matura sotto il suo regno e viene approvato dal successore Guglielmo IV.",
-    "wikipediaSlug": "George_IV_of_the_United_Kingdom",
+    "wikipediaSlug": "Giorgio_IV",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -4100,7 +4100,7 @@
     "lng": -0.13,
     "category": "storia",
     "description": "Guglielmo IV (1830-1837), fratello di Giorgio IV e zio di Vittoria, regna durante la grande transizione democratica britannica. Il Reform Act del 1832 — che elimina i 'rotten boroughs' (collegi corrotti), estende il suffragio alla borghesia e ridistribuisce i seggi verso le città industriali — è il fondamento della democrazia moderna britannica. Senza Guglielmo IV che pressò il Parlamento e minacciò di creare nuovi lord per far passare la legge, la riforma avrebbe potuto fallire. Il suo predecessore di Vittoria e dell'era vittoriana.",
-    "wikipediaSlug": "William_IV_of_the_United_Kingdom",
+    "wikipediaSlug": "Guglielmo_IV",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -4461,7 +4461,7 @@
     "category": "musica",
     "tipo": "persona",
     "description": "Fryderyk Franciszek Chopin nasce il 1° marzo 1810 a Żelazowa Wola, in Polonia. Massimo esponente del pianoforte romantico, compose quasi esclusivamente per questo strumento, elevandolo a una capacità espressiva fino ad allora sconosciuta. I suoi notturni, polacche, mazurche, preludi, studi e ballate definiscono un linguaggio armonico originalissimo che anticipa il modernismo. Costretto a lasciare la Polonia durante la rivolta del 1830, trascorre gran parte della vita a Parigi, dove muore nel 1849 a soli 39 anni, lasciando un'eredità musicale di valore inestimabile.",
-    "wikipediaSlug": "Frédéric_Chopin",
+    "wikipediaSlug": "Chopin",
     "isCosmic": false
   },
   {
@@ -4485,7 +4485,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "La Torre Eiffel è la struttura metallica più famosa al mondo, costruita dall'ingegnere Gustave Eiffel per l'Esposizione Universale di Parigi del 1889, celebrazione del centenario della Rivoluzione francese. Alta 330 metri, è stata per quarant'anni la struttura artificiale più alta della Terra. Inizialmente criticata come bruttura di ferro dagli intellettuali parigini, diventa rapidamente il simbolo per eccellenza di Parigi e della Francia. Costruita in soli due anni con 18.000 pezzi metallici e oltre due milioni di rivetti, è un capolavoro dell'ingegneria ottocentesca. Oggi è il monumento a pagamento più visitato del mondo, con circa sette milioni di visitatori ogni anno.",
-    "wikipediaSlug": "Eiffel_Tower",
+    "wikipediaSlug": "La_torre_Eiffel",
     "isCosmic": false
   },
   {
@@ -4521,7 +4521,7 @@
     "category": "sport",
     "tipo": "organizzazione",
     "description": "Fondata nel 1897 da studenti del Liceo Massimo D'Azeglio di Torino, la Juventus FC è il club calcistico italiano più titolato con 36 scudetti, 14 Coppe Italia e 2 Champions League (1985, 1996). Soprannominata \"la Vecchia Signora\", ha collezionato stelle come Boniperti, Charles, Platini, Baggio, Zidane, Del Piero, Buffon, Ronaldo. È il club con il maggior numero di tifosi in Italia.",
-    "wikipediaSlug": "Juventus_FC",
+    "wikipediaSlug": "Juventus_Football_Club",
     "isCosmic": false
   },
   {
@@ -4533,7 +4533,7 @@
     "category": "sport",
     "tipo": "organizzazione",
     "description": "Fondata nel 1908 da una scissione del Milan Cricket and Football Club, l'Inter è l'unica squadra italiana ad essere sempre rimasta in Serie A senza retrocessioni. Ha vinto 20 scudetti, 8 Coppe Italia e 3 Champions League (1964, 1965, 2010). Il Triplete del 2010 sotto José Mourinho — Scudetto, Coppa Italia e Champions League nello stesso anno — è rimasto un evento irripetibile nel calcio italiano.",
-    "wikipediaSlug": "Inter_Milan",
+    "wikipediaSlug": "Football_Club_Internazionale_Milano",
     "isCosmic": false
   },
   {
@@ -4545,7 +4545,7 @@
     "category": "sport",
     "tipo": "organizzazione",
     "description": "Fondato nel 1899 da Herbert Kilpin e Alfred Edwards come Milan Cricket and Football Club, l'AC Milan è uno dei club più titolati al mondo con 19 scudetti, 7 Champions League (record europeo condiviso con il Real Madrid), 5 Coppe del Mondo per Club. Ha lanciato stelle come Rivera, Maldini, Van Basten, Gullit, Baresi, Kakà, Shevchenko. Il \"Grande Milan\" di Sacchi negli anni '80–'90 è considerato una delle squadre più forti di tutti i tempi.",
-    "wikipediaSlug": "AC_Milan",
+    "wikipediaSlug": "Associazione_Calcio_Milan",
     "isCosmic": false
   },
   {
@@ -4592,7 +4592,7 @@
     "lng": 11.58,
     "category": "cosmo",
     "description": "Nel 1814 l'ottico tedesco Joseph von Fraunhofer, studiando la luce solare attraverso un prisma ad alta risoluzione, cataloga oltre 570 righe scure nello spettro solare — le «righe di Fraunhofer» — corrispondenti alle lunghezze d'onda assorbite da elementi chimici specifici nell'atmosfera del Sole. Questa scoperta apre la via alla spettroscopia astronomica: analizzando la luce di una stella è possibile determinarne la composizione chimica, la temperatura, la velocità e altre proprietà fisiche senza alcun contatto diretto. Grazie alla spettroscopia, nel XIX secolo gli astronomi dimostrano che le stelle sono composte degli stessi elementi chimici presenti sulla Terra — un risultato straordinario che unifica fisicamente il cosmo. La spettroscopia diventa il principale strumento dell'astrofisica moderna.",
-    "wikipediaSlug": "Fraunhofer_lines",
+    "wikipediaSlug": "Fraunhofer",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -4604,7 +4604,7 @@
     "lng": 13.4,
     "category": "cosmo",
     "description": "Nel 1846 il matematico francese Urbain Le Verrier e il britannico John Couch Adams, indipendentemente, predicono la posizione di un pianeta sconosciuto a partire dalle perturbazioni orbitali di Urano, non spiegabili con la sola gravità del Sole e dei pianeti noti. Il 23 settembre 1846, a Berlino, l'astronomo Johann Galle punta il telescopio nella posizione indicata da Le Verrier e trova Nettuno a meno di 1° dalla previsione. È il trionfo della meccanica celeste newtoniana: un pianeta «scoperto con la penna» prima ancora che con il telescopio. Nettuno è il quinto pianeta più grande del sistema solare e il più lontano dalla Terra. La sua scoperta rafforza la fiducia nel metodo scientifico come strumento di previsione e indagine della realtà.",
-    "wikipediaSlug": "Discovery_of_Neptune",
+    "wikipediaSlug": "Scoperta_di_Nettuno",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -4748,7 +4748,7 @@
     "lng": 11.5861,
     "category": "filosofia",
     "description": "La Fenomenologia dello Spirito di Georg Hegel, pubblicata a Jena nel 1807, è uno dei libri più difficili e più affascinanti della storia della filosofia, spesso definita «l'Odissea dello Spirito». L'opera descrive il percorso della coscienza umana attraverso successive figure — certezza sensibile, percezione, intelletto, autocoscienza, ragione, spirito, religione, sapere assoluto — in un movimento dialettico che è contemporaneamente storia individuale e storia universale. La celebre sezione sulla «dialettica signore-servo» (Herrschaft und Knechtschaft) ha influenzato profondamente Marx, il pensiero del riconoscimento (Anerkennung) di Kojève e Honneth, la psicanalisi e la teoria postcoloniale. Hegel scrisse l'opera di getto, consegnando le ultime pagine all'editore mentre Napoleone entrava a Jena con il suo esercito — «l'Anima del Mondo a cavallo», come egli scrisse in una lettera. Ancora oggi è considerata una delle opere filosofiche più ambiziose e influenti mai scritte.",
-    "wikipediaSlug": "Phenomenology_of_Spirit",
+    "wikipediaSlug": "Hegel",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4760,7 +4760,7 @@
     "lng": 13.7373,
     "category": "filosofia",
     "description": "Il mondo come volontà e rappresentazione, pubblicato da Arthur Schopenhauer a Lipsia nel 1818, è la sua opera principale e uno dei capolavori della filosofia ottocentesca. Partendo dalla distinzione kantiana tra fenomeno e cosa in sé, Schopenhauer identifica la cosa in sé con la Volontà — una forza cieca, irrazionale e insaziabile che si manifesta nell'intera natura, dal più semplice impulso fisico al desiderio umano. Il libro è strutturato in quattro libri: epistemologia, ontologia, estetica ed etica, formando un sistema coerente dove la sofferenza è la condizione normale dell'esistenza consapevole. Schopenhauer indica nell'arte — in particolare nella musica, che descrive come la «copia diretta» della Volontà — e nell'ascesi buddhista le uniche vie di temporanea liberazione. Nonostante l'iniziale insuccesso commerciale, l'opera conobbe una straordinaria rivalutazione dopo il 1850 e influenzò profondamente Nietzsche, Wagner, Tolstoj, Proust e Freud.",
-    "wikipediaSlug": "The_World_as_Will_and_Representation",
+    "wikipediaSlug": "Schopenhauer",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4808,7 +4808,7 @@
     "lng": 2.3522,
     "category": "filosofia",
     "description": "Il Corso di filosofia positiva di Auguste Comte, pubblicato a Parigi in sei volumi tra il 1830 e il 1842, è l'opera fondatrice del positivismo e dell'approccio scientifico alle scienze sociali. Comte sostiene che tutta la conoscenza umana evolve attraverso tre stadi: quello teologico, dove i fenomeni sono spiegati con entità soprannaturali; quello metafisico, dove sono spiegati con principi astratti; e quello positivo, dove sono spiegati solo attraverso l'osservazione dei fatti e la scoperta di leggi naturali. In quest'opera sistematizza tutte le scienze in una gerarchia — matematica, astronomia, fisica, chimica, biologia e sociologia — dove ogni scienza più complessa si fonda sulle precedenti. La sociologia, scienza nuova che Comte battezza con questo nome, è al vertice della gerarchia e deve guidare la riorganizzazione razionale della società. L'opera esercitò un'influenza enorme sulla cultura scientifica del secondo Ottocento in Europa e America.",
-    "wikipediaSlug": "The_Course_in_Positive_Philosophy",
+    "wikipediaSlug": "Corso_di_filosofia_positiva",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4880,7 +4880,7 @@
     "lng": -0.2149,
     "category": "sport",
     "description": "Il 9 luglio 1877 si gioca a Wimbledon, Londra, il primo torneo di tennis della storia moderna: 22 partecipanti, soli uomini, sul prato dell'All England Lawn Tennis and Croquet Club. Vince Spencer Gore, giocando tutto in attacco a rete. L'anno dopo Gore non difende il titolo — dice che il tennis è troppo noioso. Da allora Wimbledon si svolge ogni anno (eccetto 1915-1918 e 1940-1945) diventando il più antico e prestigioso torneo del Grand Slam. Le tradizioni sono rigide: abiti bianchi, fragole con panna, silenzio durante i game.",
-    "wikipediaSlug": "The_Championships,_Wimbledon",
+    "wikipediaSlug": "Wimbledon",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -5387,7 +5387,7 @@
     "lng": 5.4897,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Louis_Pasteur",
+    "wikipediaSlug": "Pasteur",
     "isCosmic": false
   },
   {
@@ -6539,7 +6539,7 @@
     "lng": 34.6133,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Leonid_Il'ič_Brežnev",
+    "wikipediaSlug": "Leonid_Brežnev",
     "isCosmic": false
   },
   {
@@ -6599,7 +6599,7 @@
     "lng": 88.3674,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Vivekananda",
+    "wikipediaSlug": "Swami_Vivekananda",
     "isCosmic": false
   },
   {
@@ -8387,7 +8387,7 @@
     "lng": 51.4254,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Bahá'u'lláh",
+    "wikipediaSlug": "Baháʼu'lláh",
     "isCosmic": false
   },
   {
@@ -8687,7 +8687,7 @@
     "lng": 116.4075,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Cixi",
+    "wikipediaSlug": "Empress_Dowager_Cixi",
     "isCosmic": false
   },
   {
@@ -11507,7 +11507,7 @@
     "lng": -3.4157,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Henry_Morton_Stanley",
+    "wikipediaSlug": "Stanley_Livingston",
     "isCosmic": false
   },
   {
@@ -12143,7 +12143,7 @@
     "lng": 103.4519,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": "First_Opium_War",
+    "wikipediaSlug": "Prima_Guerra_dell'Oppio",
     "isCosmic": false
   },
   {
@@ -13283,7 +13283,7 @@
     "lng": 2.3514,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Paul_Sabatier_(chimico)",
+    "wikipediaSlug": "Paul_Sabatier",
     "isCosmic": false
   },
   {
@@ -14843,7 +14843,7 @@
     "lng": -76,
     "category": "storia",
     "tipo": "evento",
-    "wikipediaSlug": "Guerra_del_Pacifico_(1879-1884)",
+    "wikipediaSlug": "Guerra_del_Pacifico",
     "isCosmic": false
   },
   {
@@ -20855,7 +20855,7 @@
     "lng": 13.0698,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Guglielmo_di_Prussia_(1882)",
+    "wikipediaSlug": "Guglielmo_di_Prussia",
     "isCosmic": false
   },
   {
@@ -21479,7 +21479,7 @@
     "category": "storia",
     "tipo": "evento",
     "description": "Le miniere di carbone del Galles del Sud, nel XIX secolo, erano tra le piu produttive del mondo: bambini di 5 anni lavoravano nelle gallerie 12 ore al giorno, alimentando la Rivoluzione Industriale con il sacrificio della loro infanzia.",
-    "wikipediaSlug": "South_Wales_coalfield",
+    "wikipediaSlug": "South_Wales_Coalfield",
     "isCosmic": false
   },
   {
@@ -21660,7 +21660,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Artista e fotografo francese (1787-1851) che nel 1839 presentò il dagherrotipo all'Académie des Sciences di Parigi. Fu il primo metodo commerciale di fotografia, inaugurando l'era dell'immagine meccanica.",
-    "wikipediaSlug": "Louis_Daguerre"
+    "wikipediaSlug": "Fotografia"
   },
   {
     "id": "olimpiadi-moderne-1896",
@@ -21720,7 +21720,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Ondata rivoluzionaria che nel 1848 investì Francia, Germania, Austria, Italia e Ungheria. Chiamate \"Primavera dei Popoli\" o \"Anno dei Miracoli\", tutte vennero represse entro il 1849.",
-    "wikipediaSlug": "Moti_del_1848"
+    "wikipediaSlug": "Rivoluzioni_del_1848"
   },
   {
     "id": "football-regole-cambridge-1848",
@@ -21756,7 +21756,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Conflitto (1899-1902) tra l'Impero britannico e le Repubbliche boere sudafricane. I britannici inventarono i campi di concentramento per civili boeri: 27.000 morirono in condizioni disumane.",
-    "wikipediaSlug": "Guerre_boere"
+    "wikipediaSlug": "Guerra_Anglo-Boera"
   },
   {
     "id": "marsigliese-inno",
@@ -21816,7 +21816,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Poeta e umanista fiorentino (1454-1494) del circolo laurenziano. Le sue laude (canti religiosi in volgare) messe in musica nel circolo di Lorenzo il Magnifico unirono arte sacra e profana, rinnovando la lirica italiana.",
-    "wikipediaSlug": "Agnolo_Poliziano"
+    "wikipediaSlug": "Angelo_Poliziano"
   },
   {
     "id": "heinrich-isaac-frottola",
@@ -21888,7 +21888,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Genere di intrattenimento popolare vittoriano nato a Londra negli anni 1850: operai in giacca domenicale assistevano a sketch comici, canzoni sentimentali e numeri acrobatici. Base del cabaret e del vaudeville americano.",
-    "wikipediaSlug": "Music-hall"
+    "wikipediaSlug": "Music_hall"
   },
   {
     "id": "puritani-condanna-sport",
@@ -21900,7 +21900,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Movimento religioso riformato inglese del XVII sec. che condannava i giochi festivi domenicali come peccato. I predicatori puritani chiusero teatri e arene, creando un conflitto morale attorno allo sport e al tempo libero.",
-    "wikipediaSlug": "Puritani"
+    "wikipediaSlug": "Puritanesimo"
   },
   {
     "id": "cerro-rico-potosi-miniere",
