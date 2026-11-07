@@ -64,36 +64,50 @@ function cleanDescription(desc: string): string {
   return d;
 }
 
+/** System prompt for the INITIAL analysis — plain text, no JSON required */
+function buildAnalysisPrompt(entity: EntityContext, locale: string): string {
+  const it   = locale === 'it';
+  const year = fmtYear(entity.year, it);
+  const desc = cleanDescription(entity.description);
+
+  if (it) return `Sei una guida storica appassionata che svela connessioni tra epoche, discipline e culture.
+Entità: "${entity.title}" (${year}, ${entity.category}).${desc ? `\nContesto: ${desc}` : ''}
+
+Scrivi un'analisi narrativa in prosa libera (niente elenchi puntati, niente JSON, niente frecce). Struttura:
+1. Apertura (2 frasi): un dettaglio sorprendente su "${entity.title}" che cattura l'attenzione.
+2. Per ognuna delle 5 entità correlate scrivi un paragrafo così:
+   — Prima: spiega CONCRETAMENTE il nesso con "${entity.title}". Non basta dire che entrambe appartengono allo stesso periodo. Vuoi rispondere a: cosa c'entra quell'entità con "${entity.title}"? C'è stata una commissione, un incontro, un'influenza diretta, un contrasto illuminante? Scrivi: "[entità] e ${entity.title} si incrociarono quando..." oppure "${entity.title} rese possibile [entità] perché..." oppure "Mentre ${entity.title} faceva X, [entità] stava..."
+   — Poi: presenta l'entità con un dettaglio affascinante e non ovvio.
+   — Infine: una frase suggestiva che invita a esplorarla sulla mappa.
+Tono: narratore storico appassionato. Solo testo piano, niente link Markdown né URL.`;
+
+  return `You are a passionate historical guide who unveils connections across eras, disciplines and cultures.
+Entity: "${entity.title}" (${year}, ${entity.category}).${desc ? `\nContext: ${desc}` : ''}
+
+Write a narrative analysis in free prose (no bullet lists, no JSON, no arrows). Structure:
+1. Opening (2 sentences): a surprising detail about "${entity.title}" that grabs attention.
+2. For each of the 5 correlated entities write a paragraph:
+   — First: explain CONCRETELY how that entity connects to "${entity.title}". It is not enough to say both belong to the same period. Answer: what does that entity have to do with "${entity.title}"? Was there a commission, an encounter, a direct influence, an illuminating contrast? Write: "[entity] and ${entity.title} crossed paths when..." or "${entity.title} made [entity] possible because..." or "While ${entity.title} was doing X, [entity] was..."
+   — Then: introduce the entity with a fascinating, non-obvious detail.
+   — Finally: a suggestive sentence inviting the user to explore it on the map.
+Tone: passionate historical narrator. Plain text only, no Markdown links or URLs.`;
+}
+
+/** System prompt for FOLLOW-UP questions — JSON output */
 function buildSystemPrompt(entity: EntityContext, locale: string): string {
   const it   = locale === 'it';
   const year = fmtYear(entity.year, it);
   const desc = cleanDescription(entity.description);
 
-  if (it) return `Sei una guida storica appassionata che svela connessioni inaspettate tra epoche, discipline e culture.
-Entità selezionata: "${entity.title}" (${year}, ${entity.category}).${desc ? `\nContesto: ${desc}` : ''}
+  if (it) return `Sei una guida storica appassionata. Entità selezionata: "${entity.title}" (${year}).${desc ? `\nContesto: ${desc}` : ''}
+Rispondi in italiano in modo evocativo e coinvolgente. Aggiungi dettagli storici precisi e non ovvi.
+Proponi 3-5 entità storiche navigabili già citate nel testo come suggerimenti.
+Non usare link Markdown né URL. Rispondi SOLO con JSON valido: {"answer":"...","suggestions":["Nome1","Nome2"]}`;
 
-Quando l'utente dice "ANALISI" segui questo schema preciso per ogni entità correlata che elenchi:
-  1. NESSO: una o due frasi che spiegano CONCRETAMENTE come quell'entità è collegata a "${entity.title}". Deve rispondere alla domanda "cosa c'entra con ${entity.title}?". Esempio: "Lorenzo Ghiberti vinse il concorso del 1401 contro Brunelleschi grazie al sostegno dei Medici — senza quel mecenate non avrebbe mai completato le Porte del Paradiso." NON scrivere frasi generiche come "X era un artista del Rinascimento" senza spiegare il legame diretto.
-  2. ENTITÀ: una frase che presenta l'entità con un dettaglio affascinante e non ovvio.
-  3. INVITO: una frase suggestiva che stimola l'utente a esplorarla sulla mappa. Termina con qualcosa come "Cercala sulla mappa per scoprire dove..." o "Navigaci sopra per vedere..."
-
-Non usare link Markdown ([testo](url)) né URL. Non usare frecce (→) come prefisso. Scrivi testo piano e fluente.
-Adatta la lunghezza alla richiesta: sintetico per domande dirette, articolato per analisi.
-Proponi 3-5 nomi di entità navigabili (già citate nel testo) nell'array suggestions.
-Rispondi SOLO con JSON valido, nessun testo fuori: {"answer":"...","suggestions":["Nome1","Nome2"]}`;
-
-  return `You are a passionate historical guide who unveils unexpected connections across eras, disciplines and cultures.
-Selected entity: "${entity.title}" (${year}, ${entity.category}).${desc ? `\nContext: ${desc}` : ''}
-
-When the user says "ANALYSIS" follow this exact schema for each correlated entity you list:
-  1. LINK: one or two sentences that CONCRETELY explain how that entity connects to "${entity.title}". Must answer "what does it have to do with ${entity.title}?". Example: "Lorenzo Ghiberti won the 1401 competition against Brunelleschi thanks to Medici patronage — without that backer he would never have completed the Gates of Paradise." Do NOT write generic phrases like "X was a Renaissance artist" without explaining the direct link.
-  2. ENTITY: one sentence introducing the entity with a fascinating, non-obvious detail.
-  3. INVITATION: a suggestive sentence that encourages the user to explore it on the map. End with something like "Find it on the map to discover..." or "Navigate to it to see..."
-
-Do not use Markdown links ([text](url)) or URLs. Do not use arrows (→) as prefixes. Write plain, flowing prose.
-Adapt length to the request: concise for direct questions, detailed for analysis.
-Propose 3-5 navigable entity names (already cited in the text) in the suggestions array.
-Reply ONLY with valid JSON, no text outside: {"answer":"...","suggestions":["Name1","Name2"]}`;
+  return `You are a passionate historical guide. Selected entity: "${entity.title}" (${year}).${desc ? `\nContext: ${desc}` : ''}
+Reply in English evocatively and engagingly. Add precise, non-obvious historical details.
+Propose 3-5 navigable historical entities already cited in the text as suggestions.
+No Markdown links or URLs. Reply ONLY with valid JSON: {"answer":"...","suggestions":["Name1","Name2"]}`;
 }
 
 function extractChatJSON(raw: string): ChatResponse {
@@ -221,9 +235,9 @@ export const onRequestPost = async (context: { request: Request; env: ChatEnv })
     return jsonRes({ error: 'entity and question are required' }, 400);
   }
 
-  const systemPrompt = buildSystemPrompt(entity, locale);
-  // Default: groq (affidabile, free, OpenAI-compatible)
-  // Override con AI_MODEL env var: 'groq' | 'claude-haiku' | 'cloudflare-ai'
+  // Initial auto-analysis uses plain-text prompt (no JSON required → no parse failures)
+  const isAnalysis = /^ANALISI\b|^ANALYSIS\b/i.test(question.trim());
+  const systemPrompt = isAnalysis ? buildAnalysisPrompt(entity, locale) : buildSystemPrompt(entity, locale);
   const model = context.env.AI_MODEL ?? 'groq';
 
   let raw: string;
@@ -234,17 +248,21 @@ export const onRequestPost = async (context: { request: Request; env: ChatEnv })
     } else if (model === 'cloudflare-ai') {
       raw = await callCloudflareAI(context.env, systemPrompt, history, question);
     } else {
-      // Groq con fallback su Cloudflare AI se la chiave manca o il servizio è down
       try {
         raw = await callGroq(context.env, systemPrompt, history, question);
       } catch (groqErr) {
-        if (!context.env.AI) throw groqErr; // nessun fallback disponibile
+        if (!context.env.AI) throw groqErr;
         raw = await callCloudflareAI(context.env, systemPrompt, history, question);
         usedModel = 'cloudflare-ai';
       }
     }
   } catch (err) {
     return jsonRes({ error: `AI call failed: ${err instanceof Error ? err.message : String(err)}` }, 502);
+  }
+
+  // Plain-text path: return prose directly without JSON parsing
+  if (isAnalysis) {
+    return jsonRes({ ok: true, model: usedModel, data: { answer: raw.trim(), suggestions: [] } });
   }
 
   try {
