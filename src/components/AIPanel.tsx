@@ -47,7 +47,11 @@ async function askEntity(
       locale,
     }),
   });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  if (!res.ok) {
+    const errBody = await res.json().catch(() => ({})) as Record<string, unknown>;
+    console.error('[entity-chat] API error', res.status, errBody);
+    throw new Error(`HTTP ${res.status}: ${errBody.error ?? 'unknown'}`);
+  }
   const json = await res.json() as { ok: boolean; data: { answer: string } };
   return json.data.answer;
 }

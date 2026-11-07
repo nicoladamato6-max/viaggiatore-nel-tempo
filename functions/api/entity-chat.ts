@@ -98,15 +98,40 @@ Reply ONLY with valid JSON, no text outside: {"answer":"...","suggestions":["Nam
 
 function extractChatJSON(raw: string): ChatResponse {
   const stripped = raw.replace(/```(?:json)?\s*/gi, '').replace(/```/g, '').trim();
-  const match    = stripped.match(/\{[\s\S]*\}/);
-  if (!match) throw new Error('No JSON found');
-  let parsed: any;
-  try { parsed = JSON.parse(match[0]); }
-  catch { parsed = JSON.parse(match[0].replace(/,\s*([}\]])/g, '$1')); }
-  return {
-    answer:      String(parsed.answer ?? ''),
-    suggestions: Array.isArray(parsed.suggestions) ? parsed.suggestions.map(String) : [],
-  };
+
+  // Try full JSON parse first
+  const match = stripped.match(/\{[\s\S]*\}/);
+  if (match) {
+    for (const candidate of [match[0], match[0].replace(/,\s*([}\]])/g, '$1')]) {
+      try {
+        const parsed = JSON.parse(candidate) as Record<string, unknown>;
+        return {
+          answer:      String(parsed.answer ?? ''),
+          suggestions: Array.isArray(parsed.suggestions) ? parsed.suggestions.map(String) : [],
+        };
+      } catch { /* try next */ }
+    }
+  }
+
+  // Fallback: extract "answer" value via regex even if JSON is truncated
+  const answerMatch = stripped.match(/"answer"\s*:\s*"([\s\S]*)/);
+  if (answerMatch) {
+    // The answer value may be unterminated — take everything up to the last complete sentence
+    let text = answerMatch[1];
+    // Remove trailing partial content after last sentence-ending punctuation
+    const lastPunct = Math.max(text.lastIndexOf('.'), text.lastIndexOf('!'), text.lastIndexOf('?'));
+    if (lastPunct > 50) text = text.slice(0, lastPunct + 1);
+    // Extract suggestions if present
+    const sugMatch = stripped.match(/"suggestions"\s*:\s*\[([\s\S]*?)\]/);
+    const suggestions: string[] = [];
+    if (sugMatch) {
+      const names = sugMatch[1].match(/"([^"]+)"/g);
+      if (names) suggestions.push(...names.map(n => n.replace(/"/g, '')));
+    }
+    return { answer: text.trim(), suggestions };
+  }
+
+  throw new Error('No JSON or answer field found');
 }
 
 async function callCloudflareAI(
@@ -145,7 +170,7 @@ async function callGroq(
     },
     body: JSON.stringify({
       model:      'llama-3.3-70b-versatile',
-      max_tokens: 800,
+      max_tokens: 2000,
       messages:   groqMessages,
     }),
   });
@@ -226,6 +251,6 @@ export const onRequestPost = async (context: { request: Request; env: ChatEnv })
     const parsed = extractChatJSON(raw);
     return jsonRes({ ok: true, model: usedModel, data: parsed });
   } catch {
-    return jsonRes({ error: 'AI returned invalid JSON', raw: raw.slice(0, 400) }, 502);
+    return jsonRes({ error: 'AI returned invalid JSON', raw: raw.slice(0, 600), model: usedModel }, 502);
   }
 };
