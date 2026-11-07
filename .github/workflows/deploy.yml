@@ -49,3 +49,31 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name viaggiatore-nel-tempo --commit-dirty=true
+
+      - name: Smoke test — AI entity-chat (Groq LLM)
+        run: |
+          echo "⏳ Attendo propagazione CF Pages (20s)..."
+          sleep 20
+          echo "🤖 Verifico che il pannello AI risponda con il vero LLM (Groq)..."
+          RESPONSE=$(curl -s --max-time 40 -X POST \
+            "https://viaggiatore-nel-tempo.pages.dev/api/entity-chat" \
+            -H "Content-Type: application/json" \
+            -d '{"entity":{"title":"Leonardo da Vinci","description":"Artista rinascimentale","year":1452,"category":"person"},"question":"ANALISI — entità correlate sulla mappa: Michelangelo, Raffaello.","history":[],"locale":"it"}')
+
+          echo "Response preview: $(echo "$RESPONSE" | cut -c1-200)"
+
+          if echo "$RESPONSE" | grep -q '"error"'; then
+            ERROR=$(echo "$RESPONSE" | python3 -c 'import sys,json; print(json.load(sys.stdin).get("error","?"))')
+            echo "❌ AI entity-chat fallita: $ERROR"
+            echo "   Verifica che GROQ_API_KEY sia configurata nell'ambiente Production di Cloudflare Pages (progetto viaggiatore-nel-tempo)."
+            exit 1
+          fi
+
+          ANSWER_LEN=$(echo "$RESPONSE" | python3 -c 'import sys,json; print(len(json.load(sys.stdin).get("data",{}).get("answer","")))')
+          if [ "$ANSWER_LEN" -lt 100 ]; then
+            echo "❌ AI entity-chat: risposta troppo corta (${ANSWER_LEN} chars) — probabile fallback client-side"
+            exit 1
+          fi
+
+          echo "✅ AI entity-chat operativa — Groq risponde (${ANSWER_LEN} caratteri)"
+          echo "✅ Produzione live: https://viaggiatore-nel-tempo.pages.dev"
