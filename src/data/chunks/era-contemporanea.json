@@ -1104,7 +1104,7 @@
     "lng": 46,
     "category": "scienza",
     "description": "Il 16 giugno 1963 Valentina Tereshkova diventa la prima donna nello spazio a bordo della Vostok 6 — 48 orbite in 70 ore e 50 minuti. Operaia tessile e paracadutista amatoriale, viene selezionata dalla propaganda sovietica. Non ci sarà un'altra cosmonauta sovietica/russa per 19 anni. Tereshkova è ancora oggi la sola donna ad aver pilotato sola un veicolo spaziale.",
-    "wikipediaSlug": "Valentina_Tereshkova",
+    "wikipediaSlug": "Valentina_Tereškova",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -1656,7 +1656,7 @@
     "lng": -80.648,
     "category": "scienza",
     "description": "Il 6 aprile 1965 Early Bird (Intelsat I) viene lanciato in orbita geostazionaria: il primo satellite commerciale per telecomunicazioni, 240 telefonate simultanee o un canale TV transatlantico. Nel 1969 la Luna landing è trasmessa via satellite in diretta a 600 milioni di persone. I satelliti geostazionari trasformano la televisione globale, le previsioni meteo, la navigazione GPS (1994). Il mondo si connette attraverso l'orbita.",
-    "wikipediaSlug": "Intelsat_I",
+    "wikipediaSlug": "Intelsat",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -2916,7 +2916,7 @@
     "lng": 36.8219,
     "category": "storia",
     "description": "Nel 2004 Wangari Maathai del Kenya vince il Nobel per la Pace: la prima africana e prima ambientalista a riceverlo. Il suo Movimento della Cintura Verde ha piantato 51 milioni di alberi in Kenya. Maathai ha legato la deforestazione alla poverta e alla violenza: donne povere che piantano alberi per avere legna, cibo, acqua ripulita. Il premio Nobel certifica che ambiente e pace sono inseparabili.",
-    "wikipediaSlug": "Wangari_Maathai",
+    "wikipediaSlug": "Wangarĩ_Maathai",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -5172,7 +5172,7 @@
     "lng": -122.2853,
     "category": "arte",
     "description": "Nel 1995 Pixar lancia Toy Story: il primo lungometraggio completamente animato al computer. John Lasseter, Pete Docter, Andrew Stanton come i registi. Disney-Pixar come la casa di produzione più influente dell'animazione moderna: Toy Story, Bug's Life, Monsters Inc, Finding Nemo, The Incredibles, Up, WALL-E, Inside Out. La tecnologia al servizio delle storie. Steve Jobs come finanziatore originale di Pixar (dal 1986): la vendita a Disney nel 2006 per 7,4 miliardi. Il digitale che sostituisce il disegno a mano ma preserva l'emozione.",
-    "wikipediaSlug": "Pixar",
+    "wikipediaSlug": "Pixar_Animation_Studios",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -9817,7 +9817,7 @@
     "category": "storia",
     "tipo": "evento",
     "description": "L'11 dicembre 2006 a Erba, in provincia di Como, Rosa Bazzi e Olindo Romano massacrarono quattro vicini di casa: Raffaella Castagna, suo figlio Youssef di due anni, la madre Paola Galli e la vicina Valeria Cherubini. L'unico sopravvissuto, il marito di Valeria, rimase gravemente ferito. La coppia fu condannata all'ergastolo nel 2011. Il caso, definito dai media \"la strage di Erba\", divenne uno degli omicidi multipli più noti della cronaca italiana contemporanea, oggetto di libri, documentari e continui dibattiti sulla colpevolezza degli imputati.",
-    "wikipediaSlug": "Strage_di_Erba",
+    "wikipediaSlug": "Erba_Massacre",
     "isCosmic": false
   },
   {
@@ -10644,7 +10644,7 @@
     "lng": 2.3522,
     "category": "sport",
     "description": "Dal 6 al 10 luglio 1960 a Parigi si svolge la prima edizione del Campionato Europeo di Calcio UEFA, allora chiamato 'Coppa Henri Delaunay' in onore del segretario della UEFA che aveva avuto l'idea. Solo 4 squadre si qualificano alla fase finale: la partecipazione è limitata. L'Unione Sovietica batte la Jugoslavia 2-1 ai supplementari vincendo il primo titolo europeo. La Spagna non partecipa per rifiuto politico di giocare contro l'URSS di Krusciov. Il formato crescerà fino alle 24 squadre dell'edizione 2016.",
-    "wikipediaSlug": "UEFA_Euro_1960",
+    "wikipediaSlug": "1960_European_Nations'_Cup",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -13924,7 +13924,7 @@
     "lng": 121.03,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": "Gloria_Macapagal-Arroyo",
+    "wikipediaSlug": "Gloria_Macapagal_Arroyo",
     "isCosmic": false
   },
   {
@@ -15832,7 +15832,7 @@
     "lng": 24.0316,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": "Denys_Šmyhal'",
+    "wikipediaSlug": "Denys_Shmyhal",
     "isCosmic": false
   },
   {
@@ -18592,7 +18592,7 @@
     "lng": 137.2137,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Kōichi_Tanaka",
+    "wikipediaSlug": "Koichi_Tanaka",
     "isCosmic": false
   },
   {
@@ -18640,7 +18640,7 @@
     "lng": null,
     "category": "musica",
     "tipo": "opera",
-    "wikipediaSlug": "Pussycat_Dolls",
+    "wikipediaSlug": "The_Pussycat_Dolls",
     "isCosmic": false
   },
   {
@@ -19372,7 +19372,7 @@
     "lng": -78.9175,
     "category": "sport",
     "tipo": "persona",
-    "wikipediaSlug": "George_Floyd",
+    "wikipediaSlug": "Omicidio_di_George_Floyd",
     "isCosmic": false
   },
   {
@@ -21052,7 +21052,7 @@
     "lng": 0.1225,
     "category": "musica",
     "tipo": "persona",
-    "wikipediaSlug": "Matthew_Bellamy",
+    "wikipediaSlug": "Matt_Bellamy",
     "isCosmic": false
   },
   {
@@ -23476,7 +23476,7 @@
     "lng": 146.0344,
     "category": "sport",
     "tipo": "persona",
-    "wikipediaSlug": "Evonne_Goolagong",
+    "wikipediaSlug": "Evonne_Goolagong_Cawley",
     "isCosmic": false
   },
   {
@@ -23524,7 +23524,7 @@
     "lng": 139.495,
     "category": "sport",
     "tipo": "persona",
-    "wikipediaSlug": "Patrick_Rafter",
+    "wikipediaSlug": "Pat_Rafter",
     "isCosmic": false
   },
   {
@@ -24004,7 +24004,7 @@
     "lng": -8.25,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Samuel_Kanyon_Doe",
+    "wikipediaSlug": "Samuel_Doe",
     "isCosmic": false
   },
   {
@@ -30088,7 +30088,7 @@
     "lng": 41.0192,
     "category": "sport",
     "tipo": "persona",
-    "wikipediaSlug": "Viktor_Saneev",
+    "wikipediaSlug": "Viktor_Saneyev",
     "isCosmic": false
   },
   {
@@ -30124,7 +30124,7 @@
     "lng": 55.9614,
     "category": "sport",
     "tipo": "persona",
-    "wikipediaSlug": "Tat'jana_Lebedeva",
+    "wikipediaSlug": "Tatyana_Lebedeva",
     "isCosmic": false
   },
   {
@@ -30160,7 +30160,7 @@
     "lng": 24.4833,
     "category": "sport",
     "tipo": "persona",
-    "wikipediaSlug": "Gabriela_Szabó",
+    "wikipediaSlug": "Gabriela_Szabo",
     "isCosmic": false
   },
   {
@@ -35021,7 +35021,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Telescopio spaziale NASA lanciato nel 2021, il più potente mai costruito. Ha catturato immagini di galassie primordiali, nebulae e atmosfere di esopianeti con risoluzione senza precedenti.",
-    "wikipediaSlug": "James_Webb_Space_Telescope"
+    "wikipediaSlug": "Telescopio_spaziale_James_Webb"
   },
   {
     "id": "genoma-umano-2003",
@@ -35033,7 +35033,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Il sequenziamento completo del genoma umano, completato nel 2003 dal Progetto Genoma Umano. 3 miliardi di coppie di basi azotate mappate aprono nuove prospettive per la medicina genetica e la biologia evolutiva.",
-    "wikipediaSlug": "Genoma_Umano"
+    "wikipediaSlug": "Genoma_umano"
   },
   {
     "id": "league-of-legends-esport",

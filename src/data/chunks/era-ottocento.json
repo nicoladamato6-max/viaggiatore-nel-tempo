@@ -4521,7 +4521,7 @@
     "category": "sport",
     "tipo": "organizzazione",
     "description": "Fondata nel 1897 da studenti del Liceo Massimo D'Azeglio di Torino, la Juventus FC è il club calcistico italiano più titolato con 36 scudetti, 14 Coppe Italia e 2 Champions League (1985, 1996). Soprannominata \"la Vecchia Signora\", ha collezionato stelle come Boniperti, Charles, Platini, Baggio, Zidane, Del Piero, Buffon, Ronaldo. È il club con il maggior numero di tifosi in Italia.",
-    "wikipediaSlug": "Juventus_Football_Club",
+    "wikipediaSlug": "Juventus_FC",
     "isCosmic": false
   },
   {
@@ -4533,7 +4533,7 @@
     "category": "sport",
     "tipo": "organizzazione",
     "description": "Fondata nel 1908 da una scissione del Milan Cricket and Football Club, l'Inter è l'unica squadra italiana ad essere sempre rimasta in Serie A senza retrocessioni. Ha vinto 20 scudetti, 8 Coppe Italia e 3 Champions League (1964, 1965, 2010). Il Triplete del 2010 sotto José Mourinho — Scudetto, Coppa Italia e Champions League nello stesso anno — è rimasto un evento irripetibile nel calcio italiano.",
-    "wikipediaSlug": "Football_Club_Internazionale_Milano",
+    "wikipediaSlug": "Inter_Milan",
     "isCosmic": false
   },
   {
@@ -4545,7 +4545,7 @@
     "category": "sport",
     "tipo": "organizzazione",
     "description": "Fondato nel 1899 da Herbert Kilpin e Alfred Edwards come Milan Cricket and Football Club, l'AC Milan è uno dei club più titolati al mondo con 19 scudetti, 7 Champions League (record europeo condiviso con il Real Madrid), 5 Coppe del Mondo per Club. Ha lanciato stelle come Rivera, Maldini, Van Basten, Gullit, Baresi, Kakà, Shevchenko. Il \"Grande Milan\" di Sacchi negli anni '80–'90 è considerato una delle squadre più forti di tutti i tempi.",
-    "wikipediaSlug": "Associazione_Calcio_Milan",
+    "wikipediaSlug": "AC_Milan",
     "isCosmic": false
   },
   {
@@ -9755,7 +9755,7 @@
     "lng": -4.1447,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Thomas_Edward_Lawrence",
+    "wikipediaSlug": "T._E._Lawrence",
     "isCosmic": false
   },
   {
@@ -9779,7 +9779,7 @@
     "lng": 138.6,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "William_Lawrence_Bragg",
+    "wikipediaSlug": "Lawrence_Bragg",
     "isCosmic": false
   },
   {
@@ -9863,7 +9863,7 @@
     "lng": -3.2042,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Charles_Thomson_Rees_Wilson",
+    "wikipediaSlug": "C._T._R._Wilson",
     "isCosmic": false
   },
   {
@@ -9875,7 +9875,7 @@
     "lng": 6.7873,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Hermann_Emil_Fischer",
+    "wikipediaSlug": "Emil_Fischer",
     "isCosmic": false
   },
   {
@@ -9923,7 +9923,7 @@
     "lng": 9.3397,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Johannes_Vilhelm_Jensen",
+    "wikipediaSlug": "Johannes_V._Jensen",
     "isCosmic": false
   },
   {
@@ -9935,7 +9935,7 @@
     "lng": -2.6333,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": "Arthur_James_Balfour",
+    "wikipediaSlug": "Arthur_Balfour",
     "isCosmic": false
   },
   {
@@ -9983,7 +9983,7 @@
     "lng": 10,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Gustav_Hertz",
+    "wikipediaSlug": "Gustav_Ludwig_Hertz",
     "isCosmic": false
   },
   {
@@ -10031,7 +10031,7 @@
     "lng": 14.4214,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Gerty_Theresa_Cori",
+    "wikipediaSlug": "Gerty_Cori",
     "isCosmic": false
   },
   {
@@ -10055,7 +10055,7 @@
     "lng": -3.7033,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "José_Echegaray_y_Eizaguirre",
+    "wikipediaSlug": "José_Echegaray",
     "isCosmic": false
   },
   {
@@ -10067,7 +10067,7 @@
     "lng": -75.6039,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Burrhus_Skinner",
+    "wikipediaSlug": "B._F._Skinner",
     "isCosmic": false
   },
   {
@@ -10271,7 +10271,7 @@
     "lng": -71.0667,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Richard_Buckminster_Fuller",
+    "wikipediaSlug": "Buckminster_Fuller",
     "isCosmic": false
   },
   {
@@ -10379,7 +10379,7 @@
     "lng": 6.5833,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Charles_Edouard_Guillaume",
+    "wikipediaSlug": "Charles-Édouard_Guillaume",
     "isCosmic": false
   },
   {
@@ -10427,7 +10427,7 @@
     "lng": 5.7833,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Maurits_Cornelis_Escher",
+    "wikipediaSlug": "M._C._Escher",
     "isCosmic": false
   },
   {
@@ -10475,7 +10475,7 @@
     "lng": -118.1028,
     "category": "sport",
     "tipo": "persona",
-    "wikipediaSlug": "George_Smith_Patton",
+    "wikipediaSlug": "George_Patton_(disambiguation)",
     "isCosmic": false
   },
   {
@@ -10487,7 +10487,7 @@
     "lng": 139.7374,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Hideki_Tōjō",
+    "wikipediaSlug": "Hideki_Tojo",
     "isCosmic": false
   },
   {
@@ -12095,7 +12095,7 @@
     "lng": 17.0325,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": "Edith_Stein",
+    "wikipediaSlug": "Teresa_Benedetta_della_Croce",
     "isCosmic": false
   },
   {
@@ -15539,7 +15539,7 @@
     "lng": 121.1044,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Wu_Jianxiong",
+    "wikipediaSlug": "Chien-Shiung_Wu",
     "isCosmic": false
   },
   {
@@ -15563,7 +15563,7 @@
     "lng": 2.3522,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Gaspard_Gustave_de_Coriolis",
+    "wikipediaSlug": "Gaspard-Gustave_de_Coriolis",
     "isCosmic": false
   },
   {
@@ -15599,7 +15599,7 @@
     "lng": -0.1275,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Cyril_Norman_Hinshelwood",
+    "wikipediaSlug": "Cyril_N._Hinshelwood",
     "isCosmic": false
   },
   {
@@ -15611,7 +15611,7 @@
     "lng": 13.3833,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Ernst_Boris_Chain",
+    "wikipediaSlug": "Ernst_Chain",
     "isCosmic": false
   },
   {
@@ -15647,7 +15647,7 @@
     "lng": -71.1453,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "James_Batcheller_Sumner",
+    "wikipediaSlug": "James_B._Sumner",
     "isCosmic": false
   },
   {
@@ -15719,7 +15719,7 @@
     "lng": -72.7301,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Edward_Lee_Thorndike",
+    "wikipediaSlug": "Edward_Thorndike",
     "isCosmic": false
   },
   {
@@ -15815,7 +15815,7 @@
     "lng": -70.1333,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Rafael_Leónidas_Trujillo",
+    "wikipediaSlug": "Rafael_Trujillo",
     "isCosmic": false
   },
   {
@@ -17987,7 +17987,7 @@
     "lng": 68.95,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Amānullāh_Khān",
+    "wikipediaSlug": "Amanullah_Khan",
     "isCosmic": false
   },
   {
@@ -18047,7 +18047,7 @@
     "lng": 26.1783,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Karl_von_Baer",
+    "wikipediaSlug": "Karl_Ernst_von_Baer",
     "isCosmic": false
   },
   {
@@ -18095,7 +18095,7 @@
     "lng": -95.862,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Lee_De_Forest",
+    "wikipediaSlug": "Lee_de_Forest",
     "isCosmic": false
   },
   {
@@ -18119,7 +18119,7 @@
     "lng": 26.7225,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Heinrich_Lenz",
+    "wikipediaSlug": "Emil_Lenz",
     "isCosmic": false
   },
   {
@@ -18155,7 +18155,7 @@
     "lng": 7.6761,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Salvatore_Luria",
+    "wikipediaSlug": "Salvador_Luria",
     "isCosmic": false
   },
   {
@@ -18203,7 +18203,7 @@
     "lng": 2.6925,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "André_Lwoff",
+    "wikipediaSlug": "André_Michel_Lwoff",
     "isCosmic": false
   },
   {
@@ -18239,7 +18239,7 @@
     "lng": -9.478,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Horatio_Herbert_Kitchener",
+    "wikipediaSlug": "Herbert_Kitchener,_1st_Earl_Kitchener",
     "isCosmic": false
   },
   {
@@ -18263,7 +18263,7 @@
     "lng": -72.685,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Roger_Sperry",
+    "wikipediaSlug": "Roger_Wolcott_Sperry",
     "isCosmic": false
   },
   {
@@ -20603,7 +20603,7 @@
     "lng": 23.7917,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Andrea_di_Grecia",
+    "wikipediaSlug": "Andrea_Di_Grazia",
     "isCosmic": false
   },
   {
@@ -21684,7 +21684,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Insurrezione popolare che dal 18 al 22 marzo 1848 cacciò le truppe austriache da Milano con le barricate. Episodio simbolo del Risorgimento italiano, anche se gli austriaci tornarono dopo Custoza.",
-    "wikipediaSlug": "Cinque_Giornate_di_Milano"
+    "wikipediaSlug": "Cinque_giornate_di_Milano"
   },
   {
     "id": "vittorio-emanuele-ii-re-italia",
@@ -21720,7 +21720,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Ondata rivoluzionaria che nel 1848 investì Francia, Germania, Austria, Italia e Ungheria. Chiamate \"Primavera dei Popoli\" o \"Anno dei Miracoli\", tutte vennero represse entro il 1849.",
-    "wikipediaSlug": "Rivoluzioni_del_1848"
+    "wikipediaSlug": "Moti_del_1848"
   },
   {
     "id": "football-regole-cambridge-1848",
@@ -21756,7 +21756,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Conflitto (1899-1902) tra l'Impero britannico e le Repubbliche boere sudafricane. I britannici inventarono i campi di concentramento per civili boeri: 27.000 morirono in condizioni disumane.",
-    "wikipediaSlug": "Guerra_Anglo-Boera"
+    "wikipediaSlug": "Guerre_boere"
   },
   {
     "id": "marsigliese-inno",
@@ -21792,7 +21792,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Edificio fiorentino progettato da Michelozzo per Cosimo de' Medici nel 1445. Primo esempio di palazzo rinascimentale urbano: eleganza borghese al posto della fortezza medievale.",
-    "wikipediaSlug": "Palazzo_Medici"
+    "wikipediaSlug": "Palazzo_Medici_Riccardi"
   },
   {
     "id": "locomotiva-stephenson",
@@ -21816,7 +21816,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Poeta e umanista fiorentino (1454-1494) del circolo laurenziano. Le sue laude (canti religiosi in volgare) messe in musica nel circolo di Lorenzo il Magnifico unirono arte sacra e profana, rinnovando la lirica italiana.",
-    "wikipediaSlug": "Angelo_Poliziano"
+    "wikipediaSlug": "Agnolo_Poliziano"
   },
   {
     "id": "heinrich-isaac-frottola",
@@ -21888,7 +21888,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Genere di intrattenimento popolare vittoriano nato a Londra negli anni 1850: operai in giacca domenicale assistevano a sketch comici, canzoni sentimentali e numeri acrobatici. Base del cabaret e del vaudeville americano.",
-    "wikipediaSlug": "Music_Hall"
+    "wikipediaSlug": "Music-hall"
   },
   {
     "id": "puritani-condanna-sport",
@@ -21900,7 +21900,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Movimento religioso riformato inglese del XVII sec. che condannava i giochi festivi domenicali come peccato. I predicatori puritani chiusero teatri e arene, creando un conflitto morale attorno allo sport e al tempo libero.",
-    "wikipediaSlug": "Puritanesimo"
+    "wikipediaSlug": "Puritani"
   },
   {
     "id": "cerro-rico-potosi-miniere",

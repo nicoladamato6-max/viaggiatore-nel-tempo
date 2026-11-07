@@ -919,7 +919,7 @@
     "lng": 9.1705,
     "category": "storia",
     "description": "Nel 1450 il condottiero Francesco Sforza conquista Milano e fonda la Signoria degli Sforza. Sotto il suo ducato e quello del figlio Ludovico il Moro, Milano diventa il centro del Rinascimento lombardo: Leonardo da Vinci vi trascorre 18 anni dipingendo l'Ultima Cena e progettando macchine impossibili.",
-    "wikipediaSlug": "Francesco_Sforza",
+    "wikipediaSlug": "Francesco_I_Sforza",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1339,7 +1339,7 @@
     "lng": -1.0815,
     "category": "storia",
     "description": "Nel 927 Athelstan, nipote di Alfredo il Grande, unifica per la prima volta i regni anglosassoni in un unico regno d'Inghilterra. Sconfigge un'alleanza di Vichinghi, Scozzesi e Britanni nella battaglia di Brunanburh (937). La sua corte ad Exeter è la più colta d'Europa del suo tempo. È considerato il primo re d'Inghilterra.",
-    "wikipediaSlug": "Athelstan",
+    "wikipediaSlug": "Æthelstan",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3715,7 +3715,7 @@
     "lng": 44.32,
     "category": "filosofia",
     "description": "Ali ibn Abi Talib, cugino e genero di Maometto, diventa quarto califfo nel 656 ma il suo breve regno (656-661) genera lo scisma più profondo della storia islamica. La contestazione della sua elezione da parte di Muawiya (governatore di Siria) e il massacro di Karbala del figlio Hussein (680) cristallizzano la divisione tra Sunniti e Sciiti — due rami dell'Islam che ancora oggi raccolgono rispettivamente 1,5 miliardi e 200 milioni di fedeli. Assassinato nella moschea di Kufa, Ali è venerato dagli sciiti come primo imam.",
-    "wikipediaSlug": "Ali_ibn_Abi_Talib",
+    "wikipediaSlug": "Ali",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -3811,7 +3811,7 @@
     "lng": 9.38,
     "category": "musica",
     "description": "Notker Balbulus ('il Balbuziente', 840-912) monaco di San Gallo (Svizzera) è il principale compositore di sequenze musicali del Medioevo carolingio. Le sequenze erano testi poetici cantati dopo l'Alleluia della Messa — genere musicale che permette maggiore libertà melodica del canto gregoriano tradizionale. Il suo Liber hymnorum (884) contiene 40 sequenze dedicate ai santi. Notker è anche autore della Gesta Karoli Magni — cronaca di Carlo Magno — e figura della rinascita culturale carolingia.",
-    "wikipediaSlug": "Notker_Balbulus",
+    "wikipediaSlug": "Notker_the_Stammerer",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -4220,7 +4220,7 @@
     "category": "filosofia",
     "tipo": "persona",
     "description": "Mosè Maimonide (1138–1204), nato a Cordova e rifugiatosi in Egitto dopo la persecuzione almohade, fu il più grande filosofo ebraico medievale. La sua opera \"Guida dei Perplessi\" (Moreh Nevukhim, 1190) tentò di conciliare la filosofia aristotelica con la teologia ebraica, affrontando problemi come la compatibilità tra la creazione biblica del mondo e l'eternità aristotelica della materia. Influenzò enormemente Tommaso d'Aquino e la scolastica cristiana. I suoi \"Tredici principi di fede\" sono ancora recitati nelle liturgie ebraiche ortodosse.",
-    "wikipediaSlug": "Maimonide",
+    "wikipediaSlug": "Maimonides",
     "isCosmic": false
   },
   {
@@ -4843,7 +4843,7 @@
     "lng": 39.8261,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Abū_Bakr",
+    "wikipediaSlug": "Abu_Bakr",
     "isCosmic": false
   },
   {
@@ -8107,7 +8107,7 @@
     "lng": 28.976,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Yaqut",
+    "wikipediaSlug": "Yakut_(name)",
     "isCosmic": false
   },
   {
@@ -8491,7 +8491,7 @@
     "category": "storia",
     "tipo": "luogo",
     "description": "Timbuktu, nel Mali, fu nel XIV-XVI secolo il piu importante centro di sapere islamico: le sue tre grandi moschee e le centinaia di migliaia di manoscritti ne fanno la citta misteriosa del Sahara, crocevia aureo e del sapere.",
-    "wikipediaSlug": "Timbuktu",
+    "wikipediaSlug": "Timbuctù",
     "isCosmic": false
   },
   {
@@ -8720,7 +8720,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Cattedrale gotica di Parigi, costruita tra il 1163 e il 1345. Gli archi rampanti consentirono un'altezza e luminosità mai raggiunte prima, rivoluzionando l'architettura europea del Medioevo.",
-    "wikipediaSlug": "Notre-Dame_di_Parigi"
+    "wikipediaSlug": "Cattedrale_di_Notre-Dame"
   },
   {
     "id": "camino-de-santiago",
@@ -8732,7 +8732,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Rete di percorsi di pellegrinaggio cristiani verso la cattedrale di Santiago de Compostela in Galizia, Spagna. Attivo dal IX secolo, ha creato la prima rete di ospizi, ponti e infrastrutture turistiche d'Europa.",
-    "wikipediaSlug": "Camino_de_Santiago"
+    "wikipediaSlug": "Cammino_di_Santiago_di_Compostela"
   },
   {
     "id": "roger-bacon-oxford",
@@ -8744,7 +8744,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Frate francescano inglese (1214-1292) soprannominato Doctor Mirabilis. Studiò lenti, specchi e prismi a Oxford, anticipando il metodo scientifico. Propone l'esperienza come base della conoscenza.",
-    "wikipediaSlug": "Roger_Bacon"
+    "wikipediaSlug": "Ruggero_Bacone"
   },
   {
     "id": "hildegard-von-bingen",
@@ -8756,7 +8756,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Mistica, compositrice e scienziata medievale tedesca (1098-1179). Scrisse 77 composizioni liturgiche, opere scientifiche e mediche. Prima compositrice della storia con nome e opera attribuita con certezza.",
-    "wikipediaSlug": "Hildegard_von_Bingen"
+    "wikipediaSlug": "Ildegarda_di_Bingen"
   },
   {
     "id": "battaglia-della-somme",
@@ -8780,7 +8780,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Poeti e musicisti occitani dei secoli XII-XIII che elaborarono la lyrica cortese dell'amor cortese. I trovatori come Guglielmo IX d'Aquitania inventarono la canzone d'amore occidentale.",
-    "wikipediaSlug": "Trovatori"
+    "wikipediaSlug": "Trovatore"
   },
   {
     "id": "schola-cantorum-aquisgrana",
@@ -8792,7 +8792,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Scuola di canto fondata da Carlo Magno ad Aquisgrana per standardizzare il canto gregoriano in tutto l'impero carolingio. I cantori usavano i neumi, i primi segni grafici per catturare le melodie.",
-    "wikipediaSlug": "Schola_Cantorum"
+    "wikipediaSlug": "Schola_cantorum"
   },
   {
     "id": "ars-nova-landini",
@@ -8840,7 +8840,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Canti religiosi in volgare italiano sviluppati dalle confraternite dei laudesi fiorentini dal XIII secolo. Poliziano e il circolo laurenziano li elevarono a forma poetico-musicale d'arte nel Quattrocento.",
-    "wikipediaSlug": "Laude_Spirituali"
+    "wikipediaSlug": "Laude_spirituale"
   },
   {
     "id": "rotazione-triennale-colture",
@@ -8852,7 +8852,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Sistema agricolo diffusosi nell'Europa carolingia del IX sec.: il campo era diviso in tre fasce (cereale invernale, cereale primaverile, maggese), aumentando la produttività del 50% rispetto alla rotazione biennale.",
-    "wikipediaSlug": "Rotazione_Triennale"
+    "wikipediaSlug": "Rotazione_triennale_delle_colture"
   },
   {
     "id": "mulino-ad-acqua-medievale",
@@ -8924,7 +8924,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Il codice dell'amore cortese elaborato dai trovatori occitani del XII secolo: amore platonico, non ricambiato, tra cavaliere e dama irraggiungibile. La fin'amor generò tutta la lirica d'amore occidentale.",
-    "wikipediaSlug": "Fin'Amor"
+    "wikipediaSlug": "Fin'amor"
   },
   {
     "id": "cavalieri-templari-addestramento",
@@ -8936,7 +8936,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Ordine militare-religioso fondato nel 1119 a Gerusalemme per proteggere i pellegrini. I Templari erano guerrieri monastici che si addestravano quotidianamente alla giostra e al combattimento a piedi.",
-    "wikipediaSlug": "Cavalieri_Templari"
+    "wikipediaSlug": "Cavalieri_templari"
   },
   {
     "id": "arte-romanica-crociata",

@@ -440,7 +440,7 @@
     "lng": -4,
     "category": "geologia",
     "description": "300.000 anni fa in Marocco (sito di Jebel Irhoud) compaiono i più antichi Homo sapiens conosciuti: cranio ancora leggermente arcaico ma viso moderno. Prima si credeva che i sapiens fossero più recenti (200.000 anni, Etiopia). Jebel Irhoud spostando la nascita della nostra specie di 100.000 anni e suggerendo che emerga da una 'rete africana' di popolazioni, non da un unico luogo.",
-    "wikipediaSlug": "Homo_sapiens",
+    "wikipediaSlug": "Human",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -788,7 +788,7 @@
     "lng": 35.9697,
     "category": "arte",
     "description": "6.500 anni prima di Cristo ad Ain Ghazal (Giordania, vicino Amman) vengono sepolte ritualmente 32 statue in gesso a metà corpo — le più grandi sculture umane del Neolitico (fino a 1 metro). Rappresentano figure con occhi di bitume. Sono state deliberatamente interrate — forse alla fine di un ciclo rituale. Oggi al Museo di Amman e al British Museum.",
-    "wikipediaSlug": "Ain_Ghazal",
+    "wikipediaSlug": "Ayn_Ghazal",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1292,7 +1292,7 @@
     "lng": 35.9697,
     "category": "storia",
     "description": "7.200 anni prima di Cristo Ain Ghazal (Giordania) è la più grande città del Neolitico: 15 ettari, probabilmente 3.000 abitanti. Le case hanno due piani, pavimenti in calce, forni da pane. Il sito è oggi inglobato nella periferia di Amman. Le 32 statue in gesso trovate (1983) sono le più grandi sculture del Neolitico. Ain Ghazal prospera grazie all'agricoltura e all'allevamento di ovini.",
-    "wikipediaSlug": "Ain_Ghazal",
+    "wikipediaSlug": "Ayn_Ghazal",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2290,7 +2290,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Baia dell'Australia occidentale dove esistono ancora oggi stromatoliti viventi, strutture di cianobatteri identiche a quelle di 3,5 miliardi di anni fa. Patrimonio UNESCO.",
-    "wikipediaSlug": "Shark_Bay"
+    "wikipediaSlug": "Baia_degli_Squali"
   },
   {
     "id": "rodinia-supercontinente",
@@ -2326,7 +2326,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Rapida diversificazione della vita animale circa 541 milioni di anni fa, quando apparvero la maggior parte dei piani corporei animali oggi esistenti. Dura circa 20 milioni di anni.",
-    "wikipediaSlug": "Esplosione_Cambriana"
+    "wikipediaSlug": "Esplosione_cambriana"
   },
   {
     "id": "stephen-jay-gould",
@@ -2350,7 +2350,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Deposito fossilifero canadese del Cambriano che conserva con straordinaria fedeltà i tessuti molli di organismi di 508 milioni di anni fa. Studiato da Stephen Jay Gould in Wonderful Life.",
-    "wikipediaSlug": "Burgess_Shale"
+    "wikipediaSlug": "Argillite_di_Burgess"
   },
   {
     "id": "archeopteryx-lithographica",
@@ -2362,7 +2362,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Animale del Giurassico superiore con caratteristiche di rettile e uccello: penne da volare, denti e artigli. Scoperto in Baviera nel 1861, è il fossile-chiave nel dibattito sull'evoluzione degli uccelli.",
-    "wikipediaSlug": "Archeopteryx_lithographica"
+    "wikipediaSlug": "Archaeopteryx_lithographica"
   },
   {
     "id": "velociraptor",
@@ -2386,7 +2386,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Variazioni periodiche dell'orbita e dell'asse terrestre descritte dal fisico serbo Milutin Milankovitch nel 1920. Spiegano i cicli glaciali e interglaciali che hanno plasmato il clima nell'ultimo milione di anni.",
-    "wikipediaSlug": "Cicli_di_Milankovitch"
+    "wikipediaSlug": "Cicli_di_Milanković"
   },
   {
     "id": "othniel-marsh",
@@ -2398,7 +2398,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Paleontologo americano (1831-1899) che documentò l'evoluzione del cavallo, da Eohippus a Equus in 55 milioni di anni. Antagonista di Edward Drinker Cope nella famosa \"Bone War\".",
-    "wikipediaSlug": "Othniel_Marsh"
+    "wikipediaSlug": "Othniel_Charles_Marsh"
   },
   {
     "id": "eohippus",
@@ -2410,7 +2410,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Piccolo ipparioide dell'Eocene, antenato del cavallo moderno, grande come un cane. Aveva quattro dita per zampa e viveva in foreste nordamericane. Documentato da Othniel Marsh.",
-    "wikipediaSlug": "Eohippus"
+    "wikipediaSlug": "Eohippus_angustidens"
   },
   {
     "id": "olduvai-gorge",
@@ -2434,7 +2434,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Grotta della Francia meridionale con 420 pitture rupestri di 36.000 anni fa: leoni, rinoceronti e orse in movimento con prospettiva e sovrapposizione. Patrimonio UNESCO, visitabile solo virtualmente.",
-    "wikipediaSlug": "Chauvet-Pont-d'Arc"
+    "wikipediaSlug": "Chauvet_Cave"
   },
   {
     "id": "chiara-ossigenazione-cianobatteri",
@@ -2446,7 +2446,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Processo inventato dai cianobatteri circa 3,5 miliardi di anni fa che produce ossigeno come sottoprodotto. Ha trasformato l'atmosfera terrestre e reso possibile tutta la vita aerobica.",
-    "wikipediaSlug": "Fotosintesi_Ossigenica"
+    "wikipediaSlug": "Fotosintesi_anossigenica"
   },
   {
     "id": "t-rex-tyrannosaurus",
@@ -2458,7 +2458,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Tyrannosaurus rex, il più iconico predatore del Cretaceo superiore nordamericano. Alto 4 metri, lungo 12, con morso potente come nessun altro animale terrestre. Estinto 66 milioni di anni fa.",
-    "wikipediaSlug": "T-Rex"
+    "wikipediaSlug": "Tyrannosaurus"
   },
   {
     "id": "chicxulub-impatto",
@@ -2542,7 +2542,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Cultura neolitica dell'Europa orientale (5500-2750 a.C.) famosa per ceramiche dipinte con spirali e motivi geometrici. Costruiva villaggi di migliaia di persone, tra i più grandi del Neolitico.",
-    "wikipediaSlug": "Cucuteni-Trypillia"
+    "wikipediaSlug": "Cucuteni–Trypillia_culture"
   },
   {
     "id": "geissenklosterle-flauto",
@@ -2554,7 +2554,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Grotta del Baden-Württemberg tedesco dove sono stati rinvenuti i più antichi strumenti musicali del mondo: flauti di osso d'avvoltoio e avorio di mammut risalenti a 40.000 anni fa.",
-    "wikipediaSlug": "Geißenklösterle"
+    "wikipediaSlug": "Geissenklösterle"
   },
   {
     "id": "venere-di-willendorf",
@@ -2590,7 +2590,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Artropodi marini che dominarono i fondali oceanici per 270 milioni di anni, dal Cambriano al Permiano. Con oltre 20.000 specie note, sono tra i fossili più comuni e diversificati della storia.",
-    "wikipediaSlug": "Trilobiti"
+    "wikipediaSlug": "Trilobita"
   },
   {
     "id": "filamenti-cosmici",
@@ -2626,7 +2626,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Nube di gas e polvere che collassò su sé stessa 4,6 miliardi di anni fa per gravità, generando il nostro Sole e il sistema planetario. Il disco protoplanetario diede origine ai pianeti.",
-    "wikipediaSlug": "Nebulosa_Solare"
+    "wikipediaSlug": "Nebulosa_solare"
   },
   {
     "id": "fluttuazioni-quantistiche",
@@ -2638,7 +2638,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Variazioni spontanee dell'energia del vuoto quantistico nei primissimi istanti del Big Bang. Queste fluttuazioni si amplificarono con l'inflazione cosmica e divennero i semi delle strutture cosmiche.",
-    "wikipediaSlug": "Fluttuazioni_Quantistiche"
+    "wikipediaSlug": "Fluttuazioni_quantistiche"
   },
   {
     "id": "universo-osservabile",
@@ -2650,7 +2650,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "La porzione dell'universo da cui la luce ha avuto tempo di raggiungerci: una sfera di 93 miliardi di anni luce di diametro. Le galassie ai suoi bordi si allontanano a velocità superiore alla luce per l'espansione dello spazio.",
-    "wikipediaSlug": "Universo_Osservabile"
+    "wikipediaSlug": "Universo_osservabile"
   },
   {
     "id": "onde-gravitazionali",
@@ -2686,7 +2686,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Sistema globale di correnti oceaniche profonde guidate da differenze di temperatura e salinità. La cinghia oceanica trasporta calore dai tropici alle regioni polari, regolando il clima del pianeta.",
-    "wikipediaSlug": "Circolazione_Termoalina"
+    "wikipediaSlug": "Circolazione_termoalina"
   },
   {
     "id": "tettonica-a-placche",
@@ -2698,7 +2698,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Teoria che descrive il movimento delle placche litosferiche terrestri. Formulata negli anni '60, spiega terremoti, vulcani, formazione di montagne e deriva dei continenti.",
-    "wikipediaSlug": "Tettonica_a_Placche"
+    "wikipediaSlug": "Tettonica_a_placche"
   },
   {
     "id": "cooksonia-pianta",
@@ -2746,7 +2746,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "I più grandi animali terrestri della storia: dinosauri erbivori con collo lunghissimo come Brachiosaurus e Argentinosaurus. I Sauropodi emettevano vocalizzazioni a bassa frequenza udibili a chilometri.",
-    "wikipediaSlug": "Sauropodi"
+    "wikipediaSlug": "Sauropoda"
   },
   {
     "id": "pakicetus-balena",
@@ -2770,7 +2770,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Ominide del Ciad vissuto 7 milioni di anni fa, il più antico rappresentante noto della linea evolutiva umana. Aveva già un forame magno in posizione anteriore, suggerendo una postura parzialmente eretta.",
-    "wikipediaSlug": "Sahelanthropus"
+    "wikipediaSlug": "Sahelanthropus_tchadensis"
   },
   {
     "id": "domesticazione-cane",
@@ -2782,7 +2782,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "La prima alleanza inter-specie della storia, avvenuta tra 15.000 e 40.000 anni fa quando i lupi si avvicinarono ai campi degli uomini. I cani divennero compagni di caccia, sentinelle e compagni.",
-    "wikipediaSlug": "Domesticazione_del_Cane"
+    "wikipediaSlug": "Domesticazione_del_cane"
   },
   {
     "id": "megafauna-pleistocenica",
@@ -2818,7 +2818,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "I più antichi sistemi di conteggio conosciuti: serie di tacche su ossa animali che tracciano i cicli lunari di 28 giorni. Rinvenuti in Africa e Europa, risalgono a 35.000-40.000 anni fa.",
-    "wikipediaSlug": "Calendario_Lunare"
+    "wikipediaSlug": "Calendario_lunare"
   },
   {
     "id": "arco-musicale-mesolitico",
@@ -2830,7 +2830,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Tra i più antichi strumenti musicali: una corda tesa su legno flessibile, forse derivata dall'arco da caccia. Pizzicando la corda si ottiene un tono fondamentale modulabile con la bocca come cassa di risonanza.",
-    "wikipediaSlug": "Arco_Musicale"
+    "wikipediaSlug": "Arco_musicale"
   },
   {
     "id": "microliti-frecce",
@@ -2842,7 +2842,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Piccole schegge di selce del Mesolitico, affilate e inserite in incastri di legno o osso per formare frecce composite, falcetti e arpioni. La tecnologia microlitica rivoluzionò la caccia e la pesca.",
-    "wikipediaSlug": "Microliti"
+    "wikipediaSlug": "Microlito"
   },
   {
     "id": "arpione-preistorico",
@@ -2866,7 +2866,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Statuette femminili del Paleolitico superiore e del Neolitico che raffigurano una divinità femminile della fertilità e della terra. Rinvenute in tutta Europa, Asia e Medio Oriente, sono tra le prime espressioni religiose umane.",
-    "wikipediaSlug": "Dea_Madre"
+    "wikipediaSlug": "Grande_Madre"
   },
   {
     "id": "lavorazione-selce-percussione",
@@ -2974,7 +2974,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Specie del genere Homo vissuta da 1,8 milioni a 70.000 anni fa, prima a uscire dall'Africa. Con cervello di 900 cc e statura quasi moderna, Homo Erectus controllava il fuoco e costruiva accampamenti.",
-    "wikipediaSlug": "Homo_Erectus"
+    "wikipediaSlug": "Homo_erectus"
   },
   {
     "id": "grotta-carsica-rifugio",
@@ -3034,7 +3034,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "I giacimenti di rame dell'Anatolia (Turchia moderna) furono i primi sfruttati sistematicamente dall'umanità a partire dal 5000 a.C. La fusione del rame in Anatolia avvenne 2.000 anni prima che in Europa.",
-    "wikipediaSlug": "Rame_Anatolico"
+    "wikipediaSlug": "Ramo_anatolico"
   },
   {
     "id": "sinai-miniere-rame",
@@ -3058,7 +3058,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "La prima lega metallica della storia, ottenuta mescolando rame e arsenico (3-7%). Il bronzo arsenicale, più duro del rame puro, fu prodotto prima del bronzo con stagno e permise la prima metallurgia di qualità del Calcolitico.",
-    "wikipediaSlug": "Bronzo_Arsenicale"
+    "wikipediaSlug": "Bronzo_arsenicale"
   },
   {
     "id": "la-tene-cultura",
@@ -3082,6 +3082,6 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Periodo della civiltà indiana (1500-500 a.C.) dominato dalla tradizione vedica: i Veda (Rigveda, Samaveda, Yajurveda, Atharvaveda) venivano trasmessi oralmente con precisione millimetrica per 1.500 anni.",
-    "wikipediaSlug": "India_Vedica"
+    "wikipediaSlug": "Indian_Medical_Service"
   }
 ]

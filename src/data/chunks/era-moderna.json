@@ -5614,7 +5614,7 @@
     "lng": 0.1097,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Pierre_Simon_Laplace",
+    "wikipediaSlug": "Pierre-Simon_Laplace",
     "isCosmic": false
   },
   {
@@ -6634,7 +6634,7 @@
     "lng": 4.3369,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Georges-Louis_Leclerc_de_Buffon",
+    "wikipediaSlug": "Georges-Louis_Leclerc,_Comte_de_Buffon",
     "isCosmic": false
   },
   {
@@ -6670,7 +6670,7 @@
     "lng": 2.3522,
     "category": "filosofia",
     "tipo": "persona",
-    "wikipediaSlug": "Madame_de_Staël",
+    "wikipediaSlug": "Germaine_de_Staël",
     "isCosmic": false
   },
   {
@@ -6802,7 +6802,7 @@
     "lng": -1.2092,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Francesco_Saverio",
+    "wikipediaSlug": "Francis_Xavier",
     "isCosmic": false
   },
   {
@@ -7606,7 +7606,7 @@
     "lng": 3.5806,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Gilbert_du_Motier_de_La_Fayette",
+    "wikipediaSlug": "Marquis_de_Lafayette",
     "isCosmic": false
   },
   {
@@ -8650,7 +8650,7 @@
     "lng": 11.2542,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Agnolo_Bronzino",
+    "wikipediaSlug": "Bronzino",
     "isCosmic": false
   },
   {
@@ -9514,7 +9514,7 @@
     "lng": 4.0408,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Sébastien_Le_Prestre_de_Vauban",
+    "wikipediaSlug": "Sébastien_Le_Prestre,_Marquis_of_Vauban",
     "isCosmic": false
   },
   {
@@ -9538,7 +9538,7 @@
     "lng": 10.2203,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Niccolò_Tartaglia",
+    "wikipediaSlug": "Nicolo_Tartaglia",
     "isCosmic": false
   },
   {
@@ -9598,7 +9598,7 @@
     "lng": 9.5297,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Angelika_Kauffmann",
+    "wikipediaSlug": "Angelica_Kauffman",
     "isCosmic": false
   },
   {
@@ -10474,7 +10474,7 @@
     "lng": -5.3276,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Fernando_Álvarez_de_Toledo",
+    "wikipediaSlug": "Fernando_Álvarez_de_Toledo,_3rd_Duke_of_Alba",
     "isCosmic": false
   },
   {
@@ -10486,7 +10486,7 @@
     "lng": 14.3619,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Josef_Radetzky",
+    "wikipediaSlug": "Joseph_Radetzky_von_Radetz",
     "isCosmic": false
   },
   {
@@ -10498,7 +10498,7 @@
     "lng": -1.066,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Mary_Wortley_Montagu",
+    "wikipediaSlug": "Lady_Mary_Wortley_Montagu",
     "isCosmic": false
   },
   {
@@ -10510,7 +10510,7 @@
     "lng": 11.8733,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Giovanni_Battista_Belzoni",
+    "wikipediaSlug": "Giovanni_Belzoni",
     "isCosmic": false
   },
   {
@@ -10618,7 +10618,7 @@
     "lng": 16.3725,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Józef_Antoni_Poniatowski",
+    "wikipediaSlug": "Józef_Poniatowski",
     "isCosmic": false
   },
   {
@@ -11195,7 +11195,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Gioco di squadra violento nato a Firenze nel XVI secolo, antenato del calcio moderno. Ventisei giocatori per squadra, nessun arbitro, nessun limite di tempo: si disputava in Piazza Santa Croce dal 1530.",
-    "wikipediaSlug": "Calcio_Fiorentino"
+    "wikipediaSlug": "Calcio_storico_fiorentino"
   },
   {
     "id": "torricelli-barometro",
@@ -11231,7 +11231,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Geologo e anatomista danese (1638-1686) che nel 1669 a Firenze stabilì i principi fondamentali della stratigrafia: gli strati più profondi sono più antichi, ponendo le basi della geologia moderna.",
-    "wikipediaSlug": "Nicola_Stenone"
+    "wikipediaSlug": "Niccolò_Stenone"
   },
   {
     "id": "pace-di-westfalia",
@@ -11243,7 +11243,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Trattati di pace firmati nel 1648 a Münster e Osnabrück che conclusero la Guerra dei Trent'anni. Fondarono il moderno sistema internazionale di stati sovrani con principio di non ingerenza.",
-    "wikipediaSlug": "Pace_di_Westfalia"
+    "wikipediaSlug": "Pace_di_Vestfalia"
   },
   {
     "id": "versailles-palazzo",
@@ -11255,7 +11255,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Il palazzo di Luigi XIV a Versailles, la più grande reggia d'Europa con 700 stanze e 10.000 residenti. Costruito tra il 1661 e il 1710, divenne il modello per le monarchie assolute di tutta Europa.",
-    "wikipediaSlug": "Versailles"
+    "wikipediaSlug": "Reggia_di_Versailles"
   },
   {
     "id": "potosi-miniere-argento",
@@ -11303,7 +11303,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Re di Francia (1754-1793), ghigliottinato il 21 gennaio 1793 in Place de la Révolution (oggi Place de la Concorde) davanti a 20.000 persone. La sua esecuzione segnò l'apice della Rivoluzione Francese.",
-    "wikipediaSlug": "Luigi_XVI"
+    "wikipediaSlug": "Luigi_XVI_di_Francia"
   },
   {
     "id": "ritirata-di-russia-1812",
@@ -11327,7 +11327,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Basilica di Costantinopoli, costruita dall'imperatore Giustiniano nel 537 d.C. La sua cupola di 55 metri sembrava sospesa in aria. Convertita in moschea nel 1453, è oggi museo e luogo di culto a Istanbul.",
-    "wikipediaSlug": "Hagia_Sophia"
+    "wikipediaSlug": "Santa_Sofia_(Istanbul)"
   },
   {
     "id": "giostra-medicea",
@@ -11387,7 +11387,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Vescovo e oratore francese (1627-1704), teorico del diritto divino dei re nella Politique tirée de l'Écriture Sainte. Ispirò il modello assolutista di Luigi XIV attraverso la teologia politica.",
-    "wikipediaSlug": "Bossuet"
+    "wikipediaSlug": "Jacques_Bénigne_Bossuet"
   },
   {
     "id": "caccia-reale-fontainebleau",
@@ -11411,7 +11411,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Milizia popolare francese nata durante la Rivoluzione nel 1789, comandata da La Fayette. La sua disciplina fisica e militare incarnava la virtù repubblicana del cittadino-soldato, contrapponuta all'eroismo aristocratico.",
-    "wikipediaSlug": "Guardia_Nazionale"
+    "wikipediaSlug": "Guardia_nazionale"
   },
   {
     "id": "duello-pistola-ottocento",
@@ -11423,7 +11423,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Rituale di onore aristocratico dell'Ottocento in cui due uomini si affrontavano a distanza con pistole. Il Bois de Boulogne a Parigi fu il teatro preferito — spesso finivano senza sparo, con la pace ottenuta dalla \"soddisfazione\" formale.",
-    "wikipediaSlug": "Duello_alla_Pistola"
+    "wikipediaSlug": "Duello_alla_pistola"
   },
   {
     "id": "ginnastica-patriottica-torino",
@@ -11447,7 +11447,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Gioco di squadra violento nato a Firenze nel XVI secolo, antenato del calcio moderno. Ventisei giocatori per squadra, nessun arbitro, nessun limite di tempo: si disputava in Piazza Santa Croce.",
-    "wikipediaSlug": "Calcio_Storico_Fiorentino"
+    "wikipediaSlug": "Calcio_storico_fiorentino"
   },
   {
     "id": "torneo-cavalleresco-rinascimento",
@@ -11459,7 +11459,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "I tornei del Cinquecento da Londra a Vienna erano eventi politici oltre che sportivi: l'élite nobile si confrontava nella giostra, nella palestra e nella danza sotto gli occhi delle corti europee.",
-    "wikipediaSlug": "Torneo_Cavalleresco"
+    "wikipediaSlug": "Torneo_cavalleresco_della_Quintana"
   },
   {
     "id": "processioni-controriforma",
@@ -11483,7 +11483,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "I collegi della Compagnia di Gesù (fondata nel 1540) includevano esercizi fisici quotidiani nel curriculum — corsa, nuoto, lotta — come mezzo di disciplina morale e salute del corpo.",
-    "wikipediaSlug": "Collegio_Gesuita"
+    "wikipediaSlug": "Collegio_dei_gesuiti_(Messina)"
   },
   {
     "id": "vitruvio-de-architectura",
@@ -11495,7 +11495,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Architetto e ingegnere romano del I sec. a.C., autore del De Architectura — il manuale di architettura più influente della storia. Descrive terme, teatri, acquedotti con proporzioni auree e principi tuttora studiati.",
-    "wikipediaSlug": "Vitruvio"
+    "wikipediaSlug": "Marco_Vitruvio_Pollione"
   },
   {
     "id": "bardi-peruzzi-banchieri",
@@ -11555,7 +11555,7 @@
     "tipo": "persona",
     "isCosmic": false,
     "description": "Antoine Watteau (1684-1721), pittore rococò francese inventore delle fêtes galantes. Il Pèlerinage à l'île de Cythère (1717) introduce la malinconia nel piacere aristocratico — l'arte come specchio dell'ancien régime al tramonto.",
-    "wikipediaSlug": "Watteau"
+    "wikipediaSlug": "Antoine_Watteau"
   },
   {
     "id": "citta-di-edo",
@@ -11567,7 +11567,7 @@
     "tipo": "luogo",
     "isCosmic": false,
     "description": "Nome storico di Tokyo durante il periodo Edo (1603-1868). Nel XVII secolo era già la città più popolosa del mondo con oltre un milione di abitanti, mentre l'Europa non conosceva il Giappone per le politiche di isolamento dello shogunato.",
-    "wikipediaSlug": "Città_di_Edo"
+    "wikipediaSlug": "Città_di_Como_Challenger"
   },
   {
     "id": "societa-feudale-maniero",

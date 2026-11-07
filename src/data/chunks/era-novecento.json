@@ -5037,7 +5037,7 @@
     "category": "sport",
     "tipo": "organizzazione",
     "description": "Fondata nel 1926, la SSC Napoli è una delle squadre di calcio più amate e popolari d'Italia. Grazie a Diego Armando Maradona vinse i primi due scudetti (1987, 1990) e la Coppa UEFA 1989. Il terzo scudetto arrivò nel 2023, primo dopo 33 anni, scatenando un'esultanza collettiva senza precedenti in tutto il Paese. Lo stadio San Paolo è stato rinominato Stadio Diego Armando Maradona nel 2020.",
-    "wikipediaSlug": "Società_Sportiva_Calcio_Napoli",
+    "wikipediaSlug": "SSC_Napoli",
     "isCosmic": false
   },
   {
@@ -5049,7 +5049,7 @@
     "category": "sport",
     "tipo": "organizzazione",
     "description": "Fondata nel 1927 dalla fusione di tre club romani, l'AS Roma è il principale club calcistico della capitale italiana con 3 scudetti e 9 Coppe Italia. Simbolo della romanità, ha avuto campioni come Falcão, Totti (che vi trascorse tutta la carriera), De Rossi, Bruno Conti. La finale di Coppa dei Campioni 1984 persa ai rigori contro il Liverpool è uno dei momenti più dolorosi della storia del club.",
-    "wikipediaSlug": "Associazione_Sportiva_Roma",
+    "wikipediaSlug": "AS_Roma",
     "isCosmic": false
   },
   {
@@ -5169,7 +5169,7 @@
     "category": "cosmo",
     "tipo": "scoperta",
     "description": "Nel 1931 Karl Jansky (1905–1950), ingegnere dei Bell Labs, stava studiando i disturbi radio che interferivano con le comunicazioni transatlantiche quando notò un segnale misterioso con un periodo di 23 ore e 56 minuti — esattamente il periodo di rotazione della Terra rispetto alle stelle fisse. Localizzò la sorgente nella costellazione del Sagittario: il centro della Via Lattea. Aveva scoperto che gli oggetti celesti emettono onde radio, fondando la radioastronomia. Questa nuova finestra sul cosmo avrebbe portato alla scoperta delle quasar, dei pulsar e della radiazione cosmica di fondo.",
-    "wikipediaSlug": "Karl_Jansky",
+    "wikipediaSlug": "Karl_Guthe_Jansky",
     "isCosmic": false
   },
   {
@@ -5958,7 +5958,7 @@
     "lng": 36.95,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Wangari_Maathai",
+    "wikipediaSlug": "Wangarĩ_Maathai",
     "isCosmic": false
   },
   {
@@ -6006,7 +6006,7 @@
     "lng": 29.9572,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Gamal_Abd_el-Nasser",
+    "wikipediaSlug": "Gamal_Abdel_Nasser",
     "isCosmic": false
   },
   {
@@ -6054,7 +6054,7 @@
     "lng": 30.9139,
     "category": "storia",
     "tipo": "persona",
-    "wikipediaSlug": "Anwar_al-Sadat",
+    "wikipediaSlug": "Anwar_Sadat",
     "isCosmic": false
   },
   {
@@ -7638,7 +7638,7 @@
     "lng": -74.0061,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Rosalyn_Yalow",
+    "wikipediaSlug": "Rosalyn_Sussman_Yalow",
     "isCosmic": false
   },
   {
@@ -9258,7 +9258,7 @@
     "lng": 139.7744,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Yōichirō_Nambu",
+    "wikipediaSlug": "Yoichiro_Nambu",
     "isCosmic": false
   },
   {
@@ -9270,7 +9270,7 @@
     "lng": -1.6356,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Robert_Geoffrey_Edwards",
+    "wikipediaSlug": "Robert_Edwards_(physiologist)",
     "isCosmic": false
   },
   {
@@ -11166,7 +11166,7 @@
     "lng": 51.3897,
     "category": "arte",
     "tipo": "persona",
-    "wikipediaSlug": "Farah_Diba",
+    "wikipediaSlug": "Farah_Pahlavi",
     "isCosmic": false
   },
   {
@@ -11238,7 +11238,7 @@
     "lng": 28.0416,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Allan_McLeod_Cormack",
+    "wikipediaSlug": "Allan_MacLeod_Cormack",
     "isCosmic": false
   },
   {
@@ -11262,7 +11262,7 @@
     "lng": -73.6839,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "David_M._Lee",
+    "wikipediaSlug": "David_Lee_(physicist)",
     "isCosmic": false
   },
   {
@@ -11274,7 +11274,7 @@
     "lng": 0.1603,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Harold_Kroto",
+    "wikipediaSlug": "Harry_Kroto",
     "isCosmic": false
   },
   {
@@ -13062,7 +13062,7 @@
     "lng": -111.6586,
     "category": "scienza",
     "tipo": "persona",
-    "wikipediaSlug": "Paul_Delos_Boyer",
+    "wikipediaSlug": "Paul_D._Boyer",
     "isCosmic": false
   },
   {
@@ -15487,7 +15487,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Il 29 ottobre 1929 (Martedì Nero) il mercato azionario americano crollò, innescando la Grande Depressione globale. In un giorno miliardi di dollari evaporarono e milioni di persone persero i risparmi.",
-    "wikipediaSlug": "Crollo_di_Wall_Street"
+    "wikipediaSlug": "Grande_depressione"
   },
   {
     "id": "sputnik-1957",
@@ -15523,7 +15523,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Partita del Secolo disputata a Reykjavik nel 1972 tra l'americano Bobby Fischer e il sovietico Boris Spassky per il titolo mondiale di scacchi. Interpretata come campo di battaglia simbolico della Guerra Fredda.",
-    "wikipediaSlug": "Fischer-Spassky"
+    "wikipediaSlug": "Fischer-Spassky_(1972_match)"
   },
   {
     "id": "muro-di-berlino",
@@ -15571,7 +15571,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Il 9 agosto 1942 i calciatori dello Start FC di Kiev (ex Dinamo Kiev) batterono 5-3 la squadra della Luftwaffe. Secondo la leggenda, furono fucilati dai nazisti per non essersi arresi, diventando simboli della resistenza.",
-    "wikipediaSlug": "Match_della_Morte"
+    "wikipediaSlug": "Marce_della_morte_dei_prigionieri_di_guerra_alleati_(1944-1945)"
   },
   {
     "id": "kurt-weill-opera-tre-soldi",
@@ -15595,7 +15595,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Il 11 settembre 2001 diciannove terroristi di Al-Qaeda dirottarono quattro aerei passeggeri: due colpirono le Torri Gemelle, uno il Pentagono, uno si schiantò in Pennsylvania. Circa 3.000 vittime.",
-    "wikipediaSlug": "11_Settembre_2001"
+    "wikipediaSlug": "11_settembre_2001_(film)"
   },
   {
     "id": "blues-mississippi",
@@ -15619,7 +15619,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Reggimento afroamericano dell'esercito americano che portò il jazz in Francia durante la Prima Guerra Mondiale. La loro band guidata da James Reese Europe rivoluzionò il gusto musicale europeo a partire dal 1918.",
-    "wikipediaSlug": "Harlem_Hellfighters"
+    "wikipediaSlug": "369th_Infantry_Regiment_(United_States)"
   },
   {
     "id": "armistizio-1918",
@@ -15715,7 +15715,7 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Campioni cilindrici estratti dalle calotte glaciali di Antartide e Groenlandia che registrano 800.000 anni di storia climatica. Ogni strato è un anno: le bolle d'aria intrappolate contengono l'atmosfera del passato.",
-    "wikipediaSlug": "Carote_di_Ghiaccio"
+    "wikipediaSlug": "Carota_di_ghiaccio"
   },
   {
     "id": "parigi-restaurazione-bourbon",
@@ -15727,6 +15727,6 @@
     "tipo": "evento",
     "isCosmic": false,
     "description": "Il ritorno dei Borboni in Francia dopo la caduta di Napoleone (1815-1830). Nonostante la Restaurazione, il caffè Procope e i salotti parigini fermentavano con idee liberali che sarebbero esplode nella Rivoluzione del 1830.",
-    "wikipediaSlug": "Restaurazione_Borbonica"
+    "wikipediaSlug": "Restaurazione_borbonica_in_Spagna"
   }
 ]
