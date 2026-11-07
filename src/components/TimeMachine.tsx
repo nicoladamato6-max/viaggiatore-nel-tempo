@@ -11,7 +11,7 @@ interface AiBriefing {
 
 type EpochBriefings = Record<string, { it: AiBriefing; en: AiBriefing }>;
 
-function getStaticBriefingWithMeta(year: number, locale: Locale): { briefing: AiBriefing; era: Period } | null {
+export function getStaticBriefingWithMeta(year: number, locale: Locale): { briefing: AiBriefing; era: Period } | null {
   const briefings = epochBriefingsData as EpochBriefings;
   // Preferisci la sotto-epoca più specifica (span più corto) che copre l'anno
   const activeSubs = SUBCATEGORIES.filter(p => year >= p.start && year <= p.end && !!p.wikipediaSlug);

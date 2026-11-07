@@ -2987,6 +2987,76 @@ body {
   color: rgba(168, 200, 255, 0.35);
 }
 
+/* Era row: flex container per pulsante principale + freccia espandi */
+.left-nav-panel__era-row {
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid rgba(0, 200, 255, 0.08);
+}
+.left-nav-panel__era-row .left-nav-panel__era-item {
+  flex: 1;
+  border-bottom: none; /* il bordo è già sul row */
+}
+.left-nav-panel__era-expand {
+  flex-shrink: 0;
+  width: 28px;
+  background: none;
+  border: none;
+  color: rgba(168, 200, 255, 0.5);
+  font-size: 11px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.15s;
+}
+.left-nav-panel__era-expand:hover {
+  color: rgba(0, 200, 255, 0.9);
+}
+
+/* Sotto-epoche (indentate) */
+.left-nav-panel__sub-era-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 200, 255, 0.05);
+  padding: 6px 4px 6px 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s;
+}
+.left-nav-panel__sub-era-item:hover {
+  background: rgba(0, 100, 255, 0.06);
+}
+.left-nav-panel__sub-era-item.left-nav-panel__era-item--active {
+  background: rgba(0, 200, 255, 0.07);
+}
+.left-nav-panel__sub-era-dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0.75;
+}
+.left-nav-panel__sub-era-item .left-nav-panel__era-item-label {
+  font-size: 11px;
+}
+.left-nav-panel__sub-era-item .left-nav-panel__era-item-range {
+  font-size: 9px;
+  margin-left: auto;
+}
+
+/* Hint nel tab Cronologia */
+.left-nav-panel__hint {
+  font-size: 9px;
+  color: rgba(168, 200, 255, 0.35);
+  font-family: var(--font-heading);
+  padding: 4px 4px 6px;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
 /* Mobile: left panel e recall chip nascosti */
 @media (max-width: 768px) {
   .left-nav-panel,

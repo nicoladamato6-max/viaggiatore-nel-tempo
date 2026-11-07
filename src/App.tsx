@@ -7,7 +7,7 @@ import { TimeControls } from './components/TimeControls';
 import { SearchBar } from './components/SearchBar';
 import { BridgeConsole } from './components/BridgeConsole';
 import { AIPanel } from './components/AIPanel';
-import { TimeMachine } from './components/TimeMachine';
+import { TimeMachine, getStaticBriefingWithMeta } from './components/TimeMachine';
 import { EraGuide } from './components/EraGuide';
 import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
@@ -966,6 +966,19 @@ function AppInner() {
           onSelectEra={(period) => {
             setSliderValue(yearToSlider(period.start));
             setOverrideYear(null);
+            const result = getStaticBriefingWithMeta(period.start, locale);
+            if (result) {
+              setEraGuide({
+                briefing:   result.briefing,
+                eraName:    result.era.name,
+                eraSlug:    result.era.wikipediaSlug ?? '',
+                eraYear:    period.start,
+                locale,
+                originLat:  result.era.originLat,
+                originLng:  result.era.originLng,
+              });
+              setEraGuideOpen(true);
+            }
           }}
           locale={locale}
           formatYear={formatYear}
