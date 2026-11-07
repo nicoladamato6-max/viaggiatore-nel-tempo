@@ -53,13 +53,24 @@ function fmtYear(year: number, it: boolean): string {
   return `${abs.toLocaleString('it')} ${year < 0 ? (it ? 'a.C.' : 'BC') : (it ? 'd.C.' : 'AD')}`;
 }
 
+function decodeHtml(s: string): string {
+  return s.replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
+          .replace(/&gt;/g, '>').replace(/&apos;/g, "'").replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
+}
+
+function cleanDescription(desc: string): string {
+  const d = decodeHtml(desc).trim();
+  if (/^Disambiguazione|^Disambiguation/i.test(d)) return '';
+  return d;
+}
+
 function buildSystemPrompt(entity: EntityContext, locale: string): string {
   const it   = locale === 'it';
   const year = fmtYear(entity.year, it);
+  const desc = cleanDescription(entity.description);
 
   if (it) return `Sei una guida storica appassionata che svela connessioni inaspettate tra epoche, discipline e culture.
-Entità selezionata: "${entity.title}" (${year}, ${entity.category}).
-Contesto: ${entity.description}
+Entità selezionata: "${entity.title}" (${year}, ${entity.category}).${desc ? `\nContesto: ${desc}` : ''}
 
 Quando l'utente dice "ANALISI" segui questo schema preciso per ogni entità correlata che elenchi:
   1. NESSO: una o due frasi che spiegano CONCRETAMENTE come quell'entità è collegata a "${entity.title}". Deve rispondere alla domanda "cosa c'entra con ${entity.title}?". Esempio: "Lorenzo Ghiberti vinse il concorso del 1401 contro Brunelleschi grazie al sostegno dei Medici — senza quel mecenate non avrebbe mai completato le Porte del Paradiso." NON scrivere frasi generiche come "X era un artista del Rinascimento" senza spiegare il legame diretto.
@@ -72,8 +83,7 @@ Proponi 3-5 nomi di entità navigabili (già citate nel testo) nell'array sugges
 Rispondi SOLO con JSON valido, nessun testo fuori: {"answer":"...","suggestions":["Nome1","Nome2"]}`;
 
   return `You are a passionate historical guide who unveils unexpected connections across eras, disciplines and cultures.
-Selected entity: "${entity.title}" (${year}, ${entity.category}).
-Context: ${entity.description}
+Selected entity: "${entity.title}" (${year}, ${entity.category}).${desc ? `\nContext: ${desc}` : ''}
 
 When the user says "ANALYSIS" follow this exact schema for each correlated entity you list:
   1. LINK: one or two sentences that CONCRETELY explain how that entity connects to "${entity.title}". Must answer "what does it have to do with ${entity.title}?". Example: "Lorenzo Ghiberti won the 1401 competition against Brunelleschi thanks to Medici patronage — without that backer he would never have completed the Gates of Paradise." Do NOT write generic phrases like "X was a Renaissance artist" without explaining the direct link.

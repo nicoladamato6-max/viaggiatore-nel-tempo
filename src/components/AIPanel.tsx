@@ -52,6 +52,12 @@ async function askEntity(
   return json.data.answer;
 }
 
+function decodeHtmlEntities(text: string): string {
+  return text
+    .replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>').replace(/&apos;/g, "'").replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
+}
+
 function formatYear(year: number, locale: Locale): string {
   if (year > 0) return locale === 'it' ? `${year} d.C.` : `${year} AD`;
   return locale === 'it' ? `${Math.abs(year)} a.C.` : `${Math.abs(year)} BC`;
@@ -108,15 +114,20 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent }: 
     askEntity(event, prompt, [], locale)
       .then(reply => setMessages([{ role: 'ai', text: reply }]))
       .catch(() => {
+        const cleanDesc = decodeHtmlEntities(event.description);
+        const isDisambig = /^Disambiguazione|^Disambiguation/i.test(cleanDesc.trim());
+        const descLine = isDisambig ? '' : `\n${cleanDesc}`;
         const intro = locale === 'it'
-          ? `✦ ${event.title} (${yr})\n${event.description}\n\n🔭 Entità correlate da esplorare sulla mappa:`
-          : `✦ ${event.title} (${yr})\n${event.description}\n\n🔭 Related entities to explore on the map:`;
+          ? `✦ ${event.title} (${yr})${descLine}\n\n🔭 Entità correlate da esplorare sulla mappa:`
+          : `✦ ${event.title} (${yr})${descLine}\n\n🔭 Related entities to explore on the map:`;
         const list = correlated.map(e => {
           const catLabel = CATEGORY_LABELS[e.category] ?? e.category;
-          const desc = e.description.length > 120 ? e.description.slice(0, 120) + '…' : e.description;
+          const raw = decodeHtmlEntities(e.description);
+          const clean = /^Disambiguazione|^Disambiguation/i.test(raw.trim()) ? '' : raw;
+          const desc = clean.length > 120 ? clean.slice(0, 120) + '…' : clean;
           return locale === 'it'
-            ? `• ${e.title} (${formatYear(e.year, 'it')}) [${catLabel}]\n  ${desc}`
-            : `• ${e.title} (${formatYear(e.year, 'en')}) [${catLabel}]\n  ${desc}`;
+            ? `• ${e.title} (${formatYear(e.year, 'it')}) [${catLabel}]${desc ? `\n  ${desc}` : ''}`
+            : `• ${e.title} (${formatYear(e.year, 'en')}) [${catLabel}]${desc ? `\n  ${desc}` : ''}`;
         }).join('\n\n');
         const outro = locale === 'it'
           ? '\n\nClicca su un\'entità sopra per esplorarla, o scrivimi una domanda.'
