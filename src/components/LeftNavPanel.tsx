@@ -19,7 +19,7 @@ type Tab = 'cronologia' | 'scopri';
 function buildSubEraMap(): Map<string, Period[]> {
   const map = new Map<string, Period[]>();
   for (const macro of MACRO_ERAS) {
-    const subs = SUBCATEGORIES.filter(sub => sub.start >= macro.start && sub.start <= macro.end);
+    const subs = SUBCATEGORIES.filter(sub => sub.start >= macro.start && sub.start < macro.end);
     if (subs.length > 0) map.set(macro.name, subs);
   }
   return map;
