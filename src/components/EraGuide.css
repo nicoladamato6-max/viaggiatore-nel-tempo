@@ -94,23 +94,19 @@
 }
 
 .era-guide__icon-btn {
-  background: transparent;
-  border: 1px solid #1e2d40;
-  color: #6b7280;
-  width: 26px;
-  height: 26px;
-  border-radius: 4px;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1.15rem;
   cursor: pointer;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.15s, border-color 0.15s;
-  padding: 0;
+  padding: 2px 7px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: color 0.15s, background 0.15s;
 }
 .era-guide__icon-btn:hover {
-  color: #c9a227;
-  border-color: #c9a22744;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 /* ── Stato collassato: tab verticale ── */

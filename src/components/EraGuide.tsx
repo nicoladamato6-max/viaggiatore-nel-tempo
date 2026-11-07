@@ -1,4 +1,4 @@
-import { useMemo, useState, useRef } from 'react';
+import { useMemo, useState, useRef, useEffect } from 'react';
 import { type FlyTarget, type EraLaunchData, type HistoricalEvent } from '../types';
 import { parseYear } from './TimeMachine';
 import './EraGuide.css';
@@ -99,15 +99,62 @@ function renderAnnotatedText(
   return <>{result}</>;
 }
 
+// ── Text-to-Speech (same logic as InfoPanel) ─────────────────────────────
+function splitChunks(text: string, max = 180): string[] {
+  const chunks: string[] = [];
+  const sentences = text.split(/(?<=[.!?])\s+/);
+  let cur = '';
+  for (const s of sentences) {
+    if ((cur + ' ' + s).length > max && cur) { chunks.push(cur.trim()); cur = s; }
+    else cur += (cur ? ' ' : '') + s;
+  }
+  if (cur.trim()) chunks.push(cur.trim());
+  return chunks.filter(c => c.length > 0);
+}
+
+function useTTS() {
+  const [speaking, setSpeaking] = useState(false);
+  const cancelledRef = useRef(false);
+
+  function speak(text: string, lang: string) {
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    if (speaking) { setSpeaking(false); return; }
+    cancelledRef.current = false;
+    const chunks = splitChunks(text);
+    let idx = 0;
+    function speakNext() {
+      if (cancelledRef.current || idx >= chunks.length) { setSpeaking(false); return; }
+      const utt = new SpeechSynthesisUtterance(chunks[idx++]);
+      utt.lang = lang === 'it' ? 'it-IT' : 'en-US';
+      utt.rate = 0.95;
+      utt.onend = speakNext;
+      utt.onerror = () => setSpeaking(false);
+      window.speechSynthesis.speak(utt);
+    }
+    speakNext();
+    setSpeaking(true);
+  }
+
+  function stop() {
+    cancelledRef.current = true;
+    window.speechSynthesis?.cancel();
+    setSpeaking(false);
+  }
+
+  useEffect(() => () => { stop(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  return { speaking, speak, stop };
+}
+
 type ResizeDir = 'se' | 'sw' | 'ne' | 'nw' | 'n' | 's' | 'e' | 'w';
 
 export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: Props) {
-  const [collapsed,     setCollapsed]     = useState(false);
   const [sheetExpanded, setSheetExpanded] = useState(false); // mobile bottom sheet
   const [isFloat,       setIsFloat]       = useState(false);
   const [floatPos,      setFloatPos]      = useState({ x: 60, y: 60 });
   const [floatSize,     setFloatSize]     = useState({ w: 360, h: 620 });
   const dragStartRef = useRef<{ mx: number; my: number; px: number; py: number } | null>(null);
+  const { speaking, speak, stop } = useTTS();
 
   function onDragMouseDown(e: React.MouseEvent) {
     if (!isFloat) return;
@@ -196,14 +243,12 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
     onSelectEvent?.(ev);
   }
 
-  const collapseLabel = it ? 'Comprimi' : 'Collapse';
-  const closeLabel    = it ? 'Chiudi guida era' : 'Close era guide';
+  const closeLabel = it ? 'Chiudi guida era' : 'Close era guide';
 
   const classes = [
     'era-guide',
-    isFloat        ? 'era-guide--float'         : '',
-    collapsed      ? 'era-guide--collapsed'    : '',
-    sheetExpanded  ? 'era-guide--sheet-open'   : 'era-guide--sheet-closed',
+    isFloat       ? 'era-guide--float'       : '',
+    sheetExpanded ? 'era-guide--sheet-open'  : 'era-guide--sheet-closed',
   ].filter(Boolean).join(' ');
 
   const floatStyle: React.CSSProperties = isFloat
@@ -253,60 +298,52 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
         onMouseDown={isFloat ? onDragMouseDown : undefined}
         style={isFloat ? { cursor: 'move' } : undefined}
       >
-        {collapsed ? (
-          <>
+        <div className="era-guide__title-row">
+          <span className="era-guide__label">ERA GUIDE</span>
+          <span className="era-guide__era-name">{eraName}</span>
+        </div>
+        <div className="era-guide__header-btns">
+          {/* Undock / Re-dock */}
+          {isFloat ? (
             <button
-              className="era-guide__expand-btn"
-              onClick={() => setCollapsed(false)}
-              title={it ? 'Espandi guida' : 'Expand guide'}
+              className="era-guide__icon-btn"
+              onClick={() => { setIsFloat(false); stop(); }}
+              title={it ? 'Aggancia a sinistra' : 'Dock to left'}
             >
-              ›
+              ⊣
             </button>
-            <span className="era-guide__name-rotated">{eraName}</span>
-          </>
-        ) : (
-          <>
-            <div className="era-guide__title-row">
-              <span className="era-guide__label">ERA GUIDE</span>
-              <span className="era-guide__era-name">{eraName}</span>
-            </div>
-            <div className="era-guide__header-btns">
-              {!isFloat && (
-                <button
-                  className="era-guide__icon-btn"
-                  onClick={() => setCollapsed(true)}
-                  title={collapseLabel}
-                >
-                  ‹
-                </button>
-              )}
-              {isFloat ? (
-                <button
-                  className="era-guide__icon-btn"
-                  onClick={() => setIsFloat(false)}
-                  title={it ? 'Aggancia a sinistra' : 'Dock to left'}
-                >
-                  ⊣
-                </button>
-              ) : (
-                <button
-                  className="era-guide__icon-btn"
-                  onClick={() => { setIsFloat(true); setCollapsed(false); }}
-                  title={it ? 'Sgancia pannello' : 'Undock panel'}
-                >
-                  ⊞
-                </button>
-              )}
-              <button
-                className="era-guide__icon-btn"
-                onClick={onClose}
-                title={closeLabel}
-              >
-                ✕
-              </button>
-            </div>
-          </>
-        )}
+          ) : (
+            <button
+              className="era-guide__icon-btn"
+              onClick={() => setIsFloat(true)}
+              title={it ? 'Sgancia pannello' : 'Undock panel'}
+            >
+              ⊞
+            </button>
+          )}
+          {/* TTS */}
+          {window.speechSynthesis && (
+            <button
+              className="era-guide__icon-btn"
+              onClick={() => {
+                const text = [briefing.dove, ...briefing.items.map(i => i.text)].join('. ');
+                speak(text, data.locale);
+              }}
+              title={speaking ? (it ? 'Ferma lettura' : 'Stop reading') : (it ? 'Leggi ad alta voce' : 'Read aloud')}
+              aria-label="Text-to-speech"
+            >
+              {speaking ? '⏹' : '🔊'}
+            </button>
+          )}
+          {/* Chiudi */}
+          <button
+            className="era-guide__icon-btn"
+            onClick={() => { stop(); onClose(); }}
+            title={closeLabel}
+          >
+            ✕
+          </button>
+        </div>
       </div>
 
       {/* Body scrollabile */}
