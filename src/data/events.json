@@ -495,7 +495,7 @@
     "lng": -74.006,
     "category": "musica",
     "description": "Pubblicato a gennaio 1964, questo album segna Dylan come voce della coscienza americana. La title track diventa inno del movimento per i diritti civili e contro la guerra del Vietnam. Dylan porta la poesia nella musica popolare. Nel 2016 riceve il Premio Nobel per la Letteratura 'per aver creato nuove espressioni poetiche nella grande tradizione americana della canzone'.",
-    "wikipediaSlug": "The_Times_They_Are_a-Changin%27_(album)",
+    "wikipediaSlug": "Bob_Dylan",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -555,7 +555,7 @@
     "lng": -2.2426,
     "category": "scienza",
     "description": "Nel 1909-1911 Ernest Rutherford all'Università di Manchester bombarda una sottile lamina d'oro con particelle alfa. Alcune rimbalzano indietro: 'Come se avessi sparato un proiettile di artiglieria su un foglio di carta velina e tornasse indietro a colpirmi.' Dimostra che l'atomo ha un nucleo centrale denso e carico positivamente.",
-    "wikipediaSlug": "Geiger%E2%80%93Marsden_experiments",
+    "wikipediaSlug": "Geiger–Marsden_experiments",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -711,7 +711,7 @@
     "lng": 26.1025,
     "category": "storia",
     "description": "L'imperatore Traiano conquista la Dacia (l'attuale Romania) in due campagne militari (101-102 e 105-106 d.C.). Le miniere d'oro e d'argento daciche finanziano il suo grandioso programma edilizio a Roma. La Colonna Traiana, ancora in piedi a Roma, racconta in 2.662 figure la storia della conquista su 200 metri di fregio a spirale.",
-    "wikipediaSlug": "Trajan%27s_Dacian_Wars",
+    "wikipediaSlug": "Trajan's_Dacian_Wars",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -723,7 +723,7 @@
     "lng": -2.5032,
     "category": "storia",
     "description": "Nel 122 d.C. l'imperatore Adriano ordina la costruzione di un muro difensivo lungo 118 km attraverso il nord dell'Inghilterra, dal Mare del Nord al Mare d'Irlanda. Alto 6 metri, con 80 forti e torri di guardia ogni miglio romano, rappresenta il limite settentrionale dell'Impero. Parzialmente conservato, è oggi Patrimonio UNESCO.",
-    "wikipediaSlug": "Hadrian%27s_Wall",
+    "wikipediaSlug": "Hadrian's_Wall",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -1023,7 +1023,7 @@
     "lng": 12.4843,
     "category": "arte",
     "description": "Nel 113 d.C. viene inaugurata a Roma la Colonna Traiana, alta 38 metri, con un fregio a spirale di 200 metri che racconta in 2.662 figure le guerre daciche. È il più lungo fumetto della storia antica e il documento visivo più ricco di vita romana. Il fusto era in origine colorato. L'urna con le ceneri di Traiano è sepolta alla sua base.",
-    "wikipediaSlug": "Trajan%27s_Column",
+    "wikipediaSlug": "Trajan's_Column",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -2007,7 +2007,7 @@
     "lng": 11.2558,
     "category": "storia",
     "description": "Lorenzo de' Medici governa Firenze dal 1469 al 1492 come mecenate e politico straordinario. Nella sua corte si formano Michelangelo, Poliziano, Pico della Mirandola, Botticelli. Protegge l'Accademia Platonica, scrive poesie, sopravvive alla Congiura dei Pazzi (1478) e mantiene l'equilibrio tra gli stati italiani. La sua morte nel 1492 apre l'età delle invasioni.",
-    "wikipediaSlug": "Lorenzo_de%27_Medici",
+    "wikipediaSlug": "Lorenzo_de'_Medici",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2703,7 +2703,7 @@
     "lng": 13.405,
     "category": "storia",
     "description": "Il 30 gennaio 1933 il presidente Hindenburg nomina Adolf Hitler Cancelliere della Germania. In 18 mesi Hitler smantella la Repubblica di Weimar, vieta i partiti di opposizione, istituisce il Terzo Reich. La sua ascesa trasforma la crisi economica e il risentimento per il Trattato di Versailles in nazionalismo aggressivo che porterà alla Seconda Guerra Mondiale.",
-    "wikipediaSlug": "Adolf_Hitler%27s_rise_to_power",
+    "wikipediaSlug": "Adolf_Hitler's_rise_to_power",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2715,7 +2715,7 @@
     "lng": 37.6173,
     "category": "storia",
     "description": "Il 23 agosto 1939 la Germania nazista e l'URSS firmano a Mosca un patto di non aggressione con protocolli segreti che dividono l'Europa orientale in sfere d'influenza. Il patto libera Hitler dal rischio di una guerra su due fronti. Otto giorni dopo invade la Polonia: scoppia la Seconda Guerra Mondiale.",
-    "wikipediaSlug": "Molotov%E2%80%93Ribbentrop_Pact",
+    "wikipediaSlug": "Molotov–Ribbentrop_Pact",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2811,7 +2811,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Nell'autunno 885 una flotta vichinga di 700 navi e 30.000-40.000 guerrieri risale la Senna e assedia Parigi per un anno intero. Il conte Odo difende la città con pochi uomini. Il re Carlo il Grosso paga un riscatto e cede la Borgogna ai Vichinghi. L'impopolare decisione porta alla sua deposizione.",
-    "wikipediaSlug": "Siege_of_Paris_(885%E2%80%93886)",
+    "wikipediaSlug": "Siege_of_Paris_(885–886)",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2847,7 +2847,7 @@
     "lng": 30.5234,
     "category": "storia",
     "description": "Nel dicembre 1240 l'esercito mongolo di Batu Khan distrugge Kiev — allora la più grande città dell'Europa orientale. La Russia mongola (Giogo Tataro) dura 250 anni. Mosca emergerà dalla distruzione come potenza egemone, raccogliendo attorno a sé i principati russi che resistono ai Mongoli.",
-    "wikipediaSlug": "Mongol_invasion_of_Kievan_Rus%27",
+    "wikipediaSlug": "Mongol_invasion_of_Kievan_Rus'",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3879,7 +3879,7 @@
     "lng": 35.2137,
     "category": "storia",
     "description": "Nel 701 a.C. il re assiro Sennacherib assedia Gerusalemme con il suo grande esercito, ordinando al re Ezechia di capitolare. Secondo la Bibbia un angelo uccide 185.000 Assiri in una notte. Storicamente: la peste decimò l'esercito. Sennacherib si ritira senza conquistare Gerusalemme — evento considerato un miracolo nella tradizione ebraica.",
-    "wikipediaSlug": "Sennacherib%27s_siege_of_Jerusalem",
+    "wikipediaSlug": "Sennacherib's_siege_of_Jerusalem",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -4203,7 +4203,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Dal 535 al 554 il generale Belisario, incaricato da Giustiniano, combatte la guerra più lunga e devastante della storia italiana per strappare la penisola agli Ostrogoti. 18 anni di battaglie da Napoli a Ravenna. L'Italia viene devastata: la popolazione scende a un terzo, le città sono rovine. La 'riconquista' imperiale apre la via ai Longobardi.",
-    "wikipediaSlug": "Gothic_War_(535%E2%80%93554)",
+    "wikipediaSlug": "Gothic_War_(535–554)",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -12951,7 +12951,7 @@
     "lng": -0.1278,
     "category": "storia",
     "description": "Il 28 settembre 1864 a Londra nasce l'Associazione Internazionale dei Lavoratori (Prima Internazionale): Marx è il segretario. Per la prima volta operai di diversi paesi si organizzano insieme per i diritti del lavoro. La Prima Internazionale si scioglie nel 1876 (conflitti Marx-Bakunin). Nascono i sindacati nazionali, il Partito Socialdemocratico tedesco (SPD), i movimenti operai che conquisteranno le 8 ore lavorative e il suffragio universale.",
-    "wikipediaSlug": "International_Workingmen%27s_Association",
+    "wikipediaSlug": "International_Workingmen's_Association",
     "isCosmic": false,
     "tipo": "organizzazione"
   },
@@ -13227,7 +13227,7 @@
     "lng": 13.405,
     "category": "storia",
     "description": "Dal 1756 al 1763 la Guerra dei Sette Anni combatte simultaneamente in Europa (Prussia vs Austria-Francia), in Nord America (Guerre franco-indiane), in India, Africa, Caraibi — la prima guerra davvero mondiale. La Gran Bretagna emerge vincitrice: conquista Canada, India, Florida, posizioni in Africa. La Francia perde il suo impero coloniale nordamericano. La guerra ridisegna il mondo — e le sue enormi spese portano alla Rivoluzione Americana e Francese.",
-    "wikipediaSlug": "Seven_Years%27_War",
+    "wikipediaSlug": "Seven_Years'_War",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -13491,7 +13491,7 @@
     "lng": 11.582,
     "category": "scienza",
     "description": "Nel 1609 Johannes Kepler pubblica le prime due leggi del moto planetario: le orbite dei pianeti sono ellissi con il Sole in uno dei fuochi; la velocità dei pianeti varia (area uguale in ugual tempo). La terza legge (1619): il quadrato del periodo è proporzionale al cubo del semiasse maggiore. Le leggi di Keplero — derivate dai dati osservativi di Tycho Brahe — sono la base su cui Newton costruirà la gravitazione universale.",
-    "wikipediaSlug": "Kepler%27s_laws_of_planetary_motion",
+    "wikipediaSlug": "Kepler's_laws_of_planetary_motion",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -13563,7 +13563,7 @@
     "lng": 6.1432,
     "category": "storia",
     "description": "Nel 1212 due movimenti distinti — uno di bambini e giovani tedeschi, uno di pastorelli francesi — cercano di raggiungere Gerusalemme: la Crociata dei Bambini. La versione tedesca (Niccolò di Colonia) raggiunge l'Italia ma non trova navi. La versione francese (Stefano di Cloyes) è venduta in schiavitù dai mercanti. I fatti sono incerti — la leggenda del Pifferaio Magico di Hameln (1284) forse ne riprende elementi. Un capitolo oscuro della storia delle Crociate.",
-    "wikipediaSlug": "Children%27s_Crusade",
+    "wikipediaSlug": "Children's_Crusade",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -14319,7 +14319,7 @@
     "lng": -77.0364,
     "category": "storia",
     "description": "Il 26 agosto 1920 il 19° Emendamento della Costituzione americana garantisce il voto alle donne: 72 anni di lotta dal Seneca Falls Convention (1848). Nuova Zelanda era stata prima (1893), Australia (1902), Finlandia (1906), Norvegia (1913), Russia (1917), UK (1918, 30+). La Svizzera aspetta fino al 1971. Il suffragio femminile è la più grande espansione democratica della storia — 3,5 miliardi di persone ottengono il diritto che era loro negato.",
-    "wikipediaSlug": "Women%27s_suffrage_in_the_United_States",
+    "wikipediaSlug": "Women's_suffrage_in_the_United_States",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -14727,7 +14727,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Dal 1853 al 1870 il barone Haussmann per ordine di Napoleone III demolisce la Parigi medievale e la ricostruisce: 71 nuovi boulevard (tra cui i Grands Boulevards e gli Champs-Elysées allargati), piazze con fontane (Place de l'Étoile), fognature, parchi (Bois de Boulogne e Vincennes). 350.000 parigini poveri vengono spostati fuori dal centro. La Parigi di Haussmann è la città moderna per eccellenza — e il modello copiato da ogni capitale che si 'modernizza'.",
-    "wikipediaSlug": "Haussmann%27s_renovation_of_Paris",
+    "wikipediaSlug": "Haussmann's_renovation_of_Paris",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -14751,7 +14751,7 @@
     "lng": 37.8667,
     "category": "storia",
     "description": "Intorno al 1880 Lev Tolstoj vive una crisi spirituale profonda: il grande scrittore, conte, proprietario di 335 servi liberati, rifiuta la sua aristocratica vita precedente. Diventa cristiano radicale: vangelo come norma di vita, nonviolenza (che ispira Gandhi), rifiuto dello stato, rifiuto della proprietà (vuole cedere le sue terre). La moglie Sonya si oppone — conflitto drammatico. A 82 anni fugge di casa e muore alla stazione di Astapovo (1910).",
-    "wikipediaSlug": "Tolstoy%27s_spiritual_crisis",
+    "wikipediaSlug": "Tolstoy's_spiritual_crisis",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -15003,7 +15003,7 @@
     "lng": -0.1278,
     "category": "scienza",
     "description": "Nel 1682 Edmond Halley osserva la cometa che porta il suo nome e applica la legge di Newton per calcolare la sua orbita ellittica. Prevede che tornera nel 1758 e ha ragione. E la prima prova pratica che i corpi celesti seguono le leggi di Newton. Halley convinca e finanzia Newton a pubblicare i Principia nel 1687.",
-    "wikipediaSlug": "Halley%27s_Comet",
+    "wikipediaSlug": "Halley's_Comet",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -15207,7 +15207,7 @@
     "lng": 35.2354,
     "category": "storia",
     "description": "Intorno al 957 a.C. Salomone completa il Primo Tempio di Gerusalemme, cuore del culto monoteista ebraico e dimora dell'Arca dell'Alleanza. Costruito da artigiani fenici di Tiro, il Tempio dura 370 anni fino alla distruzione per opera di Nabucodonosor II nel 586 a.C. Il Secondo Tempio viene distrutto dai Romani nel 70 d.C.",
-    "wikipediaSlug": "Solomon%27s_Temple",
+    "wikipediaSlug": "Solomon's_Temple",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -15399,7 +15399,7 @@
     "lng": 28.9784,
     "category": "filosofia",
     "description": "L'11 luglio 1054 il cardinale Umberto depone la bolla di scomunica sul patriarca di Costantinopoli Michele Cerulario: la chiesa cristiana si divide definitivamente in Cattolica Romana e Ortodossa. Le differenze teologiche sul Filioque, la supremazia papale, i riti. Lo scisma del 1054 divide ancora oggi un miliardo di cristiani.",
-    "wikipediaSlug": "East%E2%80%93West_Schism",
+    "wikipediaSlug": "East–West_Schism",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -15447,7 +15447,7 @@
     "lng": 37.6173,
     "category": "storia",
     "description": "Nel 1237 Batu Khan, nipote di Gengis Khan, invade la Rus di Kiev: Vladimir, Mosca, Kiev vengono rase al suolo. La Russia viene dominata dalla Orda d'Oro per 250 anni fino al 1480. Il giogo tataro-mongolo segna la Russia diversamente dall'Europa occidentale. Ivan il Terribile pone fine alla dominazione mongola nel 1480.",
-    "wikipediaSlug": "Mongol_invasion_of_Kievan_Rus%27",
+    "wikipediaSlug": "Mongol_invasion_of_Kievan_Rus'",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -15471,7 +15471,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Dal 1337 al 1453 la Guerra dei Cent'Anni contrappone Inghilterra e Francia per il trono francese. Crecy 1346, Agincourt 1415: gli arcieri inglesi dominano la cavalleria francese. Giovanna d'Arco rivitalizza la resistenza francese nel 1429. La guerra crea il nazionalismo francese e inglese e segna la fine del sistema feudale cavalleresco.",
-    "wikipediaSlug": "Hundred_Years%27_War",
+    "wikipediaSlug": "Hundred_Years'_War",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -15519,7 +15519,7 @@
     "lng": -73.9855,
     "category": "storia",
     "description": "Il 15 settembre 2008 Lehman Brothers dichiara bancarotta: il piu grande fallimento nella storia degli USA. La crisi dei mutui subprime americani si propaga in tutto il mondo. 8 milioni di posti di lavoro persi negli USA. I governi nazionalizzano le banche. La crisi genera la Grande Recessione del 2008-2009, l'austerita europea, i movimenti di protesta.",
-    "wikipediaSlug": "Financial_crisis_of_2007%E2%80%9308",
+    "wikipediaSlug": "Financial_crisis_of_2007–08",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -15567,7 +15567,7 @@
     "lng": -0.1278,
     "category": "scienza",
     "description": "Nel 1865 James Clerk Maxwell pubblica le equazioni che unificano elettricita, magnetismo e luce: quattro equazioni differenziali che descrivono tutto l'elettromagnetismo. Maxwell predice l'esistenza delle onde radio. Hertz le dimostra nel 1888. Marconi le usa per la radio nel 1901. Einstein chiama le equazioni di Maxwell la piu bella scoperta del XIX secolo.",
-    "wikipediaSlug": "Maxwell%27s_equations",
+    "wikipediaSlug": "Maxwell's_equations",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -15699,7 +15699,7 @@
     "lng": 11.2558,
     "category": "arte",
     "description": "Lorenzo de Medici detto il Magnifico governa Firenze dal 1469 al 1492 come mecenate e protettore delle arti: Botticelli, Ghirlandaio, il giovane Michelangelo crescono alla sua corte. Le botteghe fiorentine rivoluzionano pittura, scultura, architettura, oreficeria. I Medici finanziano l'Accademia Platonica di Ficino. Firenze e la capitale culturale del Rinascimento.",
-    "wikipediaSlug": "Lorenzo_de%27_Medici",
+    "wikipediaSlug": "Lorenzo_de'_Medici",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -16155,7 +16155,7 @@
     "lng": 53.688,
     "category": "storia",
     "description": "Dal settembre 1980 all'agosto 1988 l'Iraq di Saddam Hussein e l'Iran di Khomeini si combattono: 1 milione di morti, uso di armi chimiche da parte dell'Iraq contro i curdi. Gli USA supportano l'Iraq contro la rivoluzione islamica iraniana. La guerra non cambia i confini. Saddam invade poi il Kuwait nel 1990 innescando la Guerra del Golfo.",
-    "wikipediaSlug": "Iran%E2%80%93Iraq_War",
+    "wikipediaSlug": "Iran–Iraq_War",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -16179,7 +16179,7 @@
     "lng": -74.6672,
     "category": "scienza",
     "description": "Nel luglio 1955 pochi mesi prima di morire Einstein firma il Manifesto Russell-Einstein con Bertrand Russell e altri 9 scienziati: le armi nucleari minacciano l'umanita, i governi devono risolvere i conflitti pacificamente. Le conferenze Pugwash nate da questo manifesto riuniscono scienziati di Est e Ovest per discutere il disarmo. Nobel per la Pace 1995 a Pugwash.",
-    "wikipediaSlug": "Russell%E2%80%93Einstein_Manifesto",
+    "wikipediaSlug": "Albert_Einstein",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -16299,7 +16299,7 @@
     "lng": 12.4539,
     "category": "arte",
     "description": "Dal 1656 al 1667 Gian Lorenzo Bernini costruisce il colonnato di San Pietro: 284 colonne doriche in quattro file che abbracciano la piazza. L'Apollo e Dafne, l'Estasi di Santa Teresa, il baldacchino di bronzo nella Basilica di San Pietro. Bernini e il maestro assoluto del Barocco italiano: la materia che si trasforma in movimento emotivo.",
-    "wikipediaSlug": "St._Peter%27s_Square",
+    "wikipediaSlug": "St._Peter's_Square",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -16311,7 +16311,7 @@
     "lng": -0.7841,
     "category": "scienza",
     "description": "Secondo la tradizione nel 1666 Newton vede cadere una mela a Woolsthorpe e inizia a pensare alla gravita: la stessa forza che fa cadere la mela tiene la Luna in orbita intorno alla Terra. La gravitazione universale formula del 1687 nei Principia: due masse si attraggono con una forza proporzionale al prodotto delle masse e inversamente al quadrato della distanza.",
-    "wikipediaSlug": "Newton%27s_law_of_universal_gravitation",
+    "wikipediaSlug": "Newton's_law_of_universal_gravitation",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -16587,7 +16587,7 @@
     "lng": 12.3395,
     "category": "arte",
     "description": "Nel 1094 viene completata la Basilica di San Marco a Venezia: pianta a croce greca, cinque cupole bizantine, mosaici dorati. Le spoglie di San Marco rubate ad Alessandria nell'828 danno il nome alla basilica. Venezia come punto di incontro tra arte bizantina e romanica. I cavalli di bronzo rubati a Costantinopoli nel 1204 troneggiavano sulla facciata.",
-    "wikipediaSlug": "St_Mark%27s_Basilica",
+    "wikipediaSlug": "St_Mark's_Basilica",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -16851,7 +16851,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Dal 1853 al 1870 il barone Haussmann per incarico di Napoleone III demolisce il labirinto medievale di Parigi e costruisce i grandi boulevards: 165 km di nuove strade larghe, acquedotti, parchi, quartieri borghesi. 350.000 poveri vengono spostati alla periferia. La Parigi di Haussmann e il modello dell'urbanistica capitalista moderna.",
-    "wikipediaSlug": "Haussmann%27s_renovation_of_Paris",
+    "wikipediaSlug": "Haussmann's_renovation_of_Paris",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -16887,7 +16887,7 @@
     "lng": 174.7633,
     "category": "storia",
     "description": "Il 19 settembre 1893 la Nuova Zelanda diventa il primo paese al mondo a garantire il voto alle donne: Kate Sheppard leader del Women's Christian Temperance Union raccoglie 32.000 firme. Le donne neozelandesi votano nelle elezioni del 28 novembre 1893. L'Australia segue nel 1902, la Finlandia nel 1906, la Norvegia nel 1913. L'Italia deve aspettare il 1945.",
-    "wikipediaSlug": "Women%27s_suffrage_in_New_Zealand",
+    "wikipediaSlug": "Women's_suffrage_in_New_Zealand",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -17079,7 +17079,7 @@
     "lng": 114.1694,
     "category": "storia",
     "description": "Nel giugno 2019 milioni di hongkonghesi scendono in piazza contro la legge di estradizione verso la Cina: le proteste dell'ombrello. Pechino risponde nel giugno 2020 con la Legge sulla Sicurezza Nazionale che criminalizza la dissidenza. I leader del movimento vengono arrestati. Hong Kong perde l'autonomia promessa per il 2047. Un paese, due sistemi finisce prima del previsto.",
-    "wikipediaSlug": "2019%E2%80%9320_Hong_Kong_protests",
+    "wikipediaSlug": "2019–20_Hong_Kong_protests",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -17439,7 +17439,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Il 3 aprile 1862 Victor Hugo pubblica I Miserabili a Bruxelles: Jean Valjean condannato a 19 anni per aver rubato un pane, il detective Javert, Cosette, Fantine. Il romanzo piu lungo della letteratura francese 1.200 pagine esplora poverta, prigioni, giustizia sociale nella Parigi post-napoleonica. Hugo impegnato politicamente esule da Napoleone III a Guernesey. Il romanzo e un atto politico.",
-    "wikipediaSlug": "Les_Mis%C3%A9rables",
+    "wikipediaSlug": "Les_Misérables",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -17487,7 +17487,7 @@
     "lng": 4.9041,
     "category": "scienza",
     "description": "Nel 1637 Rene Descartes pubblica il Discorso sul Metodo con l'appendice Meditazioni Metafisiche: dubito di tutto finche non posso dubitare di star dubitando, dunque Cogito Ergo Sum. Nasce il dualismo mente-corpo cartesiano: la res cogitans e la res extensa. Il metodo della certezza matematica applicato alla filosofia fonda il razionalismo continentale e la filosofia moderna occidentale.",
-    "wikipediaSlug": "Ren%C3%A9_Descartes",
+    "wikipediaSlug": "René_Descartes",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -17499,7 +17499,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Jean-Baptiste Poquelin detto Moliere porta la commedia francese alla sua apice con il Palazzo di Luigi XIV come teatro. Il Misantropo 1666, il Tartuffe 1664, il Medico per Forza 1666, il Malato Immaginario 1673. Moliere muore sul palco durante la quarta rappresentazione del Malato Immaginario nel 1673. La sua critica dell'ipocrisia religiosa, del falso medico, dell'avaro senza paura.",
-    "wikipediaSlug": "Moli%C3%A8re",
+    "wikipediaSlug": "Molière",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -17523,7 +17523,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Dal 1751 al 1772 Denis Diderot e Jean d'Alembert dirigono l'Encyclopedie ou Dictionnaire raisonne des sciences, des arts et des metiers: 28 volumi, 71.818 articoli, 2.885 illustrazioni. Contribuiscono Voltaire, Rousseau, Montesquieu, Quesnay. La Chiesa condanna l'opera, il governo vieta la pubblicazione: Diderot continua clandestinamente. L'Enciclopedia e la bomba intellettuale dell'Illuminismo.",
-    "wikipediaSlug": "Encyclop%C3%A9die",
+    "wikipediaSlug": "Encyclopédie",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -17571,7 +17571,7 @@
     "lng": -0.0984,
     "category": "arte",
     "description": "Il Grande Incendio del 1666 distrugge 13.000 case e 87 chiese di Londra. Christopher Wren riceve il mandato di ricostruire: 52 nuove chiese e la Cattedrale di San Paolo. La cupola di San Paolo alta 111 metri e completata nel 1710: Wren ha 78 anni. Wren inventa anche il baromero e e membro fondatore della Royal Society. L'architettura barocca inglese nasce dalla catastrofe del fuoco.",
-    "wikipediaSlug": "St_Paul%27s_Cathedral",
+    "wikipediaSlug": "St_Paul's_Cathedral",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -17631,7 +17631,7 @@
     "lng": -0.1278,
     "category": "scienza",
     "description": "Newton inventa il calcolo infinitesimale negli anni 1660 ma non lo pubblica. Leibniz lo inventa indipendentemente nel 1675 e pubblica nel 1684. La Royal Society nel 1713 giudica Newton primo inventore: la matematica si divide tra la notazione di Leibniz dx/dy usata in Europa e il metodo di fluents di Newton. Leibniz muore dimenticato nel 1716. La notazione di Leibniz ha vinto.",
-    "wikipediaSlug": "Leibniz%E2%80%93Newton_calculus_controversy",
+    "wikipediaSlug": "Leibniz–Newton_calculus_controversy",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -17775,7 +17775,7 @@
     "lng": 11.2558,
     "category": "storia",
     "description": "Nel 1434 Cosimo de' Medici torna dall'esilio e diventa il signore di fatto di Firenze: il banchiere piu ricco d'Europa finanzia artisti e umanisti. Brunelleschi, Donatello, Fra Angelico, Ghiberti. Fonda la Biblioteca Medicea Laurenziana. Ospita i filosofi greci fuggiti da Costantinopoli dopo il 1453. Il nipote Lorenzo il Magnifico porta il Rinascimento al culmine. I Medici creano il Rinascimento.",
-    "wikipediaSlug": "Cosimo_de%27_Medici",
+    "wikipediaSlug": "Cosimo_de'_Medici",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -17811,7 +17811,7 @@
     "lng": 116.4074,
     "category": "storia",
     "description": "Il 1 ottobre 1949 Mao Zedong proclama la Repubblica Popolare Cinese dalla porta di Tiananmen: la Lunga Marcia del 1934-35 ha portato i comunisti al potere. Chiang Kai-shek fugge a Taiwan. Il Grande Balzo in Avanti 1958-62 causa 15-55 milioni di morti per la carestia. La Rivoluzione Culturale 1966-76 distrugge cultura e intellettuali. Mao e il secondo dopoguerra della Cina.",
-    "wikipediaSlug": "Proclamation_of_the_People%27s_Republic_of_China",
+    "wikipediaSlug": "Mao_Zedong",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -17859,7 +17859,7 @@
     "lng": -70.6693,
     "category": "storia",
     "description": "L'11 settembre 1973 i militari cileni guidati da Pinochet rovesciano il presidente eletto Salvador Allende con il supporto della CIA: Allende muore nel palazzo presidenziale La Moneda. 3.000 oppositori vengono uccisi o scompaiono. Lo Stadio Nacional diventa campo di concentramento. Henry Kissinger approva il golpe. L'Operazione Condor coordina le dittature sudamericane negli anni Settanta.",
-    "wikipediaSlug": "1973_Chilean_coup_d%27%C3%A9tat",
+    "wikipediaSlug": "1973_Chilean_coup_d'état",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -17883,7 +17883,7 @@
     "lng": 106.8456,
     "category": "storia",
     "description": "Nel 1965 il generale Suharto prende il potere in Indonesia dopo un presunto colpo di stato comunista: vengono massacrate tra le 500.000 e un milione di persone accusate di essere comuniste. Gli USA appoggiano Suharto. Il Nuovo Ordine di Suharto dura fino al 1998 con corruzione sistematica. L'Indonesia con 270 milioni di abitanti e la quarta nazione piu popolosa del mondo.",
-    "wikipediaSlug": "Indonesian_mass_killings_of_1965%E2%80%9366",
+    "wikipediaSlug": "Indonesian_mass_killings_of_1965–66",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -17907,7 +17907,7 @@
     "lng": 69.2075,
     "category": "storia",
     "description": "Dopo l'11 settembre 2001 gli USA invadono l'Afghanistan per cacciare i Talebani che ospitano al-Qaeda. 20 anni di guerra, 2.400 soldati americani morti, 240.000 morti afghani. L'agosto 2021: i Talebani riprendono Kabul in una settimana dopo il ritiro americano. Immagini di afghani aggrappati agli aerei. L'Afghanistan conferma la sua reputazione di cimitero degli imperi: Alessandro, Britannici, Sovietici, Americani.",
-    "wikipediaSlug": "War_in_Afghanistan_(2001%E2%80%932021)",
+    "wikipediaSlug": "War_in_Afghanistan_(2001–2021)",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -17955,7 +17955,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Nel 1907 Picasso dipinge Les Demoiselles d'Avignon: cinque figure femminili con volti simultaneamente di fronte e di profilo, influenzate dall'arte africana e iberica. Braque e Picasso inventano il Cubismo: la rappresentazione simultanea di piu punti di vista. Il Cubismo rompe con 500 anni di prospettiva rinascimentale. La prima rivoluzione visiva moderna che porta all'astrattismo.",
-    "wikipediaSlug": "Les_Demoiselles_d%27Avignon",
+    "wikipediaSlug": "Les_Demoiselles_d'Avignon",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -18015,7 +18015,7 @@
     "lng": 32.8597,
     "category": "storia",
     "description": "Il 29 ottobre 1923 Mustafa Kemal Ataturk proclama la Repubblica di Turchia dopo aver vinto la guerra di indipendenza contro Grecia, Armenia e le potenze alleate. Abolisce il califfato, introduce il calendario gregoriano, l'alfabeto latino, il voto alle donne nel 1934. Ataturk il padre dei turchi modernizza la Turchia in modo autoritario: laicismo forzato, nazionalismo, industrializzazione.",
-    "wikipediaSlug": "Mustafa_Kemal_Atat%C3%BCrk",
+    "wikipediaSlug": "Mustafa_Kemal_Atatürk",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -18303,7 +18303,7 @@
     "lng": 37.6173,
     "category": "storia",
     "description": "Dal 1237 al 1242 Batu Khan nipote di Gengis distrugge la Russia medievale: Kiev viene rasa al suolo nel 1240. Il Principato di Vladimir-Suzdal, Ryazan, Mosca bruciano. I Mongoli avanzano fino alla Polonia e Ungheria ma si ritirano alla morte del Gran Khan Ogedei. Il giogo tartaro dura 250 anni sulla Russia: influenza profonda sulla psicologia politica russa e sul suo isolazionismo.",
-    "wikipediaSlug": "Mongol_invasion_of_Rus%27",
+    "wikipediaSlug": "Mongol_invasion_of_Rus'",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -18591,7 +18591,7 @@
     "lng": 2.3522,
     "category": "arte",
     "description": "Dal 1871 al 1893 Emile Zola scrive i 20 romanzi dei Rougon-Macquart: la storia naturale e sociale di una famiglia nel Secondo Impero. Germinal 1885 le miniere del nord, Nana la prostituzione, L'Assommoir l'alcolismo operaio. Zola applica il metodo scientifico alla letteratura: osservazione, documentazione, ereditarieta, ambiente. J'Accuse del 1898 difende Dreyfus e salva la reputazione della Francia.",
-    "wikipediaSlug": "%C3%89mile_Zola",
+    "wikipediaSlug": "Émile_Zola",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -18747,7 +18747,7 @@
     "lng": 14.4378,
     "category": "storia",
     "description": "Dal 1618 al 1648 la Guerra dei Trent'Anni devasta il Sacro Romano Impero: inizia come conflitto religioso tra cattolici e protestanti, diventa una guerra di potere tra le grandi potenze europee. La Germania perde il 25-40% della popolazione. La Pace di Westfalia del 1648 inventa il sistema degli stati sovrani e la non-ingerenza negli affari interni: nasce il moderno diritto internazionale.",
-    "wikipediaSlug": "Thirty_Years%27_War",
+    "wikipediaSlug": "Thirty_Years'_War",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -19143,7 +19143,7 @@
     "lng": -47.9292,
     "category": "storia",
     "description": "Nel 2002 Luiz Inacio Lula da Silva ex operaio metallurgico sindacalista vince le elezioni presidenziali brasiliane: 46 milioni di brasiliani escono dalla poverta assoluta durante i suoi due mandati. Bolsa Familia, quota dei neri nelle universita pubbliche, aumento del salario minimo. Il Brasile diventa la settima economia mondiale. Arrestato nel 2018, vince le elezioni nel 2022 contro Bolsonaro. La storia di Lula come favola democratica.",
-    "wikipediaSlug": "Luiz_In%C3%A1cio_Lula_da_Silva",
+    "wikipediaSlug": "Luiz_Inácio_Lula_da_Silva",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -19275,7 +19275,7 @@
     "lng": 96.1951,
     "category": "storia",
     "description": "Il 1 febbraio 2021 i militari del Myanmar rovesciano Aung San Suu Kyi e il governo democraticamente eletto: la generale Min Aung Hlaing prende il potere. Le proteste di massa vengono represse con la violenza: 3.000 morti in due anni. La resistenza armata PDFs People's Defence Forces. Il Rohingya genocide del 2017 aveva gia macchiato il governo di Suu Kyi. La democrazia del Myanmar in crisi esistenziale.",
-    "wikipediaSlug": "2021_Myanmar_coup_d%27%C3%A9tat",
+    "wikipediaSlug": "2021_Myanmar_coup_d'état",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -19383,7 +19383,7 @@
     "lng": 11.0767,
     "category": "arte",
     "description": "Nel 1498 Albrecht Durer pubblica la serie dell'Apocalisse: 15 xilografie che rendono Durer il piu famoso artista tedesco del Rinascimento. Durer visita Venezia due volte: porta il Rinascimento italiano nell'arte nordeuropea. L'Autoritratto del 1500 lo ritrae nella posa di Cristo: l'artista come essere divino. Durer e anche matematico e teorico: scrive trattati su geometria, proporzioni del corpo umano, teoria delle fortezze.",
-    "wikipediaSlug": "Albrecht_D%C3%BCrer",
+    "wikipediaSlug": "Albrecht_Dürer",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -19491,7 +19491,7 @@
     "lng": 5.4474,
     "category": "arte",
     "description": "Paul Cezanne ad Aix-en-Provence ridipinge la Montagna Sainte-Victoire ossessivamente per 20 anni: vuole rappresentare la struttura geometrica profonda della natura. Trattare la natura per il cilindro la sfera il cono. Cezanne non viene capito dai suoi contemporanei ma Picasso e Braque lo chiamano il padre del cubismo. Il Bagnanti grande formato 1906 e il quadro piu influente del XX secolo sull'arte moderna.",
-    "wikipediaSlug": "Paul_C%C3%A9zanne",
+    "wikipediaSlug": "Paul_Cézanne",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -19503,7 +19503,7 @@
     "lng": 12.4964,
     "category": "musica",
     "description": "Il 1 febbraio 1896 debutta a Torino La Boheme di Giacomo Puccini: Mimi e Rodolfo, i giovani artisti poveri di Parigi, il freddo della soffitta, la tisi. La piu rappresentata dopo il Flauto Magico. Tosca 1900, Madama Butterfly 1904, Nessun Dorma dalla Turandot incompiuta. Puccini e il maestro dell'emozione immediata: le melodie arrivano dritte al cuore senza mediazione intellettuale.",
-    "wikipediaSlug": "La_boh%C3%A8me",
+    "wikipediaSlug": "La_bohème",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -19515,7 +19515,7 @@
     "lng": 10.7522,
     "category": "arte",
     "description": "Nel 1879 Henrik Ibsen scrive Casa di Bambola: Nora sbatte la porta e lascia marito e figli per trovare se stessa. Lo scandalo in tutta Europa. Ibsen inventa il dramma moderno: problemi sociali reali sul palco, donne con psicologia complessa, critica dell'ipocrisia borghese. Peer Gynt, Gli Spettri, Hedda Gabler, Il Costruttore Solness. Strindberg, Cechov, Shaw discendono da Ibsen. Il teatro non sara piu lo stesso.",
-    "wikipediaSlug": "A_Doll%27s_House",
+    "wikipediaSlug": "A_Doll's_House",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -19755,7 +19755,7 @@
     "lng": -77.0438,
     "category": "storia",
     "description": "Nel 2018 Trump impone dazi al 25% su 250 miliardi di prodotti cinesi: la Cina risponde con dazi sulle aziende agricole americane. Biden non rimuove i dazi. Huawei viene tagliata fuori dai chip americani. La decoupling tecnologica: USA e Cina costruiscono ecosistemi digitali separati. Il mondo bipolare USA-Cina sostituisce la globalizzazione liberale: la fine del Washington Consensus.",
-    "wikipediaSlug": "China%E2%80%93United_States_trade_war",
+    "wikipediaSlug": "China–United_States_trade_war",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -19815,7 +19815,7 @@
     "lng": 151.2093,
     "category": "scienza",
     "description": "Nell'estate 2019-2020 l'Australia brucia: 18 milioni di ettari distrutti, la maggiore area boschiva incendiata nella storia del paese. 3 miliardi di animali morti o sfollati. Sydney avvolta per settimane in una nube di fumo arancione. Il primo ministro Morrison in vacanza alle Hawai durante l'emergenza: scandalo politico. Gli incendi australiani come caso iconico del legame tra cambiamento climatico e catastrofi naturali.",
-    "wikipediaSlug": "2019%E2%80%9320_Australian_bushfire_season",
+    "wikipediaSlug": "2019–20_Australian_bushfire_season",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -19899,7 +19899,7 @@
     "lng": 32.5599,
     "category": "storia",
     "description": "Il 15 aprile 2023 le Rapid Support Forces di Dagalo combattono le Forze Armate Sudanesi: la guerra per il potere dopo il colpo di stato del 2021. In un anno 10 milioni di sfollati, la peggiore crisi umanitaria del mondo. Khartoum bombardata, El Fasher assediata. La guerra del Sudan riceve meno attenzione mediatica di crisi in paesi piu ricchi: il dibattito sulle vite che contano di piu nel giornalismo internazionale.",
-    "wikipediaSlug": "Sudanese_civil_war_(2023%E2%80%93present)",
+    "wikipediaSlug": "Sudanese_civil_war_(2023–present)",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -20091,7 +20091,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "La notte del 24 agosto 1572 la Notte di San Bartolomeo: Caterina de Medici ordina il massacro degli ugonotti protestanti riuniti a Parigi per le nozze di Enrico di Navarra. 3.000 morti in una notte, 70.000 in tutta la Francia. Enrico di Navarra diventa Enrico IV cattolico nel 1593: Parigi val bene una messa. L'Editto di Nantes del 1598 garantisce la tolleranza religiosa. Le guerre di religione avvelenano la Francia per 40 anni.",
-    "wikipediaSlug": "St._Bartholomew%27s_Day_massacre",
+    "wikipediaSlug": "St._Bartholomew's_Day_massacre",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -20199,7 +20199,7 @@
     "lng": -0.0809,
     "category": "storia",
     "description": "Dal 1688 Edward Lloyd gestisce un caffe a Tower Street frequentato da armatori e assicuratori: diventano Lloyd's of London, il maggiore mercato assicurativo del mondo. Gli assicuratori firmano il loro nome sotto le polizze: underwriters. La matematica delle probabilita applicata al rischio: Pascal, Leibniz, i fratelli Bernoulli. L'assicurazione come istituzione finanziaria moderna che permette il commercio globale condividendo il rischio.",
-    "wikipediaSlug": "Lloyd%27s_of_London",
+    "wikipediaSlug": "Lloyd's_of_London",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -20331,7 +20331,7 @@
     "lng": -122.3321,
     "category": "storia",
     "description": "Nel 2000 Bill e Melinda Gates fondano la Fondazione Gates: con 50 miliardi di dollari e la piu grande fondazione filantropica della storia. Vaccini per paesi in via di sviluppo, lotta alla malaria, agenda 2030. Warren Buffett dona il 99% della sua ricchezza alla fondazione nel 2006. La filantropia dei miliardari tech come alternativa allo stato? Il dibattito: l'accumulazione di ricchezza che poi si redistribuisce tramite la filantropia privata.",
-    "wikipediaSlug": "Bill_%26_Melinda_Gates_Foundation",
+    "wikipediaSlug": "Bill_&_Melinda_Gates_Foundation",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -20367,7 +20367,7 @@
     "lng": -87.6298,
     "category": "storia",
     "description": "Nel 1961 Ray Kroc compra McDonald's dai fratelli McDonald e lo trasforma in un sistema di franchising globale: 40.000 ristoranti in 100 paesi, 2 miliardi di clienti al giorno. La Big Mac Index dell'Economist misura la parità di potere d'acquisto. Il Supersize Me del 2004. La globalizzazione del fast food standardizza il cibo mondiale: coca-cola e hamburger come simboli dell'american way of life esportata.",
-    "wikipediaSlug": "McDonald%27s",
+    "wikipediaSlug": "McDonald's",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -20739,7 +20739,7 @@
     "lng": -68.303,
     "category": "storia",
     "description": "Il 6 settembre 1522 la Victoria torna a Siviglia: la prima circumnavigazione del globo completata. Magellano era partito nel 1519 con 5 navi e 270 uomini: arriva solo la Victoria con 18 superstiti. Magellano muore nelle Filippine nel 1521. Juan Sebastian Elcano completa il viaggio. La prova pratica che la Terra è tonda. Lo Stretto di Magellano. La circumnavigazione apre il Pacifico al commercio spagnolo e ridisegna la geografia mondiale.",
-    "wikipediaSlug": "Magellan%E2%80%93Elcano_expedition",
+    "wikipediaSlug": "Magellan–Elcano_expedition",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -21471,7 +21471,7 @@
     "lng": 91.1172,
     "category": "storia",
     "description": "Nel 1950 l'Esercito di Liberazione Popolare cinese invade il Tibet: la Liberazione Pacifica secondo Pechino, l'Invasione secondo i tibetani. L'accordo dei 17 Punti del 1951. Nel 1959 la rivolta tibetana e la fuga del Dalai Lama in India: 80.000 tibetani lo seguono. La Rivoluzione Culturale distrugge 6.000 monasteri. Il Tibet come questione dei diritti umani che avvelena i rapporti Cina-Occidente ancora oggi. Il Dalai Lama Nobel per la Pace nel 1989.",
-    "wikipediaSlug": "Annexation_of_Tibet_by_the_People%27s_Republic_of_China",
+    "wikipediaSlug": "Annexation_of_Tibet_by_the_People's_Republic_of_China",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -22827,7 +22827,7 @@
     "lng": 174.7762,
     "category": "storia",
     "description": "Il 19 settembre 1893 la Nuova Zelanda diventa il primo paese al mondo a concedere il voto alle donne: la campagna di Kate Sheppard e 31.872 firme di petizione. Australia nel 1902, Finlandia nel 1906, Russia nel 1917, UK 1918 (parziale), USA 1920, Francia 1944, Svizzera 1971, Arabia Saudita 2015. Il suffragio femminile come conquista graduale e non lineare: in Svizzera le donne votano 51 anni dopo la Nuova Zelanda. Il voto come prerequisito della cittadinanza politica.",
-    "wikipediaSlug": "Women%27s_suffrage",
+    "wikipediaSlug": "Women's_suffrage",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -22863,7 +22863,7 @@
     "lng": -1.4701,
     "category": "storia",
     "description": "Dal marzo 1984 al marzo 1985 lo sciopero dei minatori britannici sotto Arthur Scargill contro la Thatcher che vuole chiudere le miniere di carbone: la battaglia politica più importante nell'Inghilterra del dopoguerra. 160.000 minatori, 365 giorni di sciopero. La polizia contro i picchetti: la battaglia di Orgreave. I minatori perdono: 20 miniere chiuse, 100.000 posti persi. La Thatcher decapita il sindacalismo britannico. Le comunità minerarie del Galles e dello Yorkshire mai recuperate. Il film Pride (2014).",
-    "wikipediaSlug": "UK_miners%27_strike_(1984%E2%80%9385)",
+    "wikipediaSlug": "UK_miners'_strike_(1984–85)",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -24063,7 +24063,7 @@
     "lng": 12.4964,
     "category": "storia",
     "description": "Il 17 marzo 1861 il parlamento di Torino proclama il Regno d'Italia con Vittorio Emanuele II re: l'Unità come risultato della spedizione dei Mille di Garibaldi (maggio-novembre 1860), della diplomazia di Cavour e delle guerre d'indipendenza. Roma annessa nel 1870 dopo il ritiro delle truppe francesi. La Questione Meridionale: il Sud come economia arretrata che non si integra col Nord industriale. D'Azeglio: L'Italia è fatta, ora bisogna fare gli italiani. La nazione politica senza ancora nazione culturale.",
-    "wikipediaSlug": "Kingdom_of_Italy_(1861%E2%80%931946)",
+    "wikipediaSlug": "Kingdom_of_Italy_(1861–1946)",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -26379,7 +26379,7 @@
     "lng": 2.3522,
     "category": "storia",
     "description": "Dal 1315 al 1322 la Grande Carestia europea: le piogge torrenziali del 1315 distruggono i raccolti per 7 anni consecutivi. Il Piccolo Ottimismo Climatico Medievale (900-1300) finisce, il Piccolo Periodo di Ghiaccio inizia. 5-12% della popolazione europea muore di fame. La malnutrizione indebolisce le resistenze immunitarie: precede la Peste Nera del 1347. La carestia come il segno che la crescita demografica medievale ha superato la capacità produttiva agricola. Il XIV secolo come il secolo della crisi.",
-    "wikipediaSlug": "Great_Famine_of_1315%E2%80%931322",
+    "wikipediaSlug": "Great_Famine_of_1315–1322",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -26487,7 +26487,7 @@
     "lng": 151.2093,
     "category": "storia",
     "description": "Da settembre 2019 a marzo 2020 gli incendi boschivi in Australia: 18 milioni di ettari bruciati (la dimensione del Sudafrica), 3 miliardi di animali uccisi o feriti, 33 persone morte. Le immagini del cielo rosso sangue su Sydney. Koala e canguri che fuggono dalle fiamme. Il governo Morrison che nega il legame con il cambiamento climatico. Gli incendi come l'evento che fa capire visivamente la crisi climatica a un'opinione pubblica che non reagiva ai dati. La California, la Grecia, il Portogallo: incendi ovunque.",
-    "wikipediaSlug": "2019%E2%80%9320_Australian_bushfire_season",
+    "wikipediaSlug": "2019–20_Australian_bushfire_season",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -27279,7 +27279,7 @@
     "lng": 1.89,
     "category": "storia",
     "description": "La battaglia di Crécy vede gli arcieri inglesi con i loro archi lunghi decimare la cavalleria francese. L'uso delle bombarde rende questa battaglia una delle prime in cui l'artiglieria gioca un ruolo significativo. La vittoria consolida il potere militare inglese e segna l'inizio del declino della cavalleria pesante.",
-    "wikipediaSlug": "Battle_of_Cr%C3%A9cy",
+    "wikipediaSlug": "Battle_of_Crécy",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -27339,7 +27339,7 @@
     "lng": 2.35,
     "category": "arte",
     "description": "Jean-Baptiste Poquelin, detto Molière, conquista il favore di Luigi XIV con le sue commedie che satirizzano l'ipocrisia borghese. Tartufo, L'Avaro e Il Malato Immaginario scandagliano i vizi umani con ironia feroce. Molière muore sul palcoscenico mentre recita nel Malato Immaginario, diventando leggenda del teatro.",
-    "wikipediaSlug": "Moli%C3%A8re",
+    "wikipediaSlug": "Molière",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -27687,7 +27687,7 @@
     "lng": -91,
     "category": "scienza",
     "description": "Charles Darwin, a bordo del Beagle, osserva l'incredibile varietà di specie alle Galapagos, tra cui le famose fringuelli adattate a diverse nicchie ecologiche. Le osservazioni sulle isole sono fondamentali per la sua teoria dell'evoluzione per selezione naturale. Ventiquattro anni dopo pubblicherà L'Origine delle Specie.",
-    "wikipediaSlug": "Gal%C3%A1pagos_Islands",
+    "wikipediaSlug": "Galápagos_Islands",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -27735,7 +27735,7 @@
     "lng": 4.83,
     "category": "arte",
     "description": "Auguste e Louis Lumière proiettano i loro cortometraggi al Grand Café di Parigi, dando inizio alla storia del cinema. L'arrivo del treno alla stazione di La Ciotat fa fuggire terrorizzati gli spettatori che vedono immagini in movimento per la prima volta. In pochi anni, il cinema diventa il principale intrattenimento di massa del mondo.",
-    "wikipediaSlug": "Auguste_and_Louis_Lumi%C3%A8re",
+    "wikipediaSlug": "Auguste_and_Louis_Lumière",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -27795,7 +27795,7 @@
     "lng": -82.35,
     "category": "storia",
     "description": "Cuba ottiene l'indipendenza dalla Spagna dopo la guerra ispano-americana, in cui gli USA intervengono a fianco degli insorti. L'isola, che aveva lottato per l'indipendenza con José Martí, finisce sotto la tutela americana. Il trattato di Parigi cede alla Spagna anche Porto Rico, Guam e le Filippine agli USA.",
-    "wikipediaSlug": "Ten_Years%27_War",
+    "wikipediaSlug": "Ten_Years'_War",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -27807,7 +27807,7 @@
     "lng": 2.35,
     "category": "arte",
     "description": "Émile Zola pubblica L'Assommoir, romanzo spietato sulla vita del proletariato parigino che inaugura il ciclo dei Rougon-Macquart. Il Naturalismo di Zola porta il metodo scientifico nella letteratura, descrivendo la società come un organismo soggetto a leggi biologiche e sociali. I suoi romanzi sono al tempo stesso documenti sociologici e capolavori narrativi.",
-    "wikipediaSlug": "%C3%89mile_Zola",
+    "wikipediaSlug": "Émile_Zola",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -27819,7 +27819,7 @@
     "lng": -87.65,
     "category": "storia",
     "description": "La Fiera Mondiale di Chicago celebra il quattrocentesimo anniversario dell'arrivo di Colombo in America, esibendo i progressi tecnologici e culturali. La White City costruita per l'occasione influenza l'architettura urbana americana per decenni. L'esposizione presenta il primo ferris wheel e porta la luce elettrica a milioni di visitatori.",
-    "wikipediaSlug": "World%27s_Columbian_Exposition",
+    "wikipediaSlug": "World's_Columbian_Exposition",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -27939,7 +27939,7 @@
     "lng": 116.39,
     "category": "scienza",
     "description": "La Sindrome Respiratoria Acuta Grave si diffonde dalla Cina in 29 paesi in pochi mesi, causando la prima epidemia globale dell'era dei viaggi aerei di massa. La SARS uccide 774 persone ma viene contenuta grazie alla cooperazione internazionale. L'epidemia avvisa il mondo sui pericoli delle nuove pandemie da coronavirus.",
-    "wikipediaSlug": "2002%E2%80%932004_SARS_outbreak",
+    "wikipediaSlug": "2002–2004_SARS_outbreak",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -28011,7 +28011,7 @@
     "lng": -74.01,
     "category": "storia",
     "description": "Il crollo di Lehman Brothers scatena la più grave crisi finanziaria globale dalla Grande Depressione. Il sistema bancario mondiale sull'orlo del collasso viene salvato da massicci interventi pubblici, scaricando i costi sui contribuenti. La crisi del 2008 alimenta il populismo, la sfiducia nelle élite e l'instabilità politica del decennio successivo.",
-    "wikipediaSlug": "Financial_crisis_of_2007%E2%80%932008",
+    "wikipediaSlug": "Financial_crisis_of_2007–2008",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -28059,7 +28059,7 @@
     "lng": 34.47,
     "category": "storia",
     "description": "L'attacco di Hamas contro Israele del 7 ottobre 2023 causa oltre 1200 morti israeliani, la strage più grave di ebrei dalla Shoah. La risposta militare israeliana a Gaza provoca migliaia di vittime civili e una crisi umanitaria catastrofica. Il conflitto riaccende le tensioni in tutto il Medio Oriente e divide l'opinione mondiale.",
-    "wikipediaSlug": "2023_Hamas%E2%80%93Israel_war",
+    "wikipediaSlug": "2023_Hamas–Israel_war",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -28179,7 +28179,7 @@
     "lng": 2.35,
     "category": "scienza",
     "description": "Claude Lévi-Strauss pubblica Tristi Tropici, unendo autobiografia e riflessione antropologica sulla civiltà occidentale. Il suo strutturalismo cerca le strutture universali del pensiero umano nei miti e nelle pratiche sociali. Lo strutturalismo di Lévi-Strauss trasforma l'antropologia, la linguistica e la filosofia francese del Novecento.",
-    "wikipediaSlug": "Claude_L%C3%A9vi-Strauss",
+    "wikipediaSlug": "Claude_Lévi-Strauss",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -28647,7 +28647,7 @@
     "lng": -0.13,
     "category": "musica",
     "description": "I Beatles pubblicano Sgt. Pepper's Lonely Hearts Club Band, il primo album concepito come opera d'arte unitaria piuttosto che raccolta di singoli. La fusione di rock, musica indiana, jazz e avanguardia in un concept album trasforma per sempre le aspettative su cosa possa essere un disco pop. Rolling Stone lo vota il più grande album di tutti i tempi.",
-    "wikipediaSlug": "Sgt._Pepper%27s_Lonely_Hearts_Club_Band",
+    "wikipediaSlug": "Sgt._Pepper's_Lonely_Hearts_Club_Band",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -28683,7 +28683,7 @@
     "lng": -83.05,
     "category": "musica",
     "description": "Marvin Gaye produce What's Going On contro la volontà della Motown, creando il primo concept album soul sulla guerra in Vietnam e il degrado urbano. La sua voce sensuale e la coscienza sociale fondono R&B e pensiero politico in modo mai sentito prima. What's Going On è considerato il miglior disco della storia dalla rivista Rolling Stone.",
-    "wikipediaSlug": "What%27s_Going_On_(Marvin_Gaye_album)",
+    "wikipediaSlug": "What's_Going_On_(Marvin_Gaye_album)",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -28995,7 +28995,7 @@
     "lng": -95.37,
     "category": "musica",
     "description": "Beyoncé Knowles debutta come solista con Crazy in Love, costruendo una carriera che la porterà a diventare l'artista femminile più premiata nella storia dei Grammy. Lemonade (2016) trasforma l'album pop in dichiarazione politica sul Black feminism. I suoi show dal vivo sono considerati il massimo della perfezione performativa.",
-    "wikipediaSlug": "Beyonc%C3%A9",
+    "wikipediaSlug": "Beyoncé",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -29283,7 +29283,7 @@
     "lng": -0.13,
     "category": "musica",
     "description": "Harry Styles pubblica Harry's House, un album che fonde pop, funk e rock in uno stile personale inconfondibile. As It Was diventa la canzone più streamata del 2022 su Spotify in tutto il mondo. Styles ridefinisce i concetti di genere nell'abbigliamento e nella musica, diventando icona culturale della Gen Z.",
-    "wikipediaSlug": "Harry%27s_House",
+    "wikipediaSlug": "Harry's_House",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -29295,7 +29295,7 @@
     "lng": -1.47,
     "category": "musica",
     "description": "Gli Arctic Monkeys di Sheffield pubblicano Tranquility Base Hotel & Casino, un album concettuale ambientato su una luna base-albergo che stupisce i fan con una svolta radicale verso il lounge rock. Alex Turner è la voce più influente del rock alternativo britannico degli anni Dieci. Il disco dimostra che una band rock può reinventarsi senza perdere credibilità artistica.",
-    "wikipediaSlug": "Tranquility_Base_Hotel_%2B_Casino",
+    "wikipediaSlug": "Tranquility_Base_Hotel_+_Casino",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -29331,7 +29331,7 @@
     "lng": 12.48,
     "category": "musica",
     "description": "I Maneskin vincono l'Eurovision 2021 con Zitti e Buoni e diventano il gruppo rock italiano più famoso internazionalmente dagli anni Ottanta. Beggin' scala le classifiche mondiali con oltre un miliardo di stream. Il quartetto romano suona da headliner ai più grandi festival europei e si esibisce agli MTV Awards americani.",
-    "wikipediaSlug": "M%C3%A5neskin",
+    "wikipediaSlug": "Måneskin",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -29991,7 +29991,7 @@
     "lng": 8.93,
     "category": "musica",
     "description": "Fabrizio De André di Genova porta nella canzone italiana la complessità letteraria dei poeti maledetti francesi, con La guerra di Piero e La canzone di Marinella tra i brani più amati della storia della musica italiana. Il suo album Creuza de mä (1984) in dialetto genovese è considerato il capolavoro assoluto del cantautorato italiano. De André è il cantautore italiano più citato dai musicisti delle generazioni successive.",
-    "wikipediaSlug": "Fabrizio_De_Andr%C3%A9",
+    "wikipediaSlug": "Fabrizio_De_André",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -30015,7 +30015,7 @@
     "lng": 2.35,
     "category": "musica",
     "description": "Françoise Hardy diventa il volto della chanson française moderna con Tous les garçons et les filles, conquistando simultaneamente le classifiche francesi e britanniche. La cantante parigina incarna il mito della jeune fille parisienne e influenza la cultura pop europea degli anni Sessanta. Hardy è ammirata e citata da Bob Dylan, Mick Jagger e David Bowie.",
-    "wikipediaSlug": "Fran%C3%A7oise_Hardy",
+    "wikipediaSlug": "Françoise_Hardy",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -30171,7 +30171,7 @@
     "lng": 6.63,
     "category": "musica",
     "description": "Céline Dion, già star del Quebec, vince l'Eurovision Song Contest 1988 rappresentando la Svizzera con Ne partez pas sans moi, lanciando la sua carriera internazionale. My Heart Will Go On per Titanic diventa la canzone più venduta degli anni Novanta. Céline Dion è la cantante francofona di maggior successo commerciale nella storia della musica.",
-    "wikipediaSlug": "C%C3%A9line_Dion",
+    "wikipediaSlug": "Céline_Dion",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -30279,7 +30279,7 @@
     "lng": 10.14,
     "category": "musica",
     "description": "Francesco Gabbani di Carrara vince Sanremo 2017 con Occidentali's Karma e alla successiva settimana diventa il brano italiano con il maggior numero di visualizzazioni su YouTube (oltre 100 milioni in poche settimane). La canzone — con un gorilla che balla la macarena — diventa il simbolo dell'ironia italiana sulla modernità. Gabbani partecipa all'Eurovision rappresentando l'Italia.",
-    "wikipediaSlug": "Occidentali%27s_Karma",
+    "wikipediaSlug": "Occidentali's_Karma",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -35548,7 +35548,7 @@
     "category": "cosmo",
     "tipo": "scoperta",
     "description": "Nel 1927 il sacerdote e astrofisico belga Georges Lemaître (1894–1966) propose per primo che l'universo è in espansione, derivando matematicamente la velocità di recessione delle galassie dalla relatività generale di Einstein. Nel 1931 sviluppò l'ipotesi dell'\"atomo primordiale\": l'universo aveva avuto origine da uno stato iniziale di densità infinita, che oggi chiamiamo Big Bang. Einstein inizialmente rifiutò la sua idea (\"la sua matematica è impeccabile, ma la sua fisica è abominevole\"), per poi ricredersi completamente dopo le osservazioni di Hubble.",
-    "wikipediaSlug": "Georges_Lema%C3%AEtre",
+    "wikipediaSlug": "Georges_Lemaître",
     "isCosmic": false
   },
   {
@@ -35692,7 +35692,7 @@
     "category": "filosofia",
     "tipo": "persona",
     "description": "Ibn Rushd, noto in Occidente come Averroè (1126–1198), nacque a Cordova nell'Andalusia islamica. Scrisse commentari così profondi e sistematici sull'opera di Aristotele da essere soprannominato semplicemente \"il Commentatore\". Affermò che ragione e fede non sono in contraddizione: esistono verità filosofiche e verità religiose che percorrono strade diverse. Il suo pensiero, tradotto in latino nel XII-XIII secolo, aprì l'aristotelismo ai pensatori europei e fu talmente dirompente da generare una corrente eretica — l'averroismo latino — condannata dalla Chiesa nel 1277.",
-    "wikipediaSlug": "Averro%C3%A8",
+    "wikipediaSlug": "Averroè",
     "isCosmic": false
   },
   {
@@ -36195,7 +36195,7 @@
     "lng": -118.06,
     "category": "cosmo",
     "description": "Nel 1929 Edwin Hubble pubblica la scoperta più rivoluzionaria della cosmologia del XX secolo: le galassie si allontanano da noi con una velocità proporzionale alla loro distanza (legge di Hubble-Lemaître). Misurando il redshift spettrale di 46 galassie e confrontandolo con le loro distanze stimate, Hubble dimostra che l'universo è in espansione uniforme in tutte le direzioni. Questo risultato implica che, proiettando il moto all'indietro nel tempo, tutte le galassie convergono in un punto iniziale — confermando la teoria del Big Bang di Lemaître. La costante di Hubble (H₀), che misura il tasso di espansione, è ancora oggi uno dei parametri cosmologici più studiati e dibattuti. La scoperta dell'espansione universale cambia per sempre la nostra immagine del cosmo: non è statico ed eterno, ma ha una storia e un inizio.",
-    "wikipediaSlug": "Hubble%27s_law",
+    "wikipediaSlug": "Hubble's_law",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -37203,7 +37203,7 @@
     "lng": 9.1859,
     "category": "sport",
     "description": "Il 13 maggio 1909 parte da Milano la prima edizione del Giro d'Italia, organizzata dal giornale La Gazzetta dello Sport che la usa per aumentare le vendite — come aveva già fatto Le Vélo in Francia con il Tour nel 1903. Il percorso di 2.448 km si sviluppa in 8 tappe con partenze notturne. Vince Luigi Ganna, muratore varesino di 26 anni. La 'maglia rosa' — colore del giornale — viene introdotta solo nel 1931. Il Giro diventa subito il secondo grande giro ciclistico del mondo e il più importante evento sportivo italiano dell'anno.",
-    "wikipediaSlug": "Giro_d%27Italia",
+    "wikipediaSlug": "Giro_d'Italia",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -37335,7 +37335,7 @@
     "lng": 3.1714,
     "category": "sport",
     "description": "Il 19 aprile 1896 si svolge la prima edizione della Parigi-Roubaix, una delle classiche più dure del ciclismo: 257 km da Parigi a Roubaix nel Nord della Francia, su strade di pavé (acciottolato) che filtrano i ciclisti come una prova di sopravvivenza. Vince Josef Fischer in 9 ore e 17 minuti. Soprannominata 'l'Inferno del Nord' per le condizioni brutali del percorso — fango, buche, vibrazione costante — è la classica monumento che più affascina. Eddy Merckx la vince 3 volte; il belga Roger De Vlaeminck 4 volte.",
-    "wikipediaSlug": "Paris%E2%80%93Roubaix",
+    "wikipediaSlug": "Paris–Roubaix",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -37443,7 +37443,7 @@
     "lng": 2.3522,
     "category": "sport",
     "description": "Il 13 giugno 1956 a Parigi, allo Stade du Parc des Princes, il Real Madrid batte lo Stade de Reims 4-3 vincendo la prima Coppa dei Campioni UEFA, l'antenata della Champions League. L'idea del torneo europeo nasce da Gabriel Hanot, giornalista francese de L'Equipe. Il Real Madrid domina le prime cinque edizioni (1956-1960) con Alfredo Di Stéfano, Ferenc Puskás e Paco Gento. La finale del 1960 a Glasgow — Real Madrid 7, Eintracht Frankfurt 3 — è ancora oggi considerata la migliore partita di calcio della storia.",
-    "wikipediaSlug": "1955%E2%80%9356_European_Cup",
+    "wikipediaSlug": "1955–56_European_Cup",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -37623,7 +37623,7 @@
     "lng": -1.8808,
     "category": "sport",
     "description": "Il 22 agosto 1851 la goletta americana 'America' vince una regata attorno all'Isola di Wight battendo 15 yacht britannici. La coppa conquistata viene donata al New York Yacht Club con l'incarico di renderla un trofeo permanente di sfida tra nazioni. Nasce così l'America's Cup, la più antica coppa sportiva internazionale tuttora disputata — sei anni più vecchia del primo Wimbledon. La coppa viene difesa dagli Stati Uniti per 132 anni consecutivi (1851-1983) fino alla storica vittoria dell'Australia. L'Italia con Luna Rossa raggiunge la finale nel 2000 e nel 2021.",
-    "wikipediaSlug": "America%27s_Cup",
+    "wikipediaSlug": "America's_Cup",
     "isCosmic": false,
     "tipo": "evento"
   },

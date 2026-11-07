@@ -68,7 +68,7 @@
     "lng": 13.405,
     "category": "storia",
     "description": "Il 30 gennaio 1933 il presidente Hindenburg nomina Adolf Hitler Cancelliere della Germania. In 18 mesi Hitler smantella la Repubblica di Weimar, vieta i partiti di opposizione, istituisce il Terzo Reich. La sua ascesa trasforma la crisi economica e il risentimento per il Trattato di Versailles in nazionalismo aggressivo che porterà alla Seconda Guerra Mondiale.",
-    "wikipediaSlug": "Adolf_Hitler%27s_rise_to_power",
+    "wikipediaSlug": "Adolf_Hitler's_rise_to_power",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -80,7 +80,7 @@
     "lng": 37.6173,
     "category": "storia",
     "description": "Il 23 agosto 1939 la Germania nazista e l'URSS firmano a Mosca un patto di non aggressione con protocolli segreti che dividono l'Europa orientale in sfere d'influenza. Il patto libera Hitler dal rischio di una guerra su due fronti. Otto giorni dopo invade la Polonia: scoppia la Seconda Guerra Mondiale.",
-    "wikipediaSlug": "Molotov%E2%80%93Ribbentrop_Pact",
+    "wikipediaSlug": "Molotov–Ribbentrop_Pact",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3332,7 +3332,7 @@
     "lng": -77.0364,
     "category": "storia",
     "description": "Il 26 agosto 1920 il 19° Emendamento della Costituzione americana garantisce il voto alle donne: 72 anni di lotta dal Seneca Falls Convention (1848). Nuova Zelanda era stata prima (1893), Australia (1902), Finlandia (1906), Norvegia (1913), Russia (1917), UK (1918, 30+). La Svizzera aspetta fino al 1971. Il suffragio femminile è la più grande espansione democratica della storia — 3,5 miliardi di persone ottengono il diritto che era loro negato.",
-    "wikipediaSlug": "Women%27s_suffrage_in_the_United_States",
+    "wikipediaSlug": "Women's_suffrage_in_the_United_States",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3632,7 +3632,7 @@
     "lng": 32.8597,
     "category": "storia",
     "description": "Il 29 ottobre 1923 Mustafa Kemal Ataturk proclama la Repubblica di Turchia dopo aver vinto la guerra di indipendenza contro Grecia, Armenia e le potenze alleate. Abolisce il califfato, introduce il calendario gregoriano, l'alfabeto latino, il voto alle donne nel 1934. Ataturk il padre dei turchi modernizza la Turchia in modo autoritario: laicismo forzato, nazionalismo, industrializzazione.",
-    "wikipediaSlug": "Mustafa_Kemal_Atat%C3%BCrk",
+    "wikipediaSlug": "Mustafa_Kemal_Atatürk",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -5133,7 +5133,7 @@
     "category": "cosmo",
     "tipo": "scoperta",
     "description": "Nel 1927 il sacerdote e astrofisico belga Georges Lemaître (1894–1966) propose per primo che l'universo è in espansione, derivando matematicamente la velocità di recessione delle galassie dalla relatività generale di Einstein. Nel 1931 sviluppò l'ipotesi dell'\"atomo primordiale\": l'universo aveva avuto origine da uno stato iniziale di densità infinita, che oggi chiamiamo Big Bang. Einstein inizialmente rifiutò la sua idea (\"la sua matematica è impeccabile, ma la sua fisica è abominevole\"), per poi ricredersi completamente dopo le osservazioni di Hubble.",
-    "wikipediaSlug": "Georges_Lema%C3%AEtre",
+    "wikipediaSlug": "Georges_Lemaître",
     "isCosmic": false
   },
   {
@@ -5216,7 +5216,7 @@
     "lng": -118.06,
     "category": "cosmo",
     "description": "Nel 1929 Edwin Hubble pubblica la scoperta più rivoluzionaria della cosmologia del XX secolo: le galassie si allontanano da noi con una velocità proporzionale alla loro distanza (legge di Hubble-Lemaître). Misurando il redshift spettrale di 46 galassie e confrontandolo con le loro distanze stimate, Hubble dimostra che l'universo è in espansione uniforme in tutte le direzioni. Questo risultato implica che, proiettando il moto all'indietro nel tempo, tutte le galassie convergono in un punto iniziale — confermando la teoria del Big Bang di Lemaître. La costante di Hubble (H₀), che misura il tasso di espansione, è ancora oggi uno dei parametri cosmologici più studiati e dibattuti. La scoperta dell'espansione universale cambia per sempre la nostra immagine del cosmo: non è statico ed eterno, ma ha una storia e un inizio.",
-    "wikipediaSlug": "Hubble%27s_law",
+    "wikipediaSlug": "Hubble's_law",
     "isCosmic": false,
     "tipo": "scoperta"
   },

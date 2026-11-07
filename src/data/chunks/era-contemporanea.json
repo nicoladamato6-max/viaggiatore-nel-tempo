@@ -132,7 +132,7 @@
     "lng": -74.006,
     "category": "musica",
     "description": "Pubblicato a gennaio 1964, questo album segna Dylan come voce della coscienza americana. La title track diventa inno del movimento per i diritti civili e contro la guerra del Vietnam. Dylan porta la poesia nella musica popolare. Nel 2016 riceve il Premio Nobel per la Letteratura 'per aver creato nuove espressioni poetiche nella grande tradizione americana della canzone'.",
-    "wikipediaSlug": "The_Times_They_Are_a-Changin%27_(album)",
+    "wikipediaSlug": "Bob_Dylan",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1896,7 +1896,7 @@
     "lng": -73.9855,
     "category": "storia",
     "description": "Il 15 settembre 2008 Lehman Brothers dichiara bancarotta: il piu grande fallimento nella storia degli USA. La crisi dei mutui subprime americani si propaga in tutto il mondo. 8 milioni di posti di lavoro persi negli USA. I governi nazionalizzano le banche. La crisi genera la Grande Recessione del 2008-2009, l'austerita europea, i movimenti di protesta.",
-    "wikipediaSlug": "Financial_crisis_of_2007%E2%80%9308",
+    "wikipediaSlug": "Financial_crisis_of_2007–08",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2112,7 +2112,7 @@
     "lng": 53.688,
     "category": "storia",
     "description": "Dal settembre 1980 all'agosto 1988 l'Iraq di Saddam Hussein e l'Iran di Khomeini si combattono: 1 milione di morti, uso di armi chimiche da parte dell'Iraq contro i curdi. Gli USA supportano l'Iraq contro la rivoluzione islamica iraniana. La guerra non cambia i confini. Saddam invade poi il Kuwait nel 1990 innescando la Guerra del Golfo.",
-    "wikipediaSlug": "Iran%E2%80%93Iraq_War",
+    "wikipediaSlug": "Iran–Iraq_War",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2136,7 +2136,7 @@
     "lng": -74.6672,
     "category": "scienza",
     "description": "Nel luglio 1955 pochi mesi prima di morire Einstein firma il Manifesto Russell-Einstein con Bertrand Russell e altri 9 scienziati: le armi nucleari minacciano l'umanita, i governi devono risolvere i conflitti pacificamente. Le conferenze Pugwash nate da questo manifesto riuniscono scienziati di Est e Ovest per discutere il disarmo. Nobel per la Pace 1995 a Pugwash.",
-    "wikipediaSlug": "Russell%E2%80%93Einstein_Manifesto",
+    "wikipediaSlug": "Albert_Einstein",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -2388,7 +2388,7 @@
     "lng": 114.1694,
     "category": "storia",
     "description": "Nel giugno 2019 milioni di hongkonghesi scendono in piazza contro la legge di estradizione verso la Cina: le proteste dell'ombrello. Pechino risponde nel giugno 2020 con la Legge sulla Sicurezza Nazionale che criminalizza la dissidenza. I leader del movimento vengono arrestati. Hong Kong perde l'autonomia promessa per il 2047. Un paese, due sistemi finisce prima del previsto.",
-    "wikipediaSlug": "2019%E2%80%9320_Hong_Kong_protests",
+    "wikipediaSlug": "2019–20_Hong_Kong_protests",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2640,7 +2640,7 @@
     "lng": 116.4074,
     "category": "storia",
     "description": "Il 1 ottobre 1949 Mao Zedong proclama la Repubblica Popolare Cinese dalla porta di Tiananmen: la Lunga Marcia del 1934-35 ha portato i comunisti al potere. Chiang Kai-shek fugge a Taiwan. Il Grande Balzo in Avanti 1958-62 causa 15-55 milioni di morti per la carestia. La Rivoluzione Culturale 1966-76 distrugge cultura e intellettuali. Mao e il secondo dopoguerra della Cina.",
-    "wikipediaSlug": "Proclamation_of_the_People%27s_Republic_of_China",
+    "wikipediaSlug": "Mao_Zedong",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2688,7 +2688,7 @@
     "lng": -70.6693,
     "category": "storia",
     "description": "L'11 settembre 1973 i militari cileni guidati da Pinochet rovesciano il presidente eletto Salvador Allende con il supporto della CIA: Allende muore nel palazzo presidenziale La Moneda. 3.000 oppositori vengono uccisi o scompaiono. Lo Stadio Nacional diventa campo di concentramento. Henry Kissinger approva il golpe. L'Operazione Condor coordina le dittature sudamericane negli anni Settanta.",
-    "wikipediaSlug": "1973_Chilean_coup_d%27%C3%A9tat",
+    "wikipediaSlug": "1973_Chilean_coup_d'état",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2712,7 +2712,7 @@
     "lng": 106.8456,
     "category": "storia",
     "description": "Nel 1965 il generale Suharto prende il potere in Indonesia dopo un presunto colpo di stato comunista: vengono massacrate tra le 500.000 e un milione di persone accusate di essere comuniste. Gli USA appoggiano Suharto. Il Nuovo Ordine di Suharto dura fino al 1998 con corruzione sistematica. L'Indonesia con 270 milioni di abitanti e la quarta nazione piu popolosa del mondo.",
-    "wikipediaSlug": "Indonesian_mass_killings_of_1965%E2%80%9366",
+    "wikipediaSlug": "Indonesian_mass_killings_of_1965–66",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -2736,7 +2736,7 @@
     "lng": 69.2075,
     "category": "storia",
     "description": "Dopo l'11 settembre 2001 gli USA invadono l'Afghanistan per cacciare i Talebani che ospitano al-Qaeda. 20 anni di guerra, 2.400 soldati americani morti, 240.000 morti afghani. L'agosto 2021: i Talebani riprendono Kabul in una settimana dopo il ritiro americano. Immagini di afghani aggrappati agli aerei. L'Afghanistan conferma la sua reputazione di cimitero degli imperi: Alessandro, Britannici, Sovietici, Americani.",
-    "wikipediaSlug": "War_in_Afghanistan_(2001%E2%80%932021)",
+    "wikipediaSlug": "War_in_Afghanistan_(2001–2021)",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -2976,7 +2976,7 @@
     "lng": -47.9292,
     "category": "storia",
     "description": "Nel 2002 Luiz Inacio Lula da Silva ex operaio metallurgico sindacalista vince le elezioni presidenziali brasiliane: 46 milioni di brasiliani escono dalla poverta assoluta durante i suoi due mandati. Bolsa Familia, quota dei neri nelle universita pubbliche, aumento del salario minimo. Il Brasile diventa la settima economia mondiale. Arrestato nel 2018, vince le elezioni nel 2022 contro Bolsonaro. La storia di Lula come favola democratica.",
-    "wikipediaSlug": "Luiz_In%C3%A1cio_Lula_da_Silva",
+    "wikipediaSlug": "Luiz_Inácio_Lula_da_Silva",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -3108,7 +3108,7 @@
     "lng": 96.1951,
     "category": "storia",
     "description": "Il 1 febbraio 2021 i militari del Myanmar rovesciano Aung San Suu Kyi e il governo democraticamente eletto: la generale Min Aung Hlaing prende il potere. Le proteste di massa vengono represse con la violenza: 3.000 morti in due anni. La resistenza armata PDFs People's Defence Forces. Il Rohingya genocide del 2017 aveva gia macchiato il governo di Suu Kyi. La democrazia del Myanmar in crisi esistenziale.",
-    "wikipediaSlug": "2021_Myanmar_coup_d%27%C3%A9tat",
+    "wikipediaSlug": "2021_Myanmar_coup_d'état",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3192,7 +3192,7 @@
     "lng": -77.0438,
     "category": "storia",
     "description": "Nel 2018 Trump impone dazi al 25% su 250 miliardi di prodotti cinesi: la Cina risponde con dazi sulle aziende agricole americane. Biden non rimuove i dazi. Huawei viene tagliata fuori dai chip americani. La decoupling tecnologica: USA e Cina costruiscono ecosistemi digitali separati. Il mondo bipolare USA-Cina sostituisce la globalizzazione liberale: la fine del Washington Consensus.",
-    "wikipediaSlug": "China%E2%80%93United_States_trade_war",
+    "wikipediaSlug": "China–United_States_trade_war",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3252,7 +3252,7 @@
     "lng": 151.2093,
     "category": "scienza",
     "description": "Nell'estate 2019-2020 l'Australia brucia: 18 milioni di ettari distrutti, la maggiore area boschiva incendiata nella storia del paese. 3 miliardi di animali morti o sfollati. Sydney avvolta per settimane in una nube di fumo arancione. Il primo ministro Morrison in vacanza alle Hawai durante l'emergenza: scandalo politico. Gli incendi australiani come caso iconico del legame tra cambiamento climatico e catastrofi naturali.",
-    "wikipediaSlug": "2019%E2%80%9320_Australian_bushfire_season",
+    "wikipediaSlug": "2019–20_Australian_bushfire_season",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -3336,7 +3336,7 @@
     "lng": 32.5599,
     "category": "storia",
     "description": "Il 15 aprile 2023 le Rapid Support Forces di Dagalo combattono le Forze Armate Sudanesi: la guerra per il potere dopo il colpo di stato del 2021. In un anno 10 milioni di sfollati, la peggiore crisi umanitaria del mondo. Khartoum bombardata, El Fasher assediata. La guerra del Sudan riceve meno attenzione mediatica di crisi in paesi piu ricchi: il dibattito sulle vite che contano di piu nel giornalismo internazionale.",
-    "wikipediaSlug": "Sudanese_civil_war_(2023%E2%80%93present)",
+    "wikipediaSlug": "Sudanese_civil_war_(2023–present)",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -3456,7 +3456,7 @@
     "lng": -122.3321,
     "category": "storia",
     "description": "Nel 2000 Bill e Melinda Gates fondano la Fondazione Gates: con 50 miliardi di dollari e la piu grande fondazione filantropica della storia. Vaccini per paesi in via di sviluppo, lotta alla malaria, agenda 2030. Warren Buffett dona il 99% della sua ricchezza alla fondazione nel 2006. La filantropia dei miliardari tech come alternativa allo stato? Il dibattito: l'accumulazione di ricchezza che poi si redistribuisce tramite la filantropia privata.",
-    "wikipediaSlug": "Bill_%26_Melinda_Gates_Foundation",
+    "wikipediaSlug": "Bill_&_Melinda_Gates_Foundation",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3492,7 +3492,7 @@
     "lng": -87.6298,
     "category": "storia",
     "description": "Nel 1961 Ray Kroc compra McDonald's dai fratelli McDonald e lo trasforma in un sistema di franchising globale: 40.000 ristoranti in 100 paesi, 2 miliardi di clienti al giorno. La Big Mac Index dell'Economist misura la parità di potere d'acquisto. Il Supersize Me del 2004. La globalizzazione del fast food standardizza il cibo mondiale: coca-cola e hamburger come simboli dell'american way of life esportata.",
-    "wikipediaSlug": "McDonald%27s",
+    "wikipediaSlug": "McDonald's",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -3732,7 +3732,7 @@
     "lng": 91.1172,
     "category": "storia",
     "description": "Nel 1950 l'Esercito di Liberazione Popolare cinese invade il Tibet: la Liberazione Pacifica secondo Pechino, l'Invasione secondo i tibetani. L'accordo dei 17 Punti del 1951. Nel 1959 la rivolta tibetana e la fuga del Dalai Lama in India: 80.000 tibetani lo seguono. La Rivoluzione Culturale distrugge 6.000 monasteri. Il Tibet come questione dei diritti umani che avvelena i rapporti Cina-Occidente ancora oggi. Il Dalai Lama Nobel per la Pace nel 1989.",
-    "wikipediaSlug": "Annexation_of_Tibet_by_the_People%27s_Republic_of_China",
+    "wikipediaSlug": "Annexation_of_Tibet_by_the_People's_Republic_of_China",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -4284,7 +4284,7 @@
     "lng": -1.4701,
     "category": "storia",
     "description": "Dal marzo 1984 al marzo 1985 lo sciopero dei minatori britannici sotto Arthur Scargill contro la Thatcher che vuole chiudere le miniere di carbone: la battaglia politica più importante nell'Inghilterra del dopoguerra. 160.000 minatori, 365 giorni di sciopero. La polizia contro i picchetti: la battaglia di Orgreave. I minatori perdono: 20 miniere chiuse, 100.000 posti persi. La Thatcher decapita il sindacalismo britannico. Le comunità minerarie del Galles e dello Yorkshire mai recuperate. Il film Pride (2014).",
-    "wikipediaSlug": "UK_miners%27_strike_(1984%E2%80%9385)",
+    "wikipediaSlug": "UK_miners'_strike_(1984–85)",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -5388,7 +5388,7 @@
     "lng": 151.2093,
     "category": "storia",
     "description": "Da settembre 2019 a marzo 2020 gli incendi boschivi in Australia: 18 milioni di ettari bruciati (la dimensione del Sudafrica), 3 miliardi di animali uccisi o feriti, 33 persone morte. Le immagini del cielo rosso sangue su Sydney. Koala e canguri che fuggono dalle fiamme. Il governo Morrison che nega il legame con il cambiamento climatico. Gli incendi come l'evento che fa capire visivamente la crisi climatica a un'opinione pubblica che non reagiva ai dati. La California, la Grecia, il Portogallo: incendi ovunque.",
-    "wikipediaSlug": "2019%E2%80%9320_Australian_bushfire_season",
+    "wikipediaSlug": "2019–20_Australian_bushfire_season",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -5712,7 +5712,7 @@
     "lng": 116.39,
     "category": "scienza",
     "description": "La Sindrome Respiratoria Acuta Grave si diffonde dalla Cina in 29 paesi in pochi mesi, causando la prima epidemia globale dell'era dei viaggi aerei di massa. La SARS uccide 774 persone ma viene contenuta grazie alla cooperazione internazionale. L'epidemia avvisa il mondo sui pericoli delle nuove pandemie da coronavirus.",
-    "wikipediaSlug": "2002%E2%80%932004_SARS_outbreak",
+    "wikipediaSlug": "2002–2004_SARS_outbreak",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -5784,7 +5784,7 @@
     "lng": -74.01,
     "category": "storia",
     "description": "Il crollo di Lehman Brothers scatena la più grave crisi finanziaria globale dalla Grande Depressione. Il sistema bancario mondiale sull'orlo del collasso viene salvato da massicci interventi pubblici, scaricando i costi sui contribuenti. La crisi del 2008 alimenta il populismo, la sfiducia nelle élite e l'instabilità politica del decennio successivo.",
-    "wikipediaSlug": "Financial_crisis_of_2007%E2%80%932008",
+    "wikipediaSlug": "Financial_crisis_of_2007–2008",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -5832,7 +5832,7 @@
     "lng": 34.47,
     "category": "storia",
     "description": "L'attacco di Hamas contro Israele del 7 ottobre 2023 causa oltre 1200 morti israeliani, la strage più grave di ebrei dalla Shoah. La risposta militare israeliana a Gaza provoca migliaia di vittime civili e una crisi umanitaria catastrofica. Il conflitto riaccende le tensioni in tutto il Medio Oriente e divide l'opinione mondiale.",
-    "wikipediaSlug": "2023_Hamas%E2%80%93Israel_war",
+    "wikipediaSlug": "2023_Hamas–Israel_war",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -5940,7 +5940,7 @@
     "lng": 2.35,
     "category": "scienza",
     "description": "Claude Lévi-Strauss pubblica Tristi Tropici, unendo autobiografia e riflessione antropologica sulla civiltà occidentale. Il suo strutturalismo cerca le strutture universali del pensiero umano nei miti e nelle pratiche sociali. Lo strutturalismo di Lévi-Strauss trasforma l'antropologia, la linguistica e la filosofia francese del Novecento.",
-    "wikipediaSlug": "Claude_L%C3%A9vi-Strauss",
+    "wikipediaSlug": "Claude_Lévi-Strauss",
     "isCosmic": false,
     "tipo": "scoperta"
   },
@@ -6240,7 +6240,7 @@
     "lng": -0.13,
     "category": "musica",
     "description": "I Beatles pubblicano Sgt. Pepper's Lonely Hearts Club Band, il primo album concepito come opera d'arte unitaria piuttosto che raccolta di singoli. La fusione di rock, musica indiana, jazz e avanguardia in un concept album trasforma per sempre le aspettative su cosa possa essere un disco pop. Rolling Stone lo vota il più grande album di tutti i tempi.",
-    "wikipediaSlug": "Sgt._Pepper%27s_Lonely_Hearts_Club_Band",
+    "wikipediaSlug": "Sgt._Pepper's_Lonely_Hearts_Club_Band",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6276,7 +6276,7 @@
     "lng": -83.05,
     "category": "musica",
     "description": "Marvin Gaye produce What's Going On contro la volontà della Motown, creando il primo concept album soul sulla guerra in Vietnam e il degrado urbano. La sua voce sensuale e la coscienza sociale fondono R&B e pensiero politico in modo mai sentito prima. What's Going On è considerato il miglior disco della storia dalla rivista Rolling Stone.",
-    "wikipediaSlug": "What%27s_Going_On_(Marvin_Gaye_album)",
+    "wikipediaSlug": "What's_Going_On_(Marvin_Gaye_album)",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6588,7 +6588,7 @@
     "lng": -95.37,
     "category": "musica",
     "description": "Beyoncé Knowles debutta come solista con Crazy in Love, costruendo una carriera che la porterà a diventare l'artista femminile più premiata nella storia dei Grammy. Lemonade (2016) trasforma l'album pop in dichiarazione politica sul Black feminism. I suoi show dal vivo sono considerati il massimo della perfezione performativa.",
-    "wikipediaSlug": "Beyonc%C3%A9",
+    "wikipediaSlug": "Beyoncé",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -6876,7 +6876,7 @@
     "lng": -0.13,
     "category": "musica",
     "description": "Harry Styles pubblica Harry's House, un album che fonde pop, funk e rock in uno stile personale inconfondibile. As It Was diventa la canzone più streamata del 2022 su Spotify in tutto il mondo. Styles ridefinisce i concetti di genere nell'abbigliamento e nella musica, diventando icona culturale della Gen Z.",
-    "wikipediaSlug": "Harry%27s_House",
+    "wikipediaSlug": "Harry's_House",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -6888,7 +6888,7 @@
     "lng": -1.47,
     "category": "musica",
     "description": "Gli Arctic Monkeys di Sheffield pubblicano Tranquility Base Hotel & Casino, un album concettuale ambientato su una luna base-albergo che stupisce i fan con una svolta radicale verso il lounge rock. Alex Turner è la voce più influente del rock alternativo britannico degli anni Dieci. Il disco dimostra che una band rock può reinventarsi senza perdere credibilità artistica.",
-    "wikipediaSlug": "Tranquility_Base_Hotel_%2B_Casino",
+    "wikipediaSlug": "Tranquility_Base_Hotel_+_Casino",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -6924,7 +6924,7 @@
     "lng": 12.48,
     "category": "musica",
     "description": "I Maneskin vincono l'Eurovision 2021 con Zitti e Buoni e diventano il gruppo rock italiano più famoso internazionalmente dagli anni Ottanta. Beggin' scala le classifiche mondiali con oltre un miliardo di stream. Il quartetto romano suona da headliner ai più grandi festival europei e si esibisce agli MTV Awards americani.",
-    "wikipediaSlug": "M%C3%A5neskin",
+    "wikipediaSlug": "Måneskin",
     "isCosmic": false,
     "tipo": "movimento"
   },
@@ -7560,7 +7560,7 @@
     "lng": 8.93,
     "category": "musica",
     "description": "Fabrizio De André di Genova porta nella canzone italiana la complessità letteraria dei poeti maledetti francesi, con La guerra di Piero e La canzone di Marinella tra i brani più amati della storia della musica italiana. Il suo album Creuza de mä (1984) in dialetto genovese è considerato il capolavoro assoluto del cantautorato italiano. De André è il cantautore italiano più citato dai musicisti delle generazioni successive.",
-    "wikipediaSlug": "Fabrizio_De_Andr%C3%A9",
+    "wikipediaSlug": "Fabrizio_De_André",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -7584,7 +7584,7 @@
     "lng": 2.35,
     "category": "musica",
     "description": "Françoise Hardy diventa il volto della chanson française moderna con Tous les garçons et les filles, conquistando simultaneamente le classifiche francesi e britanniche. La cantante parigina incarna il mito della jeune fille parisienne e influenza la cultura pop europea degli anni Sessanta. Hardy è ammirata e citata da Bob Dylan, Mick Jagger e David Bowie.",
-    "wikipediaSlug": "Fran%C3%A7oise_Hardy",
+    "wikipediaSlug": "Françoise_Hardy",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -7740,7 +7740,7 @@
     "lng": 6.63,
     "category": "musica",
     "description": "Céline Dion, già star del Quebec, vince l'Eurovision Song Contest 1988 rappresentando la Svizzera con Ne partez pas sans moi, lanciando la sua carriera internazionale. My Heart Will Go On per Titanic diventa la canzone più venduta degli anni Novanta. Céline Dion è la cantante francofona di maggior successo commerciale nella storia della musica.",
-    "wikipediaSlug": "C%C3%A9line_Dion",
+    "wikipediaSlug": "Céline_Dion",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -7848,7 +7848,7 @@
     "lng": 10.14,
     "category": "musica",
     "description": "Francesco Gabbani di Carrara vince Sanremo 2017 con Occidentali's Karma e alla successiva settimana diventa il brano italiano con il maggior numero di visualizzazioni su YouTube (oltre 100 milioni in poche settimane). La canzone — con un gorilla che balla la macarena — diventa il simbolo dell'ironia italiana sulla modernità. Gabbani partecipa all'Eurovision rappresentando l'Italia.",
-    "wikipediaSlug": "Occidentali%27s_Karma",
+    "wikipediaSlug": "Occidentali's_Karma",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -10692,7 +10692,7 @@
     "lng": 2.3522,
     "category": "sport",
     "description": "Il 13 giugno 1956 a Parigi, allo Stade du Parc des Princes, il Real Madrid batte lo Stade de Reims 4-3 vincendo la prima Coppa dei Campioni UEFA, l'antenata della Champions League. L'idea del torneo europeo nasce da Gabriel Hanot, giornalista francese de L'Equipe. Il Real Madrid domina le prime cinque edizioni (1956-1960) con Alfredo Di Stéfano, Ferenc Puskás e Paco Gento. La finale del 1960 a Glasgow — Real Madrid 7, Eintracht Frankfurt 3 — è ancora oggi considerata la migliore partita di calcio della storia.",
-    "wikipediaSlug": "1955%E2%80%9356_European_Cup",
+    "wikipediaSlug": "1955–56_European_Cup",
     "isCosmic": false,
     "tipo": "evento"
   },

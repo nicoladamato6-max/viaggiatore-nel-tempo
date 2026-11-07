@@ -213,7 +213,7 @@
     "lng": 26.1025,
     "category": "storia",
     "description": "L'imperatore Traiano conquista la Dacia (l'attuale Romania) in due campagne militari (101-102 e 105-106 d.C.). Le miniere d'oro e d'argento daciche finanziano il suo grandioso programma edilizio a Roma. La Colonna Traiana, ancora in piedi a Roma, racconta in 2.662 figure la storia della conquista su 200 metri di fregio a spirale.",
-    "wikipediaSlug": "Trajan%27s_Dacian_Wars",
+    "wikipediaSlug": "Trajan's_Dacian_Wars",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -225,7 +225,7 @@
     "lng": -2.5032,
     "category": "storia",
     "description": "Nel 122 d.C. l'imperatore Adriano ordina la costruzione di un muro difensivo lungo 118 km attraverso il nord dell'Inghilterra, dal Mare del Nord al Mare d'Irlanda. Alto 6 metri, con 80 forti e torri di guardia ogni miglio romano, rappresenta il limite settentrionale dell'Impero. Parzialmente conservato, è oggi Patrimonio UNESCO.",
-    "wikipediaSlug": "Hadrian%27s_Wall",
+    "wikipediaSlug": "Hadrian's_Wall",
     "isCosmic": false,
     "tipo": "persona"
   },
@@ -465,7 +465,7 @@
     "lng": 12.4843,
     "category": "arte",
     "description": "Nel 113 d.C. viene inaugurata a Roma la Colonna Traiana, alta 38 metri, con un fregio a spirale di 200 metri che racconta in 2.662 figure le guerre daciche. È il più lungo fumetto della storia antica e il documento visivo più ricco di vita romana. Il fusto era in origine colorato. L'urna con le ceneri di Traiano è sepolta alla sua base.",
-    "wikipediaSlug": "Trajan%27s_Column",
+    "wikipediaSlug": "Trajan's_Column",
     "isCosmic": false,
     "tipo": "opera"
   },
@@ -1689,7 +1689,7 @@
     "lng": 35.2137,
     "category": "storia",
     "description": "Nel 701 a.C. il re assiro Sennacherib assedia Gerusalemme con il suo grande esercito, ordinando al re Ezechia di capitolare. Secondo la Bibbia un angelo uccide 185.000 Assiri in una notte. Storicamente: la peste decimò l'esercito. Sennacherib si ritira senza conquistare Gerusalemme — evento considerato un miracolo nella tradizione ebraica.",
-    "wikipediaSlug": "Sennacherib%27s_siege_of_Jerusalem",
+    "wikipediaSlug": "Sennacherib's_siege_of_Jerusalem",
     "isCosmic": false,
     "tipo": "evento"
   },
@@ -3081,7 +3081,7 @@
     "lng": 35.2354,
     "category": "storia",
     "description": "Intorno al 957 a.C. Salomone completa il Primo Tempio di Gerusalemme, cuore del culto monoteista ebraico e dimora dell'Arca dell'Alleanza. Costruito da artigiani fenici di Tiro, il Tempio dura 370 anni fino alla distruzione per opera di Nabucodonosor II nel 586 a.C. Il Secondo Tempio viene distrutto dai Romani nel 70 d.C.",
-    "wikipediaSlug": "Solomon%27s_Temple",
+    "wikipediaSlug": "Solomon's_Temple",
     "isCosmic": false,
     "tipo": "persona"
   },
