@@ -97,34 +97,10 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent }: 
     const correlated = events.length > 0 ? findCorrelations(event, events) : [];
     const yr = formatYear(event.year, locale);
 
-    const correlatedHint = correlated.map(e => `"${e.title}" (${formatYear(e.year, locale)})`).join(', ');
+    const correlatedHint = correlated.map(e => e.title).join(', ');
     const prompt = locale === 'it'
-      ? `Analizza "${event.title}" (${yr}) e scrivi un'esplorazione narrativa strutturata così:
-
-APERTURA (2 frasi): un dettaglio sorprendente o poco noto su "${event.title}" che cattura l'attenzione.
-
-Per ognuna delle 5 entità correlate, scrivi un paragrafo con questa struttura interna:
-  → NESSO: inizia spiegando COME e PERCHÉ quell'entità è legata a "${event.title}" — un evento concreto, una commissione, un'influenza diretta, un contrasto illuminante, un incontro reale. Non "X era un artista del Rinascimento" ma "X e ${event.title} si incrociarono quando..." oppure "${event.title} rese possibile X perché..." o "Paradossalmente, mentre ${event.title} faceva Y, X stava..."
-  → ENTITÀ: dopo aver spiegato il nesso, presenta l'entità con un dettaglio affascinante e non ovvio.
-  → INVITO: chiudi con una frase suggestiva che invita a esplorarla sulla mappa.
-
-Entità di partenza (puoi sostituirne o aggiungerne): ${correlatedHint}
-Descrizione di "${event.title}": ${event.description}
-
-Il NESSO deve essere specifico e concreto, non generico. Se non c'è un legame diretto, esplora il contrasto, la sincronicità, o l'influenza indiretta — ma spiegala.`
-      : `Analyze "${event.title}" (${yr}) and write a narrative exploration structured like this:
-
-OPENING (2 sentences): a surprising or little-known detail about "${event.title}" that grabs attention.
-
-For each of the 5 related entities, write a paragraph with this internal structure:
-  → LINK: start by explaining HOW and WHY that entity is connected to "${event.title}" — a concrete event, a commission, a direct influence, an illuminating contrast, a real encounter. Not "X was a Renaissance artist" but "X and ${event.title} crossed paths when..." or "${event.title} made X possible because..." or "Paradoxically, while ${event.title} was doing Y, X was..."
-  → ENTITY: after explaining the link, introduce the entity with a fascinating and non-obvious detail.
-  → INVITATION: close with a suggestive phrase inviting the user to explore it on the map.
-
-Starting entities (you may replace or add): ${correlatedHint}
-Description of "${event.title}": ${event.description}
-
-The LINK must be specific and concrete, not generic. If there is no direct connection, explore the contrast, synchronicity, or indirect influence — but explain it.`;
+      ? `ANALISI — entità correlate già trovate sulla mappa: ${correlatedHint || 'nessuna ancora, suggerisci tu'}.`
+      : `ANALYSIS — correlated entities already found on the map: ${correlatedHint || 'none yet, suggest your own'}.`;
 
     setMessages([{ role: 'ai', text: locale === 'it' ? '⬡ Analisi in corso…' : '⬡ Analyzing…' }]);
     setBusy(true);
