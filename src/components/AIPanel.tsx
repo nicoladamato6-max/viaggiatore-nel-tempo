@@ -97,27 +97,34 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent }: 
     const correlated = events.length > 0 ? findCorrelations(event, events) : [];
     const yr = formatYear(event.year, locale);
 
+    const correlatedHint = correlated.map(e => `"${e.title}" (${formatYear(e.year, locale)})`).join(', ');
     const prompt = locale === 'it'
-      ? `Sei una guida esperta di storia universale. L'utente ha selezionato: "${event.title}" (${yr}).
+      ? `Analizza "${event.title}" (${yr}) e scrivi un'esplorazione narrativa strutturata così:
 
-Descrizione disponibile: ${event.description}
+APERTURA (2 frasi): un dettaglio sorprendente o poco noto su "${event.title}" che cattura l'attenzione.
 
-Il tuo compito:
-1. Presenta brevemente l'entità con tono coinvolgente.
-2. Identifica almeno 5 entità storiche correlate — sceglile tra epoche e discipline diverse (es. arte, scienza, politica, filosofia, geologia). Puoi ispirarrti a queste già trovate nella mappa: ${correlated.map(e => `"${e.title}" (${formatYear(e.year, 'it')})`).join(', ')}, ma puoi aggiungerne altre.
-3. Per ciascuna entità correlata: spiega in modo esteso e narrativo il legame con "${event.title}", e invita l'utente a esplorarla sulla mappa con una frase suggestiva.
+Per ognuna delle 5 entità correlate, scrivi un paragrafo con questa struttura interna:
+  → NESSO: inizia spiegando COME e PERCHÉ quell'entità è legata a "${event.title}" — un evento concreto, una commissione, un'influenza diretta, un contrasto illuminante, un incontro reale. Non "X era un artista del Rinascimento" ma "X e ${event.title} si incrociarono quando..." oppure "${event.title} rese possibile X perché..." o "Paradossalmente, mentre ${event.title} faceva Y, X stava..."
+  → ENTITÀ: dopo aver spiegato il nesso, presenta l'entità con un dettaglio affascinante e non ovvio.
+  → INVITO: chiudi con una frase suggestiva che invita a esplorarla sulla mappa.
 
-Usa un tono da narratore storico appassionato, coinvolgente e curioso.`
-      : `You are an expert guide in world history. The user selected: "${event.title}" (${yr}).
+Entità di partenza (puoi sostituirne o aggiungerne): ${correlatedHint}
+Descrizione di "${event.title}": ${event.description}
 
-Available description: ${event.description}
+Il NESSO deve essere specifico e concreto, non generico. Se non c'è un legame diretto, esplora il contrasto, la sincronicità, o l'influenza indiretta — ma spiegala.`
+      : `Analyze "${event.title}" (${yr}) and write a narrative exploration structured like this:
 
-Your task:
-1. Briefly introduce the entity with an engaging tone.
-2. Identify at least 5 related historical entities — choose from different eras and disciplines (art, science, politics, philosophy, geology). You can draw inspiration from these already found on the map: ${correlated.map(e => `"${e.title}" (${formatYear(e.year, 'en')})`).join(', ')}, but feel free to add others.
-3. For each related entity: explain in detail and narratively the connection with "${event.title}", and invite the user to explore it on the map with a suggestive phrase.
+OPENING (2 sentences): a surprising or little-known detail about "${event.title}" that grabs attention.
 
-Use the tone of a passionate, engaging, and curious historical narrator.`;
+For each of the 5 related entities, write a paragraph with this internal structure:
+  → LINK: start by explaining HOW and WHY that entity is connected to "${event.title}" — a concrete event, a commission, a direct influence, an illuminating contrast, a real encounter. Not "X was a Renaissance artist" but "X and ${event.title} crossed paths when..." or "${event.title} made X possible because..." or "Paradoxically, while ${event.title} was doing Y, X was..."
+  → ENTITY: after explaining the link, introduce the entity with a fascinating and non-obvious detail.
+  → INVITATION: close with a suggestive phrase inviting the user to explore it on the map.
+
+Starting entities (you may replace or add): ${correlatedHint}
+Description of "${event.title}": ${event.description}
+
+The LINK must be specific and concrete, not generic. If there is no direct connection, explore the contrast, synchronicity, or indirect influence — but explain it.`;
 
     setMessages([{ role: 'ai', text: locale === 'it' ? '⬡ Analisi in corso…' : '⬡ Analyzing…' }]);
     setBusy(true);
