@@ -1,0 +1,52 @@
+name: Monthly Wikipedia Slug Check
+
+on:
+  schedule:
+    # 1° del mese alle 03:00 UTC
+    - cron: '0 3 1 * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no commit)'
+        type: boolean
+        default: false
+
+jobs:
+  check-slugs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout staging
+        uses: actions/checkout@v4
+        with:
+          ref: staging
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run slug verification
+        id: verify
+        run: |
+          node scripts/verify-wiki-slugs.mjs ${{ inputs.dry_run == true && '--dry-run' || '' }} 2>&1 | tee /tmp/slug-report.txt
+          echo "changed=$(grep -c '→' /tmp/slug-report.txt || echo 0)" >> $GITHUB_OUTPUT
+
+      - name: Show report
+        run: cat /tmp/slug-report.txt
+
+      - name: Commit fixes if any
+        if: inputs.dry_run != true && steps.verify.outputs.changed != '0'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/chunks/ src/data/events.json
+          git diff --cached --quiet || git commit -m "fix(data): slug Wikipedia aggiornati — check mensile automatico
+
+          $(cat /tmp/slug-report.txt | grep '→' | head -20)
+
+          Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>"
+          git push origin staging

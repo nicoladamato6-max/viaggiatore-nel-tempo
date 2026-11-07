@@ -28,7 +28,30 @@ async function fetchWikiPage(slug: string, lang: string) {
   };
 }
 
-function useWikiContent(slug: string | undefined, locale: Locale) {
+/** Cerca il miglior articolo Wikipedia per un titolo libero. Usato come fallback
+ *  quando lo slug nel dataset non trova corrispondenza. */
+async function searchWikiFallback(title: string, lang: string): Promise<string | null> {
+  const baseTitle = title.split(/\s*[—–]\s*/)[0].trim();
+  const params = new URLSearchParams({
+    action: 'opensearch', search: baseTitle, limit: '5', format: 'json', origin: '*',
+  });
+  try {
+    const res = await fetch(`https://${lang}.wikipedia.org/w/api.php?${params}`);
+    if (!res.ok) return null;
+    const data = await res.json() as [string, string[], string[], string[]];
+    const titles = data[1] ?? [];
+    const urls   = data[3] ?? [];
+    if (!titles.length) return null;
+    // Preferisci il risultato che condivide almeno una parola significativa con il titolo
+    const words = baseTitle.toLowerCase().split(/\s+/).filter(w => w.length >= 4);
+    const idx = titles.findIndex(t => words.some(w => t.toLowerCase().includes(w)));
+    return urls[idx !== -1 ? idx : 0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
+function useWikiContent(slug: string | undefined, locale: Locale, entityTitle?: string) {
   const [body,    setBody]    = useState<string | null>(null);
   const [wikiUrl, setWikiUrl] = useState<string>('');
   const [wikiBase, setWikiBase] = useState<string>(`https://${locale}.wikipedia.org`);
@@ -44,20 +67,48 @@ function useWikiContent(slug: string | undefined, locale: Locale) {
     const langs = locale === 'en' ? ['en'] : [locale, 'en'];
 
     (async () => {
+      // Fase 1: prova slug diretto su IT poi EN
       for (const lang of langs) {
         const page = await fetchWikiPage(slug, lang);
         if (page && !cancelled) {
           setWikiUrl(page.url);
           setWikiBase(page.base);
           setBody(page.html);
-          break;
+          setLoading(false);
+          return;
         }
       }
+
+      // Fase 2: slug non trovato → opensearch con il titolo dell'entità
+      if (!cancelled && entityTitle) {
+        const searchLangs = locale === 'en' ? ['en'] : [locale, 'en'];
+        for (const lang of searchLangs) {
+          const foundUrl = await searchWikiFallback(entityTitle, lang);
+          if (foundUrl && !cancelled) {
+            // Carica la pagina trovata via search tramite URL diretto
+            const slugFromUrl = decodeURIComponent(foundUrl.split('/wiki/')[1] ?? '');
+            if (slugFromUrl) {
+              const page = await fetchWikiPage(slugFromUrl, lang);
+              if (page && !cancelled) {
+                setWikiUrl(page.url);
+                setWikiBase(page.base);
+                setBody(page.html);
+                setLoading(false);
+                return;
+              }
+            }
+            // Se la pagina non si carica via parse, usa comunque l'URL per il link
+            if (!cancelled) setWikiUrl(foundUrl);
+            break;
+          }
+        }
+      }
+
       if (!cancelled) setLoading(false);
     })();
 
     return () => { cancelled = true; };
-  }, [slug, locale]);
+  }, [slug, locale, entityTitle]);
 
   return { body, wikiUrl, wikiBase, loading };
 }
@@ -236,7 +287,7 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
   const startPos    = useRef({ x: 0, y: 0 });
   const startSize   = useRef({ w: DEFAULT_W, h: DEFAULT_H });
 
-  const { body, wikiUrl, wikiBase, loading } = useWikiContent(event?.wikipediaSlug, locale);
+  const { body, wikiUrl, wikiBase, loading } = useWikiContent(event?.wikipediaSlug, locale, event?.title);
   const { speaking, speak, stop } = useTTS();
 
   // Fix percorsi Wikipedia dopo ogni render del corpo
