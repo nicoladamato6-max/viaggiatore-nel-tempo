@@ -63,4 +63,13 @@ jobs:
           git merge --no-ff origin/staging \
             -m "chore: promote staging to production [$(date -u +%Y-%m-%d)] [backup: ${{ steps.backup.outputs.tag }}]"
           git push origin main
-          echo "✅ Produzione aggiornata. Il deploy partirà automaticamente da deploy.yml"
+          echo "✅ Produzione aggiornata."
+
+      - name: Trigger deploy produzione
+        # Il push fatto da github-actions[bot] non triggera workflow automaticamente.
+        # Dispatchiamo deploy.yml via API usando il token del workflow.
+        run: |
+          gh workflow run deploy.yml --ref main
+          echo "✅ Deploy produzione avviato (deploy.yml su main)"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

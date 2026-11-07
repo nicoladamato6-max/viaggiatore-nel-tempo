@@ -80,20 +80,17 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          # --branch main = production branch del progetto → aggiorna main.test-...pages.dev
-          # e (se il CF Pages project ha main come production branch) aggiorna anche il root URL.
+          # --branch staging = production branch del progetto test → aggiorna test-viaggiatore-nel-tempo.pages.dev
           # Senza --branch wrangler crea solo un hash-URL preview e NON aggiorna nessun alias.
-          command: pages deploy dist --project-name test-viaggiatore-nel-tempo --branch main --commit-dirty=true
+          command: pages deploy dist --project-name test-viaggiatore-nel-tempo --branch staging --commit-dirty=true
 
       - name: Verify bundle deployed (no-auth check)
         run: |
           echo "⏳ Attendo propagazione CF Pages (20s)..."
           sleep 20
-          # Il root URL e l'alias /app richiedono Basic Auth (ENVIRONMENT=staging nel middleware).
-          # Verifichiamo tramite l'alias branch che non ha Basic Auth forzato.
-          ALIAS="https://main.test-viaggiatore-nel-tempo.pages.dev"
+          ALIAS="https://test-viaggiatore-nel-tempo.pages.dev"
           HTTP=$(curl -s -o /dev/null -w "%{http_code}" "$ALIAS/app" 2>/dev/null || echo "000")
-          echo "📡 Alias URL ($ALIAS/app): HTTP $HTTP"
+          echo "📡 Staging URL ($ALIAS/app): HTTP $HTTP"
           # Accettiamo 200 (pubblico) o 401 (Basic Auth attivo = deploy avvenuto)
           if [ "$HTTP" = "000" ]; then
             echo "❌ Staging non raggiungibile — problema di rete o deploy fallito"
@@ -101,15 +98,15 @@ jobs:
           fi
           echo "✅ Staging raggiungibile (HTTP $HTTP)"
           echo ""
-          echo "🔗 URL per il test manuale: $ALIAS/app"
-          echo "🔗 Root URL: https://test-viaggiatore-nel-tempo.pages.dev/app"
+          echo "🔗 URL staging: $ALIAS/app"
           echo "👤 Credenziali: nicola.damato6@gmail.com / Voyager2026"
 
       - name: Smoke test — AI entity-chat (Groq LLM)
         run: |
           echo "🤖 Verifico che il pannello AI risponda con il vero LLM (Groq)..."
           RESPONSE=$(curl -s --max-time 40 -X POST \
-            "https://main.test-viaggiatore-nel-tempo.pages.dev/api/entity-chat" \
+            "https://test-viaggiatore-nel-tempo.pages.dev/api/entity-chat" \
+            -u "${{ secrets.STAGING_BASIC_AUTH_USER }}:${{ secrets.STAGING_BASIC_AUTH_PASS }}" \
             -H "Content-Type: application/json" \
             -d '{"entity":{"title":"Leonardo da Vinci","description":"Artista rinascimentale","year":1452,"category":"person"},"question":"ANALISI — entità correlate sulla mappa: Michelangelo, Raffaello.","history":[],"locale":"it"}')
 
