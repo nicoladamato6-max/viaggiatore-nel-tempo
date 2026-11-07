@@ -18,6 +18,7 @@ dist-ssr
 
 # Wrangler state/cache — non committare
 .wrangler*
+.dev.vars
 
 # Editor directories and files
 .vscode/*
