@@ -25,8 +25,9 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Aggiungi VITE_MAPTILER_KEY nelle Repository Secrets di GitHub
           VITE_MAPTILER_KEY: ${{ secrets.VITE_MAPTILER_KEY }}
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
 
       # vite-plugin-cesium non copia i file statici con Vite 8: copiamo manualmente.
       # Questo garantisce che dist/cesium/Cesium.js esista sempre nel deploy.
