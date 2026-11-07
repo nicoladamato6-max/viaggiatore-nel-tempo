@@ -9,21 +9,32 @@
   --ap-b45: rgba(26,144,255,.45);
 
   position: fixed;
-  bottom: 130px;
-  right: 10px;
-  width: 300px;
-  max-height: 420px;
   background: rgba(2,8,18,.96);
   backdrop-filter: blur(8px);
   border: 1px solid var(--ap-b45);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  z-index: 40;
+  z-index: 9999;
+  overflow: hidden;
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   color: var(--ap-t1);
   box-shadow: 0 -4px 24px rgba(26,144,255,.12), 0 0 0 .5px var(--ap-b22);
 }
+
+/* ── Resize handles (8 direzioni) ─────────────────── */
+.aip__resize {
+  position: absolute;
+  z-index: 10;
+}
+.aip__resize--n  { top: 0;    left: 8px;    right: 8px;  height: 6px; cursor: n-resize; }
+.aip__resize--s  { bottom: 0; left: 8px;    right: 8px;  height: 6px; cursor: s-resize; }
+.aip__resize--e  { top: 8px;  right: 0;     bottom: 8px; width: 6px;  cursor: e-resize; }
+.aip__resize--w  { top: 8px;  left: 0;      bottom: 8px; width: 6px;  cursor: w-resize; }
+.aip__resize--nw { top: 0;    left: 0;      width: 12px; height: 12px; cursor: nw-resize; }
+.aip__resize--ne { top: 0;    right: 0;     width: 12px; height: 12px; cursor: ne-resize; }
+.aip__resize--sw { bottom: 0; left: 0;      width: 12px; height: 12px; cursor: sw-resize; }
+.aip__resize--se { bottom: 0; right: 0;     width: 12px; height: 12px; cursor: se-resize; }
 
 /* ── Header ──────────────────────────────────────── */
 .aip__hd {

@@ -96,8 +96,20 @@ export function BridgeConsole({
   const [sliderDragging, setSliderDragging] = useState(false);
   const catRef = useRef<HTMLDivElement>(null);
   const typeRef = useRef<HTMLDivElement>(null);
+  const bcRef = useRef<HTMLDivElement>(null);
 
   const era = getEra(currentYear);
+
+  useEffect(() => {
+    const el = bcRef.current;
+    if (!el) return;
+    const update = () =>
+      document.documentElement.style.setProperty('--console-h', `${el.getBoundingClientRect().height}px`);
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   // Close dropdowns on outside click
   useEffect(() => {
@@ -116,7 +128,7 @@ export function BridgeConsole({
   const activePeriods = useMemo(() => getActivePeriods(currentYear), [currentYear]);
 
   return (
-    <div className={`bc${open ? '' : ' bc--closed'}`}>
+    <div ref={bcRef} className={`bc${open ? '' : ' bc--closed'}`}>
 
       {/* ── Status bar ── */}
       <div className="bc__sbar">

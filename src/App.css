@@ -2654,7 +2654,7 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  height: 100vh;
+  height: calc(100vh - var(--console-h, 0px));
   z-index: 1000; /* sopra drei Html labels (~100) e tutto il resto tranne scanlines (9000) */
   overflow: hidden;
   display: flex;
@@ -2694,6 +2694,7 @@ body {
   z-index: 1000;
   border-radius: 6px;
   overflow: hidden;
+  max-height: calc(100vh - var(--console-h, 0px));
   border: 1px solid rgba(0, 200, 255, 0.35);
   background: var(--clr-panel-bg, rgba(5, 15, 30, 0.97));
   backdrop-filter: blur(12px);

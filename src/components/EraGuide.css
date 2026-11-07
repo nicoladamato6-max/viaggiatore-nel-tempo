@@ -5,7 +5,8 @@
   top: 0;        /* full height dall'alto */
   left: 0;
   width: 320px;
-  height: 100vh; /* occupa tutto lo schermo verticalmente */
+  height: calc(100vh - var(--console-h, 0px));
+  max-height: calc(100vh - var(--console-h, 0px));
   background: rgba(8, 12, 22, 0.96);
   border-right: 1px solid #1e2d40;
   backdrop-filter: blur(14px);
