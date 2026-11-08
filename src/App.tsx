@@ -3,7 +3,6 @@ import './App.css';
 import { GlobeView } from './components/GlobeView';
 import { CosmicScene } from './components/CosmicScene';
 import { InfoPanel } from './components/InfoPanel';
-import { TimeControls } from './components/TimeControls';
 import { SearchBar } from './components/SearchBar';
 import { BridgeConsole } from './components/BridgeConsole';
 import { AIPanel } from './components/AIPanel';
@@ -12,7 +11,6 @@ import { EraGuide } from './components/EraGuide';
 import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { ProfileModal } from './components/ProfileModal';
-import { MobileNav } from './components/MobileNav';
 import { LeftNavPanel } from './components/LeftNavPanel';
 import { useAuth } from './hooks/useAuth';
 import { useMobile } from './hooks/useMobile';
@@ -265,7 +263,6 @@ function AppInner() {
   const [adminOpen,    setAdminOpen]    = useState(false);
   const [toast,          setToast]          = useState<string | null>(null);
   const [mobileTab,      setMobileTab]      = useState<MobileTab>('globe');
-  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [leftPanelOpen,     setLeftPanelOpen]     = useState(false);
   const [aiPanelOpen,       setAiPanelOpen]       = useState(false);
   const [infoPanelVisible,  setInfoPanelVisible]  = useState(true);
@@ -713,19 +710,6 @@ function AppInner() {
     } catch { /* placeholder rimane aperto con Wikipedia */ }
   }, [currentYear, locale]);
 
-  // Su mobile, il tab "search" apre il modal full-screen
-  const handleMobileTabChange = useCallback((tab: MobileTab) => {
-    if (tab === 'search') {
-      setMobileSearchOpen(true);
-      setMobileTab('globe'); // mantieni il globo come tab attivo di base
-    } else if (tab === 'profile') {
-      if (user) setProfileOpen(true);
-      else setAuthOpen(true);
-    } else {
-      setMobileTab(tab);
-    }
-  }, [user]);
-
   const globeAndControls = (
     <>
       {/* Ologrammi — visibili solo se showHoloOverlays */}
@@ -903,44 +887,42 @@ function AppInner() {
         )}
       </div>
 
-      {/* Desktop: Bridge Console in basso */}
-      {!isMobile && (
-        <BridgeConsole
-          sliderValue={sliderValue}
-          onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
-          currentYear={currentYear}
-          formatYear={formatYear}
-          getEra={getEra}
-          activeCategories={activeCategories}
-          onToggleCategory={toggleCategory}
-          activeTipi={activeTipi}
-          onToggleTipo={toggleTipo}
-          cesiumAltKm={cesiumAltKm}
-          events={ALL_SEARCHABLE}
-          onSearch={handleSearchSelect}
-          onWikiSelect={handleWikiSelect}
-          onEpochSelect={handleEpochSearchSelect}
-          locale={locale}
-          isCosmicView={altitudeCosmic}
-          aiPanelOpen={aiPanelOpen}
-          onToggleAIPanel={() => setAiPanelOpen(v => !v)}
-          onLocaleToggle={() => setLocale(l => l === 'it' ? 'en' : 'it')}
-          user={user ? { email: user.email, role: user.role } : null}
-          onAuthClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
-          showTerritories={showTerritories}
-          onToggleTerritories={() => setShowTerritories(v => !v)}
-          onDpad={handleDpad}
-          yearToSlider={yearToSlider}
-          onThrustStart={() => setThrustActive(true)}
-          onThrustEnd={() => setThrustActive(false)}
-          showHoloOverlays={showHoloOverlays}
-          onToggleHoloOverlays={() => setShowHoloOverlays(v => !v)}
-          onHyperDpad={handleHyperDpad}
-          timeMachineOpen={timeMachineOpen}
-          onToggleTimeMachine={() => setTimeMachineOpen(v => !v)}
-        />
-      )}
-      {!isMobile && aiPanelOpen && (
+      {/* Bridge Console: desktop in basso, mobile come barra fissa */}
+      <BridgeConsole
+        sliderValue={sliderValue}
+        onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
+        currentYear={currentYear}
+        formatYear={formatYear}
+        getEra={getEra}
+        activeCategories={activeCategories}
+        onToggleCategory={toggleCategory}
+        activeTipi={activeTipi}
+        onToggleTipo={toggleTipo}
+        cesiumAltKm={cesiumAltKm}
+        events={ALL_SEARCHABLE}
+        onSearch={handleSearchSelect}
+        onWikiSelect={handleWikiSelect}
+        onEpochSelect={handleEpochSearchSelect}
+        locale={locale}
+        isCosmicView={altitudeCosmic}
+        aiPanelOpen={aiPanelOpen}
+        onToggleAIPanel={() => setAiPanelOpen(v => !v)}
+        onLocaleToggle={() => setLocale(l => l === 'it' ? 'en' : 'it')}
+        user={user ? { email: user.email, role: user.role } : null}
+        onAuthClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
+        showTerritories={showTerritories}
+        onToggleTerritories={() => setShowTerritories(v => !v)}
+        onDpad={handleDpad}
+        yearToSlider={yearToSlider}
+        onThrustStart={() => setThrustActive(true)}
+        onThrustEnd={() => setThrustActive(false)}
+        showHoloOverlays={showHoloOverlays}
+        onToggleHoloOverlays={() => setShowHoloOverlays(v => !v)}
+        onHyperDpad={handleHyperDpad}
+        timeMachineOpen={timeMachineOpen}
+        onToggleTimeMachine={() => setTimeMachineOpen(v => !v)}
+      />
+      {aiPanelOpen && (
         <AIPanel
           event={selectedEvent}
           locale={locale}
@@ -1024,27 +1006,9 @@ function AppInner() {
       {/* ── Contenuto principale ── */}
       {isMobile ? (
         <>
-          {/* Globe tab: sempre montato, visibile quando activeTab = globe */}
-          <div className={`mobile-screen${mobileTab === 'globe' ? ' mobile-screen--active' : ''}`}>
+          {/* Globe — sempre visibile sopra il Bridge Console */}
+          <div className="mobile-globe-wrap">
             {globeAndControls}
-          </div>
-
-          {/* Timeline tab: slider + filtri full-screen */}
-          <div className={`mobile-screen mobile-timeline-screen${mobileTab === 'timeline' ? ' mobile-screen--active' : ''}`}>
-            <div className="controls controls--fullscreen">
-              <TimeControls
-                sliderValue={sliderValue}
-                currentYear={currentYear}
-                formatYear={formatYear}
-                getEra={getEra}
-                onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
-                activeCategories={activeCategories}
-                onToggleCategory={toggleCategory}
-                activeTipi={activeTipi}
-                onToggleTipo={toggleTipo}
-                onEraClick={handleEraClick}
-              />
-            </div>
           </div>
 
           {/* Bottom sheet InfoPanel su mobile */}
@@ -1055,26 +1019,7 @@ function AppInner() {
             </div>
           )}
 
-          {/* Search modal full-screen */}
-          {mobileSearchOpen && (
-            <div className="mobile-search-modal">
-              <div className="mobile-search-modal__header">
-                <button className="mobile-search-modal__close" onClick={() => setMobileSearchOpen(false)}>✕</button>
-              </div>
-              <div className="mobile-search-modal__body">
-                <SearchBar
-                  events={ALL_SEARCHABLE}
-                  onSelect={(ev) => { handleSearchSelect(ev); setMobileSearchOpen(false); }}
-                  onWikiSelect={(r) => { handleWikiSelect(r); setMobileSearchOpen(false); }}
-                  onEpochSelect={(p) => { handleEpochSearchSelect(p); setMobileSearchOpen(false); }}
-                  epochs={[...MACRO_ERAS, ...SUBCATEGORIES]}
-                  locale={locale}
-                />
-              </div>
-            </div>
-          )}
-
-          {/* EraGuide — bottom sheet sopra il nav bar */}
+          {/* EraGuide — bottom sheet */}
           {eraGuide && eraGuideOpen && (
             <EraGuide
               data={eraGuide}
@@ -1083,22 +1028,13 @@ function AppInner() {
               onNavigate={({ year, flyTo: ft }) => {
                 if (year !== undefined) {
                   setSliderValue(yearToSlider(year));
-                  setOverrideYear(year);
+                  setOverrideYear(null);
                 }
                 if (ft) setFlyTo(ft);
               }}
-              onSelectEvent={(ev) => { handleEventClick(ev); setMobileTab('globe'); }}
+              onSelectEvent={(ev) => { handleEventClick(ev); }}
             />
           )}
-
-          {/* Bottom nav */}
-          <MobileNav
-            activeTab={mobileTab}
-            onTabChange={handleMobileTabChange}
-            hasEvent={!!selectedEvent}
-            isLoggedIn={!!user}
-            locale={locale}
-          />
         </>
       ) : (
         globeAndControls

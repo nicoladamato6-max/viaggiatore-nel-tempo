@@ -604,3 +604,73 @@
 
 /* ── Closed state ── */
 .bc--closed .bc__sbar { border-bottom: none; }
+
+/* ── Mobile: Bridge Console adattato per viewport piccoli ── */
+@media (max-width: 767px) {
+  .bc {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+  }
+
+  .bc__sbar {
+    display: none;
+  }
+
+  .bc__body {
+    padding: 6px 8px 8px;
+  }
+
+  .bc__row {
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-start;
+  }
+
+  /* Nascondi il D-pad su mobile — il touch funziona direttamente sul globo */
+  .bc__dpad {
+    display: none;
+  }
+
+  .bc__fn-btn--tm {
+    min-width: 56px;
+  }
+
+  .bc__fn-tm-label {
+    font-size: 8px;
+  }
+
+  .bc__search-wrap {
+    flex: 1;
+    min-width: 140px;
+    max-width: 100%;
+  }
+
+  .bc__fn-btn--ai {
+    min-width: 56px;
+  }
+
+  .bc__fn-ai-label {
+    font-size: 8px;
+  }
+
+  .bc__row--slider {
+    gap: 6px;
+  }
+
+  .bc__slider-wrap {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .bc__slider-labels {
+    font-size: 9px;
+  }
+
+  .bc__era-lbl {
+    font-size: 14px;
+    min-width: 60px;
+  }
+}

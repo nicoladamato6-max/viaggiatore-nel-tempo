@@ -3252,3 +3252,10 @@ body {
   transition: transform 0.2s;
 }
 .info-panel__media-item:hover img { transform: scale(1.05); }
+
+/* Globe container mobile: si estende dall'alto fino al Bridge Console */
+.mobile-globe-wrap {
+  position: absolute;
+  inset: 0 0 var(--console-h, 140px) 0;
+  overflow: hidden;
+}
