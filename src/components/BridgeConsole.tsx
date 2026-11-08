@@ -155,7 +155,10 @@ export function BridgeConsole({
 
       {/* ── Toggle ── */}
       <button className="bc__toggle" onClick={() => setOpen(v => !v)}>
-        BRIDGE CONSOLE {open ? '▼' : '▲'}
+        {open
+          ? 'BRIDGE CONSOLE ▼'
+          : <><span className="bc__toggle-year" style={{ color: era.color }}>{formatYear(currentYear)}</span>{' · BRIDGE CONSOLE ▲'}</>
+        }
       </button>
 
       {/* ── Body ── */}
@@ -287,7 +290,7 @@ export function BridgeConsole({
 
           {/* MAP — toggle territories */}
           <button
-            className={`bc__fn-btn${showTerritories ? ' bc__fn-btn--on' : ''}`}
+            className={`bc__fn-btn bc__fn-btn--map${showTerritories ? ' bc__fn-btn--on' : ''}`}
             onClick={onToggleTerritories}
             title={locale === 'it' ? 'Territori storici' : 'Historical territories'}
           >
@@ -297,7 +300,7 @@ export function BridgeConsole({
 
           {/* LANG — toggle locale */}
           <button
-            className="bc__fn-btn"
+            className="bc__fn-btn bc__fn-btn--lang"
             onClick={onLocaleToggle}
             title={locale === 'it' ? 'Switch to English' : 'Passa all\'italiano'}
           >
@@ -307,7 +310,7 @@ export function BridgeConsole({
 
           {/* ACC/LOG — auth */}
           <button
-            className="bc__fn-btn"
+            className="bc__fn-btn bc__fn-btn--acc"
             onClick={onAuthClick}
             title={user ? user.email : (locale === 'it' ? 'Accedi' : 'Login')}
           >
@@ -318,7 +321,7 @@ export function BridgeConsole({
           {/* HUD — toggle ologrammi */}
           {onToggleHoloOverlays && (
             <button
-              className={`bc__fn-btn${showHoloOverlays ? ' bc__fn-btn--on' : ''}`}
+              className={`bc__fn-btn bc__fn-btn--hud${showHoloOverlays ? ' bc__fn-btn--on' : ''}`}
               onClick={onToggleHoloOverlays}
               title={showHoloOverlays ? 'Nascondi ologrammi HUD' : 'Mostra ologrammi HUD'}
             >
