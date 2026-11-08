@@ -3258,4 +3258,13 @@ body {
   position: absolute;
   inset: 0 0 var(--console-h, 140px) 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* globe-container dentro il wrap deve riempire tutto lo spazio */
+.mobile-globe-wrap .globe-container {
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
 }

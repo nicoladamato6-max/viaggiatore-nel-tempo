@@ -699,7 +699,7 @@ function AppInner() {
   const globeAndControls = (
     <>
       {/* Ologrammi — visibili solo se showHoloOverlays */}
-      {!isMobile && showHoloOverlays && (
+      {showHoloOverlays && (
         <>
           {/* Clock in alto a destra */}
           <div className="globe-clock">
@@ -797,8 +797,8 @@ function AppInner() {
               setEraGuide(data);
               setEraGuideOpen(true);
             }}
-            open={!isMobile ? timeMachineOpen : undefined}
-            onToggle={!isMobile ? () => setTimeMachineOpen(v => !v) : undefined}
+            open={timeMachineOpen}
+            onToggle={() => setTimeMachineOpen(v => !v)}
           />
           {!isMobile && eraGuide && eraGuideOpen && (
             <EraGuide

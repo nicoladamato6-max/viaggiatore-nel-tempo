@@ -629,9 +629,18 @@
     justify-content: flex-start;
   }
 
-  /* Nascondi il D-pad su mobile — il touch funziona direttamente sul globo */
-  .bc__dpad {
-    display: none;
+  /* D-pad: visibile su mobile, leggermente compatto */
+  .bc__dpad-btn {
+    width: 18px;
+    height: 18px;
+    font-size: 9px;
+  }
+  .bc__dpad-btn--wide {
+    width: 28px;
+    height: 18px;
+  }
+  .bc__dpad-dir {
+    grid-template-rows: repeat(3, 18px);
   }
 
   .bc__fn-btn--tm {
