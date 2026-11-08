@@ -3,7 +3,7 @@ import './App.css';
 import { GlobeView } from './components/GlobeView';
 import { CosmicScene } from './components/CosmicScene';
 import { InfoPanel } from './components/InfoPanel';
-import { SearchBar } from './components/SearchBar';
+
 import { BridgeConsole } from './components/BridgeConsole';
 import { AIPanel } from './components/AIPanel';
 import { TimeMachine, getStaticBriefingWithMeta } from './components/TimeMachine';
@@ -14,9 +14,9 @@ import { ProfileModal } from './components/ProfileModal';
 import { LeftNavPanel } from './components/LeftNavPanel';
 import { useAuth } from './hooks/useAuth';
 import { useMobile } from './hooks/useMobile';
-import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker, type MobileTab, type EraLaunchData } from './types';
+import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker, type EraLaunchData } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
-import { MACRO_ERAS, SUBCATEGORIES, type Period } from './data/historicalPeriods';
+import { type Period } from './data/historicalPeriods';
 
 // ── Opzione C: chunk per era, import dinamici ─────────────────────────────────
 const ERA_KEYS = ['cosmo', 'preistoria', 'antica', 'medioevo', 'moderna', 'ottocento', 'novecento', 'contemporanea', 'senza_anno'] as const;
@@ -262,7 +262,6 @@ function AppInner() {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [adminOpen,    setAdminOpen]    = useState(false);
   const [toast,          setToast]          = useState<string | null>(null);
-  const [mobileTab,      setMobileTab]      = useState<MobileTab>('globe');
   const [leftPanelOpen,     setLeftPanelOpen]     = useState(false);
   const [aiPanelOpen,       setAiPanelOpen]       = useState(false);
   const [infoPanelVisible,  setInfoPanelVisible]  = useState(true);
@@ -568,20 +567,7 @@ function AppInner() {
     }
   }, []);
 
-  // Click su badge era/sottocategoria → apre Wikipedia dell'era nell'InfoPanel
-  const handleEraClick = useCallback((slug: string, label: string) => {
-    setSelectedEvent({
-      id: `era-${slug}`,
-      title: label,
-      year: 0,
-      category: 'storia',
-      description: '',
-      wikipediaSlug: slug,
-      isCosmic: false,
-    });
-  }, []);
-
-  // Selezione epoca/sottocategoria dalla SearchBar: salta slider all'inizio dell'epoca e vola al luogo d'origine
+// Selezione epoca/sottocategoria dalla SearchBar: salta slider all'inizio dell'epoca e vola al luogo d'origine
   const handleEpochSearchSelect = useCallback((period: Period) => {
     setSelectedEvent(null);
     setWikiMarker(null);
@@ -759,7 +745,7 @@ function AppInner() {
                 locale={locale}
                 currentYear={currentYear}
                 flyTo={flyTo}
-                onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
+                onEventClick={(ev) => { handleEventClick(ev); }}
                 onBodyLabelClick={(entityId) => {
                   const ev = [
                     ...NEARBY_STAR_SEARCHES, ...DWARF_PLANET_SEARCHES, ...GALAXY_SEARCHES,
@@ -784,7 +770,6 @@ function AppInner() {
                   // Città: handleSearchSelect porta il cursore all'anno di fondazione
                   if (ev.id.startsWith('city-')) { handleSearchSelect(ev); }
                   else { handleEventClick(ev); }
-                  if (isMobile) setMobileTab('globe');
                 }}
                 onAltitudeChange={(altKm) => {
                   setCesiumAltKm(altKm);
