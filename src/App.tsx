@@ -1020,21 +1020,6 @@ function AppInner() {
         </>
       )}
 
-      {/* ── Mobile: mini header con logo + lingua ── */}
-      {isMobile && (
-        <header className="header header--mobile">
-          <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
-          <button
-            className="locale-toggle-btn"
-            onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
-          >
-            {locale === 'it' ? '🇮🇹' : '🇬🇧'}
-          </button>
-          {user?.role === 'admin' && (
-            <button className="admin-header-btn" onClick={() => setAdminOpen(true)}>⚙️</button>
-          )}
-        </header>
-      )}
 
       {/* ── Contenuto principale ── */}
       {isMobile ? (
