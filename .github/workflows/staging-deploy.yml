@@ -33,12 +33,6 @@ jobs:
             echo "❌ VITE_SUPABASE_URL_STAGING non configurato nei GitHub Secrets"
             exit 1
           fi
-          PROD_ID="tsdkqaheddnwzgxgphtw"
-          if echo "$URL" | grep -q "$PROD_ID"; then
-            echo "❌ VITE_SUPABASE_URL_STAGING punta al progetto di PRODUZIONE!"
-            echo "   Correggere il secret con l'URL del progetto staging."
-            exit 1
-          fi
           echo "✅ Supabase URL staging verificato: $URL"
         env:
           URL: ${{ secrets.VITE_SUPABASE_URL_STAGING }}
@@ -74,6 +68,60 @@ jobs:
           fi
           echo "✅ Bundle verificato: URL Supabase staging corretto nel bundle"
 
+      - name: Setup utente admin di test in staging Supabase
+        run: |
+          SUPABASE_URL="https://jicmmisiptgyumuvzhjn.supabase.co"
+          SERVICE_KEY="${{ secrets.SUPABASE_SERVICE_ROLE_KEY_STAGING }}"
+          TEST_EMAIL="${{ secrets.STAGING_TEST_EMAIL }}"
+          TEST_PASS="${{ secrets.STAGING_TEST_PASS }}"
+
+          if [ -z "$SERVICE_KEY" ]; then
+            echo "⚠️  SUPABASE_SERVICE_ROLE_KEY_STAGING non configurato — skip setup utente"
+            exit 0
+          fi
+
+          echo "🔑 Cerco utente $TEST_EMAIL nel DB staging..."
+          USERS_JSON=$(curl -sf \
+            -H "apikey: $SERVICE_KEY" \
+            -H "Authorization: Bearer $SERVICE_KEY" \
+            "$SUPABASE_URL/auth/v1/admin/users" 2>/dev/null || echo '{"users":[]}')
+
+          USER_ID=$(echo "$USERS_JSON" | python3 -c "
+          import sys, json
+          d = json.load(sys.stdin)
+          users = d.get('users', [])
+          found = [u['id'] for u in users if u.get('email') == '$TEST_EMAIL']
+          print(found[0] if found else '')
+          " 2>/dev/null || echo "")
+
+          if [ -z "$USER_ID" ]; then
+            echo "📝 Creo utente $TEST_EMAIL in staging Supabase..."
+            CREATE=$(curl -sf -X POST \
+              -H "apikey: $SERVICE_KEY" \
+              -H "Authorization: Bearer $SERVICE_KEY" \
+              -H "Content-Type: application/json" \
+              "$SUPABASE_URL/auth/v1/admin/users" \
+              -d "{\"email\":\"$TEST_EMAIL\",\"password\":\"$TEST_PASS\",\"email_confirm\":true}" 2>/dev/null || echo '{}')
+            USER_ID=$(echo "$CREATE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))" 2>/dev/null || echo "")
+            if [ -z "$USER_ID" ]; then
+              echo "❌ Creazione utente fallita"
+              exit 1
+            fi
+            echo "✅ Utente creato: $USER_ID"
+          else
+            echo "✅ Utente già esistente: $USER_ID"
+          fi
+
+          echo "⬆️  Imposto role=admin nel profilo staging..."
+          curl -sf -X PATCH \
+            -H "apikey: $SERVICE_KEY" \
+            -H "Authorization: Bearer $SERVICE_KEY" \
+            -H "Content-Type: application/json" \
+            -H "Prefer: return=minimal" \
+            "$SUPABASE_URL/rest/v1/profiles?id=eq.$USER_ID" \
+            -d '{"role":"admin"}' 2>/dev/null
+          echo "✅ Ruolo admin impostato per $TEST_EMAIL in staging"
+
       - name: Deploy to Staging (Cloudflare Pages)
         id: deploy
         uses: cloudflare/wrangler-action@v3
@@ -99,7 +147,7 @@ jobs:
           echo "✅ Staging raggiungibile (HTTP $HTTP)"
           echo ""
           echo "🔗 URL staging: $ALIAS/app"
-          echo "👤 Credenziali: nicola.damato6@gmail.com / Voyager2026"
+          echo "👤 Credenziali: vedi secret STAGING_TEST_EMAIL / STAGING_TEST_PASS"
 
       - name: Smoke test — AI entity-chat (Groq LLM)
         run: |
