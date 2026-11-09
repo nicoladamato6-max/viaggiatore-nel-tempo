@@ -8,6 +8,7 @@ interface Props {
   onClose:        () => void;
   events?:        HistoricalEvent[];
   onSelectEvent?: (ev: HistoricalEvent) => void;
+  fullscreen?:    boolean;
 }
 
 function findCorrelations(ev: HistoricalEvent, all: HistoricalEvent[]): HistoricalEvent[] {
@@ -74,7 +75,7 @@ const DEFAULT_H = 480;
 const MIN_W = 260;
 const MIN_H = 300;
 
-export function AIPanel({ event, locale, onClose, events = [], onSelectEvent }: Props) {
+export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fullscreen = false }: Props) {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Msg[]>([]);
   const [busy, setBusy] = useState(false);
@@ -249,7 +250,10 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent }: 
     <div
       ref={panelRef}
       className="aip"
-      style={{ left: resolvedPos.x, top: resolvedPos.y, width: size.w, height: size.h }}
+      style={fullscreen
+        ? { top: 0, left: 0, width: '100%', height: '100%', borderRadius: 0 }
+        : { left: resolvedPos.x, top: resolvedPos.y, width: size.w, height: size.h }
+      }
     >
       {/* Resize handles */}
       <div className="aip__resize aip__resize--n"  onMouseDown={e => onResizeMouseDown(e, 'n')} />

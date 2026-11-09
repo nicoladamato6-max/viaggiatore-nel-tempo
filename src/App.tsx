@@ -919,6 +919,7 @@ function AppInner() {
           onClose={() => { setAiPanelOpen(false); if (isMobile) setMobileTab(null); }}
           events={ALL_SEARCHABLE}
           onSelectEvent={handleSearchSelect}
+          fullscreen={isMobile}
         />
       )}
     </>
