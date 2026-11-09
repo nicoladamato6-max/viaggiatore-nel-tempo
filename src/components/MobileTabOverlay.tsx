@@ -110,7 +110,7 @@ export function MobileTabOverlay(props: Props) {
             {isCosmicView && (
               <button
                 className={`mtab-altro__btn${velOpen ? ' mtab-altro__btn--on' : ''}`}
-                onClick={onToggleVel}
+                onClick={() => { onToggleVel(); onClose(); }}
               >
                 <span className="mtab-altro__icon">⚡</span>
                 <span className="mtab-altro__lbl">VEL.</span>
