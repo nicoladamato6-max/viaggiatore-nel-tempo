@@ -17,6 +17,8 @@ import { useMobile } from './hooks/useMobile';
 import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker, type EraLaunchData } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
 import { type Period } from './data/historicalPeriods';
+import { MobileDock, type MobileTabId } from './components/MobileDock';
+import { MobileTabOverlay } from './components/MobileTabOverlay';
 
 // ── Opzione C: chunk per era, import dinamici ─────────────────────────────────
 const ERA_KEYS = ['cosmo', 'preistoria', 'antica', 'medioevo', 'moderna', 'ottocento', 'novecento', 'contemporanea', 'senza_anno'] as const;
@@ -266,6 +268,7 @@ function AppInner() {
   const [aiPanelOpen,       setAiPanelOpen]       = useState(false);
   const [infoPanelVisible,  setInfoPanelVisible]  = useState(true);
   const [timeMachineOpen,   setTimeMachineOpen]   = useState(false);
+  const [mobileTab, setMobileTab] = useState<MobileTabId | null>(null);
 
   // Rileva redirect post-conferma email (#type=signup o #type=recovery nel hash)
   useEffect(() => {
@@ -872,46 +875,48 @@ function AppInner() {
         )}
       </div>
 
-      {/* Bridge Console: desktop in basso, mobile come barra fissa */}
-      <BridgeConsole
-        sliderValue={sliderValue}
-        onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
-        currentYear={currentYear}
-        formatYear={formatYear}
-        getEra={getEra}
-        activeCategories={activeCategories}
-        onToggleCategory={toggleCategory}
-        activeTipi={activeTipi}
-        onToggleTipo={toggleTipo}
-        cesiumAltKm={cesiumAltKm}
-        events={ALL_SEARCHABLE}
-        onSearch={handleSearchSelect}
-        onWikiSelect={handleWikiSelect}
-        onEpochSelect={handleEpochSearchSelect}
-        locale={locale}
-        isCosmicView={altitudeCosmic}
-        aiPanelOpen={aiPanelOpen}
-        onToggleAIPanel={() => setAiPanelOpen(v => !v)}
-        onLocaleToggle={() => setLocale(l => l === 'it' ? 'en' : 'it')}
-        user={user ? { email: user.email, role: user.role } : null}
-        onAuthClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
-        showTerritories={showTerritories}
-        onToggleTerritories={() => setShowTerritories(v => !v)}
-        onDpad={handleDpad}
-        yearToSlider={yearToSlider}
-        onThrustStart={() => setThrustActive(true)}
-        onThrustEnd={() => setThrustActive(false)}
-        showHoloOverlays={showHoloOverlays}
-        onToggleHoloOverlays={() => setShowHoloOverlays(v => !v)}
-        onHyperDpad={handleHyperDpad}
-        timeMachineOpen={timeMachineOpen}
-        onToggleTimeMachine={() => setTimeMachineOpen(v => !v)}
-      />
+      {/* Bridge Console: desktop only */}
+      {!isMobile && (
+        <BridgeConsole
+          sliderValue={sliderValue}
+          onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
+          currentYear={currentYear}
+          formatYear={formatYear}
+          getEra={getEra}
+          activeCategories={activeCategories}
+          onToggleCategory={toggleCategory}
+          activeTipi={activeTipi}
+          onToggleTipo={toggleTipo}
+          cesiumAltKm={cesiumAltKm}
+          events={ALL_SEARCHABLE}
+          onSearch={handleSearchSelect}
+          onWikiSelect={handleWikiSelect}
+          onEpochSelect={handleEpochSearchSelect}
+          locale={locale}
+          isCosmicView={altitudeCosmic}
+          aiPanelOpen={aiPanelOpen}
+          onToggleAIPanel={() => setAiPanelOpen(v => !v)}
+          onLocaleToggle={() => setLocale(l => l === 'it' ? 'en' : 'it')}
+          user={user ? { email: user.email, role: user.role } : null}
+          onAuthClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
+          showTerritories={showTerritories}
+          onToggleTerritories={() => setShowTerritories(v => !v)}
+          onDpad={handleDpad}
+          yearToSlider={yearToSlider}
+          onThrustStart={() => setThrustActive(true)}
+          onThrustEnd={() => setThrustActive(false)}
+          showHoloOverlays={showHoloOverlays}
+          onToggleHoloOverlays={() => setShowHoloOverlays(v => !v)}
+          onHyperDpad={handleHyperDpad}
+          timeMachineOpen={timeMachineOpen}
+          onToggleTimeMachine={() => setTimeMachineOpen(v => !v)}
+        />
+      )}
       {aiPanelOpen && (
         <AIPanel
           event={selectedEvent}
           locale={locale}
-          onClose={() => setAiPanelOpen(false)}
+          onClose={() => { setAiPanelOpen(false); if (isMobile) setMobileTab(null); }}
           events={ALL_SEARCHABLE}
           onSelectEvent={handleSearchSelect}
         />
@@ -991,35 +996,77 @@ function AppInner() {
       {/* ── Contenuto principale ── */}
       {isMobile ? (
         <>
-          {/* Globe — sempre visibile sopra il Bridge Console */}
+          {/* Globe — fills screen above dock */}
           <div className="mobile-globe-wrap">
             {globeAndControls}
           </div>
 
-          {/* Bottom sheet InfoPanel su mobile */}
-          {selectedEvent && (
+          {/* InfoPanel bottom sheet — only when no tab open */}
+          {!mobileTab && selectedEvent && (
             <div className="mobile-bottom-sheet">
               <div className="mobile-bottom-sheet__grip" />
               <InfoPanel event={selectedEvent} locale={locale} onClose={() => setSelectedEvent(null)} events={ALL_SEARCHABLE} onSelectEvent={handleEventClick} />
             </div>
           )}
 
-          {/* EraGuide — bottom sheet */}
+          {/* EraGuide — full screen overlay */}
           {eraGuide && eraGuideOpen && (
             <EraGuide
               data={eraGuide}
               events={ALL_SEARCHABLE}
               onClose={() => { setEraGuide(null); setEraGuideOpen(false); }}
               onNavigate={({ year, flyTo: ft }) => {
-                if (year !== undefined) {
-                  setSliderValue(yearToSlider(year));
-                  setOverrideYear(null);
-                }
+                if (year !== undefined) { setSliderValue(yearToSlider(year)); setOverrideYear(null); }
                 if (ft) setFlyTo(ft);
               }}
               onSelectEvent={(ev) => { handleEventClick(ev); }}
             />
           )}
+
+          {/* Mobile tab overlay — TM, Cerca, Altro */}
+          {mobileTab && mobileTab !== 'ai' && (
+            <MobileTabOverlay
+              tab={mobileTab}
+              onClose={() => setMobileTab(null)}
+              locale={locale}
+              sliderValue={sliderValue}
+              onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
+              currentYear={currentYear}
+              formatYear={formatYear}
+              getEra={getEra}
+              yearToSlider={yearToSlider}
+              onThrustStart={() => setThrustActive(true)}
+              onThrustEnd={() => setThrustActive(false)}
+              events={ALL_SEARCHABLE}
+              onSearch={handleSearchSelect}
+              onWikiSelect={handleWikiSelect}
+              onEpochSelect={handleEpochSearchSelect}
+              showTerritories={showTerritories}
+              onToggleTerritories={() => setShowTerritories(v => !v)}
+              showHoloOverlays={showHoloOverlays}
+              onToggleHoloOverlays={() => setShowHoloOverlays(v => !v)}
+              onLocaleToggle={() => setLocale(l => l === 'it' ? 'en' : 'it')}
+              user={user ? { email: user.email, role: user.role } : null}
+              onAuthClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
+            />
+          )}
+
+          {/* Mobile dock */}
+          <MobileDock
+            currentYear={currentYear}
+            formatYear={formatYear}
+            getEra={getEra}
+            activeTab={mobileTab}
+            onOpenTab={(tab) => {
+              if (tab === 'ai') {
+                setAiPanelOpen(true);
+                setMobileTab('ai');
+              } else {
+                setAiPanelOpen(false);
+                setMobileTab(prev => prev === tab ? null : tab);
+              }
+            }}
+          />
         </>
       ) : (
         globeAndControls
