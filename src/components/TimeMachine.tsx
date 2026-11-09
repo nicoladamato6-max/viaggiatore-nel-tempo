@@ -33,6 +33,14 @@ export function getStaticBriefingWithMeta(year: number, locale: Locale): { brief
   return { briefing, era };
 }
 
+/** Cerca il briefing direttamente per slug Wikipedia, senza ambiguità legate all'anno. */
+export function getBriefingBySlug(slug: string, locale: Locale): AiBriefing | null {
+  const briefings = epochBriefingsData as EpochBriefings;
+  const entry = briefings[slug];
+  if (!entry) return null;
+  return entry[locale] ?? entry['it'] ?? null;
+}
+
 // ── Parser date potenziato ────────────────────────────────────────────────────
 const IT_MONTHS: Record<string, number> = {
   gennaio: 1, febbraio: 2, marzo: 3, aprile: 4, maggio: 5, giugno: 6,

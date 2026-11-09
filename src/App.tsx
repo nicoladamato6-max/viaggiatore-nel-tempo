@@ -6,7 +6,7 @@ import { InfoPanel } from './components/InfoPanel';
 
 import { BridgeConsole } from './components/BridgeConsole';
 import { AIPanel } from './components/AIPanel';
-import { TimeMachine, getStaticBriefingWithMeta } from './components/TimeMachine';
+import { TimeMachine, getStaticBriefingWithMeta, getBriefingBySlug } from './components/TimeMachine';
 import { EraGuide } from './components/EraGuide';
 import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
@@ -1066,16 +1066,24 @@ function AppInner() {
               velOpen={velOpen}
               onToggleVel={() => setVelOpen(v => !v)}
               onOpenEraGuide={(period) => {
-                const result = getStaticBriefingWithMeta(period.start, locale);
-                if (result) {
+                // Cerca briefing direttamente per slug, evitando lookup anno→epoca sbagliata
+                let briefing = period.wikipediaSlug
+                  ? getBriefingBySlug(period.wikipediaSlug, locale)
+                  : null;
+                if (!briefing) {
+                  // Fallback: macro-era centrale, ma mantieni il nome del period cliccato
+                  const mid = Math.round((period.start + period.end) / 2);
+                  briefing = getStaticBriefingWithMeta(mid, locale)?.briefing ?? null;
+                }
+                if (briefing) {
                   setEraGuide({
-                    briefing: result.briefing,
-                    eraName: result.era.name,
-                    eraSlug: result.era.wikipediaSlug ?? '',
-                    eraYear: period.start,
+                    briefing,
+                    eraName: period.name,
+                    eraSlug: period.wikipediaSlug ?? '',
+                    eraYear: Math.round((period.start + period.end) / 2),
                     locale,
-                    originLat: result.era.originLat,
-                    originLng: result.era.originLng,
+                    originLat: period.originLat,
+                    originLng: period.originLng,
                   });
                   setEraGuideOpen(true);
                 }
@@ -1090,6 +1098,39 @@ function AppInner() {
               {([
                 { code: 'HyperBack', label: '⏪ Iper-rev', thrust: true },
                 { code: 'KeyS',      label: '◀ Retro',     thrust: false },
+              ] as { code: string; label: string; thrust: boolean }[]).map(({ code, label, thrust }) => (
+                <button
+                  key={code}
+                  className="mobile-vel-widget__btn"
+                  onPointerDown={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new KeyboardEvent('keydown', { code, bubbles: true }));
+                    if (thrust) setThrustActive(true);
+                  }}
+                  onPointerUp={() => {
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }));
+                    if (thrust) setThrustActive(false);
+                  }}
+                  onPointerLeave={() => {
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }));
+                    if (thrust) setThrustActive(false);
+                  }}
+                >
+                  {label}
+                </button>
+              ))}
+              <button
+                className="mobile-vel-widget__btn mobile-vel-widget__btn--stop"
+                onClick={() => {
+                  ['HyperBack', 'KeyS', 'KeyW', 'HyperFwd'].forEach(code =>
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }))
+                  );
+                  setThrustActive(false);
+                }}
+              >
+                ⏹ STOP
+              </button>
+              {([
                 { code: 'KeyW',      label: 'Avanti ▶',    thrust: true },
                 { code: 'HyperFwd',  label: 'Iper ⏩',     thrust: true },
               ] as { code: string; label: string; thrust: boolean }[]).map(({ code, label, thrust }) => (

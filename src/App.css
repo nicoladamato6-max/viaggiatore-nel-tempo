@@ -3333,6 +3333,17 @@ body {
   border-color: rgba(0, 220, 190, 0.6);
 }
 
+.mobile-vel-widget__btn--stop {
+  background: rgba(255, 180, 0, 0.08);
+  border-color: rgba(255, 180, 0, 0.35);
+  color: rgba(255, 200, 60, 0.9);
+}
+
+.mobile-vel-widget__btn--stop:active {
+  background: rgba(255, 180, 0, 0.22);
+  border-color: rgba(255, 200, 60, 0.7);
+}
+
 .mobile-vel-widget__close {
   width: 36px;
   min-height: 44px;

@@ -285,6 +285,30 @@
   background: rgba(0, 220, 190, 0.18);
 }
 
+.mtab__subtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.mtab__subtag {
+  border: 1px solid var(--subtag-color, rgba(0,220,190,0.35));
+  border-radius: 20px;
+  padding: 3px 9px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--subtag-color, rgba(0,220,190,0.75));
+  background: rgba(0,0,0,0.25);
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.mtab__subtag:active {
+  background: rgba(0,0,0,0.5);
+}
+
 .mtab__subbars {
   position: relative;
   width: 100%;

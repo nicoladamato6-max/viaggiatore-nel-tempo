@@ -132,6 +132,26 @@ export function MobileTabOverlay(props: Props) {
               {era.label}
             </button>
 
+            {/* Tag leggibili delle sotto-epoche attive */}
+            {(() => {
+              const active = getActivePeriods(currentYear);
+              if (active.length === 0) return null;
+              return (
+                <div className="mtab__subtags">
+                  {active.map(p => (
+                    <button
+                      key={p.name}
+                      className="mtab__subtag"
+                      style={{ '--subtag-color': p.color } as React.CSSProperties}
+                      onClick={() => onOpenEraGuide(p)}
+                    >
+                      {p.name}
+                    </button>
+                  ))}
+                </div>
+              );
+            })()}
+
             {/* Sub-era bars per anno corrente */}
             {(() => {
               const active = getActivePeriods(currentYear);

@@ -97,20 +97,24 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fu
     [event?.id, events], // eslint-disable-line react-hooks/exhaustive-deps
   );
 
-  const isFirstMsgRef = useRef(true);
+  // Scroll verso il basso solo quando l'utente ha inviato un messaggio, mai per l'analisi automatica
+  const userSentRef = useRef(false);
 
   useEffect(() => {
-    isFirstMsgRef.current = true;
+    // Scroll in cima al mount (pannello appena aperto)
     if (bodyRef.current) bodyRef.current.scrollTop = 0;
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    // Scroll in cima al cambio entità
+    if (bodyRef.current) bodyRef.current.scrollTop = 0;
+    userSentRef.current = false;
   }, [event?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    if (!bodyRef.current) return;
-    if (isFirstMsgRef.current) {
-      isFirstMsgRef.current = false;
-      return; // Lascia scroll in cima per la prima analisi
-    }
+    if (!bodyRef.current || !userSentRef.current) return;
     bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    userSentRef.current = false;
   }, [messages]);
 
   // Auto-analysis when entity changes
@@ -237,14 +241,17 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fu
     const question = input.trim();
     setInput('');
     const next: Msg[] = [...messages, { role: 'user', text: question }];
+    userSentRef.current = true;
     setMessages(next);
     setBusy(true);
     try {
       const reply = event
         ? await askEntity(event, question, next, locale)
         : (locale === 'it' ? 'Seleziona prima un\'entità sulla mappa.' : 'Please select an entity on the map first.');
+      userSentRef.current = true;
       setMessages(prev => [...prev, { role: 'ai', text: reply }]);
     } catch {
+      userSentRef.current = true;
       setMessages(prev => [...prev, {
         role: 'ai',
         text: locale === 'it'
