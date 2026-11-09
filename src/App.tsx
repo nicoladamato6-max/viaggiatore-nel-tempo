@@ -1048,8 +1048,6 @@ function AppInner() {
               formatYear={formatYear}
               getEra={getEra}
               yearToSlider={yearToSlider}
-              onThrustStart={() => setThrustActive(true)}
-              onThrustEnd={() => setThrustActive(false)}
               events={ALL_SEARCHABLE}
               onSearch={handleSearchSelect}
               onWikiSelect={handleWikiSelect}

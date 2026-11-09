@@ -38,8 +38,6 @@ interface Props {
   formatYear: (y: number) => string;
   getEra: (y: number) => { label: string; color: string };
   yearToSlider: (year: number) => number;
-  onThrustStart?: () => void;
-  onThrustEnd?: () => void;
   events: HistoricalEvent[];
   onSearch: (ev: HistoricalEvent) => void;
   onWikiSelect?: (r: WikiSearchResult) => void;
@@ -60,7 +58,6 @@ export function MobileTabOverlay(props: Props) {
   const {
     tab, onClose, locale,
     sliderValue, onSliderChange, currentYear, formatYear, getEra, yearToSlider,
-    onThrustStart, onThrustEnd,
     events, onSearch, onWikiSelect, onEpochSelect,
     showTerritories, onToggleTerritories,
     showHoloOverlays, onToggleHoloOverlays,
