@@ -128,15 +128,27 @@ jobs:
             echo "✅ Utente già esistente: $USER_ID"
           fi
 
-          echo "⬆️  Imposto role=admin nel profilo staging..."
-          PATCH_HTTP=$(curl -s -o /dev/null -w "%{http_code}" -X PATCH \
+          echo "⬆️  Imposto role=admin nel profilo staging (UPSERT)..."
+          UPSERT_RESP=$(curl -s -w "\n%{http_code}" -X POST \
             -H "apikey: $SERVICE_KEY" \
             -H "Authorization: Bearer $SERVICE_KEY" \
             -H "Content-Type: application/json" \
-            -H "Prefer: return=minimal" \
-            "$SUPABASE_URL/rest/v1/profiles?id=eq.$USER_ID" \
-            -d '{"role":"admin"}')
-          echo "   PATCH profile HTTP: $PATCH_HTTP"
+            -H "Prefer: resolution=merge-duplicates,return=minimal" \
+            "$SUPABASE_URL/rest/v1/profiles" \
+            -d "{\"id\":\"$USER_ID\",\"role\":\"admin\"}")
+          UPSERT_HTTP=$(echo "$UPSERT_RESP" | tail -1)
+          UPSERT_BODY=$(echo "$UPSERT_RESP" | head -n -1)
+          echo "   UPSERT profile HTTP: $UPSERT_HTTP"
+          if [ "$UPSERT_HTTP" = "403" ]; then
+            echo "❌ 403 Forbidden — la service role key non bypassa le RLS."
+            echo "   Usa la JWT legacy (eyJhbGci...) come SUPABASE_SERVICE_ROLE_KEY_STAGING, non la sb_secret_."
+            echo "   Risposta: $(echo "$UPSERT_BODY" | head -c 300)"
+            exit 1
+          fi
+          if [ "$UPSERT_HTTP" != "200" ] && [ "$UPSERT_HTTP" != "201" ] && [ "$UPSERT_HTTP" != "204" ]; then
+            echo "❌ UPSERT fallito (HTTP $UPSERT_HTTP): $(echo "$UPSERT_BODY" | head -c 200)"
+            exit 1
+          fi
           echo "✅ Ruolo admin impostato per $TEST_EMAIL in staging"
 
       - name: Deploy to Staging (Cloudflare Pages)
