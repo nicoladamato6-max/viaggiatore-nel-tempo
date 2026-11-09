@@ -519,6 +519,7 @@ function AppInner() {
     prevIsCosmicRef.current = isCosmicView;
     if (prev === null || prev === isCosmicView) return; // mount iniziale o StrictMode
     setFlyTo({ kind: isCosmicView ? 'cosmic' : 'earth', ts: Date.now() });
+    if (!isCosmicView) setVelOpen(false); // nascondi velocity widget in earth mode
   }, [isCosmicView]);
 
   const onSplitDown = useCallback((e: React.TouchEvent | React.MouseEvent) => {
@@ -916,6 +917,7 @@ function AppInner() {
           onHyperDpad={handleHyperDpad}
           timeMachineOpen={timeMachineOpen}
           onToggleTimeMachine={() => setTimeMachineOpen(v => !v)}
+          onAdminClick={() => setAdminOpen(true)}
         />
       )}
       {aiPanelOpen && (
@@ -1065,6 +1067,8 @@ function AppInner() {
               }}
               velOpen={velOpen}
               onToggleVel={() => setVelOpen(v => !v)}
+              isCosmicView={isCosmicView}
+              onAdminClick={() => setAdminOpen(true)}
               onOpenEraGuide={(period) => {
                 // Cerca briefing direttamente per slug, evitando lookup anno→epoca sbagliata
                 let briefing = period.wikipediaSlug
@@ -1122,9 +1126,15 @@ function AppInner() {
               <button
                 className="mobile-vel-widget__btn mobile-vel-widget__btn--stop"
                 onClick={() => {
+                  // Ferma il thrust in corso
                   ['HyperBack', 'KeyS', 'KeyW', 'HyperFwd'].forEach(code =>
                     window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }))
                   );
+                  // Space key azzera velRef.current in CosmicScene (velRef.set(0,0,0))
+                  window.dispatchEvent(new KeyboardEvent('keydown', { code: 'Space', bubbles: true }));
+                  requestAnimationFrame(() => {
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code: 'Space', bubbles: true }));
+                  });
                   setThrustActive(false);
                 }}
               >

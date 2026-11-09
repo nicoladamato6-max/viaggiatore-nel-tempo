@@ -66,6 +66,7 @@ interface Props {
   onHyperDpad?: (dir: 'in' | 'out') => void;
   timeMachineOpen?: boolean;
   onToggleTimeMachine?: () => void;
+  onAdminClick?: () => void;
 }
 
 const CATEGORIES = Object.keys(CATEGORY_LABELS) as EventCategory[];
@@ -89,6 +90,7 @@ export function BridgeConsole({
   showHoloOverlays, onToggleHoloOverlays,
   onHyperDpad,
   timeMachineOpen, onToggleTimeMachine,
+  onAdminClick,
 }: Props) {
   const [open, setOpen] = useState(true);
   const [catOpen, setCatOpen] = useState(false);
@@ -337,6 +339,18 @@ export function BridgeConsole({
                 </svg>
               </span>
               <span className="bc__fn-lbl">HUD</span>
+            </button>
+          )}
+
+          {/* ADMIN — solo per utenti admin */}
+          {user?.role === 'admin' && onAdminClick && (
+            <button
+              className="bc__fn-btn bc__fn-btn--admin"
+              onClick={onAdminClick}
+              title="Pannello amministratore"
+            >
+              <span className="bc__fn-ico">⬢</span>
+              <span className="bc__fn-lbl">ADMIN</span>
             </button>
           )}
 

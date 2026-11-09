@@ -52,6 +52,8 @@ interface Props {
   velOpen: boolean;
   onToggleVel: () => void;
   onOpenEraGuide: (p: Period) => void;
+  isCosmicView?: boolean;
+  onAdminClick?: () => void;
 }
 
 export function MobileTabOverlay(props: Props) {
@@ -63,6 +65,7 @@ export function MobileTabOverlay(props: Props) {
     showHoloOverlays, onToggleHoloOverlays,
     onLocaleToggle, user, onAuthClick,
     velOpen, onToggleVel, onOpenEraGuide,
+    isCosmicView, onAdminClick,
   } = props;
 
   const [sliderDragging, setSliderDragging] = useState(false);
@@ -98,13 +101,21 @@ export function MobileTabOverlay(props: Props) {
               <span className="mtab-altro__icon">{user ? '●' : '○'}</span>
               <span className="mtab-altro__lbl">{user ? 'ACC' : 'LOG'}</span>
             </button>
-            <button
-              className={`mtab-altro__btn${velOpen ? ' mtab-altro__btn--on' : ''}`}
-              onClick={onToggleVel}
-            >
-              <span className="mtab-altro__icon">⚡</span>
-              <span className="mtab-altro__lbl">VEL.</span>
-            </button>
+            {user?.role === 'admin' && onAdminClick && (
+              <button className="mtab-altro__btn mtab-altro__btn--admin" onClick={() => { onAdminClick(); onClose(); }}>
+                <span className="mtab-altro__icon">⬢</span>
+                <span className="mtab-altro__lbl">ADMIN</span>
+              </button>
+            )}
+            {isCosmicView && (
+              <button
+                className={`mtab-altro__btn${velOpen ? ' mtab-altro__btn--on' : ''}`}
+                onClick={onToggleVel}
+              >
+                <span className="mtab-altro__icon">⚡</span>
+                <span className="mtab-altro__lbl">VEL.</span>
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -120,113 +131,119 @@ export function MobileTabOverlay(props: Props) {
       <div className="mtab__body">
         {tab === 'tm' && (
           <div className="mtab__tm">
-            <div className="mtab__year" style={{ color: era.color }}>
-              {formatYear(currentYear)}
-            </div>
+            {/* TOP: anno + era-tag + sub-era tags (fissi in alto) */}
+            <div className="mtab__top">
+              <div className="mtab__year" style={{ color: era.color }}>
+                {formatYear(currentYear)}
+              </div>
 
-            <button
-              className="mtab__era-tag"
-              style={{ '--chip-color': era.color } as React.CSSProperties}
-              onClick={() => onOpenEraGuide(getCurrentMacroEra(currentYear))}
-            >
-              {era.label}
-            </button>
+              <button
+                className="mtab__era-tag"
+                style={{ '--chip-color': era.color } as React.CSSProperties}
+                onClick={() => onOpenEraGuide(getCurrentMacroEra(currentYear))}
+              >
+                {era.label}
+              </button>
 
-            {/* Tag leggibili delle sotto-epoche attive */}
-            {(() => {
-              const active = getActivePeriods(currentYear);
-              if (active.length === 0) return null;
-              return (
-                <div className="mtab__subtags">
-                  {active.map(p => (
-                    <button
-                      key={p.name}
-                      className="mtab__subtag"
-                      style={{ '--subtag-color': p.color } as React.CSSProperties}
-                      onClick={() => onOpenEraGuide(p)}
-                    >
-                      {p.name}
-                    </button>
-                  ))}
-                </div>
-              );
-            })()}
-
-            {/* Sub-era bars per anno corrente */}
-            {(() => {
-              const active = getActivePeriods(currentYear);
-              if (active.length === 0) return null;
-              const laned = assignLanes(active);
-              const maxLane = Math.max(...laned.map(x => x.lane));
-              const macroEra = getCurrentMacroEra(currentYear);
-              const fromS = Math.max(0, Math.min(1000, yearToSlider(macroEra.start)));
-              const toS = Math.max(0, Math.min(1000, yearToSlider(macroEra.end)));
-              const range = Math.max(1, toS - fromS);
-              return (
-                <div className="mtab__subbars" style={{ height: `${(maxLane + 1) * 28 + 4}px` }}>
-                  {laned.map(({ period: p, lane }) => {
-                    const pFrom = Math.max(fromS, Math.min(1000, yearToSlider(p.start)));
-                    const pTo = Math.max(fromS, Math.min(1000, yearToSlider(p.end)));
-                    const leftPct = (pFrom - fromS) / range * 100;
-                    const widthPct = Math.max(1, (pTo - pFrom) / range * 100);
-                    return (
+              {/* Tag leggibili delle sotto-epoche attive */}
+              {(() => {
+                const active = getActivePeriods(currentYear);
+                if (active.length === 0) return null;
+                return (
+                  <div className="mtab__subtags">
+                    {active.map(p => (
                       <button
                         key={p.name}
-                        className="mtab__subbar"
-                        style={{
-                          left: `${leftPct}%`,
-                          width: `${widthPct}%`,
-                          top: `${lane * 28}px`,
-                          '--bar-color': p.color,
-                        } as React.CSSProperties}
+                        className="mtab__subtag"
+                        style={{ '--subtag-color': p.color } as React.CSSProperties}
                         onClick={() => onOpenEraGuide(p)}
-                        title={p.name}
                       >
-                        <span className="mtab__subbar-lbl">{p.name}</span>
+                        {p.name}
                       </button>
-                    );
-                  })}
-                </div>
-              );
-            })()}
+                    ))}
+                  </div>
+                );
+              })()}
+            </div>
 
-            <div className="mtab__slider-wrap">
-              {sliderDragging && (
-                <div className="mtab__era-overlay">
-                  <div className="mtab__era-macro-row">
-                    {[getCurrentMacroEra(currentYear)].map(e => {
-                      const fromS = Math.max(0, Math.min(1000, yearToSlider(e.start)));
-                      const toS   = Math.max(0, Math.min(1000, yearToSlider(e.end)));
-                      const active = sliderValue >= fromS && sliderValue < toS;
+            {/* BOTTOM: barre Gantt + slider (spinti in fondo con margin-top: auto) */}
+            <div className="mtab__bot">
+              {/* Sub-era bars per anno corrente */}
+              {(() => {
+                const active = getActivePeriods(currentYear);
+                if (active.length === 0) return null;
+                const laned = assignLanes(active);
+                const maxLane = Math.max(...laned.map(x => x.lane));
+                const macroEra = getCurrentMacroEra(currentYear);
+                const fromS = Math.max(0, Math.min(1000, yearToSlider(macroEra.start)));
+                const toS = Math.max(0, Math.min(1000, yearToSlider(macroEra.end)));
+                const range = Math.max(1, toS - fromS);
+                return (
+                  <div className="mtab__subbars" style={{ height: `${(maxLane + 1) * 28 + 4}px` }}>
+                    {laned.map(({ period: p, lane }) => {
+                      const pFrom = Math.max(fromS, Math.min(1000, yearToSlider(p.start)));
+                      const pTo = Math.max(fromS, Math.min(1000, yearToSlider(p.end)));
+                      const leftPct = (pFrom - fromS) / range * 100;
+                      const widthPct = Math.max(1, (pTo - pFrom) / range * 100);
                       return (
-                        <div
-                          key={e.name}
-                          className={`mtab__era-seg${active ? ' mtab__era-seg--on' : ''}`}
-                          style={{ left: `${fromS / 10}%`, width: `${Math.max(0.5, (toS - fromS) / 10)}%`, '--seg-color': e.color } as React.CSSProperties}
+                        <button
+                          key={p.name}
+                          className="mtab__subbar"
+                          style={{
+                            left: `${leftPct}%`,
+                            width: `${widthPct}%`,
+                            top: `${lane * 28}px`,
+                            '--bar-color': p.color,
+                          } as React.CSSProperties}
+                          onClick={() => onOpenEraGuide(p)}
+                          title={p.name}
                         >
-                          <span className="mtab__era-seg-lbl">{e.name}</span>
-                        </div>
+                          <span className="mtab__subbar-lbl">{p.name}</span>
+                        </button>
                       );
                     })}
                   </div>
+                );
+              })()}
+
+              <div className="mtab__slider-wrap">
+                {sliderDragging && (
+                  <div className="mtab__era-overlay">
+                    <div className="mtab__era-macro-row">
+                      {[getCurrentMacroEra(currentYear)].map(e => {
+                        const fromS = Math.max(0, Math.min(1000, yearToSlider(e.start)));
+                        const toS   = Math.max(0, Math.min(1000, yearToSlider(e.end)));
+                        const active = sliderValue >= fromS && sliderValue < toS;
+                        return (
+                          <div
+                            key={e.name}
+                            className={`mtab__era-seg${active ? ' mtab__era-seg--on' : ''}`}
+                            style={{ left: `${fromS / 10}%`, width: `${Math.max(0.5, (toS - fromS) / 10)}%`, '--seg-color': e.color } as React.CSSProperties}
+                          >
+                            <span className="mtab__era-seg-lbl">{e.name}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+                <input
+                  className="mtab__slider"
+                  type="range"
+                  min={0}
+                  max={1000}
+                  value={sliderValue}
+                  style={{ '--val': sliderValue } as React.CSSProperties}
+                  onChange={e => onSliderChange(Number(e.target.value))}
+                  onTouchStart={() => setSliderDragging(true)}
+                  onTouchEnd={() => setSliderDragging(false)}
+                  onMouseDown={() => setSliderDragging(true)}
+                  onMouseUp={() => setSliderDragging(false)}
+                />
+                <div className="mtab__slider-labels">
+                  <span>13.8 Mld a.C.</span>
+                  <span>OGGI</span>
                 </div>
-              )}
-              <input
-                className="mtab__slider"
-                type="range"
-                min={0}
-                max={1000}
-                value={sliderValue}
-                style={{ '--val': sliderValue } as React.CSSProperties}
-                onChange={e => onSliderChange(Number(e.target.value))}
-                onTouchStart={() => setSliderDragging(true)}
-                onTouchEnd={() => setSliderDragging(false)}
-                onMouseDown={() => setSliderDragging(true)}
-                onMouseUp={() => setSliderDragging(false)}
-              />
-              <div className="mtab__slider-labels">
-                <span>13.8 Mld a.C.</span>
-                <span>OGGI</span>
               </div>
             </div>
           </div>

@@ -56,14 +56,14 @@
 }
 
 .mdock__icon {
-  font-size: 16px;
+  font-size: 20px;
   color: rgba(0, 220, 190, 0.55);
   line-height: 1;
 }
 
 .mdock__lbl {
-  font-size: 7px;
-  letter-spacing: 0.08em;
+  font-size: 10px;
+  letter-spacing: 0.06em;
   color: rgba(0, 220, 190, 0.4);
   font-family: 'Courier New', monospace;
 }

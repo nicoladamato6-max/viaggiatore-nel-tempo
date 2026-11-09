@@ -41,12 +41,30 @@
   flex: 1;
   overflow-y: auto;
   padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .mtab__tm {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  min-height: 0;
+}
+
+.mtab__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.mtab__bot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
 }
 
 .mtab__year {
@@ -262,6 +280,19 @@
 .mtab-altro__btn--on .mtab-altro__icon,
 .mtab-altro__btn--on .mtab-altro__lbl {
   color: rgba(0, 220, 190, 0.95);
+}
+
+.mtab-altro__btn--admin .mtab-altro__icon {
+  color: rgba(255, 180, 60, 0.8);
+}
+
+.mtab-altro__btn--admin .mtab-altro__lbl {
+  color: rgba(255, 180, 60, 0.6);
+}
+
+.mtab-altro__btn--admin:hover .mtab-altro__icon,
+.mtab-altro__btn--admin:hover .mtab-altro__lbl {
+  color: rgba(255, 200, 80, 1);
 }
 
 .mtab__era-tag {
