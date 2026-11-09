@@ -98,14 +98,14 @@ jobs:
             exit 1
           fi
 
-          USER_ID=$(echo "$USERS_JSON" | python3 -c "
-import sys, json, os
-d = json.load(sys.stdin)
-users = d.get('users', [])
-email = os.environ.get('TEST_EMAIL_VAR', '')
-found = [u['id'] for u in users if u.get('email') == email]
-print(found[0] if found else '')
-" TEST_EMAIL_VAR="$TEST_EMAIL" 2>/dev/null || echo "")
+          USER_ID=$(echo "$USERS_JSON" | TEST_EMAIL_VAR="$TEST_EMAIL" python3 -c "
+          import sys, json, os
+          d = json.load(sys.stdin)
+          users = d.get('users', [])
+          email = os.environ.get('TEST_EMAIL_VAR', '')
+          found = [u['id'] for u in users if u.get('email') == email]
+          print(found[0] if found else '')
+          " 2>/dev/null || echo "")
 
           if [ -z "$USER_ID" ]; then
             echo "📝 Creo utente in staging Supabase..."
