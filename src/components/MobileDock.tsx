@@ -9,9 +9,10 @@ interface Props {
   getEra: (y: number) => { label: string; color: string };
   activeTab: MobileTabId | null;
   onOpenTab: (tab: MobileTabId) => void;
+  onOpenTimeMachine: () => void;
 }
 
-export function MobileDock({ currentYear, formatYear, getEra, activeTab, onOpenTab }: Props) {
+export function MobileDock({ currentYear, formatYear, getEra, activeTab, onOpenTab, onOpenTimeMachine }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const era = getEra(currentYear);
 
@@ -26,8 +27,7 @@ export function MobileDock({ currentYear, formatYear, getEra, activeTab, onOpenT
     return () => ro.disconnect();
   }, []);
 
-  const buttons: { id: MobileTabId; icon: string; lbl: string }[] = [
-    { id: 'tm',    icon: '⏱',  lbl: 'TEMPO' },
+  const tabButtons: { id: MobileTabId; icon: string; lbl: string }[] = [
     { id: 'cerca', icon: '⌕',  lbl: 'CERCA' },
     { id: 'ai',    icon: '⬡',  lbl: 'AI'    },
     { id: 'altro', icon: '···', lbl: 'ALTRO' },
@@ -39,13 +39,21 @@ export function MobileDock({ currentYear, formatYear, getEra, activeTab, onOpenT
         className="mdock__year"
         style={{ color: era.color }}
         onClick={() => onOpenTab('tm')}
-        title="Apri Macchina del Tempo"
+        title="Apri selezione epoca"
       >
         {formatYear(currentYear)}
       </button>
 
       <div className="mdock__btns">
-        {buttons.map(({ id, icon, lbl }) => (
+        <button
+          className="mdock__btn"
+          onClick={onOpenTimeMachine}
+          title="Macchina del Tempo"
+        >
+          <span className="mdock__icon">⏱</span>
+          <span className="mdock__lbl">TEMPO</span>
+        </button>
+        {tabButtons.map(({ id, icon, lbl }) => (
           <button
             key={id}
             className={`mdock__btn${activeTab === id ? ' mdock__btn--on' : ''}`}

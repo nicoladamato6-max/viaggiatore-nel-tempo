@@ -97,8 +97,20 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fu
     [event?.id, events], // eslint-disable-line react-hooks/exhaustive-deps
   );
 
+  const isFirstMsgRef = useRef(true);
+
   useEffect(() => {
-    if (bodyRef.current) bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    isFirstMsgRef.current = true;
+    if (bodyRef.current) bodyRef.current.scrollTop = 0;
+  }, [event?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    if (!bodyRef.current) return;
+    if (isFirstMsgRef.current) {
+      isFirstMsgRef.current = false;
+      return; // Lascia scroll in cima per la prima analisi
+    }
+    bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
   }, [messages]);
 
   // Auto-analysis when entity changes

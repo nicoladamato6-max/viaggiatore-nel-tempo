@@ -269,6 +269,8 @@ function AppInner() {
   const [infoPanelVisible,  setInfoPanelVisible]  = useState(true);
   const [timeMachineOpen,   setTimeMachineOpen]   = useState(false);
   const [mobileTab, setMobileTab] = useState<MobileTabId | null>(null);
+  const [lastSelectedEvent, setLastSelectedEvent] = useState<HistoricalEvent | null>(null);
+  const [velOpen, setVelOpen] = useState(false);
 
   // Rileva redirect post-conferma email (#type=signup o #type=recovery nel hash)
   useEffect(() => {
@@ -462,6 +464,7 @@ function AppInner() {
   // Ricerca: corpi celesti → flyTo 'body'; lune → flyTo verso il pianeta genitore; eventi storici → geo + slider
   const handleSearchSelect = useCallback((event: HistoricalEvent) => {
     setSelectedEvent(event);
+    setLastSelectedEvent(event);
 
     if (event.id.startsWith('moon-')) {
       // Luna selezionata: vola verso il pianeta genitore
@@ -564,6 +567,7 @@ function AppInner() {
   // Click diretto su un'entità nel globo (La telecamera si muove già dentro GlobeView)
   const handleEventClick = useCallback((event: HistoricalEvent) => {
     setSelectedEvent(event);
+    setLastSelectedEvent(event);
     // I corpi celesti gestiscono il flyTo internamente in GlobeView — non innescare qui
     if (!event.isCosmic && event.lat != null && event.lng != null) {
       setFlyTo({ kind: 'geo', lat: event.lat, lng: event.lng, ts: Date.now() });
@@ -596,6 +600,7 @@ function AppInner() {
       isCosmic: false,
     };
     setSelectedEvent(placeholder);
+    setLastSelectedEvent(placeholder);
 
     // Fetch Wikidata per data + coordinate + categoria
     try {
@@ -687,6 +692,7 @@ function AppInner() {
 
       const enriched: HistoricalEvent = { ...placeholder, year: year ?? placeholder.year, lat, lng, category };
       setSelectedEvent(enriched);
+      setLastSelectedEvent(enriched);
 
       if (year !== undefined) setSliderValue(yearToSlider(year));
       if (lat !== undefined && lng !== undefined) {
@@ -914,7 +920,7 @@ function AppInner() {
       )}
       {aiPanelOpen && (
         <AIPanel
-          event={selectedEvent}
+          event={isMobile ? (selectedEvent ?? lastSelectedEvent) : selectedEvent}
           locale={locale}
           onClose={() => { setAiPanelOpen(false); if (isMobile) setMobileTab(null); }}
           events={ALL_SEARCHABLE}
@@ -1002,11 +1008,17 @@ function AppInner() {
             {globeAndControls}
           </div>
 
-          {/* InfoPanel bottom sheet — only when no tab open */}
-          {!mobileTab && selectedEvent && (
-            <div className="mobile-bottom-sheet">
-              <div className="mobile-bottom-sheet__grip" />
-              <InfoPanel event={selectedEvent} locale={locale} onClose={() => setSelectedEvent(null)} events={ALL_SEARCHABLE} onSelectEvent={handleEventClick} />
+          {/* InfoPanel overlay — full screen above dock */}
+          {selectedEvent && !mobileTab && (
+            <div className="mobile-info-overlay">
+              <InfoPanel
+                event={selectedEvent}
+                locale={locale}
+                onClose={() => setSelectedEvent(null)}
+                events={ALL_SEARCHABLE}
+                onSelectEvent={handleEventClick}
+                hideDock
+              />
             </div>
           )}
 
@@ -1048,8 +1060,63 @@ function AppInner() {
               onToggleHoloOverlays={() => setShowHoloOverlays(v => !v)}
               onLocaleToggle={() => setLocale(l => l === 'it' ? 'en' : 'it')}
               user={user ? { email: user.email, role: user.role } : null}
-              onAuthClick={() => user ? setUserMenuOpen(v => !v) : setAuthOpen(true)}
+              onAuthClick={() => {
+                if (!user) { setAuthOpen(true); return; }
+                if (user.role === 'admin') setAdminOpen(true);
+                else setProfileOpen(true);
+              }}
+              velOpen={velOpen}
+              onToggleVel={() => setVelOpen(v => !v)}
+              onOpenEraGuide={(period) => {
+                const result = getStaticBriefingWithMeta(period.start, locale);
+                if (result) {
+                  setEraGuide({
+                    briefing: result.briefing,
+                    eraName: result.era.name,
+                    eraSlug: result.era.wikipediaSlug ?? '',
+                    eraYear: period.start,
+                    locale,
+                    originLat: result.era.originLat,
+                    originLng: result.era.originLng,
+                  });
+                  setEraGuideOpen(true);
+                }
+                setMobileTab(null);
+              }}
             />
+          )}
+
+          {/* Velocità widget — floating above dock */}
+          {velOpen && (
+            <div className="mobile-vel-widget">
+              {([
+                { code: 'HyperBack', label: '⏪ Iper-rev', thrust: true },
+                { code: 'KeyS',      label: '◀ Retro',     thrust: false },
+                { code: 'KeyW',      label: 'Avanti ▶',    thrust: true },
+                { code: 'HyperFwd',  label: 'Iper ⏩',     thrust: true },
+              ] as { code: string; label: string; thrust: boolean }[]).map(({ code, label, thrust }) => (
+                <button
+                  key={code}
+                  className="mobile-vel-widget__btn"
+                  onPointerDown={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new KeyboardEvent('keydown', { code, bubbles: true }));
+                    if (thrust) setThrustActive(true);
+                  }}
+                  onPointerUp={() => {
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }));
+                    if (thrust) setThrustActive(false);
+                  }}
+                  onPointerLeave={() => {
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }));
+                    if (thrust) setThrustActive(false);
+                  }}
+                >
+                  {label}
+                </button>
+              ))}
+              <button className="mobile-vel-widget__close" onClick={() => setVelOpen(false)}>✕</button>
+            </div>
           )}
 
           {/* Mobile dock */}
@@ -1067,6 +1134,7 @@ function AppInner() {
                 setMobileTab(prev => prev === tab ? null : tab);
               }
             }}
+            onOpenTimeMachine={() => setTimeMachineOpen(v => !v)}
           />
         </>
       ) : (

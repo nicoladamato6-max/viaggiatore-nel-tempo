@@ -263,3 +263,60 @@
 .mtab-altro__btn--on .mtab-altro__lbl {
   color: rgba(0, 220, 190, 0.95);
 }
+
+.mtab__era-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--chip-color, rgba(0,220,190,0.4));
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(0, 220, 190, 0.85);
+  background: rgba(0, 220, 190, 0.07);
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  align-self: center;
+}
+
+.mtab__era-tag:active {
+  background: rgba(0, 220, 190, 0.18);
+}
+
+.mtab__subbars {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mtab__subbar {
+  position: absolute;
+  height: 24px;
+  background: rgba(0,0,0,0.5);
+  border-top: 2px solid var(--bar-color, rgba(0,220,190,0.5));
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  cursor: pointer;
+  min-width: 20px;
+}
+
+.mtab__subbar:active {
+  background: rgba(0,0,0,0.8);
+  border-top-width: 3px;
+}
+
+.mtab__subbar-lbl {
+  font-size: 7px;
+  color: var(--bar-color, rgba(0,220,190,0.8));
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Courier New', monospace;
+  pointer-events: none;
+}

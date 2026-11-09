@@ -3,11 +3,9 @@ import {
   type HistoricalEvent,
   type WikiSearchResult,
 } from '../types';
-import { type Period, MACRO_ERAS, SUBCATEGORIES } from '../data/historicalPeriods';
+import { type Period, SUBCATEGORIES, getCurrentMacroEra, getActivePeriods, assignLanes } from '../data/historicalPeriods';
 import { SearchBar } from './SearchBar';
 import './MobileTabOverlay.css';
-
-export type MobileTabId = 'tm' | 'cerca' | 'ai' | 'altro';
 
 function SpeedBtn({ code, label, title: t, onDown, onUp }: {
   code: string; label: string; title?: string;
@@ -27,6 +25,8 @@ function SpeedBtn({ code, label, title: t, onDown, onUp }: {
     </button>
   );
 }
+
+export type MobileTabId = 'tm' | 'cerca' | 'ai' | 'altro';
 
 interface Props {
   tab: MobileTabId;
@@ -51,6 +51,9 @@ interface Props {
   onLocaleToggle: () => void;
   user: { email: string; role: string } | null;
   onAuthClick: () => void;
+  velOpen: boolean;
+  onToggleVel: () => void;
+  onOpenEraGuide: (p: Period) => void;
 }
 
 export function MobileTabOverlay(props: Props) {
@@ -62,6 +65,7 @@ export function MobileTabOverlay(props: Props) {
     showTerritories, onToggleTerritories,
     showHoloOverlays, onToggleHoloOverlays,
     onLocaleToggle, user, onAuthClick,
+    velOpen, onToggleVel, onOpenEraGuide,
   } = props;
 
   const [sliderDragging, setSliderDragging] = useState(false);
@@ -97,22 +101,23 @@ export function MobileTabOverlay(props: Props) {
               <span className="mtab-altro__icon">{user ? '●' : '○'}</span>
               <span className="mtab-altro__lbl">{user ? 'ACC' : 'LOG'}</span>
             </button>
+            <button
+              className={`mtab-altro__btn${velOpen ? ' mtab-altro__btn--on' : ''}`}
+              onClick={onToggleVel}
+            >
+              <span className="mtab-altro__icon">⚡</span>
+              <span className="mtab-altro__lbl">VEL.</span>
+            </button>
           </div>
         </div>
       </div>
     );
   }
 
-  const titles: Record<string, string> = {
-    tm:    locale === 'it' ? 'Macchina del Tempo' : 'Time Machine',
-    cerca: locale === 'it' ? 'Cerca' : 'Search',
-  };
-
   return (
     <div className="mtab">
       <div className="mtab__hdr">
-        <button className="mtab__back" onClick={onClose}>← Globo</button>
-        <span className="mtab__title">{titles[tab] ?? tab}</span>
+        <button className="mtab__back" onClick={onClose}>← Torna Indietro</button>
       </div>
 
       <div className="mtab__body">
@@ -121,33 +126,58 @@ export function MobileTabOverlay(props: Props) {
             <div className="mtab__year" style={{ color: era.color }}>
               {formatYear(currentYear)}
             </div>
-            <div className="mtab__era-name" style={{ color: era.color }}>
-              {era.label}
-            </div>
 
-            <div className="mtab__era-chips">
-              {MACRO_ERAS.map(e => {
-                const fromS = Math.max(0, Math.min(1000, yearToSlider(e.start)));
-                const toS   = Math.max(0, Math.min(1000, yearToSlider(e.end)));
-                const active = sliderValue >= fromS && sliderValue < toS;
-                return (
-                  <button
-                    key={e.name}
-                    className={`mtab__era-chip${active ? ' mtab__era-chip--on' : ''}`}
-                    style={{ '--chip-color': e.color } as React.CSSProperties}
-                    onClick={() => onSliderChange(Math.round((fromS + toS) / 2))}
-                  >
-                    {e.name}
-                  </button>
-                );
-              })}
-            </div>
+            <button
+              className="mtab__era-tag"
+              style={{ '--chip-color': era.color } as React.CSSProperties}
+              onClick={() => onOpenEraGuide(getCurrentMacroEra(currentYear))}
+            >
+              {era.label}
+            </button>
+
+            {/* Sub-era bars per anno corrente */}
+            {(() => {
+              const active = getActivePeriods(currentYear);
+              if (active.length === 0) return null;
+              const laned = assignLanes(active);
+              const maxLane = Math.max(...laned.map(x => x.lane));
+              const macroEra = getCurrentMacroEra(currentYear);
+              const fromS = Math.max(0, Math.min(1000, yearToSlider(macroEra.start)));
+              const toS = Math.max(0, Math.min(1000, yearToSlider(macroEra.end)));
+              const range = Math.max(1, toS - fromS);
+              return (
+                <div className="mtab__subbars" style={{ height: `${(maxLane + 1) * 28 + 4}px` }}>
+                  {laned.map(({ period: p, lane }) => {
+                    const pFrom = Math.max(fromS, Math.min(1000, yearToSlider(p.start)));
+                    const pTo = Math.max(fromS, Math.min(1000, yearToSlider(p.end)));
+                    const leftPct = (pFrom - fromS) / range * 100;
+                    const widthPct = Math.max(1, (pTo - pFrom) / range * 100);
+                    return (
+                      <button
+                        key={p.name}
+                        className="mtab__subbar"
+                        style={{
+                          left: `${leftPct}%`,
+                          width: `${widthPct}%`,
+                          top: `${lane * 28}px`,
+                          '--bar-color': p.color,
+                        } as React.CSSProperties}
+                        onClick={() => onOpenEraGuide(p)}
+                        title={p.name}
+                      >
+                        <span className="mtab__subbar-lbl">{p.name}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              );
+            })()}
 
             <div className="mtab__slider-wrap">
               {sliderDragging && (
                 <div className="mtab__era-overlay">
                   <div className="mtab__era-macro-row">
-                    {MACRO_ERAS.map(e => {
+                    {[getCurrentMacroEra(currentYear)].map(e => {
                       const fromS = Math.max(0, Math.min(1000, yearToSlider(e.start)));
                       const toS   = Math.max(0, Math.min(1000, yearToSlider(e.end)));
                       const active = sliderValue >= fromS && sliderValue < toS;
@@ -182,13 +212,6 @@ export function MobileTabOverlay(props: Props) {
                 <span>OGGI</span>
               </div>
             </div>
-
-            <div className="mtab__speed-row">
-              <SpeedBtn code="HyperBack" label="⏪ Iper-rev" title="Iper-rev" onDown={onThrustStart} onUp={onThrustEnd} />
-              <SpeedBtn code="KeyS"      label="◀ Retro"    title="Retro" />
-              <SpeedBtn code="KeyW"      label="Avanti ▶"   title="Avanti" onDown={onThrustStart} onUp={onThrustEnd} />
-              <SpeedBtn code="HyperFwd"  label="Iper ⏩"    title="Iper" onDown={onThrustStart} onUp={onThrustEnd} />
-            </div>
           </div>
         )}
 
@@ -197,7 +220,7 @@ export function MobileTabOverlay(props: Props) {
             <SearchBar
               events={events}
               onSelect={(ev) => { onSearch(ev); onClose(); }}
-              onWikiSelect={onWikiSelect ?? (() => {})}
+              onWikiSelect={(r) => { onWikiSelect?.(r); onClose(); }}
               onEpochSelect={onEpochSelect}
               epochs={SUBCATEGORIES}
               locale={locale}
@@ -208,3 +231,6 @@ export function MobileTabOverlay(props: Props) {
     </div>
   );
 }
+
+// Re-export SpeedBtn for use in App.tsx velocity widget
+export { SpeedBtn };

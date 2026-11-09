@@ -222,6 +222,7 @@ interface Props {
   eraGuideName?:    string;
   events?:          HistoricalEvent[];
   onSelectEvent?:   (ev: HistoricalEvent) => void;
+  hideDock?:        boolean;
 }
 
 async function fetchWikiImages(slug: string, lang: string): Promise<string[]> {
@@ -265,7 +266,7 @@ async function fetchWikiImages(slug: string, lang: string): Promise<string[]> {
   } catch { return []; }
 }
 
-export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName }: Props) {
+export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName, hideDock }: Props) {
   const [activeTab,    setActiveTab]    = useState<'info' | 'media'>('info');
   const [mediaImages,  setMediaImages]  = useState<string[]>([]);
   const [mediaLoading, setMediaLoading] = useState(false);
@@ -490,7 +491,7 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
         </div>
         <div style={{ display: 'flex', gap: 4, alignItems: 'center', flexShrink: 0 }}>
           {/* Undock / Re-anchor */}
-          {dockMode === 'anchored' ? (
+          {!hideDock && (dockMode === 'anchored' ? (
             <button
               className="info-panel__icon-btn"
               onClick={undock}
@@ -502,7 +503,7 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
               onClick={() => { setDockMode('anchored'); setPos(null); }}
               title={locale === 'it' ? 'Ancora a destra' : 'Dock to right'}
             >⊢</button>
-          )}
+          ))}
           {/* TTS */}
           {window.speechSynthesis && (
             <button
@@ -645,6 +646,17 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
 
   // ── Anchored mode ─────────────────────────────────────────────────────────
   if (dockMode === 'anchored') {
+    if (hideDock) {
+      return (
+        <div
+          ref={panelRef}
+          className="info-panel info-panel--anchored info-panel--visible"
+          style={{ width: '100%', height: '100%', position: 'relative', borderRadius: 0 }}
+        >
+          {panelContent}
+        </div>
+      );
+    }
     return (
       <div
         ref={panelRef}
