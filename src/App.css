@@ -3268,3 +3268,11 @@ body {
   min-height: 0;
   flex-direction: column;
 }
+
+/* Su mobile il mirino deve centrarsi sull'area del globo (sopra la console),
+   non sul viewport intero. Spostiamo su di metà altezza console. */
+@media (max-width: 767px) {
+  .globe-crosshair {
+    top: calc(50% - var(--console-h, 140px) / 2);
+  }
+}
