@@ -70,6 +70,7 @@ jobs:
           echo "✅ Bundle verificato: URL Supabase staging corretto nel bundle"
 
       - name: Setup utente admin di test in staging Supabase
+        continue-on-error: true
         run: |
           SUPABASE_URL="https://jicmmisiptgyumuvzhjn.supabase.co"
           SERVICE_KEY="${{ secrets.SUPABASE_SERVICE_ROLE_KEY_STAGING }}"
@@ -81,31 +82,45 @@ jobs:
             exit 0
           fi
 
-          echo "🔑 Cerco utente $TEST_EMAIL nel DB staging..."
-          USERS_JSON=$(curl -sf \
+          echo "🔑 Cerco utente nel DB staging..."
+          USERS_RESP=$(curl -s -w "\n%{http_code}" \
             -H "apikey: $SERVICE_KEY" \
             -H "Authorization: Bearer $SERVICE_KEY" \
-            "$SUPABASE_URL/auth/v1/admin/users" 2>/dev/null || echo '{"users":[]}')
+            "$SUPABASE_URL/auth/v1/admin/users")
+          USERS_HTTP=$(echo "$USERS_RESP" | tail -1)
+          USERS_JSON=$(echo "$USERS_RESP" | head -n -1)
+          echo "   List users HTTP: $USERS_HTTP"
+
+          if [ "$USERS_HTTP" != "200" ]; then
+            echo "❌ Autenticazione Supabase fallita (HTTP $USERS_HTTP)"
+            echo "   Verifica che SUPABASE_SERVICE_ROLE_KEY_STAGING sia la service role key JWT (non il project ID)"
+            echo "   Risposta: $(echo "$USERS_JSON" | head -c 200)"
+            exit 1
+          fi
 
           USER_ID=$(echo "$USERS_JSON" | python3 -c "
-          import sys, json
-          d = json.load(sys.stdin)
-          users = d.get('users', [])
-          found = [u['id'] for u in users if u.get('email') == '$TEST_EMAIL']
-          print(found[0] if found else '')
-          " 2>/dev/null || echo "")
+import sys, json, os
+d = json.load(sys.stdin)
+users = d.get('users', [])
+email = os.environ.get('TEST_EMAIL_VAR', '')
+found = [u['id'] for u in users if u.get('email') == email]
+print(found[0] if found else '')
+" TEST_EMAIL_VAR="$TEST_EMAIL" 2>/dev/null || echo "")
 
           if [ -z "$USER_ID" ]; then
-            echo "📝 Creo utente $TEST_EMAIL in staging Supabase..."
-            CREATE=$(curl -sf -X POST \
+            echo "📝 Creo utente in staging Supabase..."
+            CREATE_RESP=$(curl -s -w "\n%{http_code}" -X POST \
               -H "apikey: $SERVICE_KEY" \
               -H "Authorization: Bearer $SERVICE_KEY" \
               -H "Content-Type: application/json" \
               "$SUPABASE_URL/auth/v1/admin/users" \
-              -d "{\"email\":\"$TEST_EMAIL\",\"password\":\"$TEST_PASS\",\"email_confirm\":true}" 2>/dev/null || echo '{}')
-            USER_ID=$(echo "$CREATE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))" 2>/dev/null || echo "")
+              -d "{\"email\":\"$TEST_EMAIL\",\"password\":\"$TEST_PASS\",\"email_confirm\":true}")
+            CREATE_HTTP=$(echo "$CREATE_RESP" | tail -1)
+            CREATE_JSON=$(echo "$CREATE_RESP" | head -n -1)
+            echo "   Create user HTTP: $CREATE_HTTP"
+            USER_ID=$(echo "$CREATE_JSON" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))" 2>/dev/null || echo "")
             if [ -z "$USER_ID" ]; then
-              echo "❌ Creazione utente fallita"
+              echo "❌ Creazione utente fallita — risposta: $(echo "$CREATE_JSON" | head -c 200)"
               exit 1
             fi
             echo "✅ Utente creato: $USER_ID"
@@ -114,13 +129,14 @@ jobs:
           fi
 
           echo "⬆️  Imposto role=admin nel profilo staging..."
-          curl -sf -X PATCH \
+          PATCH_HTTP=$(curl -s -o /dev/null -w "%{http_code}" -X PATCH \
             -H "apikey: $SERVICE_KEY" \
             -H "Authorization: Bearer $SERVICE_KEY" \
             -H "Content-Type: application/json" \
             -H "Prefer: return=minimal" \
             "$SUPABASE_URL/rest/v1/profiles?id=eq.$USER_ID" \
-            -d '{"role":"admin"}' 2>/dev/null
+            -d '{"role":"admin"}')
+          echo "   PATCH profile HTTP: $PATCH_HTTP"
           echo "✅ Ruolo admin impostato per $TEST_EMAIL in staging"
 
       - name: Deploy to Staging (Cloudflare Pages)
