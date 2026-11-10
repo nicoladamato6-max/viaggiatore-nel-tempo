@@ -643,7 +643,7 @@ function EllipGalaxy({ pos, rx, ry, rz, rot, color, n, label, galaxyId, show = t
           <meshBasicMaterial transparent opacity={0} depthWrite={false} />
         </mesh>
       )}
-      <Html center position={[0, labelY, 0]} zIndexRange={[0, 0]}>
+      <Html center position={[0, labelY, 0]} zIndexRange={[150, 0]}>
         <div style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none',
           ...(handleLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
           onClick={handleLabelClick}>
@@ -741,7 +741,7 @@ function DistantGalaxies({ show = true, onLabelClick }: { show?: boolean; onLabe
             <meshBasicMaterial transparent opacity={0} depthWrite={false} />
           </mesh>
         )}
-        <Html center position={[0, 200, 0]} zIndexRange={[0, 0]}>
+        <Html center position={[0, 200, 0]} zIndexRange={[150, 0]}>
           <div style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none',
             ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
             onClick={onLabelClick ? (e: React.MouseEvent) => { e.stopPropagation(); onLabelClick('galaxy-andromeda'); } : undefined}>
@@ -927,7 +927,7 @@ function NebulaCloud({ id, pos, color, r, n, label, show, onLabelClick }: Nebula
           <meshBasicMaterial transparent opacity={0} depthWrite={false} />
         </mesh>
       )}
-      <Html center position={[0, r * 1.2, 0]} zIndexRange={[0, 0]}>
+      <Html center position={[0, r * 1.2, 0]} zIndexRange={[150, 0]}>
         <div style={{ ...GALAXY_LABEL_STYLE, ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer', color } : {}) }}
           onClick={handleClick}>
           {label}
@@ -1241,7 +1241,7 @@ function SunSphere({ onClick, flyTo, show = true }: { onClick: () => void; flyTo
           metalness={0}
         />
       </mesh>
-      <Html center position={[0, SUN_VR * 1.6, 0]} zIndexRange={[0, 0]}>
+      <Html center position={[0, SUN_VR * 1.6, 0]} zIndexRange={[150, 0]}>
         <div style={{ ...LABEL_STYLE, display: show ? undefined : 'none', cursor: 'pointer', pointerEvents: 'auto' }}
           onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...SUN_POS), SUN_VR); onClick(); }}>
           ☀️ Sole
@@ -1260,7 +1260,7 @@ function EarthSphere({ onClick, flyTo, show = true }: { onClick: () => void; fly
         <sphereGeometry args={[EARTH_VR, 32, 32]} />
         <meshStandardMaterial color="#1e5fa8" roughness={0.7} metalness={0} />
       </mesh>
-      <Html center position={[0, EARTH_VR * 1.8, 0]} zIndexRange={[0, 0]}>
+      <Html center position={[0, EARTH_VR * 1.8, 0]} zIndexRange={[150, 0]}>
         <div style={{ ...LABEL_STYLE, display: show ? undefined : 'none', cursor: 'pointer', pointerEvents: 'auto' }}
           onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(0, 0, 0), EARTH_VR); onClick(); }}>
           🌍 Terra
@@ -1283,7 +1283,7 @@ function MoonSphere({ onClick, flyTo, show = true }: { onClick: () => void; flyT
         <sphereGeometry args={[MOON_VR, 24, 24]} />
         <meshStandardMaterial color="#b8b8b8" roughness={1} metalness={0} />
       </mesh>
-      <Html center position={[0, MOON_VR * 2, 0]} zIndexRange={[0, 0]}>
+      <Html center position={[0, MOON_VR * 2, 0]} zIndexRange={[150, 0]}>
         <div style={{ ...LABEL_STYLE, display: show ? undefined : 'none', cursor: 'pointer', pointerEvents: 'auto' }}
           onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...pos), MOON_VR); onClick(); }}>
           🌕 Luna
@@ -1329,7 +1329,7 @@ function PlanetSphere({ planet, onClick, flyTo, show = true }: { planet: typeof 
           <meshStandardMaterial color="#c8b570" transparent opacity={0.65} roughness={1} />
         </mesh>
       )}
-      <Html center position={[0, vr * 1.8, 0]} zIndexRange={[0, 0]}>
+      <Html center position={[0, vr * 1.8, 0]} zIndexRange={[150, 0]}>
         <div style={{ ...LABEL_STYLE, display: show ? undefined : 'none', cursor: 'pointer', pointerEvents: 'auto' }}
           onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...pos), vr); onClick(); }}>
           {PLANET_ICONS[planet.id] ?? '🪐'} {planet.name}
@@ -1434,7 +1434,7 @@ function NearbyStar({ id, name, pos, color, show = true, onLabelClick }: {
       <sprite scale={[3.5, 3.5, 1]}>
         <spriteMaterial map={glowTex} color={color} transparent blending={THREE.AdditiveBlending} depthWrite={false} opacity={0.75} />
       </sprite>
-      <Html center position={[0, 1.2, 0]} zIndexRange={[0, 0]}>
+      <Html center position={[0, 1.2, 0]} zIndexRange={[150, 0]}>
         <div style={{ ...GALAXY_LABEL_STYLE, display: show ? undefined : 'none', ...(onLabelClick ? { pointerEvents: 'auto', cursor: 'pointer' } : {}) }}
           onClick={handleClick}>
           {name}
@@ -1475,7 +1475,7 @@ function DwarfPlanetSphere({ dwarf, flyTo, show = true, onBodyLabelClick }: { dw
         <sphereGeometry args={[vr, 18, 18]} />
         <meshStandardMaterial color={dwarf.color} roughness={0.9} metalness={0.02} />
       </mesh>
-      <Html center position={[0, vr * 2, 0]} zIndexRange={[0, 0]}>
+      <Html center position={[0, vr * 2, 0]} zIndexRange={[150, 0]}>
         <div style={{ ...LABEL_STYLE, display: show ? undefined : 'none', cursor: 'pointer', pointerEvents: 'auto' }}
           onClick={(e: React.MouseEvent) => { e.stopPropagation(); flyTo(new THREE.Vector3(...dwarf.pos), vr); if (onBodyLabelClick) onBodyLabelClick('dwarf-' + dwarf.id); }}>
           ⚫ {dwarf.name}
