@@ -166,6 +166,7 @@
   bottom: calc(100% + 4px) !important;
   top: auto !important;
   max-height: 260px;
+  overflow-y: auto !important;
   font-size: 10px !important;
   background: #020c18 !important;
   border: 1px solid var(--bc-b45) !important;
