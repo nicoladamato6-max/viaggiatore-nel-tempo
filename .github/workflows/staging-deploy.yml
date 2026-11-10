@@ -135,7 +135,7 @@ jobs:
             -H "Content-Type: application/json" \
             -H "Prefer: resolution=merge-duplicates,return=minimal" \
             "$SUPABASE_URL/rest/v1/profiles" \
-            -d "{\"id\":\"$USER_ID\",\"role\":\"admin\"}")
+            -d "{\"id\":\"$USER_ID\",\"email\":\"$TEST_EMAIL\",\"role\":\"admin\"}")
           UPSERT_HTTP=$(echo "$UPSERT_RESP" | tail -1)
           UPSERT_BODY=$(echo "$UPSERT_RESP" | head -n -1)
           echo "   UPSERT profile HTTP: $UPSERT_HTTP"
