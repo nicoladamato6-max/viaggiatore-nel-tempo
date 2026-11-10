@@ -17,6 +17,7 @@ export interface HistoricalEvent {
   wikipediaSlug: string;
   imageUrl?: string;
   isCosmic: boolean;
+  isFuture?: boolean;
 }
 
 export const ENTITY_TYPE_LABELS: Record<EntityType, string> = {

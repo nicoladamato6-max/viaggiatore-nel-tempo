@@ -575,40 +575,54 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
         </div>
 
         {activeTab === 'info' && (
-          <>
-            <div className="info-panel__wiki-wrap">
-              {loading && (
-                <div className="info-panel__loading">
-                  <span className="info-panel__spinner" /> Caricamento Wikipedia…
-                </div>
-              )}
-              {!loading && body && (
-                <div ref={wikiBodyRef} className="wiki-body" dangerouslySetInnerHTML={{ __html: body }} />
-              )}
-              {!loading && !body && (
-                <p style={{ fontSize: '0.72rem', color: '#888', padding: '12px 14px' }}>
-                  Articolo Wikipedia non disponibile.
-                </p>
-              )}
+          event.isFuture ? (
+            <div className="info-panel__future-disclaimer">
+              <div className="info-panel__future-disclaimer-icon">🔮</div>
+              <p className="info-panel__future-disclaimer-text">
+                Questo è uno <strong>scenario ipotetico generato da intelligenza artificiale</strong>.
+                Non rappresenta una previsione, una profezia o una fonte storica.
+                È uno strumento narrativo per esplorare possibili futuri plausibili.
+              </p>
+              <p className="info-panel__future-disclaimer-note">
+                Generato da Claude (Anthropic) · Scenario d'esplorazione
+              </p>
             </div>
-            <div className="info-panel__footer">
-              <a
-                href={
-                  wikiUrl ||
-                  (event.wikipediaSlug
-                    ? `https://it.wikipedia.org/wiki/${event.wikipediaSlug}`
-                    : `https://it.wikipedia.org/w/index.php?search=${encodeURIComponent(event.title.split(/\s*[—–]\s*/)[0].trim())}`)
-                }
-                target="_blank" rel="noopener noreferrer" className="info-panel__wiki-btn"
-              >
-                {wikiUrl || event.wikipediaSlug ? 'Apri Wikipedia in una nuova scheda' : 'Cerca su Wikipedia'}
-              </a>
-              <span className="info-panel__license">
-                Testo da <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a>{', '}licenza{' '}
-                <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>
-              </span>
-            </div>
-          </>
+          ) : (
+            <>
+              <div className="info-panel__wiki-wrap">
+                {loading && (
+                  <div className="info-panel__loading">
+                    <span className="info-panel__spinner" /> Caricamento Wikipedia…
+                  </div>
+                )}
+                {!loading && body && (
+                  <div ref={wikiBodyRef} className="wiki-body" dangerouslySetInnerHTML={{ __html: body }} />
+                )}
+                {!loading && !body && (
+                  <p style={{ fontSize: '0.72rem', color: '#888', padding: '12px 14px' }}>
+                    Articolo Wikipedia non disponibile.
+                  </p>
+                )}
+              </div>
+              <div className="info-panel__footer">
+                <a
+                  href={
+                    wikiUrl ||
+                    (event.wikipediaSlug
+                      ? `https://it.wikipedia.org/wiki/${event.wikipediaSlug}`
+                      : `https://it.wikipedia.org/w/index.php?search=${encodeURIComponent(event.title.split(/\s*[—–]\s*/)[0].trim())}`)
+                  }
+                  target="_blank" rel="noopener noreferrer" className="info-panel__wiki-btn"
+                >
+                  {wikiUrl || event.wikipediaSlug ? 'Apri Wikipedia in una nuova scheda' : 'Cerca su Wikipedia'}
+                </a>
+                <span className="info-panel__license">
+                  Testo da <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">Wikipedia</a>{', '}licenza{' '}
+                  <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>
+                </span>
+              </div>
+            </>
+          )
         )}
 
         {activeTab === 'media' && (

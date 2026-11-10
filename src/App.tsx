@@ -21,7 +21,7 @@ import { MobileDock, type MobileTabId } from './components/MobileDock';
 import { MobileTabOverlay } from './components/MobileTabOverlay';
 
 // ── Opzione C: chunk per era, import dinamici ─────────────────────────────────
-const ERA_KEYS = ['cosmo', 'preistoria', 'antica', 'medioevo', 'moderna', 'ottocento', 'novecento', 'contemporanea', 'senza_anno'] as const;
+const ERA_KEYS = ['cosmo', 'preistoria', 'antica', 'medioevo', 'moderna', 'ottocento', 'novecento', 'contemporanea', 'futuro', 'senza_anno'] as const;
 type EraKey = typeof ERA_KEYS[number];
 
 function getEraKey(year: number | null, isCosmic: boolean): EraKey {
@@ -33,6 +33,7 @@ function getEraKey(year: number | null, isCosmic: boolean): EraKey {
   if (year < 1789)    return 'moderna';
   if (year < 1914)    return 'ottocento';
   if (year < 1945)    return 'novecento';
+  if (year > 2026)    return 'futuro';
   return 'contemporanea';
 }
 
@@ -45,6 +46,7 @@ const ERA_IMPORTS: Record<EraKey, () => Promise<{ default: unknown[] }>> = {
   ottocento:     () => import('./data/chunks/era-ottocento.json'),
   novecento:     () => import('./data/chunks/era-novecento.json'),
   contemporanea: () => import('./data/chunks/era-contemporanea.json'),
+  futuro:        () => import('./data/chunks/era-futuro.json'),
   senza_anno:    () => import('./data/chunks/era-senza_anno.json'),
 };
 
@@ -186,7 +188,8 @@ const BP = [
   { s: 640,  y:             476 },  // Medioevo
   { s: 720,  y:            1492 },  // Età Moderna
   { s: 800,  y:            1789 },  // Età Contemporanea
-  { s: 1000, y:            2025 },  // Oggi
+  { s: 950,  y:            2026 },  // Oggi
+  { s: 1000, y:            2200 },  // Futuro (scenario ipotetico)
 ] as const;
 
 function sliderToYear(v: number): number {
@@ -227,7 +230,8 @@ function getTimeWindow(year: number): { from: number; to: number } {
   if (year <= 1_799)         return { from: year - 50,          to: year + 50                           }; // Eta Moderna: 400ev/199y
   if (year <= 1_913)         return { from: year - 23,          to: year + 23                           }; // Ottocento: 500ev/113y
   if (year <= 1_945)         return { from: year - 5,           to: year + 5                            }; // Novecento: 600ev/31y
-  return                            { from: year - 10,          to: year + 10                           }; // Contemporaneo: 800ev/78y
+  if (year <= 2_026)         return { from: year - 10,          to: year + 10                           }; // Contemporaneo: 800ev/78y
+  return                            { from: year - 20,          to: year + 20                           }; // Futuro ipotetico
 }
 
 export function formatYear(year: number): string {
@@ -235,6 +239,7 @@ export function formatYear(year: number): string {
   if (Math.abs(year) >= 1_000_000_000) return `${(Math.abs(year) / 1_000_000_000).toFixed(1)} mld a.C.`;
   if (Math.abs(year) >= 1_000_000)     return `${(Math.abs(year) / 1_000_000).toFixed(0)} mln a.C.`;
   if (year < 0) return `${Math.abs(year)} a.C.`;
+  if (year > 2026) return `🔮 ${year} d.C.`;
   return `${year} d.C.`;
 }
 
@@ -715,6 +720,13 @@ function AppInner() {
           <div className="globe-clock">
             Viaggiatore nel tempo — {nowStr}
           </div>
+
+          {/* Banner futuro ipotetico */}
+          {currentYear > 2026 && (
+            <div className="future-disclaimer">
+              🔮 Scenario ipotetico generato da IA — non sono previsioni
+            </div>
+          )}
 
           {/* Mirino olografico al centro — sempre visibile, glow extra durante thrust */}
           <div className={`globe-crosshair${thrustActive ? ' globe-crosshair--active' : ''}`}>
