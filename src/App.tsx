@@ -3,22 +3,22 @@ import './App.css';
 import { GlobeView } from './components/GlobeView';
 import { CosmicScene } from './components/CosmicScene';
 import { InfoPanel } from './components/InfoPanel';
-import { TimeControls } from './components/TimeControls';
-import { SearchBar } from './components/SearchBar';
+
 import { BridgeConsole } from './components/BridgeConsole';
 import { AIPanel } from './components/AIPanel';
-import { TimeMachine, getStaticBriefingWithMeta } from './components/TimeMachine';
+import { TimeMachine, getStaticBriefingWithMeta, getBriefingBySlug } from './components/TimeMachine';
 import { EraGuide } from './components/EraGuide';
 import { AuthModal } from './components/AuthModal';
 import { AdminPanel } from './components/AdminPanel';
 import { ProfileModal } from './components/ProfileModal';
-import { MobileNav } from './components/MobileNav';
 import { LeftNavPanel } from './components/LeftNavPanel';
 import { useAuth } from './hooks/useAuth';
 import { useMobile } from './hooks/useMobile';
-import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker, type MobileTab, type EraLaunchData } from './types';
+import { type HistoricalEvent, type EventCategory, type EntityType, type FlyTarget, type Locale, type WikiSearchResult, type WikiMarker, type EraLaunchData } from './types';
 import { PLANETS, MOONS, toPlanetSearchItem, toMoonSearchItem } from './utils/celestialMechanics';
-import { MACRO_ERAS, SUBCATEGORIES, type Period } from './data/historicalPeriods';
+import { type Period } from './data/historicalPeriods';
+import { MobileDock, type MobileTabId } from './components/MobileDock';
+import { MobileTabOverlay } from './components/MobileTabOverlay';
 
 // ── Opzione C: chunk per era, import dinamici ─────────────────────────────────
 const ERA_KEYS = ['cosmo', 'preistoria', 'antica', 'medioevo', 'moderna', 'ottocento', 'novecento', 'contemporanea', 'senza_anno'] as const;
@@ -264,12 +264,13 @@ function AppInner() {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [adminOpen,    setAdminOpen]    = useState(false);
   const [toast,          setToast]          = useState<string | null>(null);
-  const [mobileTab,      setMobileTab]      = useState<MobileTab>('globe');
-  const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [leftPanelOpen,     setLeftPanelOpen]     = useState(false);
   const [aiPanelOpen,       setAiPanelOpen]       = useState(false);
   const [infoPanelVisible,  setInfoPanelVisible]  = useState(true);
   const [timeMachineOpen,   setTimeMachineOpen]   = useState(false);
+  const [mobileTab, setMobileTab] = useState<MobileTabId | null>(null);
+  const [lastSelectedEvent, setLastSelectedEvent] = useState<HistoricalEvent | null>(null);
+  const [velOpen, setVelOpen] = useState(false);
 
   // Rileva redirect post-conferma email (#type=signup o #type=recovery nel hash)
   useEffect(() => {
@@ -463,6 +464,7 @@ function AppInner() {
   // Ricerca: corpi celesti → flyTo 'body'; lune → flyTo verso il pianeta genitore; eventi storici → geo + slider
   const handleSearchSelect = useCallback((event: HistoricalEvent) => {
     setSelectedEvent(event);
+    setLastSelectedEvent(event);
 
     if (event.id.startsWith('moon-')) {
       // Luna selezionata: vola verso il pianeta genitore
@@ -517,6 +519,7 @@ function AppInner() {
     prevIsCosmicRef.current = isCosmicView;
     if (prev === null || prev === isCosmicView) return; // mount iniziale o StrictMode
     setFlyTo({ kind: isCosmicView ? 'cosmic' : 'earth', ts: Date.now() });
+    if (!isCosmicView) setVelOpen(false); // nascondi velocity widget in earth mode
   }, [isCosmicView]);
 
   const onSplitDown = useCallback((e: React.TouchEvent | React.MouseEvent) => {
@@ -565,26 +568,14 @@ function AppInner() {
   // Click diretto su un'entità nel globo (La telecamera si muove già dentro GlobeView)
   const handleEventClick = useCallback((event: HistoricalEvent) => {
     setSelectedEvent(event);
+    setLastSelectedEvent(event);
     // I corpi celesti gestiscono il flyTo internamente in GlobeView — non innescare qui
     if (!event.isCosmic && event.lat != null && event.lng != null) {
       setFlyTo({ kind: 'geo', lat: event.lat, lng: event.lng, ts: Date.now() });
     }
   }, []);
 
-  // Click su badge era/sottocategoria → apre Wikipedia dell'era nell'InfoPanel
-  const handleEraClick = useCallback((slug: string, label: string) => {
-    setSelectedEvent({
-      id: `era-${slug}`,
-      title: label,
-      year: 0,
-      category: 'storia',
-      description: '',
-      wikipediaSlug: slug,
-      isCosmic: false,
-    });
-  }, []);
-
-  // Selezione epoca/sottocategoria dalla SearchBar: salta slider all'inizio dell'epoca e vola al luogo d'origine
+// Selezione epoca/sottocategoria dalla SearchBar: salta slider all'inizio dell'epoca e vola al luogo d'origine
   const handleEpochSearchSelect = useCallback((period: Period) => {
     setSelectedEvent(null);
     setWikiMarker(null);
@@ -610,6 +601,7 @@ function AppInner() {
       isCosmic: false,
     };
     setSelectedEvent(placeholder);
+    setLastSelectedEvent(placeholder);
 
     // Fetch Wikidata per data + coordinate + categoria
     try {
@@ -701,6 +693,7 @@ function AppInner() {
 
       const enriched: HistoricalEvent = { ...placeholder, year: year ?? placeholder.year, lat, lng, category };
       setSelectedEvent(enriched);
+      setLastSelectedEvent(enriched);
 
       if (year !== undefined) setSliderValue(yearToSlider(year));
       if (lat !== undefined && lng !== undefined) {
@@ -713,23 +706,10 @@ function AppInner() {
     } catch { /* placeholder rimane aperto con Wikipedia */ }
   }, [currentYear, locale]);
 
-  // Su mobile, il tab "search" apre il modal full-screen
-  const handleMobileTabChange = useCallback((tab: MobileTab) => {
-    if (tab === 'search') {
-      setMobileSearchOpen(true);
-      setMobileTab('globe'); // mantieni il globo come tab attivo di base
-    } else if (tab === 'profile') {
-      if (user) setProfileOpen(true);
-      else setAuthOpen(true);
-    } else {
-      setMobileTab(tab);
-    }
-  }, [user]);
-
   const globeAndControls = (
     <>
       {/* Ologrammi — visibili solo se showHoloOverlays */}
-      {!isMobile && showHoloOverlays && (
+      {showHoloOverlays && (
         <>
           {/* Clock in alto a destra */}
           <div className="globe-clock">
@@ -775,7 +755,7 @@ function AppInner() {
                 locale={locale}
                 currentYear={currentYear}
                 flyTo={flyTo}
-                onEventClick={(ev) => { handleEventClick(ev); if (isMobile) setMobileTab('globe'); }}
+                onEventClick={(ev) => { handleEventClick(ev); }}
                 onBodyLabelClick={(entityId) => {
                   const ev = [
                     ...NEARBY_STAR_SEARCHES, ...DWARF_PLANET_SEARCHES, ...GALAXY_SEARCHES,
@@ -800,7 +780,6 @@ function AppInner() {
                   // Città: handleSearchSelect porta il cursore all'anno di fondazione
                   if (ev.id.startsWith('city-')) { handleSearchSelect(ev); }
                   else { handleEventClick(ev); }
-                  if (isMobile) setMobileTab('globe');
                 }}
                 onAltitudeChange={(altKm) => {
                   setCesiumAltKm(altKm);
@@ -828,8 +807,8 @@ function AppInner() {
               setEraGuide(data);
               setEraGuideOpen(true);
             }}
-            open={!isMobile ? timeMachineOpen : undefined}
-            onToggle={!isMobile ? () => setTimeMachineOpen(v => !v) : undefined}
+            open={timeMachineOpen}
+            onToggle={() => setTimeMachineOpen(v => !v)}
           />
           {!isMobile && eraGuide && eraGuideOpen && (
             <EraGuide
@@ -903,7 +882,7 @@ function AppInner() {
         )}
       </div>
 
-      {/* Desktop: Bridge Console in basso */}
+      {/* Bridge Console: desktop only */}
       {!isMobile && (
         <BridgeConsole
           sliderValue={sliderValue}
@@ -938,15 +917,17 @@ function AppInner() {
           onHyperDpad={handleHyperDpad}
           timeMachineOpen={timeMachineOpen}
           onToggleTimeMachine={() => setTimeMachineOpen(v => !v)}
+          onAdminClick={() => setAdminOpen(true)}
         />
       )}
-      {!isMobile && aiPanelOpen && (
+      {aiPanelOpen && (
         <AIPanel
-          event={selectedEvent}
+          event={isMobile ? (selectedEvent ?? lastSelectedEvent) : selectedEvent}
           locale={locale}
-          onClose={() => setAiPanelOpen(false)}
+          onClose={() => { setAiPanelOpen(false); if (isMobile) setMobileTab(null); }}
           events={ALL_SEARCHABLE}
           onSelectEvent={handleSearchSelect}
+          fullscreen={isMobile}
         />
       )}
     </>
@@ -1020,99 +1001,189 @@ function AppInner() {
         </>
       )}
 
-      {/* ── Mobile: mini header con logo + lingua ── */}
-      {isMobile && (
-        <header className="header header--mobile">
-          <h1>🌍 <span>Viaggiatore</span> nel Tempo</h1>
-          <button
-            className="locale-toggle-btn"
-            onClick={() => setLocale(l => l === 'it' ? 'en' : 'it')}
-          >
-            {locale === 'it' ? '🇮🇹' : '🇬🇧'}
-          </button>
-          {user?.role === 'admin' && (
-            <button className="admin-header-btn" onClick={() => setAdminOpen(true)}>⚙️</button>
-          )}
-        </header>
-      )}
 
       {/* ── Contenuto principale ── */}
       {isMobile ? (
         <>
-          {/* Globe tab: sempre montato, visibile quando activeTab = globe */}
-          <div className={`mobile-screen${mobileTab === 'globe' ? ' mobile-screen--active' : ''}`}>
+          {/* Globe — fills screen above dock */}
+          <div className="mobile-globe-wrap">
             {globeAndControls}
           </div>
 
-          {/* Timeline tab: slider + filtri full-screen */}
-          <div className={`mobile-screen mobile-timeline-screen${mobileTab === 'timeline' ? ' mobile-screen--active' : ''}`}>
-            <div className="controls controls--fullscreen">
-              <TimeControls
-                sliderValue={sliderValue}
-                currentYear={currentYear}
-                formatYear={formatYear}
-                getEra={getEra}
-                onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
-                activeCategories={activeCategories}
-                onToggleCategory={toggleCategory}
-                activeTipi={activeTipi}
-                onToggleTipo={toggleTipo}
-                onEraClick={handleEraClick}
+          {/* InfoPanel overlay — full screen above dock */}
+          {selectedEvent && !mobileTab && (
+            <div className="mobile-info-overlay">
+              <InfoPanel
+                event={selectedEvent}
+                locale={locale}
+                onClose={() => setSelectedEvent(null)}
+                events={ALL_SEARCHABLE}
+                onSelectEvent={handleEventClick}
+                hideDock
               />
             </div>
-          </div>
-
-          {/* Bottom sheet InfoPanel su mobile */}
-          {selectedEvent && (
-            <div className="mobile-bottom-sheet">
-              <div className="mobile-bottom-sheet__grip" />
-              <InfoPanel event={selectedEvent} locale={locale} onClose={() => setSelectedEvent(null)} events={ALL_SEARCHABLE} onSelectEvent={handleEventClick} />
-            </div>
           )}
 
-          {/* Search modal full-screen */}
-          {mobileSearchOpen && (
-            <div className="mobile-search-modal">
-              <div className="mobile-search-modal__header">
-                <button className="mobile-search-modal__close" onClick={() => setMobileSearchOpen(false)}>✕</button>
-              </div>
-              <div className="mobile-search-modal__body">
-                <SearchBar
-                  events={ALL_SEARCHABLE}
-                  onSelect={(ev) => { handleSearchSelect(ev); setMobileSearchOpen(false); }}
-                  onWikiSelect={(r) => { handleWikiSelect(r); setMobileSearchOpen(false); }}
-                  onEpochSelect={(p) => { handleEpochSearchSelect(p); setMobileSearchOpen(false); }}
-                  epochs={[...MACRO_ERAS, ...SUBCATEGORIES]}
-                  locale={locale}
-                />
-              </div>
-            </div>
-          )}
-
-          {/* EraGuide — bottom sheet sopra il nav bar */}
+          {/* EraGuide — full screen overlay */}
           {eraGuide && eraGuideOpen && (
             <EraGuide
               data={eraGuide}
               events={ALL_SEARCHABLE}
               onClose={() => { setEraGuide(null); setEraGuideOpen(false); }}
               onNavigate={({ year, flyTo: ft }) => {
-                if (year !== undefined) {
-                  setSliderValue(yearToSlider(year));
-                  setOverrideYear(year);
-                }
+                if (year !== undefined) { setSliderValue(yearToSlider(year)); setOverrideYear(null); }
                 if (ft) setFlyTo(ft);
               }}
-              onSelectEvent={(ev) => { handleEventClick(ev); setMobileTab('globe'); }}
+              onSelectEvent={(ev) => { handleEventClick(ev); }}
             />
           )}
 
-          {/* Bottom nav */}
-          <MobileNav
+          {/* Mobile tab overlay — TM, Cerca, Altro */}
+          {mobileTab && mobileTab !== 'ai' && (
+            <MobileTabOverlay
+              tab={mobileTab}
+              onClose={() => setMobileTab(null)}
+              locale={locale}
+              sliderValue={sliderValue}
+              onSliderChange={(v) => { setSliderValue(v); setOverrideYear(null); }}
+              currentYear={currentYear}
+              formatYear={formatYear}
+              getEra={getEra}
+              yearToSlider={yearToSlider}
+              events={ALL_SEARCHABLE}
+              onSearch={handleSearchSelect}
+              onWikiSelect={handleWikiSelect}
+              onEpochSelect={handleEpochSearchSelect}
+              showTerritories={showTerritories}
+              onToggleTerritories={() => setShowTerritories(v => !v)}
+              showHoloOverlays={showHoloOverlays}
+              onToggleHoloOverlays={() => setShowHoloOverlays(v => !v)}
+              onLocaleToggle={() => setLocale(l => l === 'it' ? 'en' : 'it')}
+              user={user ? { email: user.email, role: user.role } : null}
+              onAuthClick={() => {
+                if (!user) { setAuthOpen(true); return; }
+                if (user.role === 'admin') setAdminOpen(true);
+                else setProfileOpen(true);
+              }}
+              velOpen={velOpen}
+              onToggleVel={() => setVelOpen(v => !v)}
+              isCosmicView={isCosmicView}
+              onAdminClick={() => setAdminOpen(true)}
+              onOpenEraGuide={(period) => {
+                // Cerca briefing direttamente per slug, evitando lookup anno→epoca sbagliata
+                let briefing = period.wikipediaSlug
+                  ? getBriefingBySlug(period.wikipediaSlug, locale)
+                  : null;
+                if (!briefing) {
+                  // Fallback: macro-era centrale, ma mantieni il nome del period cliccato
+                  const mid = Math.round((period.start + period.end) / 2);
+                  briefing = getStaticBriefingWithMeta(mid, locale)?.briefing ?? null;
+                }
+                if (briefing) {
+                  setEraGuide({
+                    briefing,
+                    eraName: period.name,
+                    eraSlug: period.wikipediaSlug ?? '',
+                    eraYear: Math.round((period.start + period.end) / 2),
+                    locale,
+                    originLat: period.originLat,
+                    originLng: period.originLng,
+                  });
+                  setEraGuideOpen(true);
+                }
+                setMobileTab(null);
+              }}
+            />
+          )}
+
+          {/* Velocità widget — floating above dock */}
+          {velOpen && (
+            <div className="mobile-vel-widget">
+              {([
+                { code: 'HyperBack', label: '⏪ Iper-rev', thrust: true },
+                { code: 'KeyS',      label: '◀ Retro',     thrust: false },
+              ] as { code: string; label: string; thrust: boolean }[]).map(({ code, label, thrust }) => (
+                <button
+                  key={code}
+                  className="mobile-vel-widget__btn"
+                  onPointerDown={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new KeyboardEvent('keydown', { code, bubbles: true }));
+                    if (thrust) setThrustActive(true);
+                  }}
+                  onPointerUp={() => {
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }));
+                    if (thrust) setThrustActive(false);
+                  }}
+                  onPointerLeave={() => {
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }));
+                    if (thrust) setThrustActive(false);
+                  }}
+                >
+                  {label}
+                </button>
+              ))}
+              <button
+                className="mobile-vel-widget__btn mobile-vel-widget__btn--stop"
+                onClick={() => {
+                  // Ferma il thrust in corso
+                  ['HyperBack', 'KeyS', 'KeyW', 'HyperFwd'].forEach(code =>
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }))
+                  );
+                  // Space key azzera velRef.current in CosmicScene (velRef.set(0,0,0))
+                  window.dispatchEvent(new KeyboardEvent('keydown', { code: 'Space', bubbles: true }));
+                  requestAnimationFrame(() => {
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code: 'Space', bubbles: true }));
+                  });
+                  setThrustActive(false);
+                }}
+              >
+                ⏹ STOP
+              </button>
+              {([
+                { code: 'KeyW',      label: 'Avanti ▶',    thrust: true },
+                { code: 'HyperFwd',  label: 'Iper ⏩',     thrust: true },
+              ] as { code: string; label: string; thrust: boolean }[]).map(({ code, label, thrust }) => (
+                <button
+                  key={code}
+                  className="mobile-vel-widget__btn"
+                  onPointerDown={(e) => {
+                    e.preventDefault();
+                    window.dispatchEvent(new KeyboardEvent('keydown', { code, bubbles: true }));
+                    if (thrust) setThrustActive(true);
+                  }}
+                  onPointerUp={() => {
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }));
+                    if (thrust) setThrustActive(false);
+                  }}
+                  onPointerLeave={() => {
+                    window.dispatchEvent(new KeyboardEvent('keyup', { code, bubbles: true }));
+                    if (thrust) setThrustActive(false);
+                  }}
+                >
+                  {label}
+                </button>
+              ))}
+              <button className="mobile-vel-widget__close" onClick={() => setVelOpen(false)}>✕</button>
+            </div>
+          )}
+
+          {/* Mobile dock */}
+          <MobileDock
+            currentYear={currentYear}
+            formatYear={formatYear}
+            getEra={getEra}
             activeTab={mobileTab}
-            onTabChange={handleMobileTabChange}
-            hasEvent={!!selectedEvent}
-            isLoggedIn={!!user}
-            locale={locale}
+            onOpenTab={(tab) => {
+              if (tab === 'ai') {
+                setAiPanelOpen(true);
+                setMobileTab('ai');
+              } else {
+                setAiPanelOpen(false);
+                setMobileTab(prev => prev === tab ? null : tab);
+              }
+            }}
+            onOpenTimeMachine={() => setTimeMachineOpen(v => !v)}
           />
         </>
       ) : (

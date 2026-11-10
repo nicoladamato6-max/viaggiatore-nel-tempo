@@ -205,3 +205,15 @@
   background: color-mix(in srgb, var(--tag-clr, #3a7abd) 30%, transparent);
   border-color: var(--tag-clr, #3a7abd);
 }
+
+@media (max-width: 767px) {
+  .aip {
+    position: fixed;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0;
+    resize: none;
+  }
+  .aip__resize { display: none; }
+}

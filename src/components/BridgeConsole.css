@@ -374,6 +374,17 @@
   color: #b8deff !important;
 }
 
+.bc__fn-btn--admin {
+  border-color: rgba(255, 180, 60, 0.3) !important;
+  color: rgba(255, 180, 60, 0.75) !important;
+}
+
+.bc__fn-btn--admin:hover {
+  border-color: rgba(255, 200, 80, 0.7) !important;
+  box-shadow: 0 0 14px rgba(255, 180, 60, 0.35) !important;
+  color: rgba(255, 210, 90, 1) !important;
+}
+
 /* ── Era overlay (shown on slider drag) ── */
 .bc__era-overlay {
   position: absolute;
@@ -604,3 +615,4 @@
 
 /* ── Closed state ── */
 .bc--closed .bc__sbar { border-bottom: none; }
+

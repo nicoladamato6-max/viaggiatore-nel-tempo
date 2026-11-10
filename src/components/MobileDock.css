@@ -1,0 +1,77 @@
+.mdock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: rgba(10, 14, 20, 0.97);
+  border-top: 1px solid rgba(0, 220, 190, 0.2);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  min-height: 52px;
+  gap: 6px;
+  backdrop-filter: blur(4px);
+}
+
+.mdock__year {
+  background: rgba(0, 220, 190, 0.08);
+  border: 1px solid rgba(0, 220, 190, 0.3);
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  color: rgba(0, 220, 190, 0.9);
+  flex-shrink: 0;
+}
+
+.mdock__btns {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.mdock__btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 5px 2px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  min-height: 44px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.mdock__btn--on {
+  background: rgba(0, 220, 190, 0.1);
+}
+
+.mdock__icon {
+  font-size: 20px;
+  color: rgba(0, 220, 190, 0.55);
+  line-height: 1;
+}
+
+.mdock__lbl {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: rgba(0, 220, 190, 0.4);
+  font-family: 'Courier New', monospace;
+}
+
+.mdock__btn--on .mdock__icon {
+  color: rgba(0, 220, 190, 1);
+}
+
+.mdock__btn--on .mdock__lbl {
+  color: rgba(0, 220, 190, 0.8);
+}

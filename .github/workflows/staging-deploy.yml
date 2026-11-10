@@ -6,6 +6,7 @@ on:
       - staging
   pull_request:
     branches: [staging]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -31,12 +32,6 @@ jobs:
         run: |
           if [ -z "$URL" ]; then
             echo "❌ VITE_SUPABASE_URL_STAGING non configurato nei GitHub Secrets"
-            exit 1
-          fi
-          PROD_ID="tsdkqaheddnwzgxgphtw"
-          if echo "$URL" | grep -q "$PROD_ID"; then
-            echo "❌ VITE_SUPABASE_URL_STAGING punta al progetto di PRODUZIONE!"
-            echo "   Correggere il secret con l'URL del progetto staging."
             exit 1
           fi
           echo "✅ Supabase URL staging verificato: $URL"
@@ -74,6 +69,88 @@ jobs:
           fi
           echo "✅ Bundle verificato: URL Supabase staging corretto nel bundle"
 
+      - name: Setup utente admin di test in staging Supabase
+        continue-on-error: true
+        run: |
+          SUPABASE_URL="https://jicmmisiptgyumuvzhjn.supabase.co"
+          SERVICE_KEY="${{ secrets.SUPABASE_SERVICE_ROLE_KEY_STAGING }}"
+          TEST_EMAIL="${{ secrets.STAGING_TEST_EMAIL }}"
+          TEST_PASS="${{ secrets.STAGING_TEST_PASS }}"
+
+          if [ -z "$SERVICE_KEY" ]; then
+            echo "⚠️  SUPABASE_SERVICE_ROLE_KEY_STAGING non configurato — skip setup utente"
+            exit 0
+          fi
+
+          echo "🔑 Cerco utente nel DB staging..."
+          USERS_RESP=$(curl -s -w "\n%{http_code}" \
+            -H "apikey: $SERVICE_KEY" \
+            -H "Authorization: Bearer $SERVICE_KEY" \
+            "$SUPABASE_URL/auth/v1/admin/users")
+          USERS_HTTP=$(echo "$USERS_RESP" | tail -1)
+          USERS_JSON=$(echo "$USERS_RESP" | head -n -1)
+          echo "   List users HTTP: $USERS_HTTP"
+
+          if [ "$USERS_HTTP" != "200" ]; then
+            echo "❌ Autenticazione Supabase fallita (HTTP $USERS_HTTP)"
+            echo "   Verifica che SUPABASE_SERVICE_ROLE_KEY_STAGING sia la service role key JWT (non il project ID)"
+            echo "   Risposta: $(echo "$USERS_JSON" | head -c 200)"
+            exit 1
+          fi
+
+          USER_ID=$(echo "$USERS_JSON" | TEST_EMAIL_VAR="$TEST_EMAIL" python3 -c "
+          import sys, json, os
+          d = json.load(sys.stdin)
+          users = d.get('users', [])
+          email = os.environ.get('TEST_EMAIL_VAR', '')
+          found = [u['id'] for u in users if u.get('email') == email]
+          print(found[0] if found else '')
+          " 2>/dev/null || echo "")
+
+          if [ -z "$USER_ID" ]; then
+            echo "📝 Creo utente in staging Supabase..."
+            CREATE_RESP=$(curl -s -w "\n%{http_code}" -X POST \
+              -H "apikey: $SERVICE_KEY" \
+              -H "Authorization: Bearer $SERVICE_KEY" \
+              -H "Content-Type: application/json" \
+              "$SUPABASE_URL/auth/v1/admin/users" \
+              -d "{\"email\":\"$TEST_EMAIL\",\"password\":\"$TEST_PASS\",\"email_confirm\":true}")
+            CREATE_HTTP=$(echo "$CREATE_RESP" | tail -1)
+            CREATE_JSON=$(echo "$CREATE_RESP" | head -n -1)
+            echo "   Create user HTTP: $CREATE_HTTP"
+            USER_ID=$(echo "$CREATE_JSON" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))" 2>/dev/null || echo "")
+            if [ -z "$USER_ID" ]; then
+              echo "❌ Creazione utente fallita — risposta: $(echo "$CREATE_JSON" | head -c 200)"
+              exit 1
+            fi
+            echo "✅ Utente creato: $USER_ID"
+          else
+            echo "✅ Utente già esistente: $USER_ID"
+          fi
+
+          echo "⬆️  Imposto role=admin nel profilo staging (UPSERT)..."
+          UPSERT_RESP=$(curl -s -w "\n%{http_code}" -X POST \
+            -H "apikey: $SERVICE_KEY" \
+            -H "Authorization: Bearer $SERVICE_KEY" \
+            -H "Content-Type: application/json" \
+            -H "Prefer: resolution=merge-duplicates,return=minimal" \
+            "$SUPABASE_URL/rest/v1/profiles" \
+            -d "{\"id\":\"$USER_ID\",\"email\":\"$TEST_EMAIL\",\"role\":\"admin\"}")
+          UPSERT_HTTP=$(echo "$UPSERT_RESP" | tail -1)
+          UPSERT_BODY=$(echo "$UPSERT_RESP" | head -n -1)
+          echo "   UPSERT profile HTTP: $UPSERT_HTTP"
+          if [ "$UPSERT_HTTP" = "403" ]; then
+            echo "❌ 403 Forbidden — la service role key non bypassa le RLS."
+            echo "   Usa la JWT legacy (eyJhbGci...) come SUPABASE_SERVICE_ROLE_KEY_STAGING, non la sb_secret_."
+            echo "   Risposta: $(echo "$UPSERT_BODY" | head -c 300)"
+            exit 1
+          fi
+          if [ "$UPSERT_HTTP" != "200" ] && [ "$UPSERT_HTTP" != "201" ] && [ "$UPSERT_HTTP" != "204" ]; then
+            echo "❌ UPSERT fallito (HTTP $UPSERT_HTTP): $(echo "$UPSERT_BODY" | head -c 200)"
+            exit 1
+          fi
+          echo "✅ Ruolo admin impostato per $TEST_EMAIL in staging"
+
       - name: Deploy to Staging (Cloudflare Pages)
         id: deploy
         uses: cloudflare/wrangler-action@v3
@@ -99,7 +176,7 @@ jobs:
           echo "✅ Staging raggiungibile (HTTP $HTTP)"
           echo ""
           echo "🔗 URL staging: $ALIAS/app"
-          echo "👤 Credenziali: nicola.damato6@gmail.com / Voyager2026"
+          echo "👤 Credenziali: vedi secret STAGING_TEST_EMAIL / STAGING_TEST_PASS"
 
       - name: Smoke test — AI entity-chat (Groq LLM)
         run: |

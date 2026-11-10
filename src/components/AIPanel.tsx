@@ -8,6 +8,7 @@ interface Props {
   onClose:        () => void;
   events?:        HistoricalEvent[];
   onSelectEvent?: (ev: HistoricalEvent) => void;
+  fullscreen?:    boolean;
 }
 
 function findCorrelations(ev: HistoricalEvent, all: HistoricalEvent[]): HistoricalEvent[] {
@@ -74,7 +75,7 @@ const DEFAULT_H = 480;
 const MIN_W = 260;
 const MIN_H = 300;
 
-export function AIPanel({ event, locale, onClose, events = [], onSelectEvent }: Props) {
+export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fullscreen = false }: Props) {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Msg[]>([]);
   const [busy, setBusy] = useState(false);
@@ -96,8 +97,24 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent }: 
     [event?.id, events], // eslint-disable-line react-hooks/exhaustive-deps
   );
 
+  // Scroll verso il basso solo quando l'utente ha inviato un messaggio, mai per l'analisi automatica
+  const userSentRef = useRef(false);
+
   useEffect(() => {
-    if (bodyRef.current) bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    // Scroll in cima al mount (pannello appena aperto)
+    if (bodyRef.current) bodyRef.current.scrollTop = 0;
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    // Scroll in cima al cambio entità
+    if (bodyRef.current) bodyRef.current.scrollTop = 0;
+    userSentRef.current = false;
+  }, [event?.id]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    if (!bodyRef.current || !userSentRef.current) return;
+    bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    userSentRef.current = false;
   }, [messages]);
 
   // Auto-analysis when entity changes
@@ -224,14 +241,17 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent }: 
     const question = input.trim();
     setInput('');
     const next: Msg[] = [...messages, { role: 'user', text: question }];
+    userSentRef.current = true;
     setMessages(next);
     setBusy(true);
     try {
       const reply = event
         ? await askEntity(event, question, next, locale)
         : (locale === 'it' ? 'Seleziona prima un\'entità sulla mappa.' : 'Please select an entity on the map first.');
+      userSentRef.current = true;
       setMessages(prev => [...prev, { role: 'ai', text: reply }]);
     } catch {
+      userSentRef.current = true;
       setMessages(prev => [...prev, {
         role: 'ai',
         text: locale === 'it'
@@ -249,7 +269,10 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent }: 
     <div
       ref={panelRef}
       className="aip"
-      style={{ left: resolvedPos.x, top: resolvedPos.y, width: size.w, height: size.h }}
+      style={fullscreen
+        ? { top: 0, left: 0, width: '100%', height: '100%', borderRadius: 0 }
+        : { left: resolvedPos.x, top: resolvedPos.y, width: size.w, height: size.h }
+      }
     >
       {/* Resize handles */}
       <div className="aip__resize aip__resize--n"  onMouseDown={e => onResizeMouseDown(e, 'n')} />

@@ -1,0 +1,377 @@
+.mtab {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(8, 12, 18, 0.98);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mtab__hdr {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0, 220, 190, 0.2);
+  flex-shrink: 0;
+}
+
+.mtab__back {
+  background: rgba(0, 220, 190, 0.08);
+  border: 1px solid rgba(0, 220, 190, 0.25);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: rgba(0, 220, 190, 0.8);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+.mtab__title {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: rgba(0, 220, 190, 0.6);
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+}
+
+.mtab__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mtab__tm {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.mtab__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.mtab__bot {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+}
+
+.mtab__year {
+  font-size: 36px;
+  font-family: 'Courier New', monospace;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 1;
+}
+
+.mtab__era-name {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  opacity: 0.7;
+  font-family: 'Courier New', monospace;
+}
+
+.mtab__era-chips {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.mtab__era-chips::-webkit-scrollbar { display: none; }
+
+.mtab__era-chip {
+  flex-shrink: 0;
+  border: 1px solid var(--chip-color, rgba(0,220,190,0.3));
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--chip-color, rgba(0,220,190,0.6));
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.6;
+  font-family: 'Courier New', monospace;
+}
+
+.mtab__era-chip--on {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.mtab__slider-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mtab__era-overlay {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 0; right: 0;
+  height: 20px;
+  pointer-events: none;
+}
+
+.mtab__era-macro-row {
+  position: relative;
+  height: 20px;
+}
+
+.mtab__era-seg {
+  position: absolute;
+  top: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  border-top: 2px solid var(--seg-color, rgba(0,220,190,0.4));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mtab__era-seg--on {
+  border-top-color: var(--seg-color);
+  opacity: 1;
+}
+
+.mtab__era-seg-lbl {
+  font-size: 7px;
+  color: var(--seg-color, rgba(0,220,190,0.6));
+  padding: 0 2px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+}
+
+.mtab__slider {
+  width: 100%;
+  height: 4px;
+  accent-color: rgba(0, 220, 190, 0.8);
+  cursor: pointer;
+}
+
+.mtab__slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: rgba(0, 220, 190, 0.4);
+  font-family: 'Courier New', monospace;
+}
+
+.mtab__speed-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.mtab__speed-btn {
+  flex: 1;
+  min-height: 52px;
+  background: rgba(0, 220, 190, 0.06);
+  border: 1px solid rgba(0, 220, 190, 0.2);
+  border-radius: 10px;
+  font-size: 10px;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.04em;
+  color: rgba(0, 220, 190, 0.8);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  line-height: 1.3;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  padding: 6px 4px;
+}
+
+.mtab__speed-btn:active {
+  background: rgba(0, 220, 190, 0.18);
+  border-color: rgba(0, 220, 190, 0.6);
+}
+
+.mtab__cerca {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mtab-altro__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.mtab-altro {
+  position: absolute;
+  bottom: var(--console-h, 52px);
+  left: 0;
+  right: 0;
+  background: rgba(10, 14, 20, 0.98);
+  border-top: 1px solid rgba(0, 220, 190, 0.3);
+  border-radius: 16px 16px 0 0;
+  padding: 10px 16px 16px;
+}
+
+.mtab-altro__grip {
+  width: 36px;
+  height: 3px;
+  background: rgba(0, 220, 190, 0.3);
+  border-radius: 2px;
+  margin: 0 auto 14px;
+}
+
+.mtab-altro__row {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.mtab-altro__btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 6px;
+  background: rgba(0, 220, 190, 0.05);
+  border: 1px solid rgba(0, 220, 190, 0.15);
+  border-radius: 10px;
+  cursor: pointer;
+  min-height: 54px;
+}
+
+.mtab-altro__btn--on {
+  background: rgba(0, 220, 190, 0.15);
+  border-color: rgba(0, 220, 190, 0.5);
+}
+
+.mtab-altro__icon {
+  font-size: 16px;
+  color: rgba(0, 220, 190, 0.7);
+  line-height: 1;
+}
+
+.mtab-altro__lbl {
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  color: rgba(0, 220, 190, 0.5);
+  font-family: 'Courier New', monospace;
+}
+
+.mtab-altro__btn--on .mtab-altro__icon,
+.mtab-altro__btn--on .mtab-altro__lbl {
+  color: rgba(0, 220, 190, 0.95);
+}
+
+.mtab-altro__btn--admin .mtab-altro__icon {
+  color: rgba(255, 180, 60, 0.8);
+}
+
+.mtab-altro__btn--admin .mtab-altro__lbl {
+  color: rgba(255, 180, 60, 0.6);
+}
+
+.mtab-altro__btn--admin:hover .mtab-altro__icon,
+.mtab-altro__btn--admin:hover .mtab-altro__lbl {
+  color: rgba(255, 200, 80, 1);
+}
+
+.mtab__era-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid var(--chip-color, rgba(0,220,190,0.4));
+  border-radius: 20px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: rgba(0, 220, 190, 0.85);
+  background: rgba(0, 220, 190, 0.07);
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  align-self: center;
+}
+
+.mtab__era-tag:active {
+  background: rgba(0, 220, 190, 0.18);
+}
+
+.mtab__subtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.mtab__subtag {
+  border: 1px solid var(--subtag-color, rgba(0,220,190,0.35));
+  border-radius: 20px;
+  padding: 3px 9px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--subtag-color, rgba(0,220,190,0.75));
+  background: rgba(0,0,0,0.25);
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.mtab__subtag:active {
+  background: rgba(0,0,0,0.5);
+}
+
+.mtab__subbars {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mtab__subbar {
+  position: absolute;
+  height: 24px;
+  background: rgba(0,0,0,0.5);
+  border-top: 2px solid var(--bar-color, rgba(0,220,190,0.5));
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  cursor: pointer;
+  min-width: 20px;
+}
+
+.mtab__subbar:active {
+  background: rgba(0,0,0,0.8);
+  border-top-width: 3px;
+}
+
+.mtab__subbar-lbl {
+  font-size: 7px;
+  color: var(--bar-color, rgba(0,220,190,0.8));
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Courier New', monospace;
+  pointer-events: none;
+}

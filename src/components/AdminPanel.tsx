@@ -50,6 +50,7 @@ export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, 
   const [apiInfo,     setApiInfo]     = useState<ApiStatus | null>(null);
   const [userStats,   setUserStats]   = useState<UserStats | null>(null);
   const [searchStats, setSearchStats] = useState<SearchStats | null>(null);
+  const [statsError,  setStatsError]  = useState<string | null>(null);
 
   const it = locale === 'it';
   const catLabel = it ? CAT_IT : CAT_EN;
@@ -61,29 +62,45 @@ export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, 
     const now30dAgo = new Date(Date.now() - 30 * 24 * 3600 * 1000).toISOString();
     const today     = new Date(); today.setHours(0,0,0,0);
 
+    setStatsError(null);
+
     Promise.all([
       supabase.from('profiles').select('*', { count: 'exact', head: true }).is('deleted_at', null),
       supabase.from('access_logs').select('*', { count: 'exact', head: true }).gte('created_at', now30dAgo),
       supabase.from('profiles').select('*', { count: 'exact', head: true }).gte('created_at', today.toISOString()),
     ]).then(([totalRes, activeRes, newRes]) => {
+      if (totalRes.error) console.error('[admin] profiles error:', totalRes.error);
+      if (activeRes.error) console.error('[admin] access_logs error:', activeRes.error);
+      if (newRes.error) console.error('[admin] profiles today error:', newRes.error);
+      if (totalRes.error && activeRes.error) {
+        setStatsError(`${totalRes.error.message}`);
+        return;
+      }
       setUserStats({
         total:     totalRes.count ?? 0,
         active30d: activeRes.count ?? 0,
         newToday:  newRes.count ?? 0,
       });
-    }).catch(() => {});
+    }).catch((e: unknown) => {
+      const msg = e instanceof Error ? e.message : String(e);
+      console.error('[admin] user stats fetch failed:', msg);
+      setStatsError(msg);
+    });
 
     // Statistiche ricerche
     Promise.all([
       supabase.from('search_logs').select('*', { count: 'exact', head: true }).gte('created_at', now30dAgo),
       supabase.from('search_logs').select('query').gte('created_at', now30dAgo).limit(200),
     ]).then(([countRes, queriesRes]) => {
+      if (countRes.error) console.error('[admin] search_logs error:', countRes.error);
       const queries = (queriesRes.data ?? []) as { query: string }[];
       const freq: Record<string, number> = {};
       for (const { query } of queries) freq[query] = (freq[query] ?? 0) + 1;
       const topQuery = Object.entries(freq).sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
       setSearchStats({ total30d: countRes.count ?? 0, topQuery });
-    }).catch(() => {});
+    }).catch((e: unknown) => {
+      console.error('[admin] search stats fetch failed:', e);
+    });
 
     fetch('/api/events')
       .then(r => r.json())
@@ -181,7 +198,11 @@ export function AdminPanel({ locale, open, setOpen, wikidataCount, staticCount, 
               </span>
               <span className="admin-stats-section__count">{userStats?.total ?? '—'}</span>
             </div>
-            {userStats ? (
+            {statsError ? (
+              <div className="admin-stats-section__ts" style={{ color: 'rgba(255,100,100,0.8)', fontSize: '10px' }}>
+                ✗ {it ? 'Errore DB:' : 'DB error:'} {statsError}
+              </div>
+            ) : userStats ? (
               <div className="admin-user-pills">
                 <span className="admin-category-pill">
                   📅 {it ? 'Accessi 30gg:' : 'Logins 30d:'} <strong>{userStats.active30d}</strong>
