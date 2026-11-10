@@ -3353,9 +3353,15 @@ body {
   border-radius: 3px;
   text-transform: uppercase;
 }
-.media-card__source--youtube  { background: rgba(255,0,0,0.18); color: #ff6b6b; }
-.media-card__source--archive  { background: rgba(0,160,255,0.18); color: #6bbfff; }
-.media-card__source--europeana { background: rgba(0,200,120,0.18); color: #6bffb0; }
+.media-card__source--youtube     { background: rgba(255,0,0,0.18);    color: #ff6b6b; }
+.media-card__source--archive     { background: rgba(0,160,255,0.18);  color: #6bbfff; }
+.media-card__source--europeana   { background: rgba(0,200,120,0.18);  color: #6bffb0; }
+.media-card__source--met         { background: rgba(180,30,30,0.18);  color: #ff9a9a; }
+.media-card__source--wikimedia   { background: rgba(50,100,220,0.18); color: #9bb4ff; }
+.media-card__source--rijksmuseum { background: rgba(200,100,0,0.18);  color: #ffbf6b; }
+.media-card__source--dpla        { background: rgba(40,130,185,0.18); color: #7dcfff; }
+.media-card__source--smithsonian { background: rgba(0,40,104,0.25);   color: #8ab4ff; }
+.media-card__source--openverse   { background: rgba(224,160,0,0.18);  color: #ffd96b; }
 .media-card__year {
   font-size: 9px;
   color: rgba(0, 200, 255, 0.45);
