@@ -7,9 +7,13 @@
       "runtimeArgs": ["run", "dev"],
       "port": 5173
     },
+{
+      "name": "staging",
+      "url": "https://test-viaggiatore-nel-tempo.pages.dev/app"
+    },
     {
-      "name": "viaggiatore-github-pages",
-      "url": "https://nicoladamato6-max.github.io/viaggiatore-nel-tempo/"
+      "name": "produzione",
+      "url": "https://viaggiatore-nel-tempo.pages.dev/app"
     }
   ]
 }

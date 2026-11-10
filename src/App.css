@@ -49,8 +49,8 @@ body {
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 200, 255, 0.03) 2px,
-    rgba(0, 200, 255, 0.03) 3px
+    rgba(0, 200, 255, 0.055) 2px,
+    rgba(0, 200, 255, 0.055) 3px
   );
   pointer-events: none;
   z-index: 9000;
@@ -606,6 +606,7 @@ body {
   line-height: 1.3;
   color: var(--clr-text);
   margin-bottom: 4px;
+  text-shadow: 0 0 10px rgba(0, 200, 255, 0.45), 0 0 28px rgba(0, 200, 255, 0.18);
 }
 
 .info-panel__year {
@@ -2039,6 +2040,7 @@ body {
   font-size: 10.5px;
   color: #7dffd0;
   letter-spacing: 0.03em;
+  text-shadow: 0 0 8px rgba(125, 255, 208, 0.65), 0 0 20px rgba(125, 255, 208, 0.25);
 }
 
 .globe-hud__coords {
@@ -2060,7 +2062,7 @@ body {
 .globe-hud--cosmic .globe-hud__cosmic      { display: flex; }
 
 /* Colori diversi per la modalità cosmica */
-.globe-hud--cosmic .globe-hud__val { color: #b8aaff; }
+.globe-hud--cosmic .globe-hud__val { color: #b8aaff; text-shadow: 0 0 8px rgba(184, 170, 255, 0.65), 0 0 20px rgba(184, 170, 255, 0.25); }
 .globe-hud--cosmic .globe-hud__lbl { color: #7a70cc; }
 
 /* ── Admin header button ───────────────────────────────────────────────────── */
