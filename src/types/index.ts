@@ -91,6 +91,16 @@ export interface EraLaunchData {
   originLng?: number;
 }
 
+export interface MediaItem {
+  type:         'video' | 'image' | 'audio';
+  title:        string;
+  url:          string;
+  thumbnail?:   string;
+  source:       'youtube' | 'archive' | 'europeana';
+  year?:        string;
+  description?: string;
+}
+
 export const CATEGORY_LABELS: Record<EventCategory, string> = {
   storia:    'Storia',
   arte:      'Arte',

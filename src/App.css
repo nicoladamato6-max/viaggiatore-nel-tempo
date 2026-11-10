@@ -3255,6 +3255,113 @@ body {
 }
 .info-panel__media-item:hover img { transform: scale(1.05); }
 
+/* ── Media section label ── */
+.media-section-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(0, 200, 255, 0.5);
+  margin: 10px 0 6px;
+}
+
+/* ── Media cards (YouTube / Archive / Europeana) ── */
+.media-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.media-card {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: rgba(0, 20, 50, 0.6);
+  border: 1px solid rgba(0, 200, 255, 0.12);
+  border-radius: 6px;
+  padding: 8px;
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+.media-card:hover {
+  border-color: rgba(0, 200, 255, 0.35);
+  background: rgba(0, 30, 70, 0.75);
+}
+
+.media-card__thumb {
+  position: relative;
+  width: 72px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: rgba(0, 20, 50, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.media-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media-card__thumb--empty {
+  color: rgba(0, 200, 255, 0.4);
+}
+.media-card__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: rgba(255,255,255,0.9);
+  background: rgba(0,0,0,0.35);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.media-card:hover .media-card__play { opacity: 1; }
+
+.media-card__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.media-card__title {
+  font-size: 11px;
+  color: #c8d8f0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.media-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.media-card__source {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 1px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.media-card__source--youtube  { background: rgba(255,0,0,0.18); color: #ff6b6b; }
+.media-card__source--archive  { background: rgba(0,160,255,0.18); color: #6bbfff; }
+.media-card__source--europeana { background: rgba(0,200,120,0.18); color: #6bffb0; }
+.media-card__year {
+  font-size: 9px;
+  color: rgba(0, 200, 255, 0.45);
+  font-family: var(--font-mono);
+}
+
 /* Globe container mobile: si estende dall'alto fino al Bridge Console */
 .mobile-globe-wrap {
   position: absolute;

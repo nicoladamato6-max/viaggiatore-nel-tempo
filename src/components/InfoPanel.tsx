@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { type HistoricalEvent, type Locale, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
+import { type HistoricalEvent, type Locale, type MediaItem, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
 
 const MIN_W     = 280;
 const DEFAULT_W = 340;
@@ -269,6 +269,7 @@ async function fetchWikiImages(slug: string, lang: string): Promise<string[]> {
 export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, eraGuideName, hideDock }: Props) {
   const [activeTab,    setActiveTab]    = useState<'info' | 'media'>('info');
   const [mediaImages,  setMediaImages]  = useState<string[]>([]);
+  const [mediaItems,   setMediaItems]   = useState<MediaItem[]>([]);
   const [mediaLoading, setMediaLoading] = useState(false);
   const [recalled,     setRecalled]     = useState<HistoricalEvent | null>(null);
   // Docking state
@@ -311,18 +312,28 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
   useEffect(() => {
     setActiveTab('info');
     setMediaImages([]);
+    setMediaItems([]);
   }, [event?.id]);
 
-  // Load media images when media tab is active
+  // Load media when media tab is active
   useEffect(() => {
-    if (activeTab !== 'media' || !event?.wikipediaSlug) return;
-    if (mediaImages.length > 0) return;
+    if (activeTab !== 'media' || !event) return;
+    if (mediaImages.length > 0 || mediaItems.length > 0) return;
     setMediaLoading(true);
+
     const lang = locale === 'en' ? 'en' : 'it';
-    fetchWikiImages(event.wikipediaSlug, lang)
-      .then(imgs => setMediaImages(imgs))
-      .finally(() => setMediaLoading(false));
-  }, [activeTab, event?.wikipediaSlug, locale]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    Promise.all([
+      event.wikipediaSlug ? fetchWikiImages(event.wikipediaSlug, lang) : Promise.resolve([]),
+      fetch(`/api/entity-media?title=${encodeURIComponent(event.title)}&locale=${locale}`)
+        .then(r => r.ok ? r.json() as Promise<{ items: MediaItem[] }> : { items: [] })
+        .then(d => d.items ?? [])
+        .catch(() => []),
+    ]).then(([imgs, items]) => {
+      setMediaImages(imgs);
+      setMediaItems(items);
+    }).finally(() => setMediaLoading(false));
+  }, [activeTab, event?.id, locale]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Ferma TTS quando cambia evento
   useEffect(() => { stop(); }, [event?.id]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -604,25 +615,76 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
           <div className="info-panel__media">
             {mediaLoading && (
               <div className="info-panel__loading">
-                <span className="info-panel__spinner" /> {locale === 'it' ? 'Caricamento immagini…' : 'Loading images…'}
+                <span className="info-panel__spinner" /> {locale === 'it' ? 'Caricamento media…' : 'Loading media…'}
               </div>
             )}
-            {!mediaLoading && mediaImages.length === 0 && (
+
+            {!mediaLoading && mediaImages.length === 0 && mediaItems.length === 0 && (
               <p style={{ fontSize: '0.72rem', color: '#888', padding: '12px 14px' }}>
-                {locale === 'it' ? 'Nessuna immagine disponibile.' : 'No images available.'}
+                {locale === 'it' ? 'Nessun media disponibile.' : 'No media available.'}
               </p>
             )}
+
+            {/* Immagini Wikipedia Commons */}
             {!mediaLoading && mediaImages.length > 0 && (
-              <div className="info-panel__media-grid">
-                {mediaImages.map((url, i) => (
-                  <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="info-panel__media-item">
-                    <img src={url} alt="" loading="lazy" />
-                  </a>
-                ))}
-              </div>
+              <>
+                <div className="media-section-label">Wikimedia Commons</div>
+                <div className="info-panel__media-grid">
+                  {mediaImages.map((url, i) => (
+                    <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="info-panel__media-item">
+                      <img src={url} alt="" loading="lazy" />
+                    </a>
+                  ))}
+                </div>
+              </>
             )}
+
+            {/* Video e immagini da CF Function (YouTube / Archive / Europeana) */}
+            {!mediaLoading && mediaItems.length > 0 && (
+              <>
+                <div className="media-section-label">
+                  {locale === 'it' ? 'Video e archivi storici' : 'Videos & historical archives'}
+                </div>
+                <div className="media-cards">
+                  {mediaItems.map((item, i) => (
+                    <a
+                      key={i}
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`media-card media-card--${item.source}`}
+                    >
+                      {item.thumbnail ? (
+                        <div className="media-card__thumb">
+                          <img src={item.thumbnail} alt="" loading="lazy" onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                          {item.type === 'video' && <span className="media-card__play">▶</span>}
+                          {item.type === 'audio' && <span className="media-card__play">♪</span>}
+                        </div>
+                      ) : (
+                        <div className="media-card__thumb media-card__thumb--empty">
+                          {item.type === 'video' ? '▶' : item.type === 'audio' ? '♪' : '🖼'}
+                        </div>
+                      )}
+                      <div className="media-card__body">
+                        <span className="media-card__title">{item.title}</span>
+                        <div className="media-card__meta">
+                          <span className={`media-card__source media-card__source--${item.source}`}>
+                            {item.source === 'youtube'  ? 'YouTube' :
+                             item.source === 'archive'  ? 'Archive.org' : 'Europeana'}
+                          </span>
+                          {item.year && <span className="media-card__year">{item.year}</span>}
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </>
+            )}
+
             <p className="info-panel__license" style={{ padding: '8px 14px' }}>
-              {locale === 'it' ? 'Immagini da Wikimedia Commons' : 'Images from Wikimedia Commons'}
+              {locale === 'it'
+                ? 'Contenuti da Wikimedia Commons, Archive.org, YouTube, Europeana'
+                : 'Content from Wikimedia Commons, Archive.org, YouTube, Europeana'}
             </p>
           </div>
         )}
