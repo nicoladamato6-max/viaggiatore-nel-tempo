@@ -127,15 +127,55 @@ git push --force origin main   # solo con conferma esplicita dell'utente
 
 ---
 
+## Passo 2b — Aggiornamento documento architetturale (OBBLIGATORIO SE APPLICABILE)
+
+**Il documento `docs/ADMIN_GUIDE.md` deve sempre descrivere lo stato in produzione.**
+Aggiornarlo sul feature branch prima del merge su staging: diventa definitivo con la promozione in produzione.
+
+### Quando aggiornare (checklist rapida)
+
+| La modifica tocca... | Sezione da aggiornare |
+|----------------------|-----------------------|
+| Nuova API esterna aggiunta o rimossa | §4 API esterne |
+| Nuova variabile d'ambiente CF Pages o GitHub Secret | §2.2 Variabili runtime / §6.2 GitHub Secrets |
+| Nuovo o rimosso endpoint CF Function | §2.3 Pages Functions — Endpoint |
+| Modifica schema Supabase (tabelle, colonne, RLS) | §3.2 Schema database |
+| Modifica routing o modelli AI | §5.1 / §5.2 AI backend |
+| Modifica workflow CI/CD | §6.3 Workflow CI/CD |
+| Nuova procedura operativa o runbook | §7 Runbook operativo |
+| Nuovo elemento in checklist pre-commercializzazione | §9 Checklist |
+
+### Quando NON serve aggiornamento
+
+- Fix di bug che non cambiano interfacce o configurazioni esterne
+- Aggiornamenti del dataset storico (file JSON in `src/data/chunks/`)
+- Modifiche CSS, animazioni, layout UI senza impatto sull'architettura
+- Refactoring interno senza cambi di contratto API
+
+### Procedura
+
+1. Prima di fare il commit sul feature branch, aprire `docs/ADMIN_GUIDE.md`
+2. Aggiornare le sezioni pertinenti con le informazioni corrette
+3. Aggiornare il campo `Ultima modifica` in fondo al documento
+4. Includere il file nel commit della feature (stesso commit, stessa PR)
+
+**Il documento architetturale fa parte del deliverable, non è documentazione opzionale.**
+Un feature branch che aggiunge un endpoint o una variabile d'ambiente senza aggiornare l'Admin Guide è incompleto.
+
+---
+
 ## Variabili d'ambiente (solo su CF Pages dashboard, mai nel codice)
 
 | Variabile | Stato |
 |-----------|-------|
 | `YOUTUBE_API_KEY` | Configurato su staging + prod |
-| `EUROPEANA_API_KEY` | In attesa personal key |
-| `RIJKSMUSEUM_API_KEY` | Da registrare (gratuita) |
-| `DPLA_API_KEY` | Da registrare (gratuita) |
-| `SMITHSONIAN_API_KEY` | Da registrare (gratuita) |
+| `EUROPEANA_API_KEY` | Configurato su staging + prod |
+| `DPLA_API_KEY` | Configurato su staging + prod |
+| `SMITHSONIAN_API_KEY` | Configurato su staging + prod |
 | `OPENVERSE_API_KEY` | Opzionale |
+| `GROQ_API_KEY` | Configurato su staging + prod |
+| `JWT_SECRET` | Configurato su staging + prod |
+| `VIAGGIATORE_KV` | Binding KV — configurare se non presente |
 
 Vedi `memory/project_api_commercialization.md` per quote e piano upgrade.
+Vedi `docs/ADMIN_GUIDE.md` per la documentazione completa di ogni variabile.
