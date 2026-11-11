@@ -670,7 +670,7 @@ export function InfoPanel({ event, locale, onClose, onRecall, onShowEraGuide, er
                         <div className="media-card__meta">
                           <span className={`media-card__source media-card__source--${item.source}`}>
                             {{ youtube: 'YouTube', archive: 'Archive.org', europeana: 'Europeana',
-                               met: 'Met Museum', wikimedia: 'Wikimedia', rijksmuseum: 'Rijksmuseum',
+                               met: 'Met Museum', wikimedia: 'Wikimedia',
                                dpla: 'DPLA', smithsonian: 'Smithsonian', openverse: 'OpenVerse',
                              }[item.source] ?? item.source}
                           </span>
