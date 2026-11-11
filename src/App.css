@@ -2639,6 +2639,16 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+.tm-briefing__ai-disclaimer {
+  padding: 5px 14px;
+  border-bottom: 1px solid rgba(255, 180, 0, 0.12);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 180, 0, 0.45);
+  text-align: center;
+}
+
 .tm-briefing__section {
   padding: 10px 14px;
   border-bottom: 1px solid rgba(255, 209, 102, 0.12);
