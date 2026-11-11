@@ -1065,7 +1065,7 @@ body {
   border-radius: 10px;
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 30;
+  z-index: 200;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 200, 255, 0.15);
