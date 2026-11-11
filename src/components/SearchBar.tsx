@@ -259,12 +259,10 @@ export function SearchBar({ events, onSelect, onWikiSelect, onEpochSelect, epoch
                   onClick={() => handleSelectLocal(event)}
                 >
                   <span className="item-title">{event.title}</span>
-                  <span className="item-year" style={event.isFuture ? { color: '#c04fc4' } : undefined}>
+                  <span className="item-year">
                     {event.year < 0
                       ? `${Math.abs(event.year).toLocaleString()} a.C.`
-                      : event.isFuture
-                        ? `🔮 ${event.year} d.C.`
-                        : `${event.year} d.C.`}
+                      : `${event.year} d.C.`}
                   </span>
                 </div>
               ))}

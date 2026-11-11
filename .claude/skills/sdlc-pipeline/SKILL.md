@@ -132,7 +132,7 @@ git push --force origin main   # solo con conferma esplicita dell'utente
 | Variabile | Stato |
 |-----------|-------|
 | `YOUTUBE_API_KEY` | Configurato su staging + prod |
-| `EUROPEANA_API_KEY` | ✅ Configurato su staging + prod (personal key nov 2026) |
+| `EUROPEANA_API_KEY` | In attesa personal key |
 | `RIJKSMUSEUM_API_KEY` | Da registrare (gratuita) |
 | `DPLA_API_KEY` | Da registrare (gratuita) |
 | `SMITHSONIAN_API_KEY` | Da registrare (gratuita) |

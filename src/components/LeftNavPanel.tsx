@@ -134,11 +134,11 @@ export function LeftNavPanel({ open, onClose, events, currentYear, onSelectEvent
                   : `Events near ${formatYear(currentYear)}`}
               </p>
               {sortedEvents.map(ev => {
-                const color = ev.isFuture ? '#c04fc4' : CATEGORY_COLORS[ev.category];
+                const color = CATEGORY_COLORS[ev.category];
                 return (
                   <button
                     key={ev.id}
-                    className={`left-nav-panel__ev-item${ev.isFuture ? ' left-nav-panel__ev-item--future' : ''}`}
+                    className="left-nav-panel__ev-item"
                     onClick={() => { onSelectEvent(ev); onClose(); }}
                   >
                     <span
@@ -146,9 +146,7 @@ export function LeftNavPanel({ open, onClose, events, currentYear, onSelectEvent
                       style={{ background: color }}
                     />
                     <span className="left-nav-panel__ev-body">
-                      <span className="left-nav-panel__ev-title">
-                        {ev.isFuture ? '🔮 ' : ''}{ev.title}
-                      </span>
+                      <span className="left-nav-panel__ev-title">{ev.title}</span>
                       <span className="left-nav-panel__ev-meta">
                         {formatYear(ev.year)} · {CATEGORY_LABELS[ev.category]}
                       </span>

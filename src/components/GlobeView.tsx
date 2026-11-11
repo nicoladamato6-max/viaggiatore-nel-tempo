@@ -596,9 +596,7 @@ export function GlobeView({ events, selectedEventId, isCosmicView, flyTo, wikiMa
     for (const event of events) {
       if (event.lat == null || event.lng == null) continue;
       const isSelected = event.id === selectedEventId;
-      const baseColor  = event.isFuture
-        ? Cesium.Color.fromCssColorString('#c04fc4')
-        : Cesium.Color.fromCssColorString(CATEGORY_COLORS[event.category]);
+      const baseColor  = Cesium.Color.fromCssColorString(CATEGORY_COLORS[event.category]);
       // Pin selezionato: colore categoria pieno (luminoso) + outline bianco spesso + dimensione maggiore
       // Colore categoria garantisce buon contrasto sia su sfondo scuro (satellite) che chiaro (AWMC)
       const selectedColor = baseColor.brighten(0.3, new Cesium.Color());
