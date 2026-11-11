@@ -1065,7 +1065,7 @@ body {
   border-radius: 10px;
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 30;
+  z-index: 200;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 200, 255, 0.15);
@@ -2586,6 +2586,16 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+.tm-briefing__ai-disclaimer {
+  padding: 5px 14px;
+  border-bottom: 1px solid rgba(255, 180, 0, 0.12);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 180, 0, 0.45);
+  text-align: center;
+}
+
 .tm-briefing__section {
   padding: 10px 14px;
   border-bottom: 1px solid rgba(255, 209, 102, 0.12);
@@ -3362,7 +3372,6 @@ body {
 .media-card__source--europeana   { background: rgba(0,200,120,0.18);  color: #6bffb0; }
 .media-card__source--met         { background: rgba(180,30,30,0.18);  color: #ff9a9a; }
 .media-card__source--wikimedia   { background: rgba(50,100,220,0.18); color: #9bb4ff; }
-.media-card__source--rijksmuseum { background: rgba(200,100,0,0.18);  color: #ffbf6b; }
 .media-card__source--dpla        { background: rgba(40,130,185,0.18); color: #7dcfff; }
 .media-card__source--smithsonian { background: rgba(0,40,104,0.25);   color: #8ab4ff; }
 .media-card__source--openverse   { background: rgba(224,160,0,0.18);  color: #ffd96b; }

@@ -18,7 +18,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 55;
   background: var(--bc-bg);
   border-top: 1px solid var(--bc-b45);
   box-shadow: 0 -2px 24px rgba(26,144,255,.18), 0 -1px 0 var(--bc-b22);

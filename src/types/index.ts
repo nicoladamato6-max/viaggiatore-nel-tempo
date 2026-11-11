@@ -96,7 +96,7 @@ export interface MediaItem {
   title:        string;
   url:          string;
   thumbnail?:   string;
-  source:       'youtube' | 'archive' | 'europeana' | 'met' | 'wikimedia' | 'rijksmuseum' | 'dpla' | 'smithsonian' | 'openverse';
+  source:       'youtube' | 'archive' | 'europeana' | 'met' | 'wikimedia' | 'dpla' | 'smithsonian' | 'openverse';
   year?:        string;
   description?: string;
 }

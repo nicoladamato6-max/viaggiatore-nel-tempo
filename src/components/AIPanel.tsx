@@ -290,6 +290,12 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fu
         <button className="aip__close" onClick={onClose} aria-label="Chiudi">✕</button>
       </div>
 
+      <div className="aip__ai-disclaimer">
+        ⚠ {locale === 'it'
+          ? 'Contenuti generati da IA · Potrebbero contenere inesattezze'
+          : 'AI-generated content · May contain inaccuracies'}
+      </div>
+
       <div className="aip__body" ref={bodyRef}>
         {!event && messages.length === 0 && (
           <p className="aip__hint">

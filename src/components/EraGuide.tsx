@@ -397,6 +397,12 @@ export function EraGuide({ data, events, onClose, onNavigate, onSelectEvent }: P
 
       </div>
 
+      <div className="era-guide__ai-disclaimer">
+        ⚠ {it
+          ? 'Contenuti generati da IA · Potrebbero contenere inesattezze'
+          : 'AI-generated content · May contain inaccuracies'}
+      </div>
+
       <div className="era-guide__footer">
         {it ? 'ERA GUIDE — VIAGGIATORE NEL TEMPO' : 'ERA GUIDE — TIME TRAVELER'}
       </div>

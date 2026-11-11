@@ -1,12 +1,11 @@
 // GET /api/entity-media?title=...&year=...&locale=it
 // Aggrega media da 9 sorgenti open/gratuite.
 // Sorgenti senza chiave: Archive, Met Museum, Wikimedia Commons
-// Sorgenti con chiave gratuita: YouTube, Europeana, Rijksmuseum, DPLA, Smithsonian, OpenVerse
+// Sorgenti con chiave gratuita: YouTube, Europeana, DPLA, Smithsonian, OpenVerse
 
 interface MediaEnv {
   YOUTUBE_API_KEY?:     string;
   EUROPEANA_API_KEY?:   string;
-  RIJKSMUSEUM_API_KEY?: string;
   DPLA_API_KEY?:        string;
   SMITHSONIAN_API_KEY?: string;
   OPENVERSE_API_KEY?:   string;
@@ -17,7 +16,7 @@ interface MediaItem {
   title:        string;
   url:          string;
   thumbnail?:   string;
-  source:       'youtube' | 'archive' | 'europeana' | 'met' | 'wikimedia' | 'rijksmuseum' | 'dpla' | 'smithsonian' | 'openverse';
+  source:       'youtube' | 'archive' | 'europeana' | 'met' | 'wikimedia' | 'dpla' | 'smithsonian' | 'openverse';
   year?:        string;
   description?: string;
 }
@@ -210,37 +209,6 @@ async function fetchEuropeana(query: string, key: string): Promise<MediaItem[]> 
   } catch { return []; }
 }
 
-// ── Rijksmuseum (chiave gratuita) ─────────────────────────────────────────────
-async function fetchRijksmuseum(query: string, key: string): Promise<MediaItem[]> {
-  try {
-    const params = new URLSearchParams({
-      key,
-      q:       query,
-      imgonly: 'True',
-      ps:      '5',
-      format:  'json',
-    });
-    const res = await fetch(`https://www.rijksmuseum.nl/api/en/collection?${params}`, {
-      signal: AbortSignal.timeout(5000),
-    });
-    if (!res.ok) return [];
-    const data = await res.json() as {
-      artObjects?: { links?: { web?: string }; webImage?: { url?: string }; title?: string; principalOrFirstMaker?: string; dating?: { sortingDate?: number } }[]
-    };
-    return (data.artObjects ?? [])
-      .filter(o => o.webImage?.url)
-      .map(o => ({
-        type:        'image',
-        title:       o.title ?? query,
-        url:         o.links?.web ?? 'https://www.rijksmuseum.nl',
-        thumbnail:   o.webImage!.url,
-        source:      'rijksmuseum',
-        year:        o.dating?.sortingDate?.toString(),
-        description: o.principalOrFirstMaker,
-      } satisfies MediaItem));
-  } catch { return []; }
-}
-
 // ── DPLA — Digital Public Library of America (chiave gratuita) ───────────────
 async function fetchDPLA(query: string, key: string): Promise<MediaItem[]> {
   try {
@@ -341,18 +309,17 @@ export async function onRequest({ request, env }: PagesContext) {
 
   if (!title) return jsonRes({ error: 'title required' }, 400);
 
-  const [archive, met, wikimedia, youtube, europeana, rijksmuseum, dpla, smithsonian, openverse] = await Promise.all([
+  const [archive, met, wikimedia, youtube, europeana, dpla, smithsonian, openverse] = await Promise.all([
     fetchArchive(title, locale),
     fetchMet(title),
     fetchWikimedia(title),
     env.YOUTUBE_API_KEY     ? fetchYouTube(title, locale, env.YOUTUBE_API_KEY)         : Promise.resolve<MediaItem[]>([]),
     env.EUROPEANA_API_KEY   ? fetchEuropeana(title, env.EUROPEANA_API_KEY)             : Promise.resolve<MediaItem[]>([]),
-    env.RIJKSMUSEUM_API_KEY ? fetchRijksmuseum(title, env.RIJKSMUSEUM_API_KEY)         : Promise.resolve<MediaItem[]>([]),
     env.DPLA_API_KEY        ? fetchDPLA(title, env.DPLA_API_KEY)                       : Promise.resolve<MediaItem[]>([]),
     env.SMITHSONIAN_API_KEY ? fetchSmithsonian(title, env.SMITHSONIAN_API_KEY)         : Promise.resolve<MediaItem[]>([]),
     fetchOpenVerse(title, env.OPENVERSE_API_KEY),
   ]);
 
-  const items = interleave(youtube, met, wikimedia, archive, europeana, rijksmuseum, dpla, smithsonian, openverse);
+  const items = interleave(youtube, met, wikimedia, archive, europeana, dpla, smithsonian, openverse);
   return jsonRes({ items: items.slice(0, 12) });
 }

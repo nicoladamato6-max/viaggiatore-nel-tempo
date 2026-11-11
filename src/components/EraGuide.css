@@ -303,6 +303,16 @@
 }
 
 /* ── Footer anno ── */
+.era-guide__ai-disclaimer {
+  padding: 0.4rem 1.2rem;
+  border-top: 1px solid rgba(255, 180, 0, 0.12);
+  font-family: monospace;
+  font-size: 0.60rem;
+  color: rgba(255, 180, 0, 0.55);
+  text-align: center;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
 .era-guide__footer {
   padding: 0.5rem 1.2rem;
   border-top: 1px solid #1e2d40;

@@ -436,6 +436,11 @@ export function TimeMachine({ locale, events: _events, currentYear: _currentYear
               {/* Briefing dell'epoca */}
               {briefing && (
                 <div className="tm-briefing">
+                  <div className="tm-briefing__ai-disclaimer">
+                    ⚠ {it
+                      ? 'Contenuti generati da IA · Potrebbero contenere inesattezze'
+                      : 'AI-generated content · May contain inaccuracies'}
+                  </div>
                   <div className="tm-briefing__section">
                     <div className="tm-briefing__label">
                       {it ? '▸ L\'EPOCA IN CUI SEI' : '▸ THE ERA YOU\'RE IN'}

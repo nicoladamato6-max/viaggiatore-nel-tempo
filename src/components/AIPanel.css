@@ -69,6 +69,18 @@
   box-shadow: 0 0 4px rgba(26,144,255,.2);
 }
 
+/* ── AI disclaimer ───────────────────────────────── */
+.aip__ai-disclaimer {
+  padding: 4px 10px;
+  border-bottom: 1px solid rgba(255, 180, 0, 0.12);
+  font-size: 0.58rem;
+  font-family: monospace;
+  letter-spacing: 0.04em;
+  color: rgba(255, 180, 0, 0.50);
+  text-align: center;
+  flex-shrink: 0;
+}
+
 /* ── Body (messages) ──────────────────────────────── */
 .aip__body {
   flex: 1;
