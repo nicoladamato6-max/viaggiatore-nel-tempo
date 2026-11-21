@@ -1,7 +1,10 @@
 // GET /api/events — returns Wikidata-enriched events from KV cache
-import { json, type Env } from './_shared';
+import { json, checkRateLimit, type Env } from './_shared';
 
-export const onRequestGet: (ctx: { env: Env }) => Promise<Response> = async ({ env }) => {
+export const onRequestGet: (ctx: { request: Request; env: Env }) => Promise<Response> = async ({ request, env }) => {
+  const rl = await checkRateLimit(request, 'events', env, 60, 60);
+  if (rl) return rl;
+
   if (!env.VIAGGIATORE_KV) {
     return json({ events: [], lastRefresh: null, error: 'KV non configurato' }, 503);
   }

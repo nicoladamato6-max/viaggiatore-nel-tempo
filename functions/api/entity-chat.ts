@@ -1,12 +1,14 @@
 // POST /api/entity-chat — conversational AI about a selected historical entity
 // Follows the same AI-backend pattern as /api/summarize
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { checkRateLimit } from './_shared';
 
 interface ChatEnv {
   AI?: { run: (model: string, opts: object) => Promise<{ response?: string; generated_text?: string }> };
   ANTHROPIC_API_KEY?: string;
   GROQ_API_KEY?: string;
   AI_MODEL?: string;
+  VIAGGIATORE_KV?: any;
 }
 
 interface EntityContext {
@@ -223,6 +225,9 @@ async function callClaudeHaiku(
 export const onRequestOptions = async (): Promise<Response> => cors();
 
 export const onRequestPost = async (context: { request: Request; env: ChatEnv }): Promise<Response> => {
+  const rl = await checkRateLimit(context.request, 'entity-chat', context.env, 20, 60);
+  if (rl) return rl;
+
   let body: RequestBody;
   try {
     body = await context.request.json() as RequestBody;

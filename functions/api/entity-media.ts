@@ -2,6 +2,8 @@
 // Aggrega media da 9 sorgenti open/gratuite.
 // Sorgenti senza chiave: Archive, Met Museum, Wikimedia Commons
 // Sorgenti con chiave gratuita: YouTube, Europeana, DPLA, Smithsonian, OpenVerse
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { checkRateLimit } from './_shared';
 
 interface MediaEnv {
   YOUTUBE_API_KEY?:     string;
@@ -9,6 +11,7 @@ interface MediaEnv {
   DPLA_API_KEY?:        string;
   SMITHSONIAN_API_KEY?: string;
   OPENVERSE_API_KEY?:   string;
+  VIAGGIATORE_KV?:      any;
 }
 
 interface MediaItem {
@@ -302,6 +305,9 @@ async function fetchOpenVerse(query: string, key?: string): Promise<MediaItem[]>
 export async function onRequest({ request, env }: PagesContext) {
   if (request.method === 'OPTIONS') return cors();
   if (request.method !== 'GET') return jsonRes({ error: 'Method not allowed' }, 405);
+
+  const rl = await checkRateLimit(request, 'entity-media', env, 30, 60);
+  if (rl) return rl;
 
   const { searchParams } = new URL(request.url);
   const title  = (searchParams.get('title')  ?? '').trim();

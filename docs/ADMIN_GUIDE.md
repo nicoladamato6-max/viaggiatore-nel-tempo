@@ -159,15 +159,19 @@ Configurare separatamente per **Production** e **Preview**.
 
 ### 2.3 Pages Functions - Endpoint completi
 
-| Metodo | Path | Auth | Descrizione | Env vars usate |
-|--------|------|------|-------------|---------------|
-| `POST` | `/api/entity-chat` | No | Chat AI su entita' storica | `GROQ_API_KEY`, `AI_MODEL`, `AI` (binding) |
-| `POST` | `/api/summarize` | No | Briefing AI per Macchina del Tempo | `AI` (binding), `ANTHROPIC_API_KEY`, `AI_MODEL` |
-| `GET` | `/api/entity-media` | No | Media aggregati da 8 sorgenti | `YOUTUBE_API_KEY`, `EUROPEANA_API_KEY`, `DPLA_API_KEY`, `SMITHSONIAN_API_KEY`, `OPENVERSE_API_KEY` |
-| `GET` | `/api/events` | No | Eventi da KV cache | `VIAGGIATORE_KV` (binding) |
-| `POST` | `/api/refresh` | JWT admin | Aggiorna eventi da Wikidata in KV | `VIAGGIATORE_KV` (binding), `JWT_SECRET` |
-| `GET` | `/tiles/[[path]]` | No | Proxy tile DARE (mappe storiche medievali) | - |
-| `GET` | `/awmc/[[path]]` | No | Proxy tile AWMC (antichita') | - |
+| Metodo | Path | Auth | Rate limit (per IP) | Descrizione | Env vars usate |
+|--------|------|------|---------------------|-------------|---------------|
+| `POST` | `/api/entity-chat` | No | 20 req/min | Chat AI su entita' storica | `GROQ_API_KEY`, `AI_MODEL`, `AI` (binding), `VIAGGIATORE_KV` |
+| `POST` | `/api/summarize` | No | 10 req/min | Briefing AI per Macchina del Tempo | `AI` (binding), `ANTHROPIC_API_KEY`, `AI_MODEL`, `VIAGGIATORE_KV` |
+| `GET` | `/api/entity-media` | No | 30 req/min | Media aggregati da 8 sorgenti | `YOUTUBE_API_KEY`, `EUROPEANA_API_KEY`, `DPLA_API_KEY`, `SMITHSONIAN_API_KEY`, `OPENVERSE_API_KEY`, `VIAGGIATORE_KV` |
+| `GET` | `/api/events` | No | 60 req/min | Eventi da KV cache | `VIAGGIATORE_KV` (binding) |
+| `POST` | `/api/refresh` | JWT admin | - | Aggiorna eventi da Wikidata in KV | `VIAGGIATORE_KV` (binding), `JWT_SECRET` |
+| `GET` | `/tiles/[[path]]` | No | - | Proxy tile DARE (mappe storiche medievali) | - |
+| `GET` | `/awmc/[[path]]` | No | - | Proxy tile AWMC (antichita') | - |
+
+**Rate limiting (C1):** Sliding window counter in `VIAGGIATORE_KV`. Chiave: `rl:{ip}:{endpoint}:{window}`.
+Gli eventi di abuso (ultimi 100) sono conservati in `rl:abuse_events` (TTL 24h) — visibili dalla CF KV dashboard.
+Se `VIAGGIATORE_KV` non e' configurato, il rate limiting e' silenziosamente disabilitato.
 
 ### 2.4 Build configuration
 
@@ -777,3 +781,4 @@ Eseguire questa checklist prima del lancio pubblico a pagamento:
 ---
 
 _Ultima modifica: Novembre 2026 - Nicola D'Amato con Claude Sonnet 4.6_
+_v1.1: Aggiunto rate limiting C1 (§2.3 — sliding window KV per tutti gli endpoint AI)_

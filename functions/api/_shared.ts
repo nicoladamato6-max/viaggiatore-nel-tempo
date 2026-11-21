@@ -91,3 +91,46 @@ export async function getAuthUser(request: Request, env: Env): Promise<Record<st
   if (!token || !env.JWT_SECRET) return null;
   return verifyJWT(token, env.JWT_SECRET);
 }
+
+// ── Rate limiting (sliding window counter in KV) ──────────────────────────────
+// Returns a 429 Response if the limit is exceeded, null otherwise.
+// Key format: rl:{ip}:{endpoint}:{window_number}  TTL: windowSeconds*2
+// Abuse events (last 100) are stored in rl:abuse_events for the admin panel.
+
+export async function checkRateLimit(
+  request: Request,
+  endpoint: string,
+  env: { VIAGGIATORE_KV?: any },
+  limit: number,
+  windowSeconds: number,
+): Promise<Response | null> {
+  if (!env.VIAGGIATORE_KV) return null;
+  const ip  = request.headers.get('CF-Connecting-IP') ?? request.headers.get('X-Forwarded-For') ?? 'unknown';
+  const win = Math.floor(Date.now() / 1000 / windowSeconds);
+  const key = `rl:${ip}:${endpoint}:${win}`;
+  const count = parseInt(await env.VIAGGIATORE_KV.get(key) ?? '0');
+  if (count >= limit) {
+    try {
+      const abuseKey = 'rl:abuse_events';
+      const existing = JSON.parse(await env.VIAGGIATORE_KV.get(abuseKey) ?? '[]') as unknown[];
+      existing.push({ ip, endpoint, timestamp: new Date().toISOString() });
+      await env.VIAGGIATORE_KV.put(abuseKey, JSON.stringify(existing.slice(-100)), { expirationTtl: 86400 });
+    } catch { /* non-fatal */ }
+    console.warn(`[rate-limit] blocked ${ip} on ${endpoint} (count: ${count})`);
+    return new Response(JSON.stringify({
+      error:      'rate_limit_exceeded',
+      message:    'Troppe richieste. Riprova tra qualche minuto.',
+      retryAfter: windowSeconds,
+      endpoint,
+    }), {
+      status: 429,
+      headers: {
+        'Content-Type':                 'application/json',
+        'Access-Control-Allow-Origin':  '*',
+        'Retry-After':                  String(windowSeconds),
+      },
+    });
+  }
+  await env.VIAGGIATORE_KV.put(key, String(count + 1), { expirationTtl: windowSeconds * 2 });
+  return null;
+}

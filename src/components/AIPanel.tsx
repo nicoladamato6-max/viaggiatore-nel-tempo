@@ -2,6 +2,11 @@ import { useState, useRef, useEffect, useMemo } from 'react';
 import { type HistoricalEvent, type Locale, CATEGORY_COLORS, CATEGORY_LABELS } from '../types';
 import './AIPanel.css';
 
+class RateLimitError extends Error {
+  retryAfter: number;
+  constructor(retryAfter: number) { super('rate_limit'); this.retryAfter = retryAfter; }
+}
+
 interface Props {
   event:          HistoricalEvent | null;
   locale:         Locale;
@@ -51,6 +56,7 @@ async function askEntity(
   if (!res.ok) {
     const errBody = await res.json().catch(() => ({})) as Record<string, unknown>;
     console.error('[entity-chat] API error', res.status, errBody);
+    if (res.status === 429) throw new RateLimitError(Number(errBody.retryAfter ?? 60));
     throw new Error(`HTTP ${res.status}: ${errBody.error ?? 'unknown'}`);
   }
   const json = await res.json() as { ok: boolean; data: { answer: string } };
@@ -79,6 +85,8 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fu
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Msg[]>([]);
   const [busy, setBusy] = useState(false);
+  const [rateLimitSecs, setRateLimitSecs] = useState(0);
+  const rateLimitUntilRef = useRef<number | null>(null);
   const bodyRef = useRef<HTMLDivElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
@@ -117,6 +125,16 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fu
     userSentRef.current = false;
   }, [messages]);
 
+  useEffect(() => {
+    const id = setInterval(() => {
+      if (!rateLimitUntilRef.current) return;
+      const secs = Math.max(0, Math.ceil((rateLimitUntilRef.current - Date.now()) / 1000));
+      setRateLimitSecs(secs);
+      if (secs === 0) rateLimitUntilRef.current = null;
+    }, 500);
+    return () => clearInterval(id);
+  }, []);
+
   // Auto-analysis when entity changes
   useEffect(() => {
     if (!event) { setMessages([]); setBusy(false); return; }
@@ -134,7 +152,15 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fu
 
     askEntity(event, prompt, [], locale)
       .then(reply => setMessages([{ role: 'ai', text: reply }]))
-      .catch(() => {
+      .catch((err) => {
+        if (err instanceof RateLimitError) {
+          rateLimitUntilRef.current = Date.now() + err.retryAfter * 1000;
+          setRateLimitSecs(err.retryAfter);
+          setMessages([{ role: 'ai', text: locale === 'it'
+            ? `⏱ Troppe richieste. Riprova tra ${err.retryAfter} secondi.`
+            : `⏱ Too many requests. Try again in ${err.retryAfter} seconds.` }]);
+          return;
+        }
         const cleanDesc = decodeHtmlEntities(event.description);
         const isDisambig = /^Disambiguazione|^Disambiguation/i.test(cleanDesc.trim());
         const descLine = isDisambig ? '' : `\n${cleanDesc}`;
@@ -250,14 +276,22 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fu
         : (locale === 'it' ? 'Seleziona prima un\'entità sulla mappa.' : 'Please select an entity on the map first.');
       userSentRef.current = true;
       setMessages(prev => [...prev, { role: 'ai', text: reply }]);
-    } catch {
+    } catch (err) {
       userSentRef.current = true;
-      setMessages(prev => [...prev, {
-        role: 'ai',
-        text: locale === 'it'
-          ? 'Servizio AI momentaneamente non disponibile.'
-          : 'AI service temporarily unavailable.',
-      }]);
+      if (err instanceof RateLimitError) {
+        rateLimitUntilRef.current = Date.now() + err.retryAfter * 1000;
+        setRateLimitSecs(err.retryAfter);
+        setMessages(prev => [...prev, { role: 'ai', text: locale === 'it'
+          ? `⏱ Troppe richieste. Riprova tra ${err.retryAfter} secondi.`
+          : `⏱ Too many requests. Try again in ${err.retryAfter} seconds.` }]);
+      } else {
+        setMessages(prev => [...prev, {
+          role: 'ai',
+          text: locale === 'it'
+            ? 'Servizio AI momentaneamente non disponibile.'
+            : 'AI service temporarily unavailable.',
+        }]);
+      }
     } finally {
       setBusy(false);
     }
@@ -337,6 +371,11 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fu
         </div>
       )}
 
+      {rateLimitSecs > 0 && (
+        <div className="aip__rate-limit">
+          {locale === 'it' ? `⏱ Riprova tra ${rateLimitSecs}s` : `⏱ Retry in ${rateLimitSecs}s`}
+        </div>
+      )}
       <div className="aip__inp-row">
         <div className="aip__inp-wrap">
           <input
@@ -348,13 +387,13 @@ export function AIPanel({ event, locale, onClose, events = [], onSelectEvent, fu
             placeholder={locale === 'it' ? 'Chiedimi qualcosa…' : 'Ask me something…'}
             autoComplete="off"
             spellCheck={false}
-            disabled={busy}
+            disabled={busy || rateLimitSecs > 0}
           />
         </div>
         <button
           className="aip__send"
           onClick={send}
-          disabled={busy || !input.trim()}
+          disabled={busy || !input.trim() || rateLimitSecs > 0}
           aria-label="Invia"
         >▷</button>
       </div>

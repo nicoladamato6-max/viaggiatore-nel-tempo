@@ -4,12 +4,14 @@
 //   'claude-haiku'            → Anthropic claude-haiku-5-5 (requires ANTHROPIC_API_KEY)
 //   'gpt-4o-mini'             → OpenAI gpt-4o-mini (requires OPENAI_API_KEY)
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { checkRateLimit } from './_shared';
 
 interface SummarizeEnv {
   AI?: { run: (model: string, opts: object) => Promise<{ response?: string; generated_text?: string }> };
   ANTHROPIC_API_KEY?: string;
   OPENAI_API_KEY?: string;
   AI_MODEL?: string;
+  VIAGGIATORE_KV?: any;
 }
 
 interface EventSummary {
@@ -161,6 +163,9 @@ function extractJSON(raw: string): Record<string, unknown> {
 export const onRequestOptions = async (): Promise<Response> => cors();
 
 export const onRequestPost = async (context: PagesContext): Promise<Response> => {
+  const rl = await checkRateLimit(context.request, 'summarize', context.env, 10, 60);
+  if (rl) return rl;
+
   let body: { year?: number; events?: EventSummary[]; locale?: string; place?: string };
   try {
     body = await context.request.json() as typeof body;
